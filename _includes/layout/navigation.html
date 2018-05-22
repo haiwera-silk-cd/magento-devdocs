@@ -1,0 +1,143 @@
+<!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">安装向导</a></li>
+          {% if page.guide_version == "2.2" %}
+          <li><a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          {% elsif page.guide_version == "2.1" %}
+          <li><a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          {% elsif page.guide_version == "2.0" %}
+          <li><a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          {% endif %}
+          <li><a href="{{ page.baseurl }}/config-guide/bk-config-guide.html">配置手册</a></li>
+          {% if page.guide_version == "2.2" or page.guide_version == "2.3" %}
+          <li><a href="{{ page.baseurl }}/performance-best-practices/index.html">高效实践</a></li>
+          {% endif %}
+          <li><a href="{{ page.baseurl }}/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="{{ page.baseurl }}/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="{{ site.baseurl }}/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="{{ page.baseurl }}/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="{{ page.baseurl }}/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="{{ page.baseurl }}/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="{{ page.baseurl }}/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          {% if page.guide_version == "2.0" %}
+          <li><a href="{{ page.baseurl }}/ui-components/ui-component.html">UI组件</a></li>
+          {% else %}
+          <li><a href="{{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          {% endif %}
+          <li><a href="{{ page.baseurl }}/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="{{ page.baseurl }}/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="{{ page.baseurl }}/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="{{ page.baseurl }}/soap/bk-soap.html">SOAP API参考</a></li>
+          {% if page.guide_version == "2.3" %}
+          <li><a href="{{ page.baseurl }}/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          {% endif %}
+          {% if page.guide_version == "2.1" or page.guide_version == "2.2" or page.guide_version == "2.3" %}
+          <li><a href="{{ page.baseurl }}/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="{{ page.baseurl }}/test/testing.html">Magento测试手册</a></li>
+        {% if page.guide_version == "2.2" or page.guide_version == "2.3" %}
+        <li><a href="{{ page.baseurl }}/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        {% endif %}
+        <li><a href="{{ page.baseurl }}/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="{{ page.baseurl }}/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="{{ page.baseurl }}/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="{{ page.baseurl }}/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="{{ page.baseurl }}/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          {% if page.guide_version == "2.2" or page.guide_version == "2.3" %}
+          <li class="leaf"><a href="{{ page.baseurl }}/advanced-reporting/overview.html">高级报表</a></li>
+          {%endif%}
+        {% if page.guide_version == "2.2" or page.guide_version == "2.3" %}
+        <li class="leaf"><a href="{{ page.baseurl }}/b2b/bk-b2b.html">B2B</a></li>
+        {%endif%}
+        <li><a href="{{ page.baseurl }}/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="{{ page.baseurl }}/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        {% unless page.guide_version == "2.0" %}
+          <li><a href="{{ page.baseurl }}/extension-dev-guide/staging.html">Staging</a></li>
+        {% endunless %}
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="{{ page.baseurl }}/howdoi/bk-how-do-i.html">如何</a></li>
+        {% if page.guide_version != "2.0" %}
+        <li><a  data-proofer-ignore href="{{ page.baseurl }}/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        {% endif %}
+
+        <li><a href="{{ site.baseurl }}/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->

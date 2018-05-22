@@ -1,0 +1,25 @@
+<div class="page-info">
+
+    {% if page.contributor_link %}
+      <div class="page-contributor">
+        <a href="{{ page.contributor_link }}" target="_blank">
+          感谢{{ page.contributor_name }}贡献这篇文章
+        </a>
+      </div>
+    {% endif %}
+  
+    {% if site.github_link == true %}
+    <div class="github-link">
+      <a class="improve-page" href="{{ site.github_repo }}blob/develop/{{ page.path }}" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    {% endif %}
+  
+    {% if site.feedback_link == true %}
+    <div class="new-issue">
+      <a href="{{ site.github_repo }}issues/new?title=Feedback on page: {{ page.url }}" target="_blank">反馈</a>
+    </div>
+    {% endif %}
+  
+  </div>
