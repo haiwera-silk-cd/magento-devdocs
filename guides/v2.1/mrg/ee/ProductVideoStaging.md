@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_ProductVideoStaging module
+title: Magento_ProductVideoStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/ProductVideoStaging.md
@@ -10,15 +10,15 @@ The Magento_ProductVideoStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1
 
 ## Implementation details
 
-The Magento_ProductVideoStaging module extends the Magento_ProductVideo functionality to be used in staging. It adds an "Add Video" button to the Schedule Update form and supports a New Video form in staging mode.
+The Magento_ProductVideoStaging模块 extends the Magento_ProductVideo functionality to be used in staging. It adds an "Add Video" button to the Schedule Update form and supports a New Video form in staging mode.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_ProductVideoStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_ProductVideoStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ProductVideoStaging module. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ProductVideoStaging module.
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ProductVideoStaging模块. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ProductVideoStaging模块.
 
 ### Layouts
 

@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: MySQL
 menu_title: MySQL
 menu_order: 25
@@ -16,10 +16,10 @@ functional_areas:
 ## Help if you're just starting out {#mysql-help-beginner}
 If you're new to all this and need some help getting started, we suggest the following:
 
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">Is the Magento software installed already?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">What is the software that the Magento server needs to run?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">What operating system is my server running?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">How do I log in to my Magento server using a terminal, command prompt, or SSH?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">你的Magento安装好了吗?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">Magento服务器需要运行哪些软件?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
 
 ## General guidelines {#instgde-prereq-mysql-intro}
 <div class="bs-callout bs-callout-info" id="info">
@@ -35,7 +35,7 @@ Magento _strongly_ recommends you observe the following standard when you set up
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>If your web server and database server are on different hosts, perform the tasks discussed in this topic on the database server host then see <a href="{{ page.baseurl }}/install-gde/prereq/mysql_remote.html">Set up a remote MySQL database connection</a>.</p></span>
+  <p>If your web server and database server are on different hosts, perform the tasks discussed in this topic on the database server host then see <a href="{{ page.baseurl }}/install-gde/prereq/mysql_remote.html">设置远程Mysql数据库连接</a>.</p></span>
 </div>
 
 <h2 id="instgde-prereq-mysql-ubuntu">Installing MySQL on Ubuntu</h2>
@@ -290,7 +290,7 @@ To configure a MySQL database instance:
 
 	If the MySQL monitor displays, you created the database properly. If an error displays, repeat the preceding commands.
 
-7.	If your web server and database server are on different hosts, perform the tasks discussed in this topic on the database server host then see <a href="{{ page.baseurl }}/install-gde/prereq/mysql_remote.html">Set up a remote MySQL database connection</a>.
+7.	If your web server and database server are on different hosts, perform the tasks discussed in this topic on the database server host then see <a href="{{ page.baseurl }}/install-gde/prereq/mysql_remote.html">设置远程Mysql数据库连接</a>.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 We recommend you configure your database instance as appropriate for your business. When configuring your database, please keep the following in mind:
@@ -301,10 +301,10 @@ We recommend you configure your database instance as appropriate for your busine
 </div>
 
 #### 相关主题
-*	[Set up a remote MySQL database connection]({{ page.baseurl }}/install-gde/prereq/mysql_remote.html)
-*	[Installing optional software]({{ page.baseurl }}/install-gde/prereq/optional.html)
+*	[设置远程Mysql数据库连接]({{ page.baseurl }}/install-gde/prereq/mysql_remote.html)
+*	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
 *	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

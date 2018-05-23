@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Common layout customization tasks
-menu_title: Common layout customization tasks
+title: 常见的布局定制任务
+menu_title: 常见的布局定制任务
 menu_order: 6
 version: 2.0
 github_link: frontend-dev-guide/layouts/xml-manage.md
@@ -31,7 +31,7 @@ This article describes the following typical {% glossarytooltip 73ab5daa-5857-40
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>To ensure stability and secure your customizations from being deleted during upgrade, do not change out-of-the-box Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} layouts. To customize layout, create extending and overriding layout files in your custom theme.</p></span>
+  <p>To ensure stability and secure your customizations from being deleted during upgrade, do not change out-of-the-box Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} layouts. To customize layout, create extending and overriding layout files in your custom theme.</p></span>
 </div>
 
 <h2 id="layout_markup_columns">Set the page layout</h2>
@@ -332,7 +332,7 @@ This would make the product page look like following:
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>To learn how to locate the layout file you need to customize, see <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">Locate templates, layouts, and styles</a>.</p></span>
+  <p>To learn how to locate the layout file you need to customize, see <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a>.</p></span>
 </div>
 
 <h2 id="layout_markup_remove_elements">Remove elements</h2>
@@ -381,6 +381,6 @@ To replace an element, <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xm
 
 #### 相关主题:
 
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">Layout instructions</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">Extend a layout</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a>
 

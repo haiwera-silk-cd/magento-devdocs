@@ -13,7 +13,7 @@ We recommend the consistent use of a _code sniffer_ to enhance the readability o
 
 Magento recommends the use of [PHP_CodeSniffer]{:target="_blank"}, the most popular code sniffer in use throughout the {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} development community.
 PHP_CodeSniffer 1.4.0+ includes PSR-1 and PSR-2 standards, which are followed by Magento 2.
-You can configure PHP_CodeSniffer to use your own rules, too. The [Magento Extension Quality Program Coding Standard][eqp]{:target="_blank"} provides specifications that you can use to configure your code sniffer of choice to bring your _PHP coding style closer to Magento PHP standards_.
+You can 配置PHP_CodeSniffer to use your own rules, too. The [Magento Extension Quality Program Coding Standard][eqp]{:target="_blank"} provides specifications that you can use to configure your code sniffer of choice to bring your _PHP coding style closer to Magento PHP standards_.
 
 ## Rule set for the PHP_CodeSniffer
 

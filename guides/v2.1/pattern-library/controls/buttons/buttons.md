@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Controls
-title: Admin Design Pattern Library
-menu_title: Buttons
+title: 管理面板用到的设计模式和库
+menu_title: 按钮
 menu_order: 1
 menu_node:
 version: 2.1
@@ -10,14 +10,14 @@ github_link: pattern-library/controls/buttons/buttons.md
 redirect_from: /guides/v1.0/pattern-library/controls/buttons/buttons.html
 ---
 
-## Buttons
-Buttons bring attention to actions on the screen. This article will cover the use of general buttons on Magento.
+## 按钮
+按钮 bring attention to actions on the screen. This article will cover the use of general buttons on Magento.
 
 For solutions not described in this topic, please refer to other related patterns or contact the Magento UX Design team.
 
 
 <h3 id="when-to-use">When to Use</h3>
-Buttons should be used anywhere a call to action(CTA) is needed. Discretion should be
+按钮 should be used anywhere a call to action(CTA) is needed. Discretion should be
 used when deciding when to use a button vs. a hyperlink, icon, or another call to action.
 
 
@@ -39,7 +39,7 @@ Variations of this pattern are as follows, and will be detailed in the section o
 
 <br>
 
-Buttons will be take on one of the below variations.
+按钮 will be take on one of the below variations.
 
 <table>
 	<thead>
@@ -121,7 +121,7 @@ Left/Right margin spacing should not be less than 20px<br>
 <br>
 
 
-#### 2. Dropdown Buttons
+#### 2. Dropdown 按钮
 
 <img src="img/Button_grid03_dropdown.png" >
 
@@ -155,7 +155,7 @@ Left/Right margin spacing should not be less than 20px<br>
 <br>
 
 
-#### 3. Tertiary Buttons
+#### 3. Tertiary 按钮
 
 <img src="img/Button_grid02_tertiary.png">
 
@@ -188,7 +188,7 @@ Left/Right margin spacing should not be less than 20px<br>
 
 <br>
 
-####  4. Quaternary Buttons
+####  4. Quaternary 按钮
 
 <img src="img/Button_grid02_quaternary.png">
 
@@ -226,7 +226,7 @@ Left/Right margin spacing should not be less than 10px<br>
 **Quaternary Button Example:**<br><br>
 <img src="img/TableButtonExample.png">
 
-####  5. Toggle Buttons
+####  5. Toggle 按钮
 The toggle button acts like a checkbox. When you touch/click on it, the state toggles between "yes" and "no" and/or "on" and "off".<br>
 <br>
 **When to Use/When Not to Use**<br>

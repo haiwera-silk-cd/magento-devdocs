@@ -17,7 +17,7 @@ Email templates are stored in the `<module_dir>/view/<area>/email` directory of 
 
 We strongly recommend you not change the default Magento files. If you want to customize the default templates, you should create your custom templates and configure Magento to use them instead of the default templates. 
 
-You can add custom templates as physical files in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} or create them using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}. Both approaches are described in the following sections.
+You can add custom templates as physical files in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} or create them using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. Both approaches are described in the following sections.
  
 ### Customize email templates using a theme {#customize-email-theme}
 
@@ -187,7 +187,7 @@ The styles for emails are split into several different files.
           <p><code>&lt;Magento_Blank_theme_dir&gt;/web/css/source/_email-variables.less</code></p>
       </td>
       <td colspan="1">
-          <p>The <code>_email-base.less</code> file uses a number mixins from the Magento UI library. If you want to change any of the styles output by those mixins, you can set the value of any of the variables those mixins uses in this file. See the <code>&lt;Magento_Luma_theme_dir&gt;/web/css/source/_email-variables.less</code> file for example usage.</p>
+          <p>The <code>_email-base.less</code> file uses a number mixins from the Magento UI库. If you want to change any of the styles output by those mixins, you can set the value of any of the variables those mixins uses in this file. See the <code>&lt;Magento_Luma_theme_dir&gt;/web/css/source/_email-variables.less</code> file for example usage.</p>
       </td>
     </tr>
     <tr>
@@ -220,7 +220,7 @@ The styles for emails are split into several different files.
 When implementing a custom theme, you should be able to fully customize email templates by copying the `<Magento_Blank_theme_dir>/web/css/source/_email-extend.less` and `<Magento_Blank_theme_dir>/web/css/source/_email-variables.less` files to your custom theme and editing those files.
 
 <h3 id="custom-fonts">Custom fonts</h3>
-Emails inherit the custom fonts that are defined by the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} theme. The Magento Blank theme uses the **Open Sans** font. Because **Open Sans** is not a standard system font, `@font-face` rules are used to include web fonts.
+Emails inherit the custom fonts that are defined by the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} theme. The Magento Blank theme uses the **Open Sans** font. Because **Open Sans** is not a standard system font, `@font-face` rules are used to include web fonts.
 
 Here is an overview of how the font structure for emails works:
 

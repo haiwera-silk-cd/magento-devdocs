@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Getting User Input
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Form Elements
 menu_order: 1
 menu_node:
@@ -114,7 +114,7 @@ If there is a _parent-child_ relationship of associated checkboxes there should 
 <img src="img/tri-check.png">
 
 
-<h3 id="radios">Radio Buttons</h3>
+<h3 id="radios">Radio 按钮</h3>
 Radio buttons should be used in cases of ‘yes’ or ‘no’. The pair of radio buttons may be arranged either vertically or horizontally. Radio buttons may often have a default or preferred selection. This preferred selection should be the first button of the pair whenever possible. In some instances when only a single selection may be made but there are several options to choose from, all of the radio button in the set may appear un-selected or ‘empty’. Once a user has made a selection however the selected state should be evident and be visible henceforth, even if the user changes the selection - it cannot be returned to the initial ‘un-selected’ state.
 
 <img src="img/radios.png">

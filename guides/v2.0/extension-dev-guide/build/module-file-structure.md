@@ -17,13 +17,13 @@ In this section, we go over the different file structures for the component type
 ### Module file structure
 A typical file structure for a Magento 2 {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} can look like the following:
 
-![Module File Structure]({{ site.baseurl }}/common/images/pdg-config-file-structure.png){:width="300px"}
+![Module File Structure]({{ site.magentourl }}/common/images/pdg-config-file-structure.png){:width="300px"}
 
 #### Common directories
 {:.no_toc}
 Following are some common module directories:
 
-* `Block`: contains {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} view classes as part of Model View Controller(MVC) vertical implementation of module logic.
+* `Block`: contains {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} view classes as part of Model 视图控制器(MVC) vertical implementation of module logic.
 * `Controller`: contains PHP controller classes as part of MVC vertical implementation of module logic.
 * `etc`: contains configuration files; in particular, `module.xml`, which is required.
 * `Model`: contains PHP model classes as part of MVC vertical implementation of module logic.
@@ -39,7 +39,7 @@ Additional folders can be added for configuration and other ancillary functions 
 * `view`: contains view files, including static view files, design templates, email templates, and layout files.
 
 ### Theme file structure
-A typical {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} file structure can look like the following:
+A typical {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} file structure can look like the following:
 
 ~~~
 ├── composer.json
@@ -88,13 +88,13 @@ Typical theme directories are:
 *	`media`: Theme preview images (screen capture of your theme) can be put in here.
 *	`web`: Optional directory that contains {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} organized into the following subdirectories:
 
-	*	`css/source`: Contains a theme's `less` configuration files that invoke mixins for global elements from the [Magento UI library]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html), and the `theme.less` file that overrides the default variables values.
+	*	`css/source`: Contains a theme's `less` configuration files that invoke mixins for global elements from the [Magento UI库]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html), and the `theme.less` file that overrides the default variables values.
 	*	`css/source/lib`: Contains view files that override the [UI library]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html) files stored in `lib/web/css/source/lib`.
 	*	`fonts`: The folder to place the different fonts for your theme.
 	*	`images`: Static images folder.
 	*	`js`: The folder for your JavaScript files.
 
-For more details on the theme folder structure, see [Magento theme structure]({{ page.baseurl }}/frontend-dev-guide/themes/theme-structure.html).
+For more details on the theme folder structure, see [Magento主题的结构]({{ page.baseurl }}/frontend-dev-guide/themes/theme-structure.html).
 
 {% include php-dev/lang-pack-file-struct.md %}
 

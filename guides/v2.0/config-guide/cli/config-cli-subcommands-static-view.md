@@ -103,7 +103,7 @@ The following are some sample messages that display to indicate successful deplo
 	---
 	New version of deployed files: 1430773903
 
-## Troubleshooting the static view files deployment tool {#view-file-trouble}
+## 故障排除 the static view files deployment tool {#view-file-trouble}
 [Install the Magento software first]({{ page.baseurl }}/install-gde/bk-install-guide.html); otherwise, you cannot run the static view files deployment tool.
 
 **Symptom**: The following error is displayed when you run the static view files deployment tool:

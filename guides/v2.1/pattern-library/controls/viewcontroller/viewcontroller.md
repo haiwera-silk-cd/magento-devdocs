@@ -1,18 +1,18 @@
 ---
 group: pattern
 subgroup: Controls
-title: Magento Admin Pattern Library
-menu_title: View Controller
+title: Magento管理面板用到的设计模式和库
+menu_title: 视图控制器
 menu_order: 3
 menu_node:
 version: 2.1
 github_link: pattern-library/controls/viewcontroller/viewcontroller.md
 ---
-<h2> View Controller </h2>
+<h2> 视图控制器 </h2>
 
 <h3> Contents </h3>
 
-* <a href="#overview">Overview</a>
+* <a href="#overview">概述</a>
 * <a href="#when-to-use">When to Use/When Not to Use</a>
 * <a href="#variations">Variations</a>
 * <a href="#behavior">Behavior</a>
@@ -22,7 +22,7 @@ github_link: pattern-library/controls/viewcontroller/viewcontroller.md
 * <a href="#assets">Assets</a>
 
 
-<h3 id="overview">Overview</h3>
+<h3 id="overview">概述</h3>
 
 Within the Magento application, user may need to view a set of data in more than one way. The view controller isused to switch between the views of data set.
 
@@ -75,4 +75,4 @@ OS: <a href="http://support.apple.com/en-us/HT201236" target="\_blank">http://su
 
 Please reach out to the Magento UX Design team if you need anything else.
 
-<a href="src/magento-viewcontrol.psd">Download View Controller PSD source</a>
+<a href="src/magento-viewcontrol.psd">Download 视图控制器 PSD source</a>

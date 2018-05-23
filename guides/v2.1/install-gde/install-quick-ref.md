@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: 01_resource
-title: Installation quick reference (tutorial)
-menu_title: Installation quick reference (tutorial)
+title: 安装快速指引(教程)
+menu_title: 安装快速指引(教程)
 menu_node:
 menu_order: 2
 version: 2.1
@@ -49,13 +49,13 @@ If not, see the <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">I
 3.	Just as importantly, set up the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a> on the server.
 4.	Switch to the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
 
-### Get the Magento software
-When all prerequisites have been met, get the Magento software using {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} as follows:
+### 获取Magento
+When all prerequisites have been met, 获取Magento using {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} as follows:
 
 	cd <web server docroot directory>
 	composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition magento2
 
-You're required to authenticate; see <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">Get your authentication keys</a> for details. This downloads Magento code only; it doesn't install the software for you.
+You're required to authenticate; see <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">获取你的认证密钥</a> for details. This downloads Magento code only; it doesn't install the software for you.
 
 <div class="bs-callout bs-callout-tip">
 	<p>Alternatively, you can also download a <a href="{{ page.baseurl }}/install-gde/install/get-software.html">Magento software archive</a>.</p>
@@ -105,7 +105,7 @@ Optionally switch to <a href="{{ page.baseurl }}/config-guide/cli/config-cli-sub
 
 #### Web Setup Wizard
 
-{% collapsible Click to view the Web Setup Wizard installation %}
+{% collapsible Click to view the Web 网页向导安装 %}
 
 The following example shows how to install using the Web Setup Wizard with the following options:
 
@@ -131,27 +131,27 @@ To run the Web Setup Wizard:
 		http://192.0.2.5/magento2/setup
 2.	At the welcome page, click **Agree and Setup Magento**.
 
-	![You must accept the license agreement to install the Magento software]({{ site.baseurl }}/common/images/install_qr_wizard-welcome.png){:width="200px"}
+	![You must accept the license agreement to install the Magento software]({{ site.magentourl }}/common/images/install_qr_wizard-welcome.png){:width="200px"}
 3.	Step 1: Readiness Check verifies your system is ready to install the Magento software.
 
 	Click **Start Readiness Check**
 
-	![The Readiness Check makes sure your system is ready for the Magento software]({{ site.baseurl }}/common/images/install_qr_readiness.png){:width="400px"}
+	![The Readiness Check makes sure your system is ready for the Magento software]({{ site.magentourl }}/common/images/install_qr_readiness.png){:width="400px"}
 
 	*	If the readiness check passes, click **Next** and continue with the next step.
-	*	If the readiness check fails, see [Readiness check issues]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_main.html)
+	*	If the readiness check fails, see [就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_main.html)
 4.	Step 2: Add a Database enables you to set up your Magento database.
 
-	![Set up your Magento database]({{ site.baseurl }}/common/images/install_qr_database.png){:width="400px"}
+	![Set up your Magento database]({{ site.magentourl }}/common/images/install_qr_database.png){:width="400px"}
 5.	Step 3: Web Configuration enables you to enter the storefront and Magento Admin URLs.
 
-	![Enter your storefront and Magento Admin URLs]({{ site.baseurl }}/common/images/install_qr_web.png){:width="400px"}
+	![Enter your storefront and Magento Admin URLs]({{ site.magentourl }}/common/images/install_qr_web.png){:width="400px"}
 6.	Step 4: Customize Your Store enables you to enter a default store currency, time zone, and language.
 
-	![Customize the store's language, time zone, currency]({{ site.baseurl }}/common/images/install_qr_store.png){:width="400px"}
+	![Customize the store's language, time zone, currency]({{ site.magentourl }}/common/images/install_qr_store.png){:width="400px"}
 7.	Step 5: Create Admin Account enables you to set up a Magento administrator. This user can perform all actions in the Magento Admin.
 
-	![Create a Magento administrator account]({{ site.baseurl }}/common/images/install_qr_admin.png){:width="400px"}
+	![Create a Magento administrator account]({{ site.magentourl }}/common/images/install_qr_admin.png){:width="400px"}
 8.	Step 6: Install starts the installation when you click **Install Now**.
 
 	You can optionally expand **Console Log** to see installation messages while the installation is in progress.
@@ -159,6 +159,6 @@ To run the Web Setup Wizard:
 {% endcollapsible %}
 
 
-## Installation part 3: Post-installation
-*	<a href="{{ page.baseurl }}/install-gde/install/verify.html">Verify the installation</a> was successful.
+## Installation part 3: 安装完成之后
+*	<a href="{{ page.baseurl }}/install-gde/install/verify.html">验证你的安装</a> was successful.
 *	Learn about the <a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade</a> for future updates.

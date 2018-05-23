@@ -22,7 +22,7 @@ For more information about backward compatibility, see [Magento’s backward com
 * A `convertConfigTimeToUtc()` method is added to the `lib/internal/Magento/Framework/Stdlib/DateTime/TimezoneInterface` interface. To implement this interface, please implement the method.
 * A `convertConfigTimeToUtc` method is added to the  `lib/internal/Magento/Framework/Stdlib/DateTime/Timezone`.
 
-## Magento_CatalogRule module changes
+## Magento_CatalogRule模块 changes
 
 ### DB schema changes
 
@@ -42,7 +42,7 @@ For more information about backward compatibility, see [Magento’s backward com
 
 * The functionality of adding a price rule to the subproduct was deleted.
 
-## Magento_Catalog module changes
+## Magento_Catalog模块 changes
 
 ### Code changes
 
@@ -138,7 +138,7 @@ Magento\Framework\Model\Entity\MetadataPool::getMetadata(Magento\Catalog\Api\Dat
 
 ### Flow changes
 
-When **Products -> Categories** menu item in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} is chosen, the first root category is selected for editing by default now. You can create a new category or a root category manually only. Use the corresponding button **Add Root Category** or **Add Subcategory**.
+When **Products -> Categories** menu item in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} is chosen, the first root category is selected for editing by default now. You can create a new category or a root category manually only. Use the corresponding button **Add Root Category** or **Add Subcategory**.
 
 <!-- LINK DEFINITIONS -->
 

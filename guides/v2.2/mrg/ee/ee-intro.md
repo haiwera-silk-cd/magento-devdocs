@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento Commerce modules
+title: Magento企业版模块
 menu_title: Commerce
 menu_order: 1
 menu_node: parent

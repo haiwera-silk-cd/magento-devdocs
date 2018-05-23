@@ -85,7 +85,7 @@ In Magento 2.2, a near-zero downtime deployment model will be available for a va
 
 * [开启或关闭维护模式][4]
 * [Command line upgrade][1]
-* [Update the Magento application][2]
+* [更新Magento][2]
 * [User Guide: Web Setup Wizard][3]
 * [Running the System Upgrade][9]
 

@@ -33,7 +33,7 @@ In addition, you might need to install the {% glossarytooltip bf703ab1-ca4b-48f9
 <h2 id="compman-access">Start System Upgrade from the Magento Admin</h2>
 To run System Upgrade:
 
-1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} as an administrator.
+1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
 2.	Click **System** > **Web Setup Wizard**.
 	The following page displays.<br><br>
 	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage components or upgrade Magento">

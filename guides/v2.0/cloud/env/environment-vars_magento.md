@@ -159,7 +159,7 @@ To create a variable using the command line:
 4. To set a variable for the branch, use the command `magento-cloud variable:set <name> <value>`. The alias for this command is also `vset`. For example, `magento-cloud vset example2 abc` creates a variable example2 with a string value of abc for the branch.
 5. After creating these variables, you can list all project variables with the command `magento-cloud variable:get`或`magento-cloud vget`.
 
-## Troubleshooting {#cloud-env-vars-tshoot}
+## 故障排除 {#cloud-env-vars-tshoot}
 In the event something goes wrong and you can not access your environment after it deploys, try the following:
 
 *   [SSH to the environment]({{ page.baseurl }}/cloud/env/environments-start.html#env-start-tunn) and make sure [services]({{ page.baseurl }}/cloud/env/environments-start.html#tunnel-services) are running.

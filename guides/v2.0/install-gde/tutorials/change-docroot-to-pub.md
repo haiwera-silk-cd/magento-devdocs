@@ -1,6 +1,6 @@
 ---
 group: install2
-title: Modify docroot to improve security
+title: 修改docroot提高安全性
 version: 2.0
 github_link: install-gde/tutorials/change-docroot-to-pub.md
 ---
@@ -44,7 +44,7 @@ To complete this tutorial, you'll need access to a working Magento installation 
 -   Magento (2.0+)
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Refer to [Prerequisites]({{ page.baseurl }}/install-gde/prereq/prereq-overview.html) and the [Installation Guide]({{ page.baseurl }}/install-gde/bk-install-guide.html) for more information.
+Refer to [先决条件]({{ page.baseurl }}/install-gde/prereq/prereq-overview.html) and the [安装向导]({{ page.baseurl }}/install-gde/bk-install-guide.html) for more information.
 </div>
 
 ## 1. Edit your server configuration

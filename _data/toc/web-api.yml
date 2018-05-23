@@ -1,6 +1,6 @@
-label: Getting Started with Web APIs
+label: 起步 with Web APIs
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /get-started/bk-get-started-api.html
 
     - label: Use REST APIs

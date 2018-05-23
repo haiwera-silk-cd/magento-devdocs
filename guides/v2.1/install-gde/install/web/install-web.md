@@ -1,8 +1,8 @@
 ---
 group: install_wiz
 subgroup: Wizard
-title: Setup Wizard installation
-menu_title: Setup Wizard installation
+title: 网页向导安装
+menu_title: 网页向导安装
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -21,7 +21,7 @@ functional_areas:
 </div>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux and iptables</a>.</p>
+  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux和iptables</a>.</p>
 </div>
 
 {% include install/web/install-web.md %}

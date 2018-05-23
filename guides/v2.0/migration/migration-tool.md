@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: C_DMTool
-title: Data Migration Tool
-menu_title: Data Migration Tool
+title: 数据迁移工具
+menu_title: 数据迁移工具
 menu_node: parent
 menu_order: 3
 version: 2.0
@@ -14,7 +14,7 @@ functional_areas:
 
 ## Overview
 
-Data Migration Tool is a command-line interface (CLI) used for transferring data from Magento 1 to Magento 2. The Tool verifies consistency between Magento 1 and 2 database structures (tables and fields), tracks the data transfer progress, creates logs, and runs data verification tests.
+数据迁移工具 is a command-line interface (CLI) used for transferring data from Magento 1 to Magento 2. The Tool verifies consistency between Magento 1 and 2 database structures (tables and fields), tracks the data transfer progress, creates logs, and runs data verification tests.
 
 ## Modes
 

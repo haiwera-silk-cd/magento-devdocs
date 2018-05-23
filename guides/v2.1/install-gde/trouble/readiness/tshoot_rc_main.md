@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 05_readiness
-title: Readiness check issues
-menu_title: Readiness check issues
+title: 就绪检查的问题
+menu_title: 就绪检查的问题
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -13,8 +13,8 @@ functional_areas:
   - Setup
 ---
 
-*	[cron readiness check issues]({{ page.baseurl }}/comp-mgr/trouble/cman/cron.html)
-*	[Component dependency readiness check issues]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_depend.html)
-*	[PHP version readiness check issues]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_php.html)
-*	[File permissions readiness check issues]( {{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_perms.html)
+*	[定时任务(cron)就绪检查的问题]({{ page.baseurl }}/comp-mgr/trouble/cman/cron.html)
+*	[组件依赖就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_depend.html)
+*	[PHP版本就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_php.html)
+*	[文件权限就绪检查的问题]( {{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_perms.html)
 

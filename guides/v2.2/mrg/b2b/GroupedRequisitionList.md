@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_GroupedRequisitionList module
+title: Magento_GroupedRequisitionList模块
 menu_title: GroupedRequisitionList
 menu_order: 140
 version: 2.2

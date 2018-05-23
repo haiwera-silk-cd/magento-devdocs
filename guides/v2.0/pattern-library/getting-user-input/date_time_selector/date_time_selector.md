@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Getting User Input
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Date and Time Selector
 menu_order: 3
 menu_node:
@@ -53,7 +53,7 @@ Time:
 
 **Interaction Overview**
 
-*	Tabbing to or clicking into the field activates the {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %}
+*	Tabbing to or clicking into the field activates the {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %}
 
 	*	The Date/Time widget should animate down and be displayed underneath the field
 
@@ -95,7 +95,7 @@ The following applies to ranges only:
 
 **Time SelecTime Selection Behaviors**
 
-Within the calendar widget, the following will apply to time fields:	
+Within the 日历小工具, the following will apply to time fields:	
 
 * 	Tab order will be applied to time fields
 

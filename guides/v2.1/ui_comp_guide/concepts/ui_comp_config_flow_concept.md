@@ -30,7 +30,7 @@ Lets imagine we have the following file structure in our {% glossarytooltip c1e4
 - top-level UI Component (form or listing) configuration: `my_form.xml`
 - `.php` modifiers that are specific to the module
 
-Keep in mind that the Magento_UI module contains these important files:
+Keep in mind that the Magento_UI模块 contains these important files:
 
 - A general, module-agnostic form definition in the `<form>` node of the `.xml` definition file: `<Magento_Ui_module_dir>/view/base/ui_component/etc/definition.xml`
 

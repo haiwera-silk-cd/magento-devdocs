@@ -16,7 +16,7 @@ functional_areas:
 Installing the Varnish software is beyond the scope of this guide. For more information about installing Varnish, see:
 
 *	<a href="http://wiki.mikejung.biz/Varnish" target="_blank">installation wiki</a>
-*	<a href="https://www.varnish-cache.org/docs" target="_blank">Varnish installation guides</a>
+*	<a href="https://www.varnish-cache.org/docs" target="_blank">Varnish 安装向导s</a>
 *	<a href="http://www.tecmint.com/install-varnish-cache-web-accelerator" target="_blank">How to install Varnish (Tecmint)</a>
 
 <div class="bs-callout bs-callout-info" id="info">

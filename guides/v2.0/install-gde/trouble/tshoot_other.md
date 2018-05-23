@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 20_other
-title: Other issues
-menu_title: Other issues
+title: 其它问题
+menu_title: 其它问题
 menu_node: parent
 menu_order: 1
 version: 2.0

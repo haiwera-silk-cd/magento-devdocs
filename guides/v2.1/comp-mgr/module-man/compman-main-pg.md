@@ -142,7 +142,7 @@ The following sections provide details:
 *	<a href="#compman-access-types-non-meta">Actions available for non-metapackage components</a>
 
 <h3 id="compman-access-types-meta">Actions available for metapackage components</h3>
-Magento requires any component that has more than one type to be a metapackage. For example, we require a component that contains a module and a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} to be packaged as a metapackage.
+Magento requires any component that has more than one type to be a metapackage. For example, we require a component that contains a module and a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} to be packaged as a metapackage.
 
 <div class="bs-callout bs-callout-info" id="info">
       <p>We currently do not support uninstalling a metapackage.</p>

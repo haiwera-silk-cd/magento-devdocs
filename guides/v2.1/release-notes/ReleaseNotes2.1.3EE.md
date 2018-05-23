@@ -145,7 +145,7 @@ We've enhanced the performance of configurable products in several ways:
 
 <!---58465-->* The order of products in a category display no longer changes when you add a new product to the category. 
 
-<!--- 59581-->* We've improved and streamlined the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} PayPal configuration interface. 
+<!--- 59581-->* We've improved and streamlined the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} PayPal configuration interface. 
 
 
 <!---56962 -->* Magento now displays the **State/Province** field on the Add New Address page. <a href="https://github.com/magento/magento2/issues/5279" target="_blank">(GITHUB-5279)</a>
@@ -347,7 +347,7 @@ We've enhanced the performance of configurable products in several ways:
 
 <!---57086-->* You can now successfully place orders with Braintree when using an alternative {% glossarytooltip 5ac2d367-070a-474c-badf-df2b84fe3b09 %}merchant account{% endglossarytooltip %} ID. (The merchant account does not need to match the 3D Secure authorization merchant account.) <a href="https://github.com/magento/magento2/issues/5910" target="_blank">(GITHUB-5910)</a> 
 
-<!---59637-->*  Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento  displayed a spinning loader widget, and your screen froze. The Developer console displayed this error:
+<!---59637-->*  Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento  displayed a spinning 加载小工具, and your screen froze. The Developer console displayed this error:
 `Uncaught Error: [paypal-container] is not a valid DOM Element`. 
 
 
@@ -379,7 +379,7 @@ We've improved the performance of these tasks:
 
 <!---59806-->* Loading many configurable products with multiple images (for example, configurable products with three attributes and 250 options) <a href="https://github.com/magento/magento2/issues/6979" target="_blank">(GITHUB-6979)</a> 
 
-<!---60041-->* Resizing images on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %}
+<!---60041-->* Resizing images on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %}
 
 <!---57905-->We've optimized compiler performance (that is, the [`setup:di:compile`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html) command). 
 
@@ -611,7 +611,7 @@ Our technology stack is built on PHP and MySQL. For more information, see
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 

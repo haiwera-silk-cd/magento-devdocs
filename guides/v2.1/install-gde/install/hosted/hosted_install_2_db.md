@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 03_install
-title: Step 2. Add a database
-menu_title: Step 2. Add a database
+title: 步骤2.添加数据库
+menu_title: 步骤2.添加数据库
 menu_order: 5
 menu_node:
 version: 2.1
@@ -16,4 +16,4 @@ functional_areas:
 {% include install/web/install-web_2-db.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_install_3_web-conf.html">Step 3. Web configuration</a>
+<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_install_3_web-conf.html">步骤3. Web服务器配置</a>

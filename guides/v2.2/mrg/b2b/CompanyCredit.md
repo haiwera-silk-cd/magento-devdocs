@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_CompanyCredit module
+title: Magento_CompanyCredit模块
 menu_title: CompanyCredit
 menu_order: 60
 version: 2.2
@@ -32,9 +32,9 @@ The module has a dependency on the `Magento_Company` module, which must be insta
 
 ## Extensibility
 
-Extension developers can interact with the Magento_CompanyCredit module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_CompanyCredit模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CompanyCredit module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CompanyCredit模块.
 
 [Payment method configuration]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html) will allow you additional configuration to extend module functionality.
 

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: During installation, Reflection Exception error
-menu_title: During installation, Reflection Exception error
+title: 安装期间出现反射(Reflection)异常
+menu_title: 安装期间出现反射(Reflection)异常
 menu_node:
 menu_order: 25
 version: 2.0

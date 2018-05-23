@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: nginx
 menu_title: nginx
 menu_order: 2
@@ -22,10 +22,10 @@ Installation instructions vary based on which operating system you're using:
 ## Help if you're just starting out {#apache-help-beginner}
 If you're new to all this and need some help getting started, we suggest the following:
 
-*	[Is the Magento software installed already?]({{ page.baseurl }}/install-gde/basics/basics_magento-installed.html)
-*	[What is the software that the Magento server needs to run?]({{ page.baseurl }}/install-gde/basics/basics_software.html)
-*	[What operating system is my server running?]({{ page.baseurl }}/install-gde/basics/basics_os-version.html)
-*	[How do I log in to my Magento server using a terminal, command prompt, or SSH?]({{ page.baseurl }}/install-gde/basics/basics_login.html)
+*	[你的Magento安装好了吗?]({{ page.baseurl }}/install-gde/basics/basics_magento-installed.html)
+*	[Magento服务器需要运行哪些软件?]({{ page.baseurl }}/install-gde/basics/basics_software.html)
+*	[我的服务器运行的是什么系统?]({{ page.baseurl }}/install-gde/basics/basics_os-version.html)
+*	[我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?]({{ page.baseurl }}/install-gde/basics/basics_login.html)
 
 ## Ubuntu 16
 The following section describes how to install Magento 2.x on Ubuntu 16 using nginx, PHP, and MySQL.
@@ -36,7 +36,7 @@ The following section describes how to install Magento 2.x on Ubuntu 16 using ng
 
 After completing the following sections and [installing Magento]({{ page.baseurl }}/install-gde/prereq/nginx.html#install-magento2-ubuntu), we'll use a sample configuration file to [configure nginx]({{ page.baseurl }}/install-gde/prereq/nginx.html#configure-nginx-ubuntu).
 
-### Install and configure php-fpm
+### Install and 配置PHP-fpm
 Magento requires several [PHP extensions]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html) to function properly. In addition to these extensions, you must also install and configure the `php-fpm` extension if you're using nginx.
 
 To install and configure `php-fpm`:
@@ -57,7 +57,7 @@ To install and configure `php-fpm`:
 		zlib.output_compression = On
 
     <div class="bs-callout bs-callout-info" markdown="1">
-We recommend setting the memory limit to 2G when testing Magento. Refer to [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html) for more information.
+We recommend setting the memory limit to 2G when testing Magento. Refer to [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html) for more information.
     </div>
 
 4. Save and exit the editor.
@@ -98,7 +98,7 @@ For this example, we'll download and extract an archive.
 		chown -R :www-data .
 		chmod u+x bin/magento
 
-5. Install Composer globally. You'll need Composer to update dependencies before installing Magento:
+5. 安装Composer globally. You'll need Composer to update dependencies before installing Magento:
 
 		curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
 
@@ -168,8 +168,8 @@ The `include` directive must point to the sample nginx configuration file in you
 
 		systemctl restart nginx
 
-### Verify the installation
-Open a web browser and navigate to your site's base URL to [verify the installation.]({{ page.baseurl }}/install-gde/install/verify.html)
+### 验证你的安装
+Open a web browser and navigate to your site's base URL to [验证你的安装.]({{ page.baseurl }}/install-gde/install/verify.html)
 
 ## CentOS 7
 The following section describes how to install Magento 2.x on CentOS 7 using nginx, PHP, and MySQL.
@@ -187,7 +187,7 @@ After installation is complete, start nginx and configure it to start at boot ti
 After completing the following sections and [installing Magento]({{ page.baseurl }}/install-gde/prereq/nginx.html#install-magento2-centos), we'll use a sample configuration file to [configure nginx]({{ page.baseurl }}/install-gde/prereq/nginx.html#configure-nginx-centos).
 
 
-### Install and configure php-fpm
+### Install and 配置PHP-fpm
 Magento requires several [PHP extensions]({{ page.baseurl }}/install-gde/prereq/php-centos.html) to function properly. In addition to these extensions, you must also install and configure the `php-fpm` extension if you're using nginx.
 
 1. Install `php-fpm`:
@@ -205,7 +205,7 @@ Magento requires several [PHP extensions]({{ page.baseurl }}/install-gde/prereq/
 		zlib.output_compression = On
 
     <div class="bs-callout bs-callout-info" markdown="1">
-We recommend setting the memory limit to 2G when testing Magento. Refer to [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html) for more information.
+We recommend setting the memory limit to 2G when testing Magento. Refer to [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html) for more information.
     </div>
 
 5. Uncomment the session path directory and set the path:
@@ -286,7 +286,7 @@ For this example, we'll download and extract an archive.
 		chown -R :apache .
 		chmod u+x bin/magento
 
-4. Install Composer globally. You'll need Composer to update dependencies before installing Magento:
+4. 安装Composer globally. You'll need Composer to update dependencies before installing Magento:
 
 		curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
 
@@ -391,13 +391,13 @@ To configure SELinux and firewalld:
 		firewall-cmd --permanent --add-service=https
 		firewall-cmd --reload
 
-### Verify the installation
-Open a web browser and navigate to your site's base URL to [verify the installation.]({{ page.baseurl }}/install-gde/install/verify.html)
+### 验证你的安装
+Open a web browser and navigate to your site's base URL to [验证你的安装.]({{ page.baseurl }}/install-gde/install/verify.html)
 
 #### 相关主题:
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
 *	[MySQL]({{ page.baseurl }}/install-gde/prereq/mysql.html)
 * [Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
-*	[Installing optional software]({{ page.baseurl }}/install-gde/prereq/optional.html)
+*	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)
 *	[Determine your installation or upgrade path]({{ page.baseurl }}/install-gde/bk-install-guide.html)

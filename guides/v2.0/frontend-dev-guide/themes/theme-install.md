@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Install a third-party storefront theme
-menu_title: Install a third-party storefront theme
+title: 安装第三方前台主题
+menu_title: 安装第三方前台主题
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-install.md
@@ -13,13 +13,13 @@ functional_areas:
 
 ## What's in this topic
 
-This topic describes how to install a third-party {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} for a Magento 2 store.
+This topic describes how to install a third-party {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} for a Magento 2 store.
 
 To install a theme, you need to add its code to your Magento 2 instance code base, and then register it in the database. The way a theme is distributed determines how to do this:
 
 - if a theme is just a set of files, for example an archive, add the theme manually.
 - if a theme is a {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}composer{% endglossarytooltip %} package, install it using composer.
-- if a theme is distributed as an extension, use the **Web Setup Wizard** in {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+- if a theme is distributed as an extension, use the **Web Setup Wizard** in {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 The following sections contain more information about each installation flow.
 

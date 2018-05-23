@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Set up the updater (obsolete)
-menu_title: Set up the updater (obsolete)
+subgroup: 先决条件
+title: 设置更新器(已过时)
+menu_title: 设置更新器(已过时)
 menu_order: 1000
 menu_node:
 version: 2.0
@@ -15,4 +15,4 @@ functional_areas:
 
 This topic is obsolete. Magento no longer has a separate updater application.
 
-If you are a contributing developer who installed the Magento application by cloning the GitHub repository, see instead [Update the Magento application]({{ page.baseurl }}/install-gde/install/cli/dev_update-magento.html).
+If you are a contributing developer who installed the Magento application by cloning the GitHub repository, see instead [更新Magento]({{ page.baseurl }}/install-gde/install/cli/dev_update-magento.html).

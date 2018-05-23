@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: What is the software that the Magento server needs to run?
-menu_title: What is the software that the Magento server needs to run?
+subgroup: 起步
+title: Magento服务器需要运行哪些软件?
+menu_title: Magento服务器需要运行哪些软件?
 menu_node:
 menu_order: 125
 level3_menu_node: level3child

@@ -14,7 +14,7 @@ functional_areas:
   - Setup
 ---
 
-## Before you configure the Magento application {#config-install-cli-prereq}
+## Before you 配置Magento应用 {#config-install-cli-prereq}
 {% include install/before-you-begin-cli.html %}
 
 ## 第一步 {#config-cli-before}

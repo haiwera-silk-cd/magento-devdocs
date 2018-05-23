@@ -25,7 +25,7 @@ They are designed for simple and flexible user interface (UI) rendering. Compone
 
 Magento UI components are implemented as a standard {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} named Magento_UI.
 
-To use UI components in your custom module, you need to add a dependency for the Magento_UI module in [your component's composer.json file]({{ page.baseurl }}/extension-dev-guide/build/composer-integration.html).
+To use UI components in your custom module, you need to add a dependency for the Magento_UI模块 in [your component's composer.json file]({{ page.baseurl }}/extension-dev-guide/build/composer-integration.html).
 
 The following XSD file contains rules and limitations shared between all components (both definitions and instance configurations):
 
@@ -59,7 +59,7 @@ With Magento, you may apply different approaches to implementing a UI element, a
 
 * PHTML template with declaration of related JavaScript file via {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}
 
-* {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %}
+* {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %}
 
 * Magento 2 {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}
 
@@ -94,7 +94,7 @@ An instance of UI component is usually based on the hierarchy of child UI compon
 
 The picture below shows how the JavaScript class of a UI component is implemented.
 
-![JavaScript class implementation of a UI component]({{ site.baseurl }}/common/images/ui_comp_js_class.png)
+![JavaScript class implementation of a UI component]({{ site.magentourl }}/common/images/ui_comp_js_class.png)
 
 ### Templates
 

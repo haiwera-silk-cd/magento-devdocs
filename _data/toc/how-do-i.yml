@@ -50,7 +50,7 @@ pages:
     - label: Theme development
       url: /howdoi/frontend/front-theme.html
 
-    - label: Troubleshooting Magento
+    - label: 故障排除 Magento
       url: /howdoi/troubleshoot/troubleshoot.html
       children:
 

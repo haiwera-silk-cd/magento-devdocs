@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_github
-title: git pull origin develop fails when updating the Magento software
-menu_title: git pull origin develop fails when updating the Magento software
+title: 更新了Magento之后git pull origin develop失败
+menu_title: 更新了Magento之后git pull origin develop失败
 menu_node:
 menu_order: 410
 version: 2.0

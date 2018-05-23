@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Getting Started
+subgroup: 起步
 title: Magento 2.2.x系统要求
 menu_title: Magento 2.2.x系统要求
 menu_node: parent

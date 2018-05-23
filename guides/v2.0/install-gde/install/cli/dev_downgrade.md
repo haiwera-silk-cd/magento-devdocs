@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 99_contrib
-title: Change to a released version
-menu_title: Change to a released version
+title: 切换到发布版本
+menu_title: 切换到发布版本
 menu_order: 200
 menu_node:
 version: 2.0

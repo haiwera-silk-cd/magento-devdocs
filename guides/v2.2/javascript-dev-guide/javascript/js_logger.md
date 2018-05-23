@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: JavaScript Logger
-menu_title: JavaScript Logger
+title: js的Logger类
+menu_title: js的Logger类
 menu_order: 20
 version: 2.2
 github_link: javascript-dev-guide/javascript/js_logger.md
@@ -249,7 +249,7 @@ By default, Magento uses `consoleLogger` to display logs in browser console.
 
 Example:
 
-![node declaration autocomplete]({{ site.baseurl }}/common/images/js/logger_error.png)
+![node declaration autocomplete]({{ site.magentourl }}/common/images/js/logger_error.png)
 
 The default level of logs that Magento displays in the console starts from the `WARN` level.
 

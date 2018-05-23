@@ -1,6 +1,6 @@
 <div markdown="1">
 
-## TLS 1.2 requirement for PayPal
+## PayPal TLS1.2要求
 PayPal recently announced they will require Transport Layer Security (TLS) version 1.2 to process payments in a live environment. (PayPal already requires TLS 1.2 in the sandbox.)
 
 More information:

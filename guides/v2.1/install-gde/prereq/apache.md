@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: Apache
 menu_title: Apache
 menu_order: 1
@@ -20,10 +20,10 @@ Magento requires Apache 2.2.x or 2.4.x.
 <h2 id="apache-help-beginner">Help if you're just starting out</h2>
 If you're new to all this and need some help getting started, we suggest the following:
 
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">Is the Magento software installed already?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">What is the software that the Magento server needs to run?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">What operating system is my server running?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">How do I log in to my Magento server using a terminal, command prompt, or SSH?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">你的Magento安装好了吗?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">Magento服务器需要运行哪些软件?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
 
 <h2 id="apache-help-rewrite">Important: Apache rewrites and .htaccess</h2>
 This topic discusses how to enable Apache 2.2 rewrites and specify a setting for the <a href="http://httpd.apache.org/docs/current/howto/htaccess.html" target="_blank">distributed configuration file, <code>.htaccess</code></a>.
@@ -72,7 +72,7 @@ To install the default version of Apache (Ubuntu 14, 16&mdash;Apache 2.4, Ubuntu
 
 		apt-get -y install apache2
 
-2.	Verify the installation.
+2.	验证你的安装.
 
 		apache2 -v
 
@@ -116,7 +116,7 @@ To upgrade to Apache 2.4:
 	<p>If the <code>apt-get install</code> command fails because of unmet dependencies, consult a resource like <a href="http://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa" target="_blank">http://askubuntu.com</a>.</p></span>
 	</div>
 
-3.	Verify the installation.
+3.	验证你的安装.
 
 		apache2 -v
 
@@ -148,7 +148,7 @@ Installing and configuring Apache is basically a three-step process: install the
 
 		yum -y install httpd
 
-2.	Verify the installation:
+2.	验证你的安装:
 
 		httpd -v
 
@@ -225,6 +225,6 @@ For example:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing optional software</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Determine your installation or upgrade path</a>
 

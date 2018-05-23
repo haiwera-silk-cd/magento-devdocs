@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 1. Readiness check
-menu_title: Step 1. Readiness check
+title: 步骤1.准备就绪检查
+menu_title: 步骤1.准备就绪检查
 menu_node:
 menu_order: 5
 version: 2.1
@@ -16,6 +16,6 @@ The readiness check makes sure your server and environment are set up correctly 
 
 To start, click either **Start Readiness Check** or **Next**. A sample follows.
 
-![The readiness check enables you to find out if your server and environment are ready to proceed]({{ site.baseurl }}/common/images/cman_update_readiness.png){:width="650px"}
+![The readiness check enables you to find out if your server and environment are ready to proceed]({{ site.magentourl }}/common/images/cman_update_readiness.png){:width="650px"}
 
 {% include comp-man/readiness-check.md %}

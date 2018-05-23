@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Set up a remote MySQL database connection
-menu_title: Set up a remote MySQL database connection
+subgroup: 先决条件
+title: 设置远程Mysql数据库连接
+menu_title: 设置远程Mysql数据库连接
 menu_order: 175
 version: 2.0
 github_link: install-gde/prereq/mysql_remote.md
@@ -131,9 +131,9 @@ When you install the Magento software using either the command line or Setup Wiz
 
 #### 相关主题
 
-*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing optional software</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

@@ -1,6 +1,6 @@
 label: Testing
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /test/testing.html
 
     - label: Integration Tests

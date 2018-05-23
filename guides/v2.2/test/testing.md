@@ -28,7 +28,7 @@ When talking about testing in Magento 2, we have to distinguish between differen
   For more information, see [Running Integration Tests]({{ page.baseurl }}/test/integration/integration_test_execution.html){:target="_blank"}.
   
 ## JavaScript  
-  Much of the functionality in Magento 2 is provided with the help of sophisticated {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %}. JavaScript tests ensure the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} portion of Magento functions as expected.  
+  Much of the functionality in Magento 2 is provided with the help of sophisticated {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %}. JavaScript tests ensure the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} portion of Magento functions as expected.  
 
   For more information, please see the [Extension Developer Guide on JavaScript Tests]({{ page.baseurl }}/test/js/test_js-unit.html){:target="_blank"}.
   

@@ -5,7 +5,7 @@ version: 2.0
 github_link: mtf/mtf_entities/mtf_handler.md
 ---
 
-You can use a handler to set up preconditions and prepare an initial testing environment for particular tests. For example, your scenario requires a particular {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} that must be implicitly created before the test is started. You need <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_fixture.html">a fixture</a>, a data set, and a handler. The handler transfers data to the application being tested. The data is a list of fields from a fixture and values from data sets.
+You can use a handler to set up preconditions and prepare an initial testing environment for particular tests. For example, your scenario requires a particular {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} that must be implicitly created before the test is started. You need <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_fixture.html">a fixture</a>, a data set, and a handler. The handler transfers data to the application being tested. The data is a list of fields from a fixture and values from data sets.
 
 This topic focuses on handlers, and we'll discuss types of handlers as well as how to create and use one.
 
@@ -139,7 +139,7 @@ See the directory structure mentioned for the case with the Widget cURL handler:
 
 Let's create a cURL handler that creates a new widget.
 
-* Create a directory with the name `Widget` in the `Handler` directory of the Magento_Widget module - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Handler/Widget`.
+* Create a directory with the name `Widget` in the `Handler` directory of the Magento_Widget模块 - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Handler/Widget`.
 * In the same directory, create <a href="#mtf_handler_interface">the interface</a> for the cURL handler, and call the file `WidgetInterface.php`. Our new interface extends `HandlerInterface` class.
 
 {% highlight php %}
@@ -258,7 +258,7 @@ class Curl extends AbstractCurl
 
 {% endhighlight %}
 
-* Create <a href="#mtf_handler_di"><code>di.xml</code></a> in the `etc/curl` directory of the Magento_Widget module.
+* Create <a href="#mtf_handler_di"><code>di.xml</code></a> in the `etc/curl` directory of the Magento_Widget模块.
 
 {%highlight xml%}
 
@@ -302,7 +302,7 @@ $curl = new FrontendDecorator(new CurlTransport(), $this->customer);
 
 Let's create a UI handler that creates a new widget.
 
-* Create a directory with the name `Widget` in the `Handler` directory of the Magento_Widget module - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Handler/Widget`.
+* Create a directory with the name `Widget` in the `Handler` directory of the Magento_Widget模块 - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Handler/Widget`.
 * In the same directory, create <a href="#mtf_handler_interface">interface</a> for the UI handler, and call the file `WidgetInterface.php`. Our new interface extends `HandlerInterface` class.
 
 {% highlight php %}
@@ -443,7 +443,7 @@ class Curl extends AbstractCurl
 
 Let's create a WebAPI handler that creates a new {% glossarytooltip f35f5e81-db5d-4754-937e-b5607ac255fa %}tax rule{% endglossarytooltip %}.
 
-* Create a directory with the name `TaxRule` in the `Handler` directory of the Magento_Tax module - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Tax/Test/Handler/TaxRule`.
+* Create a directory with the name `TaxRule` in the `Handler` directory of the Magento_Tax模块 - `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Tax/Test/Handler/TaxRule`.
 * In the same directory, create <a href="#mtf_handler_interface">interface</a> for the WebAPI handler, and call the file `TaxRuleInterface.php`. Our new interface extends `HandlerInterface` class.
 
 {% highlight php %}
@@ -558,7 +558,7 @@ class Curl extends AbstractCurl
 
 {% endhighlight %}
 
-* Create <a href="#mtf_handler_di"><code>di.xml</code></a> in the `etc/webapi` directory of the Magento_Tax module.
+* Create <a href="#mtf_handler_di"><code>di.xml</code></a> in the `etc/webapi` directory of the Magento_Tax模块.
 
 {%highlight xml%}
 

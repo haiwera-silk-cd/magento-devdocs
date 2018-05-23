@@ -1,89 +1,89 @@
-label: JavaScript Developer Guide
+label: js开发者手册
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /javascript-dev-guide/bk-javascript-dev-guide.html
 
-    - label: Conventional notations used in this Guide
+    - label: 本手册中使用的常规符号
       url: /javascript-dev-guide/conventions_js.html
 
     - label: JavaScript
       url: /javascript-dev-guide/javascript/js_overview.html
       children:
 
-        - label: JavaScript resources in Magento
+        - label: Magento js资源
           url: /javascript-dev-guide/javascript/js-resources.html
 
         - label: About AMD modules and RequireJS
           versions: ["2.0", "2.1"]
           url: /javascript-dev-guide/javascript/requirejs_concept.html
 
-        - label: Calling and initializing JavaScript
+        - label: 调用和初始化js组件
           url: /javascript-dev-guide/javascript/js_init.html
 
         - label: Frontend product repository
           versions: ["2.2", "2.3"]
           url: /javascript-dev-guide/javascript/product-frontend-storage.html
 
-        - label: Use custom JavaScript
+        - label: 使用定制脚本
           url: /javascript-dev-guide/javascript/custom_js.html
 
-        - label: Locate JavaScript components
+        - label: 定位js组件
           url: /javascript-dev-guide/javascript/js_debug.html
 
-        - label: Customizing JavaScript illustration
+        - label: 图解如何定制js组件
           url: /javascript-dev-guide/javascript/js_practice.html
 
-        - label: Using JavaScript mixins
+        - label: Using js混入
           url: /javascript-dev-guide/javascript/js_mixins.html
 
-    - label: Magento jQuery widgets
+    - label: Magento jq小工具
       url: /javascript-dev-guide/widgets/jquery-widgets-about.html
       children:
 
-        - label: Accordion widget
+        - label: 手风琴菜单小工具
           url: /javascript-dev-guide/widgets/widget_accordion.html
 
-        - label: Alert widget
+        - label: 提示弹框小工具
           url: /javascript-dev-guide/widgets/widget_alert.html
 
-        - label: Calendar widget
+        - label: 日历小工具
           url: /javascript-dev-guide/widgets/widget_calendar.html
 
-        - label: Collapsible widget
+        - label: 可折叠窗小工具
           url: /javascript-dev-guide/widgets/widget_collapsible.html
 
-        - label: Confirmation widget
+        - label: 确认弹窗小工具
           url: /javascript-dev-guide/widgets/widget_confirm.html
 
-        - label: DropdownDialog widget
+        - label: 下拉弹窗小工具
           url: /javascript-dev-guide/widgets/widget_dialog.html
 
-        - label: Gallery widget
+        - label: 相册小工具
           url: /javascript-dev-guide/widgets/widget_gallery.html
 
-        - label: List widget
+        - label: 列表小工具
           url: /javascript-dev-guide/widgets/widget_list.html
 
-        - label: Magnifier widget
+        - label: 放大镜小工具
           url: /javascript-dev-guide/widgets/widget_gallery_mg.html
 
-        - label: Loader widget
+        - label: 加载小工具
           url: /javascript-dev-guide/widgets/widget_loader.html
 
-        - label: Menu widget
+        - label: 菜单小工具
           url: /javascript-dev-guide/widgets/widget_menu.html
 
-        - label: Modal widget
+        - label: 模态弹窗小工具
           url: /javascript-dev-guide/widgets/widget_modal.html
 
-        - label: Navigation widget
+        - label: 导航栏小工具
           url: /javascript-dev-guide/widgets/widget_navigation.html
 
-        - label: Prompt widget
+        - label: 问询弹框小工具
           url: /javascript-dev-guide/widgets/widget_prompt.html
 
-        - label: QuickSearch widget
+        - label: 快速搜索小工具
           url: /javascript-dev-guide/widgets/widget_quickSearch.html
 
-        - label: Tabs widget
+        - label: 标签页小工具
           url: /javascript-dev-guide/widgets/widget_tabs.html

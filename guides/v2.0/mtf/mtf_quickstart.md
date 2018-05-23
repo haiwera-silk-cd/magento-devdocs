@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Quick start with the Functional Testing Framework
+title: 快速开始功能测试框架快速开始
 version: 2.0
 github_link: mtf/mtf_quickstart.md
 ---

@@ -1,8 +1,8 @@
 ---
 group: install_wiz
 subgroup: Wizard
-title: Step 2. Add a Database
-menu_title: Step 2. Add a Database
+title: 步骤2.添加数据库
+menu_title: 步骤2.添加数据库
 menu_node:
 menu_order: 3
 version: 2.1
@@ -19,4 +19,4 @@ functional_areas:
 {% include install/web/install-web_2-db.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/web/install-web_3-web-conf.html">Step 3. Web configuration</a>
+<a href="{{ page.baseurl }}/install-gde/install/web/install-web_3-web-conf.html">步骤3. Web服务器配置</a>

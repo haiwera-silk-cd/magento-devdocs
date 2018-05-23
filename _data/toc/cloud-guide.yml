@@ -296,7 +296,7 @@ pages:
         - label: Launch steps
           url: /cloud/live/launch-steps.html
 
-    - label: Troubleshooting
+    - label: 故障排除
       url: /cloud/trouble/trouble.html
       children:
         - label: Troubleshoot deployment

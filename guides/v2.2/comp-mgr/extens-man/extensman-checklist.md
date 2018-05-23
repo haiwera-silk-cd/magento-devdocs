@@ -23,7 +23,7 @@ The {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglo
 </div>
 
 ## 先决条件
-Before continuing, complete all tasks discussed in [Prerequisites]({{ page.baseurl }}/comp-mgr/prereq/prereq_compman.html).
+Before continuing, complete all tasks discussed in [先决条件]({{ page.baseurl }}/comp-mgr/prereq/prereq_compman.html).
 
 ## Extension Manager checklist
 {% include comp-man/checklist_2.2.md %}

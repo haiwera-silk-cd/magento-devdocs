@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Errors during installation
-menu_title: Errors during installation
+title: 安装过程中出错
+menu_title: 安装过程中出错
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -13,12 +13,12 @@ functional_areas:
   - Setup
 ---
 
-*	[Installation stops at about 70%]({{ page.baseurl }}/install-gde/trouble/php/tshoot_70pct.html)
-*	[Cannot install using nginx]({{ page.baseurl }}/install-gde/trouble/php/tshoot_nginx-port.html)
-*	[During installation, fatal PDO error displays]({{ page.baseurl }}/install-gde/trouble/php/tshoot_pdo.html)
-*	[During installation, Reflection Exception error]({{ page.baseurl }}/install-gde/trouble/tshoot_wrong-mysql.html)
-*	[During installation, exception SessionHandler::read()]({{ page.baseurl }}/install-gde/trouble/php/tshoot_session.html)
-*	[Errors installing optional sample data]({{ page.baseurl }}/install-gde/trouble/tshoot_sample-data.html)
-*	[Installation fails; cannot create install.log]({{ page.baseurl }}/install-gde/trouble/tshoot_install-log.html)
-*	[Download fails because of changes in Composer]({{ page.baseurl }}/install-gde/trouble/tshoot_composer-fail.html)
-*	[During installation, xdebug maximum function nesting level error]({{ page.baseurl }}/install-gde/trouble/php/tshoot_xdebug.html)
+*	[安装在70%左右卡住]({{ page.baseurl }}/install-gde/trouble/php/tshoot_70pct.html)
+*	[使用nginx不能正常安装]({{ page.baseurl }}/install-gde/trouble/php/tshoot_nginx-port.html)
+*	[安装期间出现PDO致命错误]({{ page.baseurl }}/install-gde/trouble/php/tshoot_pdo.html)
+*	[安装期间出现反射(Reflection)异常]({{ page.baseurl }}/install-gde/trouble/tshoot_wrong-mysql.html)
+*	[安装期间SessionHandler::read()出现异常]({{ page.baseurl }}/install-gde/trouble/php/tshoot_session.html)
+*	[安装可选的样本数据发生错误]({{ page.baseurl }}/install-gde/trouble/tshoot_sample-data.html)
+*	[安装失败，无法创建install.log]({{ page.baseurl }}/install-gde/trouble/tshoot_install-log.html)
+*	[Composer的修改导致下载失败]({{ page.baseurl }}/install-gde/trouble/tshoot_composer-fail.html)
+*	[安装过程中xdebug出现嵌方法套层数过多的错误]({{ page.baseurl }}/install-gde/trouble/php/tshoot_xdebug.html)

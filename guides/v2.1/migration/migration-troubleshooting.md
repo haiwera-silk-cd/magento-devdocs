@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: F_troubleshooting
-title: Troubleshooting
-menu_title: Troubleshooting
+title: 故障排除
+menu_title: 故障排除
 menu_node: parent
 menu_order: 6
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
 
 ## Common error messages
 
-This section is about the errors that might occur when you run the Data Migration Tool, and how to deal with them.
+This section is about the errors that might occur when you run the 数据迁移工具, and how to deal with them.
 
 ### Source documents/fields not mapped
 
@@ -31,7 +31,7 @@ In rare cases, the message might mention `Destination documents`或`Destination 
 
 Some Magento 1 entities (in most cases, coming from extensions) do not exist in the Magento 2 database.
 
-This message appears because the Data Migration Tool runs internal tests to verify that tables and fields are consistent between *source* (Magento 1) and *destination* (Magento 2) databases.
+This message appears because the 数据迁移工具 runs internal tests to verify that tables and fields are consistent between *source* (Magento 1) and *destination* (Magento 2) databases.
 
 #### Possible solutions
 
@@ -92,7 +92,7 @@ There are missing database records in the `parent_table` to which the `field_id`
 
 Delete the records from the `child_table`, if you do not need them.
 
-To keep the records, disable the `Data Integrity Step` by modifying the Data Migration Tool's `config.xml`.
+To keep the records, disable the `Data Integrity Step` by modifying the 数据迁移工具's `config.xml`.
 
 ### Duplicates in URL rewrites
 
@@ -126,4 +126,4 @@ Missing records happen when a customer places an order during migration.
 
 #### Solution
 
-Run the Data Migration Tool in `Delta` mode to transfer incremental changes.
+Run the 数据迁移工具 in `Delta` mode to transfer incremental changes.

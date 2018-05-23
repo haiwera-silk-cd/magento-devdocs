@@ -17,7 +17,7 @@ functional_areas:
 ## Now that you've finished your installation
 We suggest the following:
 
-*	<a href="{{ page.baseurl }}/install-gde/install/verify.html">Verify the installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/verify.html">验证你的安装</a>
 
 ## Other options
 You can also do any of the following:
@@ -31,7 +31,7 @@ If you haven't already installed optional sample data, you can [install it now](
 *	*Contributing developers only*: <a href="{{ page.baseurl }}/install-gde/install/cli/dev_options.html">Contributing developers&mdash;update, reinstall Magento</a>
 
 ### Configure
-<a href="{{ page.baseurl }}/install-gde/install/post-install-config.html">Configure the Magento application</a>.
+<a href="{{ page.baseurl }}/install-gde/install/post-install-config.html">配置Magento应用</a>.
 
 *[contributing developer]: A developer who contributes code to the Magento 2 CE codebase
 *[contributing developers]: Developers who contribute code to the Magento 2 CE codebase

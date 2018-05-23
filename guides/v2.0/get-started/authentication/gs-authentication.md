@@ -22,7 +22,7 @@ Before you can make {% glossarytooltip 377dc0a3-b8a7-4dfa-808e-2de37e4c0029 %}we
 <h3 id="accessible-resources">Accessible resources</h3>
 
 The list of resources that you can access depends on your user type. All customers have the same permissions, and as a result the same resources accessible. The preceding statement is true for guest users as well.
-Each administrator or integration user can have a unique set of permissions which is configured in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+Each administrator or integration user can have a unique set of permissions which is configured in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 Permissions required to access particular resource are configured in the `webapi.xml` file. This table lists the resources that each user type can access:
 
 
@@ -176,6 +176,6 @@ Proceed to the authentication method for your preferred client:
 
 * Third-party application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">OAuth-based authentication</a>.
 
-* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">Session-based authentication</a>.
+* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">Session-based authentication</a>.
 
 * <a href="{{ page.baseurl }}/extension-dev-guide/attributes.html">Extension attribute authentication</a>

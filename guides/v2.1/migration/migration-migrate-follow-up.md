@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: D_Migrate using the data migration tool
-title: Follow-up (info and steps)
-menu_title: Follow-up (info and steps)
+title: 跟进(信息和步骤)
+menu_title: 跟进(信息和步骤)
 menu_node:
 menu_order: 4
 version: 2.1
@@ -13,13 +13,13 @@ functional_areas:
 
 ## Overview
 
-Some behaviour and logic of Magento 1 has been implemented differently in Magento 2. The Data Migration Tool takes care of it. Although, there are some migration aspects you should know about, and sometimes you must take minor steps for some functionalities to work smoothly after migration.
+Some behaviour and logic of Magento 1 has been implemented differently in Magento 2. The 数据迁移工具 takes care of it. Although, there are some migration aspects you should know about, and sometimes you must take minor steps for some functionalities to work smoothly after migration.
 
 ## Information
 
 ### Split database not supported
 
-The Data Migration Tool doesn't support split databases.
+The 数据迁移工具 doesn't support split databases.
 
 ### Group Prices converted to Tier Prices
 
@@ -37,7 +37,7 @@ After migration, Customer Segments must be resaved from the {% glossarytooltip 2
 
 ### Configure time zone offset
 
-If your Magento 1 server has the time zone set to anything other than UTC, you must configure the offset to migrate timestamp fields. To transform time to a different time zone, use the Data Migration Tool's `\Migration\Handler\Timezone` handler.
+If your Magento 1 server has the time zone set to anything other than UTC, you must configure the offset to migrate timestamp fields. To transform time to a different time zone, use the 数据迁移工具's `\Migration\Handler\Timezone` handler.
 
 In the following example, the Magento 1 server timezone is UTC-7. To convert the customer account creation date properly, add the following rule to `map-customer.xml`:
 

@@ -33,9 +33,9 @@ When logged in, your project should open with a `master` branch to work with.
 If your Cloud account has access to multiple projects, you should see a list of projects. Select the specific project you are preparing to access and work on.
 
 ## Magento specific tools
-When working on your local, you will be accessing the [Magento Cloud CLI]({{ page.baseurl }}/cloud/reference/cli-ref-topic.html) to issue commands and programmatically complete tasks and the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} for the store UI and configurations.
+When working on your local, you will be accessing the [Magento Cloud CLI]({{ page.baseurl }}/cloud/reference/cli-ref-topic.html) to issue commands and programmatically complete tasks and the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} for the store UI and configurations.
 
-You need to set up the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} on your local to assign that user as the owner for all created files and directories. For more information, see [Overview of ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+You need to set up the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} on your local to assign that user as the owner for all created files and directories. For more information, see [所有者和权限概述]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 
 ## Recommended tools
 This guide assumes you're working on a UNIX system or in a UNIX shell environment. For MAC OS and Linux-based systems, feel free to use any CLI tools of choice for issuing commands. For Windows users, we recommend a UNIX environment like [Cygwin](https://www.cygwin.com/){:target="_blank"}, [Putty](http://www.putty.org/){:target="_blank"}, or Git Bash.

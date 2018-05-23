@@ -28,13 +28,13 @@ If you are interested in working on one of these projects, open a [pull request 
    </thead>
    <tbody>         
       <tr>
-        <td><a href="https://github.com/magento/devdocs/issues/1276" target="\_blank">Menu widgets</a></td>
+        <td><a href="https://github.com/magento/devdocs/issues/1276" target="\_blank">菜单小工具s</a></td>
         <td>Small</td>
         <td>
-          <p>Help us improve the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_menu.html">Menu widget topic</a> by contributing working code samples and better descriptions of menu options.</p>
+          <p>Help us improve the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_menu.html">菜单小工具 topic</a> by contributing working code samples and better descriptions of menu options.</p>
           <p><strong>Acceptance criteria:</strong></p>
             <ul>
-              <li>Sample code showing the use of the menu widget.</li>
+              <li>Sample code showing the use of the 菜单小工具.</li>
               <li>Sample code showing the use of other widgets that are not documented, including <code><a href="http://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_dialog.html">dropdowndialog</a></code>和<code><a href="http://devdocs.magento.com/guides/v2.0/javascript-dev-guide/widgets/widget_list.html">list</a></code>.</li>
             </ul>
         </td>

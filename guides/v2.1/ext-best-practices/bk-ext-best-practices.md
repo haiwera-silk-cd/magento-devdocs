@@ -2,7 +2,7 @@
 group: ext-best-practices
 title: Best Practices for Extension Developers
 landing-page: Best Practices for Extension Developers
-menu_title: Introduction
+menu_title: 介绍
 menu_order: 1
 version: 2.1
 github_link: ext-best-practices/bk-ext-best-practices.md
@@ -44,6 +44,6 @@ This guide provides best practices, guidelines, and tips for creating Magento ex
 
 ### Related Content
 
-* [Admin Design Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html) - An in depth guide to the design patterns used in the Admin.
+* [管理面板用到的设计模式和库]({{ page.baseurl }}/pattern-library/bk-pattern.html) - An in depth guide to the design patterns used in the Admin.
 * [PHP Developer Guide]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html) - An in depth guide to creating Magento components.
 * [Frontend Developer Guide]({{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html) - An in depth guide to creating a Magento storefront theme.

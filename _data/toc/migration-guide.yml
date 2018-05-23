@@ -4,62 +4,62 @@ pages:
       url: /migration/bk-migration-guide.html
       children:
 
-        - label: Best practices and benchmarking
+        - label: 最佳实践和基准
           url: /migration/migration-overview-practices.html
 
-        - label: Versions supported
+        - label: 支持的版本
           url: /migration/migration-overview-supported.html
 
-        - label: How migration works
+        - label: 迁移是如何工作的
           url: /migration/migration-overview-how.html
 
-    - label: Creating a migration plan
+    - label: 创建一个迁移计划
       url: /migration/migration-plan.html
 
-    - label: Data Migration Tool
+    - label: 数据迁移工具
       url: /migration/migration-tool.html
       children:
 
-        - label: Preconditions
+        - label: 先决条件
           url: /migration/migration-tool-preconditions.html
 
-        - label: Install Data Migration Tool
+        - label: 安装数据迁移工具
           url: /migration/migration-tool-install.html
 
-        - label: Upgrade Data Migration Tool
+        - label: 升级数据迁移工具
           url: /migration/migration-tool-upgrade.html
 
-        - label: Configure migration
+        - label: 配置迁移
           url: /migration/migration-tool-configure.html
 
-        - label: Extend the tool
+        - label: 扩展工具
           url: /migration/extend-the-tool.html
 
-    - label: Migrate using Data Migration Tool
+    - label: 使用数据迁移工具迁移
       url: /migration/migration-migrate.html
       children:
 
-        - label: Migrate settings
+        - label: 迁移设置
           url: /migration/migration-migrate-settings.html
 
-        - label: Migrate data
+        - label: 迁移数据
           url: /migration/migration-migrate-data.html
 
-        - label: Migrate changes
+        - label: 迁移更改
           url: /migration/migration-migrate-delta.html
 
-        - label: Follow-up (info and steps)
+        - label: 跟进(信息和步骤)
           url: /migration/migration-migrate-follow-up.html
 
-    - label: Data that needs to be migrated manually
+    - label: 须要手动迁移的数据
       url: /migration/migration-manually.html
 
-    - label: Troubleshooting
+    - label: 故障排除
       url: /migration/migration-troubleshooting.html
 
-    - label: After Migration
+    - label: 迁移之后
       url: /migration/migration-migrate-after.html
 
-    - label: Data Migration Tool Technical Specification
+    - label: 数据迁移工具技术规范
       url: /migration/migration-tool-internal-spec.html
 

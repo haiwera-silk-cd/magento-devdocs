@@ -29,7 +29,7 @@ The general flow is the following:
 3. Run the page generator
 
 
-Let's see an example of the Magento {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}Widget{% endglossarytooltip %} page:
+Let's see an example of the Magento {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} page:
 
 `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Page/Adminhtml/WidgetInstanceIndex.xml`
 
@@ -121,7 +121,7 @@ To add blocks from different modules to the page, you can merge pages by followi
 
 **Step 4.** Run the page generator
 
-For example, we have `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` page and want to add three blocks from the Magento_Review module.
+For example, we have `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` page and want to add three blocks from the Magento_Review模块.
 
 `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` contains:
 
@@ -310,7 +310,7 @@ To override blocks, follow:
 
 Let's see an example with the following use case:
 
-- A Magento_NewModule changes the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} creation behaviour of a Magento_Catalog module.
+- A Magento_NewModule changes the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} creation behaviour of a Magento_Catalog模块.
 - `editForm` block from page `\Magento\Catalog\Test\Page\Adminhtml\CatalogCategoryEdit` must be changed according to new functionality.
 
 Let us see page `\Magento\Catalog\Test\Page\Adminhtml\CatalogCategoryEdit`:
@@ -341,7 +341,7 @@ The block that we want to change is:
 <block name="editForm" class="Magento\Catalog\Test\Block\Adminhtml\Category\Edit\CategoryForm" locator="#container" strategy="css selector"/>
 {% endhighlight %}
 
-We shouldn't change the `editForm` block in the Magento_Catalog module because in case of disabling of a Magento_NewModule module, the test will fail. Best way in this case is to create a new block in a Magento_NewModule module that covers new functionality.
+We shouldn't change the `editForm` block in the Magento_Catalog模块 because in case of disabling of a Magento_NewModule模块, the test will fail. Best way in this case is to create a new block in a Magento_NewModule模块 that covers new functionality.
 
 Assume that we already created the new block `\Magento\NewModule\Test\Block\Adminhtml\Category\Edit\CategoryForm`.
 

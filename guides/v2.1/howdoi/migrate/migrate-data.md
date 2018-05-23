@@ -8,19 +8,19 @@ version: 2.1
 github_link: howdoi/migrate/migrate-data.md
 ---
 
-## Migrate data from Magento 1 to Magento 2
+## 迁移数据 from Magento 1 to Magento 2
 
 Data Migration allows you to migrate several types of data from your Magento 1 store to Magento 2 store.
 
 <h4>Start your migration</h4>
 <ol>
-  <li>Make sure that the <a href="{{ page.baseurl }}/migration/migration-tool.html">Data Migration Tool</a> has a network access to connect to Magento 1 and Magento 2 databases. Open ports in your firewall.</li>
+  <li>Make sure that the <a href="{{ page.baseurl }}/migration/migration-tool.html">数据迁移工具</a> has a network access to connect to Magento 1 and Magento 2 databases. Open ports in your firewall.</li>
   <li>Stop all activity in the Magento 1.x {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} Panel (except for order management, such as shipping, creating invoice, credit memos etc.)</li>
 <pre>NOTE: Activity cannot resume until your Magento 2 store goes live.</pre>
   <li>Stop all Magento 1.x cron jobs.</li> 
   <li>Use the migration tool to <a href="{{ page.baseurl }}/migration/migration-migrate-settings.html">migrate settings</a> and websites.</li>
   <li>Copy your Magento 1.x media files to Magento 2.0. (You must copy these manually from <code>&lt;magento1-root>/media</code> to <code>&lt;magento2-root>/pub/media</code>)</li> 
-  <li>Use Data Migration Tool to <a href="{{ page.baseurl }}/migration/migration-migrate-data.html">migrate your data</a> from Magento 1 database to Magento 2 database. If some of your extensions have data you want to migrate, you might need to install these extensions adapted for Magento 2. In case the extensions have a different structure in Magento 2 database, use the mapping files provided with the Data Migration Tool.</li>
+  <li>Use 数据迁移工具 to <a href="{{ page.baseurl }}/migration/migration-migrate-data.html">migrate your data</a> from Magento 1 database to Magento 2 database. If some of your extensions have data you want to migrate, you might need to install these extensions adapted for Magento 2. In case the extensions have a different structure in Magento 2 database, use the mapping files provided with the 数据迁移工具.</li>
   <li>Use the <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html#config-cli-subcommands-index-reindex"><code>magento indexer:reindex</code></a> command to reindex all indexers.</li>
   <li>Thoroughly test your Magento 2.0 site.</li>
 </ol>

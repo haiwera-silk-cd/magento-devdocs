@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Optional software
-menu_title: Optional software
+subgroup: 先决条件
+title: 可选软件
+menu_title: 可选软件
 menu_order: 400
 version: 2.1
 github_link: install-gde/prereq/optional.md
@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="install-optional-intro">Magento optional software</h2>
+<h2 id="install-optional-intro">Magento 可选软件</h2>
 We strongly recommend you install NTP because otherwise, cron-related tasks might not perform properly. (Server dates could be in the past or future, for example.)
 
 The other optional utilities discussed in this topic might assist you with your installation; however, they are not required to install or use Magento.
@@ -201,4 +201,4 @@ To install phpmyadmin on CentOS:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Get your authentication keys
-menu_title: Get your authentication keys
+subgroup: 先决条件
+title: 获取你的认证密钥
+menu_title: 获取你的认证密钥
 menu_order: 26
 menu_node:
 version: 2.1

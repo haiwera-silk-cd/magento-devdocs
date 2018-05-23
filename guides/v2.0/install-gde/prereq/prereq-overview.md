@@ -1,9 +1,9 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Prerequisites
+subgroup: 先决条件
+title: 先决条件
 menu_node: parent
-menu_title: Prerequisites
+menu_title: 先决条件
 menu_order: 1
 version: 2.0
 github_link: install-gde/prereq/prereq-overview.md
@@ -18,7 +18,7 @@ functional_areas:
 
 Before you install Magento, you must do all of the following:
 
-*	Set up one or more hosts that meet the <a href="{{ page.baseurl }}/install-gde/system-requirements.html">Magento system requirements</a>.
+*	Set up one or more hosts that meet the <a href="{{ page.baseurl }}/install-gde/system-requirements.html">Magento系统要求</a>.
 *	If you are setting up more than one web node with load balancing, set up and test that part of your system _before_ you install Magento.
 *	Make sure you can back up your entire system at various points during the installation so you can roll back in the {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} of issues.
 
@@ -111,10 +111,10 @@ To install or upgrade MySQL, see <a href="{{ page.baseurl }}/install-gde/prereq/
 
 #### 相关主题
 
-*	<a href="{{ site.baseurl }}/magento-system-requirements.html">Magento system requirements</a>
+*	<a href="{{ site.baseurl }}/magento-system-requirements.html">Magento系统要求</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing optional software</a>
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Functional Testing Framework Features
+title: 功能测试框架的特性
 version: 2.1
 github_link: mtf/features.md
 ---

@@ -1,9 +1,9 @@
 ---
 group: pattern
 subgroup:
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 landing-page: Pattern Library
-menu_title: Introduction
+menu_title: 介绍
 menu_order:
 menu_node:
 version: 2.1
@@ -26,23 +26,23 @@ Patterns libraries are designed to evolve over time, never going out of date. Ch
 Find more details about the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} {% glossarytooltip 53755359-9916-4677-bff2-f7d26025095a %}Design Pattern{% endglossarytooltip %} {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}Library{% endglossarytooltip %} in the following topic:
 
 #### Container
-<a href="containers/staticContentContainer/contentContainer.html">Static Content Container</a><br>
+<a href="containers/staticContentContainer/contentContainer.html">静态内容容器</a><br>
 <a href="containers/slideouts-modals-overlays/slideouts-modals-overalys.html">Slide-out Panels, Modal Windows, and Overlays</a><br>
 <a href="containers/tabs/tabs.html">Tabs</a><br>
 
 #### Controls
-<a href="controls/buttons/buttons.html">Buttons</a><br>
-<a href="controls/button-bar/button-bar.html">Button Bar</a>
+<a href="controls/buttons/buttons.html">按钮</a><br>
+<a href="controls/button-bar/button-bar.html">按钮栏</a>
 
 #### Displaying and Dealing with Data
 <a href="displaying-data/tile/tile.html">Tile</a><br>
 <a href="filters/data-table-filters/filtering.html">Filters</a><br>
-<a href="displaying-data/datatable/datatable.html">Data Table</a><br>
+<a href="displaying-data/datatable/datatable.html">数据表格</a><br>
 <a href="displaying-data/tree/tree.html">Tree</a><br>
 
 
 #### Feedback to User
-<a href="feedbackToUser/progressIndicator/progressIndicator.html">Progress Indicator</a>
+<a href="feedbackToUser/progressIndicator/progressIndicator.html">进度条</a>
 
 
 #### Getting User Input

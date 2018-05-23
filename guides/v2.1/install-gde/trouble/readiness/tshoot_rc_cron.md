@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 05_readiness
-title: cron readiness check issues
-menu_title: cron readiness check issues
+title: 定时任务(cron)就绪检查的问题
+menu_title: 定时任务(cron)就绪检查的问题
 menu_node:
 menu_order: 40
 version: 2.1
@@ -21,10 +21,10 @@ Following are symptoms of cron issues:
 	<img src="{{ site.baseurl }}/common/images/upgr-tshoot-no-cron.png">
 *	The following error displays in the Magento Admin:
 
-	![cron isn't running]({{ site.baseurl }}/common/images/compman-cron-not-running.png){:width="550px"}
+	![cron isn't running]({{ site.magentourl }}/common/images/compman-cron-not-running.png){:width="550px"}
 
 	To see the error, you might need to click **System Messages** at the top of the window as follows:
 
-	![System Messages]({{ site.baseurl }}/common/images/compman_sys-messages.png)
+	![System Messages]({{ site.magentourl }}/common/images/compman_sys-messages.png)
 
 {% include install/trouble/rc_cron.md %}

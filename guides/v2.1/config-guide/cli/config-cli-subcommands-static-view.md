@@ -172,7 +172,7 @@ We regret that this information was added in error. You _cannot_ yet deploy stat
 
 You should be able to [compile code]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html) without a connection to the Magento database.
 
-## Troubleshooting the static view files deployment tool {#view-file-trouble}
+## 故障排除 the static view files deployment tool {#view-file-trouble}
 [Install the Magento software first]({{ page.baseurl }}/install-gde/bk-install-guide.html); otherwise, you cannot run the static view files deployment tool.
 
 **Symptom**: The following error is displayed when you run the static view files deployment tool:

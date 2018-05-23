@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: PHP 5.6 or 7.0&mdash;CentOS
 menu_title: PHP 5.6 or 7.0&mdash;CentOS
 menu_order: 22
@@ -29,10 +29,10 @@ Magento 2.1.x does not support PHP 5.5.
 ## Help if you're just starting out {#php-ubuntu-help-beginner}
 If you're new to all this and need some help getting started, we suggest the following:
 
-*	[Is the Magento software installed already?]({{ page.baseurl }}/install-gde/basics/basics_magento-installed.html)
-*	[What is the software that the Magento server needs to run?]({{ page.baseurl }}/install-gde/basics/basics_software.html)
-*	[What operating system is my server running?]({{ page.baseurl }}/install-gde/basics/basics_os-version.html)
-*	[How do I log in to my Magento server using a terminal, command prompt, or SSH?]({{ page.baseurl }}/install-gde/basics/basics_login.html)
+*	[你的Magento安装好了吗?]({{ page.baseurl }}/install-gde/basics/basics_magento-installed.html)
+*	[Magento服务器需要运行哪些软件?]({{ page.baseurl }}/install-gde/basics/basics_software.html)
+*	[我的服务器运行的是什么系统?]({{ page.baseurl }}/install-gde/basics/basics_os-version.html)
+*	[我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?]({{ page.baseurl }}/install-gde/basics/basics_login.html)
 
 ## Verify PHP is installed {#centos-verify-php}
 To verify if PHP is installed already, enter `php -v`. If {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} is installed, 命令行将有以下输出信息：
@@ -61,7 +61,7 @@ We're not aware that you can install PHP 5.6 or 7.0 from a CentOS-recommended re
 
 In this topic, we show how to install PHP using the [Inline with Upstream Stable (IUS)](https://ius.io/GettingStarted){:target="&#95;blank"} repository, which is *not* on the CentOS recommended list. However, packages installed from IUS do not use the same names as CentOS-provided packages, so [no existing system packages are replaced](https://ius.io/Philosophy){:target="&#95;blank"}.
 
-Before you continue, review their [Getting Started topic](https://ius.io/GettingStarted){:target="&#95;blank"}.
+Before you continue, review their [起步 topic](https://ius.io/GettingStarted){:target="&#95;blank"}.
 
 <div class="bs-callout bs-callout-warning">
     <p>Magento does <em>not</em> officially recommend using the IUS repository. We discuss it here for example purposes only.</p>
@@ -114,7 +114,7 @@ There is more than one way to install PHP 7.0 on CentOS; the following is a sugg
 	<span class="glyphicon-class">
  	 <p>The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the <a href="http://php.net/manual/en/opcache.setup.php" target="&#95;blank">PHP OPcache documentation</a>.</p></span>
 	</div>
-3.	Continue with [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+3.	Continue with [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 {% endcollapsible %}
 
@@ -170,16 +170,16 @@ There is more than one way to install PHP 5.6 on CentOS; the following is a sugg
 	<span class="glyphicon-class">
  	 <p>The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the <a href="http://php.net/manual/en/opcache.setup.php" target="&#95;blank">PHP OPcache documentation</a>.</p></span>
 	</div>
-3.	Continue with [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+3.	Continue with [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 {% endcollapsible %}
 
 #### Next
-[Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html)
+[PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html)
 
 #### 相关主题
 *	[MySQL]({{ page.baseurl }}/install-gde/prereq/mysql.html)
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.6 or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
-*	[Installing optional software]({{ page.baseurl }}/install-gde/prereq/optional.html)
+*	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)

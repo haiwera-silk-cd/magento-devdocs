@@ -18,7 +18,7 @@ A test case class extends the [Mtf\TestCase\Injectable][] class. It contains one
 
 ### Docblock {#docblock}
 
-All out-of-the-box test cases contain description of a test flow at the beginning of a code. The description consists of the test steps and preconditions. Preconditions are the conditions to be performed before steps execution.
+All out-of-the-box test cases contain description of a test flow at the beginning of a code. The description consists of the test steps and preconditions. 先决条件 are the conditions to be performed before steps execution.
 Usage of docblock is a good practice for your new tests. See [Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest][] class as an example.
 
 ### `__prepare()` (optional) {#prepare-method}
@@ -57,7 +57,7 @@ public function __inject(
 
 The `test()` method must contain the test steps described in a [docblock](#docblock). The returned arguments from this method are available in [constraints][]. This method is run for each variation in a [data set][]. The `test()` method is required.
 
-In the following example, the test includes preconditions and test steps. Preconditions contain a logic of different scenarios about creating a product (depending on the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} state). Test steps are the following:
+In the following example, the test includes preconditions and test steps. 先决条件 contain a logic of different scenarios about creating a product (depending on the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} state). Test steps are the following:
 
 - opening of the product creation grid page
 - searching by the `sku` parameter and opening of the product
@@ -78,7 +78,7 @@ In the following example, the test includes preconditions and test steps. Precon
 public function test(CatalogProductSimple $initialProduct, CatalogProductSimple $product, $configData = '')
 {
     $this->configData = $configData;
-    // Preconditions
+    // 先决条件
     $initialProduct->persist();
     $initialCategory = $initialProduct->hasData('category_ids')
         ? $initialProduct->getDataFieldConfig('category_ids')['source']->getCategories()[0]
@@ -123,7 +123,7 @@ public function tearDown()
 
 All data required for the test are stored in variations of a data set. A `__prepare()` method is run first to prepare entities needed for a whole test. Arguments returned by a `__prepare()` method are available during all test including constraints. Further, the `__inject()` method injects data in the test. The `test()` method performs all the test steps using the data from the `variation 1`. Then, constraints listed in the `variation 1` are run in the order they are listed. After that, the `tearDown()` method "cleans up" to be ready for the next test or variation. When a variation fails, the test launches for the next variation in a queue.
 
-![Test case flow diagram]({{ site.baseurl }}/common/images/ftf/mtf_test_case_flow.png)
+![Test case flow diagram]({{ site.magentourl }}/common/images/ftf/mtf_test_case_flow.png)
 
 ## How to create a test case {#how-to-create}
 

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: G_Translate
-title: Use translation dictionary to customize strings
-menu_title: Use translation dictionary to customize strings
+title: 为自定义的字符使用翻译字典
+menu_title: 为自定义的字符使用翻译字典
 menu_order: 1
 version: 2.0
 github_link: frontend-dev-guide/translations/theme_dictionary.md
@@ -13,7 +13,7 @@ functional_areas:
 
 <h2>What's in this topic</h2>
 
-This topic describes how default strings can be changed in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} using <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">translation dictionaries</a>. It also gives a short overview of the order in which translations are searched and applied by the Magento application.
+This topic describes how default strings can be changed in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} using <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">translation dictionaries</a>. It also gives a short overview of the order in which translations are searched and applied by the Magento application.
 
 <h2>How Magento applies locales</h2>
 
@@ -49,7 +49,7 @@ That is why the recommended flow for adding custom strings is the following:
 1. <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">Generate the dictionary</a> for your theme.
 2. Change the necessary values in the right column, or add rows if the strings you want to replace are not in the dictionary. The i18n tool does not create a dictionary, if the theme files do not contain any strings for translation. In this case, add the file manually. 
 
-See the <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">Create a translation dictionary for a theme</a> topic for the practical illustration of the  procedure.
+See the <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典</a> topic for the practical illustration of the  procedure.
 
 
 
@@ -67,5 +67,5 @@ Continuing the <a href="#luma_example">previous example</a> with the Luma theme,
 The default values (keys) are used in the left column.
 
 ## Recommended reading ##
-- <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">Translations overview</a>
--  <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">Create a translation dictionary for a theme</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">翻译概述</a>
+-  <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典</a>

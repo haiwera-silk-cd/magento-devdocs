@@ -1,8 +1,8 @@
 ---
 group:
 subgroup:
-title: Introduction
-menu_title: Introduction
+title: 介绍
+menu_title: 介绍
 menu_order: 1
 version: 2.0
 github_link: extension-dev-guide/introduction.md

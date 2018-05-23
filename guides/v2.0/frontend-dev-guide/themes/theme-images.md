@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Configure images properties for a theme
-menu_title: Configure images properties for a theme
+title: 为主题配置图片属性
+menu_title: 为主题配置图片属性
 menu_order: 90
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-images.md
@@ -15,7 +15,7 @@ functional_areas:
 
 The properties of product images used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} are stored in the `view.xml` configuration file. This topic provides all details about what properties are available and how to configure them.
 
-The properties for the images displayed on the product pages are defined by the gallery widget options. The options of the widget can be configured in the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} `view.xml` as well. For more details, view the [Gallery widget]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html) topic.
+The properties for the images displayed on the product pages are defined by the 相册小工具 options. The options of the widget can be configured in the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} `view.xml` as well. For more details, view the [相册小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html) topic.
 
 <h2 id="view_xml_structure">Configure image properties in view.xml</h2>
 
@@ -83,7 +83,7 @@ Can have any value, but in out-of-the- box Magento themes <code>id</code>'s are 
 <li><code>image</code> - corresponds to the Base Image role in the Magento Admin</li>
 <li><code>small_image</code> - corresponds to the Small Image role in the Magento Admin</li>
 <li><code>swatch_image</code> - corresponds to the Swatch Image role in the Magento Admin</li>
-<li><code>swatch_thumb</code> - corresponds to the Swatch Image role in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}. </li>
+<li><code>swatch_thumb</code> - corresponds to the Swatch Image role in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. </li>
 <li><code>thumbnail</code> - corresponds to the Thumbnail Image role in the Magento Admin</li>
 </ul>
 

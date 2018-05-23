@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: QA_Get
-title: Get the Magento software
-menu_title: Get the Magento software
+title: 获取Magento
+menu_title: 获取Magento
 menu_order: 1
 menu_node: parent
 version: 2.0

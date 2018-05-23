@@ -26,7 +26,7 @@ magento setup:install --convert_old_scripts=1
 magento setup:upgrade --convert_old_scripts=1
 ```
 
-### Troubleshooting
+### 故障排除
 
 The Schema Listener Tool cannot convert everything that can appear in a pre-Magento 2.3 migration script.
 

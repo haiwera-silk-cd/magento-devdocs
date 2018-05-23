@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Collapsible widget
+title: 可折叠窗小工具
 menu_order: 4
-menu_title: Collapsible widget
+menu_title: 可折叠窗小工具
 version: 2.0
 github_link: javascript-dev-guide/widgets/widget_collapsible.md
 redirect_from:
@@ -11,21 +11,21 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_collapsible.html
 ---
 
-<h2>Overview</h2>
+<h2>概述</h2>
 <!-- used in {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} -->
-The Magento collapsible {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} converts a header/content pair into an accordion, where the content is collapsed or expanded on the header click.
+The Magento collapsible {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} converts a header/content pair into an accordion, where the content is collapsed or expanded on the header click.
 
-Unlike the accordion widget is that collapsible is initialized for one title/content pair, while accordion can be initialized for a set of title/contents pairs.
+Unlike the 手风琴菜单小工具 is that collapsible is initialized for one title/content pair, while accordion can be initialized for a set of title/contents pairs.
 
-To "bind" several instances of collapsible widget, the <a href="#fedg_collaps_collateral"><code>collateral</code></a> option is used.
+To "bind" several instances of 可折叠窗小工具, the <a href="#fedg_collaps_collateral"><code>collateral</code></a> option is used.
 
 Once it is expanded, the content can be updated using Ajax. The collapsed/expanded state can be saved into local storage or cookies, if the browser does not support local storage. 
 
-The collapsible widget source is <a href="{{ site.mage2000url }}lib/web/mage/collapsible.js" target="_blank">lib/web/mage/collapsible.js</a>.
+The 可折叠窗小工具 source is <a href="{{ site.mage2000url }}lib/web/mage/collapsible.js" target="_blank">lib/web/mage/collapsible.js</a>.
 
 
 <h2 id="collaps_init_js">Initialize collapsible in JS</h2>
-Generally the collapsible widget is instantiated like following:
+Generally the 可折叠窗小工具 is instantiated like following:
 <pre>
 $("#element").collapsible();
 </pre>
@@ -37,21 +37,21 @@ If you need to be able to save the expanded/collapsed state, the element must ha
 The element's `id` is also used in deep linking: if the `id` of the content or the `id` of the element that appends the content is specified as an anchor, the content for that element is automatically expanded.
 
 
-Similar to the accordion widget, the header, title and content for collapsible can be defined by the child elements' attributes or passed as widget options. See <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_accordion.html#accordion_init" target="_blank">Accordion widget initialization</a> for details.
+Similar to the 手风琴菜单小工具, the header, title and content for collapsible can be defined by the child elements' attributes or passed as widget options. See <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_accordion.html#accordion_init" target="_blank">手风琴菜单小工具 initialization</a> for details.
 
 <h3>Initialize collapsible with header only</h3>
-You can initialize the collapsible widget without having a container that consists of a header and a content. In this case the initialization is made on the header:
+You can initialize the 可折叠窗小工具 without having a container that consists of a header and a content. In this case the initialization is made on the header:
 <pre>
 $("#header").collapsible();
 </pre>
 
 
 <h2>Initialize collapsible in a template</h2>
-The collapsible widget can be initialized using the <code>data-mage-init</code> attribute or `<script>` tag, as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html#data_mage_init" target="_blank">JavaScript initialization</a>.
+The 可折叠窗小工具 can be initialized using the <code>data-mage-init</code> attribute or `<script>` tag, as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html#data_mage_init" target="_blank">JavaScript initialization</a>.
 
 <h2>Options</h2>
 
-The collapsible widget has the following options:
+The 可折叠窗小工具 has the following options:
 
 <ul>
 <li><a href="#fedg_collaps_active">active</a> </li>
@@ -158,7 +158,7 @@ If this option is set to false, the content is not collapsed when the panel is a
 
 **Default value**: true
 
-Initialize the collapsible widget with the `collapsible` option specified:
+Initialize the 可折叠窗小工具 with the `collapsible` option specified:
 <pre>
 $("#element").collapsible({ collapsible: true});
 </pre>
@@ -224,7 +224,7 @@ Specifies the class that is assigned to the main collapsible element, when the c
 
 **Default value**: `null`
 
-Initialize the collapsible widget with the `closedState` option specified:
+Initialize the 可折叠窗小工具 with the `closedState` option specified:
 <pre>
 $("#element").collapsible({ closedState: "collapsible-content"});
 </pre>
@@ -246,7 +246,7 @@ Specifies if the content should be disabled, when the widget gets initialized.
 
 **Default value**: `false`
 
-Initialize the collapsible widget with the `disabled` option specified:
+Initialize the 可折叠窗小工具 with the `disabled` option specified:
 <pre>
 $("#element").collapsible({ disabled: true});
 </pre>
@@ -416,7 +416,7 @@ Specifies if the state is saved in the local storage if the browser supports it.
 
 **Default value**: `true`
 
-Initialize the collapsible widget with the `saveState` option specified:
+Initialize the 可折叠窗小工具 with the `saveState` option specified:
 <pre>
 $("#element").collapsible({ saveState: true});
 </pre>

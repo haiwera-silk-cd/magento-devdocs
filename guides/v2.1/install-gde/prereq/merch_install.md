@@ -1,8 +1,8 @@
 ---
 group: install_merch
 subgroup: R_Merchant
-title: Newbie installation first steps
-menu_title: Newbie installation first steps
+title: 新手安装第一步
+menu_title: 新手安装第一步
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -38,6 +38,6 @@ To start configuring your hosted system:
 2.	On the first page, in the Web Hosting row, click **Manage**.
 3.	If necessary, log in to cPanel.
 
-<h2 id="newbie-db">Step 3: Configure a database and a database user</h2>
+<h2 id="newbie-db">Step 3: 配置数据库和数据库用户</h2>
 
 

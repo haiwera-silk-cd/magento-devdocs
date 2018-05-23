@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 01_roadmap
-title: Installation roadmap (reference)
-menu_title: Installation roadmap (reference)
+title: 一步步安装(参考)
+menu_title: 一步步安装(参考)
 menu_node: parent
 menu_order: 1
 version: 2.0

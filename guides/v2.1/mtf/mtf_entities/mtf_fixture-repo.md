@@ -71,7 +71,7 @@ Also `layout` and `widgetOptions` fields use `<magento2>/dev/tests/functional/te
 
 <a href="#mtf_repository_create-field"> Learn how to create repository for the fixture field</a>.
 
-We want to specify data sets for two cases of submitting {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}Widget{% endglossarytooltip %} forms: `default` with minimum data, and `cms_page_link` with data needed to create new {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} page link.
+We want to specify data sets for two cases of submitting {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} forms: `default` with minimum data, and `cms_page_link` with data needed to create new {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} page link.
 
 To create a new CMS page link the user must enter data of all required fields. The widget has three forms with fields to specify: <a href="#mtf_repo_ex_set">**Settings**</a>, <a href="#mtf_repo_ex_store">**Storefront Properties**</a>, <a href="#mtf_repo_ex_front">**Frontend Apps Options**</a>. The following text along with screenshots gives an example of how to create a data set of the repository.
 
@@ -79,14 +79,14 @@ To create a new CMS page link the user must enter data of all required fields. T
 
 <h4 id="mtf_repo_ex_set">Settings form</h4>
 
-![cms_page_link "Settings" data set for entire fixture view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui.png)
+![cms_page_link "Settings" data set for entire fixture view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui.png)
 
 - Set the **Type** field (`field name="code"`) to "CMS Page Link". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<field name="code" xsi:type="string">CMS Page Link</field>`.
 - Set the **Design Theme** field (`field name="theme_id"`) to "Magento Blank". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<field name="theme_id" xsi:type="string">Magento Blank</field>`.
 
 <h4 id="mtf_repo_ex_store">Storefront Properties form</h4>
 
-![cms_page_link "Storefront properties" data set for entire fixture view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_storefront.png)
+![cms_page_link "Storefront properties" data set for entire fixture view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_storefront.png)
 
 - Set the **Frontend App Title** field to "Cms Page Link [random integer value]". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<field name="title" xsi:type="string">Cms Page Link %isolation%</field>`.
 - Set the **Assign to Store Views** field to "All Store Views". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a>:
@@ -106,7 +106,7 @@ To create a new CMS page link the user must enter data of all required fields. T
 
 <h4 id="mtf_repo_ex_front">Frontend App Options</h4>  
 
-![cms_page_link "Frontend App Options" data set for entire fixture view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_frontend-app.png)
+![cms_page_link "Frontend App Options" data set for entire fixture view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_ent_fixt_repo_cms_set_ui_frontend-app.png)
 
 - Set the **Anchor Custom Text** field to "text".
 - Set the **Anchor Custom Title** field to "anchor title".
@@ -245,7 +245,7 @@ Case 1. **all_pages** data set:
 * Set the **Display on** field (`item name="page_group"`) to "All Pages", which is the subcategory of "Generic Pages" (see drop-down menu on the following screenshot). It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<item name="page_group" xsi:type="string">Generic Pages/All Pages</item>`
 * Set the **Container** field (`item name="block"`) to "Main content Area". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a>  `<item name="block" xsi:type="string">Main Content Area</item>`
 
-![all_pages data set view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_repository_layout-allpages_w_dropd.png)
+![all_pages data set view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_repository_layout-allpages_w_dropd.png)
 
 Case 2. **on_category** data set:
 
@@ -254,7 +254,7 @@ Case 2. **on_category** data set:
 * Set the in a tree of categories the **Default Category** (`item name="entities"`). It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<item name="entities" xsi:type="string">category::default_subcategory</item>`.
 * Set the **Container** field (`item name="block"`) to "Main content Area". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<item name="block" xsi:type="string">Main Content Area</item>`.
 
-![on_category data set view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_repository_layout-oncategory_w_dropd.png)
+![on_category data set view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_repository_layout-oncategory_w_dropd.png)
 
 Case 3. **for_cms_page_link** data set:
 
@@ -262,7 +262,7 @@ Case 3. **for_cms_page_link** data set:
 * Set the **Container** field (`item name="block"`) to "Main content Area". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<item name="block" xsi:type="string">Main Content Area</item>`.
 * Set the **Template** field (`item name="template"`) to "CMS Page Link Block Template". It corresponds to the following code in <a href="#mtf_repo_widgetxml">the repository data set</a> `<`item name="template" xsi:type="string"`>CMS Page Link Block Template</item>`.
 
-![layout_for_cms_page_link data set view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_repository_layout-for-cms-page-link_w_dropd.png)
+![layout_for_cms_page_link data set view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_repository_layout-for-cms-page-link_w_dropd.png)
 
 The repository code for these cases follows:
 
@@ -307,7 +307,7 @@ The repository code for these cases follows:
 
 ## Configuration repository {#mtf_repository_config}
 
-The configuration repository stores predefined data sets for Magento configuration settings. It is the repository for the <a href="{{ site.mage2000url }}app/code/Magento/Config">Magento_Config module</a> and is named `ConfigData.xml`.
+The configuration repository stores predefined data sets for Magento configuration settings. It is the repository for the <a href="{{ site.mage2000url }}app/code/Magento/Config">Magento_Config模块</a> and is named `ConfigData.xml`.
 
 Let's see the following example of configuration settings for <a href="{{ site.mage2000url }}app/code/Magento/Authorizenet">Authorize.Net module</a> `<magento2>/dev/tests/functional/tests/app/Magento/Authorizenet/Test/Repository/ConfigData.xml`.
 
@@ -401,11 +401,11 @@ Each field contains 4 items:
 
 The following screenshot helps to understand the `scope_id` attribute.
 
-![authorizenet data set view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_ent_fixt_repo_config_scope-id.png)
+![authorizenet data set view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_ent_fixt_repo_config_scope-id.png)
 
 Let's see the `authorizenet` data set in action. Fields defined in repository are in orange. Other fields are set in default values.
 
-![authorizenet data set view on GUI]({{ site.baseurl }}/common/images/ftf/mtf_repo_config_ex.png)
+![authorizenet data set view on GUI]({{ site.magentourl }}/common/images/ftf/mtf_repo_config_ex.png)
 
 ## Merging repositories {#mtf_repository_merge}
 
@@ -437,7 +437,7 @@ You can modify your data set without changing the name of the data set. Simply u
  
  This node means that `customer_new_default` data set replaces `default` data set.
  
- Let's see a use case example. Assume that the Customer fixture in the Magento_Customer module has a repository with the `default` data set:
+ Let's see a use case example. Assume that the Customer fixture in the Magento_Customer模块 has a repository with the `default` data set:
  
   {%highlight xml%}
   
@@ -458,7 +458,7 @@ You can modify your data set without changing the name of the data set. Simply u
   
   {%endhighlight%}
   
-Later you installed a new module Magento_CustomerNew module that changed Customer fixture. You don't want to change the `default` data set name in the test. Instead, you can simply replace the `default` data set, without changing the name:
+Later you installed a new module Magento_CustomerNew模块 that changed Customer fixture. You don't want to change the `default` data set name in the test. Instead, you can simply replace the `default` data set, without changing the name:
 
   {%highlight xml%}
   

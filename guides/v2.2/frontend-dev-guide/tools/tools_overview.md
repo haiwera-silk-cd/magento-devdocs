@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 
-This chapter describes how to install and use additional tools that can make your Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} development tasks easier.
+This chapter describes how to install and use additional tools that can make your Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} development tasks easier.
 
 **Chapter Contents**
 

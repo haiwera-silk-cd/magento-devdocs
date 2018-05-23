@@ -106,7 +106,7 @@ functional_areas:
 
 #### 网页向导安装
 
-{% collapsible Click to view the Web Setup Wizard installation %}
+{% collapsible Click to view the Web 网页向导安装 %}
 
 下面展示了网页向导安装的一些选项和属性:
 

@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: 01_resource
-title: Helpful resources
-menu_title: Helpful resources
+title: 相关帮助
+menu_title: 相关帮助
 menu_order: 1
 menu_node: parent
 version: 2.0

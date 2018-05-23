@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: D_CSS_G
-title: Quick start guide to working with styles for a new theme
-menu_title: Quick start guide to styles
+title: 在新的主题上写样式快速指引
+menu_title: 快速样式指引
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -13,8 +13,8 @@ functional_areas:
 
 This chapter combines the topics aiming to help you to quickly start working with styles of your custom theme:
 
-- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">Simple ways to customize a theme's styles</a>
-- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">Simple style changes with client-side LESS compilation vs. server-side</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>
 
 
 <h2>High-level steps to create a theme and change styles</h2>
@@ -24,14 +24,14 @@ This chapter combines the topics aiming to help you to quickly start working wit
 3.  <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">Apply your theme</a>.
 2. Decide which {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} compilation mode you will use. Compilation modes are described in the following topics:
 	- Detailed description: <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css_debug.html">Styles debugging</a>
-	- Practical illustration: <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">Simple style changes with client-side LESS compilation vs. server-side</a>
+	- Practical illustration: <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>
 4. Customize styles. To learn how, check out the following sources:
 	- <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-overview.html">CSS chapter of this book</a>
-	- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">Simple ways to customize a theme's styles</a>
+	- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
 
 <h2>Why do you need to create a custom theme?</h2>
 
-Magento provides two themes out of the box: Blank and Luma. If Magento is installed with sample data, the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} applied after installation is Luma. If no sample data is installed, the Blank theme is installed by default.
+Magento provides two themes out of the box: Blank and Luma. If Magento is installed with sample data, the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} applied after installation is Luma. If no sample data is installed, the Blank theme is installed by default.
 
 <img src="{{ site.baseurl }}/common/images/css_guide_luma_.png" alt="Storefront with Luma applied">
 
@@ -45,5 +45,5 @@ Making changes in the Magento out-of-the-box themes is a bad idea, because can r
 
 <h2>Related topics</h2>
 - <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-overview.html"> CSS in Magento themes</a>
-- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">Simple ways to customize a theme's styles</a>
-- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">Simple style changes with client-side LESS compilation vs. server-side</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>

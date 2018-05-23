@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 05_Command-line installation
-title: Uninstall or reinstall Magento
-menu_title: Uninstall or reinstall Magento
+title: 卸载和重装Magento
+menu_title: 卸载和重装Magento
 menu_node:
 menu_order: 5
 version: 2.1

@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: 01_resource
-title: Installation flow diagram
-menu_title: Installation flow diagram
+title: 安装流程图
+menu_title: 安装流程图
 menu_node:
 menu_order: 5
 version: 2.1

@@ -19,7 +19,7 @@ This topic contains the basic information about how to customize the view of an 
 
 To change the `.js` implementation and template used for components rendering, you need to declare the new files in the checkout page {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}. To do this, take the following steps:
 
-1. In your custom module directory, create the following new file: `<your_module_dir>/view/frontend/layout/checkout_index_index.xml`. (For your checkout customization to be applied correctly, your custom {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} should depend on the Magento_Checkout module.)
+1. In your custom module directory, create the following new file: `<your_module_dir>/view/frontend/layout/checkout_index_index.xml`. (For your checkout customization to be applied correctly, your custom {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} should depend on the Magento_Checkout模块.)
 2. In this file, add the following:
 
 {%highlight xml%}
@@ -43,7 +43,7 @@ To change the `.js` implementation and template used for components rendering, y
 
 Example:
 
-The Magento_Shipping module adds a component rendered as a link to the Shipping Policy info to the Shipping step:
+The Magento_Shipping模块 adds a component rendered as a link to the Shipping Policy info to the Shipping step:
 
 `<Magento_Shipping_module_dir>/view/frontend/layout/checkout_index_index.xml` looks like following:
 

@@ -40,4 +40,4 @@ The value of `sys_temp_dir` determines where `install.log` is located. If the va
 A typical default value is `/tmp`. If that's the case, the log is `/tmp/install.log`.
 
 ### Next step
-<a href="{{ page.baseurl }}/install-gde/install/verify.html">Verify the installation</a>
+<a href="{{ page.baseurl }}/install-gde/install/verify.html">验证你的安装</a>

@@ -20,7 +20,7 @@ To set permissions before you install the Magento software:
 	To optionally enter all commands on one line, enter the following assuming Magento is installed in `/var/www/html/magento2`:
 
 		cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} \; && find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} \; && chmod u+x bin/magento
-3.	If you haven't done so already, get the Magento software in one of the following ways:
+3.	If you haven't done so already, 获取Magento in one of the following ways:
 
 	*	[Compressed archive]({{ page.baseurl }}/install-gde/prereq/zip_install.html)
 	*	[Composer metapackage]({{ page.baseurl }}/install-gde/prereq/integrator_install.html)
@@ -28,7 +28,7 @@ To set permissions before you install the Magento software:
 4.	After you have set file system ownership and permissions, continue with any of the following:
 
 	*	[Command-line installation]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)
-	*	[Setup Wizard installation]({{ page.baseurl }}/install-gde/install/web/install-web.html)
+	*	[网页向导安装]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>To further restrict permissions after installing the Magento software, you <a href="{{ page.baseurl }}/install-gde/install/post-install-umask.html">configure a Magento umask</a>.</p>

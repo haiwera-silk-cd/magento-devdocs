@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Uninstall a storefront theme
-menu_title: Uninstall a storefront theme
+title: 卸载前台主题
+menu_title: 卸载前台主题
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-uninstall.md
@@ -13,7 +13,7 @@ functional_areas:
 
 ## What's in this topic
 
-This topic describes how to uninstall a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} in Magento 2.
+This topic describes how to uninstall a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} in Magento 2.
 
 The way a theme should be uninstalled is defined by two factors:
 
@@ -95,7 +95,7 @@ If the theme was installed as an extension, you can uninstall it using one of th
 
 To uninstall a theme extension using the Component Manager:
 
-1. In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} Panel, navigate to **System** > **Web Setup Wizard** > **Component Manager**.
+1. In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} Panel, navigate to **System** > **Web Setup Wizard** > **Component Manager**.
 2. In the **Actions** column, click **Select** > **Uninstall** in the theme record. See the following image for illustration.
 
-![extension_manager_uninstall_theme]({{ site.baseurl }}/common/images/fdg/uninstall_extension.png){:width="630px"}
+![extension_manager_uninstall_theme]({{ site.magentourl }}/common/images/fdg/uninstall_extension.png){:width="630px"}

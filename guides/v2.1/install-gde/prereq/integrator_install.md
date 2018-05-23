@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: S_Integrator
-title: (Integrator) Integrator installation
-menu_title: (Integrator) Integrator installation
+title: (集成工程师)集成安装
+menu_title: (集成工程师)集成安装
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -30,4 +30,4 @@ The audience for this topic is anyone who downloads the Magento metapackage usin
 {% include install/composer-overview.html %}
 
 #### 下一步
-[Install Composer]({{ page.baseurl }}/install-gde/prereq/integrator_install_composer.html)
+[安装Composer]({{ page.baseurl }}/install-gde/prereq/integrator_install_composer.html)

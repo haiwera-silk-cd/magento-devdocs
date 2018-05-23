@@ -49,7 +49,7 @@ In the `<magento_root>/app/design/frontend/<Your_Vendor>/<your_theme>` directory
 - `registration.php`
 - (optionally) `composer.json`
 
-For details, see [Create a new storefront theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html)
+For details, see [创建一个新的前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html)
 </div>
 
 <div class="flow-arrow"> </div>
@@ -62,7 +62,7 @@ For details, see [Create a new storefront theme]({{ page.baseurl }}/frontend-dev
 3. In the **Applied Theme** drop-down, select your newly created theme.
 4. Click **Save Configuration**.
 
-For details, see [Apply and configure a storefront theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html)
+For details, see [应用和配置前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html)
 </div>
 
 <div class="flow-arrow"></div>
@@ -90,14 +90,14 @@ For details, see [Apply and configure a storefront theme]({{ page.baseurl }}/fro
 <div class="flow-column">
 <div class="flow-block" markdown="1">
 #### Client-side compilation
-See [CSS preprocessing#client-side compilation mode]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#client-side)
+See [CSS预处理#client-side compilation mode]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#client-side)
 </div>
 
 </div>
 <div class="flow-column">
 <div class="flow-block" markdown="1">
 #### Server-side compilation (default)
-See [CSS preprocessing#server-side compilation mode]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#server-side)
+See [CSS预处理#server-side compilation mode]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#server-side)
 </div>
 
 </div>
@@ -105,7 +105,7 @@ See [CSS preprocessing#server-side compilation mode]({{ page.baseurl }}/frontend
 <div class="flow-column">
 <div class="flow-block" markdown="1">
 #### Custom preprocessor
-See [Using custom CSS preprocessor]({{ page.baseurl }}/frontend-dev-guide/css-topics/custom-preprocess-parent.html)
+See [使用自定义css预处理器]({{ page.baseurl }}/frontend-dev-guide/css-topics/custom-preprocess-parent.html)
 </div>
 
 </div>

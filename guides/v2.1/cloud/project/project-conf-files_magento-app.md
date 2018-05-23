@@ -245,7 +245,7 @@ crons:
     cmd: "php bin/magento cron:run"
 ```
 
-## Configure PHP options
+## 配置PHP options
 You can choose which version of PHP to run in your `.magento.app.yaml` file:
 
 ```
@@ -343,7 +343,7 @@ For example, if you need to increase the PHP memory limit:
 
 	memory_limit = 756M
 
-For a list of recommended PHP configuration settings, see [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+For a list of recommended PHP configuration settings, see [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 After pushing your file, you can check that the custom PHP configuration has been added to your environment by [creating an SSH tunnel]({{ page.baseurl }}/cloud/env/environments-start.html#env-start-tunn) to your environment and entering:
 

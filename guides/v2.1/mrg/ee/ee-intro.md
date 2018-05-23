@@ -1,7 +1,7 @@
 ---
 group: mrg
 ee_only: true
-title: Magento Commerce modules
+title: Magento企业版模块
 version: 2.1
 
 

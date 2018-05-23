@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Troubleshoot the Functional Testing Framework issues
+title: 功能测试框架问题的故障排除
 version: 2.0
 github_link: mtf/troubleshooting.md
 ---

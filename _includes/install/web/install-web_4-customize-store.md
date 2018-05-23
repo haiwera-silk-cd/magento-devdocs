@@ -42,7 +42,7 @@ For example, `Magento_GoogleAnalytics` can be disabled only if `Magento_GoogleOp
 
 The following figure shows an example of disabling the `Magento_GoogleAnalytics` and `Magento_GoogleOptimizer` modules.
 
-![Disabling a module]({{ site.baseurl }}/common/images/install_wizard_disable-google.png)
+![Disabling a module]({{ site.magentourl }}/common/images/install_wizard_disable-google.png)
 
 <h4 id="instgde-install-magento-web-step4-depend2">Module dependency errors</h4>
 A dependency error occurs when two inter-dependent modules are disabled at the same time. 

@@ -1,9 +1,9 @@
 ---
 group: get-started
 subgroup: 01_Introduction
-title: Getting Started with Magento Web APIs
-landing-page: Getting Started with Web APIs
-menu_title: Introduction
+title: 起步 with Magento Web APIs
+landing-page: 起步 with Web APIs
+menu_title: 介绍
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -45,11 +45,11 @@ The APIs can used to perform a wide array of tasks. For example:
 
 * Integrate with a {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} (Content Management System). At present, content tagging is not supported.
 
-* Create {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} widgets in the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} or on the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel. The {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} makes AJAX calls to access services.
+* Create {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} widgets in the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} or on the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel. The {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} makes AJAX calls to access services.
 
 <h2 id="procedure">How do I get started?</h2>
 
-You must register a web service on {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}. Use the following general steps to set up Magento to enable web services.
+You must register a web service on {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. Use the following general steps to set up Magento to enable web services.
 
 1. If you are using token-based authentication, create a web services user on Magento Admin by selecting **System > All Users > Add New User**. (If you are using session-based or OAuth authentication, you do not need to create the new user in the Admin.)
 2. Create a new integration on Magento Admin. To create an integration, click System > Integration > Add New Integration. Be sure to restrict which resources the integration can access.

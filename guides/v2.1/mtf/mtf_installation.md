@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Installation of the Functional Testing Framework Entities
+title: 功能测试框架中的实体安装
 version: 2.1
 github_link: mtf/mtf_installation.md
 ---
@@ -18,7 +18,7 @@ Follow the next three steps:
 ## Check pre-installation conditions {#mtf_install_pre}
 
 ### Install the Magento application {#mtf_install_pre_inst-magento}
-To install the Magento application, see <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Magento Installation Guide</a>.
+To install the Magento application, see <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Magento 安装向导</a>.
 
 ### Check if all required software installed and configured {#mtf_install_pre_tools}
 
@@ -40,7 +40,7 @@ For more details about PHP verification, installation and configuration (<a href
 The Functional Testing Framework requires Composer, which downloads libraries defined in `<magento2_root_dir>/dev/tests/functional/composer.json`.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>If you're not sure that Composer is installed, see <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html#instgde-prereq-compose-install">Install Composer</a>.</p>
+  <p>If you're not sure that Composer is installed, see <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html#instgde-prereq-compose-install">安装Composer</a>.</p>
 </div>
 
 1.    <a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">Open a command prompt</a>.

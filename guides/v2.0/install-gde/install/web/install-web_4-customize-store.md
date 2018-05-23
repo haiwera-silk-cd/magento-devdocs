@@ -1,8 +1,8 @@
 ---
 group: install_wiz
 subgroup: Wizard
-title: Step 4. Customize Your Store
-menu_title: Step 4. Customize Your Store
+title: 步骤4. 定制你的网店
+menu_title: 步骤4. 定制你的网店
 menu_node:
 menu_order: 5
 version: 2.0
@@ -16,4 +16,4 @@ functional_areas:
 {% include install/web/install-web_4-customize-store.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/web/install-web_5-create-admin.html">Step 5. Create Admin account</a>
+<a href="{{ page.baseurl }}/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员帐户</a>

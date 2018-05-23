@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 10_Community Edition
-title: Magento_Sales module
+title: Magento_Sales模块
 menu_title: Sales
 menu_order: 1
 version: 2.2
@@ -14,14 +14,14 @@ redirect_from:
 
 Magento_Sales {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is responsible for order processing and appearance in the system.
 
-Magento_Sales module manages next system entities and flows:
+Magento_Sales模块 manages next system entities and flows:
 
 * order management
 * {% glossarytooltip 631b9627-a367-4a56-b3b1-0f6ca8fe6e02 %}invoice{% endglossarytooltip %} management
 * {% glossarytooltip c8f00e9d-7f70-4561-9773-60da604ba5c9 %}shipment{% endglossarytooltip %} management (including track management)
 * credit memos management
 
-Magento_Sales module is required for Magento_Checkout module to perform {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} operations.
+Magento_Sales模块 is required for Magento_Checkout模块 to perform {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} operations.
 
 ## Public API
 

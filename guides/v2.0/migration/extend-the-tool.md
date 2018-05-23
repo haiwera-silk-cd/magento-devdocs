@@ -1,18 +1,18 @@
 ---
 group: migration
-title: Extend the tool
+title: 扩展工具
 version: 2.0
 github_link: migration/extend-the-tool.md
 functional_areas:
   - Tools
 ---
 
-If the data format and structure created by [Magento extensions](https://marketplace.magento.com/extensions.html){:target="_blank"} or custom code is different between Magento 1 and Magento 2, use extension points in the Data Migration Tool to migrate the data. If the data format and structure are the same, the tool can automatically migrate the data without user intervention.
+If the data format and structure created by [Magento extensions](https://marketplace.magento.com/extensions.html){:target="_blank"} or custom code is different between Magento 1 and Magento 2, use extension points in the 数据迁移工具 to migrate the data. If the data format and structure are the same, the tool can automatically migrate the data without user intervention.
 
 During migration, the [Map Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#map-step) scans and compares all Magento 1 and Magento 2 tables, including those created by extensions. If the tables do not differ, the tool automatically migrates the data. If the tables differ, the tool terminates and notifies the user.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Read the [Technical Specification]({{ page.baseurl }}/migration/migration-tool-internal-spec.html) first before attempting to extend the Data Migration Tool. You should also review the [Migration Guide]({{ page.baseurl }}/migration/bk-migration-guide.html) for general information about using the tool.
+Read the [Technical Specification]({{ page.baseurl }}/migration/migration-tool-internal-spec.html) first before attempting to extend the 数据迁移工具. You should also review the [Migration Guide]({{ page.baseurl }}/migration/bk-migration-guide.html) for general information about using the tool.
 </div>
 
 ## Minor data format and structure changes
@@ -124,6 +124,6 @@ Refer to [Configuration]({{ page.baseurl }}/migration/migration-tool-internal-sp
 Complex SQL queries can be assembled inside these classes to fetch data from the three tables and migrate into a single table. Also, note that these tables should be "ignored" in the [Map Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#map-step) because it scans all existing tables and tries to migrate the data unless it is in the `<ignore>` tag of the `map.xml` file.
 
 ## Prohibited extension methods
-Since the Data Migration Tool and Magento 2 are constantly evolving, existing steps and handlers are subject to change. We highly recommend not overriding the behaviour of steps like the [Map Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#map-step), [URL Rewrite Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#url-rewrite-step), and handlers by extending their classes.
+Since the 数据迁移工具 and Magento 2 are constantly evolving, existing steps and handlers are subject to change. We highly recommend not overriding the behaviour of steps like the [Map Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#map-step), [URL Rewrite Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#url-rewrite-step), and handlers by extending their classes.
 
 Some steps do not support mapping and cannot be changed without altering the code. You can either write an extra step that changes data at the end of migration or create a [GitHub issue](https://github.com/magento/data-migration-tool/issues){:target="_blank"} and ask for a new extension point on the existing step.

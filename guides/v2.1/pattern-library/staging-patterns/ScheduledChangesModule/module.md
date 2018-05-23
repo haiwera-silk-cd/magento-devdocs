@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Staging Patterns
-title: Magento Admin Pattern Library
+title: Magento管理面板用到的设计模式和库
 menu_title: Scheduled Changes Module
 menu_order: 2
 menu_node: 
@@ -14,13 +14,13 @@ github_link: pattern-library/staging-patterns/ScheduledChangesModule/module.md
 
 <h3> Contents </h3>
 
-* <a href="#overview">Overview</a>
+* <a href="#overview">概述</a>
 * <a href="#when-to-use">When to Use / When Not to Use</a>
 * <a href="#examples">Interaction and Behavior</a>
 * <a href="#styling">Styling</a>
 * <a href="#assets">Assets</a>
 
-<h3 id="overview">Overview</h3>
+<h3 id="overview">概述</h3>
 For all stage-able entities, a Scheduled Changes {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} appears on the top of each entity’s page. An entity’s module provides a quick summary of scheduled updates, as well as controls to view, edit and preview individual updates. 
 
 

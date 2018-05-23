@@ -112,7 +112,7 @@ The `composer.json` file for a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b14
 
 **Type:** `magento2-theme`
 
-The `composer.json` file for a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} component contains parent theme dependencies the extension needs to inherit.
+The `composer.json` file for a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} component contains parent theme dependencies the extension needs to inherit.
 
 ----
 

@@ -10,7 +10,7 @@ github_link: ui-components/ui-secondary-uploader.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-uploader.html
 ---
 
-<h2 id="filter">Overview</h2>
+<h2 id="filter">概述</h2>
 
 UI File Uploader component is an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">jQuery-File-Upload</a> plugin used in Magento. Component is used to integrate file upload functionality with UI components.
 

@@ -1,7 +1,7 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Layout overview
+title: 布局概述
 menu_title: Layout
 menu_order: 1
 menu_node: parent
@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 <h2>What's in this topic</h2>
-This article describes the basic concepts you need to know to create layouts for your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+This article describes the basic concepts you need to know to create layouts for your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 <h2>Introduction</h2>
 In Magento, the basic components of page design are layouts, containers, and blocks. A *layout* represents the structure of a web page (1). *Containers* represent the placeholders within that web page structure (2). And *blocks* represent the UI controls or components within the container placeholders (3). These terms are illustrated and defined below.
@@ -26,7 +26,7 @@ In Magento, the basic components of page design are layouts, containers, and blo
 
 ## Basic layouts 
 
-The basic view of all Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} pages in defined in two page configuration layout files located in the Magento_Theme module: 
+The basic view of all Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} pages in defined in two page configuration layout files located in the Magento_Theme模块: 
 
 * `<Magento_Theme_module_dir>/view/frontend/layout/default.xml`: defines the page layout. 
 * `<Magento_Theme_module_dir>/view/frontend/layout/default_head_blocks.xml`: defines the scripts, images, and meta data included in pages' `<head>` section. 
@@ -51,7 +51,7 @@ There are three kinds of layout handles:
 
 ## Layout files types and conventions
 
-### Layout file types: by role
+### 布局文件类型: by role
 
 For a particular page, its layout is defined by two major layout components: *page layout* file and *page configuration* file (or *generic layout* for pages returned in AJAX requests, emails, and so on).
 
@@ -61,7 +61,7 @@ Following are the definitions of each layout file type:
 * *Page configuration*: an XML file declaring detailed structure, contents and meta-information of a page (includes the `<html>`, `<head>`, and `<body>` sections of the HTML page markup).
 * *Generic layout*: an XML file declaring page detailed structure and contents inside the `body` section of the HTML page {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %}. Used for pages returned by AJAX requests, emails, HTML snippets, and so on.
 
-For details, refer to <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html" target="_blank">Layout file types</a>.
+For details, refer to <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html" target="_blank">布局文件类型</a>.
 
 In this guide we use *layout files* when talking about concepts which are similarly applied to all of these types of layout files.
 
@@ -115,10 +115,10 @@ Layout validations and error handling depends on the [application mode]({{ page.
 
 ## Related topics
 
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">Layout instructions</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html" target="_blank">Common layout customization tasks</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">Extend a layout</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">Override a layout</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html" target="_blank">常见的布局定制任务</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">覆盖一个布局</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-practice.html" target="_blank">Customizing layout - step-by-step illustration</a>
 
 

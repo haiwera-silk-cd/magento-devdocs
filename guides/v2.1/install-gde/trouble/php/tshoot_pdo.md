@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: During installation, fatal PDO error displays
-menu_title: During installation, fatal PDO error displays
+title: 安装期间出现PDO致命错误
+menu_title: 安装期间出现PDO致命错误
 menu_node:
 menu_order: 21
 version: 2.1

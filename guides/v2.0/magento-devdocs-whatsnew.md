@@ -11,7 +11,7 @@ This page contains recent changes that we think you'd like to know about. We exc
 
 Description  | Versions applied to  | New or Updated | Date
 -------------|--------------|----------------------|--------
-Added a new topic for [extending the Data Migration Tool](http://devdocs.magento.com/guides/v2.2/migration/extend-the-tool.html).|2.x|New|Apr 02
+Added a new topic for [extending the 数据迁移工具](http://devdocs.magento.com/guides/v2.2/migration/extend-the-tool.html).|2.x|New|Apr 02
 
 {% collapsibleh2 March 2018 %}
 
@@ -69,7 +69,7 @@ You can now [manage build and deploy actions](http://devdocs.magento.com/guides/
 You can now unlock specific stuck cron jobs in Magento Commerce (Cloud) with the [cron:unlock](http://devdocs.magento.com/guides/v2.2/cloud/trouble/reset-cron-jobs.html) command instead of stopping and re-launching all of them.|2.2.x|Updated|Jan 31
 The deployment process creates backup files for the configuration files. You can restore the configuration files using the [restore](http://devdocs.magento.com/guides/v2.2/cloud/trouble/restore-configuration-files.html) command.|2.2.x|Updated|Jan 31
 MFTF 1.0: Updated descriptions for the `before` and `after` attributes in [Actions](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-1/cest/actions.html)|2.2.x|Updated|Jan 23
-Advanced Reporting: added more details to [Prerequisites](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html)|2.2.x|Updated|Jan 22
+Advanced Reporting: added more details to [先决条件](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html)|2.2.x|Updated|Jan 22
 We updated the [quarterly contributors](http://devdocs.magento.com/guides/v2.2/contributor-guide/quarterly-contributors.html) page for Q4 2017.|2.x|Updated|Jan 18
 MFTF: Updated [actions](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/cest/actions.html) and added [Changelog](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/changelog.html)|2.2.x|Updated|Jan 12
 Added information about the index prefix when [configuring Elasticsearch](http://devdocs.magento.com/guides/v2.2/config-guide/elasticsearch/configure-magento.html), which is necessary when using a single Elasticsearch instance with multiple Magento installations, like Staging and Production environments.|2.1.x, 2.2.x|Updated|Jan 10
@@ -92,7 +92,7 @@ You must prepend [environment variables](http://devdocs.magento.com/guides/v2.2/
 Advanced reporting: [Overview](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html), [Modules](http://devdocs.magento.com/guides/v2.2/advanced-reporting/modules.html), [Data collection](http://devdocs.magento.com/guides/v2.2/advanced-reporting/data-collection.html), [Report XML](http://devdocs.magento.com/guides/v2.2/advanced-reporting/report-xml.html)|2.2.x|New|Dec 13
 Added info about backward incompatible changes ([Open Source 2.1.10 - 2.1.11](http://devdocs.magento.com/guides/v2.1/release-notes/backward-incompatible-changes/open-source.html) and [Commerce 2.1.10-2.1.11](http://devdocs.magento.com/guides/v2.1/release-notes/backward-incompatible-changes/commerce.html); [Open Source 2.2.1 - 2.2.2](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html) and [Commerce 2.2.1-2.2.2](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html); [B2B](http://devdocs.magento.com/guides/v2.2/release-notes/changes/b2b_changes.html))|2.1.x, 2.2.x|Updated|Dec 13
 [Magento Functional Testing Framework Guide](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/introduction.html)|2.2.x|New|Dec 08
-[Instant Purchase module](http://devdocs.magento.com/guides/v2.2/mrg/ce/instant-purchase/)|2.2.x|New|Dec 07
+[即时购买模块](http://devdocs.magento.com/guides/v2.2/mrg/ce/instant-purchase/)|2.2.x|New|Dec 07
 Revised guidance on which environments are limited to 5-minute cron intervals in the Magento Commerce (Cloud) guide. See [Configure cron settings in the Magento Admin](http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html#add-cron) for more information.|2.2.x|Updated|Dec 06
 Added a new topic to the Magento Commerce (Cloud) guide about [configuring email and Slack notifications](http://devdocs.magento.com/guides/v2.2/cloud/env/setup-notifications.html) for build/deploy actions in an environment.|2.2.x|New|Dec 06
 Updated the following Magento Commerce (Cloud) topics to include details about static content compression during build/deploy phases:<br/>- [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html#cloud-confman-scd-over)<br/>- [Deployment process](http://devdocs.magento.com/guides/v2.2/cloud/reference/discover-deploy.html)|2.2.x|Updated|Dec 06
@@ -150,7 +150,7 @@ Update Magento Commerce (Cloud) content for [Prepare project environments](http:
 Published backward incompatible changes between 2.0.15 and 2.0.16 versions in [Open Source](http://devdocs.magento.com/guides/v2.0/release-notes/backward-incompatible-changes/open-source.html) and [Commerce](http://devdocs.magento.com/guides/v2.0/release-notes/backward-incompatible-changes/commerce.html)|2.0.x|Updated|Oct 10
 [Update Magento Commerce (Cloud) 2.2 Release Notes with changes in deployment](http://devdocs.magento.com/guides/v2.2/cloud/release-notes/CloudReleaseNotes2.2.html#deploy)|2.2.x|Updated|Oct 06
 Updated Magento Commerce (Cloud) content for [services.yaml](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services.html), [Elasticsearch](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services-elastic.html), [Solr](http://devdocs.magento.com/guides/v2.0/cloud/project/project-conf-files_services-solr.html), [Redis](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services-redis.html), [MySQL](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services-mysql.html), and [RabbitMQ](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services-rabbit.html)|2.0.x, 2.1.x, 2.2.x, 2.x|Updated|Oct 06
-Added a new option to the [`bin/magento migrate:data`](http://devdocs.magento.com/guides/v2.2/migration/migration-migrate-data.html) command in the _Migration Guide_.<br/>Added an example of [configuring the Data Migration Tool to use TLS](http://devdocs.magento.com/guides/v2.2/migration/migration-tool-configure.html) (e.g., private/public keys) to connect to MySQL in the _Migration Guide_.|2.2.x|Updated|Oct 03
+Added a new option to the [`bin/magento migrate:data`](http://devdocs.magento.com/guides/v2.2/migration/migration-migrate-data.html) command in the _Migration Guide_.<br/>Added an example of [configuring the 数据迁移工具 to use TLS](http://devdocs.magento.com/guides/v2.2/migration/migration-tool-configure.html) (e.g., private/public keys) to connect to MySQL in the _Migration Guide_.|2.2.x|Updated|Oct 03
 
 {% endcollapsibleh2 %}
 
@@ -206,7 +206,7 @@ Added backward incompatible changes for 2.2.0 RC1.8 in [Open Source](http://devd
 Description  | Versions applied to  | New or Updated | Date
 -------------|--------------|----------------------|--------
 [Added generated BICs for delta RC1.6-RC1.5](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html)|2.2.x|Updated|Jul 31
-[Migration Best Practices: use a copy of your DB when testing migration](http://devdocs.magento.com/guides/v2.1/migration/migration-overview-practices.html)<br/>[Migration Plan: recommendations on system upgrade, dry run, cron jobs, changes in migrated data](http://devdocs.magento.com/guides/v2.1/migration/migration-plan.html)<br/>[Data Migration Tool Preconditions: avoid creating new entities in Magento 2 before migration](http://devdocs.magento.com/guides/v2.1/migration/migration-tool-preconditions.html)|2.x|Updated|Jul 28
+[Migration Best Practices: use a copy of your DB when testing migration](http://devdocs.magento.com/guides/v2.1/migration/migration-overview-practices.html)<br/>[Migration Plan: recommendations on system upgrade, dry run, cron jobs, changes in migrated data](http://devdocs.magento.com/guides/v2.1/migration/migration-plan.html)<br/>[数据迁移工具 先决条件: avoid creating new entities in Magento 2 before migration](http://devdocs.magento.com/guides/v2.1/migration/migration-tool-preconditions.html)|2.x|Updated|Jul 28
 [Added generated BICs for delta RC1.5-RC1.4](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html)|2.2.x|Updated|Jul 24
 [Technical Guidelines 2.2](http://devdocs.magento.com/guides/v2.1/coding-standards/technical-guidelines.html)|2.2.x|New|Jul 21
 [Added BICs for delta Magento CE 2.2.0 RC1.4-RC1.3](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html)<br/>[Added BICs for delta Magento EE 2.2.0 RC1.4-RC1.3](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html)|2.2.x|Updated|Jul 17
@@ -229,27 +229,27 @@ Description  | Versions applied to  | New or Updated | Date
 | [Magento EE 2.2 Release Candidate Release Notes](http://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-prerelease1-EE.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Magento 2.2 backward incompatible changes](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/index.html){:target="_blank"} | 2.2 |  New | June 23  |
 
-### Installation Guide
+### 安装向导
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Change to a released version](http://devdocs.magento.com/guides/v2.2/install-gde/install/cli/dev_downgrade.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [切换到发布版本](http://devdocs.magento.com/guides/v2.2/install-gde/install/cli/dev_downgrade.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 | [检查Magento数据库状态](http://devdocs.magento.com/guides/v2.2/install-gde/install/cli/install-cli-subcommands-db-status.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [开启或关闭维护模式](http://devdocs.magento.com/guides/v2.2/install-gde/install/cli/install-cli-subcommands-maint.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Overview of ownership and permissions](http://devdocs.magento.com/guides/v2.2/install-gde/install/file-sys-perms-over.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Configure the Magento application](http://devdocs.magento.com/guides/v2.2/install-gde/install/post-install-config.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Update installation dependencies](http://devdocs.magento.com/guides/v2.2/install-gde/install/prepare-install.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Installation quick reference (tutorial)](http://devdocs.magento.com/guides/v2.2/install-gde/install-quick-ref.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Overview of ownership and permissions](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-sys-perms-over.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Set pre-installation ownership and permissions](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-system-perms.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [所有者和权限概述](http://devdocs.magento.com/guides/v2.2/install-gde/install/file-sys-perms-over.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [配置Magento应用](http://devdocs.magento.com/guides/v2.2/install-gde/install/post-install-config.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [更新安装依赖](http://devdocs.magento.com/guides/v2.2/install-gde/install/prepare-install.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [安装快速指引(教程)](http://devdocs.magento.com/guides/v2.2/install-gde/install-quick-ref.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [所有者和权限概述](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-sys-perms-over.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [安装前设置所有者和权限](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-system-perms.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 | [Get the Magento CE metapackage](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/integrator_install_ce.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 | [Get the Magento EE metapackage](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/integrator_install_ee.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [(Easy) Install the Magento archive on your server](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/zip_install.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Magento 2.2.x technology stack requirements](http://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Access issues](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/php/tshoot_access-main.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Exceptions during installation](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_exceptions.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Errors installing optional sample data](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_sample-data.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [Cannot write to the generated/code directory](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_var-gen-perms.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [(简单)使用Magento压缩包在服务器上安装](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/zip_install.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [Magento 2.2.x技术栈要求](http://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [访问问题](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/php/tshoot_access-main.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [安装过程中出异常](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_exceptions.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [安装可选的样本数据发生错误](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_sample-data.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [generated/code目录不可写](http://devdocs.magento.com/guides/v2.2/install-gde/trouble/tshoot_var-gen-perms.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 
 ### Configuration Guide
 
@@ -289,10 +289,10 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [How CSS and LESS files are preprocessed and how to debug them](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Compile LESS using Grunt](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/css-topics/css_debug.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Layout overview](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/layouts/layout-overview.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Common layout customization tasks](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [布局概述](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/layouts/layout-overview.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [常见的布局定制任务](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Templates XSS security](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/templates/template-security.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Uninstall a storefront theme](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [卸载前台主题](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Additional tools for frontend developers](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/tools/tools_overview.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Using Grunt for Magento tasks](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/tools/using_grunt.html){:target="_blank"} | 2.2 |  New | June 23  |
 
@@ -311,7 +311,7 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [Advanced Reporting modules](http://devdocs.magento.com/guides/v2.2/mrg/ce/Analytics/description.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [B2B modules](http://devdocs.magento.com/guides/v2.2/mrg/b2b/b2b-intro.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Magento_Signifyd module](http://devdocs.magento.com/guides/v2.2/mrg/ee/Signifyd.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [Magento_Signifyd模块](http://devdocs.magento.com/guides/v2.2/mrg/ee/Signifyd.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Component Manager and System Upgrade Guide
 
@@ -321,7 +321,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [Command-line upgrade](http://devdocs.magento.com/guides/v2.2/comp-mgr/cli/cli-upgrade.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Run the Extension Manager](http://devdocs.magento.com/guides/v2.2/comp-mgr/extens-man/extensman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Run the Module Manager](http://devdocs.magento.com/guides/v2.2/comp-mgr/module-man/compman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Prerequisites](http://devdocs.magento.com/guides/v2.2/comp-mgr/prereq/prereq_compman.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [先决条件](http://devdocs.magento.com/guides/v2.2/comp-mgr/prereq/prereq_compman.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Run System Upgrade](http://devdocs.magento.com/guides/v2.2/comp-mgr/upgrader/upgrade-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Magento payment provider gateway
@@ -359,10 +359,10 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Functional Testing Framework Configuration](http://devdocs.magento.com/guides/v2.2/mtf/configuration.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Test suite in the Functional Testing Framework](http://devdocs.magento.com/guides/v2.2/mtf/features/test_suite.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [功能测试框架配置](http://devdocs.magento.com/guides/v2.2/mtf/configuration.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [功能测试框架中的测试集](http://devdocs.magento.com/guides/v2.2/mtf/features/test_suite.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Typified element](http://devdocs.magento.com/guides/v2.2/mtf/mtf_entities/mtf_typified-element.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Quick start. Prepare Magento application](http://devdocs.magento.com/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_magento.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [快速开始，准备Magento应用](http://devdocs.magento.com/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_magento.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Extension Developer Best Practices
 
@@ -371,11 +371,11 @@ Description  | Versions applied to  | New or Updated | Date
 | [Writing secure code](http://devdocs.magento.com/guides/v2.2/ext-best-practices/security/writing-secure-code.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Serialized to JSON data upgrade](http://devdocs.magento.com/guides/v2.2/ext-best-practices/tutorials/serialized-to-json-data-upgrade.html){:target="_blank"} | 2.2 |  New | June 23  |
 
-### JavaScript Developer Guide
+### js开发者手册
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [JavaScript Logger](http://devdocs.magento.com/guides/v2.2/javascript-dev-guide/javascript/js_logger.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [js的Logger类](http://devdocs.magento.com/guides/v2.2/javascript-dev-guide/javascript/js_logger.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Additional updates
 
@@ -399,11 +399,11 @@ Description  | Versions applied to  | New or Updated | Date
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
 | [Description and configuration options of the mostly used Magento UI components](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/components/components-intro.html){:target="_blank"} | 2.1  |  New | Apr 28  |
-| [Install a third-party storefront theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-install.html){:target="_blank"} | 2.x  |  New | Apr 27  |
-| [Uninstall a storefront theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.x  |  New | Apr 27  |
+| [安装第三方前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-install.html){:target="_blank"} | 2.x  |  New | Apr 27  |
+| [卸载前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.x  |  New | Apr 27  |
 | Payments integrations: [response validators]({{ page.gdeurl }}payments-integrations/payment-gateway/response-validator.html){:target="_blank"} and [payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html){:target="_blank"}| 2.0, 2.1.x | Updated | Apr 27  |
 | [Technical guidelines for working with Events]({{ page.baseurl }}/coding-standards/technical-guidelines/technical-guidelines.html#events){:target="_blank"} | 2.1.x |  New | Apr 19  |
-| [Migration: Follow-up after running the Data Migration Tool]({{ page.baseurl }}/migration/migration-migrate-follow-up.html){:target="_blank"} | 2.x  |  Updated | Apr 14  |
+| [Migration: Follow-up after running the 数据迁移工具]({{ page.baseurl }}/migration/migration-migrate-follow-up.html){:target="_blank"} | 2.x  |  Updated | Apr 14  |
 
 {% endcollapsibleh2 %}
 
@@ -525,7 +525,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [MECE how to upgrade the Magento software]({{ page.baseurl }}/cloud/howtos/upgrade-magento.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [Magento Functional Test Framework (FTF) create a report]({{ page.baseurl }}/mtf/features/reporting.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [DataSource UI component]({{ site.gdeurl21 }}ui_comp_guide/concepts/ui_comp_data_source.html){:target="_blank"} | 2.1.x | New | Oct 28 |
-| [Home page for Magento 2.x system requirements]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"} | 2.x | New | Oct 28 |
+| [Home page for Magento 2.x系统要求]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [Home page for Magento 2.x technical bulletins]({{ site.baseurl }}/magento-techbull.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [Home page for Magento 2.x third-party license agreements]({{ site.baseurl }}/magento-third-party.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [Using code sniffers]({{ page.baseurl }}/coding-standards/code-standard-sniffers.html){:target="_blank"} | 2.x | New | Oct 28 |

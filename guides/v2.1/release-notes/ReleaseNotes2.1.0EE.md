@@ -29,7 +29,7 @@ Magento Magento Commerce 2.1.0 includes several new and exciting features:
 
 * **PayPal enhancements** include PayPal in-context {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} and saved credit cards. In-context checkout helps to increase {% glossarytooltip 38c73ce4-8f01-4f74-ab30-1134cec5664f %}conversion{% endglossarytooltip %} rates 69 bps by allowing shoppers to pay with PayPal without leaving the merchant’s site. PayPal saved credit cards boost repeat purchases by allowing merchants to securely store credit card information with PayPal so customers do not need to re-enter it in checkout or when reordering items from the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface.
 
-* **Braintree Hosted Fields** securely collect all sensitive payment information in checkout so merchants can qualify for the simplest set of PCI compliance requirements. Merchants retain complete control over their checkout style and {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} because Braintree gathers credit card data using small, transparent iframes that replace individual payment fields. Braintree {% glossarytooltip 73a87074-8de7-4e69-a97f-12c65c6f5582 %}settlement{% endglossarytooltip %} reports are now also conveniently available within the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+* **Braintree Hosted Fields** securely collect all sensitive payment information in checkout so merchants can qualify for the simplest set of PCI compliance requirements. Merchants retain complete control over their checkout style and {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} because Braintree gathers credit card data using small, transparent iframes that replace individual payment fields. Braintree {% glossarytooltip 73a87074-8de7-4e69-a97f-12c65c6f5582 %}settlement{% endglossarytooltip %} reports are now also conveniently available within the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 * **Improved management interfaces** make it faster and easier to search for information in the Admin, set up global search synonyms, and create new product, category, and CMS content.
 
@@ -374,7 +374,7 @@ target="_blank"> (GITHUB-4099)</a>
 
 <!--- 52482-->* Magento no longer throws a fatal error if you use fewer than the minimal required characters in your search query.
 
-<!--- 53263-->* Search input on themes using the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} now works as expected.
+<!--- 53263-->* Search input on themes using the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} now works as expected.
  <a href="https://github.com/magento/magento2/issues/4282" target="_blank"> (GITHUB-4282)</a>
 
 
@@ -914,7 +914,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 <!--- 47377-->* Unnecessary StoreCookie plugins are no longer executed on each request.
 <!--- 47375-->* Unnecessary MessageBox plugin no longer duplicate message logic.
-<!--- 47321-->* MessageBox plugin is no longer triggered by {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} requests.
+<!--- 47321-->* MessageBox plugin is no longer triggered by {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} requests.
 
 <!--- 47267-->* URL Rewrites now work for products that you access through the category landing pages.
 <!--- 47844-->* Magento now displays  customer attribute options on the Attribute Edit page.
@@ -1059,7 +1059,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 <!--- 52558-->* Cache is not invalidated or refreshed when product website visibility changes.
 
-<!--- 52536-->* Magento no longer throws an exception  when you create a custom {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %}.
+<!--- 52536-->* Magento no longer throws an exception  when you create a custom {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %}.
 
 
 <!--- 52583-->* Fixed issue with updating Category products  on the storefront.
@@ -1277,6 +1277,6 @@ You can install Magento Magento Commerce 2.1 General Availability (GA) using Com
 {% include install/releasenotes/ee_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

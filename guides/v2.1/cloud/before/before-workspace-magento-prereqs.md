@@ -191,10 +191,10 @@ To install the Magento Cloud CLI:
 The requirements listed in this topic are specific to {{site.data.var.ece}} environments. You will also install {{site.data.var.ee}} on your VM or Docker container. For that installation, you should also review the following:
 
 * [{{site.data.var.ee}} requirements]({{ page.baseurl }}/install-gde/system-requirements2.html)
-* [(Integrator) Integrator installation]({{ page.baseurl }}/install-gde/prereq/integrator_install.html)
+* [(集成工程师)集成安装]({{ page.baseurl }}/install-gde/prereq/integrator_install.html)
 
 ## Additional options
-You can also install additional [optional software]({{ page.baseurl }}/install-gde/prereq/optional.html). These packages should be installed on the local VM.
+You can also install additional [可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html). These packages should be installed on the local VM.
 
 #### 下一步:
 [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)

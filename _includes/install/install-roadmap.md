@@ -11,7 +11,7 @@ Do you know what a "terminal" application is? Do you know what operating system 
 ## Installation part 1: Getting started
 {% collapsible Topics include: %}
 
-*	[Choose how to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[Choose 如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
 *	<a href="{{ page.baseurl }}/install-gde/system-requirements.html">System requirements</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/prereq-overview.html">先决条件</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">The Magento file system owner</a>
@@ -21,11 +21,11 @@ Do you know what a "terminal" application is? Do you know what operating system 
 {% collapsible Topics include: %}
 
 *	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">Command line installation</a>
-*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">Setup Wizard installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">网页向导安装</a>
 *	<a href="{{ page.baseurl }}/install-gde/install/web/install-web-sample-data.html">Optional sample data</a>
 {% endcollapsible %}
 
-## Installation part 3: Post-installation
+## Installation part 3: 安装完成之后
 {% collapsible Topics include: %}
 
 *	<a href="{{ page.baseurl }}/install-gde/install/verify.html">Verifying</a>

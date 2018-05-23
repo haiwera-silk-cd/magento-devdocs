@@ -32,22 +32,22 @@
 
 <div class="toc"> <h4 class="toc">Contents</h4>
 <ul>
-<li><a href="#overview">Overview</a></li>
+<li><a href="#overview">概述</a></li>
 <li><a href="#prereq">先决条件</a></li>
 <li><a href="#prepare">Preparing Your Server for Magento CE or EE</a></li>
 <li><a href="#install-magento">Installing Magento CE or EE</a></li>
 <li><a href="#verify">Verifying that Magento CE or Magento EE Installed Successfully</a></li>
 <li><a href="#install-cron">Setting Up Cronjobs</a></li>
 <li><a href="#install-privs-after">Setting Magento File System Permissions and Ownership After Installation</a></li>
-<li><a href="#install-troubleshoot">Troubleshooting</a></li>
+<li><a href="#install-troubleshoot">故障排除</a></li>
 </ul></div>
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview">概述</h2>
 <p>This article discusses how to install:</p>
 <ul><li>Magento Community Edition (CE) 1.8.x or 1.9.x</li>
 <li>Magento Enterprise Edition (EE) 1.13.x or 1.14.x</li></ul>
 <p>To install Magento CE or Magento EE, use the following high-level guidelines:</p>
-<ol><li>Set up a system that meets the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento system requirements</a>.</li>
+<ol><li>Set up a system that meets the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento系统要求</a>.</li>
 <li>Install prerequisite software (web server, PHP, and required PHP extensions).</li>
 <li>Set up a MySQL Magento database instance.</li>
 <li>Run the Magento installer to complete the installation.</li>
@@ -58,7 +58,7 @@
 <h2 id="prereq">先决条件</h2>
 <p>Before starting your installation:</p>
 <ul><li>Get the Magento installation archive as discussed in <a href="{{ site.m1xgdeurl }}install/installing.html#get" target="_blank">Getting Magento CE or EE</a>.</li>
-<li>Set up one or more hosts that meet the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento system requirements</a>.</li>
+<li>Set up one or more hosts that meet the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento系统要求</a>.</li>
 <li>If you are setting up more than one web node with load balancing, set up and test that part of your system <em>before</em> you install Magento.</li>
 <li>If your database server and web server are located on different hosts, <a href="{{ site.m1xgdeurl }}install/installing.html#help" target="_blank">get help</a> before proceeding.</li>
 <li>Make sure you can back up your entire system at various points during the installation so you can roll back in the event of issues.</li></ul>
@@ -81,12 +81,12 @@
 <ul><li>Discussing how to configure Secure Sockets Layer (SSL) is beyond the scope of this guide. You can consult some general resources such as <a href="http://httpd.apache.org/docs/2.4/ssl/" target="_blank">Apache</a>, <a href="http://www.zytrax.com/tech/survival/ssl.html" target="_blank">zytrax.com</a>, or the <a href="https://www.openssl.org/docs" target="_blank">OpenSSL documentation page</a>.</li>
 <li>Discussing how to <a href="http://wiki.nginx.org/Install" target="_blank">install and configure nginx</a> is beyond the scope of this article.</li>
 <li>Review the MySQL developer site's recommendations for <a href="http://dev.mysql.com/doc/refman/5.0/en/password-security-user.html" target="_blank">MySQL password security</a>.</li>
-<li>Before you continue, make sure the system on which you install Magento meets the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento system requirements</a>.</li></ul>
+<li>Before you continue, make sure the system on which you install Magento meets the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento系统要求</a>.</li></ul>
 <p>Complete the tasks discussed in the following sections in the order shown:</p>
 <ol><li>Installing and configuring required prerequisite Software for <a href="{{ site.m1xgdeurl }}install/installing_req-prereq_ubuntu.html" target="_blank">Ubuntu</a>或<a href="{{ site.m1xgdeurl }}install/installing_req-prereq_centos.html" target="_blank">CentOS</a></li>
 <li><a href="#install-prereq-selinux">SELinux Prerequisite</a></li>
 <li><a href="#install-iptables">Opening Ports In Your Firewall</a></li>
-<li><a href="#install-optional">Installing Optional Software</a></li>
+<li><a href="#install-optional">Installing 可选软件</a></li>
 <li><a href="#install-create-db">Creating a Magento Database Instance</a></li>
 <li><a href="#install-extract-archive">Extracting the Magento Installation Archive</a></li>
 <li><a href="#install-sample">Installing Optional Sample Data</a></li></ol>
@@ -113,7 +113,7 @@
 <ul><li>Ubuntu: <a href="https://help.ubuntu.com/community/IptablesHowTo" target="_blank">Ubuntu documentation page</a>.</li>
 <li>CentOS: <a href="http://wiki.centos.org/HowTos/Network/IPTables" target="_blank">CentOS how-to</a>和<a href="http://www.centos.org/docs/4/4.5/Security_Guide/s1-firewall-ipt-basic.html" target="_blank">CentOS reference page</a>.</li></ul>
 
-<h3 id="install-optional">Installing Optional Software</h3>
+<h3 id="install-optional">Installing 可选软件</h3>
 <p>This section discusses how to create or install the following:</p>
 <ul><li>Install and configure Network Time Protocol (NTP) which enables you to synchronize the system clock with pool servers located around the world. NTP is particularly useful for synchronizing the clocks of multiple hosts.</li>
 <li>Create a <a href="http://php.net/manual/en/function.phpinfo.php" target="_blank"><code>phpinfo.php</code></a> file</li>
@@ -622,7 +622,7 @@ For example, for CentOS,<br />
 <h2 id="install-privs-after">Setting Magento File System Permissions and Ownership After Installation</h2>
 <p>To secure your Magento installation after the installation, see <a href="{{ site.m1xgdeurl }}install/installer-privileges_after.html" target="_blank">After You Install Magento: Recommended File System Ownership and Privileges</a>.</p>
 
-<h2 id="install-troubleshoot">Troubleshooting</h2>
+<h2 id="install-troubleshoot">故障排除</h2>
 <p>This section discusses some suggestions for issues you might encounter when installing Magento.</p>
 <table>
 <tbody>

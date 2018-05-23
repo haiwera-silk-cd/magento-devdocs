@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Accordion widget
+title: 手风琴菜单小工具
 menu_order: 1
-menu_title: Accordion widget
+menu_title: 手风琴菜单小工具
 version: 2.1
 github_link: javascript-dev-guide/widgets/widget_accordion.md
 redirect_from:
@@ -11,20 +11,20 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_accordion.html
 ---
 
-<h2>Overview</h2>
+<h2>概述</h2>
 
-Magento accordion widget is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">Magento Tabs widget</a>.
+Magento 手风琴菜单小工具 is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">Magento 标签页小工具</a>.
 
 Accordions are generally used to break content into multiple sections that can be swapped to save space.
 
-The accordion {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/accordion.js" target="_blank">lib/web/mage/accordion.js</a>.
+The accordion {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/accordion.js" target="_blank">lib/web/mage/accordion.js</a>.
 
-<h2 id="accordion_init">Initialize the accordion widget</h2>
+<h2 id="accordion_init">Initialize the 手风琴菜单小工具</h2>
 
 <h3>Initialize accordion in JS components</h3>
 
 <h4>Initialize accordion with <code>data-*</code> attributes specified</h4>
-Generally the accordion widget is instantiated like following:
+Generally the 手风琴菜单小工具 is instantiated like following:
 <pre>
 $("#element").accordion();
 </pre>
@@ -109,7 +109,7 @@ $("#element").accordion({
 
 <h3>Initialize accordion in a template</h3>
 
-The accordion widget can be initialized using the <code>data-mage-init</code> attribute or `<script>` element, as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html#data_mage_init" target="_blank">JavaScript initialization</a>.
+The 手风琴菜单小工具 can be initialized using the <code>data-mage-init</code> attribute or `<script>` element, as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html#data_mage_init" target="_blank">JavaScript initialization</a>.
 
 
 <h2 id="accordion_options">Options</h2>
@@ -165,7 +165,7 @@ For keyboard navigation defines if the accordion expands when the title gets in 
 
 
 <h2 id="accordion_methods">Methods</h2>
-Accordion widget options and keyboard interaction mostly coincide with the Magento tabs widget methods.
+手风琴菜单小工具 options and keyboard interaction mostly coincide with the Magento 标签页小工具 methods.
 
 The custom accordion methods are the following:
 

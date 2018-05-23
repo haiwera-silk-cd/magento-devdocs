@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: R_General
-title: (Easy) Install the Magento archive on your server
-menu_title: (Easy) Install the Magento archive on your server
+title: (简单)使用Magento压缩包在服务器上安装
+menu_title: (简单)使用Magento压缩包在服务器上安装
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -20,7 +20,7 @@ The audience for this topic is anyone who downloaded a compressed Magento softwa
 
 {% include install/prereq.md %}
 
-## Get the Magento software
+## 获取Magento
 
 {% include install/get-software_zip.md %}
 

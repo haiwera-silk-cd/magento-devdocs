@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_GiftCardRequisitionList module
+title: Magento_GiftCardRequisitionList模块
 menu_title: GiftCardRequisitionList
 menu_order: 120
 version: 2.2

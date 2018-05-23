@@ -26,7 +26,7 @@ You can have one build system that meets the following requirements:
 	*	`pub/static` directory (and subdirectories)
 *	Must have a compatible PHP version installed
 *	Must have Composer installed
-*	It has Magento file system ownership and permissions set as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
+*	It has Magento文件系统所有者和权限 set as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
 
 The build system does _not_ need any of the following:
 
@@ -40,7 +40,7 @@ The build machine can be on its own host or on the same host as an installed Mag
 ## Configure the build machine
 The following sections discuss how to configure the build machine.
 
-### Install Composer
+### 安装Composer
 
 {% include install/composer-clone.md %}
 

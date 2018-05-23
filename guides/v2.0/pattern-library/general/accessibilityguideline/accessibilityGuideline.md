@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: General
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Accessibility Guidelines
 menu_order:
 menu_node:
@@ -141,7 +141,7 @@ Ensure form controls have descriptive labels and instructions. Pay close attenti
 
 **7. Provide {% glossarytooltip 9122e7d4-7db9-48b2-ad27-1af26bad1215 %}alt text{% endglossarytooltip %} if icons or glyphs are used without text**
 
-Cascading style sheets (CSS) for purely decorative images. Hyperlinked images without supporting text must be inline, with alternative text.
+层叠样式表(CSS) for purely decorative images. Hyperlinked images without supporting text must be inline, with alternative text.
 
 <h3 id="resources">Resources</h3>
 Overview: <a href="http://www.w3.org/WAI/WCAG20/glance/" target="blank"> http://www.w3.org/WAI/WCAG20/glance/ </a>

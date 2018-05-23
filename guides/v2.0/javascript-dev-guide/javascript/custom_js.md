@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: Use custom JavaScript
+title: 使用定制脚本
 menu_order: 15
-menu_title: Use custom JavaScript
+menu_title: 使用定制脚本
 version: 2.0
 github_link: javascript-dev-guide/javascript/custom_js.md
 redirect_from:
@@ -11,7 +11,7 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/custom_js.html
 ---
 
-<h2 id="custom_js_overview">Overview</h2>
+<h2 id="custom_js_overview">概述</h2>
 This topic discusses how to use custom {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components with the components provided by Magento or having replaced them with custom implementations.
 
 We strongly recommend not changing the source code of default Magento components and widgets. All customizations must be implemented in custom modules or themes.
@@ -71,7 +71,7 @@ var config = {
   </li>
 </ul>
 
-For example, if you want to use custom <code>navigation-menu.js</code> script instead of the default menu widgets, your <code>requirejs-config.js</code> should contain the following: 
+For example, if you want to use custom <code>navigation-menu.js</code> script instead of the default 菜单小工具s, your <code>requirejs-config.js</code> should contain the following: 
 
 {% highlight JavaScript %}
 var config = {
@@ -90,7 +90,7 @@ var config = {
   custom script, see step 1 of this procedure):
     <ul>
       <li>Your {% glossarytooltip
-      d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{%
+      d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{%
       endglossarytooltip %} files: <code>&lt;theme_dir&gt;</code>
       </li>
       <li>Your module view files:
@@ -100,7 +100,7 @@ var config = {
   </li>
 </ol>
 
-This way your custom JS component is used instead of the {% glossarytooltip 3425e9ae-5edf-4fc6-b645-06023e9e5e5b %}Magento component{% endglossarytooltip %} in all entries all over the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} area.
+This way your custom JS component is used instead of the {% glossarytooltip 3425e9ae-5edf-4fc6-b645-06023e9e5e5b %}Magento component{% endglossarytooltip %} in all entries all over the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} area.
 
 <h2 id="extend_js">Extend a default JS component</h2>
 You can add a custom JS component/widget, which will extend a default Magento component/widget.
@@ -127,7 +127,7 @@ Where the following notation is used:
   <li>
     <code>&lt;your_namespace&gt;.&lt;your_widget_name&gt;</code> -
     the name of your custom {% glossarytooltip
-    f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{%
+    f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{%
     endglossarytooltip %}. According to the jQuery widgets naming
     convention, must contain a {% glossarytooltip
     621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{%
@@ -217,6 +217,6 @@ $(mage.apply);
 
 #### Related topic
 
-- [JavaScript resources in Magento]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html)
+- [Magento js资源]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html)
 - [About AMD modules and RequireJS]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html)
 

@@ -1,6 +1,6 @@
 label: PHP Developer Guide
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /extension-dev-guide/bk-extension-dev-guide.html
       children:
 

@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 02_config-hosted
-title: Transfer the Magento software to your hosted system
-menu_title: Transfer the Magento software to your hosted system
+title: 将Magento上传到你的服务主机
+menu_title: 将Magento上传到你的服务主机
 menu_order: 5
 menu_node:
 version: 2.2

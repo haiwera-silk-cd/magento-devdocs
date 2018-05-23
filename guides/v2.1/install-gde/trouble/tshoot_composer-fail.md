@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Download fails because of changes in Composer
-menu_title: Download fails because of changes in Composer
+title: Composer的修改导致下载失败
+menu_title: Composer的修改导致下载失败
 menu_node:
 menu_order: 300
 version: 2.1

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_php
-title: Resolve an illegal offset error
-menu_title: Resolve an illegal offset error
+title: 解决非法偏移的问题
+menu_title: 解决非法偏移的问题
 menu_node:
 menu_order: 2
 version: 2.1

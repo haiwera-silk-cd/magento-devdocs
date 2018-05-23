@@ -39,7 +39,7 @@ A Selenium web driver cannot enter data to fields with {% glossarytooltip 98cf4f
 
 This option disables the WYSIWYG and enables the web driver to process these fields as simple text areas.
 
-1. Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} as an administrator.
+1. Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
 2. Click **Stores \> Configuration \> General \> Content Management \> WYSIWYG Options**.
 3. Set **Enable WYSIWYG Editor** to **Disabled Completely**.
 4. Click **Save Config**.

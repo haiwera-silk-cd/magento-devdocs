@@ -1,6 +1,6 @@
 ---
 group: mftf
-title: Troubleshooting in the Magento Functional Testing Framework
+title: 故障排除 in the Magento Functional Testing Framework
 version: 2.2
 github_link: magento-functional-testing-framework/release-1/troubleshooting.md
 functional_areas:

@@ -24,7 +24,7 @@ For multi-server deployments, or for merchants planning on scaling their busines
 *	[Redis]({{ page.baseurl }}/config-guide/redis/redis-session.html) for sessions (from 2.0.6+)
 *	A separate Redis instance as your [default cache]({{ page.baseurl }}/config-guide/redis/redis-pg-cache.html) (do not use this instance for page cache)
 
-See [Magento 2.2.x technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html) for information about supported versions of each type of software.
+See [Magento 2.2.x技术栈要求]({{ page.baseurl }}/install-gde/system-requirements-tech.html) for information about supported versions of each type of software.
 
 ## Operating system
 

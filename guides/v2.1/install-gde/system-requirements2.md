@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Getting Started
+subgroup: 起步
 title: System 2.1.x requirements
-menu_title: Magento 2.1.x system requirements
+menu_title: Magento 2.1.x系统要求
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -22,6 +22,6 @@ Our system requirements include required software to run the Magento application
 See the following for more detail:
 
 *	[Magento technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
-*	[Supported browsers]({{ page.baseurl }}/install-gde/system-requirements_browsers.html)
-*	[TLS requirement for repo.magento.com]({{ page.baseurl }}/install-gde/system-requirements_repo-tls1-2.html)
-*	[TLS 1.2 requirement for PayPal]({{ page.baseurl }}/install-gde/system-requirements_tls1-2.html)
+*	[支持的浏览器]({{ page.baseurl }}/install-gde/system-requirements_browsers.html)
+*	[repo.magento.com的TLS要求]({{ page.baseurl }}/install-gde/system-requirements_repo-tls1-2.html)
+*	[PayPal TLS1.2要求]({{ page.baseurl }}/install-gde/system-requirements_tls1-2.html)

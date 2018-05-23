@@ -1,7 +1,7 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Include CSS
+title: 引入CSS
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/css-topics/css-themes.md
@@ -52,7 +52,7 @@ Contains the following:
 <li>
 <code>print.less</code>: used to generate styles for the printed version of store pages.
 </li>
-<li><code>_styles.less</code> - a composite file, which includes all LESS files used in the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}. The underscore sign ("_") in a file name conventionally means that a file is not used independently, but is included in other files.
+<li><code>_styles.less</code> - a composite file, which includes all LESS files used in the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. The underscore sign ("_") in a file name conventionally means that a file is not used independently, but is included in other files.
 </li>
 <li><code>styles-m.less</code>: used to generate mobile-specific styles, includes <code>_styles.less</code>
 </li>
@@ -61,7 +61,7 @@ Contains the following:
 <li><code>/source</code>: this subdirectory contains LESS configuration files that invoke mixins from the Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}
 </li>
 <li>
-<code>/source/_theme.less</code>: overrides the default Magento UI library variables values.
+<code>/source/_theme.less</code>: overrides the default Magento UI库 variables values.
 </li>
 
   </ul>
@@ -71,7 +71,7 @@ Contains the following:
 </table>
 
 
-<h2 id="fedg_css-in-themes_xml">Include CSS</h2>
+<h2 id="fedg_css-in-themes_xml">引入CSS</h2>
 
 <p>In the Magento application, the recommended way to include stylesheets is to specify them in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files. 
 

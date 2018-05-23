@@ -1,26 +1,26 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: DropdownDialog widget
+title: 下拉弹窗小工具
 menu_order: 6
-menu_title: DropdownDialog widget
+menu_title: 下拉弹窗小工具
 version: 2.0
 github_link: javascript-dev-guide/widgets/widget_dialog.md
 redirect_from:
   - guides/v2.0/frontend-dev-guide/javascript/widget_dialog.html
   - guides/v1.0/frontend-dev-guide/javascript/widget_dialog.html
 ---
-<h2>Overview</h2>
-Magento dropdownDialog {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} is a customization of the standard <a href="http://api.jqueryui.com/dialog/" target="_blank">jQuery UI Dialog</a>. As extra functionality it implements the following:
+<h2>概述</h2>
+Magento dropdownDialog {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} is a customization of the standard <a href="http://api.jqueryui.com/dialog/" target="_blank">jQuery UI Dialog</a>. As extra functionality it implements the following:
 <ul>
 <li>triggering {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} for opening</li>
 <li>delaying to automatically close the drop-down on mouse out</li>
 <li>clicking outside the area closes the drop-down</li>
 </ul>
 
-The dropdownDialog widget source is located in <a href="{{ site.mage2000url }}lib/web/mage/dropdown.js" target="_blank">lib/web/mage/dropdown.js</a>.
+The 下拉弹窗小工具 source is located in <a href="{{ site.mage2000url }}lib/web/mage/dropdown.js" target="_blank">lib/web/mage/dropdown.js</a>.
 
-<h2 id="dialog_init">Initialize the dropdownDialog widget</h2>
+<h2 id="dialog_init">Initialize the 下拉弹窗小工具</h2>
 
 For information about how to initialize a widget in a JS component or `.phtml` template, see the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Initialize JavaScript</a> topic.
 
@@ -140,7 +140,7 @@ The number of milliseconds until the dropdown is closed after mouse pointer move
 
 
 <h2 id="dialog_methods">Methods</h2>
-Magento customized dropdownDialog widget has default <a href="http://api.jqueryui.com/dialog/" target="_blank">jQuery UI Dialog widget</a> methods, though some of them are customized. 
+Magento customized 下拉弹窗小工具 has default <a href="http://api.jqueryui.com/dialog/" target="_blank">jQuery UI Dialog widget</a> methods, though some of them are customized. 
 
 
 Customized public methods:

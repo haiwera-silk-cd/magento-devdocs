@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_ConfigurableSharedCatalog module
+title: Magento_ConfigurableSharedCatalog模块
 menu_title: ConfigurableSharedCatalog
 menu_order: 100
 version: 2.2

@@ -20,7 +20,7 @@ Need some basic info before you get started? New to Magento installation? Here a
 
 *	<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Installation overview</a>
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">Is the Magento software already installed?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">How do I log in to my Magento server using a terminal, command prompt, or SSH?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">What operating system is my server running?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">What is the software that the Magento server needs to run?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">Magento服务器需要运行哪些软件?</a>
 

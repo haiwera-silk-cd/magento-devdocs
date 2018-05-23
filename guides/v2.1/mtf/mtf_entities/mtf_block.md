@@ -367,7 +367,7 @@ In the mapping file:
 
 On the UI:
 
-![Example of `composite` field]({{ site.baseurl }}/common/images/ftf/mtf_block_tab_composite_ui.png)
+![Example of `composite` field]({{ site.magentourl }}/common/images/ftf/mtf_block_tab_composite_ui.png)
 
 The general structure of the form tab mapping file:
 
@@ -409,7 +409,7 @@ Magento can show you a full class name of the block and path to the {% glossaryt
 
 To enable this feature follow:
 
-1. Log in to {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} as administrator
+1. Log in to {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as administrator
 1. Follow **STORES > Configuration**
 1. Change **Store View** to **Main Website** (the template path and block name will only appear for current website)
 1. Follow **ADVANCED > Developer**
@@ -418,7 +418,7 @@ To enable this feature follow:
 1. Set **Add Block Name to Hints** to **Yes**
 1. **Save Config**
 
-![]({{ site.baseurl }}/common/images/ftf/mtf_block_namepath_ui_onoff.png)
+![]({{ site.magentourl }}/common/images/ftf/mtf_block_namepath_ui_onoff.png)
 
 Now each UI block has hint about its name and path. Also, you can see the path to a PHTML template, where you can find a path to the Magento block, if you cannot find it in the hint.
 
@@ -535,7 +535,7 @@ Let's see the [`Catalog/Test/Page/Product/CatalogProductView.xml`] page. For the
 </config>
 {%endhighlight%}
 
-This page relates to the Magento_Catalog module and contains `ViewBlock`. This block has reference to the [`Magento\Catalog\Test\Block\Product\View`] class, that is responsible to enter data in Product form fields. But different types of products, such as bundle, each have their own `ViewBlock` in a corresponding module. And that is where you can use render!
+This page relates to the Magento_Catalog模块 and contains `ViewBlock`. This block has reference to the [`Magento\Catalog\Test\Block\Product\View`] class, that is responsible to enter data in Product form fields. But different types of products, such as bundle, each have their own `ViewBlock` in a corresponding module. And that is where you can use render!
 
 #### Create a render {#mtf_block_render_create}
 
@@ -581,7 +581,7 @@ Let's create render for the bundle product.
 
 Details:
 
-* The {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class for the page will be generated in the Magento_Catalog module, because we did not mention module attribute in the `page` node
+* The {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class for the page will be generated in the Magento_Catalog模块, because we did not mention module attribute in the `page` node
 * In the `block`, we indicate `name` attribute only
 
 **Step 4**. Run the page generator

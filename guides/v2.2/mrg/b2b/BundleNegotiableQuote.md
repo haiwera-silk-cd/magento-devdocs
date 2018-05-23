@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_BundleNegotiableQuote module
+title: Magento_BundleNegotiableQuote模块
 menu_title: BundleNegotiableQuote
 menu_order: 20
 version: 2.2
@@ -29,9 +29,9 @@ The `Magento_BundleNegotiableQuote` module does not create any backward incompat
 
 ## Extensibility
 
-Extension developers can interact with the Magento_BundleNegotiableQuote module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_BundleNegotiableQuote模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleNegotiableQuote module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleNegotiableQuote模块.
 
 ## Additional information
 

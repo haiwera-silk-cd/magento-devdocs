@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Getting Started
+subgroup: 起步
 title: repo.magento.com的安全传输要求
 menu_title: repo.magento.com的安全传输要求
 menu_node:

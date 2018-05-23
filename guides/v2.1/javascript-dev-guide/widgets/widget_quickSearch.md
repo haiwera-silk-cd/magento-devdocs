@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: QuickSearch widget
+title: 快速搜索小工具
 menu_order: 13
-menu_title: QuickSearch widget
+menu_title: 快速搜索小工具
 version: 2.1
 github_link: javascript-dev-guide/widgets/widget_quickSearch.md
 redirect_from:
@@ -13,13 +13,13 @@ functional_areas:
   - Search
 ---
 
-<h2>Overview</h2>
+<h2>概述</h2>
 
-The quickSearch {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} is a custom autocomplete widget that populates a list of suggested search terms for a given field. 
+The quickSearch {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} is a custom autocomplete widget that populates a list of suggested search terms for a given field. 
 
 The suggest widget source is <a href="{{ site.mage2000url }}app/code/Magento/Search/view/frontend/web/form-mini.js" target="_blank"><code>&lt;Magento_Search_module_dir&gt;/view/frontend/web/form-mini.js</code></a>.
 
-<h2 id="quicksearch_init">Initialize the quickSearch widget</h2>
+<h2 id="quicksearch_init">Initialize the 快速搜索小工具</h2>
 For information about how to initialize a widget in a JS component or `.phtml` template, see the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Initialize JavaScript</a> topic.
 
 

@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_BundleSharedCatalog module
+title: Magento_BundleSharedCatalog模块
 menu_title: BundleSharedCatalog
 menu_order: 40
 version: 2.2
@@ -32,9 +32,9 @@ The `Magento_BundleSharedCatalog` module does not create any backward incompatib
 
 ## Extensibility
 
-Extension developers can interact with the Magento_BundleSharedCatalog module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_BundleSharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleSharedCatalog module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleSharedCatalog模块.
 
 ### Layouts
 

@@ -33,7 +33,7 @@ If necessary, copy the existing `index.php` entry point script for your {% gloss
 ### Roadmap for setting up multiple websites with Apache
 Setting up multiple stores consists of the following tasks:
 
-1.  [Set up websites, stores, and store views]({{ page.baseurl }}/config-guide/multi-site/ms_websites.html) in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+1.  [Set up websites, stores, and store views]({{ page.baseurl }}/config-guide/multi-site/ms_websites.html) in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 2.  Create one [Apache virtual host](#ms-apache-vhosts) per Magento website.
 
 

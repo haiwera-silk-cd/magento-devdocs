@@ -139,7 +139,7 @@ functional_areas:
 If applicable, continue your Magento software installation:
 
 *	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-install.html">Command line installation</a>
-*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">Setup Wizard installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">网页向导安装</a>
 
 <!-- <h2 id="instgde-cli-subcommands-dep-config-enable-modules">关于启用和禁用模块</h2>
 {% include install/enable-disable-modules.html %} -->

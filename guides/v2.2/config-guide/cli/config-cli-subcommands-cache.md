@@ -128,7 +128,7 @@ This command enables you to enable or disable all cache types or only the ones y
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 Starting in version 2.2, you can enable or disable cache types _only_ using the command line. Before doing so, you must manually make `<your Magento install dir>/app/etc/env.php` writeable by the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
 
-You can clean (also referred to as _flush_ or _refresh_) cache types using either the command line or the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+You can clean (also referred to as _flush_ or _refresh_) cache types using either the command line or the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 </div>
 
 命令参数：
@@ -194,7 +194,7 @@ Sample result:
 	config_webservice
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-You can also clean and flush cache types in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}. Go to **System** > **Tools** > **Cache Management**. **Flush Cache Storage** is equivalent to `bin/magento cache:flush`. **Flush Magento Cache** is equivalent to `bin/magento cache:clean`.
+You can also clean and flush cache types in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. Go to **System** > **Tools** > **Cache Management**. **Flush Cache Storage** is equivalent to `bin/magento cache:flush`. **Flush Magento Cache** is equivalent to `bin/magento cache:clean`.
 </div>
 
 #### 相关主题

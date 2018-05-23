@@ -8,7 +8,7 @@ menu_node:
 version: 2.1
 github_link: design-styleguide/iconography/iconography.md
 ---
-Icons are used throughout the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} interface, often as controls to initiate a function (such as a "Filter") or to direct a user to a section (such as "Account").
+Icons are used throughout the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} interface, often as controls to initiate a function (such as a "Filter") or to direct a user to a section (such as "Account").
 
 Icons are meant to provide a visual representation of functionality or content and should therefore bear some conceptual resemblance to them. Icons should be able to communicate their "use" to the user without the assistance of a text label, though labels should be used in the UI whenever possible to minimize ambiguity.
 

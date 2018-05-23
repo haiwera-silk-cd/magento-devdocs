@@ -29,7 +29,7 @@ You can check fixture PHP class in corresponding {% glossarytooltip c1e4242b-1f1
 
 ## Create new fixture {#mtf_fixture_create}
 
-Let's imagine that we want to create new fixture to test our {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}Widget{% endglossarytooltip %} module.
+Let's imagine that we want to create new fixture to test our {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} module.
 
 Magento has a tool, `generateFixtureXml.php,`, to automatically generate fixture with parameters indicated in arguments. It is located in `<magento2_root_dir>/dev/tests/functional/utils`.
 
@@ -242,7 +242,7 @@ To apply changes, enter following commands:
 
 Our new field `layout_updates` is complex and contains different elements and logic, depending on the type of layout chosen.
 
-![Layout update subelements]({{ site.baseurl }}/common/images/ftf/mtf_layout_update.jpg)
+![Layout update subelements]({{ site.magentourl }}/common/images/ftf/mtf_layout_update.jpg)
 
 You can use a data source that provides additional processing of the field (for example, parsing or creation of new field).
 

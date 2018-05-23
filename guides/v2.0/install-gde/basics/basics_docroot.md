@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: What is a docroot?
-menu_title: What is a docroot?
+subgroup: 起步
+title: 什么docroot?
+menu_title: 什么docroot?
 menu_node:
 menu_order: 200
 level3_menu_node: level3child

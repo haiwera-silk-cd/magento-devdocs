@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: JavaScript resources in Magento
-menu_title: JavaScript resources in Magento
+title: Magento js资源
+menu_title: Magento js资源
 menu_order: 5
 version: 2.1
 github_link: javascript-dev-guide/javascript/js-resources.md
@@ -12,7 +12,7 @@ redirect_from:
   - guides/v2.2/javascript-dev-guide/javascript/requirejs_concept.html
 ---
 
-## Overview {#m2devgde-js-resources-intro}
+## 概述{#m2devgde-js-resources-intro}
 
 This topic describes the general concepts of how work with {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components is organized in Magento.
 
@@ -48,7 +48,7 @@ Examples:
 **示例1**
 
 - File actual location: `app/code/Magento/ConfigurableProduct/view/frontend/web/js/configurable.js`
-- File published to `pub/static`: `pub/static/frontend/Magento/<theme>/<locale>/Magento_Configurable/js/configurable.js`. Here `<theme>` and `<locale>` are the currently applied in your instance {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} and {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %}.
+- File published to `pub/static`: `pub/static/frontend/Magento/<theme>/<locale>/Magento_Configurable/js/configurable.js`. Here `<theme>` and `<locale>` are the currently applied in your instance {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} and {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %}.
 - Called in script:
 
 {%highlight js%}

@@ -4,7 +4,7 @@ pages:
     - label: Upgrade the Magento application and modules
       url: /comp-mgr/bk-compman-upgrade-guide.html
 
-    - label: Prerequisites
+    - label: 先决条件
       url: /comp-mgr/prereq/prereq_compman.html
       children:
 
@@ -35,7 +35,7 @@ pages:
         - label: Manage your components
           url: /comp-mgr/module-man/compman-main-pg.html
 
-        - label: Step 1. Readiness check
+        - label: 步骤1.准备就绪检查
           url: /comp-mgr/module-man/compman-readiness.html
 
         - label: Step 2. Back up the file system and database
@@ -67,7 +67,7 @@ pages:
         - label: Start the Module Manager
           url: /comp-mgr/module-man/compman-start.html
 
-        - label: Step 1. Readiness check
+        - label: 步骤1.准备就绪检查
           url: /comp-mgr/module-man/compman-readiness.html
 
         - label: Step 2. Back up the file system and database
@@ -84,7 +84,7 @@ pages:
         - label: Start the Extension Manager
           url: /comp-mgr/extens-man/extensman-main-pg.html
 
-        - label: Step 1. Readiness check
+        - label: 步骤1.准备就绪检查
           children:
 
             - label: Readiness check success
@@ -158,7 +158,7 @@ pages:
         - label: Updater application
           url: /comp-mgr/updater/updater.html
 
-    - label: Troubleshooting suggestions
+    - label: 故障排除 suggestions
       url: /comp-mgr/trouble/tshoot.html
       children:
 
@@ -181,17 +181,17 @@ pages:
         - label: Troubleshoot the updater application
           url: /comp-mgr/trouble/cman/updater.html
 
-        - label: PHP version readiness check issues
+        - label: PHP版本就绪检查的问题
           url: /comp-mgr/trouble/cman/php-version.html
 
-        - label: File permissions readiness check issues
+        - label: 文件权限就绪检查的问题
           versions: ["2.0", "2.1"]
           url: /comp-mgr/trouble/cman/rc_perms.html
 
         - label: Roll back after update failure
           url: /comp-mgr/trouble/cman/update-fail.html
 
-        - label: Resolve component dependency readiness check issues
+        - label: Resolve 组件依赖就绪检查的问题
           url: /comp-mgr/trouble/cman/component-depend.html
 
         - label: Maintenance mode options for upgrade

@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_BundleRequisitionList module
+title: Magento_BundleRequisitionList模块
 menu_title: BundleRequisitionList
 menu_order: 30
 version: 2.2
@@ -10,7 +10,7 @@ github_link: mrg/b2b/BundleRequisitionList.md
 
 ## Overview
 
-The `Magento_BundleRequisitionList` module enables bundle products to be displayed in a requisition list in an B2B environment. This module extends `Magento_RequisitionList` module and Magento_Bundle module.
+The `Magento_BundleRequisitionList` module enables bundle products to be displayed in a requisition list in an B2B environment. This module extends `Magento_RequisitionList` module and Magento_Bundle模块.
 
 The `Magento_BundleRequisitionList` module provides the following features:
 

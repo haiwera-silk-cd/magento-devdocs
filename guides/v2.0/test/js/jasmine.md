@@ -11,7 +11,7 @@ functional_areas:
   - test
 ---
 
-Magento uses a custom [Grunt] task named `spec` to run Jasmine tests. The task collects the tests from `<magento_root_dir>dev/tests/js/jasmine/tests` and can be run for a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+Magento uses a custom [Grunt] task named `spec` to run Jasmine tests. The task collects the tests from `<magento_root_dir>dev/tests/js/jasmine/tests` and can be run for a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 ## Prepare environment
 

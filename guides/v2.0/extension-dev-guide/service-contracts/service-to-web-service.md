@@ -13,7 +13,7 @@ functional_areas:
   - Services
 ---
 
-<h2 id="overview-web-service">Overview</h2>
+<h2 id="overview-web-service">概述</h2>
 <p>You can configure a Magento or third-party service as a web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %}.</p>
 <p>To <a href="#configure-webapi">configure a web API</a>, you define {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} elements and attributes in the <code>webapi.xml</code> XML configuration file for the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} for the service.
    The <code>webapi.xml</code> file for your module specifies an XML schema file for validation.

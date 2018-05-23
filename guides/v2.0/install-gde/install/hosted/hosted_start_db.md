@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 02_config-hosted
-title: Configure a database and a database user
-menu_title: Configure a database and a database user
+title: 配置数据库和数据库用户
+menu_title: 配置数据库和数据库用户
 menu_order: 2
 menu_node:
 version: 2.0
@@ -42,4 +42,4 @@ To configure a MySQL database and database user:
 	<img src="{{ site.baseurl }}/common/images/install-merch_db-user-privs.png" width="750px" alt="Give the database user all privileges to the database">
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_start_php.html">Configure PHP</a>
+<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_start_php.html">配置PHP</a>

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 20_other
-title: Segmentation fault during rollback
-menu_title: Segmentation fault during rollback
+title: 回退过程中出现段错误
+menu_title: 回退过程中出现段错误
 menu_node:
 menu_order: 510
 version: 2.1

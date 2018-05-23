@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Tabs widget
-menu_title: Tabs widget
+title: 标签页小工具
+menu_title: 标签页小工具
 menu_order: 14
 version: 2.1
 github_link: javascript-dev-guide/widgets/widget_tabs.md
@@ -11,18 +11,18 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_tabs.html
 ---
 
-<h2 id="fedg_tabs-widget_overview">Overview</h2>
+<h2 id="fedg_tabs-widget_overview">概述</h2>
 
-The Magento tabs widget implements single content area with multiple panels, each associated with a header in a list. It uses the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_collapsible.html" target="_blank">Magento collapsible widget</a>.
+The Magento 标签页小工具 implements single content area with multiple panels, each associated with a header in a list. It uses the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_collapsible.html" target="_blank">Magento 可折叠窗小工具</a>.
 
-The tabs {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/tabs.js" target="_blank">lib/web/mage/tabs.js</a>.
+The tabs {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/tabs.js" target="_blank">lib/web/mage/tabs.js</a>.
 
 
-<h2 id="fedg_tabs_init">Initialize the tabs widget</h2>
+<h2 id="fedg_tabs_init">Initialize the 标签页小工具</h2>
 For information about how to initialize a widget in a JS component or `.phtml` template, see the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Initialize JavaScript</a> topic.
 
 
-Generally the tabs widget is instantiated like following:
+Generally the 标签页小工具 is instantiated like following:
 <pre>
 $("#element").tabs();
 </pre>
@@ -46,7 +46,7 @@ Phtml template file examples using script:
 
 <h2 id="fedg_tabs_options">Options</h2>
 
-The tabs widget has the following options:
+The 标签页小工具 has the following options:
 
 * <a href="#fedg_tabs_options-active">active</a>
 * <a href="#fedg_tabs_options-ajaxUrlElement">ajaxUrlElement</a>
@@ -129,7 +129,7 @@ If this option is set to false, the content is not collapsed when the panel is a
 **Default value**: `false`
 
 <h3 id="fedg_tabs_options-collapsibleElement"><code>collapsibleElement</code></h3>
-Selector of the element for which the collapsible widget is initialized.
+Selector of the element for which the 可折叠窗小工具 is initialized.
 
 **Type**: String
 
@@ -222,7 +222,7 @@ The option of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widge
 
 <h2 id="tabs_methods">Methods</h2>
 
-The tabs widget has the following methods:
+The 标签页小工具 has the following methods:
 <ul>
 <li><a href="#fedg_tabs_methods-activate">activate()</a></li>
 <li><a href="#fedg_tabs_methods-enable">enable()</a></li>

@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 10_Community Edition
-title: Magento_Signifyd module
+title: Magento_Signifyd模块
 menu_title: Signifyd
 menu_order: 2
 version: 2.2
@@ -10,7 +10,7 @@ redirect_from: guides/v2.2/mrg/ee/Signifyd.html
 ---
 
 
-The Magento_Signifyd module provides integration with the [Signifyd](https://www.signifyd.com/) fraud protection system. The integration is based on the Signifyd API; see the [Signifyd API docs](https://www.signifyd.com/docs/api/#/introduction/) for technical details.
+The Magento_Signifyd模块 provides integration with the [Signifyd](https://www.signifyd.com/) fraud protection system. The integration is based on the Signifyd API; see the [Signifyd API docs](https://www.signifyd.com/docs/api/#/introduction/) for technical details.
 
 The module implementation allows you to:
 
@@ -20,7 +20,7 @@ The module implementation allows you to:
 
 ## Extensibility
 
-The Magento_Signifyd module does not have own Events, Layouts, and UI Components as extension points.
+The Magento_Signifyd模块 does not have own Events, Layouts, and UI Components as extension points.
 
 ### Public API
 
@@ -61,19 +61,19 @@ For information about a public API in Magento 2, see [Public interfaces & APIs](
 
 ### Webhooks
 
-To update the entity data for a case or guarantee, the Magento_Signifyd module uses the [Signifyd Webhooks](https://www.signifyd.com/docs/api/#/reference/webhooks) mechanism.
+To update the entity data for a case or guarantee, the Magento_Signifyd模块 uses the [Signifyd Webhooks](https://www.signifyd.com/docs/api/#/reference/webhooks) mechanism.
 
 The newly created case entities have the `PENDING` status for a case and a guarantee. After receiving a Webhook, both statuses are changed to the appropriate Signifyd statuses.
 
 ### Debug mode
 
-The Debug Mode may be enabled in the module configuration. This logs the communication data between the Magento_Signifyd module and the Signifyd service in this file:
+The Debug Mode may be enabled in the module configuration. This logs the communication data between the Magento_Signifyd模块 and the Signifyd service in this file:
 
     var/log/debug.log
 
 ### Backward incompatible changes
 
-The Magento_Signifyd module does not introduce backward incompatible changes.
+The Magento_Signifyd模块 does not introduce backward incompatible changes.
 
 You can track [backward incompatible changes in patch releases](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html).
 

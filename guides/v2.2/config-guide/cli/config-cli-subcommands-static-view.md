@@ -413,7 +413,7 @@ If you specify values for both `<languages>` and `--language`, `<languages>` tak
 Following are some example commands.
 
 #### Excluding a theme and HTML minification
-The following command deploys {% glossarytooltip a3e37235-4e8b-464f-a19d-4a120560206a %}static content{% endglossarytooltip %} for the US English (`en_US`) language, excludes the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} provided with Magento, and does not minify {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} files.
+The following command deploys {% glossarytooltip a3e37235-4e8b-464f-a19d-4a120560206a %}static content{% endglossarytooltip %} for the US English (`en_US`) language, excludes the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} provided with Magento, and does not minify {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} files.
 
     bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
 
@@ -435,7 +435,7 @@ Sample output:
     ---
 
 #### Generating static view files for one theme and one area
-The following command generates static view files for all languages, the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} area only, the Magento Luma theme only, without generating fonts:
+The following command generates static view files for all languages, the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} area only, the Magento Luma theme only, without generating fonts:
 
     bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
 
@@ -462,7 +462,7 @@ To do this, take the following steps:
 2.  Copy the exported files to the non-production code base.
 3.  Run [`bin/magento setup:static-content:deploy`](#config-cli-subcommands-staticview).
 
-<h2 id="view-file-trouble">Troubleshooting the static view files deployment tool</h2>
+<h2 id="view-file-trouble">故障排除 the static view files deployment tool</h2>
 <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Install the Magento software first</a>; otherwise, you cannot run the static view files deployment tool.
 
 **Symptom**: The following error is displayed when you run the static view files deployment tool:

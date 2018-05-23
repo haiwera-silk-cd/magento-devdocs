@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Extend a layout
-menu_title: Extend a layout
+title: 扩展一个布局
+menu_title: 扩展一个布局
 menu_order: 4
 version: 2.0
 github_link: frontend-dev-guide/layouts/layout-extend.md
@@ -71,8 +71,8 @@ Where a `handle ID` is defined by the name of the corresponding layout file, and
 
 #### 相关主题:
 
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">Override a layout</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">覆盖一个布局</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">XML instructions</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">Create a theme</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html" target="_blank">Magento UI library</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html" target="_blank">Magento UI库</a>
 

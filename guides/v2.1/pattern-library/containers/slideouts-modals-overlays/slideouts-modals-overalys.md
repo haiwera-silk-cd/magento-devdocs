@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Container
-title: Admin Design Pattern Library
-menu_title: Slide-out, Modals, and Overlays
+title: 管理面板用到的设计模式和库
+menu_title: 淡入淡出，模态窗及覆盖层
 menu_order: 2
 menu_node:
 version: 2.1
@@ -94,16 +94,16 @@ Clicking or tapping the "alley" that represents the parent page (lowest level) w
 <br>
 <br>
 
-<h3>Slideout Button Bar actions</h3>
+<h3>Slideout 按钮栏 actions</h3>
 
-Actions in the Slideout Button Bar follow the <a href="/guides/v2.0/pattern-library/controls/button-bar/button-bar.html">Button Bar pattern</a>.
+Actions in the Slideout 按钮栏 follow the <a href="/guides/v2.0/pattern-library/controls/button-bar/button-bar.html">按钮栏 pattern</a>.
 There are two general ways of using Slideout — "Subflow" and "Extend Form".
 
 <h4>Sub Flow</h4>
 
 <img src="img/slideout-panel10.png"/><br />
 
-If the form in slide-in panel creates new entities, or changes existing ones (Create Product Configurations, Add Attribute) primary action in the Slideout Button Bar should be a noun explaining the panel resulting action: "Generate Configurations", "Create Attribute", etc.
+If the form in slide-in panel creates new entities, or changes existing ones (Create Product Configurations, Add Attribute) primary action in the Slideout 按钮栏 should be a noun explaining the panel resulting action: "Generate Configurations", "Create Attribute", etc.
 Clicking that button will:
 <ol>
 	<li>Validate the form in Slideout. <br />If form has errors, it will show the error messages following the Error Messaging Pattern. If no errors found, it will:</li>
@@ -258,4 +258,4 @@ When field level validation is triggered resulting message should appear and per
 <a href="src/Modal.psd">Download Modal PSD source</a>
 
 <h3 id="implement">Technical Implementation</h3>
-Technically slideouts and modals are implemented using the [modal widget]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html) or the [modal UI component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-modal.html). 
+Technically slideouts and modals are implemented using the [模态弹窗小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html) or the [modal UI component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-modal.html). 

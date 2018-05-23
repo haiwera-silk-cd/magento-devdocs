@@ -1,8 +1,8 @@
 ---
 group: install
 subgroup: 02_config
-title: Configure the Magento application
-menu_title: Configure the Magento application
+title: 配置Magento应用
+menu_title: 配置Magento应用
 menu_node: parent
 menu_order: 2
 version: 2.0
@@ -34,7 +34,7 @@ After installation, we recommend the following:
 <!-- Set up roles and restricted users (Admin) -->
 
 <h2 id="post-install-rewrites">Enable Apache server rewrites</h2>
-If you use the Apache web server, you must enable server rewrites for pages to display properly. Otherwise, you'll see pages without styles and other issues.
+If you use the Apache web server, you must enable server rewrites for pages to display properly. Otherwise, you'll see pages without styles and 其它问题.
 
 <a href="{{ page.baseurl }}/install-gde/prereq/apache.html#apache-help-rewrite">Section on Apache server rewrites</a>
 

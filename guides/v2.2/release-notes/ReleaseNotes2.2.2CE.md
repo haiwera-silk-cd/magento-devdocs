@@ -35,7 +35,7 @@ Look for the following highlights in this release:
 
 * **Magento Shipping** (powered by Temando). This new feature provides integrated advanced multi-carrier shipping and fulfillment. (In addition to these release notes, you can find Magento Shipping-specific release notes in [Magento Shipping Release Notes]({{ page.baseurl }}/release-notes/ReleaseNotesMagentoShipping2.2.x.html).)
 
-* **Streamlined Instant Purchase checkout** (contributed by Creatuity). Our new streamlined Instant Purchase option uses previously stored payment credentials and shipping information to bypass steps in the checkout process. See [Instant Purchase module](http://devdocs.magento.com/guides/v2.2/mrg/ce/instant-purchase/) for more information.
+* **Streamlined Instant Purchase checkout** (contributed by Creatuity). Our new streamlined Instant Purchase option uses previously stored payment credentials and shipping information to bypass steps in the checkout process. See [即时购买模块](http://devdocs.magento.com/guides/v2.2/mrg/ce/instant-purchase/) for more information.
 
 * **Integrated dotmailer marketing automation software**. Magento is one of the first ecommerce solutions to include the dotmailer marketing automation with their core product. See [Email Marketing Automation](http://docs.magento.com/m2/ce/user_guide/marketing/email-marketing-automation.html).  
 
@@ -195,7 +195,7 @@ Looking for more information on these new features as well as many others? Check
 
 
 #### JavaScript framework
-<!--- MAGETWO-80207 -->* Magento no longer incorrectly overly encodes UTF-8 files when JavaScript Bundling is enabled. Previously, this issue resulted in poor character encoding on the storefront. [GitHub-10562](https://github.com/magento/magento2/issues/10562), [GitHub-6733](https://github.com/magento/magento2/issues/6733)
+<!--- MAGETWO-80207 -->* Magento no longer incorrectly overly encodes UTF-8 files when js打包 is enabled. Previously, this issue resulted in poor character encoding on the storefront. [GitHub-10562](https://github.com/magento/magento2/issues/10562), [GitHub-6733](https://github.com/magento/magento2/issues/6733)
 
 <!--- MAGETWO-81959 -->* Magento now exports the Confirmed email and Account Lock values when you export customer data. Previously, this information was missing from the exported CSV. *Fix submitted by [Luke Rodgers](https://github.com/convenient) in pull request 11437*. [GitHub-10765](https://github.com/magento/magento2/issues/10765), [GitHub-10765](https://github.com/magento/magento2/issues/10765)
 
@@ -1156,6 +1156,6 @@ You can install Magento Open Source 2.2 General Availability (GA) using Composer
 {% include install/releasenotes/ce_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

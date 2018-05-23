@@ -1,14 +1,14 @@
 label: Admin Pattern Library
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /pattern-library/bk-pattern.html
     - label: Container
       children:
 
-        - label: Static Content Container
+        - label: 静态内容容器
           url: /pattern-library/containers/staticContentContainer/contentContainer.html
 
-        - label: Slide-out, Modals, and Overlays
+        - label: 淡入淡出，模态窗及覆盖层
           url: /pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html
 
         - label: Tabs
@@ -17,17 +17,17 @@ pages:
     - label: Controls
       children:
 
-        - label: Buttons
+        - label: 按钮
           url: /pattern-library/controls/buttons/buttons.html
 
-        - label: Button Bar
+        - label: 按钮栏
           url: /pattern-library/controls/button-bar/button-bar.html
 
-        - label: Expandable Sections
+        - label: 可收缩区块
           versions: ["2.1","2.2", "2.3"]
           url: /pattern-library/controls/Expandable_Sections/expand-collapse.html
 
-        - label: View Controller
+        - label: 视图控制器
           versions: ["2.1","2.2", "2.3"]
           url: /pattern-library/controls/viewcontroller/viewcontroller.html
 
@@ -40,7 +40,7 @@ pages:
         - label: Tile
           url: /pattern-library/displaying-data/tile/tile.html
 
-        - label: Data Table
+        - label: 数据表格
           url: /pattern-library/displaying-data/datatable/datatable.html
 
         - label: Tree
@@ -49,7 +49,7 @@ pages:
     - label: Feedback to User
       children:
 
-        - label: Progress Indicator
+        - label: 进度条
           url: /pattern-library/feedbackToUser/progressIndicator/progressIndicator.html
 
     - label: General

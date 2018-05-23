@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Quick start. Prepare environment for test run
+title: 快速开始，准备开始测试的环境
 version: 2.1
 github_link: mtf/mtf_quickstart/mtf_quickstart_environment.md
 ---

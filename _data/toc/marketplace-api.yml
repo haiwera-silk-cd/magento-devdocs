@@ -1,7 +1,7 @@
 label: Marketplace EQP API
 versions: ["2.1","2.2","2.3"]
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /marketplace/eqp/api.html
 
     - label: Authentication

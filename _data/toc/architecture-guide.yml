@@ -1,6 +1,6 @@
 label: Architecture Guide
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /architecture/bk-architecture.html
 
     - label: Architectural basics

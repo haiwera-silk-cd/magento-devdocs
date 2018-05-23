@@ -11,7 +11,7 @@ github_link: ui_comp_guide/components/ui-tab.md
 
 The Tab component implements a tab content area.
 
-See the [Admin Design Pattern Library (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the Tab component.
+See the [管理面板用到的设计模式和库 (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the Tab component.
 
 ## Configuration options
 

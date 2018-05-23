@@ -35,7 +35,7 @@ namespace Magento\YourModule\Test\TestCase;
 use Magento\Mtf\TestCase\Scenario;
 
 /**
- * Preconditions:
+ * 先决条件:
  * 1. ....
  * 2. ....
   *

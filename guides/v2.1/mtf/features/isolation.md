@@ -1,11 +1,11 @@
 ---
 group: mtf-guide
-title: Isolation management
+title: 隔离管理
 version: 2.1
 github_link: mtf/features/isolation.md
 ---
 
-Isolation management feature enables you to isolate a test suite, a test case, or a test using custom logic coded in a script. You can use it to return your system to its initial state (drop a database, clean cache, reset filesystem) or perform any other procedures that you need.
+隔离管理 feature enables you to isolate a test suite, a test case, or a test using custom logic coded in a script. You can use it to return your system to its initial state (drop a database, clean cache, reset filesystem) or perform any other procedures that you need.
 
 In general, to manage isolation:
 
@@ -45,7 +45,7 @@ Isolation script is run in a web browser and must be accessible by a web server.
 You can set isolation script globally, in configuration file, or locally, directly in a test case. The following examples show different options.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-Isolation management for a certain test or test case has higher priority than global.
+隔离管理 for a certain test or test case has higher priority than global.
 </div>
 
 ### Step 2(a): Globally set isolation script to be run after each test case {#step-2a}

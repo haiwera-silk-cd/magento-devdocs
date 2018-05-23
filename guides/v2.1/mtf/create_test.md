@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Create a test in the Functional Testing Framework
+title: 在功能测试框架中创建测试
 version: 2.1
 github_link: mtf/create_test.md
 ---

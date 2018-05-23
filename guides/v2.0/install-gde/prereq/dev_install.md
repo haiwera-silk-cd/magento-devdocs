@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: T_Developer
-title: (Contributor) Clone the Magento repository
-menu_title: (Contributor) Clone the Magento repository
+title: (贡献者)克隆Magento仓库
+menu_title: (贡献者)克隆Magento仓库
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -33,7 +33,7 @@ If you clone the Magento 2 GitHub repository, you _cannot_ use the Magento softw
 
 {% include install/composer-overview.html %}
 
-## Install Composer {#instgde-prereq-compose-install}
+## 安装Composer {#instgde-prereq-compose-install}
 {% include install/composer-clone.md %}
 
 <h2 id="instgde-prereq-compose-clone">Clone the Magento repository</h2>
@@ -41,7 +41,7 @@ This section discusses how to get current code by cloning the Magento GitHub's d
 
 *	Release branches like `2.1.0` are more stable
 
-	You *must* use a released branch with the <a href="{{ page.baseurl }}/migration/bk-migration-guide.html">Data Migration Tool</a>.
+	You *must* use a released branch with the <a href="{{ page.baseurl }}/migration/bk-migration-guide.html">数据迁移工具</a>.
 *	`develop` is more recent
 
 Currently, the `develop` branch is the default but you can checkout a release branch like `2.1.0` after cloning.

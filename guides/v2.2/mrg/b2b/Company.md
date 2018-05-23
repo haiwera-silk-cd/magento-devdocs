@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_Company module
+title: Magento_Company模块
 menu_title: Company
 menu_order: 50
 version: 2.2
@@ -28,9 +28,9 @@ This module does not create any backward incompatible changes. This module can b
 
 ## Extensibility
 
-Extension developers can interact with the Magento_Company module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_Company模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_Company module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_Company模块.
 
 ### Layouts
 

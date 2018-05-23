@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_ReviewStaging module
+title: Magento_ReviewStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/ReviewStaging.md
@@ -10,7 +10,7 @@ The Magento_ReviewStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e14
 
 ## Implementation details
 
-The Magento_ReviewStaging module extends the following Magento_Review module functionality to be used in staging mode:
+The Magento_ReviewStaging模块 extends the following Magento_Review模块 functionality to be used in staging mode:
 
 - Adds Product Reviews grid on the Schedule Update form. 
 
@@ -18,13 +18,13 @@ NOTE You cannot create an update for a product review.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_ReviewStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_ReviewStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ReviewStaging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ReviewStaging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ReviewStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ReviewStaging模块.
 
 ### Layouts
 

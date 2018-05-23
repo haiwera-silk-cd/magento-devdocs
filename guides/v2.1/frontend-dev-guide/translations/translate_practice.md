@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: G_Translate
-title: Create a translation dictionary for a theme
-menu_title: Create a translation dictionary for a theme, illustration
+title: 为主题创建一个翻译字典
+menu_title: 为主题创建一个翻译字典, illustration
 menu_order: 2
 version: 2.1
 github_link: frontend-dev-guide/translations/translate_practice.md
@@ -12,7 +12,7 @@ functional_areas:
 
 <h2>What's in this topic</h2>
 
-This topic is a step-by-step illustration of creating a default en_US {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">dictionary</a> for a custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}. 
+This topic is a step-by-step illustration of creating a default en_US {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">dictionary</a> for a custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. 
 
 <h2 id="theme">Changing default strings</h2>
 OrangeCo created a custom `orange` theme that inherits from the Magento Blank theme.
@@ -78,7 +78,7 @@ For example:
 <h2> Recommended reading </h2>
 
 <ul>
-<li><a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">Translations overview</a></li>
+<li><a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">翻译概述</a></li>
 <li><a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">Translation dictionaries and language packages</a></li>
 <li><a href="{{ page.baseurl }}/frontend-dev-guide/translations/theme_dictionary.html">Using translation dictionary to customize strings</a></li>
 </ul>

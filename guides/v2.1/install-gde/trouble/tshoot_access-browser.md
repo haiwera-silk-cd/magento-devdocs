@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 02_access
-title: Cannot access Magento software in a web browser
-menu_title: Cannot access Magento software in a web browser
+title: 使用浏览器无法访问Magento
+menu_title: 使用浏览器无法访问Magento
 menu_node:
 menu_order: 2
 version: 2.1

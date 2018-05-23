@@ -1,9 +1,9 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Compile LESS with Grunt
+title: 使用grunt编译less文件
 menu_order: 4
-menu_title: Compile LESS with Grunt
+menu_title: 使用grunt编译less文件
 version: 2.0
 github_link: frontend-dev-guide/css-topics/css_debug.md
 redirect_from: /guides/v1.0/frontend-dev-guide/css-topics/css_debug.html
@@ -45,7 +45,7 @@ npm install
 </li>
 
 <li>
-Add your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} to Grunt configuration. To do this, in the <code>dev/tools/grunt/configs/themes.js</code> file, add your theme to <code>module.exports</code> like following:
+Add your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} to Grunt configuration. To do this, in the <code>dev/tools/grunt/configs/themes.js</code> file, add your theme to <code>module.exports</code> like following:
 <pre>
 {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.exports = {
     ...
@@ -181,11 +181,11 @@ When using Grunt for styles preprocessing, you can enable the CSS source maps di
 
 For each theme, Magento compliles all theme `.less` files into two CSS files: `styles-m.css` and `styles-l.css`. So when you debug a theme, you browser only sees `styles-m.css` and it might be difficult to define which exactly `.css`或`.less` file requires corrections. For example:
 
-![node declaration autocomplete]({{ site.baseurl }}/common/images/fdg/no-map.png){:width="610px"}
+![node declaration autocomplete]({{ site.magentourl }}/common/images/fdg/no-map.png){:width="610px"}
 
 CSS source maps solve this issue. They help to find the `.less` file, where the style is specified. For example:
 
-![node declaration autocomplete]({{ site.baseurl }}/common/images/fdg/with-map.png){:width="610px"}
+![node declaration autocomplete]({{ site.magentourl }}/common/images/fdg/with-map.png){:width="610px"}
 
 CSS source maps are generated automatically when you compile CSS for your theme using the `grunt less: <theme>` command. To use them, you need to enable source maps displaying in your browser.
 

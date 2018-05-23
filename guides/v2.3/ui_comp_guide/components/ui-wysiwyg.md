@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-wysiwyg.md
 ---
 
-The WYSIWYG component is an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for [TinyMCE v4](https://www.tinymce.com/){:target="\_blank"} that integrates an editor instance with the [form component]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html). It expects a complete {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} declaration in the `content` option, which should contain both {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %} and the script responsible for creating the editor's instance.
+The WYSIWYG component is an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for [TinyMCE v4](https://www.tinymce.com/){:target="\_blank"} that integrates an editor instance with the [form component]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html). It expects a complete {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} declaration in the `content` option, which should contain both {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %} and the script responsible for creating the editor's instance.
 
 Magento supports all selector, plugin, and toolbar/menu configuration options supported by the TinyMCE v4 `tinymce.init()` method. However, Magento doesn't validate TinyMCE configuration options or flag invalid values before adding the editor to a page.
 
@@ -534,7 +534,7 @@ define([
         /**
          * Get plugins button.
          */
-        getPluginButtons: function () {
+        getPlugin按钮: function () {
             //return $$('#buttons' + this.id + ' > button.plugin');
         },
 

@@ -658,7 +658,7 @@ Component name must meaningful. It can contain the `primary`, `secondary`, `tert
 
 ### Location
 
-{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}Theme{% endglossarytooltip %} mixins (except extends) should be located in the `source/utilities` directory.
+{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} mixins (except extends) should be located in the `source/utilities` directory.
 
 ### Naming
 

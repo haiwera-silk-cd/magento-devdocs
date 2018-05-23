@@ -34,7 +34,7 @@ Register themes with:
 
      ComponentRegistrar::register(ComponentRegistrar::THEME, '<area>/<vendor>/<theme name>', __DIR__);
 
-where &lt;area> is the functional area of the module (frontend, controller, and so on.), &lt;vendor> is the name of the company providing the theme, and &lt;theme name> is the name of the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+where &lt;area> is the functional area of the module (frontend, controller, and so on.), &lt;vendor> is the name of the company providing the theme, and &lt;theme name> is the name of the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 
 ### Example

@@ -1,8 +1,8 @@
 ---
 group: SampleData
 subgroup: T_SampleData
-title: Install, remove, or update optional sample data modules
-menu_title: Install, remove, or update optional sample data modules
+title: 安装，移除或更新可选的样本数据模块
+menu_title: 安装，移除或更新可选的样本数据模块
 menu_node: parent
 menu_order: 1
 version: 2.0

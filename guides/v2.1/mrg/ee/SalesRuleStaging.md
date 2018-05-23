@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_SalesRuleStaging module
+title: Magento_SalesRuleStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/SalesRuleStaging.md
@@ -10,8 +10,8 @@ The Magento_SalesRuleStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435
 
 ## Implementation details
 
-The Magento_SalesRuleStaging module changes the Cart Price Rules page and the sales rule related database tables to make them compatible with the Magento Staging Framework. 
-The Magento_SalesRuleStaging module enables you to stage the following sales rule attributes:
+The Magento_SalesRuleStaging模块 changes the Cart Price Rules page and the sales rule related database tables to make them compatible with the Magento Staging Framework. 
+The Magento_SalesRuleStaging模块 enables you to stage the following sales rule attributes:
 
 - Rule Name
 - Description
@@ -21,23 +21,23 @@ The Magento_SalesRuleStaging module enables you to stage the following sales rul
 - Condition
 - Action
 
-This module depends on the Magento_SalesRule module and extends its functionality. It changes the database structure of the Magento_SalesRule module and the way in which sales rules are managed.
+This module depends on the Magento_SalesRule模块 and extends its functionality. It changes the database structure of the Magento_SalesRule模块 and the way in which sales rules are managed.
  
 ### Installation details
  
-Do not uninstall the Magento_SalesRuleStaging module, because it makes irreversible changes in the database during installation. Also, the Magento_SalesRule module cannot be disabled.
+Do not uninstall the Magento_SalesRuleStaging模块, because it makes irreversible changes in the database during installation. Also, the Magento_SalesRule模块 cannot be disabled.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_SalesRuleStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_SalesRuleStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_SalesRuleStaging. However, the Magento_SalesRuleStaging module does not provide any specific extension points.
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_SalesRuleStaging. However, the Magento_SalesRuleStaging模块 does not provide any specific extension points.
 
 For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_SalesRuleStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_SalesRuleStaging模块.
 
 ## Additional information
 

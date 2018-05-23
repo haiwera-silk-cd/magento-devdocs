@@ -1,8 +1,8 @@
 ---
 group: jsdg
-title: JavaScript Developer Guide
-landing-page: JavaScript Developer Guide
-menu_title: Introduction
+title: js开发者手册
+landing-page: js开发者手册
+menu_title: 介绍
 menu_order: 1
 version: 2.0
 github_link: javascript-dev-guide/bk-javascript-dev-guide.md
@@ -19,10 +19,10 @@ For information about how JS resources are located and configured, see the <a hr
 Topics of this book describe the following:
 
 - [JavaScript initialization]({{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html): how to initialize JavaScript components and widgets in JavaScript files and `.phtml` templates
-- [Use custom JavaScript]({{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html): how to extend or replace default JavaScript components/widgets.
+- [使用定制脚本]({{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html): how to extend or replace default JavaScript components/widgets.
 - [Locate JavaScript]({{ page.baseurl }}/javascript-dev-guide/javascript/js_debug.html) components: how to define which components (scripts) are used on a particular store page.
-- [Magento jQuery widgets]({{ page.baseurl }}/javascript-dev-guide/widgets/jquery-widgets-about.html): Magento {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} documentation.
-- [Customizing JavaScript illustration]({{ page.baseurl }}/javascript-dev-guide/javascript/js_practice.html): practical illustration of custom widgets related tasks.
+- [Magento jq小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/jquery-widgets-about.html): Magento {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} documentation.
+- [图解如何定制js组件]({{ page.baseurl }}/javascript-dev-guide/javascript/js_practice.html): practical illustration of custom widgets related tasks.
 
 JavaScript automatic testing is described in a separate [JavaScript unit testing]({{ page.baseurl }}/test/js/jasmine.html) topic.
 

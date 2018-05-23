@@ -21,7 +21,7 @@ Magento translations enable you to customize and localize your store for multipl
 
 This topic discusses how to generate:
 
--   Translation dictionaries, which are a convenient way to translate *some* words and phrases, such as those for a custom {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} or {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+-   Translation dictionaries, which are a convenient way to translate *some* words and phrases, such as those for a custom {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} or {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 -   Language packages, which enable you to translate *any or all* words and phrases in the Magento application.
 
 For more information, see <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">Translation</a>.

@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: 01_resource
-title: Installation roadmap (reference)
-menu_title: Installation roadmap (reference)
+title: 一步步安装(参考)
+menu_title: 一步步安装(参考)
 menu_node:
 menu_order: 10
 version: 2.1

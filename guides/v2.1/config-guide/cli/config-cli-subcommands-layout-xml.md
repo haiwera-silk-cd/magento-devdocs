@@ -21,8 +21,8 @@ Use this command to update your {% glossarytooltip 73ab5daa-5857-4039-97df-11269
 
 For more information about layout XML files, see:
 
--   [Layout instructions]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html)
--   [Layout file types]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html)
+-   [布局指令]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html)
+-   [布局文件类型]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html)
 
 ## Convert layout XML files
 命令参数：

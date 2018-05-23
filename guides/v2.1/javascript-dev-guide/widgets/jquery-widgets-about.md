@@ -1,7 +1,7 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Magento jQuery widgets
+title: Magento jq小工具
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -15,27 +15,27 @@ The Magento system uses a {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02
 
 This guide discusses the following widgets:
 <ul>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_accordion.html" target="_blank">Accordion widget</a> </li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_alert.html" target="_blank">Alert widget</a> </li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_calendar.html" target="_blank">Calendar widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_collapsible.html" target="_blank">Collapsible widget</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_accordion.html" target="_blank">手风琴菜单小工具</a> </li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_alert.html" target="_blank">提示弹框小工具</a> </li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_calendar.html" target="_blank">日历小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_collapsible.html" target="_blank">可折叠窗小工具</a></li>
 <li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_confirm.html" target="_blank">Confirm widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_dialog.html" target="_blank">DropdownDialog widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html" target="_blank">Gallery widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_list.html" target="_blank">List widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_loader.html" target="_blank">Loader widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_menu.html" target="_blank">Menu widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html" target="_blank">Modal widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_navigation.html" target="_blank">Navigation widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_prompt.html" target="_blank">Prompt widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_quickSearch.html" target="_blank">QuickSearch widget</a></li>
-<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">Tabs widget</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_dialog.html" target="_blank">下拉弹窗小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html" target="_blank">相册小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_list.html" target="_blank">列表小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_loader.html" target="_blank">加载小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_menu.html" target="_blank">菜单小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html" target="_blank">模态弹窗小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_navigation.html" target="_blank">导航栏小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_prompt.html" target="_blank">问询弹框小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_quickSearch.html" target="_blank">快速搜索小工具</a></li>
+<li><a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">标签页小工具</a></li>
 
 </ul>
 
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Magento 2 supports <a href="http://blog.jqueryui.com/2012/11/jquery-ui-1-9-2/" target="_blank">jQuery UI 1.9.2</a>, {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} options added in later versions might be unavailable.</p>
+  <p>Magento 2 supports <a href="http://blog.jqueryui.com/2012/11/jquery-ui-1-9-2/" target="_blank">jQuery UI 1.9.2</a>, {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} options added in later versions might be unavailable.</p>
 </div>
 
 <div class="bs-callout bs-callout-info" id="info">

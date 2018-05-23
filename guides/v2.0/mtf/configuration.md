@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Functional Testing Framework Configuration
+title: 功能测试框架配置
 version: 2.0
 github_link: mtf/configuration.md
 ---

@@ -29,7 +29,7 @@ Magento DevBox is packaged with the following:
 *	{% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} 7.0.12
 *	MySQL 5.6.34
 
-{% collapsibleh2 Prerequisites %}
+{% collapsibleh2 先决条件 %}
 
 This section discusses prerequisites you must complete before you install the Magento DevBox.
 
@@ -287,7 +287,7 @@ The following DevBox scripts and configuration files are located in the root fol
 
 *   `docker-compose.yml` DevBox configuration file.
 
-    To set static listen ports so you don't have to reconfigure PhpStorm every time you start DevBox, see [Set static ports](#devbox-static-port).
+    To set static listen ports so you don't have to re配置PHPStorm every time you start DevBox, see [Set static ports](#devbox-static-port).
 *   _Windows only_: `m2devbox-unison-sync.bat`, which runs Unison file synchronization. You should not run this script by itself; one of the other scripts starts it automatically.
 *   _Mac OS only_: `m2devbox-debug.sh`, which opens an SSH tunnel to the {% glossarytooltip 57f1b0dc-1341-466d-a685-e0dbf5a3b713 %}Docker{% endglossarytooltip %} container so PhpStorm can connect to it.
 

@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_DownloadableStaging module
+title: Magento_DownloadableStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/DownloadableStaging.md
@@ -10,24 +10,24 @@ The Magento_DownloadableStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1
 
 ## Implementation details
 
-The Magento_DownloadableStaging module changes the Downloadable Product creation page to make them compatible with the Magento Staging Framework. This module extends the Magento_Downloadable module functionality to be used in staging.
+The Magento_DownloadableStaging模块 changes the Downloadable Product creation page to make them compatible with the Magento Staging Framework. This module extends the Magento_Downloadable模块 functionality to be used in staging.
 
-The Magento_DownloadableStaging module adds the "Downloadable information" tab to the Schedule Update form for a product.
+The Magento_DownloadableStaging模块 adds the "Downloadable information" tab to the Schedule Update form for a product.
 
 ### Installation details
 
-The Magento_DownloadableStaging module makes irreversible changes in a database during installation. You cannot uninstall this module.
+The Magento_DownloadableStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_DownloadableStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_DownloadableStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_DownloadableStaging module.
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_DownloadableStaging模块.
 For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_DownloadableStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_DownloadableStaging模块.
 
 ### UI components
 

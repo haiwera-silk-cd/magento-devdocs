@@ -3,7 +3,7 @@ group: config-guide
 subgroup: 01_Introduction
 title: Configuration Guide
 landing-page: Configuration Guide
-menu_title: Introduction
+menu_title: 介绍
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -14,8 +14,8 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="configuration">Configure the Magento application</h2>
-You can configure the Magento application in any of the following ways:
+<h2 id="configuration">配置Magento应用</h2>
+You can 配置Magento应用 in any of the following ways:
 
 *	General configuration
 

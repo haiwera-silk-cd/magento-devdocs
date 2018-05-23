@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 我的Magento有装好吗？
 menu_title: 我的Magento有装好吗？
 menu_node:

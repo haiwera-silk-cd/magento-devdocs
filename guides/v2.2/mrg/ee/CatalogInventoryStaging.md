@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento_CatalogInventoryStaging module
+title: Magento_CatalogInventoryStaging模块
 menu_title: CatalogInventoryStaging
 menu_order: 2
 version: 2.2
@@ -10,21 +10,21 @@ ee_only: true
 github_link: mrg/ee/CatalogInventoryStaging.md
 ---
 
-The Magento_CatalogInventoryStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is a part of the staging functionality in {{site.data.var.ee}}. It extends the Magento_CatalogInventory module functionality, adding the capability to monitor the "Stock Status" field on the Schedule Update form of a product.
+The Magento_CatalogInventoryStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is a part of the staging functionality in {{site.data.var.ee}}. It extends the Magento_CatalogInventory模块 functionality, adding the capability to monitor the "Stock Status" field on the Schedule Update form of a product.
 
 ## Implementation details
 
-The Magento_CatalogInventoryStaging module adds the disabled "Stock Status" field on the Schedule Update form of a product during form rendering.
+The Magento_CatalogInventoryStaging模块 adds the disabled "Stock Status" field on the Schedule Update form of a product during form rendering.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_CatalogInventoryStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_CatalogInventoryStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-You can interact with the Magento_CatalogInventoryStaging module using the Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
+You can interact with the Magento_CatalogInventoryStaging模块 using the Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
 
-[The The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CatalogInventoryStaging module.
+[The The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CatalogInventoryStaging模块.
 
 ## Additional information
 

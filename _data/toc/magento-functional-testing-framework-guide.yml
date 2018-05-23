@@ -67,7 +67,7 @@ pages:
       - label: Best practices
         url: /magento-functional-testing-framework/release-2/best-practices.html
 
-      - label: Troubleshooting
+      - label: 故障排除
         url: /magento-functional-testing-framework/release-2/troubleshooting.html
 
   - label: MFTF release 1
@@ -75,7 +75,7 @@ pages:
     versions: ["2.2"]
     children:
 
-    - label: Getting Started
+    - label: 起步
       url: /magento-functional-testing-framework/release-1/getting-started.html
 
     - label: Cest
@@ -121,7 +121,7 @@ pages:
     - label: Update
       url: /magento-functional-testing-framework/release-1/update.html
 
-    - label: Troubleshooting
+    - label: 故障排除
       url: /magento-functional-testing-framework/release-1/troubleshooting.html
 
   - label: Contribution Guidelines

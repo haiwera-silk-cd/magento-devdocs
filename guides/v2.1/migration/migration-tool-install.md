@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: C_DMTool
-title: Install Data Migration Tool
-menu_title: Install Data Migration Tool
+title: 安装数据迁移工具
+menu_title: 安装数据迁移工具
 menu_node:
 menu_order: 2
 version: 2.1
@@ -12,9 +12,9 @@ functional_areas:
   - Tools
 ---
 
-## Prerequisite: Versions of Magento and Data Migration Tool must match {#data-migrate-prereq}
+## Prerequisite: Versions of Magento and 数据迁移工具 must match {#data-migrate-prereq}
 
-Make sure you are using *the same released version* of both Magento 2 and the Data Migration Tool. For example, for Magento version 2.1.2, you must also use the Data Migration Tool version 2.1.2.
+Make sure you are using *the same released version* of both Magento 2 and the 数据迁移工具. For example, for Magento version 2.1.2, you must also use the 数据迁移工具 version 2.1.2.
 
 ### Check your Magento 2 version {#magento-version}
 
@@ -36,16 +36,16 @@ If you're currently in the `develop` branch, you must change to a <a href="{{ pa
 <div class="bs-callout bs-callout-tip">
 	<p>If you haven't installed the Magento software yet, <a href="{{ page.baseurl }}/install-gde/continue.html">install it now</a>.</p>
 
-	<p>If you're cloning the GitHub repository, make sure you check out a release tag as discussed in <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html">(Contributor) Clone the Magento repository</a>.</p>
+	<p>If you're cloning the GitHub repository, make sure you check out a release tag as discussed in <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html">(贡献者)克隆Magento仓库</a>.</p>
 </div>
 
-### Find released versions of Data Migration Tool {#migration-tool-release-version}
+### Find released versions of 数据迁移工具 {#migration-tool-release-version}
 
-Go to the [Releases](https://github.com/magento/data-migration-tool/releases){:target="_blank"} page of the Data Migration Tool Github repository to find available released versions.
+Go to the [Releases](https://github.com/magento/data-migration-tool/releases){:target="_blank"} page of the 数据迁移工具 Github repository to find available released versions.
 
-## Install Data Migration Tool {#data-migrate-install}
+## 安装数据迁移工具 {#data-migrate-install}
 
-You may install the Data Migration Tool from:
+You may install the 数据迁移工具 from:
 
 * [`repo.magento.com`](#install-repo)
 
@@ -55,7 +55,7 @@ You may install the Data Migration Tool from:
   <p>Before installing, make sure you have:</p>
 	<ul>
 		<li>
-			Completed all tasks mentioned in the <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">Preconditions</a> section
+			Completed all tasks mentioned in the <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">先决条件</a> section
 		</li>
 
 		<li>
@@ -66,7 +66,7 @@ You may install the Data Migration Tool from:
 
 ### Install from `repo.magento.com` {#install-repo}
 
-To install the Data Migration Tool, you must update `composer.json` in the Magento root installation directory to provide the location of the Data Migration Tool package.
+To install the 数据迁移工具, you must update `composer.json` in the Magento root installation directory to provide the location of the 数据迁移工具 package.
 
 1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.
 2.	Change to Magento 2 root directory.
@@ -86,7 +86,7 @@ To install the Data Migration Tool, you must update `composer.json` in the Magen
 
 ### Install from GitHub {#install-github}
 
-If you've cloned Magento 2 from the GitHub repository, follow the steps below to install the Data Migration Tool.
+If you've cloned Magento 2 from the GitHub repository, follow the steps below to install the 数据迁移工具.
 
 1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.
 2.	Change to Magento 2 root directory.
@@ -102,17 +102,17 @@ If you've cloned Magento 2 from the GitHub repository, follow the steps below to
 		composer config repositories.data-migration-tool git https://github.com/magento/data-migration-tool
 		composer require magento/data-migration-tool:2.1.2
 
-### Check version of installed Data Migration Tool {#migration-tool-install-version}
+### Check version of installed 数据迁移工具 {#migration-tool-install-version}
 
-1. Change to your Data Migration Tool directory: `<vendor>/magento/data-migration-tool`.
+1. Change to your 数据迁移工具 directory: `<vendor>/magento/data-migration-tool`.
 
 2. Open [`composer.json`][composer-json] in a text editor.
 
-3. The `version` entry in that file is the version of the Data Migration Tool.
+3. The `version` entry in that file is the version of the 数据迁移工具.
 
 ## Related topics
 
-* <a href="{{ page.baseurl }}/migration/migration-tool-configure.html">Configure migration</a>
-* <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">Preconditions</a>
+* <a href="{{ page.baseurl }}/migration/migration-tool-configure.html">配置迁移</a>
+* <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">先决条件</a>
 
 [composer-json]: https://github.com/magento/data-migration-tool/blob/master/composer.json

@@ -14,7 +14,7 @@ functional_areas:
 ## Installation
 *	<a href="{{ page.baseurl }}/install-gde/install-quick-ref.html">Installation quick reference</a>
 *	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">Command line installation</a>
-*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">Setup Wizard installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">网页向导安装</a>
 *	<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade (post-installation)</a>
 
 ## Configuration

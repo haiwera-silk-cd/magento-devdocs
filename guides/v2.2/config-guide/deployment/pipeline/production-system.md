@@ -28,7 +28,7 @@ You can have one production system. All of the following must be true:
 	*	`pub/static` directory (and subdirectories)
 
 *	Magento 2.2 or later must be installed and set for [生产模式]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#production-mode)
-*	It has Magento file system ownership and permissions set as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
+*	It has Magento文件系统所有者和权限 set as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
 
 ## Set up a production machine
 To set up a production machine:
@@ -92,7 +92,7 @@ To set sensitive values:
 
 	The setting is displayed in the Admin and cannot be edited. The following figure shows an example.
 
-	![Sensitive setting in Admin]({{ site.baseurl }}/common/images/config_sensitive-set.png)
+	![Sensitive setting in Admin]({{ site.magentourl }}/common/images/config_sensitive-set.png)
 
 #### 相关主题
 *	[`magento deploy:mode:set` command]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html)

@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Reporting with the Functional Testing Framework
+title: 功能测试框架的测试报告
 version: 2.1
 github_link: mtf/features/reporting.md
 ---

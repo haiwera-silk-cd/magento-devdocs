@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 05_Command-line installation
-title: 安装Magento using the command line
-menu_title: 安装Magento using the command line
+title: 使用命令行安装Magento
+menu_title: 使用命令行安装Magento
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -21,7 +21,7 @@ functional_areas:
 </div>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux and iptables</a>.</p>
+  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux和iptables</a>.</p>
 </div>
   
 <h2 id="new-cli-intro">Introducing the Magento command-line interface (CLI)</h2>
@@ -33,7 +33,7 @@ This topic discusses installing the Magento software using the CLI. For informat
 {% include install/before-you-begin-cli.html %}
 
 <div class="bs-callout bs-callout-tip">
-  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux and iptables</a>.</p>
+  <p>If you chose to enable SELinux, see <a href="{{ page.baseurl }}/install-gde/prereq/security.html">SELinux和iptables</a>.</p>
 </div>
 
 

@@ -1,40 +1,40 @@
 ---
 group: pattern
 subgroup: Controls
-title: Admin Design Pattern Library
-menu_title: Expandable Sections
+title: 管理面板用到的设计模式和库
+menu_title: 可收缩区块
 menu_order: 3
 menu_node:
 version: 2.1
 github_link: pattern-library/controls/Expandable_Sections/expand-collapse.md
 redirect_from: /guides/v1.0/pattern-library/controls/Expandable_Sections/expand-collapse.html
 ---
-<h2> Expandable Sections </h2>
+<h2> 可收缩区块 </h2>
 _(AKA Expand-Collapse, Collapsible panels)_
 
 <h3> Contents </h3>
 
-* <a href="#overview">Overview</a>
+* <a href="#overview">概述</a>
 * <a href="#behavior">Appearance and Behavior</a>
 * <a href="#function">Functional Behavior</a>
 * <a href="#variations">Variations</a>
 * <a href="#assets">Assets</a>
 
 
-<h3 id="overview">Overview</h3>
+<h3 id="overview">概述</h3>
 
-Expandable Sections are expandable content areas which are useful in cases where a lot of information must be accommodated in limited space thereby reducing clutter and allowing to focus on primary task.  Typically the information to be accomodated can be separated into various sections and/or sub-sections, or topics.
+可收缩区块 are expandable content areas which are useful in cases where a lot of information must be accommodated in limited space thereby reducing clutter and allowing to focus on primary task.  Typically the information to be accomodated can be separated into various sections and/or sub-sections, or topics.
 
 <img src="img/example_general.png">
 
-**Note:** Expandable Sections should not be confused with the 'Progressive Disclosure checkbox' control.
+**Note:** 可收缩区块 should not be confused with the 'Progressive Disclosure checkbox' control.
 
 
 <h3 id="behavior">Appearance and Behavior</h3>
-Required fields should not be located within a collapsed section as this increases the chance of error for the user. If a field within a collapsed section is _made a required field_ based on a User interaction, that section should be automatically expanded to reveal this requirement to the user. As a best practice, the first Expandable Section should be expanded by default. For pages with several Expandable Sections it is recommended to locate all required fields in a Section that cannot be collapsed above the expandable sections.
+Required fields should not be located within a collapsed section as this increases the chance of error for the user. If a field within a collapsed section is _made a required field_ based on a User interaction, that section should be automatically expanded to reveal this requirement to the user. As a best practice, the first Expandable Section should be expanded by default. For pages with several 可收缩区块 it is recommended to locate all required fields in a Section that cannot be collapsed above the expandable sections.
 
 **Position and Dimensions**
-* Expandable Sections can exist with or without a left side bar.
+* 可收缩区块 can exist with or without a left side bar.
 * Level 1 expandable section has 24px top padding and 30px bottom padding of the section title.
 * Level 2, 3 and 4 has 18px top and bottom padding of the section title. Each expandable sub-section is indented by 40px.<sup>_*_</sup>
 <img src="img/specs.png">
@@ -54,7 +54,7 @@ _<sup>*</sup> The current design proposal accommodates 4 levels of nested expand
 * The Section Header title font size is 17px Semibold.
 
 <h3 id="function">Functional Behavior</h3>
-* Expandable Sections should expand to become visible when the heading or toggle arrow is clicked/tapped.
+* 可收缩区块 should expand to become visible when the heading or toggle arrow is clicked/tapped.
 * Several expandable sections can be kept open at the same time.
 * When a page contains several expandable sections, all sections remain collapsed by default.
 ..* Once the user expands / collapsed few panels, the system remembers the panels states and on a return visit the same states are displayed.

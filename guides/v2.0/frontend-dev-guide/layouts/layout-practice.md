@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Customizing layout illustration
-menu_title: Customizing layout illustration
+title: 定制布局图示
+menu_title: 定制布局图示
 menu_order: 7
 version: 2.0
 github_link: frontend-dev-guide/layouts/layout-practice.md
@@ -23,7 +23,7 @@ In their Orange theme, OrangeCo wants to transform the header links block to a d
 
 To do this, they need to wrap the list of header links with a container and add a greeting with a drop-down arrow before the list. 
 
-The Orange {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} [inherits]({{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html) from Blank, so by default the rendered header links {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %} in Orange looks like following:
+The Orange {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} [inherits]({{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html) from Blank, so by default the rendered header links {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %} in Orange looks like following:
 
 <div style="border: 1px solid #ABABAB">
 <img src="{{ site.baseurl }}/common/images/layout_code_before1.png">
@@ -37,7 +37,7 @@ The markup, that is needed for a drop-down:
 
 <h4>Step 1: Define the blocks</h4>
 
-OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">Locate templates, layouts, and styles</a> they find out that the blocks responsible for displaying the header links are defined in `<Magento_Customer_module_dir>/view/frontend/layout/default.xml`:
+OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a> they find out that the blocks responsible for displaying the header links are defined in `<Magento_Customer_module_dir>/view/frontend/layout/default.xml`:
 
 {%highlight xml%}
 ...

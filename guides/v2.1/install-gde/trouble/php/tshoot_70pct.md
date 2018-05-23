@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Installation stops at about 70%
-menu_title: Installation stops at about 70%
+title: 安装在70%左右卡住
+menu_title: 安装在70%左右卡住
 menu_node:
 menu_order: 2
 version: 2.1

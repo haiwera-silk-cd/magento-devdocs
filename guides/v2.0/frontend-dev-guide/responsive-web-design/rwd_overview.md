@@ -1,7 +1,7 @@
 ---
 group: fedg
 subgroup: E_rwd
-title: Overview of responsive web design in Magento
+title: Magento响应式页面设计概述
 menu_title: How to Make Your Theme Responsive and Mobile
 menu_order: 1
 menu_node: parent
@@ -17,7 +17,7 @@ Responsive web design (RWD, also referred as <i>responsive design</i>) crafts we
 The out of the box Magento Blank and Luma themes (Luma <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherits</a> from Blank) use the mobile first RWD approach. It is ensured mostly by means of {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} and {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %}.
 
 
-The following image illustrates how the same page built on the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} looks on mobile, tablet and desktop devices.
+The following image illustrates how the same page built on the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} looks on mobile, tablet and desktop devices.
 
 <img src="{{ site.baseurl }}/common/images/css_responsive1.jpg">
 
@@ -31,7 +31,7 @@ The articles in this chapter describe the particular approaches used in the Blan
 <a href="{{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_css.html" target="_blank">CSS in Magento responsive design</a>
 </li>
 <li>
-<a href="{{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_js.html" target="_blank">JavaScript in Magento responsive design</a>
+<a href="{{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_js.html" target="_blank">Magento响应式设计中的js</a>
 </li>
 <li>
 <a href="{{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_practice.html" target="_blank">Customizing RWD: illustration</a>

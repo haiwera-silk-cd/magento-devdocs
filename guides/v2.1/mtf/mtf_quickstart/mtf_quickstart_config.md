@@ -1,11 +1,11 @@
 ---
 group: mtf-guide
-title: Quick start. Adjust configuration
+title: 快速开始，调整配置
 version: 2.1
 github_link: mtf/mtf_quickstart/mtf_quickstart_config.md
 ---
 
-### Edit `phpunit.xml` to configure PHPUnit {#mtf_quickstart_config_phpunitxml}
+### Edit `phpunit.xml` to 配置PHPUnit {#mtf_quickstart_config_phpunitxml}
 
 Find `phpunit.xml` in `<magento2_root_dir>/dev/tests/functional`, and open it in editor.
 
@@ -23,7 +23,7 @@ Example:
 
 #### Set URL for Magento Admin URL under test {#mtf_quickstart_config_phpunitxml_backend}
 
-For `name="app_backend_url"` set `value` that is your actual URL for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} URL under test.
+For `name="app_backend_url"` set `value` that is your actual URL for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} URL under test.
 
 Example:
 `<env name="app_backend_url" value="http://example.com/magento2/admin/"/>`

@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: T_Developer
-title: Update installation dependencies
-menu_title: Update installation dependencies
+title: 更新安装依赖
+menu_title: 更新安装依赖
 menu_node:
 menu_order: 10
 version: 2.0
@@ -33,7 +33,7 @@ We now use <a href="http://getcomposer.org">Composer</a> to resolve dependencies
 For you to be able to run the Magento application, make sure you perform all tasks as a user with privileges to write to the web server docroot. One way to do this is to log in as or switch to the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">>切换到Magento文件所有者身份</a>.
 
 <h2 id="install-composer-install">Run <code>composer install</code> to update dependencies</h2>
-Update installation dependencies as follows:
+更新安装依赖 as follows:
 
 1.	Log in to your Magento server as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to that user</a>.
 2.	Change to the Magento installation directory and run `composer install`. Examples:

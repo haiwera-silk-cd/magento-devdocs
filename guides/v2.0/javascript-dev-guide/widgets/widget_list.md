@@ -1,27 +1,27 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: List widget
+title: 列表小工具
 menu_order: 7 
-menu_title: List widget
+menu_title: 列表小工具
 version: 2.0
 github_link: javascript-dev-guide/widgets/widget_list.md
 redirect_from:
   - guides/v2.0/frontend-dev-guide/javascript/widget_list.html
   - guides/v1.0/frontend-dev-guide/javascript/widget_list.html
 ---
-<h2>Overview</h2>
+<h2>概述</h2>
 
 Provides a way to move items, typically a list, from one content section to another.
 The content can be moved using buttons and links. 
 
-The list {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} source file is <a href="{{ site.mage2000url }}lib/web/mage/list.js" target="_blank">lib/web/mage/list.js</a>.
+The list {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source file is <a href="{{ site.mage2000url }}lib/web/mage/list.js" target="_blank">lib/web/mage/list.js</a>.
 
-<h2 id="quicksearch_init">Initialize the list widget</h2>
+<h2 id="quicksearch_init">Initialize the 列表小工具</h2>
 For information about how to initialize a widget in a JS component or `.phtml` template, see the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Initialize JavaScript</a> topic.
 
 <h2 id="list_options">Options</h2>
-The list widget has the following options:
+The 列表小工具 has the following options:
 <ul>
 <li><a href="#l_addButton">addButton</a></li>
 <li><a href="#l_destinationSelector">destinationSelector</a></li>
@@ -110,7 +110,7 @@ Element holding the template.
 
 <h2 id="list_methods">Methods</h2>
 
-The list widget has the following methods:
+The 列表小工具 has the following methods:
 <ul>
 <li><a href="#list_addItem">addItem</a></li>
 <li><a href="#list_checkLimit">checkLimit()</a></li>

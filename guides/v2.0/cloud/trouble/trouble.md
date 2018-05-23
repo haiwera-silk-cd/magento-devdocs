@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Troubleshooting
-menu_title: Troubleshooting
+title: 故障排除
+menu_title: 故障排除
 menu_order: 1
 menu_node: parent
 version: 2.0

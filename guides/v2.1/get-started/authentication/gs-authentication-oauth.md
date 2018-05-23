@@ -44,7 +44,7 @@ The following diagram shows the OAuth authentication process. Each step is descr
 
 ## Activate an integration {#activate}
 
-The integration must be configured from the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} (**System > Extensions > Integrations**).  The configuration includes a callback URL and an identity link URL.  The callback URL specifies where OAuth credentials can be sent when using OAuth for token exchange. The identity link points to the login page of the third-party application that is integrating with Magento.
+The integration must be configured from the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} (**System > Extensions > Integrations**).  The configuration includes a callback URL and an identity link URL.  The callback URL specifies where OAuth credentials can be sent when using OAuth for token exchange. The identity link points to the login page of the third-party application that is integrating with Magento.
 
 A merchant can choose to select **Save and Activate** when the integration is created. Alternatively, the merchant can click on **Activate** against a previously saved integration from the Integration grid.
 

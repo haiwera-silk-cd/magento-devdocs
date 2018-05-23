@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: RabbitMQ
 menu_title: RabbitMQ (Magento Commerce only)
 menu_order: 50
@@ -120,11 +120,11 @@ where:
 After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the message queue consumers. See [Configure message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for details.
 
 #### 相关主题
-*	[Installing optional software]({{ page.baseurl }}/install-gde/prereq/optional.html)
+*	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
 *	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
 *	[Message queue overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
 *	[Manage message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)

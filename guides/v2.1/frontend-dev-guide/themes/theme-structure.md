@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Magento theme structure
-menu_title: Magento theme structure
+title: Magento主题的结构
+menu_title: Magento主题的结构
 menu_order: 60
 version: 2.1
 github_link: frontend-dev-guide/themes/theme-structure.md
@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 <h2 id="theme-structure-intro">What's in this topic</h2>
-A <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-general.html#theme-gen-overview" target="_blank">design theme</a> is an important part of the Magento application. This topic describes the file structure of a Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+A <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-general.html#theme-gen-overview" target="_blank">design theme</a> is an important part of the Magento application. This topic describes the file structure of a Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 <h2 id="theme-structure-loc">Magento theme location</h2>
 {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}Storefront{% endglossarytooltip %} themes are conventionally located under `app/design/frontend/<Vendor>/`. Though technically they can reside in other directories. For example Magento built-in themes can be located under `vendor/magento/theme-frontend-<theme_code>` when a Magento instance is deployed from the {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} repository.
@@ -174,7 +174,7 @@ Let's have a closer look at each particular sub-directory.
       </td>
       <td colspan="1">This directory contains theme
         <code>less</code>
-         configuration files that invoke mixins for global elements from the Magento UI library, and
+         configuration files that invoke mixins for global elements from the Magento UI库, and
         <code>theme.less</code>
          file which overrides the default variables values. <!--ADDLINK-->
       </td>

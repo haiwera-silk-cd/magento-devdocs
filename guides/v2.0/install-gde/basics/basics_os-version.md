@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: What operating system is my server running?
-menu_title: What operating system is my server running?
+subgroup: 起步
+title: 我的服务器运行的是什么系统?
+menu_title: 我的服务器运行的是什么系统?
 menu_node:
 menu_order: 103
 level3_menu_node: level3child
@@ -19,7 +19,7 @@ functional_areas:
  
 How can you tell what operating system and version your Magento server runs? 
 
-**Prerequisites**: You must access the server using a command prompt (an application that enables you to enter commands directly). 
+**先决条件**: You must access the server using a command prompt (an application that enables you to enter commands directly). 
 
 If you can log in directly to the machine, the application is usually called Terminal. 
 

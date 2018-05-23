@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: YY_Help
-title: Get help with your installation
-menu_title: Get help with your installation
+title: 获取更多安装帮助
+menu_title: 获取更多安装帮助
 menu_order: 1
 menu_node: parent
 version: 2.1

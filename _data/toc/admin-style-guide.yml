@@ -3,7 +3,7 @@ pages:
     - label: Admin Style Guide
       children:
 
-            - label: Introduction
+            - label: 介绍
               url: /design-styleguide/bk-styleguide.html
 
     - label: Design
@@ -30,7 +30,7 @@ pages:
             - label: Errors and Messages Writing
               url: /design-styleguide/errors-and-messages/errors-and-messages.html
 
-            - label: Buttons and Links Usage
+            - label: 按钮 and Links Usage
               url: /design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html
 
             - label: Capitalization

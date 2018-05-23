@@ -1,16 +1,16 @@
 <div markdown="1">
 
-## Overview of ownership and permissions {#umask-over}
+## 所有者和权限概述 {#umask-over}
 Even in a development environment, you want your Magento installation to be secure. To help prevent issues related to unauthorized people or processes doing potentially harmful things to your system, we recommend some guidelines related to file system ownership and permissions.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>If you're using an Magento version 2.0.5 or earlier, see <a href="{{ page.baseurl }}/install-gde/install/legacy-file-system-perms.html">Appendix&mdash;Magento file system ownership and appendix (legacy)</a> instead of this topic.</p>
+  <p>If you're using an Magento version 2.0.5 or earlier, see <a href="{{ page.baseurl }}/install-gde/install/legacy-file-system-perms.html">附录&mdash;Magento文件系统所有者及其附录(遗留)</a> instead of this topic.</p>
   <p>In version 2.0.6 and later, Magento does not explicitly set file or directory permissions.</p>
 </div>
 
 This topic provides some basic information about our ownership and permissions guidelines. For additional information, see:
 
-*	[Set pre-installation ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html)
+*	[安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html)
 *	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
 ### Magento file system owner
@@ -40,7 +40,7 @@ The Magento file system owner is any of the following:
 
 		For private hosting, we recommend you use the default `002` [umask](#restrict); otherwise, the group won't be able to write to the Magento file system.
 
-Before you install the Magento software, see [Set pre-installation ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
+Before you install the Magento software, see [安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
 
 ### Restrict access with a umask {#restrict}
 To tighten security, particularly in production on a shared hosting system, we provide a flexible to means to restrict access using a umask. A umask&mdash;also referred to as a *file system creation mask*&mdash;is a set of bits, each of which restricts how its corresponding permission is set for newly created files.

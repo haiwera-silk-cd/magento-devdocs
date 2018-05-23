@@ -1,8 +1,8 @@
 ---
 group:  migration
 subgroup: C_DMTool
-title: Configure migration
-menu_title: Configure migration
+title: 配置迁移
+menu_title: 配置迁移
 menu_node:
 menu_order: 4
 version: 2.0
@@ -10,7 +10,7 @@ github_link: migration/migration-tool-configure.md
 redirect_from: /guides/v1.0/migration/migration-tool-configure.html
 ---
 
-## Overview of Data Migration Tool configuration {#migration-configure-over}
+## Overview of 数据迁移工具 configuration {#migration-configure-over}
 
 After you install the data migration tool, the following directory contains mapping and configuration files:
 
@@ -104,7 +104,7 @@ For example:
 
 ## Work with configuration and mapping files {#migration-config}
 
-The Data Migration Tool uses *mapping files* to enable you to perform custom database mapping between your Magento 1 and Magento 2 databases, including:
+The 数据迁移工具 uses *mapping files* to enable you to perform custom database mapping between your Magento 1 and Magento 2 databases, including:
 
 *	Changing table names
 
@@ -212,7 +212,7 @@ Even though you will be working with `map.xml.dist` file most of the time, the f
 </tbody>
 </table>
 
-You can refer to <a href="{{ page.baseurl }}/migration/migration-tool-internal-spec.html"> Data Migration Tool Technical Specification</a> for more details.
+You can refer to <a href="{{ page.baseurl }}/migration/migration-tool-internal-spec.html"> 数据迁移工具技术规范</a> for more details.
 
 ## Next step
 <a href="{{ page.baseurl }}/migration/migration-migrate-settings.html">Migrate using data migration tool</a>

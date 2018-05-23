@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 安装流程图
 menu_title: 安装流程图
 menu_order: 2

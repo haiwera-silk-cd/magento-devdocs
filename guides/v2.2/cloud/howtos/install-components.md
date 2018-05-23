@@ -99,7 +99,7 @@ To manage your extensions, you can enable and disable or change settings per env
 ### Enable and disable extensions {#enable-disable}
 To enable or disable extensions, you must begin those changes on your local in a branch. You should never enable or disable extensions directly on your environments. These instructions assume you have `config.php` in your Git branch and implementation. If you do not use [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) or `config.php`, we strongly recommend you do.
 
-Trying to enable and disable extensions not following this method can lead to permissions and other issues.
+Trying to enable and disable extensions not following this method can lead to permissions and 其它问题.
 
 1.  [Work in a branch](#getstarted) to update `config.php`.
 1.  In a terminal, access your local development environment.

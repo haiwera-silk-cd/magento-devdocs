@@ -11,7 +11,7 @@ Magento uses cron for two sets of tasks, and for each, cron can run with a diffe
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 *	To avoid issues during installation and upgrade, we strongly recommend you apply the same PHP settings to both the PHP command-line configuration and to the PHP web server plug-in's configuration. 
-	For more information, see [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+	For more information, see [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 *	In a multi-node system, crontab can run on only one node. 
 
 	This applies to you only if you set up more than one webnode for reasons related to performance or scalability.

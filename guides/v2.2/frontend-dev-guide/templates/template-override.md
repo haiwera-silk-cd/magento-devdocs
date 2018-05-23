@@ -53,7 +53,7 @@ For template files with the same name, the following override rules apply:
 To change the output defined by an existing template, override the template in your custom theme.
 This concept is the basis of template customization in Magento.
 
-See [Theme inheritance]
+See [主题的继承关系]
 
 ## Root template {#root}
 
@@ -66,7 +66,7 @@ Unlike other templates, `root.phtml` contains the `doctype` specification and co
 
 Arguments values set in a layout file are accessed in templates using the `get{ArgumentName}()` and `has{ArgumentName}()` methods.
 
-See [Layout instructions]
+See [布局指令]
 
 ## Using PHP short tags in template PHTML files {#short-tags}
 
@@ -87,5 +87,5 @@ is the same as writing
 
 [`app/code/Magento/Catalog/view/frontend/layout/catalog_category_view.xml`]: {{ site.mage2000url }}app/code/Magento/Catalog/view/frontend/layout/catalog_category_view.xml
 [Child theme]: {{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html
-[Theme inheritance]: {{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-templates
-[Layout instructions]: {{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#getter
+[主题的继承关系]: {{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-templates
+[布局指令]: {{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#getter

@@ -1,9 +1,9 @@
 ---
 group: install2
-subgroup: Getting Started
-title: How to get the Magento software
-landing-page: Installation Guide
-menu_title: How to get the Magento software
+subgroup: 起步
+title: 如何获取Magento
+landing-page: 安装向导
+menu_title: 如何获取Magento
 menu_node:
 menu_order: 1
 version: 2.0
@@ -27,7 +27,7 @@ We have some resources here to help get you started using the eCommerce platform
 
 It’s what we do.
 
-## How to get the Magento software {#install-get-software}
+## 如何获取Magento {#install-get-software}
 
 Consult the following table for how to get started installing {{site.data.var.ce}} or {{site.data.var.ee}}.
 

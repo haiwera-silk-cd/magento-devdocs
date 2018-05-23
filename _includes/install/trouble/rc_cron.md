@@ -37,9 +37,9 @@ To verify whether or not your crontab is set up:
 To verify your cron jobs are set up properly, see [Set up cron jobs]({{ page.baseurl }}/install-gde/install/post-install-config.html#post-install-cron).
 
 ### Solution: cron running from incorrect PHP binary
-If your cron job uses a PHP binary different from the web server plug-in, PHP settings errors might display. To resolve the issue, set identical PHP settings for both the PHP command line and the PHP web server plug-in.
+If your cron job uses a PHP binary different from the web server plug-in, PHP配置错误 might display. To resolve the issue, set identical PHP settings for both the PHP command line and the PHP web server plug-in.
 
-For more information about PHP settings, see [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+For more information about PHP settings, see [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 ### Solution: cron running with errors
 Try running each command manually because the command might display helpful error messages. See [Set up cron jobs]({{ page.baseurl }}/install-gde/install/post-install-config.html#post-install-cron).

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 02_access
-title: Cannot write to the generated/code directory
-menu_title: Cannot write to the generated/code directory
+title: generated/code目录不可写
+menu_title: generated/code目录不可写
 menu_node:
 menu_order: 9
 version: 2.2
@@ -42,5 +42,5 @@ Magento recommends different ownership and permissions settings based on if you 
 Typically, you have one user on shared hosting and two users on private hosting (or if you have your own server). There could be exceptions to this, however.
  
 ### Suggestion
-Review our recommendations in [Overview of ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+Review our recommendations in [所有者和权限概述]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 

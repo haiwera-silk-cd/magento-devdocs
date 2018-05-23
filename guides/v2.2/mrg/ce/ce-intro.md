@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 10_Community Edition
-title: Magento Open Source modules
+title: Magento开源的模块
 menu_title: Open Source
 menu_order: 1
 version: 2.2

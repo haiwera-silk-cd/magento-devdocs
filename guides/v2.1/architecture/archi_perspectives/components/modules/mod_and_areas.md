@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_and_areas.html
 ---
 
-## Overview {#m2arch-module-areas-overview}
+## 概述{#m2arch-module-areas-overview}
 
 An *area* is a logical component that organizes code for optimized request processing. Magento uses areas to streamline web service calls by loading only the dependent code for the specified area.  Each of the default areas defined by Magento can contain completely different code on how to process URLs and requests.
 

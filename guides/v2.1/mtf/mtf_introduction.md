@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Introduction to the Functional Testing Framework
+title: 功能测试框架介绍
 landing-page: Functional Testing Framework Guide
 version: 2.1
 github_link: mtf/mtf_introduction.md

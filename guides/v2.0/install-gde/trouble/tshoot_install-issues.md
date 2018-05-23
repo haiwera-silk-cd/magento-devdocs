@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 20_other
-title: Known issues that affect installation
-menu_title: Known issues that affect installation
+title: 已知的影响安装的问题
+menu_title: 已知的影响安装的问题
 menu_node:
 menu_order: 500
 version: 2.0
@@ -16,7 +16,7 @@ functional_areas:
 If you use the optional {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} `xdebug`, you can encounter exceptions:
 
 *   During installation 
-*   Accessing either the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} after a successful installation 
+*   Accessing either the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} after a successful installation 
 
 Sample exception:
 

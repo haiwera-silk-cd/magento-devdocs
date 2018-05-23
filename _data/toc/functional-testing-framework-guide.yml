@@ -1,6 +1,6 @@
 label: Functional Testing Framework Guide
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /mtf/mtf_introduction.html
 
     - label: Installation
@@ -42,7 +42,7 @@ pages:
       url: /mtf/features.html
       children:
 
-        - label: Isolation management
+        - label: 隔离管理
           url: /mtf/features/isolation.html
 
         - label: Modularity
@@ -100,7 +100,7 @@ pages:
     - label: Update
       url: /mtf/mtf_update.html
 
-    - label: Troubleshooting
+    - label: 故障排除
       url: /mtf/troubleshooting.html
 
     - label: Changelog

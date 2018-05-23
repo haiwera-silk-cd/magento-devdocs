@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 20_other
-title: Cannot run 'composer install'
-menu_title: Cannot run 'composer install'
+title: 无法执行'composer install'
+menu_title: 无法执行'composer install'
 menu_node:
 menu_order: 550
 version: 2.1
@@ -21,5 +21,5 @@ Change to the directory in which you installed {% glossarytooltip d85e2d0a-221f-
 
 `mv composer.phar /usr/local/bin/composer`
 
-If you have issues with authenticating with the Magento 2 GitHub repository, see <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">Get your authentication keys</a>.
+If you have issues with authenticating with the Magento 2 GitHub repository, see <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">获取你的认证密钥</a>.
 

@@ -9,9 +9,9 @@ In a command prompt, enter any of the following commands:
 
 If command help displays, Composer is already installed.
 
-If an error displays, use the following steps to install Composer.
+If an error displays, use the following steps to 安装Composer.
 
-To install Composer:
+To 安装Composer:
 
 1.	Change to or create an empty directory on your Magento server.
 

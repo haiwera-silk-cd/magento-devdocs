@@ -89,4 +89,4 @@ To set file system permissions before upgrade:
 			find var -type d -exec chmod g+ws {} \;
 			chown -R :apache .
 
-For additional details about file ownership and permissions, see [Set pre-installation ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
+For additional details about file ownership and permissions, see [安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).

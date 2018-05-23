@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: D_Migrate using the data migration tool
-title: Migrate settings
-menu_title: Migrate settings
+title: 迁移设置
+menu_title: 迁移设置
 menu_node:
 menu_order: 1
 version: 2.0
@@ -72,4 +72,4 @@ For more details, see the [Settings migration mode]({{ page.baseurl }}/migration
 
 ## Next migration step
 
-* <a href="{{ page.baseurl }}/migration/migration-migrate-data.html">Migrate data</a>
+* <a href="{{ page.baseurl }}/migration/migration-migrate-data.html">迁移数据</a>

@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: Magento服务器须要运行哪些软件?
 menu_title: Magento服务器须要运行哪些软件?
 menu_node:

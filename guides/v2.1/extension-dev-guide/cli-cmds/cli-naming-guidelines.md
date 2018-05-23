@@ -79,7 +79,7 @@ where:
 
 `vendor` is a vendor argument
 
-`themename` is a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} name argument
+`themename` is a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} name argument
 
 Use arguments when you need required data from the user. We recommend as few arguments as possible (no more then three) so the user will not confuse their order.
 

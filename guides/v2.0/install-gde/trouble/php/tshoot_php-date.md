@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_php
-title: During installation, PHP date warning
-menu_title: During installation, PHP date warning
+title: 安装期间出现date警告
+menu_title: 安装期间出现date警告
 menu_node:
 menu_order: 360
 version: 2.0

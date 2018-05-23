@@ -1,8 +1,8 @@
 ---
 group: install_wiz
 subgroup: Wizard
-title: Step 6. Install
-menu_title: Step 6. Install
+title: 步骤 6. 安装
+menu_title: 步骤 6. 安装
 menu_node:
 menu_order: 10
 version: 2.1

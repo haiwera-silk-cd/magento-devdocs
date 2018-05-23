@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: During installation, exception SessionHandler::read()
-menu_title: During installation, exception SessionHandler::read()
+title: 安装期间SessionHandler::read()出现异常
+menu_title: 安装期间SessionHandler::read()出现异常
 menu_node:
 menu_order: 26
 version: 2.1

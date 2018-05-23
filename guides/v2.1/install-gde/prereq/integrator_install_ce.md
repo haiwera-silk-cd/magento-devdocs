@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: S_Integrator
-title: Get the Magento Open Source metapackage
-menu_title: Get the Magento Open Source metapackage
+title: 获取Magento开源的工程包
+menu_title: 获取Magento开源的工程包
 menu_order: 3
 menu_node:
 version: 2.1
@@ -15,8 +15,8 @@ functional_areas:
 
 To get the {{site.data.var.ce}} metapackage:
 
-1.	See [(Integrator) Integrator installation]({{ page.baseurl }}/install-gde/prereq/integrator_install.html) first.
-1.	If you haven't done so already, <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">get your authentication keys</a>.
+1.	See [(集成工程师)集成安装]({{ page.baseurl }}/install-gde/prereq/integrator_install.html) first.
+1.	If you haven't done so already, <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">获取你的认证密钥</a>.
 1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>.
 2.	Change to the web server docroot directory, or to a directory you've configured as a virtual host docroot.
 3.	Enter the following command:

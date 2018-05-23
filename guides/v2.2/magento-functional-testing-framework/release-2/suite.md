@@ -159,7 +159,7 @@ This suite includes all tests that contain the `<group value="WYSIWYG"/>` annota
 
 This example declares a suite with the name `Cache`.
 
-Preconditions:
+先决条件:
 1. It disables the Magento instance cache entirely before running the included tests.
 2. After the testing, it re-enables the cache.
 

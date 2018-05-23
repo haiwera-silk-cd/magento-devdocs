@@ -36,7 +36,7 @@ The {{site.data.var.b2b}} extension is only available for {{site.data.var.ee}} v
 After completing the installation, you must follow the [post-installation steps](#configure-b2b).
 </div>
 
-## Post-installation {#configure-b2b}
+## 安装完成之后 {#configure-b2b}
 After installing the {{site.data.var.b2b}} extension, follow these instructions to launch {{site.data.var.b2b}}.
 
 ### Start message consumers
@@ -99,7 +99,7 @@ If you enable the **Shared Catalog** module, you must also enable the **Company*
 
 2.  Select **Yes** from the drop-down menus to enable B2B features:
 
-    ![Enable B2B features]({{ site.baseurl }}/common/images/enable_b2b_features.png)
+    ![Enable B2B features]({{ site.magentourl }}/common/images/enable_b2b_features.png)
 
 3.  Click **Save Config**.
 

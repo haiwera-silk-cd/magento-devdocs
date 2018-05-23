@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_ConfigurableRequisitionList module
+title: Magento_ConfigurableRequisitionList模块
 menu_title: ConfigurableRequisitionList
 menu_order: 90
 version: 2.2

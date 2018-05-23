@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Layout instructions
-menu_title: Layout instructions
+title: 布局指令
+menu_title: 布局指令
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/layouts/xml-instructions.md
@@ -24,7 +24,7 @@ Use {% glossarytooltip bcbc9bf8-3251-4b3c-a802-07417770af3b %}layout instruction
 *  remove a page element
 <p></p>
 
-The basic set of instructions is the same for all types of layout files. This article describes these basic instructions; for details about how they are used in particular layout file type, please refer to the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html" target="_blank">Layout file types</a> article.
+The basic set of instructions is the same for all types of layout files. This article describes these basic instructions; for details about how they are used in particular layout file type, please refer to the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html" target="_blank">布局文件类型</a> article.
 
 
 <h2 id="fedg_layout_xml-instruc_ex">Common layout instructions</h2>

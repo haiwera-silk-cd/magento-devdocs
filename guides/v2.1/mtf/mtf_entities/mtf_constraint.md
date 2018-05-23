@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Constraint
+title: 约束
 version: 2.1
 github_link: mtf/mtf_entities/mtf_constraint.md
 ---
@@ -8,15 +8,15 @@ github_link: mtf/mtf_entities/mtf_constraint.md
 The Functional Testing Framework (FTF) constraint performs assertions after a test flow. A test flow is a set of test steps without assertions.
 Each constraint name must be globally unique in Magento application and must be placed in the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} to which it belongs. Constraints run automatically after test flow has finished.
 
-![Constraints and test flow]({{ site.baseurl }}/common/images/ftf/mtf_constraint_flow.png)
+![Constraints and test flow]({{ site.magentourl }}/common/images/ftf/mtf_constraint_flow.png)
 
 ## Constraint structure {#mtf_constraint_structure}
 
 ### `Constraint` directory {#mtf_constraint_directory}
 
-A module in functional tests (`<magento2_root_dir>/dev/tests/app/Magento/`) stores constraints in the `Constraint` directory. The following image shows the `Constraint` directory of the Magento_Widget module.
+A module in functional tests (`<magento2_root_dir>/dev/tests/app/Magento/`) stores constraints in the `Constraint` directory. The following image shows the `Constraint` directory of the Magento_Widget模块.
 
-![]({{ site.baseurl }}/common/images/ftf/mtf_constraint_dir.png)
+![]({{ site.magentourl }}/common/images/ftf/mtf_constraint_dir.png)
 
 ### Constraint class {#mtf_constraint_assert}
 
@@ -142,8 +142,8 @@ Use case: We want to assert widget availability in a widget grid.
 
 Step 1. What module does it belong?
   
-  Widget grid and widget fixture are related to the Magento_Widget module.
-  Thus, we need to create constraint in the Magento_Widget module, in `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint`.
+  Widget grid and widget fixture are related to the Magento_Widget模块.
+  Thus, we need to create constraint in the Magento_Widget模块, in `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint`.
   
 Step 2. What name should constraint have?
   
@@ -267,3 +267,4 @@ in the order that it must be performed.
 [data set]: {{ page.baseurl }}/mtf/mtf_entities/mtf_dataset.html
 [fixture]: {{ page.baseurl }}/mtf/mtf_entities/mtf_fixture.html
 [test case]: {{ page.baseurl }}/mtf/mtf_entities/mtf_testcase.html
+tml

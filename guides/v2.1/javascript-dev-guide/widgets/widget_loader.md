@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Loader widget
+title: 加载小工具
 menu_order: 8
-menu_title: Loader widget
+menu_title: 加载小工具
 version: 2.1
 github_link: javascript-dev-guide/widgets/widget_loader.md
 redirect_from:
@@ -11,16 +11,16 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_loader.html
 ---
 
-<h2>Overview</h2>
-The Loader {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} blocks page content (all content or a part of it). Its intended use is blocking content when an Ajax request is being sent. But it can be initialized for non-Ajax tasks as well. 
+<h2>概述</h2>
+The Loader {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} blocks page content (all content or a part of it). Its intended use is blocking content when an Ajax request is being sent. But it can be initialized for non-Ajax tasks as well. 
 
-The Loader widget source is <a href="{{ site.mage2000url }}lib/web/mage/loader.js" target="_blank">lib/web/mage/loader.js</a>.
+The 加载小工具 source is <a href="{{ site.mage2000url }}lib/web/mage/loader.js" target="_blank">lib/web/mage/loader.js</a>.
 
-<h2 id="loader_init">Initialize the loader widget</h2>
-The loader widget is initialized as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">JavaScript initialization</a>.
+<h2 id="loader_init">Initialize the 加载小工具</h2>
+The 加载小工具 is initialized as described in <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">JavaScript initialization</a>.
 
 <h2 id="loader_options">Options</h2>
-The loader widget has the following options:
+The 加载小工具 has the following options:
 <ul>
 <li><a href="#l_icon">icon</a></li>
 <li><a href="#l_template">template</a></li>

@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 如何获取Magento
-landing-page: Installation Guide
+landing-page: 安装向导
 menu_title: 如何获取Magento
 menu_node:
 menu_order: 1

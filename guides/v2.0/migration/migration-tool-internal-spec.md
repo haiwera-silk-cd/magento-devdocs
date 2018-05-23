@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: o_mapping
-title: Data Migration Tool Technical Specification
-menu_title: Data Migration Tool Technical Specification
+title: 数据迁移工具技术规范
+menu_title: 数据迁移工具技术规范
 menu_node: parent
 menu_order: 8
 version: 2.0
@@ -12,13 +12,13 @@ functional_areas:
   - Tools
 ---
 
-## Overview {#migrate-overview}
+## 概述{#migrate-overview}
 
-This section describes an implementation details of Data Migration Tool and how to extend its functionality.
+This section describes an implementation details of 数据迁移工具 and how to extend its functionality.
 
 ### Repositories {#repositories}
 
-Data Migration Tool repository <a href="https://github.com/magento/data-migration-tool" target="&#95;blank">migration-tool</a>
+数据迁移工具 repository <a href="https://github.com/magento/data-migration-tool" target="&#95;blank">migration-tool</a>
 
 ### System requirements {#system-requirements}
 
@@ -28,7 +28,7 @@ Same as for <a href="http://devdocs.magento.com/guides/v1.0/install-gde/system-r
 
 ### Directory structure {#directory-structure}
 
-The following diagram represents directory structure of Data Migration Tool:
+The following diagram represents directory structure of 数据迁移工具:
 
 <pre>
 
@@ -287,7 +287,7 @@ Under node <code>&lt;value&gt;</code> there are rules that work with 'value' col
 
 ### Data migration mode
 
-In this mode most of the data will be migrated. Before data migration the integrity check stages run for each step. If integrity check passed the Data Migration Tool installs deltalog tables (with prefix m2_cl_*) and corresponding triggers to Magento 1 database. And runs data migration stage of steps. When migration is completed without errors the volume check checks data consistency. It can show a warning message if you migrate live store. Do not worry, delta migration will take care of this incremental data. Next the most valuable migration steps are described. It is Map Step, URL Rewrite Step, EAV Step.
+In this mode most of the data will be migrated. Before data migration the integrity check stages run for each step. If integrity check passed the 数据迁移工具 installs deltalog tables (with prefix m2_cl_*) and corresponding triggers to Magento 1 database. And runs data migration stage of steps. When migration is completed without errors the volume check checks data consistency. It can show a warning message if you migrate live store. Do not worry, delta migration will take care of this incremental data. Next the most valuable migration steps are described. It is Map Step, URL Rewrite Step, EAV Step.
 
 #### Map Step
 
@@ -422,7 +422,7 @@ Some of the tables that are processed in the step:
 
 ### Delta migration mode
 
-After main migration, additional data could have been added to the Magento 1 database (for example, by customers on storefront). To track this data, the Tool sets up the database triggers for tables in the beginning of migration process. For more information, see [Migrate data created by 3rd party extensions]({{ page.baseurl }}/migration/migration-migrate-delta.html#migrate-delta-external-extensions).
+After main migration, additional data could have been added to the Magento 1 database (for example, by customers on storefront). To track this data, the Tool sets up the database triggers for tables in the beginning of migration process. For more information, see [迁移数据 created by 3rd party extensions]({{ page.baseurl }}/migration/migration-migrate-delta.html#migrate-delta-external-extensions).
 
 ## Data Sources {#data-sources}
 
@@ -486,7 +486,7 @@ As for now manipulation with logger, adding handler(s), processor(s) to it and p
 
 ## Automatic Tests {#automatic-tests}
 
-There are 3 types of tests in Data Migration Tool: static, unit and integration tests. They all are located in tests/ directory of the tool and they are located in folders, which are the same as the type of the test (e.g. unit tests are located in tests/unit folder). To launch the test you should have phpunit installed. In such case you should change current folder to the folder of test and launch phpunit. See the example below.
+There are 3 types of tests in 数据迁移工具: static, unit and integration tests. They all are located in tests/ directory of the tool and they are located in folders, which are the same as the type of the test (e.g. unit tests are located in tests/unit folder). To launch the test you should have phpunit installed. In such case you should change current folder to the folder of test and launch phpunit. See the example below.
 
 <pre><code>[10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/migration-tool]-[git master]
 $ cd tests/unit

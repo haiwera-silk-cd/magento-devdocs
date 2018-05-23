@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Create a new storefront theme
-menu_title: Create a new storefront theme
+title: 创建一个新的前台主题
+menu_title: 创建一个新的前台主题
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-create.md
@@ -24,7 +24,7 @@ This topic discusses how to create the files that make up a theme, how to add a 
 
 ## 先决条件
 
-1. For the sake of compatibility, upgradability, and easy maintenance, do not modify the out of the box Magento themes. To customize the design of your Magento store, create a new custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+1. For the sake of compatibility, upgradability, and easy maintenance, do not modify the out of the box Magento themes. To customize the design of your Magento store, create a new custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 2. [Set]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html) your Magento application to the developer [mode]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html). The application mode influences the way {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} are cached by Magento. The recommendations about theme development we provide in this chapter are developer/default-mode specific.
 
 ## Create a storefront theme: walkthrough {#theme-gen-walkthrough}
@@ -82,7 +82,7 @@ After you create a directory for your theme, you must create `theme.xml` contain
  </theme>
 {% endhighlight %}
 
-If you change the theme title or parent theme information in `theme.xml` after a theme was already [registered](#register_theme), you need to open or reload any {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} page for your changes to be saved in the database.
+If you change the theme title or parent theme information in `theme.xml` after a theme was already [registered](#register_theme), you need to open or reload any {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} page for your changes to be saved in the database.
 
 ## Make your theme a Composer package (optional) {#fedg_create_theme_composer}
 
@@ -168,7 +168,7 @@ For example, you can make the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d6
 ...
 {% endhighlight XML%}
 
-For details about images configuration in `view.xml`, see the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-images.html" target="_blank">Configure images properties for a theme</a> topic.
+For details about images configuration in `view.xml`, see the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-images.html" target="_blank">为主题配置图片属性</a> topic.
 
 ## Create directories for static files {#fedg_theme_how-to_static}
 

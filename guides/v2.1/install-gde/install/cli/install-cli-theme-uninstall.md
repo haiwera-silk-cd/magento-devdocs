@@ -1,6 +1,6 @@
 ---
 group: install_cli
-title: Uninstall themes Composer packages
+title: 卸载composer主题包
 version: 2.1
 github_link: install-gde/install/cli/install-cli-theme-uninstall.md
 redirect_from:
@@ -12,12 +12,12 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="instgde-install-uninst-theme-prereq">Prerequisite</h2>
-Before you use this command, you must know the relative path to your theme. Themes are located in a subdirectory of `<your Magento install dir>/app/design/<area name>`. You must specify the path to the theme starting with the area, which is either `frontend` (for storefront themes) or `adminhtml` (for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} themes).
+<h2 id="instgde-install-uninst-theme-prereq">先决条件</h2>
+在使用这个命令之前，你必须知道你的主题的相对路径。 主题都放在子目录`<your Magento install dir>/app/design/<area name>`. You must specify the path to the theme starting with the area, which is either `frontend` (for storefront themes) or `adminhtml` (for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}主题).
 
-For example, the path to the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} provided with Magento 2 is `frontend/Magento/luma`.
+For example, the path to the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} provided with Magento 2 is `frontend/Magento/luma`.
 
-For more information about themes, see <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-structure.html">Magento theme structure</a>.
+For more information about themes, see <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-structure.html">Magento主题的结构</a>.
 
 <h2 id="instgde-install-uninst-theme-over">Overview of uninstalling themes</h2>
 This section discusses how to uninstall one or more themes, optionally including the themes' code from the file system. You can create backups first so you can restore the data at a later time.
@@ -33,7 +33,7 @@ This command uninstalls *only* themes that are specified in `composer.json`; in 
 {% include install/first-steps-cli.html %}
 我们不止在这里讨论命令参数，更多请参考<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-subcommands-common">命令参数</a>.
 
-<h2 id="instgde-install-uninst-theme-uninst">Uninstall themes</h2>
+<h2 id="instgde-install-uninst-theme-uninst">卸载主题</h2>
 命令用法：
 
 	magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme path} ... {theme path}

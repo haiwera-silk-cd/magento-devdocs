@@ -26,7 +26,7 @@ However, many terms use lowercase including: merchant, developer, home page, sta
 
 * **Headings.** See more Headings guidance.
 
-* **Button labels and links.** ONLY use title case when a link are used as a call to action. See more Buttons and Links Usage guidance.
+* **Button labels and links.** ONLY use title case when a link are used as a call to action. See more 按钮 and Links Usage guidance.
 
 ### Capitalize ...
 

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Customizing layout illustration
-menu_title: Customizing layout illustration
+title: 定制布局图示
+menu_title: 定制布局图示
 menu_order: 7
 version: 2.1
 github_link: frontend-dev-guide/layouts/layout-practice.md
@@ -79,7 +79,7 @@ The markup required for the drop-down is the following:
 
 ### Step 1: Define the layout blocks
 
-OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">Locate templates, layouts, and styles</a> they find out that the original block responsible for displaying the header links is defined in 
+OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a> they find out that the original block responsible for displaying the header links is defined in 
 
 `<Magento_Theme_module_dir>/view/frontend/layout/default.xml`:
 
@@ -237,7 +237,7 @@ Clicking the **Change** button toggles the `active` CSS class:
 To add quick basic styling and visual behavior to the "dropdown" menu, OrangeCo added  [_extend.less]({{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html#simple_extend) to their theme with the following customizations:
 
 * redundant elements are hidden with CSS
-* the `.lib-dropdown()` mixin from [Magento UI library]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html) was applied to the corresponding element
+* the `.lib-dropdown()` mixin from [Magento UI库]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html) was applied to the corresponding element
 
 
 {%collapsible Expand to see the code %}

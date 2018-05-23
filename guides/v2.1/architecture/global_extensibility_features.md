@@ -43,7 +43,7 @@ See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">Codin
 
 ### Rich product ecosystem
 
-The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit [Magento Marketplace](https://marketplace.magento.com/) for an overview of the many modules and themes available for download and to buy modules and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} packages, which offer more possibilities for extending your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit [Magento Marketplace](https://marketplace.magento.com/) for an overview of the many modules and themes available for download and to buy modules and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} packages, which offer more possibilities for extending your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
 
 ### Flexible attribute types
 
@@ -79,7 +79,7 @@ You can enhance your storefront by adding unique attributes to the default produ
 
 Attribute types fall into three general categories:
 
-* <b>EAV (Entity-Attribute-Value) attributes</b> are site-specific attributes that you can define for a local site using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+* <b>EAV (Entity-Attribute-Value) attributes</b> are site-specific attributes that you can define for a local site using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 * <b>Custom attributes</b> are a subset of EAV attributes. Objects that use EAV attributes typically store values in several MySQL tables. The Customer and {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}Catalog{% endglossarytooltip %} modules use EAV attributes.
 
@@ -91,7 +91,7 @@ See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html"
 
 Magento or third-party services can be configured as a web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} (REST or SOAP) with some simple {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %}. You can use these services to integrate your Magento installation into third-party applications, such as CRM (Customer Relationship Management), ERP (Enterprise Resource Planning) back office systems, and {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} (Content Management Systems).
 
-See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Getting Started with Magento Web APIs</a> for more information.
+See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">起步 with Magento Web APIs</a> for more information.
 
 ### Service contracts, dependency injection, and dependency inversion
 

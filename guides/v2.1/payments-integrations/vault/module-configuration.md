@@ -10,7 +10,7 @@ functional_areas:
   - Integration
 ---
 
-You need to add dependencies on the Magento_Vault module in the payment method's `composer.json` and `module.xml` files.
+You need to add dependencies on the Magento_Vault模块 in the payment method's `composer.json` and `module.xml` files.
 
 ## Example: adding Vault module dependencies for the Braintree payment method
 

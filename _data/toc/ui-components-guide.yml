@@ -186,7 +186,7 @@ pages:
         - label: uiRegistry
           url: /ui_comp_guide/concepts/ui_comp_uiregistry.html
 
-    - label: How Tos
+    - label: 如何
       children:
 
         - label: Creating and displaying a category attribute with UI Components

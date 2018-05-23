@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Getting Started
-title: Transport Layer Security (TLS) requirements
-menu_title: Transport Layer Security (TLS) requirements
+subgroup: 起步
+title: 传输层安全(TLS)要求
+menu_title: 传输层安全(TLS)要求
 menu_order: 100
 level3_menu_node: level3parent
 level3_subgroup: tls

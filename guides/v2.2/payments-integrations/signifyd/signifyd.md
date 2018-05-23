@@ -12,7 +12,7 @@ github_link: payments-integrations/signifyd/signifyd.md
 
 This document provides additional technical details for integrating Magento with the [Signifyd fraud protection system](https://www.signifyd.com/). The integration is based on the *Magento_Signifyd* module that uses the [Signifyd API](https://www.signifyd.com/docs/api/).
 
-## Magento_Signifyd module overview
+## Magento_Signifyd模块 overview
 
 The Magento-Signifyd {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} allows you to:
 

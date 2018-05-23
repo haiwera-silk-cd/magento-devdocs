@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_BundleStaging module
+title: Magento_BundleStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/BundleStaging.md
@@ -10,21 +10,21 @@ The Magento_BundleStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e14
 
 ## Implementation details
 
-The Magento_BundleStaging module extends the functionality of the Magento_Bundle module. When you schedule an update for a bundle product, all bundle item options for that concrete product are available and can be edited. All the bundle product attributes can be staged.
+The Magento_BundleStaging模块 extends the functionality of the Magento_Bundle模块. When you schedule an update for a bundle product, all bundle item options for that concrete product are available and can be edited. All the bundle product attributes can be staged.
 
 ### Installation details
 
-The Magento_BundleStaging module makes irreversible changes in the database during installation. You cannot uninstall this module.
+The Magento_BundleStaging模块 makes irreversible changes in the database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_BundleStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_BundleStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_BundleStaging module. You can interact with the Magento_BundleStaging module using the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_BundleStaging模块. You can interact with the Magento_BundleStaging模块 using the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleStaging模块.
 
 ### UI components
 

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Installation fails; cannot create install.log
-menu_title: Installation fails; cannot create install.log
+title: 安装失败，无法创建install.log
+menu_title: 安装失败，无法创建install.log
 menu_node:
 menu_order: 400
 version: 2.0

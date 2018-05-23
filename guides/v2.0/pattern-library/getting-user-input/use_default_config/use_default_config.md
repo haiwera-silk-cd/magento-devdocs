@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Getting User Input
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Use Default Config
 menu_order: 4
 menu_node:
@@ -10,7 +10,7 @@ github_link: pattern-library/getting-user-input/use_default_config/use_default_c
 ---
 
 ## Use Default Config 
-In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} some textfields can inherit default values (which have been set in config by the Merchant). A user has the ability to overwrite these default values at the page level. The "Use Default Value" or "Use Configuration Value" controls allow the user to revert an overwritten textfield value to the original default value.
+In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} some textfields can inherit default values (which have been set in config by the Merchant). A user has the ability to overwrite these default values at the page level. The "Use Default Value" or "Use Configuration Value" controls allow the user to revert an overwritten textfield value to the original default value.
 
 <h3 id="whentouse">When to Use</h3>
 * To be used when a text field inherits its value by default.  It can be overridden by the user.   If the user has overridden the default value this control provides a convenient method to recover the original inherited value.

@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Getting Started
+subgroup: 起步
 title: Magento 2.2.x 技术栈要求
 menu_title: Magento 2.2.x 技术栈要求
 menu_node:

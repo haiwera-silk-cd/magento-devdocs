@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 02_access
-title: Installation dependencies not met
-menu_title: Installation dependencies not met
+title: 安装依赖缺失
+menu_title: 安装依赖缺失
 menu_node:
 menu_order: 10
 version: 2.0

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: E_rwd
-title: Create a responsive mobile theme based on a default theme
-menu_title: Create a responsive mobile theme based on a default theme
+title: 基于默认主题创建一个响应式的移动端主题
+menu_title: 基于默认主题创建一个响应式的移动端主题
 menu_order: 4
 version: 2.1
 github_link: frontend-dev-guide/responsive-web-design/rwd_mobile.md
@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 <h2>What's in this topic</h2>
-The topic describes how to create a responsive mobile-specific {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} using the default Magento approaches. 
+The topic describes how to create a responsive mobile-specific {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} using the default Magento approaches. 
 
 <h2>Creating a mobile-specific theme</h2>
 

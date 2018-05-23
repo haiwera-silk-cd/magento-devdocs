@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 02_config-hosted
-title: Configure PHP
-menu_title: Configure PHP
+title: 配置PHP
+menu_title: 配置PHP
 menu_order: 3
 menu_node:
 version: 2.0
@@ -15,7 +15,7 @@ functional_areas:
 
 <a href="http://php.net/manual/en/faq.general.php" target="_blank">PHP Hypertext Preprocessor (PHP)</a> is a scripting language that Magento is authored in. Magento requires {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} version 5.5 or 5.6 to run.
 
-To configure PHP:
+To 配置PHP:
 
 1.	If necessary, start the cPanel and click **Home** to return to the {% glossarytooltip 2f4a0fcd-4106-4194-b47b-018ffbce3ac0 %}home page{% endglossarytooltip %}.
 2.	In the Software section, click **Select PHP Version**.
@@ -37,4 +37,4 @@ To configure PHP:
 5.	Click **Save**.
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_get-ftp.html">Transfer the Magento software to your hosted system</a>
+<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_get-ftp.html">将Magento上传到你的服务主机</a>

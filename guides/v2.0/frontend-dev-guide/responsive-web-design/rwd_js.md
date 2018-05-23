@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: E_rwd
-title: JavaScript in Magento responsive design
-menu_title: JavaScript in Magento responsive design
+title: Magento响应式设计中的js
+menu_title: Magento响应式设计中的js
 menu_order: 3
 version: 2.0
 github_link: frontend-dev-guide/responsive-web-design/rwd_js.md
@@ -96,7 +96,7 @@ The following image illustrates the mobile-view navigation menu.
 
 <h2 id="rwd_js_reuse">Re-using Magento scripts in your theme</h2>
 
-You can use the <code>menu.js</code>, <code>responsive.js</code>和<code>matchMedia.js</code> to add responsive behavior in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}. 
+You can use the <code>menu.js</code>, <code>responsive.js</code>和<code>matchMedia.js</code> to add responsive behavior in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. 
 If your theme inherits from Blank or Luma, you do not even need to additionally include the script files in your theme.
 
 If your theme does not inherit from Blank or Luma, to be able to use the scripts, you must configure RequireJS for your theme.

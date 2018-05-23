@@ -1,6 +1,6 @@
 label: Payment Provider Gateway
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /payments-integrations/bk-payments-integrations.html
 
     - label: Magento payment provider gateway

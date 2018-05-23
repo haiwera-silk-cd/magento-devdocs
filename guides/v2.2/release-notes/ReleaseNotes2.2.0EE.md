@@ -28,7 +28,7 @@ We are pleased to present Magento Commerce 2.2.0 General Availability. This rele
 
 Magento Commerce 2.2.0 includes a wealth of new, exciting features, and hundreds of enhancements and fixes. Look for the following highlights in this release:
 
-* **B2B Commerce functionality** is designed to meet the needs of merchants whose primary customers are companies, rather than consumers. Companies can create and maintain their own accounts, each with teams of buyers with various roles and levels of permission. B2B Commerce functionality also includes a flexible API that integrates with a variety of ERP solutions from Magento partners. See [B2B Quick Start](http://docs.magento.com/m2/b2b/user_guide/quick-tour/b2b-quick-start.html) for an overview of the rich B2B feature set we're introducing in this release, and [Getting Started with Magento Commerce for B2B](http://docs.magento.com/m2/b2b/user_guide/getting-started.html) for a more complete exploration of these new features.
+* **B2B Commerce functionality** is designed to meet the needs of merchants whose primary customers are companies, rather than consumers. Companies can create and maintain their own accounts, each with teams of buyers with various roles and levels of permission. B2B Commerce functionality also includes a flexible API that integrates with a variety of ERP solutions from Magento partners. See [B2B Quick Start](http://docs.magento.com/m2/b2b/user_guide/quick-tour/b2b-quick-start.html) for an overview of the rich B2B feature set we're introducing in this release, and [起步 with Magento Commerce for B2B](http://docs.magento.com/m2/b2b/user_guide/getting-started.html) for a more complete exploration of these new features.
 
 * **Magento Commerce Starter.** In addition to our Pro version, Magento Cloud (Commerce) now comes in a smaller, platform-as-a-service version — Magento Commerce Starter. This subscription plan differs from our Enterprise Cloud version in some key ways. For an overview of these versions, see [Welcome to Magento Commerce Cloud](http://devdocs.magento.com/guides/v2.1/cloud/bk-cloud.html).
 
@@ -188,7 +188,7 @@ This release contains hundreds of fixes and enhancements.
 
 
 
-<!--- 57820 -->* The installation script no longer creates files in the root directory for missing modules when you install a community-created language pack. Translation packs created by the community often include translations for Magento Commerce modules. When you install these translation packs on an Open Source installation, the Commerce modules are missing. Previously, the installation script creates a file in the root directory for these Commerce modules instead of skipping them. [GitHub-6260](https://github.com/magento/magento2/issues/6260)
+<!--- 57820 -->* The installation script no longer creates files in the root directory for missing modules when you install a community-created language pack. Translation packs created by the community often include translations for Magento企业版模块. When you install these translation packs on an Open Source installation, the Commerce modules are missing. Previously, the installation script creates a file in the root directory for these Commerce modules instead of skipping them. [GitHub-6260](https://github.com/magento/magento2/issues/6260)
 
 
 <!--- 56743 -->*  We've fixed issues with upgrading installations with split databases.
@@ -521,7 +521,7 @@ This release contains hundreds of fixes and enhancements.
 
 <!--- 58285 -->* Magento now displays server-side Ajax error messages.
 
-<!--- 69674 -->* JavaScript mixins now work when you add a `urlArgs` argument to a `require_js` file. *Fix submitted by community member <a href="https://github.com/thelettuce" target="_blank">James Reed</a> in pull request <a href="https://github.com/magento/magento2/pull/9665" target="_blank">9665</a>.*
+<!--- 69674 -->* js混入 now work when you add a `urlArgs` argument to a `require_js` file. *Fix submitted by community member <a href="https://github.com/thelettuce" target="_blank">James Reed</a> in pull request <a href="https://github.com/magento/magento2/pull/9665" target="_blank">9665</a>.*
 
 #### Zend framework
 
@@ -965,14 +965,14 @@ Thanks to our hardworking Magento Open Source community members for the followin
 <!---57086-->* You can now successfully place orders with Braintree when using an alternative {% glossarytooltip 5ac2d367-070a-474c-badf-df2b84fe3b09 %}merchant account{% endglossarytooltip %} ID. (The merchant account does not need to match the 3D Secure authorization merchant account.) [GitHub-5910](https://github.com/magento/magento2/issues/5910)
 
 
-<!---59637-->*  Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento  displayed a spinning loader widget, and your screen froze. The Developer console displayed this error:
+<!---59637-->*  Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento  displayed a spinning 加载小工具, and your screen froze. The Developer console displayed this error:
 `Uncaught Error: [paypal-container] is not a valid DOM Element`.
 
 <!--- 56344-->* The Braintree payment method now works as expected with Vault table prefixing.
 
 <!--- 71371-->* Merchants can now accept payment on a Suspected Fraud order without Magento altering the amount in Total Paid. Previously, when a merchant accepted payment for an order with a status of Suspected Fraud, Magento doubled the payment amount.
 
-<!--- 59573-->* Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento displayed a spinning loader widget, and your screen froze. The Developer console displayed this error:
+<!--- 59573-->* Braintree no longer encounters an error during checkout when you apply a 100% discount coupon to a product and enable free shipping. Previously, Magento displayed a spinning 加载小工具, and your screen froze. The Developer console displayed this error:
 `Uncaught Error: [paypal-container] is not a valid DOM Element`.
 
 
@@ -986,7 +986,7 @@ Thanks to our hardworking Magento Open Source community members for the followin
 
 #### PayPal
 
-<!--- 59581-->* We've improved and streamlined the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} PayPal configuration interface.
+<!--- 59581-->* We've improved and streamlined the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} PayPal configuration interface.
 
 <!--- 58376-->* PayPal Payflow Pro now uses the currency you've specified in your store settings. Previously, Magento converted the total price into U.S. dollars, no matter which currency was specified in the store settings.
 
@@ -1046,7 +1046,7 @@ This release includes substantial improvements to Magento caching, image process
 
 #### Image processing
 
-<!---60041-->* We've improved the process of resizing images on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %}.
+<!---60041-->* We've improved the process of resizing images on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %}.
 
 <!--- 59806 -->* The process of loading many configurable products with multiple images (for example, configurable products with three attributes and 250 options) is more efficient. <a href="https://github.com/magento/magento2/issues/6979" target="_blank">(GITHUB-6979)</a>
 
@@ -1388,6 +1388,6 @@ You can install Magento Commerce 2.2 General Availability (GA) using Composer.
 {% include install/releasenotes/ee_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

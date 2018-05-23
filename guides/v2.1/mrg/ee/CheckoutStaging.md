@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_CheckoutStaging module
+title: Magento_CheckoutStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/CheckoutStaging.md
@@ -11,7 +11,7 @@ It extends the {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkou
 
 ## Implementation details
 
-The Magento_CheckoutStaging module extends the following Magento_Checkout module functionality to be used in the staging preview mode:
+The Magento_CheckoutStaging模块 extends the following Magento_Checkout模块 functionality to be used in the staging preview mode:
 
 - Disables an order creation
 - Creates a demo {% glossarytooltip 77e19d0d-e7b1-4d3d-9bad-e92fbb9fb59a %}quote{% endglossarytooltip %}
@@ -24,17 +24,17 @@ Configuration options:
 
 ### Installation details
 
-The Magento_CheckoutStaging module makes irreversible changes in a database during installation. You cannot uninstall this module.
+The Magento_CheckoutStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_CheckoutStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_CheckoutStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CheckoutStaging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CheckoutStaging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CheckoutStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CheckoutStaging模块.
 
 ## Additional information
 

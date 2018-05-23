@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="reds-cache-prereq">Prerequisite</h2>
+<h2 id="reds-cache-prereq">先决条件</h2>
 Before you continue, [install Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html#config-redis-install).
 
 <div class="bs-callout bs-callout-info" id="info">

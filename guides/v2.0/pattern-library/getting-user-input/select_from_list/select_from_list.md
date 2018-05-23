@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Getting User Input
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Select From List
 menu_order: 5
 menu_node:

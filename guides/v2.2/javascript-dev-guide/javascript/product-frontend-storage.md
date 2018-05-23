@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: Use the Frontend Product Repository
-menu_title: Use the Frontend Product Repository
+title: 使用前端的产品仓库(Product repository)
+menu_title: 使用前端的产品仓库(Product repository)
 menu_order: 10
 version: 2.2
 ---

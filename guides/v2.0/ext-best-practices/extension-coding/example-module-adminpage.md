@@ -12,7 +12,7 @@ functional_areas:
 
 ### Overview
 
-This tutorial gives instructions for the creation of a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} that displays a simple page in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento admin{% endglossarytooltip %}.
+This tutorial gives instructions for the creation of a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} that displays a simple page in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 For the purposes of this tutorial MyCompany is the name of the company associated with a module named ExampleAdminNewPage.
 
@@ -110,7 +110,7 @@ The `menu.xml` file provided below adds two items in the Content section of the 
 1. A new separate section with the title **Greetings** under Content.
 2. A link with the label **Hello World** that leads to a page request for `exampleadminnewpage/helloworld/index` underneath that new section.
 
-![Hello World menu item]({{ site.baseurl }}/common/images/ext-best-practices/hello-world-menu-item.png){:width="322px" height="400px"}
+![Hello World menu item]({{ site.magentourl }}/common/images/ext-best-practices/hello-world-menu-item.png){:width="322px" height="400px"}
 
 The following parts make up the generated page request link to the **Hello World** page:
 
@@ -303,4 +303,4 @@ Now that the module is code-complete, run the following commands to install it:
 
 Once the module installation has completed, the link to the **Hello World** page should appear in the **Greetings** section under **Content** in the left navigation in the admin area. Clicking this link will take you to a page that looks like the one pictured below.
 
-![Hello World Page]({{ site.baseurl }}/common/images/ext-best-practices/hello-world-page.png)
+![Hello World Page]({{ site.magentourl }}/common/images/ext-best-practices/hello-world-page.png)

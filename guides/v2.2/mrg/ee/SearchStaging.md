@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento_SearchStaging module
+title: Magento_SearchStaging模块
 menu_title: SearchStaging
 menu_order: 2
 version: 2.2
@@ -15,15 +15,15 @@ The Magento_SearchStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e14
 
 ## Implementation details
 
-The Magento_SearchStaging module extends the Magento_Search module functionality. It adds Search to the staging preview but disables the searching functionality.
+The Magento_SearchStaging模块 extends the Magento_Search模块 functionality. It adds Search to the staging preview but disables the searching functionality.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_SearchStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_SearchStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_SearchStaging module. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_SearchStaging module.
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_SearchStaging模块. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_SearchStaging模块.
 
 ### Layouts
 

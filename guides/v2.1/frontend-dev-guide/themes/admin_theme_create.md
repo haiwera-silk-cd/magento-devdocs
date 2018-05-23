@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Create an Admin theme
-menu_title: Create an Admin theme
+title: 创建一个管理面板主题
+menu_title: 创建一个管理面板主题
 version: 2.1
 menu_order: 9
 github_link: frontend-dev-guide/themes/admin_theme_create.md
@@ -40,7 +40,7 @@ In the theme directory, add `theme.xml` containing at least the theme name and t
 
 Add or copy from an existing `theme.xml` to your theme directory `app/design/adminhtml/<Vendor>/<admin_theme>`.
 
-Configure it using the following example (replace placeholders with your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} information):
+Configure it using the following example (replace placeholders with your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} information):
 
 {%highlight xml%}
 <theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
@@ -49,7 +49,7 @@ Configure it using the following example (replace placeholders with your {% glos
  </theme>
 {%endhighlight%}
 
-If you change the theme title or parent theme information in `theme.xml` after a theme was already [registered](#register_theme), you need to open or reload any {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} page for your changes to be saved in the database.
+If you change the theme title or parent theme information in `theme.xml` after a theme was already [registered](#register_theme), you need to open or reload any {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} page for your changes to be saved in the database.
 
 
 

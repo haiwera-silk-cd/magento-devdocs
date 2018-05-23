@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_php
-title: The PHP mcrypt extension is not installed properly
-menu_title: The PHP mcrypt extension is not installed properly
+title: PHP mcrypt扩展可能没有正确安装
+menu_title: PHP mcrypt扩展可能没有正确安装
 menu_node:
 menu_order: 355
 version: 2.1

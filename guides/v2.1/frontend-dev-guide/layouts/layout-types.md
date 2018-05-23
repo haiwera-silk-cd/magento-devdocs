@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Layout file types
-menu_title: Layout file types
+title: 布局文件类型
+menu_title: 布局文件类型
 menu_order: 3
 version: 2.1
 github_link: frontend-dev-guide/layouts/layout-types.md
@@ -116,13 +116,13 @@ Conventionally page configuration files must be located as follows:
 
 <ul>
 <li> {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} page configurations: <code>&lt;module_dir&gt;/view/frontend/layout</code></li>
-<li> {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}Theme{% endglossarytooltip %} page configurations: <code>&lt;theme_dir&gt;/&lt;Namespace&gt;_&lt;Module&gt;/layout</code></li>
+<li> {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} page configurations: <code>&lt;theme_dir&gt;/&lt;Namespace&gt;_&lt;Module&gt;/layout</code></li>
 </ul>
 
 
 <h3>Page configuration structure and allowed layout instructions</h3>
 
-The following table describes the instructions specific for page configuration files. For the descriptions of common layout instructions see the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">Layout instructions</a> article.
+The following table describes the instructions specific for page configuration files. For the descriptions of common layout instructions see the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a> article.
 
 <table>
   <tbody>
@@ -403,7 +403,7 @@ Conventionally generic layout files must be located as follows:
 
 <h3>Generic layout structure and allowed layout instructions</h3>
 
-The following table describes the instructions specific for generic layout files. For the descriptions of common layout instructions see the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">Layout instructions</a> article.
+The following table describes the instructions specific for generic layout files. For the descriptions of common layout instructions see the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a> article.
 
 <table>
   <tbody>
@@ -456,7 +456,7 @@ none
       <td colspan="1">
 <ul>
 <li><code>name="root"</code></li>
-<li>For complete list of attributes, see <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#container" target="_blank">Layout instructions</a></li>
+<li>For complete list of attributes, see <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#container" target="_blank">布局指令</a></li>
 </ul>
 </td>
       <td colspan="1">

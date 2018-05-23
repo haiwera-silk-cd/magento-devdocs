@@ -53,7 +53,7 @@ We address the following functional issues in this release.
 
 <!--- 61232-->* You can now reload a page during {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} without unintentionally changing shipping information. 
 
-<!--- 61249-->* Magento no longer displays the spinning loader {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} after you click the **Place Order** button. Previously, Magento displayed the spinning loader, even after you'd successfully placed an order. 
+<!--- 61249-->* Magento no longer displays the spinning loader {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} after you click the **Place Order** button. Previously, Magento displayed the spinning loader, even after you'd successfully placed an order. 
 
 <!--- 61127-->* Magento now indicates that a product is out-of-stock if you disable it. Previously, Magento did not display the name of an out-of-stock product at all. 
 
@@ -134,7 +134,7 @@ We address the following functional issues in this release.
 
 <!--- 58894-->* The Compare Products page now works as expected. Previously, you were erroneously redirected to another page when you removed an item from the Compare Products {% glossarytooltip 31751771-8163-434b-88bc-c5f94d859fc3 %}sidebar{% endglossarytooltip %}. 
 
-<!--- 57134-->* You can now return to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} from the Web Setup Wizard (**System > Tools > Web Setup Wizard**). Previously, you had to log back in to the Magento Admin after you ran the Web Setup Wizard.
+<!--- 57134-->* You can now return to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} from the Web Setup Wizard (**System > Tools > Web Setup Wizard**). Previously, you had to log back in to the Magento Admin after you ran the Web Setup Wizard.
 
 
 <!--- 57322-->* Magento no longer redirects users to the Checkout page after login. Now, if you set **Redirect Customer to Account Dashboard after Logging in** value to **Yes**, users will be redirected to the Account Dashboard page. If you set this value to **No**, then users will stay on the {% glossarytooltip 2f4a0fcd-4106-4194-b47b-018ffbce3ac0 %}home page{% endglossarytooltip %} after login. 
@@ -373,7 +373,7 @@ Our technology stack is built on PHP and MySQL. See
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 

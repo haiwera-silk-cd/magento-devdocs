@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: D_Migrate using the data migration tool
-title: Migrate using Data Migration Tool
-menu_title: Migrate using Data Migration Tool
+title: 使用数据迁移工具迁移
+menu_title: 使用数据迁移工具迁移
 menu_node: parent
 menu_order: 4
 version: 2.1
@@ -28,8 +28,8 @@ During the migration process, **do not:**
   <p>All operations in Magento 1 storefront are allowed at this time.</p>
 </div>
 
-## Run Data Migration Tool {#migration-command-run}
-This section shows how to run the Data Migration Tool to migrate settings, data, or incremental changes.
+## Run 数据迁移工具 {#migration-command-run}
+This section shows how to run the 数据迁移工具 to migrate settings, data, or incremental changes.
 
 ### 第一步 {#migration-command-run-first}
 
@@ -60,7 +60,7 @@ where:
 
 ## Migration order {#migration_order}
 
-When we created the Data Migration Tool, we assumed the following data transfer sequence:
+When we created the 数据迁移工具, we assumed the following data transfer sequence:
 
 1.	<a href="{{ page.baseurl }}/migration/migration-migrate-settings.html">Settings</a>
 2.	<a href="{{ page.baseurl }}/migration/migration-migrate-data.html">Data</a>

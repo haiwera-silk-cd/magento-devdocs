@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Displaying and Dealing with Data
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Filters
 menu_order: 1
 menu_node:

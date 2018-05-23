@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Templates
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Sign In Form
 menu_order: 2
 menu_node: 

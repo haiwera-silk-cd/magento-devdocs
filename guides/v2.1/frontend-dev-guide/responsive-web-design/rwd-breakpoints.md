@@ -15,7 +15,7 @@ functional_areas:
 
 <h2>What's in this topic</h2>
 
-Breakpoints are used in stylesheets to set up the screen width at which the design changes, for example from the mobile to the desktop version. Themes provided with Magento implement a list of [default breakpoints]({{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_css.html#fedg_rwd_css_break). This topic describes how to add a custom breakpoint in your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}. 
+Breakpoints are used in stylesheets to set up the screen width at which the design changes, for example from the mobile to the desktop version. Themes provided with Magento implement a list of [default breakpoints]({{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_css.html#fedg_rwd_css_break). This topic describes how to add a custom breakpoint in your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. 
 
 ## Overview
 To add a custom breakpoint in your theme, you need to do the following:
@@ -41,7 +41,7 @@ For variables' naming rules see [Less coding standards](http://devdocs.magento.c
 
 ## Override `_responsive.less` from the library
 
-According to the approach, implemented in the Magento UI library, the `.media-width()` mixin calls are defined in many places, but invoked in one place, in `lib/web/css/source/lib/_responsive.less`. 
+According to the approach, implemented in the Magento UI库, the `.media-width()` mixin calls are defined in many places, but invoked in one place, in `lib/web/css/source/lib/_responsive.less`. 
 
 To implement a new breakpoint, you need to edit the `.media-width()` mixin by adding the appropriate rule there. So you need to override the library `_responsive.less` in your theme, and add the customizations there. 
 
@@ -73,5 +73,5 @@ Example:
 
 ## Related reading
 
-- You can find information about the `_responsive.less` library file in the generated Magento UI library documentation. It is available in the following location in your Magento installation: `<your_Magento_installation>/pub/static/frontend/Magento/blank/en_US/css/docs/responsive.html`.
+- You can find information about the `_responsive.less` library file in the generated Magento UI库 documentation. It is available in the following location in your Magento installation: `<your_Magento_installation>/pub/static/frontend/Magento/blank/en_US/css/docs/responsive.html`.
 - [How to make your theme responsive and mobile]({{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_overview.html).

@@ -45,7 +45,7 @@ When in doubt, spell it out. If there’s a chance a reader doesn't know an abbr
   <li>Yes – “PDF, TIFF, HTML, JPG, CSS, XML”</li>
 </ul>
 </li>
-<li>Link format: Append the file type in parenthesis after the file name. For more details, see the [Labels Best Practices]({{ page.baseurl }}/design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html#labels-best-practices) section in Buttons and Links Usage.</li>
+<li>Link format: Append the file type in parenthesis after the file name. For more details, see the [Labels Best Practices]({{ page.baseurl }}/design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html#labels-best-practices) section in 按钮 and Links Usage.</li>
 </ul>
 
 ## Addresses

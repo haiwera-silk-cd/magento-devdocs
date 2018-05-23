@@ -1,12 +1,12 @@
 ---
 group: mrg
-title: Instant Purchase module
+title: 即时购买模块
 github_link: mrg/ce/instant-purchase/index.md
 functional_areas:
   - Checkout
 ---
 
-The [Instant Purchase module] allows customers to place orders in seconds without going through the full checkout process.
+The [即时购买模块] allows customers to place orders in seconds without going through the full checkout process.
 
 This feature takes the form of a button on product pages.
 When a customer clicks this button, the system places their order using the default shipping, billing address, and stored payment method.
@@ -17,7 +17,7 @@ For merchant instructions, see [Instant Purchase] in the user guide.
 
 ## Implementation details
 
-The logic found in the [Instant Purchase module] is divided into two parts:
+The logic found in the [即时购买模块] is divided into two parts:
 
 * [Instant Purchase logic]
 * [Order placement]
@@ -82,7 +82,7 @@ Use [dependency injection] to override preferences for interfaces marked with th
 
 Custom implementations of the [`InstantPurchaseInterface`] should return an [`InstantPurchaseOption`] object.
 
-The `InstantPurchaseOption` object is a data container that holds the stored payment method, shipping and billing addresses, and shipping method used by the Instant Purchase module.
+The `InstantPurchaseOption` object is a data container that holds the stored payment method, shipping and billing addresses, and shipping method used by the 即时购买模块.
 The logic of how this data is retrieved is the responsibility of the `InstantPurchaseInterface` implementation.
 
 To create an `InstantPurchaseOption` object from the gathered data, use the [`InstantPurchaseOptionFactory`].
@@ -102,7 +102,7 @@ The `choose()` method for custom implementations of the following interfaces mus
 #### Deferred Shipping Method
 
 Choosing the shipping method based on a customer's address is difficult without all the information on the shipping subject because it is hard to estimate the cost and effort.
-To address this issue, the Instant Purchase module allows you to postpone the final decision on which shipping method to use until the exact product and quantity is known.
+To address this issue, the 即时购买模块 allows you to postpone the final decision on which shipping method to use until the exact product and quantity is known.
 
 Use the following steps to help you implement a custom deferred shipping method:
 
@@ -224,14 +224,14 @@ We recommend you provide a custom token formatter for your Instant Purchase inte
 
 A custom payment token formatter should implement the [`PaymentTokenFormatterInterface`] and return a human-readable string that describes the [`PaymentTokenInterface`].
 
-The Instant Purchase module guarantees that the correct token associated with corresponding payment method is passed to the formatter.
+The 即时购买模块 guarantees that the correct token associated with corresponding payment method is passed to the formatter.
 To configure the formatter, use the `default/payment/<vault payment method code>/instant_purchase/tokenFormat` configuration path.
 
 ### Additional Payment Information Provider
 
 Some payment methods require the collection of additional information during the checkout process for order placement.
 
-By default, the Instant Purchase module specifies the following properties as additional payment information:
+By default, the 即时购买模块 specifies the following properties as additional payment information:
 
 | Name                              | Description                                   |
 | --------------------------------- | --------------------------------------------- |
@@ -249,10 +249,10 @@ In most cases, developers should use interfaces for custom implementations and n
 However, sometimes conditional logic for payment processing needs to be implemented to handle payments initiated from different entry points.
 
 For these cases, the payment object's [`InfoInterface`] holds an `additional_information` property, accessible via the `getAdditionalInformation()` method, which can return the `instant-purchase` marker.
-Use this marker if no other options are available to implement specific payment logic for the Instant Purchase module.
+Use this marker if no other options are available to implement specific payment logic for the 即时购买模块.
 
 [Instant Purchase]: http://docs.magento.com/m2/ce/user_guide/sales/checkout-instant-purchase.html
-[Instant Purchase module]: https://github.com/magento/magento2/tree/{{page.guide_version}}-develop/app/code/Magento/InstantPurchase
+[即时购买模块]: https://github.com/magento/magento2/tree/{{page.guide_version}}-develop/app/code/Magento/InstantPurchase
 [vault]: {{ page.baseurl }}/payments-integrations/vault/vault-intro.html
 [Instant Purchase support]: #payment-method-integration
 [Braintree Credit Cards]: https://github.com/magento/magento2/tree/{{page.guide_version}}-develop/app/code/Magento/Braintree/Model/InstantPurchase/CreditCard

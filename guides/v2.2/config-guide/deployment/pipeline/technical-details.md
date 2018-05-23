@@ -28,7 +28,7 @@ Before you get started, review the [prerequisite for your development, build, an
 
 To enable you to synchronize and maintain the configuration of your development and production systems, we use the following override scheme.
 
-![How configuration variable values are determined]({{ site.baseurl }}/common/images/cloud_vars_flow-diagram.png){:width="550px"}
+![How configuration variable values are determined]({{ site.magentourl }}/common/images/cloud_vars_flow-diagram.png){:width="550px"}
 
 As the diagram shows, we get configuration values in the following order:
 
@@ -82,7 +82,7 @@ We changed the following behavior in the Magento Admin in production mode:
 
     The following figure shows an example of the **Account Setting**> **Interface Locale** list in the Admin showing only two deployed locales:
 
-    ![You can change the Admin locale only to deployed locales]({{ site.baseurl }}/common/images/config_split-deploy_admin-locale.png){:width="450px"}
+    ![You can change the Admin locale only to deployed locales]({{ site.magentourl }}/common/images/config_split-deploy_admin-locale.png){:width="450px"}
 * You cannot change locale configurations for any scope using the Admin Panel.
   We recommend making these changes before switching to Production mode.
 
@@ -98,7 +98,7 @@ We also enable you to remove the Magento crontab using the `magento cron:remove`
 
 The following diagram shows how we recommend you use pipeline deployment to manage the configuration.
 
-![Recommended pipeline deployment workflow]({{ site.baseurl }}/common/images/config_split-deploy_workflow.png){:width="700px"}
+![Recommended pipeline deployment workflow]({{ site.magentourl }}/common/images/config_split-deploy_workflow.png){:width="700px"}
 
 ### Development system
 
@@ -288,7 +288,7 @@ File permissions and ownership must be consistent across development, build, and
     *   Make sure the Magento file system owner is in the web server group on all systems
 *   Change Magento file system permissions and ownership on each system as necessary using the following guidelines:
 
-    *   Development and build: [Set pre-installation ownership and permissions (two users)]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html#perms-private)
+    *   Development and build: [安装前设置所有者和权限 (two users)]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html#perms-private)
     *   Production: [Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
     <div class="bs-callout bs-callout-info" id="info" markdown="1">

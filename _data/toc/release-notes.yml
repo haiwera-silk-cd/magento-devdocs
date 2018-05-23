@@ -1,6 +1,6 @@
 label: Release Information
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /release-notes/bk-release-notes.html
 
     - label: 2.2 Release Notes

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Apply and configure a storefront theme
-menu_title: Apply and configure a storefront theme
+title: 应用和配置前台主题
+menu_title: 应用和配置前台主题
 version: 2.1
 menu_order: 30
 github_link: frontend-dev-guide/themes/theme-apply.md
@@ -13,7 +13,7 @@ functional_areas:
 
 <h2 id="theme-apply-overview">What's in this topic</h2>
 
-The topic describes how to apply a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} for your store. This is a required step if you want a theme to be used on a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+The topic describes how to apply a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} for your store. This is a required step if you want a theme to be used on a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
 Also, it gives information how to add a theme independent logo for your store.
 
 ## 先决条件
@@ -77,6 +77,6 @@ A system message notifies you that invalidated cache types must be refreshed.
 1.	Click **System** > **Cache Management**.
 2.	Clear the invalid cache types.
 
-## Troubleshooting (if the changes do not get applied)
+## 故障排除 (if the changes do not get applied)
 
 If the changes you configure in the Admin are not applied after you clear the cache and reload the page, delete all files in the `pub/static/frontend` and `var/view_preprocessing` directories, then reload the pages. You can delete the files manually or run the `grunt clean:<theme_name>` command in CLI. For details about using Grunt in Magento see [Installing and configuring Grunt]({{ site.gdeurl21 }}frontend-dev-guide/css-topics/css_debug.html#grunt_prereq).

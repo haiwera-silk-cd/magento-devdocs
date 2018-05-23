@@ -1,6 +1,6 @@
 ---
 group: marketplace-api
-title: Introduction
+title: 介绍
 version: 2.1
 github_link: marketplace/eqp/api.md
 ---

@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 如何使用终端、命令行或ssh登录到我的Magento服务器
 menu_title: 如何使用终端、命令行或ssh登录到我的Magento服务器
 menu_node:

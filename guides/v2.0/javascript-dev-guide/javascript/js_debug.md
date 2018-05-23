@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: Locate JavaScript components
-menu_title: Locate JavaScript components
+title: 定位js组件
+menu_title: 定位js组件
 menu_order: 20
 version: 2.0
 github_link: javascript-dev-guide/javascript/js_debug.md
@@ -13,7 +13,7 @@ functional_areas:
   - Testing
 ---
 
-<h2 id="js_debug_overview">Overview</h2>
+<h2 id="js_debug_overview">概述</h2>
 
 This topic discusses how to define which {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components and widgets are used on a particular Magento store page.
 
@@ -31,7 +31,7 @@ To locate scripts used for a certain element:
 <li>
 To find the source file of the used script:
 <ol>
-<li>In the <code>&lt;head&gt;&lt;/head&gt;</code> section of the page source, click link to <code>requirejs-config.js</code> file. The file contains the Magento RequireJS configuration, collected from all modules of the current {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+<li>In the <code>&lt;head&gt;&lt;/head&gt;</code> section of the page source, click link to <code>requirejs-config.js</code> file. The file contains the Magento RequireJS configuration, collected from all modules of the current {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
 <p>Alternatively, you can open the <code>requirejs-config.js</code> file from the file system: <code>pub/static/_requirejs/frontend/&lt;Vendor&gt;/&lt;theme&gt;/&lt;locale&gt;/requirejs-config.js</code></p></span>
@@ -52,7 +52,7 @@ To find the source file of the used script:
 
 <h2>Locate JS component: example</h2>
 
-As we discussed in the preceding section, you use browser debugging tools to define which JavaScript component or {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} is used for an element. An example follows.
+As we discussed in the preceding section, you use browser debugging tools to define which JavaScript component or {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} is used for an element. An example follows.
 To find what JS components are used for displaying the main navigation menu in the Luma theme:
 
 <ol>

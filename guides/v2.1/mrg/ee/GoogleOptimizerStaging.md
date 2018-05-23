@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_GoogleOptimizerStaging module
+title: Magento_GoogleOptimizerStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/GoogleOptimizerStaging.md
@@ -10,7 +10,7 @@ The Magento_GoogleOptimizerStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d
 
 ## Implementation details
 
-The Magento_GoogleOptimizerStaging module enables you to stage parameters added by the Magento_GoogleOptimizer module in the {% glossarytooltip ae8f7f2b-ddfb-41ed-bec3-bed191406fdd %}Search Engine Optimization{% endglossarytooltip %} field set:
+The Magento_GoogleOptimizerStaging模块 enables you to stage parameters added by the Magento_GoogleOptimizer模块 in the {% glossarytooltip ae8f7f2b-ddfb-41ed-bec3-bed191406fdd %}Search Engine Optimization{% endglossarytooltip %} field set:
 
 - Meta Title
 - Meta Keywords
@@ -18,11 +18,11 @@ The Magento_GoogleOptimizerStaging module enables you to stage parameters added 
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_GoogleOptimizerStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_GoogleOptimizerStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GoogleOptimizerStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GoogleOptimizerStaging模块.
 
 ## Additional information
 

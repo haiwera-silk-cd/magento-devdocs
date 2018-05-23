@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_SharedCatalog module
+title: Magento_SharedCatalog模块
 menu_title: SharedCatalog
 menu_order: 200
 version: 2.2
@@ -22,7 +22,7 @@ The module provides web APIs and can be integrated with third-party solutions to
 
 ## Installation details
 
-The module heavily depends on the Magento_Company module, which must be installed and enabled the first. Category permissions must be enabled for shared catalogs to work properly. Price configuration for a shared catalog requires the start of a message queue consumer `sharedCatalogUpdatePrice`.
+The module heavily depends on the Magento_Company模块, which must be installed and enabled the first. Category permissions must be enabled for shared catalogs to work properly. Price configuration for a shared catalog requires the start of a message queue consumer `sharedCatalogUpdatePrice`.
 
 The module does not create any backward incompatible changes. Can be deactivated and uninstalled at any time.
 
@@ -36,7 +36,7 @@ When the module is uninstalled, the other <i>ProductType</i>SharedCatalog module
 
 Shared catalogs are using message queues to save prices. For more information about queues, see [Message Queues]({{ page.baseurl }}/extension-dev-guide/message-queues.html).
 
-Extension developers can interact with the Magento_SharedCatalog module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_SharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
 [The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the `Magento_SharedCatalog` module.
 

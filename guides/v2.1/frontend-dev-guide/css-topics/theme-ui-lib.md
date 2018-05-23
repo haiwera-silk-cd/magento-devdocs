@@ -1,7 +1,7 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Magento UI library
+title: Magento UI库
 menu_order: 4
 version: 2.1
 github_link: frontend-dev-guide/css-topics/theme-ui-lib.md
@@ -13,12 +13,12 @@ functional_areas:
 
 <h2 id="fedg_using-ui-lib_overview">What's in this topic</h2>
 
-The Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} is a flexible <a href="http://lesscss.org/" target="_blank">LESS</a>-based {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} library designed to assist Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} developers. It employs a set of mixins for base elements to ease frontend theme development and customization. 
+The Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} is a flexible <a href="http://lesscss.org/" target="_blank">LESS</a>-based {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} library designed to assist Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} developers. It employs a set of mixins for base elements to ease frontend theme development and customization. 
 
 This topic describes how the library is organized, and how to use it. 
 
 ## Components provided by the UI library {#library_elements}
-The Magento UI library provides the ability to customize and reuse the following user interface elements and properties:
+The Magento UI库 provides the ability to customize and reuse the following user interface elements and properties:
 
 *	actions-toolbar
 *	breadcrumbs
@@ -47,7 +47,7 @@ The following illustration shows a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f
 
 ## Mixin location {#fedg_using-ui-lib_mixins}
 
- You can find the Magento UI library under <a href="{{ site.mage2000url }}lib/web/css" target="_blank"><code>lib/web/css</code></a>. Library source `.less` files are stored under the `source` directory, each file contains mixins for configuring a certain element, and in most cases the element coincides with the file name:
+ You can find the Magento UI库 under <a href="{{ site.mage2000url }}lib/web/css" target="_blank"><code>lib/web/css</code></a>. Library source `.less` files are stored under the `source` directory, each file contains mixins for configuring a certain element, and in most cases the element coincides with the file name:
 
 <pre>lib/web
     ├── css/
@@ -133,7 +133,7 @@ Variables starting with `@_` are private mixin variables used only in this mixin
 
 ## UI library documentation {#docs}
 
-You can find detailed information about the Magento UI library in the documentation provided together with the code:
+You can find detailed information about the Magento UI库 in the documentation provided together with the code:
 
-* <a href="{{ site.mage2000url }}lib/web/css/docs/source/README.md" target="_blank"><code>lib/web/css/docs/source/README.md</code></a>: describes the Magento UI library structure, naming conventions, and code style.
+* <a href="{{ site.mage2000url }}lib/web/css/docs/source/README.md" target="_blank"><code>lib/web/css/docs/source/README.md</code></a>: describes the Magento UI库 structure, naming conventions, and code style.
 * <a href="{{ site.mage2000url }}lib/web/css/docs" target="_blank"><code>lib/web/css/docs</code></a>: contains a set of `.html` files with detailed information about the library mixins. Each file is named after the mixin it describes, and contains detailed mixin description and navigation controls to access documentation for other mixins. The documentation is available in a convenient {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} view in the following location in your Magento installation: <code>pub/static/frontend/Magento/blank/en_US/css/docs/index.html</code>

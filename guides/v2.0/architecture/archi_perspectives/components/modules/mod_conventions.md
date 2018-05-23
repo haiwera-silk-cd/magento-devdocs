@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_conventions.html
 ---
 
-## Overview {#m2arch-module-conventions-overview}
+## 概述{#m2arch-module-conventions-overview}
 
 Modules must conform to Magento conventions regarding code location and file names. Keep these conventions in mind when working with or developing modules.
 

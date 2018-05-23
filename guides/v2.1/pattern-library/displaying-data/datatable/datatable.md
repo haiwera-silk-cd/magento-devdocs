@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Displaying and Dealing with Data
-title: Admin Design Pattern Library
-menu_title: Data Table
+title: 管理面板用到的设计模式和库
+menu_title: 数据表格
 menu_order: 3
 menu_node:
 version: 2.1
@@ -110,7 +110,7 @@ Pagination controls allow the user to easily page through and organize data. Pag
 <br />
 
 <h2 id="massactions">Mass Actions</h2>
-A common {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} across the existing Magento user experience includes mass actions that can be taken. This is a convention used on both data-table and non-data-table pages. Not all pages have these action buttons. This document will not attempt to capture all actions that appear here or how they might be redesigned for Magento 2. This document will make note that these actions exist on many of the data-table pages and will use the area directly above the table to indicate placement of such action buttons where they might be needed.
+A common {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} across the existing Magento user experience includes mass actions that can be taken. This is a convention used on both data-table and non-data-table pages. Not all pages have these action buttons. This document will not attempt to capture all actions that appear here or how they might be redesigned for Magento 2. This document will make note that these actions exist on many of the data-table pages and will use the area directly above the table to indicate placement of such action buttons where they might be needed.
 <br />
 <br />
 <img src="img/datatable08.jpg">
@@ -384,7 +384,7 @@ Once user click on the quick filters, that quick filter is shown as a chip. The 
 <br />
 <br />
 -->
-<h2 id="datatableviews">Data Table Views</h2>
+<h2 id="datatableviews">数据表格 Views</h2>
 The data-table will support up to 30 columns, with up to 8 being visible by default. While there will be a default view for each data-table in the system, users will have the ability to show, hide, drag and change the order of columns. This interaction will include the ability to resize the width of columns.
 <ul>
 	<li>The only columns which cannot be moved are the checkbox(select) column and the action column. The select column will always appear on the far left while the action column will appear on the far right of the table </li>

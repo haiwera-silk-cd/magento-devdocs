@@ -204,7 +204,7 @@ The dotmailer bundled extension features the following enhancements for this rel
 
 <!--- MAGETWO-85288 -->* Magento now correctly displays stock status for products. *Fix submitted by [Roman K.](https://github.com/RomaKis) in pull request 955*.
 
-<!--- MAGETWO-86663 -->* The catalog product list widget now works with multiple SKUs. Previously, Magento displayed this error, `We're sorry, an error has occurred while generating this email`. *Fix submitted by [Nickolas Malyovanets](https://github.com/nmalevanec) in pull request 1050*.
+<!--- MAGETWO-86663 -->* The catalog product 列表小工具 now works with multiple SKUs. Previously, Magento displayed this error, `We're sorry, an error has occurred while generating this email`. *Fix submitted by [Nickolas Malyovanets](https://github.com/nmalevanec) in pull request 1050*.
  [GitHub-11897](https://github.com/magento/magento2/issues/11897)
 
 <!--- MAGETWO-85876 -->* Magento now loads type-dependent layout handles before more specific ID/SKU layout handles. Previously, when Magento updated a product page layout for a specific ID with `catalog_product_view_id_<product_ID>.xml`, some changes were overwritten by a less specific `catalog_product_view_type_<product_type>.xml`. *Fix submitted by [Andreas Schrammel](https://github.com/aschrammel) in pull request 12807*.
@@ -1909,11 +1909,11 @@ Our technology stack is built on PHP and MySQL. For details, see [Technology sta
 
 
 ### Installation and upgrade instructions
-See [How to get the Magento software](http://devdocs.magento.com/guides/v2.2/install-gde/bk-install-guide.html) for complete installation and upgrade information.
+See [如何获取Magento](http://devdocs.magento.com/guides/v2.2/install-gde/bk-install-guide.html) for complete installation and upgrade information.
 
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

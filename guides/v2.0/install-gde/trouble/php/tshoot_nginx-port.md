@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Cannot install using nginx
-menu_title: Cannot install using nginx
+title: 使用nginx不能正常安装
+menu_title: 使用nginx不能正常安装
 menu_node:
 menu_order: 20
 version: 2.0

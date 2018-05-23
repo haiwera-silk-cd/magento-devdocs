@@ -41,7 +41,7 @@ You should make sure that your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5
   It's tempting to add indexes to every column, however, they are regenerated during every table INSERT or UPDATE. That can hit  performance; only add indexes when necessary.
 
 ### Avoid using global events
-  Only on rare occasions would it be necessary to use a global {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %}. You should use {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} or {% glossarytooltip 749044c4-a002-4006-a3b8-eace2df90303 %}adminhtml{% endglossarytooltip %} to narrow the scope instead.
+  Only on rare occasions would it be necessary to use a global {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %}. You should use {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} or {% glossarytooltip 749044c4-a002-4006-a3b8-eace2df90303 %}adminhtml{% endglossarytooltip %} to narrow the scope instead.
 
 ### Use Magento data collections
   Execution of a SQL query is one of the most resource-taxing operations. Running SQL queries in a loop often results in a performance bottleneck. To load the EAV model, several heavy queries are required to execute. As the number of executed queries is multiplied with the number of categories, the result is extremely inefficient and slow code. Instead of loading models in a loop, Magento data collections can help to load a set of models in a very efficient manner.

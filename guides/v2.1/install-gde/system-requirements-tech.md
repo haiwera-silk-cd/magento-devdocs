@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Getting Started
-title: Magento 2.1.x technology stack requirements
-menu_title: Magento 2.1.x technology stack requirements
+subgroup: 起步
+title: Magento 2.1.x技术栈要求
+menu_title: Magento 2.1.x技术栈要求
 menu_node:
 menu_order: 2
 version: 2.1
@@ -73,7 +73,7 @@ If you must install it separately, see the <a href="http://php.net/manual/en/opc
 #### PHP settings
 We recommend particular PHP configuration settings, such as `memory_limit`, that can avoid common problems when using Magento.
 
-For more information, see [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+For more information, see [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 ### SSL
 *	A valid {% glossarytooltip 363d6806-6a7d-4cb6-bc47-efc62bc26a1c %}security certificate{% endglossarytooltip %} is required for HTTPS.

@@ -91,7 +91,7 @@ The type of reindex performed in each particular case depends on the type of cha
 
 The following figure shows the logic for partial reindexing.
 
-![Partial indexing workflow]({{ site.baseurl }}/common/images/index_indexers_flow.png){:width="300px"}
+![Partial indexing workflow]({{ site.magentourl }}/common/images/index_indexers_flow.png){:width="300px"}
 
 ### Indexer status {#m2devgde-indexing-status}
 Depending on whether an index data is up to date, an indexer status value is one of the following:
@@ -110,7 +110,7 @@ Reindexing can be performed in two modes:
 
 To set these options:
 
-1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 2.	Click **System** > **Index Management**.
 3.	Select the check box next to each type of indexer to change.
 4.	From the **Actions** list, click the indexing mode.
@@ -120,7 +120,7 @@ You can also reindex from the [命令行]({{ page.baseurl }}/config-guide/cli/co
 
 The following figure shows an example of setting indexers to Update by Schedule.
 
-![Changing indexer modes]({{ site.baseurl }}/common/images/index_index-modes.png){:width="600px"}
+![Changing indexer modes]({{ site.magentourl }}/common/images/index_index-modes.png){:width="600px"}
 
 <h3 id="m2devgde-indexing-how">How to reindex</h3>
 You can reindex in any of the following ways:

@@ -26,7 +26,7 @@ Use [RFC 2119][rfc2119]{:target="_blank"} to interpret the "must," "must not," "
 
 ## Naming conventions
 
-* {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}Widget{% endglossarytooltip %} names must consist of one or more non-abbreviated English word and in camelcase format.
+* {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} names must consist of one or more non-abbreviated English word and in camelcase format.
   
   {% highlight javascript %}
 
@@ -235,7 +235,7 @@ $.widget("mage.form," {
   Properties without an underscore prefix are accessible using the jQuery Widget factory public API.
 
   {% highlight javascript %}
-// Declaration of the backend.accordion widget
+// Declaration of the backend.手风琴菜单小工具
 $.widget('mage.accordion', {
     _create: function() {
         this.header = this.element.find(this.options.header);
@@ -255,7 +255,7 @@ $.widget('mage.accordion', {
 * Use the public widget API to call widget methods to allow chaining widget methods.
   
   {% highlight javascript %}
-// Call the 'open' method on the menu widget using the public widgets API
+// Call the 'open' method on the 菜单小工具 using the public widgets API
 $('selector')
 .menu('open')
 .addClass('ui-state-active');

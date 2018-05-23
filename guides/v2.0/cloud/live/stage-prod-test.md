@@ -14,14 +14,14 @@ functional_areas:
 ---
 
 #### Previous step:
-[Migrate data and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
+[迁移数据 and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
 
 When your code, files, and data is successfully migrated to Staging or Production, use the environment URLs to test your site(s) and store(s). For a list of your URLs, see [Starter]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#starter-urls) and [Pro]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#pro-urls) access information.
 
 The following information provides information on verifying logs, testing Fastly configurations, user acceptence testing (UAT), and more.
 
 ## Log files {#logs}
-If you encounter errors on deployment or other issues when testing, check the log files. Log files are located under the `var/log` directory.
+If you encounter errors on deployment or 其它问题 when testing, check the log files. Log files are located under the `var/log` directory.
 
 The deployment log is located in `/var/log/platform/<prodject ID>/post_deploy.log`. The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. For example, with a project ID of `yw1unoukjcawe`, the Staging user is `yw1unoukjcawe_stg` and the Production user is `yw1unoukjcawe`.
 

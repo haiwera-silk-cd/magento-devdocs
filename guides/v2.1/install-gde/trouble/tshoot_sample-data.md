@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Errors installing optional sample data
-menu_title: Errors installing optional sample data
+title: 安装可选的样本数据发生错误
+menu_title: 安装可选的样本数据发生错误
 menu_node:
 menu_order: 500
 version: 2.1

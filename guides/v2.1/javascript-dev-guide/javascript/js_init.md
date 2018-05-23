@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: Calling and initializing JavaScript
-menu_title: Calling and initializing JavaScript
+title: 调用和初始化js组件
+menu_title: 调用和初始化js组件
 menu_order: 10
 version: 2.1
 github_link: javascript-dev-guide/javascript/js_init.md
@@ -11,7 +11,7 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/js_init.html
 ---
 
-<h2 id="js_init_overview">Overview</h2>
+<h2 id="js_init_overview">概述</h2>
 
 This topic talks about how to insert a [JavaScript component]({{ site.gdeurl }}javascript-dev-guide/bk-javascript-dev-guide.html#js_terms) in `.phtml` page templates and `.js` files in Magento 2.
 
@@ -157,7 +157,7 @@ $('[data-role=example]').accordion();
 
 {%endhighlight%}
 
-To initialize a {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} with options, use notation similar to the following:
+To initialize a {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} with options, use notation similar to the following:
 
 {%highlight js%}
 

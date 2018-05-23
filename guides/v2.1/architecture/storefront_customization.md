@@ -17,7 +17,7 @@ We can generalize about the range of {% glossarytooltip 1a70d3ac-6bd9-475a-8937-
 These four levels of potential storefront customization are listed in order to increase complexity.
 
 ### Extend Magento-Provided CSS
-Magento supplies a default {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} and a LESS-based CSS. You can substantially change a storefront using CSS only. This uncomplicated strategy might suit projects with a limited budget, or might interest developers who create different skins for a site. A small business enter this process of storefront customization by buying a third-party developed theme from Magento Marketplace to extend the default values.
+Magento supplies a default {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} and a LESS-based CSS. You can substantially change a storefront using CSS only. This uncomplicated strategy might suit projects with a limited budget, or might interest developers who create different skins for a site. A small business enter this process of storefront customization by buying a third-party developed theme from Magento Marketplace to extend the default values.
 
 ### Replace PHTML template files
 In addition to extending the default CSS, you can generate different HTML {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %}. For example, you might need to add a missing CSS class name, or an add an extra `<div>` tag to achieve some visual effect. You might also need to tweak some {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} to cope with different HTML markup. This change is more demanding than simply extending Magento CSS, but is still within the grasp of smaller projects and leaner teams.
@@ -38,4 +38,4 @@ Delivering a sharply different shopping experience than the default Magento inst
 
 <a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html" target="_blank">Frontend Developer Guide</a>
 
-<a href="{{ page.baseurl }}/javascript-dev-guide/bk-javascript-dev-guide.html" target="_blank">JavaScript Developer Guide</a>
+<a href="{{ page.baseurl }}/javascript-dev-guide/bk-javascript-dev-guide.html" target="_blank">js开发者手册</a>

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Theme inheritance
-menu_title: Theme inheritance
+title: 主题的继承关系
+menu_title: 主题的继承关系
 menu_order: 70
 version: 2.0
 github_link: frontend-dev-guide/themes/theme-inherit.md
@@ -14,11 +14,11 @@ functional_areas:
 
 <h2 id="theme-inherit-over">What's in this topic</h2>
 
-{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}Theme{% endglossarytooltip %} inheritance enables you to easily extend themes and minimize the maintenance efforts. You can use an existing theme as a basis for customizations, or minor store design updates, like holidays decoration. Rather than copy extensive theme files and modify what you want to change, you can add overriding and extending files.
+{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} inheritance enables you to easily extend themes and minimize the maintenance efforts. You can use an existing theme as a basis for customizations, or minor store design updates, like holidays decoration. Rather than copy extensive theme files and modify what you want to change, you can add overriding and extending files.
 
 The level of theme inheritance is not limited.
 
-Theme inheritance is based on the fallback mechanism, which guarantees that if a view file is not found in the current theme, the system searches in the ancestor themes, {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} view files or {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}.
+主题的继承关系 is based on the fallback mechanism, which guarantees that if a view file is not found in the current theme, the system searches in the ancestor themes, {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} view files or {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}.
 
 The fallback order is slightly different for static assets (CSS, JavaScript, fonts and images) and other theme files, layouts and templates. The article describes the fallback for each type of theme files, and provides an overview of how to override ancestor themes and module designs.
 
@@ -156,7 +156,7 @@ To do this, they added an extending layout in `app/design/frontend/OrangeCo/oran
 {%endhighlight xml%}
 
 
-For more information about extending layout refer to the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">Extend a layout</a> article.
+For more information about extending layout refer to the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a> article.
 
 ## Override layouts {#theme-inherit-layout-over}
 

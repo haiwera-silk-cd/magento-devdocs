@@ -1,7 +1,7 @@
 ---
 group: jsdg
-title: Conventional notations used in this Guide
-menu_title: Conventional notations used in this Guide
+title: 本手册中使用的常规符号
+menu_title: 本手册中使用的常规符号
 menu_order: 2
 version: 2.1
 github_link: javascript-dev-guide/conventions_js.md
@@ -15,9 +15,9 @@ The following relative paths are used for modules and themes:
 
 **- `<theme_dir>`**
 
-{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}Theme{% endglossarytooltip %} directory. Usually used when talking about custom themes, or any theme in general.
+{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} directory. Usually used when talking about custom themes, or any theme in general.
 
-For Magento out of the box {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} themes, usually one of the following:
+For Magento out of the box {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} themes, usually one of the following:
 
  - `app/design/frontend/Magento/<theme>`
  - `vendor/magento/theme-frontend-<theme>`

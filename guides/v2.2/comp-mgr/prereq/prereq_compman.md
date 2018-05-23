@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 02_prereq
-title: Prerequisites
-menu_title: Prerequisites
+title: 先决条件
+menu_title: 先决条件
 menu_order: 1
 menu_node: parent
 version: 2.2

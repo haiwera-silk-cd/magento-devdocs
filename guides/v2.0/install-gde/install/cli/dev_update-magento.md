@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 99_contrib
-title: Update the Magento application
-menu_title: Update the Magento application
+title: 更新Magento
+menu_title: 更新Magento
 menu_order: 2
 menu_node:
 version: 2.0

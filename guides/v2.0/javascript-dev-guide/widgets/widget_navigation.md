@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Navigation widget
+title: 导航栏小工具
 menu_order: 11
-menu_title: Navigation widget
+menu_title: 导航栏小工具
 version: 2.0
 github_link: javascript-dev-guide/widgets/widget_navigation.md
 redirect_from:
@@ -11,21 +11,21 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_navigation.html
 ---
 
-<h2>Overview</h2>
-Magento navigation widget is a customized <a href="http://api.jqueryui.com/menu/" target="_blank">jQuery UI Menu widget</a>. Magento navigation extends the default functionality with the following:
+<h2>概述</h2>
+Magento 导航栏小工具 is a customized <a href="http://api.jqueryui.com/menu/" target="_blank">jQuery UI 菜单小工具</a>. Magento navigation extends the default functionality with the following:
 <ul>
 <li>Expanding all layers of the menu tree past the second layer.</li>
 <li>Limiting the maximum number of list items contained within the main navigation (overflow items are placed into a secondary navigation level).</li>
 <li>Method for handling the responsive {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} of the menu.</li>
 </ul>
 
-The navigation {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/menu.js" target="_blank">lib/web/mage/menu.js</a>
+The navigation {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/menu.js" target="_blank">lib/web/mage/menu.js</a>
 
-<h2 id="navigation_init">Initialize the navigation widget</h2>
+<h2 id="navigation_init">Initialize the 导航栏小工具</h2>
 For information about how to initialize a widget in a JS component or `.phtml` template, see the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Initialize JavaScript</a> topic.
 
 <h2 id="navigation_options">Options</h2>
-The navigation widget has the following options:
+The 导航栏小工具 has the following options:
 <ul>
 <li><a href="#n_breakpoint">breakpoint</a></li>
 <li><a href="#n_container">container</a></li>
@@ -68,7 +68,7 @@ Set the text for the overflow menu (i.e. more)
 
 <h3 id="n_responsiveAction"><code>responsiveAction</code></h3>
 
-The default responsive handler for the navigation widget.
+The default responsive handler for the 导航栏小工具.
 
 **Type**: String
 

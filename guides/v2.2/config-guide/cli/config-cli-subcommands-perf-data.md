@@ -20,7 +20,7 @@ You can adjust the amount of data you create using *profiles* (small, medium, la
 
 The following figure shows how a product is displayed on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} using the small profile:
 
-![Sample storefront with generated data]({{ site.baseurl }}/common/images/config_generate-data.png){:width="550px"}
+![Sample storefront with generated data]({{ site.magentourl }}/common/images/config_generate-data.png){:width="550px"}
 
 ## 第一步 {#config-cli-before}
 {% include install/first-steps-cli.html %}
@@ -486,7 +486,7 @@ Generates websites. XML profile node:
 &lt;websites>{int}&lt;/websites></pre>
 
 ### Store groups {#config-cli-gen-stores}
-Generates store groups (referred to in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} as _stores_). Store groups are distributed normally among websites.
+Generates store groups (referred to in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as _stores_). Store groups are distributed normally among websites.
 
 XML profile node:
 

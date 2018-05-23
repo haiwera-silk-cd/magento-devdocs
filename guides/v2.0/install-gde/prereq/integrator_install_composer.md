@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: S_Integrator
-title: Install Composer
-menu_title: Install Composer
+title: 安装Composer
+menu_title: 安装Composer
 menu_order: 2
 menu_node:
 version: 2.0
@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-## Install Composer {#instgde-prereq-compose-install}
+## 安装Composer {#instgde-prereq-compose-install}
 
 {% include install/composer-clone.md %}
 

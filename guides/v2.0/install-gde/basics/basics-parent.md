@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: Just the basics
-menu_title: Just the basics
+subgroup: 起步
+title: 基础
+menu_title: 基础
 menu_order: 100
 menu_node:
 level3_menu_node: level3parent

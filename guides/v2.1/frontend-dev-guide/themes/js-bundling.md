@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: JavaScript Bundling
-menu_title: JavaScript Bundling
+title: js打包
+menu_title: js打包
 menu_order: 9000
 version: 2.1
 github_link: frontend-dev-guide/themes/js-bundling.md

@@ -13,7 +13,7 @@ To get started, edit your local version of this file, using the {% glossarytoolt
 
 Your contributions to our Docs and your experience with using Magento, are very valued and appreciated. Let us know if you have any questions!
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview">概述</h2>
 PROVIDE OVERVIEW OF TOPIC HERE
 
 <h2 id="H2">HEADING 2</h2>
@@ -52,7 +52,7 @@ See the markdown version of this file for examples.
 {% endcollapsible %}
 
 {% collapsible Click to show/hide image %}
-![This is an image]({{ site.baseurl }}/common/images/connect_keys2.png)
+![This is an image]({{ site.magentourl }}/common/images/connect_keys2.png)
 {% endcollapsible %}
 
 {% collapsible HTML Table %}

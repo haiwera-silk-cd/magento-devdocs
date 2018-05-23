@@ -1,6 +1,6 @@
 <div markdown="1">
 
-The following table discusses where to get the Magento software. We provide the following downloads:
+The following table discusses where to 获取Magento. We provide the following downloads:
 
 *	Magento Commerce software only
 *	Magento Commerce software with sample data (designed to help you learn Magento faster)

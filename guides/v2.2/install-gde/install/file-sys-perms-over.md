@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Overview of ownership and permissions
-menu_title: Overview of ownership and permissions
+subgroup: 先决条件
+title: 所有者和权限概述
+menu_title: 所有者和权限概述
 menu_node:
 menu_order: 30
 level3_menu_node: level3child

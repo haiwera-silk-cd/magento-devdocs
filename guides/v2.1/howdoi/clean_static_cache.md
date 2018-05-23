@@ -11,7 +11,7 @@ github_link: howdoi/clean_static_cache.md
 
 You can clean generated static view files in any of the following ways:
 
--   In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}. Go to **System** > **Tools** > **Cache Management** and click **Flush {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}Static Files{% endglossarytooltip %} Cache**.
+-   In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. Go to **System** > **Tools** > **Cache Management** and click **Flush {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}Static Files{% endglossarytooltip %} Cache**.
 
     <div class="bs-callout bs-callout-info" id="info" markdown="1">
     This option is only availble in `developer` mode. Refer to the [static view files overview]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview) for more information.

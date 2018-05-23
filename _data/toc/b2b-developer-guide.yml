@@ -1,7 +1,7 @@
 label: B2B Developer Guide
 pages:
 
-    - label: Introduction
+    - label: 介绍
       url: /b2b/bk-b2b.html
 
     - label: Integrate with B2B using REST

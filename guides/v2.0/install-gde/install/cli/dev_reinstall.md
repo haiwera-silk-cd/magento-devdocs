@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 99_contrib
-title: Reinstall the Magento software
-menu_title: Reinstall the Magento software
+title: 重装Magento
+menu_title: 重装Magento
 menu_order: 200
 menu_node:
 version: 2.0

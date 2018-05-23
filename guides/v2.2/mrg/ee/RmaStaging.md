@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento_RmaStaging module
+title: Magento_RmaStaging模块
 menu_title: RmaStaging
 menu_order: 2
 version: 2.2
@@ -17,17 +17,17 @@ RMA stands for a return merchandise {% glossarytooltip 34ecb0ab-b8a3-42d9-a728-0
 
 ## Implementation details
 
-The Magento_RmaStaging module extends the following Magento_Rma module functionality to be used in staging mode:
+The Magento_RmaStaging模块 extends the following Magento_Rma模块 functionality to be used in staging mode:
 
 - Adds the Autosettings field set to the Schedule update form of a product.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_RmaStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_RmaStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_RmaStaging module. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_RmaStaging module.
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_RmaStaging模块. [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_RmaStaging模块.
 
 ## Additional information
 

@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Feedback to User
-title: Admin Design Pattern Library
-menu_title: Progress Indicator
+title: 管理面板用到的设计模式和库
+menu_title: 进度条
 menu_order: 1
 menu_node: 
 version: 2.1
@@ -96,7 +96,7 @@ The spinner can be any of these 4 sizes.
 
 <h3 id="assets">Assets</h3>
 PSD files and gif images can be found here:
-<a href="src/magento-progressbar.zip">Download Progress Indicator PSD and GIF source</a>
+<a href="src/magento-progressbar.zip">Download 进度条 PSD and GIF source</a>
 
 
 For any other resources, please contact the Magento UX Design Team

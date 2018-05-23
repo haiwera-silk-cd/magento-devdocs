@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: D_CSS_G
-title: Simple style changes with client-side LESS compilation vs. server-side
-menu_title: Simple style changes with client-side LESS compilation vs. server-side
+title: 客户端LESS样式编译与服务器简单修改
+menu_title: 客户端LESS样式编译与服务器简单修改
 menu_order: 2
 version: 2.0
 github_link: frontend-dev-guide/css-guide/css_quick_guide_mode.md
@@ -11,7 +11,7 @@ functional_areas:
 ---
 <h2> What's in this topic </h2>
 
-After you <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">create a theme</a>, before starting to change the styles, is deciding, which LESS compilation mode you will use. There are <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#LESS compilation modes" target="_blank">two modes available in Magento</a>: server-side compilation mode and client-side (recommended for {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} development).
+After you <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">create a theme</a>, before starting to change the styles, is deciding, which LESS compilation mode you will use. There are <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#LESS compilation modes" target="_blank">two modes available in Magento</a>: server-side compilation mode and client-side (recommended for {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} development).
 This topic demonstrates on a practical example how the choice of the mode influences the styles development.
 
 The first step, creating and applying a theme is done before the compilation mode is chosen, so it is described only once, but is required whatever compilation mode you will further use.
@@ -25,7 +25,7 @@ In our examples we will change the color and font of the primary buttons. The de
 <h2 id="first_step">First step: Create and apply a theme</h2>
 
 1. Create a new theme as described in the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">Create a theme</a> topic. In your `theme.xml` specify Magento Luma or Magento Blank as a parent theme.
-2. <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html#theme-apply-apply">Apply your theme</a> in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+2. <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html#theme-apply-apply">Apply your theme</a> in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 Server-side is the default mode for LESS compilation, so if you do not change this, your Magento instance is using server-side compilation mode.
 
@@ -95,7 +95,7 @@ Where <code>&lt;your_theme&gt;</code> is the code of your theme. Conventionally 
 <ol>
 <li>Create and apply a theme.</li>
 <li>In your theme directory, add <code>web/css/source/_extend.less</code>.</li>
-<li>In the Magento Admin, change the LESS compilation mode to client-side under <b>STORES</b> > <b>Configuration</b> > <b>ADVANCED</b> > <b>Developer</b> > <b>Front-end development workflow</b> > <b>Workflow type</b>. For detailed description see the <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#less_modes">CSS preprocessing</a> topic.</li>
+<li>In the Magento Admin, change the LESS compilation mode to client-side under <b>STORES</b> > <b>Configuration</b> > <b>ADVANCED</b> > <b>Developer</b> > <b>Front-end development workflow</b> > <b>Workflow type</b>. For detailed description see the <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#less_modes">CSS预处理</a> topic.</li>
 <li markdown="1">[Clean static files cache]({{ page.baseurl }}/howdoi/clean_static_cache.html)
 </li>
 <li>Change the color of the buttons by adding the following code in <code>_extend.less</code>:
@@ -121,5 +121,5 @@ If your Magento instance uses the client-side compilation mode, simple changes a
 <h2>Recommended reading</h2>
 <ul>
 <li><a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css_debug.html" target="_blank">Styles debugging</a></li>
-<li><a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html" target="_blank">CSS preprocessing</a></li>
+<li><a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html" target="_blank">CSS预处理</a></li>
 </ul>

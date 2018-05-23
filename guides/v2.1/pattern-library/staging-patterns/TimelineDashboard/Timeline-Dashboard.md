@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Staging Patterns
-title: Magento Admin Pattern Library
+title: Magento管理面板用到的设计模式和库
 menu_title: Timeline Dashboard
 menu_order: 1
 menu_node: 
@@ -14,13 +14,13 @@ github_link: pattern-library/staging-patterns/TimelineDashboard/Timeline-Dashboa
 
 <h3> Contents </h3>
 
-* <a href="#overview">Overview</a>
+* <a href="#overview">概述</a>
 * <a href="#when-to-use">When to Use / When Not to Use</a>
 * <a href="#terminology">Staging terminology and definitions</a>
 * <a href="#examples">Interaction and Behavior</a> 
 * <a href="#assets">Assets</a>
 
-<h3 id="overview">Overview</h3>
+<h3 id="overview">概述</h3>
 This dashboard provides a page where events and processes can be viewed and managed in one place. <br>
 
 Staging usage: Within Magento, users need to see which stage-able entities are published or scheduled to be published. Since most of Magento’s entities can be staged – the display of all this information is important to show users the full scope of updates at a glance. 
@@ -79,7 +79,7 @@ A horizontal scrollbar at the bottom of the timeline provides the capability to 
 This is a variation of the timeline. This view only appears when stage-able entities on the timeline need to be ordered by priority. In the example displayed below – the priority scale has been used to display the sort order of the rules. To re-arrange the order, an item on the timeline can be dragged and moved.
 <img src="img/priority-schedule.jpg">
 
-#### Data Table View:
+#### 数据表格 View:
 This is an alternative view to the timeline in data table format. The functionalities of the timeline and the data table are consistent except for the pagination feature, which is used for data table view only.
 <img src="img/table-view.jpg">
 

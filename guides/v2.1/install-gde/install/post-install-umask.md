@@ -1,8 +1,8 @@
 ---
 group: install
 subgroup: 05_umask
-title: Optionally set a umask
-menu_title: Optionally set a umask
+title: 选择性设置umask
+menu_title: 选择性设置umask
 menu_node: parent
 menu_order: 5
 version: 2.1

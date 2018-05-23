@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Container
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Tabs
 menu_order: 3
 menu_node: 

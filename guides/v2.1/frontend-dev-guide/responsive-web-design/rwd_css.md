@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: E_rwd
-title: CSS in responsive design
-menu_title: CSS in responsive design
+title: 响应式设计中的CSS
+menu_title: 响应式设计中的CSS
 menu_order: 2
 version: 2.1
 github_link: frontend-dev-guide/responsive-web-design/rwd_css.md
@@ -13,11 +13,11 @@ functional_areas:
 
 <h2>What's in this topic</h2>
 
-Stylesheets are the main tool in responsive web design (RWD) implementation. This topic describes the mechanisms and approaches to building RWD used in the default Magento themes. To re-use them in your custom theme, make your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherit</a> from the Magento basic Blank theme.
+Stylesheets are the main tool in responsive web design (RWD) implementation. This topic describes the mechanisms and approaches to building RWD used in the default Magento themes. To re-use them in your custom theme, make your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherit</a> from the Magento basic Blank theme.
 
 <h2 id="lib_rwd">Media queries in Magento default themes</h2>
 
-The Blank and Luma theme styles are based on the <a href="{{ page.baseurl }}/frontend-dev-guide//css-topics/theme-ui-lib.html" target="_blank">Magento UI library</a>. The library uses <a href="http://en.wikipedia.org/wiki/Media_queries" target="_blank">CSS3 media queries</a>, an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <code>@media</code> rule, to adapt the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} to the screen width.
+The Blank and Luma theme styles are based on the <a href="{{ page.baseurl }}/frontend-dev-guide//css-topics/theme-ui-lib.html" target="_blank">Magento UI库</a>. The library uses <a href="http://en.wikipedia.org/wiki/Media_queries" target="_blank">CSS3 media queries</a>, an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <code>@media</code> rule, to adapt the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} to the screen width.
 
 According to the approach implemented in the library, the <code>.media-width()</code> {% glossarytooltip 1a305bdb-9be8-44aa-adad-98758821d6a7 %}mixin{% endglossarytooltip %} can be used in any <code>.less</code> file in your theme, as many times as you need, but it is invoked only once, in <code>lib/web/css/source/lib/_responsive.less</code>. The resulting <code>styles.css</code> has only one call of each media query with all the rules there, instead of multiple calls for the same query.
 
@@ -57,7 +57,7 @@ In the Blank theme, the mobile and desktop styles are defined in separate files:
 <h2>Related topics</h2>
 
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html">Create a theme</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI library</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI库</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_js.html">JavaScript in a responsive design</a>
 
 

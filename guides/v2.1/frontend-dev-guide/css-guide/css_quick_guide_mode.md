@@ -1,6 +1,6 @@
 ---
 group: fedg
-title: Simple style changes with client-side LESS compilation vs. server-side
+title: 客户端LESS样式编译与服务器简单修改
 version: 2.1
 github_link: frontend-dev-guide/css-guide/css_quick_guide_mode.md
 functional_areas:
@@ -10,18 +10,18 @@ functional_areas:
 After you [create a theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html), you need to decide which LESS compilation mode to use before changing styles. You can choose between [two modes]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html#LESS compilation modes):
 
 - Server-side compilation mode (default)
-- Client-side compilation mode (recommended for {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} development)
+- Client-side compilation mode (recommended for {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} development)
 
 The examples in this topic use the [simple approach]({{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html#simple_extend) for customizing theme styles. You make changes to the `_extend.less` file.
 
 In our examples, we will change the color and font of the primary buttons. The default view of the primary buttons can be illustrated by the **Create an Account** button view on the Customer login page:
 
-![Admin login page with the default view of the primary buttons]({{ site.baseurl }}/common/images/extend_less_screenshot21.png)
+![Admin login page with the default view of the primary buttons]({{ site.magentourl }}/common/images/extend_less_screenshot21.png)
 
 ## Before you begin
 
 1. [Create a theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html). In your `theme.xml` file, specify Magento Luma or Magento Blank as the parent theme.
-2. [Apply your theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html#theme-apply-apply) in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+2. [Apply your theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html#theme-apply-apply) in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 ## Using server-side compilation mode
 
@@ -42,7 +42,7 @@ The following is an illustration of how the process of making simple changes loo
 1. [Clean static files cache]({{ page.baseurl }}/howdoi/clean_static_cache.html).
 1. Refresh the page and verify your changes.
 
-    ![Less code redefining the color of the primary buttons]({{ site.baseurl }}/common/images/extend_less_screenshot121.png)
+    ![Less code redefining the color of the primary buttons]({{ site.magentourl }}/common/images/extend_less_screenshot121.png)
 
 1. Change the button font by adding the following code in the `_extend.less` file:
 
@@ -64,7 +64,7 @@ The following is an illustration of how the process of making simple changes loo
 
 1. Refresh the page and verify your changes.
 
-    ![Admin login page where the font of the buttons was changed]({{ site.baseurl }}/common/images/extend_less_screenshot221.png)
+    ![Admin login page where the font of the buttons was changed]({{ site.magentourl }}/common/images/extend_less_screenshot221.png)
 
 {:.bs-callout .bs-callout-info}
 If you are using server-side compilation mode, you must [clean generated static view files]({{ page.baseurl }}/howdoi/clean_static_cache.html). Continue to the next section to learn how to use Grunt to automate this process.
@@ -92,7 +92,7 @@ If you are using server-side compilation mode, you must [clean generated static 
 
 1. Refresh the page and verify your changes.
 
-    ![Admin login page where the color of the button was changed]({{ site.baseurl }}/common/images/extend_less_screenshot121.png)
+    ![Admin login page where the color of the button was changed]({{ site.magentourl }}/common/images/extend_less_screenshot121.png)
 
 1. Change the button font by adding the following code in the `_extend.less` file:
 
@@ -108,7 +108,7 @@ If you are using server-side compilation mode, you must [clean generated static 
 
 1. Refresh the page and verify your changes.
 
-    ![Admin login page where the font of the buttons was changed]({{ site.baseurl }}/common/images/extend_less_screenshot221.png)
+    ![Admin login page where the font of the buttons was changed]({{ site.magentourl }}/common/images/extend_less_screenshot221.png)
 
 ## Using client-side compilation mode
 
@@ -130,7 +130,7 @@ If you are using server-side compilation mode, you must [clean generated static 
 
 1. Refresh the page and verify your changes.
 
-    ![Admin login page where the font of the buttons was changed]({{ site.baseurl }}/common/images/extend_less_screenshot121.png)
+    ![Admin login page where the font of the buttons was changed]({{ site.magentourl }}/common/images/extend_less_screenshot121.png)
 
 1. Change the button font by adding the following code in the `_extend.less` file:
 
@@ -146,7 +146,7 @@ If you are using server-side compilation mode, you must [clean generated static 
 
 1. Refresh the page and verify your changes.
 
-    ![Admin login page where the font of the buttons was changed]({{ site.baseurl }}/common/images/extend_less_screenshot221.png)
+    ![Admin login page where the font of the buttons was changed]({{ site.magentourl }}/common/images/extend_less_screenshot221.png)
 
 {:.bs-callout .bs-callout-info}
 Simple changes are applied immediately in client-side compilation mode. For more sophisticated changes, you might need to manually clean the theme sub-directory in the `pub/static/frontend` directory. See [Styles debugging]({{ page.baseurl }}/frontend-dev-guide/css-topics/css_debug.html#css_debug_client).

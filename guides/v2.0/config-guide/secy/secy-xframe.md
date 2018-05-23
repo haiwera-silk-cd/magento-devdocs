@@ -31,7 +31,7 @@ Set a value for `X-Frame-Options` in `<your Magento install dir>/app/etc/env.php
 
 	  'x-frame-options' => 'SAMEORIGIN',
 
-We require you to edit `env.php` because it's more secure than setting a value in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+We require you to edit `env.php` because it's more secure than setting a value in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 ## Verify your setting for `X-Frame-Options`
 To verify your setting, view HTTP headers on any storefront page. There are several ways to do this, including using a web browser inspector.

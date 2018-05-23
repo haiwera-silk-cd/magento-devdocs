@@ -34,7 +34,7 @@ To install sample data:
 		git add -A && git commit -m "Install sample data"
 		git push origin <branch name>
 5.	Wait for the project to deploy.
-6.	Verify the installation was successful by going to your storefront main page in the Integration environment. You can locate the URL link to the storefront through the Project Web Interface.
+6.	验证你的安装 was successful by going to your storefront main page in the Integration environment. You can locate the URL link to the storefront through the Project Web Interface.
 7.	Take a snapshot of your environment:
 
 		magento-cloud snapshot:create -e <environment ID>

@@ -26,7 +26,7 @@ This topic discusses how to set up database caching and how to verify database c
 </div>
 
 <h2 id="mage-cache-db-prereq">先决条件</h2>
-Before you continue, if you're using your own frontend cache, make sure you <a href="{{ page.baseurl }}/config-guide/config/caching_frontend-cache-types.html">associate cache frontends with cache types</a>. If you're using the `default` {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} cache, you don't have to do that.
+Before you continue, if you're using your own frontend cache, make sure you <a href="{{ page.baseurl }}/config-guide/config/caching_frontend-cache-types.html">associate cache frontends with cache types</a>. If you're using the `default` {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} cache, you don't have to do that.
 
 We provide <a href="#mage-cache-db-config">sample configurations</a> at the end of this topic.
 

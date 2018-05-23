@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: _after
-title: After Migration
-menu_title: After Migration
+title: 迁移之后
+menu_title: 迁移之后
 menu_node: parent
 menu_order: 7
 version: 2.0

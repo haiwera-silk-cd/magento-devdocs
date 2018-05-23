@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Create a test in the Functional Testing Framework
+title: 在功能测试框架中创建测试
 version: 2.0
 github_link: mtf/create_test/new_test.md
 ---
@@ -41,7 +41,7 @@ The test object is represented by a [fixture][].  The fixture defines properties
 There are two types of test data:
 
  - Data for the test, stored in a [data set][].
- - Preconditions:
+ - 先决条件:
     - Sample data that is stored in a [fixture repository][]. In a data set, it is stored as a name of the fixture repository. 
     - A sample test entity that can be created by a [handler][].
 

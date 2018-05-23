@@ -3,13 +3,13 @@ group: styleguide
 subgroup: Admin Style Guide
 title: Admin Style Guide
 landing-page: Admin Style Guide
-menu_title: Introduction
+menu_title: 介绍
 menu_order: 1
 menu_node:
 version: 2.2
 github_link: design-styleguide/bk-styleguide.md
 ---
-The Magento Admin guide sets our foundational design, writing, and content standards for the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} software. For more specific user-interface standards, see the [Admin Design Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html).
+The Magento Admin guide sets our foundational design, writing, and content standards for the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} software. For more specific user-interface standards, see the [管理面板用到的设计模式和库]({{ page.baseurl }}/pattern-library/bk-pattern.html).
 
 **Why follow the style guide?** A style guide is the best tool for designers and writers to establish and maintain consistency, which improves communication throughout the application. A seamless look-and-feel and a steady, encouraging writing style make the application usable and engaging.
 
@@ -31,7 +31,7 @@ The Magento Admin guide sets our foundational design, writing, and content stand
 
 * **[Errors and Messages Writing]({{ page.baseurl }}/design-styleguide/errors-and-messages/errors-and-messages.html)** — Establishes how to communicate with users when errors occur or important information needs to be communicated.
 
-* **[Buttons and Links Usage]({{ page.baseurl }}/design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html)** — Defines the differences between buttons and links and when they can be used as calls to action.
+* **[按钮 and Links Usage]({{ page.baseurl }}/design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html)** — Defines the differences between buttons and links and when they can be used as calls to action.
 
 * **[Capitalization]({{ page.baseurl }}/design-styleguide/capitalization/capitalization.html)** — Provides guidance for how we use sentence case, title case, and all caps.
 
@@ -43,4 +43,4 @@ The Magento Admin guide sets our foundational design, writing, and content stand
 
 ## Related Links
 
-[Admin Design Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html)
+[管理面板用到的设计模式和库]({{ page.baseurl }}/pattern-library/bk-pattern.html)

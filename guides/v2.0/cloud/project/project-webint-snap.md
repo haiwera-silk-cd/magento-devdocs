@@ -37,7 +37,7 @@ To create an environment snapshot using the Magento Web Interface:
 
 1.	[Log in to your project]({{ page.baseurl }}/cloud/project/project-webint-basic.html#project-access).
 2.	In the left pane, click the name of the environment to back up.
-3.	In the top pane, click ![Take a snapshot of an environment]({{ site.baseurl }}/common/images/cloud_snapshots.png){:width="30px"} (snapshots).
+3.	In the top pane, click ![Take a snapshot of an environment]({{ site.magentourl }}/common/images/cloud_snapshots.png){:width="30px"} (snapshots).
 4.	You are required to confirm the action.
 
 To create an environment snapshot using the Magento CLI:
@@ -64,7 +64,7 @@ To restore an environment's snapshot using the Magento Web Interface:
 
 	The following figure shows an example.
 
-	![Take a snapshot of an environment]({{ site.baseurl }}/common/images/cloud_snapshot-restore.png)
+	![Take a snapshot of an environment]({{ site.magentourl }}/common/images/cloud_snapshot-restore.png)
 4.	You are required to confirm the action.
 
 To restore an environment snapshot using the Magento CLI:
@@ -109,7 +109,7 @@ To create a copy of your database, you dump the data from the database to a file
 
     mysqldump -h <database host> --user=<database user name> --password=<password> --single-transaction --triggers <database name> | gzip - > /tmp/database.sql.gz
 
-If you want to push this data into an environment, see [Migrate data and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
+If you want to push this data into an environment, see [迁移数据 and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
 
 ## Rollbacks to remove code {#rollback-code}
 We recommend creating a snapshot of the environment and a backup of the database prior to deployments.

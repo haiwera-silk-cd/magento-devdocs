@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 03_install
-title: Step 1. Readiness check
-menu_title: Step 1. Readiness check
+title: 步骤1.准备就绪检查
+menu_title: 步骤1.准备就绪检查
 menu_order: 3
 menu_node:
 version: 2.0
@@ -16,5 +16,5 @@ functional_areas:
 {% include install/web/install-web_1-readiness.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_install_2_db.html">Step 2. Add a database</a>
+<a href="{{ page.baseurl }}/install-gde/install/hosted/hosted_install_2_db.html">步骤2.添加数据库</a>
 

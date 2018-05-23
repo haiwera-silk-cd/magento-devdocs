@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_github
-title: Cannot clone the Magento GitHub repository
-menu_title: Cannot clone the Magento GitHub repository
+title: Magento仓库克隆不下来
+menu_title: Magento仓库克隆不下来
 menu_node:
 menu_order: 400
 version: 2.0

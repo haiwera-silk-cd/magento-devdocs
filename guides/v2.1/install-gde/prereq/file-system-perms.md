@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Prerequisites
-title: Set pre-installation ownership and permissions
-menu_title: Set pre-installation ownership and permissions
+subgroup: 先决条件
+title: 安装前设置所有者和权限
+menu_title: 安装前设置所有者和权限
 menu_order: 35
 menu_node:
 level3_menu_node: level3child

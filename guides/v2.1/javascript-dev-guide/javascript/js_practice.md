@@ -1,8 +1,8 @@
 ---
 group: jsdg
 subgroup: 1_Javascript
-title: Customizing JavaScript illustration
-menu_title: Customizing JavaScript illustration
+title: 图解如何定制js组件
+menu_title: 图解如何定制js组件
 menu_order: 25
 version: 2.1
 github_link: javascript-dev-guide/javascript/js_practice.md
@@ -11,8 +11,8 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/js_practice.html
 ---
 
-<h2 id="practice_overview">Overview</h2>
-This topic features a step-by-step illustration of how to customize a {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} and how to use a custom widget instead the default Magento one.
+<h2 id="practice_overview">概述</h2>
+This topic features a step-by-step illustration of how to customize a {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} and how to use a custom widget instead the default Magento one.
 
 <h2>Customize a default Magento jQuery widget</h2>
 
@@ -49,7 +49,7 @@ To be able to extend `gallery.js`, OrangeCo needs to know the path to it. To get
 
 <img src="{{ site.baseurl }}/common/images/fdg_pr_2.png" alt="RequireJS config file">
 
-<h3 id="add_code1">Step 2: Add the custom widget extending the gallery widget</h3>
+<h3 id="add_code1">Step 2: Add the custom widget extending the 相册小工具</h3>
 
 In the `app/design/OrangeCo/orange/web/js` OrangeCo adds `orange-gallery.js` with the following content:
 <pre>
@@ -97,7 +97,7 @@ Using the approach described in the previous section, OrangeCo defines that the 
 
 <h3>Step 2: Add the custom script to the file system</h3>
 
-For the jCarousel widget to be able to use the configuration passed to the gallery widget,
+For the jCarousel widget to be able to use the configuration passed to the 相册小工具,
 OrangeCo needs to add a "wrapper" script.
 
 To do this, OrangeCo adds the following files in the `app/design/OrangeCo/orange/web/js` directory:
@@ -140,4 +140,4 @@ var config = {
 </pre>
 
 ## Recommended reading ##
-<a href="{{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html" target="_blank">Use custom JavaScript</a>
+<a href="{{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html" target="_blank">使用定制脚本</a>

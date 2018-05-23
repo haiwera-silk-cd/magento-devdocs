@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Using custom CSS preprocessor
-menu_title: Using custom CSS preprocessor
+title: 使用自定义css预处理器
+menu_title: 使用自定义css预处理器
 menu_order: 7
 menu_node:
 level3_menu_node: level3parent

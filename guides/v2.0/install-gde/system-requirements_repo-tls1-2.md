@@ -1,8 +1,8 @@
 ---
 group: install_pre
-subgroup: Getting Started
-title: TLS requirement for repo.magento.com
-menu_title: TLS requirement for repo.magento.com
+subgroup: 起步
+title: repo.magento.com的TLS要求
+menu_title: repo.magento.com的TLS要求
 menu_node:
 menu_order: 102
 level3_menu_node: level3child

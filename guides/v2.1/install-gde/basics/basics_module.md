@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 模块和组件有什么不同吗?
 menu_title: 模块和组件有什么不同吗?
 menu_node:

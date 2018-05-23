@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_ConfigurableNegotiableQuote module
+title: Magento_ConfigurableNegotiableQuote模块
 menu_title: ConfigurableNegotiableQuote
 menu_order: 80
 version: 2.2
@@ -31,7 +31,7 @@ The `Magento_ConfigurableNegotiableQuote` module has a dependency on the `Magent
 
 Extension developers can interact with the `Magento_ConfigurableNegotiableQuote` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ConfigurableNegotiableQuote module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ConfigurableNegotiableQuote模块.
 
 ## Additional information
 

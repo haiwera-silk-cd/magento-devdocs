@@ -1,9 +1,9 @@
 ---
 group: jsdg
 subgroup: 3_Widgets
-title: Modal widget
+title: 模态弹窗小工具
 menu_order: 10
-menu_title: Modal widget
+menu_title: 模态弹窗小工具
 version: 2.1
 github_link: javascript-dev-guide/widgets/widget_modal.md
 redirect_from:
@@ -11,18 +11,18 @@ redirect_from:
   - guides/v1.0/frontend-dev-guide/javascript/widget_modal.html
 ---
 
-<h2 id="modal_overview">Overview</h2>
+<h2 id="modal_overview">概述</h2>
 
-The Magento modal {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}widget{% endglossarytooltip %} implements a secondary window that opens on top of the main window. It contains the overlay and modal content. The modal widget configuration enables the following:
+The Magento modal {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} implements a secondary window that opens on top of the main window. It contains the overlay and modal content. The 模态弹窗小工具 configuration enables the following:
 
 <ul>
 <li>Configuring as popup or slide</li>
-<li>Controlling stack of modal widgets</li> 
+<li>Controlling stack of 模态弹窗小工具s</li> 
 <li>Setting buttons for action bar</li>
 </ul>
 
 
-The modal widget source is <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/modal/modal.js" target="_blank"><code>&lt;Magento_Ui_module_dir&gt;/view/base/web/js/modal/modal.js</code></a>
+The 模态弹窗小工具 source is <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/modal/modal.js" target="_blank"><code>&lt;Magento_Ui_module_dir&gt;/view/base/web/js/modal/modal.js</code></a>
 
 
 The widget uses the following templates:
@@ -30,9 +30,9 @@ The widget uses the following templates:
 - <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/templates/modal/modal-popup.html" target="_blank"><code>&lt;Magento_Ui_module_dir&gt;/view/base/web/templates/modal/modal-popup.html</code></a> popup type template.
 - <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/templates/modal/modal-slide.html" target="_blank"><code>&lt;Magento_Ui_module_dir&gt;/view/base/web/templates/modal/modal-slide.html</code></a> slide type template.
 
-The design patterns for the modal pop-up windows in the Admin are described in the <a href="{{ page.baseurl }}/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html#modals">Magento Admin Pattern Library, the Slide-out Panels, Modal Windows, and Overlays topic.</a> 
+The design patterns for the modal pop-up windows in the Admin are described in the <a href="{{ page.baseurl }}/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html#modals">Magento管理面板用到的设计模式和库, the Slide-out Panels, Modal Windows, and Overlays topic.</a> 
 
-<h2 id="modal_initialize">Initialize the modal widget</h2>
+<h2 id="modal_initialize">Initialize the 模态弹窗小工具</h2>
 
 To initialize the widget in your script, use the following general notation:
 <pre>
@@ -46,7 +46,7 @@ $('#modal_content').modal({
 For details about how to initialize the widget in a`.phtml` template, refer to the <a href="{{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html" target="_blank">Javascript initialization</a> topic.
 
 <h2 id="modal_options">Options</h2>
-The modal widget has the following options:
+The 模态弹窗小工具 has the following options:
 <ul>
 <li><a href="#modal_autoopen">autoOpen</a></li>
 <li><a href="#modal_buttons">buttons</a></li>
@@ -155,7 +155,7 @@ The type of window: popup or slide.
 **Default value**: `popup`
 
 <h2 id="modal_methods">Methods</h2>
-The modal widget has the following methods:
+The 模态弹窗小工具 has the following methods:
 <ul>
 <li><a href="#modal_close">closeModal()</a></li>
 <li><a href="#modal_open">openModal()</a></li>
@@ -170,7 +170,7 @@ Close the modal window.
 
 <h2 id="modal_events">Events</h2>
 
-The modal widget is subscribed to the following events:
+The 模态弹窗小工具 is subscribed to the following events:
 <ul>
 <li><a href="#modal_closed">closed</a></li>
 <li><a href="#modal_opened">opened</a></li>

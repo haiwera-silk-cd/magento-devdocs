@@ -78,7 +78,7 @@ Before you continue, make sure the sample module is registered and enabled.
 2.  Click **Stores** > **Configuration** > ADVANCED > **Advanced**.
 3.  In the right pane, under Disable Modules Output, look for **Magento_SampleMinimal** as the following figure shows.
 
-    ![Verify your sample module]({{ site.baseurl }}/common/images/config_module-enabled.png){:width="900px"}
+    ![Verify your sample module]({{ site.magentourl }}/common/images/config_module-enabled.png){:width="900px"}
 
 If the module doesn't display, review [step 1](#cron-tut-get) carefully. Make sure your code is in the correct directory. Spelling and case are important; if anything is different, the module won't load. Also, don't forget to run `magento setup:upgrade`.
 
@@ -219,7 +219,7 @@ For a description of what the options mean, see [Configure custom cron jobs and 
 {% endcollapsible %}
 
 ## Step 7 (optional): Verify your custom cron group
-This step shows how to verify your custom cron group using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+This step shows how to verify your custom cron group using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 {% collapsible To verify your custom cron group: %}
 
@@ -237,7 +237,7 @@ This step shows how to verify your custom cron group using the {% glossarytoolti
 
     Your cron group displays as follows:
 
-    ![Your custom cron group]({{ site.baseurl }}/common/images/config_cron-group.png)
+    ![Your custom cron group]({{ site.magentourl }}/common/images/config_cron-group.png)
 
 
 

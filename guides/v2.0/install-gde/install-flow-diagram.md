@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: Installation flow diagram
-menu_title: Installation flow diagram
+subgroup: 起步
+title: 安装流程图
+menu_title: 安装流程图
 menu_order: 2
 menu_node:
 version: 2.0

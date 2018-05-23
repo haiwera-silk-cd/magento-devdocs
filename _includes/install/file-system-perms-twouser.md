@@ -4,7 +4,7 @@ Complete the following tasks in the order shown:
 *	[Step 1: Create the Magento file system owner and give the user a strong password](#mage-owner-create-user)
 *	[Step 2: Find the web server group](#install-update-depend-user-findgroup)
 *	[Step 3: Put the Magento file system owner in the web server's group](#install-update-depend-user-add2group)
-*	[Step 4: Get the Magento software](#perms-get-software)
+*	[Step 4: 获取Magento](#perms-get-software)
 *	[Step 5: Set ownership and permissions for the shared group](#perms-set-two-users)
 
 ### About the shared group {#mage-owner-about-group}
@@ -83,8 +83,8 @@ To complete the task, restart the web server:
 *	Ubuntu: `service apache2 restart`
 *	CentOS: `service httpd restart`
 
-### Step 4: Get the Magento software {#perms-get-software}
-If you haven't done so already, get the Magento software in one of the following ways:
+### Step 4: 获取Magento {#perms-get-software}
+If you haven't done so already, 获取Magento in one of the following ways:
 
 *	[Compressed archive]({{ page.baseurl }}/install-gde/prereq/zip_install.html)
 *	[Composer metapackage]({{ page.baseurl }}/install-gde/prereq/integrator_install.html)
@@ -108,4 +108,4 @@ To set ownership and permissions before you install the Magento software:
 After you have set file system ownership and permissions, continue with any of the following:
 
 *	[Command-line installation]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)
-*	[Setup Wizard installation]({{ page.baseurl }}/install-gde/install/web/install-web.html)
+*	[网页向导安装]({{ page.baseurl }}/install-gde/install/web/install-web.html)

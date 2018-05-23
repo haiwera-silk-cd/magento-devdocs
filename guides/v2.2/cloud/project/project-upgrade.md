@@ -57,7 +57,7 @@ Make sure to upgrade the version of PHP on your local development workspace as w
 
 * [PHP](http://devdocs.magento.com/guides/v2.2/cloud/before/before-workspace-magento-prereqs.html#php) information for your local Magento workspace
 * [Migrating from PHP 5.6 to PHP 7.0.x](http://php.net/manual/en/migration70.php){:target="\_blank"}
-* [Magento 2.2.x technology stack requirements](http://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html#php)
+* [Magento 2.2.x技术栈要求](http://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html#php)
 
 ### Configuration Management and upgrading {#config}
 If you are upgrading from 2.1.4 or later to 2.2.X and use Configuration Management, you need to migrate `config.local.php` to a temporary `config.php` file to your Git branch. When you upgrade without having this file prepared, you will encounter an error with a list of steps to complete prior to upgrading.

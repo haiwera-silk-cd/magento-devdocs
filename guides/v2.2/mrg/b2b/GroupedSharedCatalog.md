@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_GroupedSharedCatalog module
+title: Magento_GroupedSharedCatalog模块
 menu_title: GroupedSharedCatalog
 menu_order: 150
 version: 2.2
@@ -31,9 +31,9 @@ The module has dependency on the `Magento_SharedCatalog` module and `Magento_Gro
 
 ## Extensibility
 
-Extension developers can interact with the Magento_GroupedSharedCatalog module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_GroupedSharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GroupedSharedCatalog module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GroupedSharedCatalog模块.
 
 ### Layouts
 

@@ -3,7 +3,7 @@ group: extension-dev-guide
 subgroup: 01_Introduction
 title: PHP Developer Guide
 landing-page: PHP Developer Guide
-menu_title: Introduction
+menu_title: 介绍
 menu_order: 1
 menu_node: parent
 version: 2.1

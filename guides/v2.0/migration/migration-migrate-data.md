@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: D_Migrate using the data migration tool
-title: Migrate data
-menu_title: Migrate data
+title: 迁移数据
+menu_title: 迁移数据
 menu_node:
 menu_order: 2
 version: 2.0
@@ -33,23 +33,23 @@ where:
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>The Data Migration Tool saves its current progress as it runs. If errors or user intervention stop it from running, the Tool resumes progress at the last known good state.</p>
-  <p>To force the Data Migration Tool to run from the beginning, use the <code>--reset</code> argument. In that case, we recommend you restore your Magento 2 database dump to prevent duplicating previously migrated data.</p></span>
+  <p>The 数据迁移工具 saves its current progress as it runs. If errors or user intervention stop it from running, the Tool resumes progress at the last known good state.</p>
+  <p>To force the 数据迁移工具 to run from the beginning, use the <code>--reset</code> argument. In that case, we recommend you restore your Magento 2 database dump to prevent duplicating previously migrated data.</p></span>
 </div>
 
 ## Possible consistency errors {#migrate-command-data}
 
-While running, the Data Migration Tool may report inconsistencies between Magento 1 and Magento 2 databases, and display messages like this:
+While running, the 数据迁移工具 may report inconsistencies between Magento 1 and Magento 2 databases, and display messages like this:
 
 {% highlight xml %}
 Source documents are not mapped: <EXTENSION_TABLE>
 {% endhighlight %}
 
-See the [Troubleshooting]({{ page.baseurl }}/migration/migration-troubleshooting.html) section of this guide for more information and recommendations.
+See the [故障排除]({{ page.baseurl }}/migration/migration-troubleshooting.html) section of this guide for more information and recommendations.
 
 <!--
 
-When you migrate data, the Data Migration Tool verifies that tables and fields are consistent between Magento 1 and Magento 2. If they are inconsistent, you will see an error message that lists the problematic tables and fields, for example:
+When you migrate data, the 数据迁移工具 verifies that tables and fields are consistent between Magento 1 and Magento 2. If they are inconsistent, you will see an error message that lists the problematic tables and fields, for example:
 
     Source fields are not mapped. Document: <document_name>. Fields: <field_name>
 
@@ -63,7 +63,7 @@ Visit [Magento Marketplace](https://marketplace.magento.com/){:target:"_blank"} 
 
 ### Fix errors: Ignore entities
 
-You may tell the Data Migration Tool to ignore the problematic entites.
+You may tell the 数据迁移工具 to ignore the problematic entites.
 
 To do that, add the `<ignore>` tag to an entity in the `map.xml` file, like this:
 
@@ -79,10 +79,10 @@ To do that, add the `<ignore>` tag to an entity in the `map.xml` file, like this
 
 ### Verify fixes
 
-To know if the issues have been resolved successfully, run the Data Migration Tool again.
+To know if the issues have been resolved successfully, run the 数据迁移工具 again.
 
 -->
 
 ## Next migration step
 
-<a href="{{ page.baseurl }}/migration/migration-migrate-delta.html">Migrate changes</a>
+<a href="{{ page.baseurl }}/migration/migration-migrate-delta.html">迁移更改</a>

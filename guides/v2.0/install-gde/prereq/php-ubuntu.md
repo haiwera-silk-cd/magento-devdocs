@@ -1,6 +1,6 @@
 ---
 group: install_pre
-subgroup: Prerequisites
+subgroup: 先决条件
 title: PHP 5.5, 5.6, or 7.0&mdash;Ubuntu
 menu_title: PHP 5.5, 5.6, or 7.0&mdash;Ubuntu
 menu_order: 23
@@ -33,10 +33,10 @@ Magento requires:
 <h2 id="php-ubuntu-help-beginner">Help if you're just starting out</h2>
 If you're new to all this and need some help getting started, we suggest the following:
 
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">Is the Magento software installed already?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">What is the software that the Magento server needs to run?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">What operating system is my server running?</a>
-*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">How do I log in to my Magento server using a terminal, command prompt, or SSH?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">你的Magento安装好了吗?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_software.html">Magento服务器需要运行哪些软件?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
+*	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
 
 <h2 id="ubuntu-verify-php">Verify PHP is installed</h2>
 To verify if PHP is installed already, enter `php -v`. If PHP is installed, 命令行将有以下输出信息：
@@ -89,7 +89,7 @@ If PHP is *not* installed, see one of the following sections:
 	<span class="glyphicon-class">
   	<p>The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the <a href="http://php.net/manual/en/opcache.setup.php" target="\_blank">PHP OPcache documentation</a>.</p></span>
 	</div>
-3.	Continue with [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+3.	Continue with [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 {% endcollapsible %}
 
@@ -120,7 +120,7 @@ If PHP is *not* installed, see one of the following sections:
 	<span class="glyphicon-class">
   		<p>The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the <a href="http://php.net/manual/en/opcache.setup.php" target="\_blank">PHP OPcache documentation</a>.</p></span>
 	</div>
-3.	Continue with [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+3.	Continue with [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 {% endcollapsible %}
 
@@ -145,7 +145,7 @@ If PHP is *not* installed, see one of the following sections:
   		<p>The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the <a href="http://php.net/manual/en/opcache.setup.php" target="\_blank">PHP OPcache documentation</a>.</p></span>
 	</div>
 
-3.	Continue with [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+3.	Continue with [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
 
 {% endcollapsible %}
 
@@ -155,5 +155,5 @@ If PHP is *not* installed, see one of the following sections:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing optional software</a>
-*	[How to get the Magento software]({{ page.baseurl }}/install-gde/bk-install-guide.html)
+*	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
+*	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

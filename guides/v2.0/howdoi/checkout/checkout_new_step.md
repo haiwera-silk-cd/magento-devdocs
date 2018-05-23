@@ -18,7 +18,7 @@ The default Magento {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Ch
 
 You can add a custom checkout step, it should be implemented as a {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. For the sake of compatibility, upgradability and easy maintenance, do not edit the default Magento code, add your customizations in a separate {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
-This topic describes how to create the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} part of the component, implementing a checkout step, and how to add it to the checkout flow.
+This topic describes how to create the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} part of the component, implementing a checkout step, and how to add it to the checkout flow.
 
 
 ## Create the view part of the checkout step component

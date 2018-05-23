@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_GiftCardStaging module
+title: Magento_GiftCardStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/GiftCardStaging.md
@@ -10,7 +10,7 @@ The Magento_GiftCardStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e
 
 ## Implementation details
 
-The Magento_GiftCardStaging module changes the GiftCard Product creation page to make them compatible with the Magento Staging Framework:
+The Magento_GiftCardStaging模块 changes the GiftCard Product creation page to make them compatible with the Magento Staging Framework:
 
 - Adds the Amount field set to the Schedule Update form
 - Provides functionality of the field set
@@ -18,13 +18,13 @@ The Magento_GiftCardStaging module changes the GiftCard Product creation page to
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_GiftCardStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_GiftCardStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_GiftCardStaging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_GiftCardStaging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GiftCardStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GiftCardStaging模块.
 
 ## Additional information
 

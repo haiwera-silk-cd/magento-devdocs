@@ -1,7 +1,7 @@
 ---
 group: install_trouble
 subgroup: 05_readiness
-title: Component dependency readiness check issues
+title: 组件依赖就绪检查的问题
 menu_title: Component dependency readiness issues
 menu_node:
 menu_order: 3

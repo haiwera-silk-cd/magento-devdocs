@@ -318,7 +318,7 @@ The `checkout_data` doesn't contain source and is assigned with values from the 
 
 ### Add a new variation {#add_variation}
 
-To add a new variation using [merging], you should simply use the name of a [test case] that you want to merge with. For example, you want to add a new variations from the Magento_ProductVideo module to the `Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest` that is placed in the Magento_Catalog module. You can create data set in the Magento_ProductVideo module, containing variations you need, and paste the test case name that you want to merge with:
+To add a new variation using [merging], you should simply use the name of a [test case] that you want to merge with. For example, you want to add a new variations from the Magento_ProductVideo模块 to the `Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest` that is placed in the Magento_Catalog模块. You can create data set in the Magento_ProductVideo模块, containing variations you need, and paste the test case name that you want to merge with:
 
  * Create `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/ProductVideo/Test/TestCase/Product/UpdateSimpleProductEntityTest.xml` with the following code:
 
@@ -366,7 +366,7 @@ For example, see how in `Magento/Catalog/Test/TestCase/Product/ValidateOrderOfPr
  {%remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/dev/tests/functional/tests/app/Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml%}
  {%endhighlight xml%}
 
- the variation `ValidateOrderOfProductTypeTestVariation1` is extended by the Magento_Bundle module:
+ the variation `ValidateOrderOfProductTypeTestVariation1` is extended by the Magento_Bundle模块:
 
  {%highlight xml%}
  {%remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/dev/tests/functional/tests/app/Magento/Bundle/Test/TestCase/ValidateOrderOfProductTypeTest.xml%}

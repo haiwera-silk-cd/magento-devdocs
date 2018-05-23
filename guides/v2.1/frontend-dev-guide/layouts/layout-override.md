@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: B_Layouts
-title: Override a layout
-menu_title: Override a layout
+title: 覆盖一个布局
+menu_title: 覆盖一个布局
 menu_order: 5
 version: 2.1
 github_link: frontend-dev-guide/layouts/layout-override.md
@@ -18,7 +18,7 @@ Not all layout customizations can be performed by <a href="{{ page.baseurl }}/fr
 In this article, <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-page" target="_blank">page layouts</a>, <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-conf" target="_blank">page configurations</a>, and <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-gen" target="_blank">generic layouts</a> are referred to as *layout files*, as the mechanism of overriding is similar for all of them.
 
 
-Layout files with instructions that override the default or parent {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} files are referred to as *overriding layout files*.
+Layout files with instructions that override the default or parent {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} files are referred to as *overriding layout files*.
 
 
 <h2>Examples of customizations that involve overriding layouts</h2>
@@ -114,6 +114,6 @@ Although the layout overriding mechanism provides great customization flexibilit
 
 #### 相关主题:
 
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">Extend a layout</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">Create a theme</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">Layout instructions</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a>

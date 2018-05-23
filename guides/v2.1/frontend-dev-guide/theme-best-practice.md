@@ -1,7 +1,7 @@
 ---
 group: fedg
-title: Theme development best practices
-menu_title: Theme development best practices
+title: 主题开发最佳实践
+menu_title: 主题开发最佳实践
 menu_order: 20
 version: 2.1
 github_link: frontend-dev-guide/theme-best-practice.md
@@ -30,7 +30,7 @@ Some other customizations that can be performed using layout instructions are th
 		
 4. Reuse the markup and design patterns from the default Magento files by referencing the existing `.phtml` templates ([templates hints can help]({{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html#debug-theme-templ)) or copy-pasting HTML markup to your custom templates.
 
-5. Use `<theme_dir>/etc/view.xml` to change image types sizes or add your own types. See [Configure images properties]({{ page.baseurl }}/frontend-dev-guide/themes/theme-images.html) for details. Use this file also to [customize product gallery widget]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html)
+5. Use `<theme_dir>/etc/view.xml` to change image types sizes or add your own types. See [Configure images properties]({{ page.baseurl }}/frontend-dev-guide/themes/theme-images.html) for details. Use this file also to [customize product 相册小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html)
 6. If you need to change the wording in user interface, [add custom CSV dictionary files]({{ page.baseurl }}/frontend-dev-guide/translations/theme_dictionary.html) instead of overriding `.phtml` templates. 
 
 Keep in mind, that after Magento instances, updates or upgrades something can change in default templates, layouts, and styles. So it is recommended to check if the changes effected the files overridden in your theme and copy changes if any, to your templates, layouts, and styles.

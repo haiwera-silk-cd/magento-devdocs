@@ -11,7 +11,7 @@ Use `files` resources to manage all code artifacts and assets associated with an
 * Magento 2 ZIP files
 * Image files for logos and galleries
 * Product Icons
-* PDF documents for User Guides, Installation Guides, and Reference Guides
+* PDF documents for User Guides, 安装向导s, and Reference Guides
 
 Each file upload receives a unique ID. You must associate these IDs with your submission later using the [packages API]({{ page.baseurl }}/marketpalce/eqp/packages.html).
 

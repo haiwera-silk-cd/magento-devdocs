@@ -18,7 +18,7 @@ functional_areas:
 <h2 id="compman-access">Start the Component Manager from the Magento Admin</h2>
 To run the Component Manager:
 
-1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} as an administrator.
+1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
 2.	Click **System** > **Web Setup Wizard**.
 	The following page displays.<br><br>
 	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage components or upgrade Magento"><br><br>
@@ -27,7 +27,7 @@ To run the Component Manager:
 
 	The following figure shows an example if you *have* already entered your keys.
 
-	![Authentication keys entered in the Setup Wizard]({{ site.baseurl }}/common/images/compman_auth-keys.png)
+	![Authentication keys entered in the Setup Wizard]({{ site.magentourl }}/common/images/compman_auth-keys.png)
 
 	<div class="bs-callout bs-callout-warning">
     	<p>For upgrade or update, you must use the same authentication keys you used to install the Magento software. For example, you <em>cannot</em> use {{site.data.var.ce}} authentication keys to update or upgrade Magento EE or vice versa. You also <em>cannot</em> use:</p>

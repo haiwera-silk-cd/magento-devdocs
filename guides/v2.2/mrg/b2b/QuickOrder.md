@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_QuickOrder module
+title: Magento_QuickOrder模块
 menu_title: QuickOrder
 menu_order: 180
 version: 2.2

@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 05_Command-line installation
-title: Uninstall modules
-menu_title: Uninstall modules
+title: 卸载模块
+menu_title: 卸载模块
 menu_node:
 menu_order: 8
 version: 2.0
@@ -34,7 +34,7 @@ You should uninstall a module only if you're certain you won't use it. Instead o
 {% include install/first-steps-cli.html %}
 我们不止在这里讨论命令参数，更多请参考<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-subcommands-common">命令参数</a>.
 
-<h2 id="instgde-cli-uninst-mod-uninst">Uninstall modules</h2>
+<h2 id="instgde-cli-uninst-mod-uninst">卸载模块</h2>
 命令用法：
 
 	magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|--remove-data] [-c|--clear-static-content] \

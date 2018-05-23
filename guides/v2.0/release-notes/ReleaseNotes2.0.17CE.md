@@ -87,7 +87,7 @@ See [Magento Security Center](https://magento.com/security/patches/magento-221-2
 
 ### General
 
-<!--- 61564 -->* When you edit a product list widget on a CMS page, Magento now shows previously set conditions. Previously, when you tried to edit a product list widget, the condition parameter was empty. [GitHub-6616](https://github.com/magento/magento2/issues/6616)
+<!--- 61564 -->* When you edit a product 列表小工具 on a CMS page, Magento now shows previously set conditions. Previously, when you tried to edit a product 列表小工具, the condition parameter was empty. [GitHub-6616](https://github.com/magento/magento2/issues/6616)
 
 <!--- 60543 -->* The **Print Shipping Label** link now displays on the product front end. Previously, the layout for the "Shipping and Tracking" block did not work properly. 
 
@@ -165,7 +165,7 @@ Our technology stack is built on PHP and MySQL. For more information, see
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">Data Migration Tool</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the Data Migration Tool</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
 
 An updated version of this toolkit is typically available several days after the patch release.
 

@@ -1,14 +1,14 @@
 ---
 group: styleguide
 subgroup: Writing and Content
-title: Admin Buttons and Links Usage
-menu_title: Buttons and Links Usage
+title: Admin 按钮 and Links Usage
+menu_title: 按钮 and Links Usage
 menu_order: 3
 menu_node:
 version: 2.1
 github_link: design-styleguide/buttons-and-links-usage/buttons-and-links-usage.md
 ---
-Buttons are primarily used for task-based navigation, and links are primarily used for site navigation.
+按钮 are primarily used for task-based navigation, and links are primarily used for site navigation.
 
 However, both buttons and links can function as calls to action (CTAs). Whether button or link, a CTA is used to encourage a user to take an action. CTA labels use title case and active verbs, should be short, and should use labels consistently across the Admin panel.
 
@@ -27,19 +27,19 @@ For more details, see [Title Case standards]({{ page.baseurl }}/design-styleguid
   <li>Yes – “Add Rule”</li>
 </ul>  
 
-## Buttons
+## 按钮
 
-Buttons are calls to action, and their labels should be limited to three words (four words maximum, if including a short verb or word).
+按钮 are calls to action, and their labels should be limited to three words (four words maximum, if including a short verb or word).
 
-Buttons can be used for:
+按钮 can be used for:
 
 * Calls to action for task flows: to begin, continue, or submit a task
 
 * Navigation in featured modules of content, like banners and content teasers
 
-Button types are primary, secondary, and tertiary. Each page should have a maximum limit of one primary button. Split buttons include multiple actions. Button counts in a Button Bar or any array of buttons should be limited to four buttons, maximum.
+Button types are primary, secondary, and tertiary. Each page should have a maximum limit of one primary button. Split buttons include multiple actions. Button counts in a 按钮栏 or any array of buttons should be limited to four buttons, maximum.
 
-**For design specs,** see [Buttons]({{ page.baseurl }}/pattern-library/controls/buttons/buttons.html) and [Button Bar]({{ page.baseurl }}/pattern-library/controls/button-bar/button-bar.html) patterns.
+**For design specs,** see [按钮]({{ page.baseurl }}/pattern-library/controls/buttons/buttons.html) and [按钮栏]({{ page.baseurl }}/pattern-library/controls/button-bar/button-bar.html) patterns.
 
 ## Links
 
@@ -129,7 +129,7 @@ The following labels are the standards for Admin labels. Refer to these footnote
     </tr>
     <tr>
       <td>Cancel<br>Cancel [ + Label ]</td>
-      <td>In Admin, "Cancel" is used as a link in the Button Bar. Use "Cancel" to end a task flow, with changes unsaved. If the cancellation is not easily recoverable, then include a verify step.</td>
+      <td>In Admin, "Cancel" is used as a link in the 按钮栏. Use "Cancel" to end a task flow, with changes unsaved. If the cancellation is not easily recoverable, then include a verify step.</td>
     </tr>
     <tr>
       <td>Clear Form</td>

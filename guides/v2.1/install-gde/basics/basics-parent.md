@@ -1,6 +1,6 @@
 ---
 group: install2
-subgroup: Getting Started
+subgroup: 起步
 title: 这只是基础
 menu_title: 这只是基础
 menu_order: 100

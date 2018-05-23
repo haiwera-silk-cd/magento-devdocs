@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Configure product video
-menu_title: Configure product video
+title: 配置产品视频
+menu_title: 配置产品视频
 menu_order: 100
 version: 2.1
 github_link: frontend-dev-guide/themes/product-video.md
@@ -17,7 +17,7 @@ functional_areas:
 In Magento 2 on product pages you can add video from external resources (currently, from [YouTube](https://youtube.com) and [Vimeo](https://vimeo.com/)). Video is [added in Admin](http://docs.magento.com/m2/2.0/ee/user_guide/catalog/product-video.html?Highlight=product%20video) when creating or editing a product. 
 Certain product video options can be set in the `config.xml` configuration file. These settings are not theme-specific.
 
-## Configure product video options 
+## 配置产品视频 options 
 
 You can set the following product video options:
 

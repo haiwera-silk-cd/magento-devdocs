@@ -23,7 +23,7 @@ One instance of the Magento software can enable you to start multiple websites o
 *   {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}Domain{% endglossarytooltip %} names
 *   Categories
 
-This flexible solution enables one Magento codebase and {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} to administer and display different stores.
+This flexible solution enables one Magento codebase and {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} to administer and display different stores.
 
 You configure the websites, stores, and store views in the Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. You use the `MAGE_RUN_TYPE` and `MAGE_RUN_CODE` variables in virtual hosts to start the Magento application using these websites or store views. 
 

@@ -266,7 +266,7 @@ Classes and interfaces must have a short description that is a human-understanda
 
 **Good:**
 
-> Handler for PHP errors/warnings/notices that converts them to exceptions.
+> Handler for PHP错误/warnings/notices that converts them to exceptions.
 > class ErrorHandler { ... }
 
 **Bad:**

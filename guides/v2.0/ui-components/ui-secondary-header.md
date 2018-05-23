@@ -10,7 +10,7 @@ github_link: ui-components/ui-secondary-header.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-header.html
 ---
 
-<h2 id="filter">Overview</h2>
+<h2 id="filter">概述</h2>
 
 The sticky header component is responsible for rendering additional <a href="{{ page.baseurl }}/ui-library/ui-listing-grid.html">grid</a> header and grid toolbar.
 

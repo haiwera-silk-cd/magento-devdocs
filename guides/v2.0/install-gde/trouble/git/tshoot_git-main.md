@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_github
-title: GitHub errors
-menu_title: GitHub errors
+title: git 报错
+menu_title: git 报错
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -14,6 +14,6 @@ functional_areas:
 ---
 
 
-## GitHub errors
-*	[git pull origin develop fails when updating the Magento software]({{ page.baseurl }}/install-gde/trouble/git/tshoot_git-pull-origin.html)
-*	[Cannot clone the Magento GitHub repository]({{ page.baseurl }}/install-gde/trouble/git/tshoot_clone.html)
+## git 报错
+*	[更新了Magento之后git pull origin develop失败]({{ page.baseurl }}/install-gde/trouble/git/tshoot_git-pull-origin.html)
+*	[Magento仓库克隆不下来]({{ page.baseurl }}/install-gde/trouble/git/tshoot_clone.html)

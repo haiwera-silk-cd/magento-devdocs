@@ -1,83 +1,83 @@
 label: Frontend Developer Guide
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /frontend-dev-guide/bk-frontend-dev-guide.html
 
-    - label: Conventional notations used in this Guide
+    - label: 本手册中使用的常规符号
       url: /frontend-dev-guide/conventions.html
 
-    - label: Magento cache overview
+    - label: Magento缓存概述
       url: /frontend-dev-guide/cache_for_frontdevs.html
 
-    - label: Theme development best practices
+    - label: 主题开发最佳实践
       url: /frontend-dev-guide/theme-best-practice.html
 
     - label: Themes
       url: /frontend-dev-guide/themes/theme-general.html
       children:
 
-        - label: Themes overview
+        - label: 主题概述
           url: /frontend-dev-guide/themes/theme-overview.html
 
-        - label: Install a third-party storefront theme
+        - label: 安装第三方前台主题
           url: /frontend-dev-guide/themes/theme-install.html
 
-        - label: Uninstall a storefront theme
+        - label: 卸载前台主题
           url: /frontend-dev-guide/themes/theme-uninstall.html
 
-        - label: Create an Admin theme
+        - label: 创建一个管理面板主题
           url: /frontend-dev-guide/themes/admin_theme_create.html
 
-        - label: Apply an Admin theme
+        - label: 应用一个管理面板主题
           url: /frontend-dev-guide/themes/admin_theme_apply.html
 
-        - label: Create a new storefront theme
+        - label: 创建一个新的前台主题
           url: /frontend-dev-guide/themes/theme-create.html
 
-        - label: Apply and configure a storefront theme
+        - label: 应用和配置前台主题
           url: /frontend-dev-guide/themes/theme-apply.html
 
-        - label: Locate templates, layouts, and styles
+        - label: 定痊模板，布局和样式
           url: /frontend-dev-guide/themes/debug-theme.html
 
-        - label: Magento theme structure
+        - label: Magento主题的结构
           url: /frontend-dev-guide/themes/theme-structure.html
 
-        - label: Theme inheritance
+        - label: 主题的继承关系
           url: /frontend-dev-guide/themes/theme-inherit.html
 
-        - label: Adding custom favicons
+        - label: 为网站添加一个favicons图标
           url: /frontend-dev-guide/themes/favicon.html
 
-        - label: Configure images properties for a theme
+        - label: 为主题配置图片属性
           url: /frontend-dev-guide/themes/theme-images.html
 
-        - label: Configure product video
+        - label: 配置产品视频
           url: /frontend-dev-guide/themes/product-video.html
 
-        - label: JavaScript Bundling
+        - label: js打包
           url: /frontend-dev-guide/themes/js-bundling.html
 
     - label: Layout
       url: /frontend-dev-guide/layouts/layout-overview.html
       children:
 
-        - label: Layout instructions
+        - label: 布局指令
           url: /frontend-dev-guide/layouts/xml-instructions.html
 
-        - label: Layout file types
+        - label: 布局文件类型
           url: /frontend-dev-guide/layouts/layout-types.html
 
-        - label: Extend a layout
+        - label: 扩展一个布局
           url: /frontend-dev-guide/layouts/layout-extend.html
 
-        - label: Override a layout
+        - label: 覆盖一个布局
           url: /frontend-dev-guide/layouts/layout-override.html
 
-        - label: Common layout customization tasks
+        - label: 常见的布局定制任务
           url: /frontend-dev-guide/layouts/xml-manage.html
 
-        - label: Customizing layout illustration
+        - label: 定制布局图示
           url: /frontend-dev-guide/layouts/layout-practice.html
 
     - label: Templates
@@ -99,11 +99,11 @@ pages:
         - label: Templates XSS security
           url: /frontend-dev-guide/templates/template-security.html
 
-    - label: Cascading style sheets (CSS)
+    - label: 层叠样式表(CSS)
       url: /frontend-dev-guide/css-topics/css-overview.html
       children:
 
-        - label: Include CSS
+        - label: 引入CSS
           url: /frontend-dev-guide/css-topics/css-themes.html
 
         - label: CSS and LESS preprocessing
@@ -112,48 +112,48 @@ pages:
         - label: Compile LESS using Grunt
           url: /frontend-dev-guide/css-topics/css_debug.html
 
-        - label: Magento UI library
+        - label: Magento UI库
           url: /frontend-dev-guide/css-topics/theme-ui-lib.html
 
-        - label: Using jQuery UI styles
+        - label: 使用jq UI样式
           url: /frontend-dev-guide/css-topics/css-jquery.html
 
-        - label: Customizing styles illustration
+        - label: 定制样式图示
           url: /frontend-dev-guide/css-topics/css-practice.html
 
-        - label: Using custom fonts
+        - label: 使用定制字体
           url: /frontend-dev-guide/css-topics/using-fonts.html
 
-        - label: Using custom CSS preprocessor
+        - label: 使用自定义css预处理器
           children:
 
-            - label: Add custom CSS preprocessor
+            - label: 添加定制css预处理器
               url: /frontend-dev-guide/css-topics/custom_preprocess.html
 
-            - label: Use Sass preprocessor and Gulp task runner
+            - label: 使用Sass预处理器和gulp工具
               url: /frontend-dev-guide/css-topics/gulp-sass.html
 
-    - label: Quick start guide to styles
+    - label: 快速样式指引
       url: /frontend-dev-guide/css-guide/css_quick_guide_overview.html
       children:
 
-        - label: Simple ways to customize a theme's styles
+        - label: 自定义主题样式的简单方法
           url: /frontend-dev-guide/css-guide/css_quick_guide_approach.html
 
-        - label: Simple style changes with client-side LESS compilation vs. server-side
+        - label: 客户端LESS样式编译与服务器简单修改
           url: /frontend-dev-guide/css-guide/css_quick_guide_mode.html
 
     - label: How to Make Your Theme Responsive and Mobile
       url: /frontend-dev-guide/responsive-web-design/rwd_overview.html
       children:
 
-        - label: CSS in responsive design
+        - label: 响应式设计中的CSS
           url: /frontend-dev-guide/responsive-web-design/rwd_css.html
 
-        - label: JavaScript in Magento responsive design
+        - label: Magento响应式设计中的js
           url: /frontend-dev-guide/responsive-web-design/rwd_js.html
 
-        - label: Create a responsive mobile theme based on a default theme
+        - label: 基于默认主题创建一个响应式的移动端主题
           url: /frontend-dev-guide/responsive-web-design/rwd_mobile.html
 
         - label: Customizing RWD illustration
@@ -166,13 +166,13 @@ pages:
       url: /frontend-dev-guide/translations/xlate.html
       children:
 
-        - label: Use translation dictionary to customize strings
+        - label: 为自定义的字符使用翻译字典
           url: /frontend-dev-guide/translations/theme_dictionary.html
 
-        - label: Translate theme strings
+        - label: 翻译主题的字符串
           url: /frontend-dev-guide/translations/translate_theory.html
 
-        - label: Create a translation dictionary for a theme, illustration
+        - label: 为主题创建一个翻译字典, illustration
           url: /frontend-dev-guide/translations/translate_practice.html
 
     - label: Tools

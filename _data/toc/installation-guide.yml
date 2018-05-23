@@ -1,67 +1,67 @@
-label: Installation Guide
+label: 安装向导
 pages:
-    - label: How to get the Magento software
+    - label: 如何获取Magento
       url: /install-gde/bk-install-guide.html
 
-    - label: Installation flow diagram
+    - label: 安装流程图
       url: /install-gde/install-flow-diagram.html
 
-    - label: Just the basics
+    - label: 基础
       children:
 
-        - label: Is the Magento software installed already?
+        - label: 你的Magento安装好了吗?
           url: /install-gde/basics/basics_magento-installed.html
 
-        - label: What operating system is my server running?
+        - label: 我的服务器运行的是什么系统?
           url: /install-gde/basics/basics_os-version.html
 
-        - label: How do I log in to my Magento server using a terminal, command prompt, or SSH?
+        - label: 我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?
           url: /install-gde/basics/basics_login.html
 
-        - label: What's the difference between a module and a component?
+        - label: 模块和组件有什么不同?
           url: /install-gde/basics/basics_module.html
 
-        - label: What is the software that the Magento server needs to run?
+        - label: Magento服务器需要运行哪些软件?
           url: /install-gde/basics/basics_software.html
 
-        - label: What is a docroot?
+        - label: 什么docroot?
           url: /install-gde/basics/basics_docroot.html
 
-    - label: Getting Started
+    - label: 起步
       children:
-        - label: Helpful resources
+        - label: 相关帮助
           url: /install-gde/install-resources-parent.html
           children:
 
-            - label: Installation quick reference (tutorial)
+            - label: 安装快速指引(教程)
               url: /install-gde/install-quick-ref.html
 
-            - label: Installation flow diagram
+            - label: 安装流程图
               url: /install-gde/install-resource-diagram.html
 
-            - label: Installation roadmap (reference)
+            - label: 一步步安装(参考)
               url: /install-gde/install-roadmap_part1.html
 
-        - label: Magento system requirements
+        - label: Magento系统要求
           url: /install-gde/system-requirements2.html
           children:
 
             - label: Magento technology stack requirements
               url: /install-gde/system-requirements-tech.html
 
-            - label: Supported browsers
+            - label: 支持的浏览器
               url: /install-gde/system-requirements_browsers.html
 
-            - label: Transport Layer Security (TLS) requirements
+            - label: 传输层安全(TLS)要求
               children:
 
-                - label: TLS 1.2 requirement for PayPal
+                - label: PayPal TLS1.2要求
                   url: /install-gde/system-requirements_tls1-2.html
 
-                - label: TLS requirement for repo.magento.com
+                - label: repo.magento.com的TLS要求
                   url: /install-gde/system-requirements_repo-tls1-2.html
 
-        - label: Prerequisites
+        - label: 先决条件
           url: /install-gde/prereq/prereq-overview.html
           children:
 
@@ -80,74 +80,74 @@ pages:
                 - label: PHP 5.6 or 7.0—Ubuntu
                   url: /install-gde/prereq/php-ubuntu.html
 
-                - label: Required PHP settings
+                - label: PHP配置要求
                   url: /install-gde/prereq/php-settings.html
 
             - label: MySQL
               url: /install-gde/prereq/mysql.html
 
-            - label: Get your authentication keys
+            - label: 获取你的认证密钥
               url: /install-gde/prereq/connect-auth.html
 
-            - label: Magento file system ownership and permissions
+            - label: Magento文件系统所有者和权限
               children:
 
-                - label: Overview of ownership and permissions
+                - label: 所有者和权限概述
                   url: /install-gde/prereq/file-sys-perms-over.html
 
-                - label: Set pre-installation ownership and permissions
+                - label: 安装前设置所有者和权限
                   url: /install-gde/prereq/file-system-perms.html
 
             - label: RabbitMQ (Magento Commerce only)
               url: /install-gde/prereq/install-rabbitmq.html
 
-            - label: Set up a remote MySQL database connection
+            - label: 设置远程Mysql数据库连接
               url: /install-gde/prereq/mysql_remote.html
 
-            - label: SELinux and iptables
+            - label: SELinux和iptables
               url: /install-gde/prereq/security.html
 
-            - label: Optional software
+            - label: 可选软件
               url: /install-gde/prereq/optional.html
 
-            - label: Set up the updater (obsolete)
+            - label: 设置更新器(已过时)
               url: /install-gde/prereq/prereq_updater.html
 
-        - label: Get the Magento software
+        - label: 获取Magento
           url: /install-gde/install/get-software.html
 
-        - label: (Easy) Install the Magento archive on your server
+        - label: (简单)使用Magento压缩包在服务器上安装
           url: /install-gde/prereq/zip_install.html
 
-        - label: (Integrator) Integrator installation
+        - label: (集成工程师)集成安装
           url: /install-gde/prereq/integrator_install.html
           children:
 
-            - label: Install Composer
+            - label: 安装Composer
               url: /install-gde/prereq/integrator_install_composer.html
 
-            - label: Get the Magento Open Source metapackage
+            - label: 获取Magento开源的工程包
               url: /install-gde/prereq/integrator_install_ce.html
 
-            - label: Get the Magento Commerce metapackage
+            - label: 获取Magento EE工程包
               url: /install-gde/prereq/integrator_install_ee.html
 
-        - label: (Contributor) Clone the Magento repository
+        - label: (贡献者)克隆Magento仓库
           url: /install-gde/prereq/dev_install.html
           children:
 
-            - label: Update installation dependencies
+            - label: 更新安装依赖
               url: /install-gde/install/prepare-install.html
 
-        - label: Get help with your installation
+        - label: 获取更多安装帮助
           url: /install-gde/install/get-help.html
 
-        - label: Install options
+        - label: 安装选项
           url: /install-gde/continue-to-install.html
 
-    - label: Setup Wizard Install
+    - label: 网页向导安装
       children:
-        - label: Installation roadmap (reference)
+        - label: 一步步安装(参考)
           url: /install-gde/install-roadmap_web.html
 
         - label: 可选安装样本数据模块
@@ -160,35 +160,35 @@ pages:
             - label: 克隆仓库的方式安装
               url: /install-gde/install/web/install-web-sample-data-clone.html
 
-        - label: Setup Wizard installation
+        - label: 网页向导安装
           url: /install-gde/install/web/install-web.html
           children:
 
-            - label: Step 1. Readiness check
+            - label: 步骤1.准备就绪检查
               url: /install-gde/install/web/install-web_1-readiness.html
 
-            - label: Step 2. Add a Database
+            - label: 步骤2.添加数据库
               url: /install-gde/install/web/install-web_2-db.html
 
-            - label: Step 3. Web Configuration
+            - label: 步骤3. Web服务器配置
               url: /install-gde/install/web/install-web_3-web-conf.html
 
-            - label: Step 4. Customize Your Store
+            - label: 步骤4. 定制你的网店
               url: /install-gde/install/web/install-web_4-customize-store.html
 
-            - label: Step 5. Create Admin Account
+            - label: 步骤 5.创建管理员帐户
               url: /install-gde/install/web/install-web_5-create-admin.html
 
-            - label: Step 6. Install
+            - label: 步骤 6. 安装
               url: /install-gde/install/web/install-web_6-install.html
 
-        - label: Post-installation
+        - label: 安装完成之后
           url: /install-gde/continue-to-verify.html
 
-    - label: Command Line Installation
+    - label: 命令行安装
       children:
 
-        - label: Installation roadmap (reference)
+        - label: 一步步安装(参考)
           url: /install-gde/install-roadmap_cli.html
 
         - label: 可选安装样本数据模块
@@ -201,7 +201,7 @@ pages:
             - label: 克隆仓库的方式安装
               url: /install-gde/install/cli/install-cli-sample-data-clone.html
 
-        - label: 安装Magento using the command line
+        - label: 使用命令行安装Magento
           url: /install-gde/install/cli/install-cli.html
           children:
 
@@ -211,7 +211,7 @@ pages:
             - label: 安装Magento
               url: /install-gde/install/cli/install-cli-install.html
 
-            - label: Uninstall or reinstall Magento
+            - label: 卸载和重装Magento
               url: /install-gde/install/cli/install-cli-uninstall.html
 
             - label: Display or change the Admin URI
@@ -223,7 +223,7 @@ pages:
             - label: 启用或禁用模块
               url: /install-gde/install/cli/install-cli-subcommands-enable.html
 
-            - label: Uninstall modules
+            - label: 卸载模块
               url: /install-gde/install/cli/install-cli-uninstall-mods.html
 
             - label: 建立或更新部署配置
@@ -247,46 +247,46 @@ pages:
             - label: 备份和还原文件系统，媒体文件和数据库
               url: /install-gde/install/cli/install-cli-backup.html
 
-            - label: Uninstall themes Composer packages
+            - label: 卸载composer主题包
               url: /install-gde/install/cli/install-cli-theme-uninstall.html
 
-            - label: Uninstall language packages
+            - label: 卸载语言包
               url: /install-gde/install/cli/install-cli-uninstall-langpk.html
 
-        - label: Contributing developers—update, reinstall Magento
+        - label: 贡献开发者--更新和重装Magento
           url: /install-gde/install/cli/dev_options.html
           children:
 
-            - label: Update the Magento application
+            - label: 更新Magento
               url: /install-gde/install/cli/dev_update-magento.html
 
-            - label: Add or update components
+            - label: 添加或更新组件
               url: /install-gde/install/cli/dev_add-update.html
 
-            - label: Change to a released version
+            - label: 切换到发布版本
               url: /install-gde/install/cli/dev_downgrade.html
 
-            - label: Reinstall the Magento software
+            - label: 重装Magento
               url: /install-gde/install/cli/dev_reinstall.html
 
-        - label: Post-installation
+        - label: 安装完成之后
           url: /install-gde/continue-to-verify_cli.html
 
-    - label: Post Installation
+    - label: 安装之后
       children:
-        - label: Verify the installation
+        - label: 验证你的安装
           url: /install-gde/install/verify.html
 
-        - label: Configure the Magento application
+        - label: 配置Magento应用
           url: /install-gde/install/post-install-config.html
 
-        - label: Optionally set a umask
+        - label: 选择性设置umask
           url: /install-gde/install/post-install-umask.html
 
-        - label: Appendix—Magento file system ownership and appendix (legacy)
+        - label: 附录—Magento文件系统所有者及其附录(遗留)
           url: /install-gde/install/legacy-file-system-perms.html
 
-        - label: Install sample data after Magento
+        - label: 安装Magento后安装样本数据
           url: /install-gde/install/sample-data-after-magento.html
           children:
 
@@ -296,124 +296,124 @@ pages:
             - label: 克隆仓库的方式安装
               url: /install-gde/install/sample-data-after-clone.html
 
-    - label: Troubleshooting
+    - label: 故障排除
       children:
 
-        - label: Access issues
+        - label: 访问问题
           children:
 
-            - label: Cannot access Magento software in a web browser
+            - label: 使用浏览器无法访问Magento
               url: /install-gde/trouble/tshoot_access-browser.html
 
-            - label: 503 (Service Unavailable) errors accessing Magento software in a web browser
+            - label: 使用浏览器访问时出现503 (Service Unavailable)错误
               url: /install-gde/trouble/php/tshoot_mod_access_compat.html
 
-            - label: After installing, images and stylesheets do not load; only text displays, no graphics
+            - label: 安装后图片和样式缺失，显示错乱
               url: /install-gde/trouble/tshoot_no-styles.html
 
-            - label: Exceptions during installation
+            - label: 安装过程中出异常
               url: /install-gde/trouble/tshoot_exceptions.html
 
             - label: Cannot write to the var/generation directory
               url: /install-gde/trouble/tshoot_var-gen-perms.html
 
-            - label: Installation dependencies not met
+            - label: 安装依赖缺失
               url: /install-gde/trouble/tshoot_install_depend.html
 
-            - label: Error after logging in to the Magento Admin
+            - label: 登录到Magento管理面板时出错
               url: /install-gde/trouble/tshoot_admin.html
 
-        - label: Errors during installation
+        - label: 安装过程中出错
           children:
 
-            - label: Installation stops at about 70%
+            - label: 安装在70%左右卡住
               url: /install-gde/trouble/php/tshoot_70pct.html
 
-            - label: Cannot install using nginx
+            - label: 使用nginx不能正常安装
               url: /install-gde/trouble/php/tshoot_nginx-port.html
 
-            - label: During installation, fatal PDO error displays
+            - label: 安装期间出现PDO致命错误
               url: /install-gde/trouble/php/tshoot_pdo.html
 
-            - label: During installation, Reflection Exception error
+            - label: 安装期间出现反射(Reflection)异常
               url: /install-gde/trouble/tshoot_wrong-mysql.html
 
-            - label: During installation, exception SessionHandler::read()
+            - label: 安装期间SessionHandler::read()出现异常
               url: /install-gde/trouble/php/tshoot_session.html
 
-            - label: Download fails because of changes in Composer
+            - label: Composer的修改导致下载失败
               url: /install-gde/trouble/tshoot_composer-fail.html
 
-            - label: Unknown module Magento_BundleSampleData
+            - label: 未知模块Magento_BundleSampleData
               url: /install-gde/trouble/tshoot_bundlesampledata.html
 
-            - label: Installation fails; cannot create install.log
+            - label: 安装失败，无法创建install.log
               url: /install-gde/trouble/tshoot_install-log.html
 
-            - label: Errors installing optional sample data
+            - label: 安装可选的样本数据发生错误
               url: /install-gde/trouble/tshoot_sample-data.html
 
-            - label: During installation, xdebug maximum function nesting level error
+            - label: 安装过程中xdebug出现嵌方法套层数过多的错误
               url: /install-gde/trouble/php/tshoot_xdebug.html
 
-        - label: Readiness check issues
+        - label: 就绪检查的问题
           children:
 
             - label: Component dependency readiness issues
               url: /install-gde/trouble/readiness/tshoot_rc_depend.html
 
-            - label: cron readiness check issues
+            - label: 定时任务(cron)就绪检查的问题
               url: /install-gde/trouble/readiness/tshoot_rc_cron.html
 
-            - label: File permissions readiness check issues
+            - label: 文件权限就绪检查的问题
               url: /install-gde/trouble/readiness/tshoot_rc_perms.html
 
-            - label: PHP version readiness check issues
+            - label: PHP版本就绪检查的问题
               url: /install-gde/trouble/readiness/tshoot_rc_php.html
 
-        - label: GitHub errors
+        - label: git 报错
           children:
 
-            - label: Cannot clone the Magento GitHub repository
+            - label: Magento仓库克隆不下来
               url: /install-gde/trouble/git/tshoot_clone.html
 
-            - label: git pull origin develop fails when updating the Magento software
+            - label: 更新了Magento之后git pull origin develop失败
               url: /install-gde/trouble/git/tshoot_git-pull-origin.html
 
-        - label: PHP errors
+        - label: PHP错误
           children:
 
-            - label: Resolve an illegal offset error
+            - label: 解决非法偏移的问题
               url: /install-gde/trouble/php/tshoot_opcache.html
 
-            - label: PHP settings errors
+            - label: PHP配置错误
               url: /install-gde/trouble/php/tshoot_php-set.html
 
-            - label: The PHP mcrypt extension is not installed properly
+            - label: PHP mcrypt扩展可能没有正确安装
               url: /install-gde/trouble/php/tshoot_mcrypt.html
 
-            - label: During installation, PHP date warning
+            - label: 安装期间出现date警告
               url: /install-gde/trouble/php/tshoot_php-date.html
 
-        - label: Other issues
+        - label: 其它问题
           children:
 
-            - label: Known issues that affect installation
+            - label: 已知的影响安装的问题
               url: /install-gde/trouble/tshoot_install-issues.html
 
-            - label: Error 'MySQL server has gone away' during installation
+            - label: 安装期间出现'MySQL server has gone away'
               url: /install-gde/trouble/tshoot_mysql_table-open-cache.html
 
-            - label: Segmentation fault during rollback
+            - label: 回退过程中出现段错误
               url: /install-gde/trouble/tshoot_segfault.html
 
             - label: SQLSTATE[HY000] [2002] No such file or directory
               url: /install-gde/trouble/php/tshoot_phpini.html
 
-            - label: Cannot run 'composer install'
+            - label: 无法执行'composer install'
               url: /install-gde/trouble/tshoot_composer-install.html
 
-    - label: How Tos
+    - label: 如何
       children:
-        - label: Modify docroot to improve security
+        - label: 修改docroot提高安全性
           url: /install-gde/tutorials/change-docroot-to-pub.html

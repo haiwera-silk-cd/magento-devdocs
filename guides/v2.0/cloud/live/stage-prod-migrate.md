@@ -43,7 +43,7 @@ For Starter, deploy your development branch you created to Staging and Productio
 4. Select the Staging branch.
 5. Select the **Merge** option to deploy to Production.
 
-![Use the merge option to deploy]({{ site.baseurl }}/common/images/cloud_project-merge.png)
+![Use the merge option to deploy]({{ site.magentourl }}/common/images/cloud_project-merge.png)
 
 ### Deploy code with SSH and CLI {#ssh}
 If you prefer to use CLI for deploying, you will need to configure additional SSH settings and Git remotes to use commands. You can SSH into the Staging and Production environments to push the `master` branch.
@@ -182,7 +182,7 @@ To migrate a database:
 
 		zcat database.sql.gz | mysql -u user main
 
-### Troubleshooting the database migration
+### 故障排除 the database migration
 If you encounter the following error, you can try to create a database dump with the DEFINER replaced:
 
 ```

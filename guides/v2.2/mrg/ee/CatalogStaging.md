@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento_CatalogStaging module
+title: Magento_CatalogStaging模块
 menu_title: CatalogStaging
 menu_order: 2
 version: 2.2
@@ -14,9 +14,9 @@ The Magento_CatalogStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e1
 
 ## Implementation details
 
-The Magento_CatalogStaging module extends the Magento_Catalog module functionality. It changes a category and product creation page, and related database tables to make them compatible with the Magento Staging Framework.
+The Magento_CatalogStaging模块 extends the Magento_Catalog模块 functionality. It changes a category and product creation page, and related database tables to make them compatible with the Magento Staging Framework.
 
-The following fields are removed from the Magento_Catalog module forms:
+The following fields are removed from the Magento_Catalog模块 forms:
 
 - Category form:
   - Schedule design update from
@@ -38,7 +38,7 @@ They are all related to the time period attributes. They can be set using stagin
 
 ### Category Staging
 
-The Magento_CatalogStaging module enables you to stage the following category attributes:
+The Magento_CatalogStaging模块 enables you to stage the following category attributes:
 
 - Enable/disable Category
 - Include in Menu
@@ -68,7 +68,7 @@ The following category attributes cannot be staged:
 
 ### Product Staging
 
-The Magento_CatalogStaging module enables you to stage the following product attributes:
+The Magento_CatalogStaging模块 enables you to stage the following product attributes:
 
 - {% glossarytooltip 44d60586-b853-40dd-bf82-4a1580450416 %}Attribute Set{% endglossarytooltip %}
 - Product Name
@@ -95,17 +95,17 @@ The following product attributes cannot be staged:
 
 ### Installation details
 
-The Magento_CatalogStaging module makes irreversible changes in a database during installation. You cannot uninstall this module.
+The Magento_CatalogStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_CatalogStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_CatalogStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CatalogStaging module. You can interact with the Magento_CatalogStaging module using the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CatalogStaging模块. You can interact with the Magento_CatalogStaging模块 using the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CatalogStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CatalogStaging模块.
 
 ### UI components
 

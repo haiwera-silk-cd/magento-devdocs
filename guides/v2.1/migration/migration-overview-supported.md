@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: A_Overview
-title: Versions supported
-menu_title: Versions supported
+title: 支持的版本
+menu_title: 支持的版本
 menu_node:
 menu_order: 2
 version: 2.1
@@ -14,7 +14,7 @@ functional_areas:
 
 ## Migration from versions
 
-The Data Migration Tool supports migration from the following versions:
+The 数据迁移工具 supports migration from the following versions:
 
 * {{site.data.var.ee}}:
 
@@ -48,4 +48,4 @@ If you migrate from {{site.data.var.ce}} to {{site.data.var.ee}}, the following 
 
 ## Migration to version
 
-To know the supported Magento 2 version (the one you're migrating to), see the Data Migration Tool's [Release page](https://github.com/magento/data-migration-tool/releases).
+To know the supported Magento 2 version (the one you're migrating to), see the 数据迁移工具's [Release page](https://github.com/magento/data-migration-tool/releases).

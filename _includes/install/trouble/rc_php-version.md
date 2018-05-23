@@ -1,6 +1,6 @@
 <div markdown="1">
 
-## PHP version readiness check issues
+## PHP版本就绪检查的问题
 You might encounter the following issues with the PHP version readiness check:
 
 *	The check fails because you're using an unsupported PHP version.

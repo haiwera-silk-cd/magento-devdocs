@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: E_manually
-title: Data that needs to be migrated manually
-menu_title: Data that needs to be migrated manually
+title: 须要手动迁移的数据
+menu_title: 须要手动迁移的数据
 menu_node: parent
 menu_order: 5
 version: 2.0

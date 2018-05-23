@@ -23,14 +23,14 @@
 <!-- title: Resolving a Remote Code Execution Exploit -->
 
 <div class="toc"> <h4>Table of Contents</h4>
-<ul><li><a href="#overview">Overview</a></li>
+<ul><li><a href="#overview">概述</a></li>
 <li><a href="#affected">Versions Affected</a></li>
 <li><a href="#patch">Getting the Patch</a></li>
 <li><a href="#vulnerable">Determining Your Vulnerability to the File System Attack</a></li>
 <li><a href="#resolve">Resolving the File System Vulnerability</a></li>
 </ul></div>
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview">概述</h2>
 <p>We recently identified potential exploits that:</p>
 <ul><li>Enable an attacker to execute arbitrary code on your Magento server.</li>
 <li>Create files with a <tt>.csv</tt> extension, create writable directories, and change the permission of existing files to world-writable (777).
@@ -83,7 +83,7 @@
 </tbody></table>
 
 <p>To get and apply your patch, see <a href="{{ site.m1xgdeurl }}other/ht_install-patches.html" target="_blank">How to Apply and Revert Magento Patches</a>.</p>
-<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: After applying your patch, Magento strongly recommends you evaluate your vulnerability and configure PHP as discussed in <a href="#resolve">Resolving the Vulnerability</a></span></div>
+<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: After applying your patch, Magento strongly recommends you evaluate your vulnerability and 配置PHP as discussed in <a href="#resolve">Resolving the Vulnerability</a></span></div>
 
 
 <h2 id="vulnerable">Determining Your Vulnerability to the File System Attack</h2>

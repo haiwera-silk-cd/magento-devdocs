@@ -1,8 +1,8 @@
 ---
 group: install_pre
 subgroup: S_Integrator
-title: Get the Magento Commerce metapackage
-menu_title: Get the Magento Commerce metapackage
+title: 获取Magento EE工程包
+menu_title: 获取Magento EE工程包
 menu_order: 4
 menu_node:
 version: 2.1
@@ -15,7 +15,7 @@ functional_areas:
 
 To get the {{site.data.var.ee}} metapackage:
 
-1.	See [(Integrator) Integrator installation]({{ page.baseurl }}/install-gde/prereq/integrator_install.html) first.
+1.	See [(集成工程师)集成安装]({{ page.baseurl }}/install-gde/prereq/integrator_install.html) first.
 1.	Make sure you know your support portal user name and password.
 
 	If you don't remember it, contact Magento Support before you continue.

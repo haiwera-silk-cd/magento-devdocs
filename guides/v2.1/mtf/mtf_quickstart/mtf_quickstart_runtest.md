@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Quick start. Test run
+title: 快速开始，执行测试
 version: 2.1
 github_link: mtf/mtf_quickstart/mtf_quickstart_runtest.md
 ---

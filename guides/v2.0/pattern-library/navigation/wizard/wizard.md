@@ -1,7 +1,7 @@
 ---
 group: pattern
 subgroup: Navigation
-title: Admin Design Pattern Library
+title: 管理面板用到的设计模式和库
 menu_title: Wizard
 menu_order: 2
 menu_node: 
@@ -40,7 +40,7 @@ This would be the page/modal title
 **2. Wizard Progress**
 Placement is always on the most left. The width is fluid, depending on the screen size. Must be in one line. The width can go as long to reach the buttons. But if there is not enough room, see **Variation 4** at the bottom of this document.
 
-**3. Action Buttons and Links**
+**3. Action 按钮 and Links**
 The additional links and buttons needed must be between the Wizard Progress and Next & Back buttons.
 
 **4. Next & Back buttons**
@@ -67,10 +67,10 @@ The 'Back' or 'Next' buttons should only change/refreshes the content area, not 
 **Fillings Animation**
 No animation
 
-**Back Buttons behavior**
+**Back 按钮 behavior**
 In every first step, back button is disabled. In all other steps, back button becomes enabled.
 
-**Next Buttons behavior**
+**Next 按钮 behavior**
 If next button exist in the very last step, it should always be disabled. (Note: refer to variations section of this document, some cases may not have next button in last step.
 
 If a step required that the user complete the steps before proceeding, next button maybe disabled for that step.

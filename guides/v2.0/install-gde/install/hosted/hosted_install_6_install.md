@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 03_install
-title: Step 6. Install
-menu_title: Step 6. Install
+title: 步骤 6. 安装
+menu_title: 步骤 6. 安装
 menu_order: 15
 menu_node:
 version: 2.0

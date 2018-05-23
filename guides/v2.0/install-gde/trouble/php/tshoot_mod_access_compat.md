@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 02_access
-title: 503 (Service Unavailable) errors accessing Magento software in a web browser
-menu_title: 503 (Service Unavailable) errors accessing Magento software in a web browser
+title: 使用浏览器访问时出现503 (Service Unavailable)错误
+menu_title: 使用浏览器访问时出现503 (Service Unavailable)错误
 menu_node:
 menu_order: 3
 version: 2.0
@@ -17,11 +17,11 @@ functional_areas:
 ---
 
 
-<h2 id="trouble-install-depend">503 (Service Unavailable) errors accessing Magento software in a web browser</h2>
+<h2 id="trouble-install-depend">使用浏览器访问时出现503 (Service Unavailable)错误</h2>
 
 #### Symptoms
 
-When you try to access your {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in a web browser, you get HTTP 503 (Service Unavailable) errors.
+When you try to access your {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in a web browser, you get HTTP 503 (Service Unavailable) errors.
 
 To confirm this issue is not related to <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-maint-configphp">maintenance mode</a>, look in your Apache `error.log` for messages that include:
 

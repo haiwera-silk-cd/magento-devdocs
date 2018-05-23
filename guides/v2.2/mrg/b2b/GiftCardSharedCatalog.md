@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_GiftCardSharedCatalog module
+title: Magento_GiftCardSharedCatalog模块
 menu_title: GiftCardSharedCatalog
 menu_order: 130
 version: 2.2
@@ -30,9 +30,9 @@ The `Magento_GiftCardSharedCatalog` module has a dependency on the `Magento_Shar
 
 ## Extensibility
 
-Extension developers can interact with the Magento_GiftCardSharedCatalog module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
+Extension developers can interact with the Magento_GiftCardSharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GiftCardSharedCatalog module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_GiftCardSharedCatalog模块.
 
 ### Layouts
 

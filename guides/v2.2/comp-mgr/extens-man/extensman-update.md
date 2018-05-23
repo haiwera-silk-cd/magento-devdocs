@@ -67,7 +67,7 @@ Generating autoload files
 ### Failure
 If the update fails, click **Rollback** to restore an earlier backup. Messages display in the Console Log as shown in the following figure.
 
-![If the component update fails, you can roll back]({{ site.baseurl }}/common/images/cman_update-fail.png)
+![If the component update fails, you can roll back]({{ site.magentourl }}/common/images/cman_update-fail.png)
 
 
 

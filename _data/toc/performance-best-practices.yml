@@ -1,7 +1,7 @@
 label: Performance Best Practices
 versions: ["2.2", "2.3"]
 pages:
-    - label: Introduction
+    - label: 介绍
       url: /performance-best-practices/index.html
 
     - label: Hardware recommendations

@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento Open Source modules
+title: Magento开源的模块
 version: 2.1
 github_link: mrg/ce/ce-intro.md
 ---

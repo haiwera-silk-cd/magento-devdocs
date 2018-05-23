@@ -1,7 +1,7 @@
 ---
 group: mrg
 subgroup: 30_B2B
-title: Magento_CompanyPayment module
+title: Magento_CompanyPayment模块
 menu_title: CompanyPayment
 menu_order: 70
 version: 2.2
@@ -28,7 +28,7 @@ The module has a dependency on the `Magento_Company` module, which must be insta
 
 Extension developers can interact with the `Magento_CompanyPayment` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CompanyPayment module.
+[The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CompanyPayment模块.
 
 ### Layouts
 

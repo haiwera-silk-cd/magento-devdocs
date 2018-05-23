@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_CmsStaging module
+title: Magento_CmsStaging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/CmsStaging.md
@@ -10,7 +10,7 @@ The Magento_CmsStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %
 
 ## Implementation details
 
-The Magento_CmsStaging module changes the CMS Pages and CMS Blocks creation pages to make them compatible with the Magento Staging Framework. This module depends on the Magento_Cms module and extends its functionality. It changes the database structure of the Magento_Cms module and the way in which CMS Pages/Blocks are managed.
+The Magento_CmsStaging模块 changes the CMS Pages and CMS Blocks creation pages to make them compatible with the Magento Staging Framework. This module depends on the Magento_Cms模块 and extends its functionality. It changes the database structure of the Magento_Cms模块 and the way in which CMS Pages/Blocks are managed.
 
 ### CMS Pages
 
@@ -42,17 +42,17 @@ The following parameters can be staged:
 
 ### Installation details
 
-The Magento_CmsStaging module makes irreversible changes in a database during installation. You cannot uninstall this module.
+The Magento_CmsStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_CmsStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_CmsStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CmsStaging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_CmsStaging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CmsStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CmsStaging模块.
 
 ### UI components
 

@@ -1,7 +1,7 @@
 ---
 group: fedg
-title: Magento cache overview
-menu_title: Magento cache overview
+title: Magento缓存概述
+menu_title: Magento缓存概述
 menu_order: 10
 version: 2.0
 github_link: frontend-dev-guide/cache_for_frontdevs.md

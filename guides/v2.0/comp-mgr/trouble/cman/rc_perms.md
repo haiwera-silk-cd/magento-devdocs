@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: File permissions readiness check issues
-menu_title: File permissions readiness check issues
+title: 文件权限就绪检查的问题
+menu_title: 文件权限就绪检查的问题
 menu_node:
 menu_order: 105
 version: 2.0

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 10_php
-title: PHP settings errors
-menu_title: PHP settings errors
+title: PHP配置错误
+menu_title: PHP配置错误
 menu_node:
 menu_order: 350
 version: 2.1
@@ -30,7 +30,7 @@ To resolve the error:
 		always_populate_raw_post_data = -1
 4.	Save your changes to `php.ini` and exit the text editor.
 5.	Wait for all steps in the readiness check to finish.
-6.	Resolve any other issues displayed by the readiness check.
+6.	Resolve any 其它问题 displayed by the readiness check.
 7.	As a user with `root` privileges, restart your web server.
 
 	Examples follow:
@@ -64,7 +64,7 @@ To increase your PHP memory limit:
 
 <h3 id="trouble-php-xdebug">xdebug maximum function nesting level error</h3>
 
-See <a href="{{ page.baseurl }}/install-gde/trouble/php/tshoot_xdebug.html">During installation, xdebug maximum function nesting level error</a>.
+See <a href="{{ page.baseurl }}/install-gde/trouble/php/tshoot_xdebug.html">安装过程中xdebug出现嵌方法套层数过多的错误</a>.
 
 <h3 id="trouble-php-asptags">Errors display when you access a PHTML template</h3>
 Error text is typically:
@@ -84,4 +84,4 @@ Multiple templates have syntax for support abstract level on templates (use diff
 
 More information about <a href="http://php.net/manual/en/ini.core.php#ini.asp-tags" target="_blank">asp_tags</a>.
 
-Edit `php.ini` and set `asp_tags = off`. For more information, see [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html).
+Edit `php.ini` and set `asp_tags = off`. For more information, see [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html).

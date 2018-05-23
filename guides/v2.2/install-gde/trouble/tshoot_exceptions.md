@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 02_access
-title: Exceptions during installation
-menu_title: Exceptions during installation
+title: 安装过程中出异常
+menu_title: 安装过程中出异常
 menu_node:
 menu_order: 8
 version: 2.2

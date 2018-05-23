@@ -100,7 +100,7 @@ Theme configuration includes all themes registered in your Magento system; the d
 The key of array is full theme path: `area` + `theme path`
 
 For example, `frontend/Magento/luma`.
-`frontend` is area and `Magento/luma` is {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} path.
+`frontend` is area and `Magento/luma` is {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} path.
 
 The value of array is data about theme: code, title, path, parent id and etc.
 

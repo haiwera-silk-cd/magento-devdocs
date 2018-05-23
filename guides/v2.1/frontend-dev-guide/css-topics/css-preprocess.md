@@ -1,9 +1,9 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: CSS preprocessing
+title: CSS预处理
 menu_order: 3
-menu_title: CSS preprocessing
+menu_title: CSS预处理
 version: 2.1
 github_link: frontend-dev-guide/css-topics/css-preprocess.md
 redirect_from: /guides/v1.0/frontend-dev-guide/css-topics/css-preprocess.html
@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-The topic describes how stylesheets are preprocessed and compiled to {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} in the Magento application. It provides the theoretical background a {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}frontend{% endglossarytooltip %} developer needs to debug stylesheets effectively.
+The topic describes how stylesheets are preprocessed and compiled to {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} in the Magento application. It provides the theoretical background a {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} developer needs to debug stylesheets effectively.
 
 ## Terms used {#css_preprocess_terms}
 
@@ -105,7 +105,7 @@ In server-side LESS compilation mode, to have your changes applied, clear <code>
 
 Alternatively, to streamline the process of applying and debugging styles customizations, in server-side compilation mode, you can use the <a href="http://gruntjs.com/" target="_blank">Grunt JavaScript task runner</a>.
 
-See the [Compile LESS with Grunt]({{ page.baseurl }}/frontend-dev-guide/css-topics/css_debug.html) topic for details on how to install, configure and use Grunt.
+See the [使用grunt编译less文件]({{ page.baseurl }}/frontend-dev-guide/css-topics/css_debug.html) topic for details on how to install, configure and use Grunt.
 
 ### Client-side LESS compilation {#client-side}
 
@@ -175,7 +175,7 @@ This way Magento will skip the `@import` directive while resolving paths to the 
 The standard <code>@import</code> directive includes a single file, which is found according to the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-static">static files fallback</a>.</p>
 
 
-<code>@magento_import</code> can be used in the root source files of a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} only.
+<code>@magento_import</code> can be used in the root source files of a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} only.
 
 
 ### `@magento_import` rules of usage {#magento-import-usage}

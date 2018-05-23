@@ -1,8 +1,8 @@
 ---
 group: install2
-subgroup: Getting Started
-title: Is the Magento software installed already?
-menu_title: Is the Magento software installed already?
+subgroup: 起步
+title: 你的Magento安装好了吗?
+menu_title: 你的Magento安装好了吗?
 menu_node:
 menu_order: 101
 level3_menu_node: level3child
@@ -16,7 +16,7 @@ functional_areas:
   - Setup
 ---
 
-To determine if the Magento software is installed already, you can access the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} (administration console) or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} using a web browser.
+To determine if the Magento software is installed already, you can access the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} (administration console) or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} using a web browser.
 
 **Prerequisite**: You must know the Magento server's host name or IP address, and the {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} to access the Magento installation. If you're not sure, find the information from your system administrator or hosting provider.
 

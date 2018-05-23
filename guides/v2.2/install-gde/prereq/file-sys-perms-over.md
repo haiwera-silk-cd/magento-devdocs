@@ -1,6 +1,6 @@
 ---
 group: install_pre
-title: Overview of ownership and permissions
+title: 所有者和权限概述
 version: 2.2
 github_link: install-gde/prereq/file-sys-perms-over.md
 redirect_from:

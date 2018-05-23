@@ -1,6 +1,6 @@
 ---
 group: mrg
-title: Magento_Staging module
+title: Magento_Staging模块
 version: 2.1
 ee_only: true
 github_link: mrg/ee/Staging.md
@@ -8,14 +8,14 @@ github_link: mrg/ee/Staging.md
 
 The Magento_Staging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} enables you to work with the future [campaigns](#campaign) in {{site.data.var.ee}}.
 
-With the Magento_Staging module you can:
+With the Magento_Staging模块 you can:
 
 - Manage future campaigns
     - Using the Staging Dashboard in Admin
     - Using APIs
 - Preview a future campaign in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}
 
-Moreover, the Magento_Staging module is a framework for other [staging](#staging) modules. It declares basic scenarios over the content, while other staging modules perform them. (You can recognize a staging modules by name, each ends with "Staging" and starts with a name of a module, which it extends. For example, Magento_CatalogStaging module extends functionality of Magento_Catalog module.)
+Moreover, the Magento_Staging模块 is a framework for other [staging](#staging) modules. It declares basic scenarios over the content, while other staging modules perform them. (You can recognize a staging modules by name, each ends with "Staging" and starts with a name of a module, which it extends. For example, Magento_CatalogStaging模块 extends functionality of Magento_Catalog模块.)
 
 You can work with the following entities out of the box:
 
@@ -53,7 +53,7 @@ And you can extend the list adding your own {% glossarytooltip 55774db9-bf9d-40f
 
 ## Dashboard
 
-The Magento_Staging module creates a GUI dashboard of campaigns in Admin (*Content &gt; Staging Dashboard*).
+The Magento_Staging模块 creates a GUI dashboard of campaigns in Admin (*Content &gt; Staging Dashboard*).
 
 ### Usage
 
@@ -157,7 +157,7 @@ Only empty [campaign](#campaign) can be deleted, that is performed by the cron. 
 
 ### Update
 
-The [scheduled updates](#scheduled-update) functionality is implemented in [staging](#staging) modules. The Magento_Staging module only distributes to other staging modules a Schedule Update form and a grid of future campaigns.
+The [scheduled updates](#scheduled-update) functionality is implemented in [staging](#staging) modules. The Magento_Staging模块 only distributes to other staging modules a Schedule Update form and a grid of future campaigns.
 
 #### Create an update
 
@@ -214,7 +214,7 @@ The options of how you can remove an update:
 
 ## Preview mode
 
-In this mode, the Magento_Staging module builds a view of a store for a specific future date. You can surf the storefront, add products to the cart, go to checkout, apply gift certificates and discounts, order {% glossarytooltip c8f00e9d-7f70-4561-9773-60da604ba5c9 %}shipment{% endglossarytooltip %}. Payment methods and placing an order are not available in a preview mode.
+In this mode, the Magento_Staging模块 builds a view of a store for a specific future date. You can surf the storefront, add products to the cart, go to checkout, apply gift certificates and discounts, order {% glossarytooltip c8f00e9d-7f70-4561-9773-60da604ba5c9 %}shipment{% endglossarytooltip %}. Payment methods and placing an order are not available in a preview mode.
 
 ### Different websites
 
@@ -235,11 +235,11 @@ The Staging modules cannot be removed or disabled after they were installed.
 
 ## Module dependencies
 
-You can find the list of modules that have dependencies on the Magento_Staging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_Staging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-Extension points enable extension developers to interact with the Magento_Staging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
+Extension points enable extension developers to interact with the Magento_Staging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/plugins.html).
 
 ### Public API
 
@@ -275,7 +275,7 @@ When update is applied, the indexer handles it according to the actual indexing 
 
 ### Data migration
 
-The Magento_Staging module uses the `\Magento\Staging\Setup\BasicSetup` class during installation. This class changes {% glossarytooltip 66b924b4-8097-4aea-93d9-05a81e6cc00c %}数据库表结构{% endglossarytooltip %} and migrates data.
+The Magento_Staging模块 uses the `\Magento\Staging\Setup\BasicSetup` class during installation. This class changes {% glossarytooltip 66b924b4-8097-4aea-93d9-05a81e6cc00c %}数据库表结构{% endglossarytooltip %} and migrates data.
 
 #### Migration of attributes with range
 

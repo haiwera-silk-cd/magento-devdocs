@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 03_install
-title: Unknown module Magento_BundleSampleData
-menu_title: Unknown module Magento_BundleSampleData
+title: 未知模块Magento_BundleSampleData
+menu_title: 未知模块Magento_BundleSampleData
 menu_node:
 menu_order: 400
 version: 2.0
@@ -33,7 +33,7 @@ Try each of the following one at a time, then try your installation again.
 
 	On Step 4: Customize Your Store, expand **Advanced Modules Configurations** and clear the **Magento_BundleSampleData** check box as the following figure shows.
 
-	![Clear the Magento_ModuleSampleData check box]({{ site.baseurl }}/common/images/install_tshoot_bundlesample.png)
+	![Clear the Magento_ModuleSampleData check box]({{ site.magentourl }}/common/images/install_tshoot_bundlesample.png)
 3.	Clear all browser history and data from your web browser.
 4.	If you have Chrome, clear all browser data related to your site.
 

@@ -1,8 +1,8 @@
 ---
 group: install_trouble
 subgroup: 20_other
-title: Error 'MySQL server has gone away' during installation
-menu_title: Error 'MySQL server has gone away' during installation
+title: 安装期间出现'MySQL server has gone away'
+menu_title: 安装期间出现'MySQL server has gone away'
 menu_node:
 menu_order: 505
 version: 2.1

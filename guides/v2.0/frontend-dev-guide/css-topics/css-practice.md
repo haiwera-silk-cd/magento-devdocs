@@ -1,9 +1,9 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Customizing styles illustration
+title: 定制样式图示
 menu_order: 5
-menu_title: Customizing styles illustration
+menu_title: 定制样式图示
 version: 2.0
 github_link: frontend-dev-guide/css-topics/css-practice.md
 redirect_from: /guides/v1.0/frontend-dev-guide/css-topics/css-practice.html
@@ -17,7 +17,7 @@ This topic features a step-by-step illustration of how to change a theme's color
 
 <h2>Changing theme color scheme</h2>
 
-OrangeCo created a custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} that inherits from the Magento basic Blank theme.
+OrangeCo created a custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} that inherits from the Magento basic Blank theme.
 The following image illustrates how store pages look when the Blank theme is applied:
 
 <div style="border: 1px solid #ABABAB">
@@ -29,7 +29,7 @@ In their Grey theme, OrangeCo wants to change the color scheme from white to gre
 
 The Grey theme directory is <code>app/design/frontend/OrangeCo/grey</code>.
 
-OrangeCo decided to use the Magento UI library, so to change the color scheme, they need to define new values for certain default LESS variables.
+OrangeCo decided to use the Magento UI库, so to change the color scheme, they need to define new values for certain default LESS variables.
 To do this, they added an overriding <code>_theme.less</code> file in the <code>app/design/frontend/OrangeCo/grey/web/css/source</code> directory, with the following content:
 <pre>
 //  Color nesting
@@ -41,7 +41,7 @@ To do this, they added an overriding <code>_theme.less</code> file in the <code>
 @link__color: @color-gray56;
 @link__hover__color: @color-gray60;
 
-//  Buttons
+//  按钮
 @button__color: @color-gray20;
 @button__background: @color-gray80;
 @button__border: 1px solid @border-color__base;

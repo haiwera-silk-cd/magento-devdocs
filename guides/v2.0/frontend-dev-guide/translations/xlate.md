@@ -1,7 +1,7 @@
 ---
 group: fedg
 subgroup: G_Translate
-title: Translations overview
+title: 翻译概述
 menu_title: Translations
 menu_order: 1
 menu_node: parent
@@ -68,9 +68,9 @@ See one of the following sections for more information:
 You might need to add a dictionary for the default language (en_US) in the following cases:
 
 - if you want to replace certain strings from the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html">parent theme</a>. For example, use "Compare" instead of "Add to Compare".
-- if you want your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} to be ready for localization. 
+- if you want your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} to be ready for localization. 
 
-For practical illustration of creating a dictionary for a theme for both cases, see the <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">Create a translation dictionary for a theme</a> topic.
+For practical illustration of creating a dictionary for a theme for both cases, see the <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典</a> topic.
 
 <h2 id="m2devgde-xlate-translating">Manually translate words and phrases</h2>
 Translating the names, titles and phrases used in Magento involves the following steps:

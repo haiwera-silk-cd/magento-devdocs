@@ -1,8 +1,8 @@
 ---
 group: migration
 subgroup: A_Overview
-title: Best practices and benchmarking
-menu_title: Best practices and benchmarking
+title: 最佳实践和基准
+menu_title: 最佳实践和基准
 menu_node:
 menu_order: 1
 version: 2.0

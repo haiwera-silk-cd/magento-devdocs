@@ -1,6 +1,6 @@
 ---
 group: howdoi
-subgroup: Troubleshooting
+subgroup: 故障排除
 title: Reset the theme to default
 menu_title: Reset the theme to default
 menu_order: 1
@@ -21,7 +21,7 @@ UPDATE core_config_data SET value=NULL WHERE path='design/theme/theme_id'
 
 2. Clear the `pub/static/frontend`, `var/view_preprocessing`, `var/cache`, `var/page_cache` directories. 
 
-This way there will be no {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %} set on the {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}store view{% endglossarytooltip %} level, and when you reload the store front pages, the default Luma theme will be applied.
+This way there will be no {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} set on the {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}store view{% endglossarytooltip %} level, and when you reload the store front pages, the default Luma theme will be applied.
 
 ### Related topics:
 

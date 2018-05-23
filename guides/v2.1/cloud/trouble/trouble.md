@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Troubleshooting
+title: 故障排除
 version: 2.1
 github_link: cloud/trouble/trouble.md
 functional_areas:

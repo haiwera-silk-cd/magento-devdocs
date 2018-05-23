@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Quick start. See logs for failed tests
+title: 快速开始，测试失败的日志查看
 version: 2.0
 github_link: mtf/mtf_quickstart/mtf_quickstart_logs.md
 ---

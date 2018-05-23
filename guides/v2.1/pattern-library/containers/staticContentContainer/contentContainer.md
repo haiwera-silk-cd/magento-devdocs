@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Container
-title: Admin Design Pattern Library
-menu_title: Static Content Container
+title: 管理面板用到的设计模式和库
+menu_title: 静态内容容器
 menu_order: 1
 menu_node:
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Content
 ---
 
-## Static Content Container 
+## 静态内容容器 
 Within the Magento application, it is often necessary to display static information to the users. These {% glossarytooltip a3e37235-4e8b-464f-a19d-4a120560206a %}static content{% endglossarytooltip %} are considered Content Container and should follow the guideline in this article.
 
 For solutions not described in this article or for further information, please contact the Magento UX Design Team.
@@ -81,4 +81,4 @@ This is used to clearly separate information for users to easily digest.
 
 Please reach out to the Magento UX Design team if you need anything else.
 
-<a href="src/magento-static-content-container.psd">Download Static Content Container PSD source</a>
+<a href="src/magento-static-content-container.psd">Download 静态内容容器 PSD source</a>

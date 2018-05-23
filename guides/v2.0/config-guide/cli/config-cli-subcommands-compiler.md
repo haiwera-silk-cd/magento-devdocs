@@ -51,7 +51,7 @@ Use this command if you have multiple *tenants*, which means more than one indep
 
 -   There is one Magento 2 code base instance
 -   There is one database instance per tenant
--   Independent configurations in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %} per tenant
+-   Independent configurations in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} per tenant
 -   The storefronts are independent of each other
 
 If you do not have multiple tenants, use the <a href="#config-cli-subcommands-single">single-tenant compiler</a> instead.

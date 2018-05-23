@@ -1,8 +1,8 @@
 ---
 group:
 subgroup: 02_config-hosted
-title: Set up scheduled tasks (cron)
-menu_title: Set up scheduled tasks (cron)
+title: 设置定时任务(cron)
+menu_title: 设置定时任务(cron)
 menu_order: 10
 menu_node:
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="newbie-db">Set up scheduled tasks (cron)</h2>
+<h2 id="newbie-db">设置定时任务(cron)</h2>
 *cron* is the UNIX task scheduler. Magento requires cron for quite a few things, including reindexing, automated e-mails, newsletters, sitemap, and so on.
 
 To set up cron on your managed server:

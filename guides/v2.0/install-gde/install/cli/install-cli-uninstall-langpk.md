@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 05_Command-line installation
-title: Uninstall language packages
-menu_title: Uninstall language packages
+title: 卸载语言包
+menu_title: 卸载语言包
 menu_node:
 menu_order: 500
 version: 2.0
@@ -28,7 +28,7 @@ You can restore backups at any time using the <a href="{{ page.baseurl }}/instal
 {% include install/first-steps-cli.html %}
 我们不止在这里讨论命令参数，更多请参考<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-subcommands-common">命令参数</a>.
 
-<h2 id="instgde-cli-uninst-lgpk-uninst">Uninstall language packages</h2>
+<h2 id="instgde-cli-uninst-lgpk-uninst">卸载语言包</h2>
 命令用法：
 
 	magento i18n:uninstall [-b|--backup-code] {language package name} ... {language package name}

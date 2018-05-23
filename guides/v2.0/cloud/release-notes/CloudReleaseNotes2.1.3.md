@@ -135,7 +135,7 @@ To use Elasticsearch, you must perform all the tasks discussed in this section.
 {% endcollapsible %}
 
 ### Step 4: Get Elasticsearch connection information {#cloud-es-config-mg}
-This section discusses how to get connection information for Elasticsearch so you can configure the Magento application to use it as your search engine.
+This section discusses how to get connection information for Elasticsearch so you can 配置Magento应用 to use it as your search engine.
 
 {% collapsible To get Elasticsearch connection information: %}
 
@@ -189,7 +189,7 @@ This section discusses how to get connection information for Elasticsearch so yo
 
 {% endcollapsible %}
 
-### Step 5: Configure the Magento application to use Elasticsearch
+### Step 5: 配置Magento应用 to use Elasticsearch
 
 Configure Magento using the instructions in the [Magento configuration for Elasticsearch](http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/configure-magento.html) guide.
 

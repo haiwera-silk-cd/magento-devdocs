@@ -2,7 +2,7 @@
 group: mrg
 subgroup: 20_Enterprise Edition
 ee_only: true
-title: Magento_ConfigurableProductStaging module
+title: Magento_ConfigurableProductStaging模块
 menu_title: ConfigurableProductStaging
 menu_order: 2
 version: 2.2
@@ -14,21 +14,21 @@ The Magento_ConfigurableProductStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d7
 
 ## Implementation details
 
-The Magento_ConfigurableProductStaging module adds the "Configurations" tab and the configuration wizard to the Schedule Update form of a product.
+The Magento_ConfigurableProductStaging模块 adds the "Configurations" tab and the configuration wizard to the Schedule Update form of a product.
 
 ### Installation details
 
-The Magento_ConfigurableProductStaging module makes irreversible changes in a database during installation. You cannot uninstall this module.
+The Magento_ConfigurableProductStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
 ## Dependencies
 
-You can find the list of modules that have dependencies on the Magento_ConfigurableProductStaging module in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
+You can find the list of modules that have dependencies on the Magento_ConfigurableProductStaging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 
 ## Extension points
 
-{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ConfigurableProductStaging module. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
+{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} points enable extension developers to interact with the Magento_ConfigurableProductStaging模块. For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html).
 
-[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ConfigurableProductStaging module.
+[The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_ConfigurableProductStaging模块.
 
 ### UI components
 

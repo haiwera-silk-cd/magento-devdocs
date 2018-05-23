@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: D_CSS
-title: Cascading style sheets (CSS)
-menu_title: Cascading style sheets (CSS)
+title: 层叠样式表(CSS)
+menu_title: 层叠样式表(CSS)
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -43,7 +43,7 @@ In the Blank theme, the buttons of the `.action.primary` class, so called *prima
 
 OrangeCo wants to change the color of the primary buttons to orange. To achieve this, they do the following:
 
-1. Create a new Orange theme, which inherits from the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+1. Create a new Orange theme, which inherits from the Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 2. In the Orange theme directory add the overriding <code>app/design/frontend/OrangeCo/orange/web/css/source/_theme.less</code> file with the following code:
 <pre>
 //  Primary button
@@ -68,6 +68,6 @@ Other topics of this chapter describe the following:
 * <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html" target="_blank">CSS Preprocessing</a>: how stylesheets are preprocessed and compiled
 * <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html" target="_blank">Magento UI Library</a>: how to use the Magento styles {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} in your custom themes
 * <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/using-fonts.html" target="_blank">Using Custom Fonts</a>: how to add custom fonts 
-* <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-practice.html" target="_blank">Customizing styles illustration</a>: how to change a theme's color scheme using Magento UI library. 
+* <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-practice.html" target="_blank">定制样式图示</a>: how to change a theme's color scheme using Magento UI库. 
 
 

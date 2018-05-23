@@ -40,7 +40,7 @@ Before you publish your component, you should test installing it using the <a hr
 
 One way to do this follows:
 
-1.	<a href="{{ page.baseurl }}/extension-dev-guide/package/package_module.html">Package your component</a> in a GitHub repository that's accessible by the machine on which you run the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento Admin{% endglossarytooltip %}.
+1.	<a href="{{ page.baseurl }}/extension-dev-guide/package/package_module.html">Package your component</a> in a GitHub repository that's accessible by the machine on which you run the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 2.	On that machine, create a static route from `https://repo.magento.com` to your GitHub repository.
 
 	To create a static route, add a line similar to the following to your `hosts` file:

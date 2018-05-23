@@ -13,7 +13,7 @@ functional_areas:
 <h2>What's in this topic</h2>
 This topic features a step-by-step illustration of how to change the number of products displayed in a row on a product page, keeping up with the responsive design approach used by Magento out-of-the-box themes. 
 
-The described flow is applicable only for themes that <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherit</a> from the out-of-the-box Blank or Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}theme{% endglossarytooltip %}.
+The described flow is applicable only for themes that <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherit</a> from the out-of-the-box Blank or Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 <h2 id="rwd_practice">Changing the number of products in a row</h2>
 

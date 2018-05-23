@@ -18,7 +18,7 @@ You can upgrade Magento from the command line if you installed the software usin
 *	Installed the compressed archive
 
 <div class="bs-callout bs-callout-info" id="info">
- 	<ul><li>If you cloned the Magento 2 GitHub repository, you <em>cannot</em> use this method to upgrade; instead, see <a href="{{ page.baseurl }}/install-gde/install/cli/dev_update-magento.html">Update the Magento application</a>.</li>
+ 	<ul><li>If you cloned the Magento 2 GitHub repository, you <em>cannot</em> use this method to upgrade; instead, see <a href="{{ page.baseurl }}/install-gde/install/cli/dev_update-magento.html">更新Magento</a>.</li>
  		<li>If you configured Magento use use <code>pub</code> as its root directory, see the next section.</li>
  		<li>If you're upgrading to Magento 2.1 (including a Release Candidate) from Magento 2.0.7 or earlier <em>and</em> you installed sample data, see <a href="{{ page.baseurl }}/comp-mgr/cli/cli-rc1-samp.html">Command-line upgrade to Magento 2.1 with sample data</a> instead of this topic.</li></ul>
 </div>

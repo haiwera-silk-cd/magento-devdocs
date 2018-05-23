@@ -1,8 +1,8 @@
 ---
 group: pattern
 subgroup: Controls
-title: Admin Design Pattern Library
-menu_title: Button Bar
+title: 管理面板用到的设计模式和库
+menu_title: 按钮栏
 menu_order: 2
 menu_node: 
 version: 2.0
@@ -40,12 +40,12 @@ For solutions not described in this article, please refer to other related patte
 * Its location in either scenario must be right below the page title or the slide-in panel title.
 
 <br>
-**Button Bar Position in Page**<br><br>
+**按钮栏 Position in Page**<br><br>
 <img src="img/position-in-page.jpg">
 
 <br>
 
-**Button Bar Position in Slide-in Panel**<br><br>
+**按钮栏 Position in Slide-in Panel**<br><br>
 <img src="img/position-in-modal.jpg">
 
 
@@ -54,9 +54,9 @@ For solutions not described in this article, please refer to other related patte
 * There should never be more than one primary page level button on a single page.
 * Primary page level buttons should always be placed on the far right of the button order.
 * If a Back button is present, it should always fall on the far left of the button order.
-* Buttons should be ordered by group as specified below. In situations where button groups do not apply, they should be ordered by importance.
+* 按钮 should be ordered by group as specified below. In situations where button groups do not apply, they should be ordered by importance.
 
-####  4. Ordering of Button Bar
+####  4. Ordering of 按钮栏
 
 Page level buttons can be logically grouped as follows:
 
@@ -117,7 +117,7 @@ To ensure page level actions are always visible, The button bar should stick to 
 
 
 <h3 id="accessibility">Accessibility</h3>
-Buttons should make use of {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} and {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} so that button text is never dependent on a
+按钮 should make use of {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} and {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} so that button text is never dependent on a
 graphic asset.
 
 
@@ -125,5 +125,5 @@ graphic asset.
 
 Please reach out to the Magento UX Design team if you need anything else.
 
-<a href="src/magento-button-bar.psd">Download Button Bar PSD source</a>
+<a href="src/magento-button-bar.psd">Download 按钮栏 PSD source</a>
 
