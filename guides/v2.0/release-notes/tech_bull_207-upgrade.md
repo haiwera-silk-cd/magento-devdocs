@@ -15,15 +15,15 @@ This bulletin informs you of a known issue updating from Magento Commerce (forme
 
 	**and**
 
-* Updater application version 10.0.1. This version is shipped by default with Magento 2.0.7. 
+* 更新器程序 version 10.0.1. This version is shipped by default with Magento 2.0.7. 
 
 Patch `MDVA-449` supplies the fix for this potential upgrade issue. 
 
 
 
-<h3>Issue: Upgrade failure from Magento installations running PHP 5.5.x and Updater application 10.0.1</h3>
+<h3>Issue: Upgrade failure from Magento installations running PHP 5.5.x and 更新器程序 10.0.1</h3>
 
-Magento Open Source  and Commerce upgrades fail if your server runs PHP 5.5.x and Setup application (also referred to as the <i>Updater application</i>) version 10.0.1 and you  try to upgrade to a later version of Magento.
+Magento Open Source  and Commerce upgrades fail if your server runs PHP 5.5.x and Setup application (also referred to as the <i>更新器程序</i>) version 10.0.1 and you  try to upgrade to a later version of Magento.
 
 
 Magento 2.0.7 by default ships with Setup application version 10.0.1.  If you have not changed the default Setup application version that shipped with 2.0.7 and are running PHP 5.5.x, you must follow this bulletin. Failure to install patch `MDVA-449` will complicate attempts to upgrade from this version of Magento to any future versions, including 2.1. Installations using PHP 5.6.x and 7.0.x do not need this patch.
@@ -65,7 +65,7 @@ The following table summarizes what you need to do.
 </tbody>
 </table>
 
-<h4>How to determine which version of Updater application you are running</h4> 
+<h4>How to determine which version of 更新器程序 you are running</h4> 
 1. Log in to your Magento server as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
 
 2. Open the following file in a text editor:

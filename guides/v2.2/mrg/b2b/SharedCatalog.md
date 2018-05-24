@@ -34,7 +34,7 @@ When the module is uninstalled, the other <i>ProductType</i>SharedCatalog module
 
 ## Extensibility
 
-Shared catalogs are using message queues to save prices. For more information about queues, see [Message Queues]({{ page.baseurl }}/extension-dev-guide/message-queues.html).
+Shared catalogs are using message queues to save prices. For more information about queues, see [消息队列]({{ page.baseurl }}/extension-dev-guide/message-queues.html).
 
 Extension developers can interact with the Magento_SharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

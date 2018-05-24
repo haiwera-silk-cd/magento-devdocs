@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 02_prereq
-title: Enter your authentication keys in the Admin
-menu_title: Enter your authentication keys in the Admin
+title: 在管理面板输入你的认证密钥
+menu_title: 在管理面板输入你的认证密钥
 menu_order: 2
 menu_node:
 version: 2.0

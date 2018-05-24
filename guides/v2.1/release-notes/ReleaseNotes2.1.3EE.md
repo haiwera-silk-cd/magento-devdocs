@@ -176,7 +176,7 @@ We've enhanced the performance of configurable products in several ways:
 <!---59879-->* Magento no longer displays the "as low as" label for a disabled price on the Category page.
 
 
-<!---58500-->* The Magento Framework now makes its dependency upon the `zendframework/zend-stdlib` library explicit in `composer.json`.  <a href="https://github.com/magento/magento2/issues/6442" target="_blank">(GITHUB-6442)</a>
+<!---58500-->* The Magento框架 now makes its dependency upon the `zendframework/zend-stdlib` library explicit in `composer.json`.  <a href="https://github.com/magento/magento2/issues/6442" target="_blank">(GITHUB-6442)</a>
 
 <!---57197-->* We've eliminated difficulties saving product information when logged in as Admin. Previously, the Product Save feature worked erratically for Admin users. 
 
@@ -437,7 +437,7 @@ We've improved the performance of these tasks:
 
 <!---56914-->* Versioning of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} (including CSS, JS, font, and image files) is now enabled by default. 
 
-<!---57904-->* We've improved the speed of static asset deployment. See <a href="http://devdocs.magento.com/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html" target="_blank">Deploy static view files</a> for more information about available options. 
+<!---57904-->* We've improved the speed of static asset deployment. See <a href="http://devdocs.magento.com/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html" target="_blank">部署静态视图文件</a> for more information about available options. 
 
 
 ### Tier pricing
@@ -566,7 +566,7 @@ This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToke
 
 	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the Web Setup Wizard from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
 
-	*	Install Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
+	*	安装Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
 
 <!---60680-->* **Issue**: You cannot successfully change and save your settings for gift cards. (<i>Settings</i> include "allow open amount" or "open amount minimum".) 
 

@@ -1,9 +1,9 @@
 ---
 group: cloud
 subgroup: 010_welcome
-title: Welcome to Magento Commerce (Cloud)
+title: 欢迎使用Magento企业版(云支持版)
 landing-page: Cloud
-menu_title: Welcome to Magento Commerce (Cloud)
+menu_title: 欢迎使用Magento企业版(云支持版)
 menu_order: 10
 menu_node: parent
 version: 2.0
@@ -26,12 +26,12 @@ functional_areas:
 
 Code, test, and deploy across Integration, Staging, and finally Production environment for continuous integration of your store.
 
-For full release notes, see [Release Information]({{ page.baseurl }}/release-notes/bk-release-notes.html) and [Magento Commerce (Cloud) third-party licenses]({{ page.baseurl }}/release-notes/thirdparty-mccloud.html).
+For full release notes, see [Release Information]({{ page.baseurl }}/release-notes/bk-release-notes.html) and [Magento企业版(云支持版) third-party licenses]({{ page.baseurl }}/release-notes/thirdparty-mccloud.html).
 
 ## {{site.data.var.ece}} plans and subscriptions {#plans}
 {{site.data.var.ece}} provides plan options based on the size of your business. Each plan includes {{site.data.var.ece}}, support, and Cloud-based hosting and infrastructure on a subscription basis. Want to sign up? We encourage starting with a free 30-day trial to begin working with Magento.
 
-For a list of our plans and breakdown of features, see [Subscriptions and plans]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html).
+For a list of our plans and breakdown of features, see [订阅和计划]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html).
 
 To start your free 30-day trial, see our [Plan Comparison](https://magento.com/trial/plans-comparison){:target="_blank"}. You can select a plan that fits your business and start a trial with a newly provisioned project and code-base with the latest version of {{site.data.var.ece}}.
 
@@ -43,7 +43,7 @@ To start your free 30-day trial, see our [Plan Comparison](https://magento.com/t
 * We use a robust {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} build process.
 * You can increase the amount of memory and CPU as needed.
 
-### Technologies and requirements {#requirements}
+### 技术和要求 {#requirements}
 You should become familiar with the following technologies:
 
 * [Git](https://git-scm.com/docs/user-manual.html){:target="_blank"}
@@ -52,7 +52,7 @@ You should become familiar with the following technologies:
 * MySQL (including command-line interaction)
 * Basic linux shell usage
 
-See [Technologies and requirements]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html), [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html), and [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html) for details and additional technologies.
+See [技术和要求]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html), [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html), and [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html) for details and additional technologies.
 
 ## Where do I get started? {#getstarted}
 If you have experience with {{site.data.var.ee}} 2 or our cloud implementation, we recommend reviewing content in these DevDocs to understand the differences between {{site.data.var.ee}} and {{site.data.var.ece}}. If you are new to Magento and the Cloud, this guide introduces all aspects from building a project, setting up your local, continuous deployment across environments, and going live.
@@ -61,22 +61,22 @@ If you create your account with the 30-day trial, we set you up quickly to get s
 
 To get started, see:
 
-* [Onboarding tasks]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html) of first things to do right after signing up.
+* [新手上路任务]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html) of first things to do right after signing up.
 * Sign up for [status updates]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#status) for components and services.
 
 To better understand {{site.data.var.ee}}, your plan, architecture, and workflows, see the following starting points:
 
-*	[Technologies and requirements]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html)
+*	[技术和要求]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html)
 *	Starter information:
 
-	* [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
-	*	[Starter develop and deploy workflow]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html)
+	* [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
+	*	[开发和部署工作流起步]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html)
 *	Pro information:
 
 	* [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html)
 	*	[Pro develop and deploy workflow]({{ page.baseurl }}/cloud/architecture/pro-develop-deploy-workflow.html)
-*	[Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
-* [Local environment setup]({{ page.baseurl }}/cloud/access-acct/first-time-setup.html)
+*	[部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+* [本地环境设置]({{ page.baseurl }}/cloud/access-acct/first-time-setup.html)
 
 ## Learn more about Magento 2 {#magento2}
 If you would like to learn more about Magento 2, see the following resources:
@@ -92,7 +92,7 @@ If you would like to learn more about Magento 2, see the following resources:
 	*	[Magento 2 Architecture guide]({{ page.baseurl }}/architecture/bk-architecture.html){:target="_blank"}
   *	[Front end development]({{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html){:target="_blank"}
 	*	[Customizing the Magento software]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html){:target="_blank"}
-	*	[Installation]({{ page.baseurl }}/install-gde/bk-install-guide.html), though we recommend following [Prepare for local environment setup]({{ page.baseurl }}/cloud/before/before-workspace.html){:target="_blank"}
+	*	[Installation]({{ page.baseurl }}/install-gde/bk-install-guide.html), though we recommend following [本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html){:target="_blank"}
 	*	[Configuration]({{ page.baseurl }}/config-guide/bk-config-guide.html){:target="_blank"}
   *	[B2B user guide](http://docs.magento.com/m2/b2b/user_guide/getting-started.html){:target="_blank"}
 

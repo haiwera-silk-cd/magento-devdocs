@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Configure message queues
-menu_title: Configure message queues
+title: 配置消息队列
+menu_title: 配置消息队列
 menu_order: 18
 version: 2.1
 ee_only: True
@@ -99,6 +99,6 @@ maxMessages | Specifies the maximum number of messages to consume.
 {% endhighlight %}
 
 #### 相关主题
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/queue-migration.html">Migrate message queue configuration</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>

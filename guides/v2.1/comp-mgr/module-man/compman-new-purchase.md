@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 3. Component Install
+title: 步骤3. 组件安装
 menu_title: Component Install
 menu_node:
 menu_order: 9

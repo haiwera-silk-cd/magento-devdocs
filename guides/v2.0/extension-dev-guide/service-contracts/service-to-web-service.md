@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Configure services as web APIs
-menu_title: Configure services as web APIs
+title: 将服务配置成web API
+menu_title: 将服务配置成web API
 menu_order: 20
 contributor_name: Classy Llama
 contributor_link: http://www.classyllama.com/

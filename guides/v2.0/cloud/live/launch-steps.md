@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 165_live
-title: Launch steps
-menu_title: Launch steps
+title: 发布步骤
+menu_title: 发布步骤
 menu_order: 20
 menu_node:
 version: 2.0
@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Go live checklist]({{ page.baseurl }}/cloud/live/go-live-checklist.html)
+[上线检查]({{ page.baseurl }}/cloud/live/go-live-checklist.html)
 
 After testing and completing your launch checklist, you can start the final steps to launch. These steps include entering tickets, cutting over access, and finally testing your store(s) when live.
 
@@ -33,7 +33,7 @@ To cut over to the new site:
 4. Access your store using the storefront domain.
 
 ## Test the live store {#test}
-Complete a few UAT tests in your live store to make sure everything is loading and actions complete correctly. For a list of tests, see [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
+Complete a few UAT tests in your live store to make sure everything is loading and actions complete correctly. For a list of tests, see [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
 
 ## Post-Launch {#postlaunch}
 Magento will activate checks and monitor the site to ensure all services and access are in the green. We remain on hand as needed to walk-through and check all system logs, services, caching, and functions are working as you and your customers need.

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Redis
-title: Use Redis for the Magento page and default cache
-menu_title: Use Redis for the Magento page and default cache
+title: 使用Redis作为Magento页面缓存和默认缓存
+menu_title: 使用Redis作为Magento页面缓存和默认缓存
 menu_order: 5
 menu_node:
 version: 2.0
@@ -92,6 +92,6 @@ where
 
 #### 相关主题
 
-*	[Use Redis for session storage]({{ page.baseurl }}/config-guide/redis/redis-session.html)
-*  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
+*	[使用Redis作为Session存储]({{ page.baseurl }}/config-guide/redis/redis-session.html)
+*  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
 *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

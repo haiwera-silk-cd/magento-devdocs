@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 010_welcome
-title: Starter architecture
-menu_title: Starter architecture
+title: 架构起步
+menu_title: 架构起步
 menu_order: 20
 menu_node:
 version: 2.0
@@ -100,7 +100,7 @@ For detailed information on supported versions and extensions, see the following
 *	[`services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html)
 
 ### Backup and disaster recovery {#backup}
-You can create a snapshot of your database and file system using the Project Web Interface or the CLI. The snapshot includes your deployed code, installed software and services, and data. See [Snapshots and backup management]({{ page.baseurl }}/cloud/project/project-webint-snap.html).
+You can create a snapshot of your database and file system using the Project Web Interface or the CLI. The snapshot includes your deployed code, installed software and services, and data. See [快照和备份管理]({{ page.baseurl }}/cloud/project/project-webint-snap.html).
 
 ## Prepare for development {#develop}
 To branch and develop your Magento store:

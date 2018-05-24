@@ -44,7 +44,7 @@ This option disables the WYSIWYG and enables the web driver to process these fie
 3. Set **Enable WYSIWYG Editor** to **Disabled Completely**.
 4. Click **Save Config**.
 
-### Security settings
+### 安全设置
 
 Enable the **Admin Account Sharing** setting to avoid unpredictable logout during testing session.
 And disable the **Add Secret Key in URLs** setting to open pages using direct URLs.

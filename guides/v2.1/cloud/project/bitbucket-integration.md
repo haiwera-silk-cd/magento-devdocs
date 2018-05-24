@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Bitbucket integration
+title: Bitbucket集成
 version: 2.1
 github_link: cloud/project/bitbucket-integration.md
 functional_areas:
@@ -8,7 +8,7 @@ functional_areas:
   - Setup
 ---
 
-Use the Bitbucket integration to automatically build and deploy an environment when you push new code to Bitbucket. This integration synchronizes your Bitbucket repository with your {{site.data.var.ece}} account.
+Use the Bitbucket集成 to automatically build and deploy an environment when you push new code to Bitbucket. This integration synchronizes your Bitbucket repository with your {{site.data.var.ece}} account.
 
 For Pro projects **created before October 23, 2017**, this integration works on Integration environments _only_. You must [request an upgrade]({{ page.baseurl }}/cloud/trouble/pro-env-management.html) before you can use this integration on Staging and Production environments.
 
@@ -60,7 +60,7 @@ This section shows you how to clone your {{site.data.var.ece}} project from and 
 1.  Verify that your Bitbucket repository contains all of your project files.
 
 ## Create an OAuth consumer
-The Bitbucket integration requires an [OAuth consumer](https://confluence.atlassian.com/x/pwIwDg){:target="\_blank"}. This section shows you how to create one in Bitbucket. You'll need the OAuth `key` and `secret` from this consumer to complete the next section.
+The Bitbucket集成 requires an [OAuth consumer](https://confluence.atlassian.com/x/pwIwDg){:target="\_blank"}. This section shows you how to create one in Bitbucket. You'll need the OAuth `key` and `secret` from this consumer to complete the next section.
 
 1.  Log in to your [Bitbucket](https://bitbucket.org/account/signin/){:target="\_blank"} account.
 1.  Click **Settings** > **Access Management** > **OAuth**.
@@ -125,7 +125,7 @@ The Bitbucket integration requires an [OAuth consumer](https://confluence.atlass
         magento-cloud integrations -p 'PROJECT ID'
 
 ## Verify that it works
-After configuring the Bitbucket integration, test it by pushing a simple change to your Bitbucket repository.
+After configuring the Bitbucket集成, test it by pushing a simple change to your Bitbucket repository.
 
 1.  Create a test file:
 
@@ -133,20 +133,20 @@ After configuring the Bitbucket integration, test it by pushing a simple change 
 
 1.  Commit and push it to your Bitbucket repository:
 
-        git add . && git commit -m "Testing Bitbucket integration" && git push
+        git add . && git commit -m "Testing Bitbucket集成" && git push
 
 1.  Log in to the [Project Web Interface]({{ page.baseurl }}/cloud/project/project-webint-basic.html) and verify that your commit message is displayed and your project is being deployed.
 
-    ![Testing the Bitbucket integration]({{ site.magentourl }}/common/images/cloud_test_bitbucket_integration.png)
+    ![Testing the Bitbucket集成]({{ site.magentourl }}/common/images/cloud_test_bitbucket_integration.png)
 
 
 ## Branching
-The Bitbucket integration cannot create new environments in your project, so you must use the `magento-cloud` CLI tool to [create branches]({{ page.baseurl }}/cloud/env/environments-start.html#getstarted).
+The Bitbucket集成 cannot create new environments in your project, so you must use the `magento-cloud` CLI tool to [create branches]({{ page.baseurl }}/cloud/env/environments-start.html#getstarted).
 
 After creating a new environment, you can push the corresponding branch up to your remote Bitbucket repository using regular git commands. For example, `git push -u origin <your-branch>`. Subsequent changes to your branch in Bitbucket will automatically build and deploy the environment.
 
 ## Remove the integration
-You can safely remove the Bitbucket integration from your project without affecting your code.
+You can safely remove the Bitbucket集成 from your project without affecting your code.
 
 To remove the integration using the `magento-cloud` CLI tool:
 
@@ -154,7 +154,7 @@ To remove the integration using the `magento-cloud` CLI tool:
 
         magento-cloud login
 
-1.  List your integrations. You need the Bitbucket integration ID to complete the next step.
+1.  List your integrations. You need the Bitbucket集成 ID to complete the next step.
 
         magento-cloud integration:list
 
@@ -162,4 +162,4 @@ To remove the integration using the `magento-cloud` CLI tool:
 
         magento-cloud integration:delete <ID>
 
-You can also remove the Bitbucket integration by logging in to your Bitbucket account and revoking the OAuth grant on the _Settings_ page.
+You can also remove the Bitbucket集成 by logging in to your Bitbucket account and revoking the OAuth grant on the _Settings_ page.

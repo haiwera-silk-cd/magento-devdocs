@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 2. Back up the file system and database
-menu_title: Step 2. Back up the file system and database
+title: 步骤2. 备份文件系统和数据库
+menu_title: 步骤2. 备份文件系统和数据库
 menu_node:
 menu_order: 7
 version: 2.1
@@ -17,8 +17,8 @@ functional_areas:
 #### 下一步
 After your backup is complete, continue with any of the following: 
 
-*	Installing new purchases or updates: [Step 3. Component Install]({{ page.baseurl }}/comp-mgr/module-man/compman-new-purchase.html)
-*	Updating components: [Step 3. Component Update]({{ page.baseurl }}/comp-mgr/module-man/compman-update.html)
+*	Installing new purchases or updates: [步骤3. 组件安装]({{ page.baseurl }}/comp-mgr/module-man/compman-new-purchase.html)
+*	Updating components: [步骤3. 组件更新]({{ page.baseurl }}/comp-mgr/module-man/compman-update.html)
 *	Enabling or disabling components: [Step 3. Enable/disable components]({{ page.baseurl }}/comp-mgr/module-man/compman-enable-disable.html)
-*	Uninstalling components: [Step 3. Data Option]({{ page.baseurl }}/comp-mgr/module-man/compman-uninst-data.html)
+*	Uninstalling components: [步骤3. 数据选项]({{ page.baseurl }}/comp-mgr/module-man/compman-uninst-data.html)
 

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Plugins (Interceptors)
-menu_title: Plugins (Interceptors)
+title: 插件(拦截器)
+menu_title: 插件(拦截器)
 menu_order: 10
 version: 2.0
 github_link: extension-dev-guide/plugins.md
@@ -229,8 +229,8 @@ For example, the developer can disable a global plugin in the {% glossarytooltip
 
 ### Related topics
 
-*  [Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
-*  [Events and observers]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html)
+*  [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+*  [事件和观查者]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html)
 
 ### Related information
 

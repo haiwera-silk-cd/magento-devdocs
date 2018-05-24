@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Manage your project
-menu_title: Manage your project
+title: 管理你的项目
+menu_title: 管理你的项目
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -22,17 +22,17 @@ We provide a Project Web Interface and CLI commands to fully manage all aspects 
 
 To manage your project, environment, and branches, see:
 
-* [Configure your project]({{ page.baseurl }}/cloud/project/project-webint-basic.html)
-* [Project structure]({{ page.baseurl }}/cloud/project/project-start.html)
-* [Create and manage users]({{ page.baseurl }}/cloud/project/user-admin.html)
+* [配置你的项目]({{ page.baseurl }}/cloud/project/project-webint-basic.html)
+* [项目结构]({{ page.baseurl }}/cloud/project/project-start.html)
+* [创建和管理用户]({{ page.baseurl }}/cloud/project/user-admin.html)
 *	Manage branches with the [Project Web Interface]({{ page.baseurl }}/cloud/project/project-webint-branch.html) or [CLI commands]({{ page.baseurl }}/cloud/env/environments-start.html)
-*	[Snapshots and backup management]({{ page.baseurl }}/cloud/project/project-webint-snap.html)
+*	[快照和备份管理]({{ page.baseurl }}/cloud/project/project-webint-snap.html)
 
 ### Project and environment variables {#variables}
 The following sections detail more about project and environment variables:
 
 *	[Overview of environment variables]({{ page.baseurl }}/cloud/env/variables-intro.html)
-*	[Magento Commerce (Cloud) environment variables]({{ page.baseurl }}/cloud/env/environment-vars_cloud.html)
+*	[Magento企业版(云支持版) environment variables]({{ page.baseurl }}/cloud/env/environment-vars_cloud.html)
 *	[Magento application environment variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html)
 *	[Example setting variables]({{ page.baseurl }}/cloud/env/set-variables.html)
 
@@ -71,7 +71,7 @@ When you first login, a list of projects you have access to displays. As a Proje
 
 Click on a project to access branches and more. On the page, you will see a hierarchy of environments named by the Git branch.
 
-For **Starter**, you will see a hierarchy of branches starting from Master (Production). Any branches you create display as children from Master. We recommend creating a Staging branch, then branching from that for your Integration development. For more information, see [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html).
+For **Starter**, you will see a hierarchy of branches starting from Master (Production). Any branches you create display as children from Master. We recommend creating a Staging branch, then branching from that for your Integration development. For more information, see [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html).
 
 ![Starter branch hierarchy]({{ site.magentourl }}/common/images/cloud_project-starter.png)
 
@@ -132,7 +132,7 @@ If you have inactive Git branches of code, you can toggle displaying the branche
 
 ![Show or hide inactive branches]({{ site.magentourl }}/common/images/cloud_show-inactive.png)
 
-## Configure environments {#configure}
+## 配置环境 {#configure}
 You can manage variables and settings for Production, Staging, and Integration environments through this interface, or with CLI commands. Click **Configure environment** to create and manage [*environments*]({{ page.baseurl }}/cloud/env/environments.html), each of which corresponds to a Git branch.
 
 ![Access your project]({{ site.magentourl }}/common/images/cloud_project-env.png)

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: Configuration
-title: Configuration importers
-menu_title: Configuration importers
+title: 配置导入器
+menu_title: 配置导入器
 menu_order: 2000
 version: 2.2
 github_link: extension-dev-guide/configuration/importers.md
@@ -69,8 +69,8 @@ An array cannot be imported by more than one importer.
 
 ## More information
 
-* [Sensitive and system-specific settings]({{ page.baseurl }}/extension-dev-guide/configuration/sensitive-and-environment-settings.html)
-* [config.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
-* [env.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)
+* [敏感的和系统特定的 settings]({{ page.baseurl }}/extension-dev-guide/configuration/sensitive-and-environment-settings.html)
+* [config.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
+* [env.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)
 
 [importer-interface]:{{ site.mage2200url }}lib/internal/Magento/Framework/App/DeploymentConfig/ImporterInterface.php

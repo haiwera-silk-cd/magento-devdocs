@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Architectural diagrams
-menu_title: Architectural diagrams
+title: 架构图
+menu_title: 架构图
 menu_order: 1
 version: 2.1
 github_link: architecture/archi_perspectives/arch_diagrams.md

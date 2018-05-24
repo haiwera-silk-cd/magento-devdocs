@@ -15,7 +15,7 @@
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Magento Commerce (Cloud) 2.2 Release Notes %}
+{% collapsibleh2 Magento企业版(云支持版) 2.2 Release Notes %}
 
 *	[magento-cloud-configuration release 101.9.x Release Notes]({{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes101.9.html){:target="_blank"}
 *	[magento-cloud-configuration release 101.8.x Release Notes]({{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes101.8.html){:target="_blank"}

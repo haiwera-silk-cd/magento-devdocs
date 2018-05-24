@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Snapshots and backup management
-menu_title: Snapshots and backup management
+title: 快照和备份管理
+menu_title: 快照和备份管理
 menu_order: 30
 menu_node:
 version: 2.0
@@ -109,7 +109,7 @@ To create a copy of your database, you dump the data from the database to a file
 
     mysqldump -h <database host> --user=<database user name> --password=<password> --single-transaction --triggers <database name> | gzip - > /tmp/database.sql.gz
 
-If you want to push this data into an environment, see [迁移数据 and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
+If you want to push this data into an environment, see [迁移数据和静态文件]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
 
 ## Rollbacks to remove code {#rollback-code}
 We recommend creating a snapshot of the environment and a backup of the database prior to deployments.

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up MySQL service
-menu_title: Set up MySQL service
+title: 设置MySQL服务
+menu_title: 设置MySQL服务
 menu_order: 60
 menu_node:
 level3_menu_node: level3child

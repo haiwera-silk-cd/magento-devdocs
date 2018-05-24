@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Fastly troubleshooting
-menu_title: Fastly troubleshooting
+title: 快速故障排查
+menu_title: 快速故障排查
 menu_order: 20
 menu_node:
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Configuration
 ---
 
-For information setting up and configuring Fastly, see [Set up Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html).
+For information setting up and configuring Fastly, see [快速设置]({{ page.baseurl }}/cloud/access-acct/fastly.html).
 
 To verify the Fastly extension is working or to debug the Fastly extension, you can use the `curl` command to display certain response headers. The values of these response headers indicate whether or not Fastly is enabled and functioning properly. You can further investigate issues based on the values of headers and caching behavior.
 
@@ -190,9 +190,9 @@ To verify Fastly is enabled in Staging and Production, check the configuration i
 				}
 6. If you use [Configuration Management](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html#cloud-config-specific-recomm), you should have a configuration file. Edit the `app/etc/config.app.php` (2.0, 2.1) or `app/etc/config.php` (2.2) file and make sure the setting `'Fastly_Cdn' => 1` is correct. The setting should not be `'Fastly_Cdn' => 0` (meaning disabled).
 
-	If you enabled Fastly, delete the configuration file and run the `bin/magento magento-cloud:scd-dump` command to update. For a walk-through of this file, see [Example of managing system-specific settings]({{ page.baseurl }}/cloud/live/sens-data-initial.html).
+	If you enabled Fastly, delete the configuration file and run the `bin/magento magento-cloud:scd-dump` command to update. For a walk-through of this file, see [管理系统特定配置的示例]({{ page.baseurl }}/cloud/live/sens-data-initial.html).
 
-If the module is not installed, you need to install in an Integration environment branch and deployed to Staging and Production. See [Set up Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html) for instructions.
+If the module is not installed, you need to install in an Integration environment branch and deployed to Staging and Production. See [快速设置]({{ page.baseurl }}/cloud/access-acct/fastly.html) for instructions.
 
 ### Fastly-Magento-VCL-Uploaded is not present {#no-VCL}
 During installation and configuration, you should have uploaded the Fastly VCL. These are the base VCL snippets provided by the Fastly module, not custom VCL snippets you create. For instructions, see [Upload Fastly VCL snippets]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
@@ -236,7 +236,7 @@ If the credentials are correct, you may have issues with your VCLs. To list and 
 
 	curl -X GET -s https://api.fastly.com/service/<FASTLY_SERVICE_ID>/version/<Editable Version #>/snippet/ -H "Fastly-Key: <FASTLY_API_TOKEN>"
 
-Review the list of VCLs. If you have issues with the default VCLs from Fastly, you can upload again or verify the content per the [Fastly default VCLs](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets){:target="\_blank"}. For editing your custom VCLs, see [Custom Fastly VCL snippets]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
+Review the list of VCLs. If you have issues with the default VCLs from Fastly, you can upload again or verify the content per the [Fastly default VCLs](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets){:target="\_blank"}. For editing your custom VCLs, see [快速定制VCL片段]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
 
 ## Activating a deactivated version {#activate}
 Using `curl` commands and APIs, you can activate, deactivate, and delete a version and service. If you have deactivated a service, you have deactivated the version without leaving any version active.

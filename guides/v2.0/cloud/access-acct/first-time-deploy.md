@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: First time deployment
-menu_title: First time deployment
+title: 首次部署
+menu_title: 首次部署
 menu_order: 60
 version: 2.0
 github_link: cloud/access-acct/first-time-deploy.md
@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Install Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)
+[安装Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 You only need to complete this step one time for a new **Pro project**. This code is already on `master` for the Starter project. As a best practice, you need to have the template Magento Commerce project (or `master` branch) fully deployed across all environments to ensure all future code pushes correctly deploy.
@@ -40,7 +40,7 @@ To deploy, you need the following:
 ## Enter a ticket {#ticket}
 If you need environments provisioned and SSH access, enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html).
 
-To request environment provisioning, you will need to have cleared a payment for the Magento Commerce (Cloud) subscription and completed an on-boarding call with Magento.
+To request environment provisioning, you will need to have cleared a payment for the Magento企业版(云支持版) subscription and completed an on-boarding call with Magento.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 If you are on a Pro trial and do not have Staging and Production environments provisioned, you cannot complete an initial deployment. To continue developing, create a branch from Integration `master`. Do not merge this code to your `master` branch until you have deployed it to your provisioned Staging and Production environments.
@@ -129,7 +129,7 @@ To set up an SSH agent:
 
 		  Identity added: /home/magento_user/.ssh/id_rsa (/home/magento_user/.ssh/id_rsa)
 
-For more information on setting up SSH, see [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) as part of your local setup.
+For more information on setting up SSH, see [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) as part of your local setup.
 
 ### SSH and pull the Git branch {#git}
 

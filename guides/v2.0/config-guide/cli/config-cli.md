@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Command line configuration
-menu_title: Command line configuration
+title: 命令行配置
+menu_title: 命令行配置
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -28,4 +28,4 @@ This topic discusses configuring the Magento software using the CLI. For informa
 
 #### 下一步 
 
-<a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html">Get started with command-line configuration</a>
+<a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>

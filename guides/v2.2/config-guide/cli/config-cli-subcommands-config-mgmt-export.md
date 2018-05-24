@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Export the configuration
-menu_title: Export the configuration
+title: 导出配置
+menu_title: 导出配置
 menu_node:
 level3_menu_node: level3child
 level3_subgroup: cli-config-mgmt
@@ -29,7 +29,7 @@ As a result of the command execution, the following configuration files are upda
 This is the shared configuration file for all your Magento instances.
 Include this in your source control so it can be shared between the development, build, and production systems.
 
-See: [config.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
+See: [config.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
 
 ## `app/etc/env.php` {#app-etc-env-php}
 
@@ -38,7 +38,7 @@ It contains sensitive and system-specific settings for individual environments.
 
 Do _not_ include this file in source control.
 
-See: [env.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)
+See: [env.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)
 
 ### Sensitive or system-specific settings
 

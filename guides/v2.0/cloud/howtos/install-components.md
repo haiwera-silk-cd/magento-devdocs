@@ -180,4 +180,4 @@ To update an module:
 
 1.  Wait for the project to deploy and verify in your environment.
 
-If there are errors, see [Component deployment failure]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).
+If there are errors, see [组件部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).

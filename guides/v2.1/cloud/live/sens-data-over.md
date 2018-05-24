@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Configuration management for store settings
+title: 网店设置的配置管理
 version: 2.1
 github_link: cloud/live/sens-data-over.md
 functional_areas:
@@ -8,7 +8,7 @@ functional_areas:
   - Deploy
 ---
 
-Configuration management in {{site.data.var.ece}} provides a new way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. With this file, you can add it to your Git commit and push it across all of your environments to keep consistent settings and reduce downtime.
+配置管理 in {{site.data.var.ece}} provides a new way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. With this file, you can add it to your Git commit and push it across all of your environments to keep consistent settings and reduce downtime.
 
 It provides the following benefits:
 
@@ -132,7 +132,7 @@ The **Pro plan** environment high-level overview of this process:
 
 ![Overview of Pro configuration management]({{ site.magentourl }}/common/images/cloud_configmgmt-pro-2-1.png)
 
-### Step 1: Configure your store {#config-store}
+### Step 1: 配置你的网店 {#config-store}
 Complete all configurations for your stores in the Admin console:
 
 1. Log into the Magento Admin for one of the environments:

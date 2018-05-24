@@ -1,6 +1,6 @@
 ---
 group: perf-best-practices
-title: Advanced setup
+title: 高级设置
 version: 2.2
 github_link: performance-best-practices/advanced-setup.md
 functional_areas:

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: Component load order
-menu_title: Component load order
+title: 组件加载顺序
+menu_title: 组件加载顺序
 menu_order: 7000
 version: 2.0
 github_link: extension-dev-guide/build/module-load-order.md
@@ -63,4 +63,4 @@ If you do specify a component in `<sequence>`, make sure that you have also adde
 
 ## Next
 
-[Enable or disable your component]({{ page.baseurl }}/extension-dev-guide/build/enable-module.html)
+[启用和禁用组件]({{ page.baseurl }}/extension-dev-guide/build/enable-module.html)

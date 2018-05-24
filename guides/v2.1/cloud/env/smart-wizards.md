@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Smart wizards
+title: 小向导
 version: 2.1
 github_link: cloud/env/smart-wizards.md
 functional_areas:

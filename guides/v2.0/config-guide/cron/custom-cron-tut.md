@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 12_cron
-title: Configure a custom cron job and cron group (tutorial)
-menu_title: Configure a custom cron job and cron group (tutorial)
+title: 配置自定义的定时任务和任务组(cron)(教程)
+menu_title: 配置自定义的定时任务和任务组(cron)(教程)
 menu_order: 3
 menu_node:
 version: 2.0

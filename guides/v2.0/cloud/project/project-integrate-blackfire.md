@@ -14,7 +14,7 @@ functional_areas:
 
 This information helps you get Blackfire installed on your local, integrated into Integration, and running your first profile.
 
-For full details on integrations, also review [Blackfire’s complete Magento Commerce (Cloud)](https://support.blackfire.io/blackfire-on-magento-cloud){:target="_blank"} guide. They also include a number of [incredible resources](#resources) to get you started.
+For full details on integrations, also review [Blackfire’s complete Magento企业版(云支持版)](https://support.blackfire.io/blackfire-on-magento-cloud){:target="_blank"} guide. They also include a number of [incredible resources](#resources) to get you started.
 
 Blackfire includes the following [environments](https://blackfire.io/docs/reference-guide/environments){:target="_blank"} through their site:
 

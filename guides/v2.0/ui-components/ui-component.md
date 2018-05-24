@@ -12,7 +12,7 @@ redirect_from:
   - /guides/v2.0/ui_comp_guide/bk-ui_comps.html
 ---
 
-<h2 id="general">Overview of UI components</h2>
+<h2 id="general">UI组件概述</h2>
 Magento UI components are designed for simple and flexible UI rendering. They allow you to configure the page manipulating the UI components.
 
 Magento UI components are implemented as a standard {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and can be found under Magento\UI {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.

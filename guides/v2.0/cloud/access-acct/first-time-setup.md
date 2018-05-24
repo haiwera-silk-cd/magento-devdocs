@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Local environment setup
-menu_title: Local environment setup
+title: 本地环境设置
+menu_title: 本地环境设置
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -40,7 +40,7 @@ Prior to setting up your workspace, you may want to gather the following credent
 
 * **Magento Access Key**: Provides secure access through a 32-character authentication token. The token authenticates between your account, the Magento 2 code repo (repo.magento.com), and any other Git services like GitHub and 3rd party accounts needed for development. You can create multiple Magento access keys. For the workspace setup, you can start with one specific key for your code repository. To generate a key, contact the Project Owner to [Generate Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html).
 * **Cloud Project account**: The Project Owner or Technical Admin (Super User) should invite you to the {{site.data.var.ece}} project. When you receive the e-mail invitiation, click the link and follow the prompts to create your account. See [Set up an account]({{ page.baseurl }}/cloud/before/before-workspace.html#newaccount) for details.
-* **Magento Encryption Key**: When importing an existing Magento system only, you will need to capture the Magento encryption key used to protect your access and data for the Magento database. For details on this key, see [Resolve issues with encryption key]({{ page.baseurl }}/cloud/trouble/trouble-crypt-key-variable.html)
+* **Magento Encryption Key**: When importing an existing Magento system only, you will need to capture the Magento encryption key used to protect your access and data for the Magento database. For details on this key, see [解决加密密钥问题]({{ page.baseurl }}/cloud/trouble/trouble-crypt-key-variable.html)
 
 ## Create a local environment {#local}
 For development, you need to install and configure a local environment. All environments for {{site.data.var.ece}} are read-only, including all Starter environments and all Pro Integration, Staging, and Production environments. Working in a local environment, you can write and test code prior to pushing it to a Integration environment for further testing and deployment to Staging and Production.
@@ -49,12 +49,12 @@ We recommend adding a virtual machine (VM) or Docker container and installing {{
 
 The following steps walk-through preparing your local environment, installing Magento, and starting development:
 
-*	[Prepare for local environment setup]({{ page.baseurl }}/cloud/before/before-workspace.html)
-* [Install Magento prerequisites]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
-* [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
-* [Set up the Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) (optional)
-* [Clone and branch the project]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)
-* [Install Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)
-* [First time deployment]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html)
+*	[本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html)
+* [安装Magento所需的必要软件]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
+* [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
+* [设置Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) (optional)
+* [克隆并开发项目分支]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)
+* [安装Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)
+* [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html)
 
 If you have existing Magento custom code, we provide instructions to import. For more information, see [First steps for importing {{site.data.var.ee}}]({{ page.baseurl }}/cloud/access-acct/first-time-setup_import-first-steps.html).

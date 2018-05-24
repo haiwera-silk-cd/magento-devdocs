@@ -87,7 +87,7 @@ The `<magento2_root_dir>/dev/tests/functional/phpunit.xml` contains PHPUnit conf
 </tr>
 <tr>
     <td><code>mage_mode</code></td>
-    <td>Magento mode (<a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html" target="_blank">About Magento modes</a>).</td>
+    <td>Magento mode (<a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html" target="_blank">关于Magento的模式</a>).</td>
     <td><code>"default", "developer", "production"</code></td>
     <td>This parameter is intended to be used directly in a test. The FTF doesn't use it.</td>
 </tr>

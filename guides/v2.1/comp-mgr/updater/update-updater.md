@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 40_update-updater
-title: Update the updater application
-menu_title: Update the updater application
+title: 更新更新器程序
+menu_title: 更新更新器程序
 menu_node: parent
 menu_order: 1
 version: 2.1

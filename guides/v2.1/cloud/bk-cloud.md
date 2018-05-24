@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Welcome to Magento Commerce (Cloud)
+title: 欢迎使用Magento企业版(云支持版)
 version: 2.1
 github_link: cloud/bk-cloud.md
 functional_areas:

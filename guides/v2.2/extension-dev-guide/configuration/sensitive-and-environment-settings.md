@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: Configuration
-title: Sensitive and environment settings
-menu_title: Sensitive and environment settings
+title: 敏感数据和环境变量
+menu_title: 敏感数据和环境变量
 menu_order: 1000
 version: 2.2
 github_link: extension-dev-guide/configuration/sensitive-and-environment-settings.md
@@ -93,10 +93,10 @@ To set a configuration setting as both sensitive and system-specific, create two
 
 #### 相关主题
 
-* [Configuration importers][config-importers]
-*	[The di.xml file][di-xml]
-*	[Developer roadmap]({{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html)
-*	[Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+* [配置导入器][config-importers]
+*	[di.xml文件][di-xml]
+*	[开发者指引]({{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html)
+*	[依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
 
 [typepool]: {{ site.mage2200url }}app/code/Magento/Config/Model/Config/TypePool.php
 [di-xml]: {{ page.baseurl }}/extension-dev-guide/build/di-xml-file.html

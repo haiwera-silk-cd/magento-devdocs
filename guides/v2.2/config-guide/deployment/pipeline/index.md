@@ -33,10 +33,10 @@ We also provide a way to synchronize the configuration of your systems:
 
 For a complete list of configuration paths, see the following references:
 
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*	[Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*	[Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
-*	[Magento Enterprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*	[Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
 ## Assumptions
 

@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 28_cli-upgr
-title: Command-line upgrade
-menu_title: Command-line upgrade
+title: 命令行升级
+menu_title: 命令行升级
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Command-line upgrade
+## 命令行升级
 You can upgrade Magento from the command line if you installed the software using any of the following:
 
 *	Downloaded the {% glossarytooltip 7490850a-0654-4ce1-83ff-d88c1d7d07fa %}metapackage{% endglossarytooltip %} using `composer create-project`
@@ -20,7 +20,7 @@ You can upgrade Magento from the command line if you installed the software usin
 <div class="bs-callout bs-callout-info" id="info">
  	<ul><li>If you cloned the Magento 2 GitHub repository, you <em>cannot</em> use this method to upgrade; instead, see <a href="{{ page.baseurl }}/install-gde/install/cli/dev_update-magento.html">更新Magento</a>.</li>
  		<li>If you configured Magento use use <code>pub</code> as its root directory, see the next section.</li>
- 		<li>If you're upgrading to Magento 2.1 (including a Release Candidate) from Magento 2.0.7 or earlier <em>and</em> you installed sample data, see <a href="{{ page.baseurl }}/comp-mgr/cli/cli-rc1-samp.html">Command-line upgrade to Magento 2.1 with sample data</a> instead of this topic.</li></ul>
+ 		<li>If you're upgrading to Magento 2.1 (including a Release Candidate) from Magento 2.0.7 or earlier <em>and</em> you installed sample data, see <a href="{{ page.baseurl }}/comp-mgr/cli/cli-rc1-samp.html">命令行升级有样本数据的系统到Magento 2.1</a> instead of this topic.</li></ul>
 </div>
 
 <div class="bs-callout bs-callout-warning">

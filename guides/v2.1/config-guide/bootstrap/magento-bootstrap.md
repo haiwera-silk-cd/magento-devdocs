@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 03_Bootstrap
-title: Magento application initialization and bootstrap
-menu_title: Magento application initialization and bootstrap
+title: Magento初始化和引导
+menu_title: Magento初始化和引导
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -109,8 +109,8 @@ When the request is redirected to the entry point, the Magento application parse
 `\Magento\Core\App\Media` attempts to find the media file in the configured database storage and write it into the `pub/static` directory, then return its contents. On error, it returns an HTTP 404 (Not Found) status code in the header with no contents.
 
 #### 相关主题
-This topic discussed the basics of Magento application initialization and bootstrapping. To find out how to set bootstrap environment variables, see one of the following topics:
+This topic discussed the basics of Magento初始化和引导ping. To find out how to set bootstrap environment variables, see one of the following topics:
 
-*	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-dirs.html">Customize base directory paths (MAGE_DIRS)</a>
+*	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
 *	<a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html">Set the mode (MAGE_MODE)</a>
 *	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-profiler.html">Enable an HTML profiler (MAGE_PROFILER)</a>

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 02_Security
-title: X-Frame-Options header
-menu_title: X-Frame-Options header
+title: X-Frame-Options头
+menu_title: X-Frame-Options头
 menu_order: 5
 menu_node:
 version: 2.1

@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title: Templates XSS security
-menu_title: Templates XSS security
+title: 模板的XSS安全
+menu_title: 模板的XSS安全
 menu_order: 5
 version: 2.2
 github_link: frontend-dev-guide/templates/template-security.md

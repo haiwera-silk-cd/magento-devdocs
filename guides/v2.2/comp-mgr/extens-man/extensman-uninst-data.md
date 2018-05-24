@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Step 3. Data Option
+title: 步骤3. 数据选项
 menu_title: Remove or Keep Data
 menu_node:
 menu_order: 50
@@ -13,7 +13,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 3. Data Option
+## 步骤3. 数据选项
 This step displays if you're uninstalling extensions.
 
 After backing up, you have the choice of removing data from the Magento 2 database.
@@ -33,5 +33,5 @@ Click one of the following:
 
 	You can click **Back** to back up the database first if you did not do so already.
 
-Continue with [Step 4. Uninstall]({{ page.baseurl }}/comp-mgr/extens-man/extensman-uninst-final.html)
+Continue with [步骤4. 卸载]({{ page.baseurl }}/comp-mgr/extens-man/extensman-uninst-final.html)
 

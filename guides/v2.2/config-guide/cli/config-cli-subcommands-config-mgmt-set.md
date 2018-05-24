@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Set configuration values
-menu_title: Set configuration values
+title: 设置配置值
+menu_title: 设置配置值
 menu_node:
 level3_menu_node: level3child
 level3_subgroup: cli-config-mgmt
@@ -25,10 +25,10 @@ This topic discusses advanced configuration commands you can use to:
 
 You can use these commands to set the Magento configuration manually or using scripts. You set configuration options using a _configuration path_, which is a `/`-delimited string that uniquely identifies that configuration option. You can find configuration paths in the following references:
 
-*   [Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*   [Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*   [Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
-*   [Magento Enterprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
+*   [敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*   [支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*   [其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*   [Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
 You can set values at the following times:
 
@@ -54,10 +54,10 @@ To set a configuration value, you must know at least one of the following:
 ### Find the configuration path
 See the following references:
 
-*   [Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*   [Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*   [Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
-*   [Magento Enterprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
+*   [敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*   [支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*   [其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*   [Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
 ### Find the scope code
 You can find the scope code either in the Magento database or in the Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. See one of the following sections for more information.
@@ -73,7 +73,7 @@ You can find the scope code either in the Magento database or in the Magento {% 
     The following figure shows a sample website code.
 
     ![Get a website or store view code from the Admin]({{ site.magentourl }}/common/images/config_configset_website-code.png){:width="450px"}
-4.  Continue with [Set configuration values](#config-cli-config-set).
+4.  Continue with [设置配置值](#config-cli-config-set).
 
 {% endcollapsible %}
 
@@ -111,7 +111,7 @@ To find the values in the database:
 
 {% endcollapsible %}
 
-## Set configuration values {#config-cli-config-set}
+## 设置配置值 {#config-cli-config-set}
 To set system-specific configuration values, use:
 
     bin/magento config:set [--scope="..."] [--scope-code="..."] [-l|--lock] path value
@@ -133,10 +133,10 @@ To set sensitive configuration values, use:
 
 See one of the following sections for more information:
 
-*   [Set configuration values that can be edited in the Magento Admin](#config-cli-config-set-edit)
-*   [Set configuration values that cannot be edited in the Magento Admin](#config-cli-config-file)
+*   [设置配置值 that can be edited in the Magento Admin](#config-cli-config-set-edit)
+*   [设置配置值 that cannot be edited in the Magento Admin](#config-cli-config-file)
 
-### Set configuration values that can be edited in the Magento Admin {#config-cli-config-set-edit}
+### 设置配置值 that can be edited in the Magento Admin {#config-cli-config-set-edit}
 Use `bin/magento config:set` _without_ `-l|-lock` to write the value to the database. Values you set this way can be edited in the Magento Admin.
 
 Some examples for setting a store base {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} follow:
@@ -153,7 +153,7 @@ Example to set the base URL for the `test` store view:
 
     bin/magento config:set --scope=stores --scope-code=test web/unsecure/base_url http://example3.com/
 
-### Set configuration values that cannot be edited in the Magento Admin {#config-cli-config-file}
+### 设置配置值 that cannot be edited in the Magento Admin {#config-cli-config-file}
 If you use the `-l|--lock` option as follows, the configuration value is saved in `env.php` and the field for editing this value in Admin page is disabled.
 
     bin/magento config:set --lock --scope=stores --scope-code=default web/unsecure/base_url http://example3.com

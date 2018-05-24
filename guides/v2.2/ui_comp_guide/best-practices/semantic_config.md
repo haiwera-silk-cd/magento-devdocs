@@ -112,5 +112,5 @@ When editing XML configuration files in an IDE, you get visual notifications if 
 {% endcollapsible %}
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-To use the autocomplete and validation features in your IDE, generate the URN as described in the [URN highlighter]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html) topic.
+To use the autocomplete and validation features in your IDE, generate the URN as described in the [统一资源名称(URN)高亮]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html) topic.
 </div>

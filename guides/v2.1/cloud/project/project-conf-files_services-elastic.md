@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up Elasticsearch service
-menu_title: Set up Elasticsearch service
+title: 设置Elasticsearch服务
+menu_title: 设置Elasticsearch服务
 menu_order: 70
 menu_node:
 level3_menu_node: level3child
@@ -125,7 +125,7 @@ The response includes all relationships for services and configuration data for 
 {% endhighlight %}
 
 ## Configure Elasticsearch for your site {#configure}
-The last step is to configure Elasticsearch for your catalog search options through the Magento Admin. You will need the information from the variable `MAGENTO_CLOUD_RELATIONSHIPS`. See [Configure Magento to use Elasticsearch](http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/configure-magento.html) to complete your Admin configurations.
+The last step is to configure Elasticsearch for your catalog search options through the Magento Admin. You will need the information from the variable `MAGENTO_CLOUD_RELATIONSHIPS`. See [配置Magento使用Elasticsearch](http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/configure-magento.html) to complete your Admin configurations.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 Staging and Production environments share a single Elasticsearch instance, so you must specify a unique Elasticsearch prefix for each of these environments.

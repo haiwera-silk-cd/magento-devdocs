@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Create and manage users
-menu_title: Create and manage users
+title: 创建和管理用户
+menu_title: 创建和管理用户
 menu_order: 15
 menu_node:
 version: 2.0
@@ -51,7 +51,7 @@ For your users to be able to see everything but only commit to a specific branch
     <p>An environment contributor can push code to the environment, but that user role does not have SSH access to the environment. By default, only environment administrators have SSH access. You can change the behavior in <code>.magento.app.yaml</code> by specifying <code>ssh: contributor</code>.</p>
 </div>
 
-## Create and manage users
+## 创建和管理用户
 You can create and manage users using the Magento Cloud CLI or the Web Interface.
 
 ### Manage users with the CLI {#cloud-user-mg-cli}

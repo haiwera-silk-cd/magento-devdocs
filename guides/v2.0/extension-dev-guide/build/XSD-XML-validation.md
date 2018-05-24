@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: URN schema validation
-menu_title: URN schema validation
+title: 统一资源名称(URN)验证
+menu_title: 统一资源名称(URN)验证
 menu_order: 5000
 version: 2.0
 github_link: extension-dev-guide/build/XSD-XML-validation.md
@@ -74,4 +74,4 @@ libxml_set_external_entity_loader(['Magento\Framework\Config\Dom\UrnResolver', '
 
 
 #### Next
-[Name your component]({{ page.baseurl }}/extension-dev-guide/build/create_component.html)
+[你组件的名称]({{ page.baseurl }}/extension-dev-guide/build/create_component.html)

@@ -238,7 +238,7 @@ Staging cannot be disabled during web installation.
 
 The Staging modules cannot be removed or disabled after they were installed.
 
-## Module dependencies
+## 模块依赖
 
 You can find the list of modules that have dependencies on the Magento_Staging模块 in the `require` section of the `composer.json` file. The file is located in the root directory of the module.
 

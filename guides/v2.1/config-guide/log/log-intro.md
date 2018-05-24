@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 500_log
-title: Custom logging
-menu_title: Custom logging
+title: 自定义日志
+menu_title: 自定义日志
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -34,4 +34,4 @@ The [PSR-3 standard](https://zendframework.github.io/zend-log/psr3){:target="_bl
 This provides the ability for the implementation to be replaced easily without worry that such replacement may break the application code. It also guarantees a custom component will work even when the Magento log implementation is changed in a future version of the system.
 
 #### Next
-[Magento logging in more detail]({{ page.baseurl }}/config-guide/log/log-magento.html)
+[Magento日志的更多细节]({{ page.baseurl }}/config-guide/log/log-magento.html)

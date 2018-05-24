@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: File systems access permissions
-menu_title: File systems access permissions
+title: 文件系统访问权限
+menu_title: 文件系统访问权限
 menu_node:
 menu_order: 3000
 version: 2.2

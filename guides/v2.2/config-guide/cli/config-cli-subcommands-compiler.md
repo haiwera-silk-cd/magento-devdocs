@@ -1,6 +1,6 @@
 ---
 group: config-guide
-title: Code compiler
+title: 代码编译器
 version: 2.2
 github_link: config-guide/cli/config-cli-subcommands-compiler.md
 functional_areas:
@@ -55,4 +55,4 @@ In some cases, you might want to compile code before you install the Magento app
     Generated code and dependency injection configuration successfully.
     ```
 
-To compile code without a database, see [Deploy static view files without installing Magento]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#deploy_without_db).
+To compile code without a database, see [部署静态视图文件 without installing Magento]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#deploy_without_db).

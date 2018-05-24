@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: The di.xml file
-menu_title: The di.xml file
+title: di.xml文件
+menu_title: di.xml文件
 menu_order: 1
 version: 2.2
 github_link: extension-dev-guide/build/di-xml-file.md
@@ -319,7 +319,7 @@ The `shared` property determines the lifestyle of both `argument` and `type` con
 In this example `Magento\Filesystem` is not shared, so all clients will retrieve separate instances of `Magento\Filesystem`.
 Also, every instance of `Magento\Filesystem` will get separate instance of `$adapter`, because it too is non-shared.
 
-## Sensitive and system-specific configuration settings {#ext-di-sens}
+## 敏感的和系统特定的 configuration settings {#ext-di-sens}
 
 For multi-system deployments, such as the [pipeline deployment model]({{ page.baseurl }}/config-guide/deployment/pipeline/), you can specify the following types of configuration settings:
 
@@ -350,11 +350,11 @@ See [sensitive and environment settings]({{ page.baseurl }}/extension-dev-guide/
 ### Information related to pipeline deployment
 
 *   [Guidelines for specifying system-specific and sensitive configuration values]({{ page.baseurl }}/extension-dev-guide/configuration/sensitive-and-environment-settings.html)
-*   [Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*   [Magento Enterprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
+*   [敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*   [Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
 ## Related topics
 
 * [ObjectManager]({{ page.baseurl }}/extension-dev-guide/object-manager.html)
-* [Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
-* [Sensitive and environment settings]({{ page.baseurl }}/extension-dev-guide/configuration/sensitive-and-environment-settings.html)
+* [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+* [敏感数据和环境变量]({{ page.baseurl }}/extension-dev-guide/configuration/sensitive-and-environment-settings.html)

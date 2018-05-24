@@ -1,9 +1,9 @@
 ---
 group: compman
 subgroup: 01_Introduction
-title: Upgrade the Magento application and components
+title: 升级Magento应用及其组件
 landing-page: System Upgrade Guide
-menu_title: Upgrade the Magento application and components
+menu_title: 升级Magento应用及其组件
 menu_node: parent
 menu_order: 1
 version: 2.1

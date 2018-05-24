@@ -1,15 +1,15 @@
 ---
 group: arch-guide
 subgroup: Logical View
-title: Third-party libraries
-menu_title: Third-party libraries
+title: 第三方库
+menu_title: 第三方库
 menu_order: 5
 version: 2.1
 github_link: architecture/archi_perspectives/third-party-libs.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/third-party-libs.html
 ---
 
-Magento depends on a set of external libraries. You can use {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} to manage these dependencies. Composer downloads all of the external libraries that are included in its main configuration file and installs them under its default installation directory (`vendor/`). Third-party libraries include the Zend framework files and the Symfony libraries.
+Magento depends on a set of external libraries. You can use {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} to manage these dependencies. Composer downloads all of the external libraries that are included in its main configuration file and installs them under its default installation directory (`vendor/`). 第三方库 include the Zend framework files and the Symfony libraries.
 
 There are some required libraries that Composer does not load. These reside in `lib/` and include {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} libraries (none of which are loaded by Composer) and a few {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} libraries. (You can also use Composer to manage dependencies between various components within Magento.)
 

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Configure your store
-menu_title: Configure your store
+title: 配置你的网店
+menu_title: 配置你的网店
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -21,9 +21,9 @@ The following options, tools, and features can be set up and configured in your 
 
 * [Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html) for caching and CDN in Staging and Production environments
 * [cron jobs]({{ page.baseurl }}/cloud/configure/setup-cron-jobs.html) details how to create and configure Magento cron jobs in all environments
-* [Multiple websites or stores]({{ page.baseurl }}/cloud/project/project-multi-sites.html) details how to create and configure multi-sites for your store, for example multiple locales including English, French, and Spanish
+* [多站和多店]({{ page.baseurl }}/cloud/project/project-multi-sites.html) details how to create and configure multi-sites for your store, for example multiple locales including English, French, and Spanish
 * [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html) mo
-* [Install a theme]({{ page.baseurl }}/cloud/howtos/custom-theme.html) for your site and store
+* [安装一个主题]({{ page.baseurl }}/cloud/howtos/custom-theme.html) for your site and store
 
 ## Configure your deploy: build hooks, services, and routes {#deploy}
 After fully configuring your store, you should configure your deployment. This includes specific files to manage builds, deployments, services, and routes:

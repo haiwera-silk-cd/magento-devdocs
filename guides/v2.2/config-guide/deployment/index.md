@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Pipeline Deployment
-menu_title: Pipeline Deployment
+title: 管道部署
+menu_title: 管道部署
 menu_node: parent
 menu_order: 1
 version: 2.2
@@ -38,11 +38,11 @@ The following topics are organized to help you get started quickly. If you're ne
 
 *	Reference information
 
-	*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-	*	[Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-	*	[Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+	*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+	*	[支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+	*	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
 	*	[Magento Enteprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
-	*	[Use environment variables to override configuration settings]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html)
-	*	[.gitignore reference]({{ page.baseurl }}/config-guide/prod/config-reference-gitignore.html)
-	*	[config.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
-	*	[env.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)
+	*	[使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html)
+	*	[.gitignore参考]({{ page.baseurl }}/config-guide/prod/config-reference-gitignore.html)
+	*	[config.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html)
+	*	[env.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html)

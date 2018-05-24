@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: Final verification
-menu_title: Final verification
+title: 最终校验
+menu_title: 最终校验
 menu_order: 100
 menu_node:
 version: 2.0
@@ -76,5 +76,5 @@ Make sure the `<your Magento install dir>/var/page_cache` directory is empty:
 </div>
 
 #### 下一步s
-*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache.html">How Magento cache clearing works with Varnish</a>
-*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache-how.html">How Varnish caching works</a>
+*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>
+*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache-how.html">Varnish缓存是如何工作的</a>

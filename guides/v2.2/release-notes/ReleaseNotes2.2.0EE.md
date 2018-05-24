@@ -32,7 +32,7 @@ Magento Commerce 2.2.0 includes a wealth of new, exciting features, and hundreds
 
 * **Magento Commerce Starter.** In addition to our Pro version, Magento Cloud (Commerce) now comes in a smaller, platform-as-a-service version — Magento Commerce Starter. This subscription plan differs from our Enterprise Cloud version in some key ways. For an overview of these versions, see [Welcome to Magento Commerce Cloud](http://devdocs.magento.com/guides/v2.1/cloud/bk-cloud.html).
 
-* **Improvements to the Magento Commerce (Cloud) deployment process**. This release includes new build and deployment variables. Users of earlier versions of Magento Commerce (Cloud) will note that MCC has been replaced by ece-tools and ece-patches, which allows for patching your Magento Commerce (Cloud) without requiring a full installation of base code and the patch.
+* **Improvements to the Magento企业版(云支持版) deployment process**. This release includes new build and deployment variables. Users of earlier versions of Magento企业版(云支持版) will note that MCC has been replaced by ece-tools and ece-patches, which allows for patching your Magento企业版(云支持版) without requiring a full installation of base code and the patch.
 
 * **Bundled extensions**. This release of Magento includes the first third-party extension that we are bundling with Magento Commerce -- Magento Social. This extension establishes a connection between your store and your corporate Facebook account, and creates a page with products from your catalog. When shoppers click a product, they are redirected to the corresponding product page in your Magento store.
 
@@ -478,7 +478,7 @@ This release contains hundreds of fixes and enhancements.
 <!--- 60611-->* Static file generation is no longer affected by a race condition that affected merging CSS files. Previously, this race condition interfered with the proper generation of the product front end.
 
 
-<!---71257 -->* The ability to disable module output has been removed from Admin. If you disabled module output from Admin in a previous release, you must manually configure these settings. See [Disable module output]({{ page.baseurl }}/config-guide/config/disable-module-output.html) for details.
+<!---71257 -->* The ability to disable module output has been removed from Admin. If you disabled module output from Admin in a previous release, you must manually configure these settings. See [禁用模块输出]({{ page.baseurl }}/config-guide/config/disable-module-output.html) for details.
 
 
 <!---69868 -->* Static tests run in a Windows environment no longer fail due to file path mismatches. *Fix submitted by community member <a href="https://github.com/barbazul" target="_blank">Barbazul</a> in pull request <a href="https://github.com/magento/magento2/pull/9902" target="_blank">9902</a>.*
@@ -537,7 +537,7 @@ Thanks to our hardworking Magento Open Source community members for the followin
 
 <!--- 69452-->* We’ve removed `Zend_Json` from form elements. *Fix submitted by community member <a href="https://github.com/dmanners" target="_blank">David Manners</a> in pull request <a href="https://github.com/magento/magento2/pull/9754" target="_blank">9754</a>.*
 
-<!--- 69371-->* We’ve replaced the Magento Framework's `Zend_Session` interface usage with SessionHandlerInterface. *Fix submitted by community member <a href="https://github.com/tdgroot" target="_blank">Timon de Groot</a> in pull request <a href="https://github.com/magento/magento2/pull/9285" target="_blank">9285</a>.*
+<!--- 69371-->* We’ve replaced the Magento框架's `Zend_Session` interface usage with SessionHandlerInterface. *Fix submitted by community member <a href="https://github.com/tdgroot" target="_blank">Timon de Groot</a> in pull request <a href="https://github.com/magento/magento2/pull/9285" target="_blank">9285</a>.*
 
 <!--- 69157-->* We’ve removed `Zend_Wildfire` and `Zend_Controller` from the codebase. *Fix submitted by community member <a href="https://github.com/SolsWebdesign" target="_blank">Isolde</a> in pull request <a href="https://github.com/magento/magento2/pull/9622" target="_blank">9622</a>.*
 
@@ -570,7 +570,7 @@ Thanks to our hardworking Magento Open Source community members for the followin
 <!---56973-->* You can now assign open-ended start and complete dates for product rules. Previously, if you left the start and end date field blanks when creating a rule, Magento would supply the start and end dates based on the save date.
 
 
-<!---58500-->* The Magento Framework now makes its dependency upon the `zendframework/zend-stdlib` library explicit in `composer.json`.
+<!---58500-->* The Magento框架 now makes its dependency upon the `zendframework/zend-stdlib` library explicit in `composer.json`.
 [GitHub-6442](https://github.com/magento/magento2/issues/6442)
 
 
@@ -1228,7 +1228,7 @@ This release includes substantial improvements to Magento caching, image process
 
 <!---56914-->* Versioning of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} (including CSS, JS, font, and image files) is now enabled by default.
 
-<!---57904-->* We've improved the speed of static asset deployment. See <a href="http://devdocs.magento.com/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html" target="_blank">Deploy static view files</a> for more information about available options.
+<!---57904-->* We've improved the speed of static asset deployment. See <a href="http://devdocs.magento.com/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html" target="_blank">部署静态视图文件</a> for more information about available options.
 
 <!--- 52614 -->* The `setup:static-content:deploy` command now provides flags that you can use to exclude or include individual themes, areas, and locales. For more information, see [GitHub-4294](https://github.com/magento/magento2/issues/4294).
 
@@ -1374,7 +1374,7 @@ This release includes substantial improvements to Magento caching, image process
 
 
 ### System requirements
-Our technology stack is built on PHP and MySQL. For details, see [Technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
+Our technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
 
 
 

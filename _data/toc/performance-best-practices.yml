@@ -1,26 +1,26 @@
-label: Performance Best Practices
+label: 最佳高效实践
 versions: ["2.2", "2.3"]
 pages:
     - label: 介绍
       url: /performance-best-practices/index.html
 
-    - label: Hardware recommendations
+    - label: 硬件推荐
       url: /performance-best-practices/hardware.html
 
-    - label: Software recommendations
+    - label: 软件推荐
       url: /performance-best-practices/software.html
 
-    - label: Reference architecture
+    - label: 参考架构
       url: /performance-best-practices/reference-architecture.html
 
-    - label: Development environment recommendations
+    - label: 开发环境推荐
       url: /performance-best-practices/development-environment.html
 
-    - label: Configuration best practices
+    - label: 最佳配置实践
       url: /performance-best-practices/configuration.html
 
-    - label: Deployment flow
+    - label: 布署流水线
       url: /performance-best-practices/deployment-flow.html
 
-    - label: Advanced setup
+    - label: 高级设置
       url: /performance-best-practices/advanced-setup.html

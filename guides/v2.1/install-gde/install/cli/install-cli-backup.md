@@ -28,7 +28,7 @@ After backing up, you can <a href="#instgde-cli-uninst-roll">roll back</a> at a 
 {% include install/first-steps-cli.html %}
 我们不止在这里讨论命令参数，更多请参考<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-subcommands-common">命令参数</a>.
 
-## Set ulimit for the web server user {#instgde-cli-ulimit}
+## 为web服务器设置资源使用限制(ulimit) {#instgde-cli-ulimit}
 {% include install/ulimit.md %}
 
 <h2 id="instgde-cli-uninst-back">Backing up</h2>

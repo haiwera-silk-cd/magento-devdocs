@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Module conventions
-menu_title: Module conventions
+title: 模块规范
+menu_title: 模块规范
 menu_order: 5
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_conventions.html
 ---
 
-## 概述{#m2arch-module-conventions-overview}
+## 概述 {#m2arch-module-conventions-overview}
 
 Modules must conform to Magento conventions regarding code location and file names. Keep these conventions in mind when working with or developing modules.
 

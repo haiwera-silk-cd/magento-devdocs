@@ -1,6 +1,6 @@
 ---
 group: perf-best-practices
-title: Hardware recommendations
+title: 硬件推荐
 version: 2.2
 github_link: performance-best-practices/hardware.md
 functional_areas:

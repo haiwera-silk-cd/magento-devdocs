@@ -46,7 +46,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 
 
 ### System requirements
-Our technology stack is built on PHP and MySQL. For details, see [Technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html){:target="_blank"}.
+Our technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html){:target="_blank"}.
 
 {% include install/releasenotes/ce_install_20.md %}
 

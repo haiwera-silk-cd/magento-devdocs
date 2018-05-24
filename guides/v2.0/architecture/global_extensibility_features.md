@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Global features that support extensibility
-menu_title: Global features that support extensibility
+title: 全局可扩展的特性
+menu_title: 全局可扩展的特性
 menu_node:
 menu_order:
 version: 2.0
@@ -18,7 +18,7 @@ Essential qualities foster extensibility throughout the entire set of Magento co
 * Coding standards
 * Flexible attribute types
 * Web APIs
-* Service contracts and {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %}
+* 服务约定 and {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %}
 * Plug-ins
 
 ### Modularity
@@ -27,7 +27,7 @@ The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 5577
 
 If a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software components reduces the ripple effects throughout your code base of changing code.
 
- See the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for detailed instructions on how to create modules.
+ See the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for detailed instructions on how to create modules.
 
 ### Reliance on popular design patterns
 
@@ -85,7 +85,7 @@ Attribute types fall into three general categories:
 
 * <b>Extension attributes</b> often use more {% glossarytooltip fd9ae55f-ccf5-480b-a7f3-bd2c80f0b2a4 %}complex data{% endglossarytooltip %} types than custom attributes. These attributes do not appear in the storefront. Extension attributes are introduced by modules.
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for information about using attributes.
+See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information about using attributes.
 
 ### Web APIs
 
@@ -93,15 +93,15 @@ Magento or third-party services can be configured as a web {% glossarytooltip 78
 
 See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">起步 with Magento Web APIs</a> for more information.
 
-### Service contracts, dependency injection, and dependency inversion
+### 服务约定, dependency injection, and dependency inversion
 
-<i>Service contracts</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  Service contracts define the endpoints that function as a module's public API. Defining these endpoints is an essential part of adding a module.
+<i>服务约定</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务约定 define the endpoints that function as a module's public API. Defining these endpoints is an essential part of adding a module.
 
-Service contracts are discussed throughout the Magento documentation set. See <a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">Service layer</a> for a high-level introduction. See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for a more detailed discussion of service contracts and dependency injection.
+服务约定 are discussed throughout the Magento documentation set. See <a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.
 
-Magento implements <i>dependency injection</i> along with service contracts. Dependency injection provides a mechanism for changing a module's behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept *dependency inversion* support Magento's fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.
+Magento implements <i>dependency injection</i> along with service contracts. 依赖注入 provides a mechanism for changing a module's behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept *dependency inversion* support Magento's fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for information on both dependency injection and service contracts.
+See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on both dependency injection and service contracts.
 
 ### Plug-ins
 
@@ -109,8 +109,8 @@ Plug-ins, like modules, are a mechanism for adding features to the core Magento 
 
 Plug-ins are also called <i>interceptors</i>. Applications use the {% glossarytooltip 9fceecbe-31be-4e49-aac7-11d155a85382 %}plug-in{% endglossarytooltip %} pattern to change method behavior without modifying the actual class. Plug-ins can typically intercept method processing before or after the method runs, or only when the method throws an {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %}.
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/plugins.html">Plug-ins</a> in <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for information on declaring and prioritizing plug-ins.
+See <a href="{{ page.baseurl }}/extension-dev-guide/plugins.html">Plug-ins</a> in <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on declaring and prioritizing plug-ins.
 
 ### Related topic {#m2arch-related}
 
-<a href="{{ page.baseurl }}/architecture/extensibility.html">Extensibility and modularity</a>
+<a href="{{ page.baseurl }}/architecture/extensibility.html">可扩展和模块化</a>

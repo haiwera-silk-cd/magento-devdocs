@@ -1,8 +1,8 @@
 ---
 group: config-guide
-subgroup: 08_Configure caching
-title: Low-level cache options
-menu_title: Low-level cache options
+subgroup: 08_配置缓存
+title: 底层缓存选项
+menu_title: 底层缓存选项
 menu_order: 2
 menu_node:
 version: 2.1

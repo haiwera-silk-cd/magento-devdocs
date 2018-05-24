@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Resolve issues with HTML minification
-menu_title: Resolve issues with HTML minification
+title: 解决HTML最小化问题
+menu_title: 解决HTML最小化问题
 menu_order: 30
 menu_node:
 version: 2.0
@@ -12,7 +12,7 @@ functional_areas:
   - Configuration
 ---
 
-## Resolve issues with HTML minification
+## 解决HTML最小化问题
 This topic discusses solutions to typical issues you might experience by HTML minification.
 
 ### Website load errors after scd-dump, build, and deploy

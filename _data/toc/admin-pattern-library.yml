@@ -31,7 +31,7 @@ pages:
           versions: ["2.1","2.2", "2.3"]
           url: /pattern-library/controls/viewcontroller/viewcontroller.html
 
-    - label: Displaying and Dealing with Data
+    - label: 数据的展示和处理
       children:
 
         - label: Filters
@@ -58,7 +58,7 @@ pages:
         - label: Accessibility Guideline
           url: /pattern-library/general/accessibilityguideline/accessibilityGuideline.html
 
-    - label: Getting User Input
+    - label: 获取用户输入
       children:
 
         - label: Form Elements

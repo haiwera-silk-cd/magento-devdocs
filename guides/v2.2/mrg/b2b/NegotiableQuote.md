@@ -34,7 +34,7 @@ The module does not create any backward incompatible changes. Can be deactivated
 
 ## Extensibility
 
-Magento_NegotiableQuote uses Extensible attributes to extend Magento_Quote. For more information about the Magento extensible attributes, see [Adding extension attributes to entity]({{ page.baseurl }}/extension-dev-guide/extension_attributes/adding-attributes.html).
+Magento_NegotiableQuote uses Extensible attributes to extend Magento_Quote. For more information about the Magento extensible attributes, see [添加扩展属性到实体]({{ page.baseurl }}/extension-dev-guide/extension_attributes/adding-attributes.html).
 
 Extension developers can interact with the Magento_NegotiableQuote模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Create or extend configuration types
-menu_title: Create or extend configuration types
+title: 创建或扩展配置类型
+menu_title: 创建或扩展配置类型
 menu_order: 10
 version: 2.0
 github_link: config-guide/config/config-create.md
@@ -83,5 +83,5 @@ Your IDE can validate your configuration files at both runtime and during develo
 
 #### 相关主题
 
-*  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Module configuration files</a>
+*  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">模块配置文件</a>
 *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

@@ -34,7 +34,7 @@ Find more details about the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d7573
 <a href="controls/buttons/buttons.html">按钮</a><br>
 <a href="controls/button-bar/button-bar.html">按钮栏</a>
 
-#### Displaying and Dealing with Data
+#### 数据的展示和处理
 <a href="displaying-data/tile/tile.html">Tile</a><br>
 <a href="filters/data-table-filters/filtering.html">Filters</a><br>
 <a href="displaying-data/datatable/datatable.html">数据表格</a><br>
@@ -45,7 +45,7 @@ Find more details about the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d7573
 <a href="feedbackToUser/progressIndicator/progressIndicator.html">进度条</a>
 
 
-#### Getting User Input
+#### 获取用户输入
 <a href="getting-user-input/form_elements/form_elements.html">Form Elements</a><br>
 <a href="getting-user-input/image_uploader/image_uploader.html">Image Uploader</a><br>
 <a href="getting-user-input/date_time_selector/date_time_selector.html">Date and Time Selector</a>

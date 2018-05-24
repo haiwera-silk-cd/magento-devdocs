@@ -108,7 +108,7 @@ The Staging environment provides a near-production environment to test your site
 You cannot create a branch from the Staging environment branch. You must push code changes from the Integration environment branch to the Staging environment branch.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
+We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
 </div>
 
 ## Production environment {#cloud-arch-prod}

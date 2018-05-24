@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 03_Bootstrap
-title: About Magento modes
-menu_title: About Magento modes
+title: 关于Magento的模式
+menu_title: 关于Magento的模式
 menu_order: 3
 menu_node:
 version: 2.0
@@ -68,7 +68,7 @@ In default mode:
 -   A symlink to a static view file is published to the `pub/static` directory for each requested file
 -   Default mode is not optimized for a production environment, primarily because of the adverse performance impact of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} being dynamically generated rather than [materialized](https://en.wikipedia.org/wiki/Materialized_view){:target="\_blank"}. In other words, creating static files and caching them has a greater performance impact than generating them using the static files creation tool.
 
-For more information, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">Set the Magento mode</a>.
+For more information, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>.
 
 ## Developer mode
 You should run the Magento software in developer mode when you're extending or customizing it.
@@ -85,7 +85,7 @@ In developer mode:
 -   An {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %} is thrown in the error handler, rather than being logged
 -   An exception is thrown when an {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} subscriber cannot be invoked
 
-For more information, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">Set the Magento mode</a>.
+For more information, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>.
 
 ## Production mode
 You should run the Magento software in production mode when it's deployed to a production server. After optimizing the server environment (database, web server, and so on), you should run the <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html">static view files deployment tool</a> to write static view files to the Magento `pub/static` directory.
@@ -98,7 +98,7 @@ In production mode:
 -   Errors are logged to the file system and are never displayed to the user
 
 #### 下一步
-To set a mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">Set the Magento mode</a>.
+To set a mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>.
 
 #### Related topic
-To generate static view files for production mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html">Deploy static view files</a>
+To generate static view files for production mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>

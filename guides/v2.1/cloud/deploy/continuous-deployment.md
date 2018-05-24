@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Continuous integration
-menu_title: Continuous integration
+title: 持续集成
+menu_title: 持续集成
 menu_order: 15
 menu_node:
 version: 2.1

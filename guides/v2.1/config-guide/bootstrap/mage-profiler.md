@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 03_Bootstrap
-title: Enable profiling (MAGE_PROFILER)
-menu_title: Enable profiling (MAGE_PROFILER)
+title: 开启扼要记录(MAGE_PROFILER)
+menu_title: 开启扼要记录(MAGE_PROFILER)
 menu_order: 7
 menu_node:
 version: 2.1
@@ -42,4 +42,4 @@ Magento provides the base functionality in <a href="{{ site.mage2000url }}lib/in
 
 	<img src="{{ site.baseurl }}/common/images/config_depend-graphs.png" width="650px">
 
-You can set the value of `MAGE_PROFILER` in any of the ways discussed in <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-how-to-set.html">Set the value of bootstrap parameters</a>.
+You can set the value of `MAGE_PROFILER` in any of the ways discussed in <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-how-to-set.html">设置引导参数</a>.

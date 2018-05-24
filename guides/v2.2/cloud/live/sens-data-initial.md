@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Example of managing system-specific settings
+title: 管理系统特定配置的示例
 version: 2.2
 github_link: cloud/live/sens-data-initial.md
 functional_areas:
@@ -8,7 +8,7 @@ functional_areas:
   - Deploy
 ---
 
-Configuration management exports your configurations to a file for pushing across your environments. This file, `config.php`, keeps your configurations consistent across all environments, decreases downtime by moving static deploy to build, and much more. This information details an example for configuring your settings, exporting the file, and deploying it.
+配置管理 exports your configurations to a file for pushing across your environments. This file, `config.php`, keeps your configurations consistent across all environments, decreases downtime by moving static deploy to build, and much more. This information details an example for configuring your settings, exporting the file, and deploying it.
 
 This example shows how to use the [recommended procedure]({{ page.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm) for managing the configuration:
 
@@ -24,13 +24,13 @@ This example shows how to use the [recommended procedure]({{ page.baseurl }}/clo
 	* Commit and push to Git.
 
 <!-- <div class="bs-callout bs-callout-info" id="info" markdown="1">
-This example shows how you can set and lock configuration values for everything _except_ sensitive settings. You must set sensitive settings either as configuration variables or in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. For more information, see [Sensitive and system-specific]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html).
+This example shows how you can set and lock configuration values for everything _except_ sensitive settings. You must set sensitive settings either as configuration variables or in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. For more information, see [敏感的和系统特定的]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html).
 </div> -->
 For example, you may want to set the following settings:
 
 * Disable {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %} and static file optimization settings in your Integration environment
 * Enable static file optimization in Staging and Production environments
-* Configure Fastly in Staging and Production with specific credentials for each
+* 快速配置 in Staging and Production with specific credentials for each
 
 _Static file optimization_ means merging and minifying {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} and Cascading Style Sheets, and minifying {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} templates.
 
@@ -134,7 +134,7 @@ The following command adds, commits, and pushes to master:
 
 	git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
 
-Complete code deployment to Staging and Production. For Starter, you push to `staging` and `master` branches. For Production, you will need to SSH into your environments and push. For details on deployment commands, see [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+Complete code deployment to Staging and Production. For Starter, you push to `staging` and `master` branches. For Production, you will need to SSH into your environments and push. For details on deployment commands, see [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 
 Wait for deployment to complete in all environments.
 

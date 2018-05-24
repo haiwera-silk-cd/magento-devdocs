@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Bulk Operations
-menu_title: Bulk Operations
+title: 批量操作
+menu_title: 批量操作
 menu_order: 28
 version: 2.2
 ee_only: True
@@ -59,7 +59,7 @@ The `BulkManagementInterface::scheduleBulk` is responsible for publishing bulk o
 </td></tr>
 <tr><td>$bulkDescription</td>
 <td>string</td>
-<td>A description of the bulk operation. This value is displayed in the <b>Your Bulk Operations</b> grid.</td></tr>
+<td>A description of the bulk operation. This value is displayed in the <b>Your 批量操作</b> grid.</td></tr>
 <tr><td>$userId</td>
 <td>int</td>
 <td>The Admin user ID that executes this bulk operation.</td></tr>
@@ -114,5 +114,5 @@ Value | Constant
 
 #### Related Topic
 
-* [Message Queues Overview]( {{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
-* [Example bulk operations implementation]({{ page.baseurl }}/extension-dev-guide/message-queues/implement-bulk.html)
+* [消息队列概述]( {{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
+* [批量操作实现示例]({{ page.baseurl }}/extension-dev-guide/message-queues/implement-bulk.html)

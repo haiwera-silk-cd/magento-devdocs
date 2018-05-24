@@ -1,6 +1,6 @@
 ---
 group: pattern
-subgroup: Getting User Input
+subgroup: 获取用户输入
 title: 管理面板用到的设计模式和库
 menu_title: Row Pattern (Table)
 menu_order: 4

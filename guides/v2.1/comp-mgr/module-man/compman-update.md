@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 3. Component Update
+title: 步骤3. 组件更新
 menu_title: Component Update
 menu_node:
 menu_order: 10

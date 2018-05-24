@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Prepare your existing Magento Commerce install
-menu_title: Prepare your existing Magento Commerce install
+title: 准备你的现存的Magento企业版的安装
+menu_title: 准备你的现存的Magento企业版的安装
 menu_order: 153
 menu_node:
 level3_menu_node: level3child

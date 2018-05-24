@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Theme troubleshooting
+title: 主题问题排查
 version: 2.0
 github_link: cloud/trouble/theme-troubleshooting.md
 ---

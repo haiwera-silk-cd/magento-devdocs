@@ -40,4 +40,4 @@ After you get the Open Source software:
 To upgrade to version 2.0.x from an earlier version:
 
 *	[Web Setup Wizard (System Upgrade)]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)
-*	[Command-line upgrade]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html)
+*	[命令行升级]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html)

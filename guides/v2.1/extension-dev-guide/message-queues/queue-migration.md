@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Migrate message queue configuration
-menu_title: Migrate message queue configuration
+title: 迁移消息队列配置
+menu_title: 迁移消息队列配置
 menu_order: 19
 ee_only: True
 level3_menu_node: level3child
@@ -36,5 +36,5 @@ The structure of the `queue.xml` file is substantially different in Magento. 2.1
 `<broker>/<queue>/maxMessages` | `<consumer>/max_messages`
 
 #### 相关主题
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queues</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">配置消息队列</a>

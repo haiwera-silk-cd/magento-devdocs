@@ -59,7 +59,7 @@ Deploy script actions:
 -  Install or update {{site.data.var.ece}}
 -  Configure routing for traffic
 
-After the build and deploy process, your store comes back online with your latest code changes and configurations. See [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
+After the build and deploy process, your store comes back online with your latest code changes and configurations. See [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 ### Merge to Integration
 Combine all verified code changes by merging your Active development branch into the base `integration` branch. You can test all your changes on the `integration` branch before promoting changes to the Staging environment.
@@ -67,13 +67,13 @@ Combine all verified code changes by merging your Active development branch into
 ### Merge to Staging
 Staging is a pre-production environment that provides all services and settings as close to the Production environment as possible. You should always push your code changes in iterations to your Staging environment for full testing that includes all services. The first time you use the Staging environment, you must configure services, such as [Fastly CDN]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html), [Blackfire Profiler]({{ page.baseurl }}/cloud/project/project-integrate-blackfire.html), and [New Relic APM]({{ page.baseurl }}/cloud/project/new-relic.html). Also, we recommend configuring payment gateways, shipping, notifications, and other vital services with sandbox or testing credentials.
 
-It is best to thoroughly test every service, verify your performance testing tools, and perform UAT testing as an administrator and as a customer, until you feel that your store is ready for the Production environment. See [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+It is best to thoroughly test every service, verify your performance testing tools, and perform UAT testing as an administrator and as a customer, until you feel that your store is ready for the Production environment. See [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 
 ### Merge to Production
 After thorough testing in the Staging environment, merge to the Production environment and thoroughly test using live credentials. The moment you go live, customers must be able to complete purchases and administrators must be able to manage the live store. We provide a detailed, clear walk-through for deploying your store and going live:
 
--  See [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html)
--  See [Go live and launch]({{ page.baseurl }}/cloud/live/live.html)
+-  See [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html)
+-  See [上线和发布]({{ page.baseurl }}/cloud/live/live.html)
 
 ### Merge to Global Master
 You should always push a copy of the Production code to the Global Master in case there is an emergent need to debug the Production environment without interrupting services.

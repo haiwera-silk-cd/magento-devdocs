@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up Redis service
-menu_title: Set up Redis service
+title: 设置Redis服务
+menu_title: 设置Redis服务
 menu_order: 65
 menu_node:
 level3_menu_node: level3child
@@ -16,7 +16,7 @@ functional_areas:
 
 [Redis](http://redis.io){:target="\_blank"} is an optional, backend cache solution that replaces the Zend Framework [Zend_Cache_Backend_File](http://framework.zend.com/apidoc/1.0/Zend_Cache/Backend/Zend_Cache_Backend_File.html){:target="\_blank"}, which is used in Magento 2 by default.
 
-We support Redis versions 2.8 and 3.0. Redis 3.0 supports up to 64 different databases per instance of the service, while 2.8 allows for only a single database. See [Configure Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html).
+We support Redis versions 2.8 and 3.0. Redis 3.0 supports up to 64 different databases per instance of the service, while 2.8 allows for only a single database. See [配置Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html).
 
 ## Add Redis in configuration files {#settings}
 To enable Redis, add your installed version and allocated disk space in MB to `.magento/services.yaml` file:

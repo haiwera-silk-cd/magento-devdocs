@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 02_Security
-title: Prevent cache poisoning
-menu_title: Prevent cache poisoning
+title: 防止缓存中毒
+menu_title: 防止缓存中毒
 menu_order: 10
 menu_node:
 version: 2.0

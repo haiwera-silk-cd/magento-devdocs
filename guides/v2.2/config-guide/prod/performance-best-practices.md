@@ -167,7 +167,7 @@ Magento 2 provides many settings and tools that can be used and activated that i
 
 ### Cron Jobs
 
-All asynchronous operations in Magento 2 Open Source are performed using of Linux cron. See [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) to configure it correctly.
+All asynchronous operations in Magento 2 Open Source are performed using of Linux cron. See [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) to configure it correctly.
 
 ### Indexers
 

@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Modules and areas
-menu_title: Modules and areas
+title: 模块和地区
+menu_title: 模块和地区
 menu_order: 4
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_and_areas.html
 ---
 
-## 概述{#m2arch-module-areas-overview}
+## 概述 {#m2arch-module-areas-overview}
 
 An *area* is a logical component that organizes code for optimized request processing. Magento uses areas to streamline web service calls by loading only the dependent code for the specified area.  Each of the default areas defined by Magento can contain completely different code on how to process URLs and requests.
 
@@ -61,4 +61,4 @@ After the area name, the URI segment specifies the *full front name*. When an HT
 
 ## Related topics {#m2arch-module-related}
 
-* <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">Module overview</a>
+* <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>

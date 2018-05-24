@@ -71,7 +71,7 @@ You can run these operations from the Admin panel.
 
 
 ### System requirements
-Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and MySQL. For details, see [Technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
+Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
 {:target="_blank"}.
 
 {% include install/releasenotes/ce_install_20.md %}

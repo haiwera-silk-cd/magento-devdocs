@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Patch Magento Commerce (Cloud)
+title: Magento企业版(云支持版)补丁
 version: 2.0
 github_link: cloud/project/project-patch.md
 redirect_from:
@@ -14,7 +14,7 @@ functional_areas:
 
 You can apply patches as they are available to update {{site.data.var.ece}}. We recommend using a new active branch and Integration environment for applying and testing the patch prior to fully deploying across all environments. We strongly recommend you test patches locally so you can identify and resolve any issues.
 
-When you perform a {{site.data.var.ece}} upgrade, you automatically upgrade with patches and hotfixes through the `composer update` command. To upgrade and test {{site.data.var.ece}} (including patches and hotfixes), see [Upgrade Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/project/project-upgrade.html).
+When you perform a {{site.data.var.ece}} upgrade, you automatically upgrade with patches and hotfixes through the `composer update` command. To upgrade and test {{site.data.var.ece}} (including patches and hotfixes), see [Magento企业版(云支持版)升级]({{ page.baseurl }}/cloud/project/project-upgrade.html).
 
 To check for patches, you can check the `vendor/magento/magento-cloud-configuration/patches` folder.
 

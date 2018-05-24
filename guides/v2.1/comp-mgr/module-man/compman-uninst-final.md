@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 4. Uninstall
-menu_title: Step 4. Uninstall
+title: 步骤4. 卸载
+menu_title: 步骤4. 卸载
 menu_node:
 menu_order: 50
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 4. Uninstall
+## 步骤4. 卸载
 To uninstall your component, click **Uninstall** as the following figure shows.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ site.baseurl }}/common/images/cman_uninst2.png" width="300px" alt="Click Uninstall">

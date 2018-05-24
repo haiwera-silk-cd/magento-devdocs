@@ -12,4 +12,4 @@ The following pages contain links to license agreements of the third-party compo
 
 *	[Magento Open Source third-party licenses]({{ page.baseurl }}/release-notes/thirdparty_ce.html)
 *	[Magento Commerce third-party licenses]({{ page.baseurl }}/release-notes/thirdparty_ee.html)
-*	[Magento Commerce (Cloud) third-party licenses]({{ page.baseurl }}/release-notes/thirdparty-mccloud.html)
+*	[Magento企业版(云支持版) third-party licenses]({{ page.baseurl }}/release-notes/thirdparty-mccloud.html)

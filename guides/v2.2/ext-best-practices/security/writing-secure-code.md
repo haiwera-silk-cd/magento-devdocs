@@ -32,11 +32,11 @@ Avoid using these functions in your code.
   If you need to use the `ArrayObject` class, override the `serialize`/`unserialize` methods so that they use secure logic. 
   Convert objects into arrays to serialize them, and reconstruct the objects using arrays during unserialization.
 
-  You can use [Serialize Library][12] in framework for a secure way of serializing/unserializing data.
+  You can use [序列化库][12] in framework for a secure way of serializing/unserializing data.
 
 ## Related Topics
 
-* [Serialize Library][12]
+* [序列化库][12]
 
 [0]:http://php.net/manual/en/function.eval.php
 [1]:https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Code_Injection
@@ -50,4 +50,4 @@ Avoid using these functions in your code.
 [9]:http://php.net/manual/en/function.mt-rand.php
 [10]:http://phpsecurity.readthedocs.io/en/latest/Insufficient-Entropy-For-Random-Values.html
 [11]:http://php.net/manual/en/class.arrayobject.php
-[12]: {{ page.baseurl }}/extension-dev-guide/framework/serializer.html "Serialize Library"
+[12]: {{ page.baseurl }}/extension-dev-guide/framework/serializer.html "序列化库"

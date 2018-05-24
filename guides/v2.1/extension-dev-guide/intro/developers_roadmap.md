@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 01_Introduction
-title: Developer roadmap
-menu_title: Developer roadmap
+title: 开发者指引
+menu_title: 开发者指引
 menu_order: 2
 version: 2.1
 github_link: extension-dev-guide/intro/developers_roadmap.md

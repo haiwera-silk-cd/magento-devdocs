@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Service contract design patterns
-menu_title: Service contract design patterns
+title: 服务契约设置模式
+menu_title: 服务契约设置模式
 menu_order: 4
 version: 2.1
 github_link: extension-dev-guide/service-contracts/design-patterns.md
@@ -132,7 +132,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
 </table>
 <h3 id="related-topics">Related topics</h3>
 <ul>
-   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">Service contracts</a></li>
-   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">Configure services as web APIs</a>
+   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a></li>
+   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>
    </li>
 </ul>

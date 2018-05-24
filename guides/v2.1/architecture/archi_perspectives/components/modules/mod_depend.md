@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Module dependencies
-menu_title: Module dependencies
+title: 模块依赖
+menu_title: 模块依赖
 menu_order: 6
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_depend.html
 ---
 
-## 概述{#m2devgde-moddep-intro}
+## 概述 {#m2devgde-moddep-intro}
 
 A *software dependency* identifies  one software component's reliance on another for proper functioning. A core principle of Magento architecture is the **minimization of software dependencies**. Instead of being closely interrelated with other modules, modules are optimally designed to be <i>loosely coupled</i>. Loosely coupled modules require little or no knowledge of other modules to perform their tasks.
 
@@ -23,7 +23,7 @@ Each Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% 
 
 * One module cannot be responsible for several features.
 
-* Module dependencies on other modules must be declared explicitly. You must also declare any dependency upon other components (for example, a theme, language package, or library).
+* 模块依赖 on other modules must be declared explicitly. You must also declare any dependency upon other components (for example, a theme, language package, or library).
 
 * Removing or disabling a module does not result in disabling other modules.
 
@@ -35,7 +35,7 @@ Although Magento architecture favors loosely coupled software components, module
 
 * {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} extensions
 
-* libraries (either Magento Framework {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} or third party libraries)
+* libraries (either Magento框架 {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} or third party libraries)
 
 <div class="bs-callout bs-callout-warning" id="warning">
 <p>Note: You can lose the historical information contained in a module if the module is removed or disabled. We recommend alternative storage of module information before you remove or disable a module.</p></div>
@@ -54,6 +54,6 @@ Example: Module A declares a dependency upon Module B. Thus, in Module A's `modu
 
 ## Related topics {#m2arch-module-related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">Module overview</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend_types.html">Types of module dependencies</a>

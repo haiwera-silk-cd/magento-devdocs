@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Magento Commerce (Cloud) architecture
+title: Magento企业版(云支持版)架构
 version: 2.0
 github_link: cloud/architecture/cloud-architecture.md
 functional_areas:

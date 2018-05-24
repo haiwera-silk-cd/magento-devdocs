@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Troubleshoot backups
-menu_title: Troubleshoot backups
+title: 解答备份问题
+menu_title: 解答备份问题
 menu_node:
 menu_order: 400
 version: 2.0

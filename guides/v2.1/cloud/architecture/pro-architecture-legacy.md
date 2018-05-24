@@ -88,7 +88,7 @@ Developing in the Integration environment requires the following Git process:
 1.  Push code changes, which automatically build and deploy to the Integration environment for testing
 
 <div class="bs-callout bs-callout-info" markdown="1">
-We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [Prepare for local environment setup]({{ page.baseurl }}/cloud/before/before-workspace.html) and [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html) and [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 </div>
 
 ## Staging environment {#cloud-arch-stage}
@@ -100,7 +100,7 @@ The Staging environment contains a default `master` branch. You cannot branch fr
 When you update your project to manage the [Production and Staging environments through the Project Web Interface]({{ page.baseurl }}/cloud/trouble/pro-env-management.html), we create a branch from the Integration environment `master` branch called `staging` that contains all user access settings and environment variables for your Staging environment.
 
 <div class="bs-callout bs-callout-info" markdown="1">
-We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [Test  deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
+We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [Test  deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html).
 </div>
 
 ## Production environment {#cloud-arch-prod}
@@ -112,7 +112,7 @@ The Production environment contains a default `master` branch. You cannot branch
 When you update your project to manage the [Production and Staging environments through the Project Web Interface]({{ page.baseurl }}/cloud/trouble/pro-env-management.html), we create a branch from the Integration environment `master` branch called `production` that contains all user access settings and environment variables for your Production environment.
 
 <div class="bs-callout bs-callout-info" markdown="1">
-We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [Go Live and launch]({{ page.baseurl }}/cloud/live/live.html).
+We highly recommend testing every merchant and customer interaction in the Staging environment prior to deploying to the Production environment. See [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html) and [Go Live and launch]({{ page.baseurl }}/cloud/live/live.html).
 </div>
 
 ### Advantage of redundant hardware

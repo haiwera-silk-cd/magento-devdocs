@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Start the Component Manager
-menu_title: Start the Component Manager
+title: 启动组件管理
+menu_title: 启动组件管理
 menu_node:
 menu_order: 2
 version: 2.0
@@ -16,7 +16,7 @@ functional_areas:
   - Upgrade
 ---
 
-<h2 id="compman-access">Start the Component Manager from the Magento Admin</h2>
+<h2 id="compman-access">启动组件管理 from the Magento Admin</h2>
 To run the Component Manager:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
@@ -36,6 +36,6 @@ To run the Component Manager:
     	<li><a href="http://docs.magento.com/m2/ce/user_guide/magento/magento-account-share.html" target="_blank">Shared account</a> authentication keys</li></ul>   
 	</div>
 5.	Click **Save Config**.
-3.	Click **Component Manager** and continue with <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-main-pg.html">Manage your components</a>.
+3.	Click **Component Manager** and continue with <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-main-pg.html">管理你的组件</a>.
 
-	To upgrade Magento system software instead, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">Run System Upgrade</a>.
+	To upgrade Magento system software instead, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">运行系统升级</a>.

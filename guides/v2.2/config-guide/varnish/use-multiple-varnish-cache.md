@@ -1,7 +1,7 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: How Magento cache works with multiple Varnish instances
+title: 多Varnish环境下，Magento缓存是如何工作的
 menu_title: How Magento cache clearing works with multiple Varnish instances
 menu_order: 82
 menu_node:

@@ -1,6 +1,6 @@
 ---
 group: perf-best-practices
-title: Configuration best practices
+title: 最佳配置实践
 version: 2.2
 github_link: performance-best-practices/configuration.md
 functional_areas:
@@ -13,7 +13,7 @@ Magento 2 provides many settings and tools that you can use to improve response 
 
 ## Cron Jobs
 
-All asynchronous operations in {{site.data.var.ce}} are performed using the Linux `cron` command. See [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) to configure it correctly.
+All asynchronous operations in {{site.data.var.ce}} are performed using the Linux `cron` command. See [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) to configure it correctly.
 
 ## Indexers
 

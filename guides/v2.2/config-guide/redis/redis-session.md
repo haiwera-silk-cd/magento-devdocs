@@ -1,6 +1,6 @@
 ---
 group: config-guide
-title: Use Redis for session storage
+title: 使用Redis作为Session存储
 version: 2.2
 github_link: config-guide/redis/redis-session.md
 functional_areas:
@@ -227,5 +227,5 @@ Magento adds lines similar to the following to `<your Magento install dir>app/et
 
 #### 相关主题
 
- *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
+ *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
  *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

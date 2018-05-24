@@ -515,4 +515,4 @@ class OauthClient extends AbstractService
 
 [Construct a request]( {{ page.baseurl }}/get-started/gs-web-api-request.html )
 
-[Configure services as web APIs]( {{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html )
+[将服务配置成web API]( {{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html )

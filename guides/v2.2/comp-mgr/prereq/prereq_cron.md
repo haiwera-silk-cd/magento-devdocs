@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 02_prereq
-title: Set up cron for update and upgrade
-menu_title: Set up cron for update and upgrade
+title: 为升级和更新设置定时任务(cron)
+menu_title: 为升级和更新设置定时任务(cron)
 menu_order: 3
 menu_node:
 version: 2.2
@@ -19,6 +19,6 @@ The cron jobs schedule tasks for the Setup Wizard and for the updater applicatio
 
 {% include config/setup-cron_2.2_how-to.md %}
 
-For more information about cron, including how to remove a crontab and run cron from the command line, see [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html).
+For more information about cron, including how to remove a crontab and run cron from the command line, see [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html).
 
 

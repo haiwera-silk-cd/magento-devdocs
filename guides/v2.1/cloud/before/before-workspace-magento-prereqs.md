@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Install Magento prerequisites
-menu_title: Install Magento prerequisites
+title: 安装Magento所需的必要软件
+menu_title: 安装Magento所需的必要软件
 menu_order: 15
 menu_node:
 version: 2.1
@@ -21,7 +21,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Prepare for local environment setup]({{ page.baseurl }}/cloud/before/before-workspace.html)
+[本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html)
 
 Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.
 
@@ -197,4 +197,4 @@ The requirements listed in this topic are specific to {{site.data.var.ece}} envi
 You can also install additional [可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html). These packages should be installed on the local VM.
 
 #### 下一步:
-[Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
+[启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)

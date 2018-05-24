@@ -36,7 +36,7 @@ We strongly recommend installing Fastly module 1.2.33 or later.
 ## Fastly and 503 timeouts {#timeouts}
 When you receive a 503 error from Fastly, it may be due to a lengthy operation or performing bulk actions. Fastly has a default 60 second time out. Any request that takes longer than 60 seconds will return a 503 error.
 
-If you receive a 503 error, make the request directly to the origin or review logs. For details, see [Fastly troubleshooting]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html#timeouts).
+If you receive a 503 error, make the request directly to the origin or review logs. For details, see [快速故障排查]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html#timeouts).
 
 Fastly can be bypassed for the Magento Admin to perform long running or bulk actions and API access to avoid 503s. For Fastly module 1.2.22 and later, the timeout for the Magento Admin was extended to three minutes.
 
@@ -92,8 +92,8 @@ The installation and configuration process is:
 
 * Install the Fastly module in an Integration branch, without configuring settings or entering credentials.
 * Deploy the code to `integration` then to Staging and Production
-* Configure Fastly in Staging and Production, not in Integration or your local
+* 快速配置 in Staging and Production, not in Integration or your local
 * Test Fastly for caching
 
-For instructions, see [Set up Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html). After you have configured it, you can continue with advanced options including custom VCL snippets.
+For instructions, see [快速设置]({{ page.baseurl }}/cloud/access-acct/fastly.html). After you have configured it, you can continue with advanced options including custom VCL snippets.
 

@@ -431,7 +431,7 @@ class View extends Template
 ---
 2.17.3. Strategy SHOULD be used when there are multiple algorithms for performing an operation.
 
-## 3. Dependency injection
+## 3. 依赖注入
 
 3.1. There SHOULD be no circular dependencies between objects.
 

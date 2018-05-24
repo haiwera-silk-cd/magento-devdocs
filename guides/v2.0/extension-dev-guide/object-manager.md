@@ -67,4 +67,4 @@ You can depend on and use the `ObjectManager` class in the following scenarios:
 **Related topics**
 
 *	[The `di.xml` file]({{ page.baseurl }}/extension-dev-guide/build/di-xml-file.html)
-* [Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+* [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

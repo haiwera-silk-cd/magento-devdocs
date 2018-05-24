@@ -1,6 +1,6 @@
 ---
 group: extension-dev-guide
-title: Optimal Development Environment
+title: 最佳开发环境
 subgroup: 03_Build
 menu_title: Optimal development environment
 menu_order: 1

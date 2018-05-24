@@ -13,7 +13,7 @@ redirect_from:
   - guides/v2.3/javascript-dev-guide/javascript/requirejs_concept.html
 ---
 
-## 概述{#m2devgde-js-resources-intro}
+## 概述 {#m2devgde-js-resources-intro}
 
 This topic describes the general concepts of how work with {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components is organized in Magento.
 

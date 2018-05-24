@@ -11,14 +11,14 @@ To get the module's Composer name from Magento Marketplace:
 3.	On the My Account page, click **My Purchases** as the following figure shows.
 
 	![Marketplace purchase history]({{ site.magentourl }}/common/images/cloud_marketplace-purch-history.png){:width="650px"}
-4.	On the My Purchases page, click **Technical Details** for the module you purchased as the following figure shows.
+4.	On the My Purchases page, click **技术细节** for the module you purchased as the following figure shows.
 
 	![Technical details shows the module's Composer name]({{ site.magentourl }}/common/images/cloud_marketplace-download-invoice.png){:width="200px"}
 5.	Click **Copy** to copy the component name to the clipboard.
 5.	Open a text editor.
 6.	Paste the module name in the text editor.
 6.	Append a colon character (`:`) to the component name.
-7.	In **Technical Details** on the My Purchases page, click **Copy** to copy the version to the clipboard.
+7.	In **技术细节** on the My Purchases page, click **Copy** to copy the version to the clipboard.
 8.	Append the version number to the component name after the colon.
 
 	A sample follows:

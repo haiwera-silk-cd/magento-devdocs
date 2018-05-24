@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up RabbitMQ service
-menu_title: Set up RabbitMQ service
+title: 设置RabbitMQ服务
+menu_title: 设置RabbitMQ服务
 menu_order: 75
 menu_node:
 level3_menu_node: level3child

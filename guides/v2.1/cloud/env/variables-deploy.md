@@ -18,14 +18,14 @@ stage:
 For more information about customizing the build and deploy process:
 
 -  [Manage build and deploy actions](http://devdocs.magento.com/guides/v2.1/cloud/project/magento-env-yaml.html)
--  [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+-  [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
 
 ### `CACHE_CONFIGURATION`
 
 -  **Default**—_Not set_
 -  **Version**—Magento 2.1.4 and later
 
-Configure Redis page and default caching. When setting the `cm_cache_backend_redis` parameter, you must specify the `server`, `port`, and `database` options.
+配置Redis page and default caching. When setting the `cm_cache_backend_redis` parameter, you must specify the `server`, `port`, and `database` options.
 
 ```yaml
 stage:
@@ -197,7 +197,7 @@ By default, the deployment process overwrites all settings in the `env.php` file
 -  **Default**—_Not set_
 -  **Version**—Magento 2.1.4 and later
 
-Configure Redis session storage. You must specify the `save`, `redis`, `host`, `port`, and `database` options for the session storage variable. For example:
+配置Redis session storage. You must specify the `save`, `redis`, `host`, `port`, and `database` options for the session storage variable. For example:
 
 ```yaml
 stage:

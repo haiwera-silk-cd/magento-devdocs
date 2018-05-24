@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Snapshots and backup management
+title: 快照和备份管理
 version: 2.1
 github_link: cloud/project/project-webint-snap.md
 redirect_from:
@@ -143,7 +143,7 @@ You can create a copy of your database using [`magento/ece-tools`](http://devdoc
 </div>
 
 <div class="bs-callout bs-callout-tip" markdown="1">
-If you want to push this data into an environment, see [迁移数据 and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
+If you want to push this data into an environment, see [迁移数据和静态文件]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
 </div>
 
 ## Rollbacks to remove code {#rollback-code}

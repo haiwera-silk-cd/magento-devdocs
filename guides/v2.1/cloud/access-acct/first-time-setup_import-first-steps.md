@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Import existing code into a project
-menu_title: Import existing code into a project
+title: 导入现存的代码到项目
+menu_title: 导入现存的代码到项目
 menu_order: 151
 menu_node:
 level3_menu_node: level3child
@@ -41,7 +41,7 @@ To transfer the database dump and files to {{site.data.var.ece}}, you must know 
   magento-cloud environment:ssh --pipe
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-You must enter all {{site.data.var.ece}} commands on the machine on which your Cloud SSH keys are stored. For more information, see [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) and [SSH and sFTP]({{ page.baseurl }}/cloud/env/environments-ssh.html).
+You must enter all {{site.data.var.ece}} commands on the machine on which your Cloud SSH keys are stored. For more information, see [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) and [SSH和sFTP]({{ page.baseurl }}/cloud/env/environments-ssh.html).
 </div>
 
 ### Database credentials {#db-creds}
@@ -120,4 +120,4 @@ The complete workflow for importing existing code includes the following steps:
 1.  After the project deploys, **Success** displays next to the name of your project.
 
 #### 下一步
-[Prepare your existing Magento Commerce install]({{ page.baseurl }}/cloud/access-acct/first-time-setup_import-prepare.html)
+[准备你的现存的Magento企业版的安装]({{ page.baseurl }}/cloud/access-acct/first-time-setup_import-prepare.html)

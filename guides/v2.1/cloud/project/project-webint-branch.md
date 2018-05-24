@@ -1,7 +1,7 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Manage branches with the Project Web Interface
+title: 使用项目的web接口管理分支
 menu_title: Manage branches with the Interface
 menu_order: 20
 menu_node:
@@ -18,7 +18,7 @@ functional_areas:
 
 Every {{site.data.var.ece}} *environment* has an associated active Git *branch*. You can manage your environments using either the Project Web Interface, the Magento Cloud CLI, or Git commands. For more information on Git branchs, see [Git documentation](https://git-scm.com/doc).
 
-For more information about managing environments using the CLI, see [Manage branches with the CLI]({{ page.baseurl }}/cloud/env/environments-start.html).
+For more information about managing environments using the CLI, see [使用命令行管理分支]({{ page.baseurl }}/cloud/env/environments-start.html).
 
 This topic discusses how to use the Project Web Interface to:
 
@@ -123,7 +123,7 @@ For **Starter** environments, you can review build and deploy logs and the deplo
 
 For **Pro** environments, you can review the following logs per environment:
 
-* Integration: Build and deploy and deployment history
+* Integration: 构建和部署 and deployment history
 * Staging: Build logs and deployment history. You need to SSH into the server to view deploy logs.
 * Production: Build logs and deployment history. You need to SSH into the server to view deploy logs.
 

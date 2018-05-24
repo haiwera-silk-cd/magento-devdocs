@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Indexing overview
-menu_title: Indexing overview
+title: 索引概述
+menu_title: 索引概述
 menu_order: 13
 version: 2.0
 level3_menu_node: level3child
@@ -17,7 +17,7 @@ redirect_from:
 *	<a href="#m2devgde-indexing-intro">Introduction to indexing</a>
 *	<a href="#m2devgde-indexing-implementation">How Magento implements indexing</a>
 *	<a href="#m2devgde-indexing-outofbox">Magento indexers</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/indexing-custom.html">Adding a custom indexer</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/indexing-custom.html">添加自定义索引</a>
 
 <h2 id="m2devgde-indexing-intro">Introduction to indexing</h2>
 _Indexing_ is how Magento transforms data such as products, categories, and so on, to improve the performance of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. As data changes, the transformed data must be updated&mdash;or reindexed. Magento has a very sophisticated architecture that stores lots of merchant data (including {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}catalog{% endglossarytooltip %} data, prices, users, stores, and so on) in many database tables. To optimize storefront performance, Magento accumulates data into special tables using indexers.

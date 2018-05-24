@@ -216,7 +216,7 @@ We address the following functional issues in this release.
 
 	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the Web Setup Wizard from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
 
-	*	Install Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
+	*	安装Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
 
 
 

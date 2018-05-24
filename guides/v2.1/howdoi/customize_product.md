@@ -225,4 +225,4 @@ For reference about setting conditions for displaying certain elements for certa
 
  - [Form UI component]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html)
  - [About PHP modifiers in UI components]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_modifier_concept.html)
- - [Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+ - [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

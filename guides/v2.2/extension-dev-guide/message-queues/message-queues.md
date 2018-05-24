@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Message Queues
-menu_title: Message Queues
+title: 消息队列
+menu_title: 消息队列
 menu_order: 25
 version: 2.2
 ee_only: true
@@ -13,13 +13,13 @@ redirect_from: /guides/v2.2/extension-dev-guide/message-queues.html
 
 ---
 
-Message queues provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
+消息队列 provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
 
 In {{site.data.var.ee}}, the Message Queue Framework (MQF) is a fully-functional system that allows a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} to publish messages to queues. It also creates consumers to receive them asynchronously. The MQF primarily uses [RabbitMQ](http://www.rabbitmq.com) as the messaging broker, which  provides a scalable platform for sending and receiving messages. It also includes a mechanism for storing undelivered messages. RabbitMQ is based on the Advanced Message Queuing Protocol (AMQP) 0.9.1 specification.
 
 A basic message queue system can also be set up without using RabbitMQ. In this system, a MySQL {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} stores messages in the database. Three database tables (`queue`, `queue_message`, and `queue_message_status`) manage the message queue workload. Cron jobs ensure the consumers are able to receive messages. This solution is not very scalable. RabbitMQ should be used whenever possible.
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queues</a> for information about setting up the message queue system.
+See <a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">配置消息队列</a> for information about setting up the message queue system.
 
 
 <h2>Send a message from the publisher to a queue</h2>
@@ -71,7 +71,7 @@ The following sample introduces a runtime configuration that allows you to redef
 
 #### 相关主题
 
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queues</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">配置消息队列</a>
 
 *	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>

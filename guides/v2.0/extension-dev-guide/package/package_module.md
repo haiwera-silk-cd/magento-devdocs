@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 05_Package
-title: Package a component
-menu_title: Package a component
+title: 打包组件
+menu_title: 打包组件
 menu_order: 2
 version: 2.0
 github_link: extension-dev-guide/package/package_module.md

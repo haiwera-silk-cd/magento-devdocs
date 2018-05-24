@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Go live checklist
+title: 上线检查
 version: 2.2
 github_link: cloud/live/go-live-checklist.md
 functional_areas:
@@ -12,7 +12,7 @@ functional_areas:
 Prior to go live and switching the DNS, you should download and complete the [Checklist]({{ site.baseurl }}/common/pdf/Pre-Launch.Checklist_4_23_2018.docx) and all tests for your deployed site or store. Deploy your `master` branch to the Production environment. 
 
 ## Completely test in Production {#test}
-See [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html) for testing all aspects of your sites, stores, and environments. These tests include verifying Fastly, User Acceptence Tests (UAT), and performance testing.
+See [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html) for testing all aspects of your sites, stores, and environments. These tests include verifying Fastly, User Acceptence Tests (UAT), and performance testing.
 
 ## DNS configurations {#dns}
 You need to complete configurations for your DNS including:
@@ -82,4 +82,4 @@ You can also test using the following 3rd party options:
 * [WebPageTest](https://www.webpagetest.org/){:target="_blank"} and [Pingdom](https://www.pingdom.com/){:target="_blank"}: Real-time analysis of your site pages load time with different origin locations. Pingdom may cost a fee. WebPageTest is a free tool.
 
 #### 下一步:
-[Launch steps]({{ page.baseurl }}/cloud/live/launch-steps.html)
+[发布步骤]({{ page.baseurl }}/cloud/live/launch-steps.html)

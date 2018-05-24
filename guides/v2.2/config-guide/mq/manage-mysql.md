@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 24_RabbitMQ
-title: Manage message queues
-menu_title: Manage message queues
+title: 管理消息队列
+menu_title: 管理消息队列
 menu_order: 3
 version: 2.0
 github_link: config-guide/mq/manage-mysql.md
@@ -35,7 +35,7 @@ How often you check message queues depends on your business logic and available 
 
 It can be configured in Admin Panel **Stores > Configurtion > Advanced > System > Cron configuration options for group: consumers**
 
-See [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) for more information about using `cron` with Magento.
+See [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html) for more information about using `cron` with Magento.
 </div>
 
 You can also use a process manager such as [Supervisor](http://supervisord.org/index.html) to monitor the status of processes. The manager can use the command line to restart the processes as needed.
@@ -95,7 +95,7 @@ Use the following command to return a list of message queue consumers:
     ./bin/magento queue:consumers:list
 
 #### 相关主题
-*   [Message Queues Overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
-*   [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
+*   [消息队列概述]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
+*   [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
 *   [Command-line configuration]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html)
-*   [Message Queues]({{ page.baseurl }}/extension-dev-guide/message-queues/message-queues.html)
+*   [消息队列]({{ page.baseurl }}/extension-dev-guide/message-queues/message-queues.html)

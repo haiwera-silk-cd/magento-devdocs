@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Install Magento
-menu_title: Install Magento
+title: 安装Magento
+menu_title: 安装Magento
 menu_order: 50
 version: 2.0
 github_link: cloud/before/before-setup-env-install.md
@@ -18,7 +18,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Clone and branch the project]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)
+[克隆并开发项目分支]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)
 
 With your workspace prepared, install Magento on your local to verify custom code, extensions, and more. This section includes the installation prep, options, and post-installation configuration you should complete.
 
@@ -84,7 +84,7 @@ After you have installed Magento, you need to set the file system permissions an
 
 {% include install/file-system-perms-twouser_cmds-only.md %}
 
-## Install Magento {#install}
+## 安装Magento {#install}
 Prior to installing, you should [更新安装依赖]({{ page.baseurl }}/install-gde/install/prepare-install.html#install-composer-install) using Composer commands.
 
 You should be ready to install Magento using one of the following options:
@@ -164,6 +164,6 @@ With these steps completed, you should have:
 * Magento authentication keys set up and configured in the project and local
 
 ## Next steps:
-For **Pro projects**, we strongly recommend fully deploying this base Magento template `master` branch without any code or configuration changes to Staging and Production. For instructions, see [First time deployment]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html).
+For **Pro projects**, we strongly recommend fully deploying this base Magento template `master` branch without any code or configuration changes to Staging and Production. For instructions, see [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html).
 
 For **Starter projects**, you are ready to start developing.

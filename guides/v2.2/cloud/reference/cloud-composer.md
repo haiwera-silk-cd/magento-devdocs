@@ -20,7 +20,7 @@ Composer is a dependency manager for PHP. Composer manages the dependencies you 
 
 The following sections detail the specifics of {{site.data.var.ece}} composer packages, how they work, and what they do within the code base.
 
-For information on what files should and shouldn't be in source control, see [Project structure]({{ page.baseurl }}/cloud/project/project-start.html). We provide a `.gitignore` file to aid.
+For information on what files should and shouldn't be in source control, see [项目结构]({{ page.baseurl }}/cloud/project/project-start.html). We provide a `.gitignore` file to aid.
 
 For {{site.data.var.ece}} 2.2, the `magento/magento-cloud-configuration (MCC)` has been replaced by `vendor/magento/ece-patches` and `vendor/magento/ece-tools`. These packages decouple a patch update from a full product upgrade, allowing you to fully apply a patch without a full product installation or upgrade.
 
@@ -51,7 +51,7 @@ We use the following commands for Magento:
 * `composer install`: Use this command if you know extension and base code is updated. This command uses `composer.lock`, not `composer.json`. The command reads the lock file and checks the versions installed and listed in the file. If new lines are included or the file has a later version, the code is installed. After initial install, using the command only installs new code if you add new extensions or versions to `composer.lock`.
 * `composer update`: Use this command when you need to perform complete updates of all extensions and base code. This command uses `composer.json`, not `composer.lock`.
 
-## Magento Commerce (Cloud) packages
+## Magento企业版(云支持版) packages
 The following sections discuss the Composer packages used by {{site.data.var.ece}}:
 
 *	[`vendor/magento/magento-cloud-metapackage`](#cloud-composer-cloudmeta)
@@ -99,6 +99,6 @@ Therefore, when upgrading to a new Cloud version or adding, removing, or changin
 2.	Add and commit these updated files to your Cloud Git repository.
 3.	Push the changes to your Cloud Integration environment.
 
-For more information, see [Patch Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/project/project-patch.html).
+For more information, see [Magento企业版(云支持版)补丁]({{ page.baseurl }}/cloud/project/project-patch.html).
 
 This makes sure that base files are placed in the correct location and are under source control. If you notice any problems after deploying an updated version of Magento, one of the first things to check should be whether all of the base package files were added to source control.

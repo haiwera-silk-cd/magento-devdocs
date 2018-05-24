@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 3. Enable/Disable
+title: 步骤3. 启用/禁用
 menu_title: Enable/Disable
 menu_node:
 menu_order: 11
@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 3. Enable/Disable
+## 步骤3. 启用/禁用
 To enable or disable your module, click the appropriate button. The following figure shows an example of disabling a module, in which case you click **Disable**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ site.baseurl }}/common/images/modman_actions_disable.png" width="500px" alt="Click Disable">

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Manually configure master databases
-menu_title: Manually configure master databases
+title: 手动配置主数据库
+menu_title: 手动配置主数据库
 menu_order: 3
 menu_node:
 version: 2.0
@@ -412,7 +412,7 @@ Run the script as follows:
 {% endcollapsible %}
 
 ## Update your deployment configuration {#config-ee-multidb-config}
-The final step in manually splitting databases is to add connection and resource information to Magento's deployment configuration, `env.php`. 
+The final step in manually splitting databases is to add connection and resource information to Magento的部署配置, `env.php`. 
 
 {% collapsible Click to update the Magento deployment configuration %}
 
@@ -609,4 +609,4 @@ Drop all tables that start with `quote_`.
 {% endcollapsible %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_verify.html">Verify split databases</a>
+<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>

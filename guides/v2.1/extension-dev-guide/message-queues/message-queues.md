@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Message Queues
-menu_title: Message Queues
+title: 消息队列
+menu_title: 消息队列
 menu_order: 17
 ee_only: True
 level3_menu_node: level3child
@@ -14,7 +14,7 @@ functional_areas:
   - Services
 ---
 
-Message queues provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
+消息队列 provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
 
 In {{site.data.var.ee}}, the Message Queue Framework (MQF) is a fully-functional system that allows a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} to publish messages to queues. It also creates consumers to receive them asynchronously. The MQF primarily uses [RabbitMQ](http://www.rabbitmq.com) as the messaging broker, which  provides a scalable platform for sending and receiving messages. It also includes a mechanism for storing undelivered messages. RabbitMQ is based on the Advanced Message Queuing Protocol (AMQP) 0.9.1 specification.
 
@@ -72,6 +72,6 @@ The following sample introduces a runtime configuration that allows you to redef
 
 #### 相关主题
 
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
 *	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queue topology</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>

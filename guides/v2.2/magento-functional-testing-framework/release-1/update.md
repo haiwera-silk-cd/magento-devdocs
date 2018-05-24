@@ -30,7 +30,7 @@ When pulling the latest Magento code, you need to update the corresponding Compo
 
 ## Update the MFTF
 
-* When you updated Magento, verify that the Magento [WYSIWYG settings] and [Security settings] are set appropriately.
+* When you updated Magento, verify that the Magento [WYSIWYG settings] and [安全设置] are set appropriately.
 
 * Go to the `magento2/dev/tests/acceptance` directory:
 
@@ -54,7 +54,7 @@ vendor/bin/robo generate:tests
 
 [`develop`]: https://github.com/magento/magento2-functional-testing-framework
 [WYSIWYG settings]: getting-started.html#wysiwyg-settings
-[Security settings]: getting-started.html#security-settings
+[安全设置]: getting-started.html#security-settings
 
 <!-- Abbreviations -->
 

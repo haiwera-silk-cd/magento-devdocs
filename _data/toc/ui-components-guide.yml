@@ -1,6 +1,6 @@
 label: UI Components Guide
 pages:
-    - label: Overview of UI components
+    - label: UI组件概述
       url: /ui_comp_guide/bk-ui_comps.html
 
     - label: Components
@@ -195,5 +195,5 @@ pages:
     - label: Troubleshoot
       children:
 
-        - label: Debug UI components JavaScript
+        - label: js调试UI组件
           url: /ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.html

@@ -29,7 +29,7 @@ You can view it as example when adding your custom preprocessor. Or install the 
 
 For the sake of compatibility, upgradability and easy maintenance, do not edit the default Magento code. Create a new custom module for your customizations.
 
-For details about creating a module refer to the [Magento PHP Developer Guide]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html).
+For details about creating a module refer to the [Magento PHP开发文档]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html).
 
 ### Step by step instruction
 
@@ -99,5 +99,5 @@ The content of your `di.xml` will be similar to the following:
 
 ## Related reading
 
-- [Magento PHP Developer Guide]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html)
+- [Magento PHP开发文档]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html)
 

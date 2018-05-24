@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Subscriptions and plans
+title: 订阅和计划
 version: 2.1
 github_link: cloud/basic-information/cloud-plans.md
 ---

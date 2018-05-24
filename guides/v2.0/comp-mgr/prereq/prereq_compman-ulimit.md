@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 02_prereq
-title: Set ulimit for the web server user
-menu_title: Set ulimit for the web server user
+title: 为web服务器设置资源使用限制(ulimit)
+menu_title: 为web服务器设置资源使用限制(ulimit)
 menu_order: 2
 menu_node:
 version: 2.0

@@ -1,8 +1,8 @@
 ---
 group: release-notes
 subgroup: 02_rel-notes
-title: Magento Commerce (Cloud) 2.1.5 and 2.0.13 Release Notes
-menu_title: Magento Commerce (Cloud) 2.1.5 and 2.0.13 Release Notes
+title: Magento企业版(云支持版) 2.1.5 and 2.0.13 Release Notes
+menu_title: Magento企业版(云支持版) 2.1.5 and 2.0.13 Release Notes
 menu_order: 373
 menu_node:
 level3_menu_node: level3child

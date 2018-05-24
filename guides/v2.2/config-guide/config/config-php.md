@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Magento's deployment configuration
-menu_title: Magento's deployment configuration
+title: Magento的部署配置
+menu_title: Magento的部署配置
 menu_order: 1
 version: 2.2
 github_link: config-guide/config/config-php.md
@@ -14,7 +14,7 @@ functional_areas:
 
 ## Purpose of the deployment configuration {#config-php-overview}
 
-Magento's deployment configuration consists of the shared and system-specific configuration for your installation. Magento's deployment configuration is divided between [`app/etc/config.php`][config-php] and [`app/etc/env.php`][env-php].
+Magento的部署配置 consists of the shared and system-specific configuration for your installation. Magento的部署配置 is divided between [`app/etc/config.php`][config-php] and [`app/etc/env.php`][env-php].
 
 * `app/etc/config.php` is the _shared_ configuration file.
   This file contains the list of installed modules, themes, and language packages; and shared configuration settings.
@@ -32,7 +32,7 @@ Together, `config.php` and `env.php` are referred to as Magento's _deployment co
 The Magento 2 deployment configuration replaces `local.xml` in Magento 1.x.
 </div>
 
-Unlike other [module configuration files]({{ page.baseurl }}/config-guide/config/config-files.html), Magento's deployment configuration is loaded into memory when Magento initializes, is not merged with any other files, and cannot be extended. (`config.php` and `env.php` are merged with each other, however.)
+Unlike other [module configuration files]({{ page.baseurl }}/config-guide/config/config-files.html), Magento的部署配置 is loaded into memory when Magento initializes, is not merged with any other files, and cannot be extended. (`config.php` and `env.php` are merged with each other, however.)
 
 ## Details about the deployment configuration {#config-php-contents}
 `config.php` and `env.php` are {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} files that return a <a href="http://www.w3schools.com/php/php_arrays.asp" target="_blank">multi-dimensional associative array</a>, which is basically a hierarchical arrangement of configuration parameters and values.
@@ -85,7 +85,7 @@ Disabled modules are not recognized by the Magento application; in other words, 
 The only practical difference of a module being disabled and being completely absent in the code base is that a disabled module is found by the autoloader, enabling its classes and constants to be reused in other code.
 
 ## Related topic
-<a href="{{ page.baseurl }}/config-guide/config/config-files.html">Module configuration files</a>
+<a href="{{ page.baseurl }}/config-guide/config/config-files.html">模块配置文件</a>
 
 [config-php]: {{ page.baseurl }}/config-guide/prod/config-reference-configphp.html
 [env-php]: {{ page.baseurl }}/config-guide/prod/config-reference-envphp.html

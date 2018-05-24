@@ -49,10 +49,10 @@ For example, to change to the `magento_user` and extract `MDVA-532.zip` into `/v
 #### Complete your upgrade
 After applying the patch, complete your upgrade as follows:
 
-*	[Command-line upgrade]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html)
-*	[Start System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)
+*	[命令行升级]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html)
+*	[开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)
 
-### Command-line upgrade to Magento Open Source or Commerce version 2.1 with sample data {#tb-upgr-samp}
+### 命令行升级 to Magento Open Source or Commerce version 2.1 with sample data {#tb-upgr-samp}
 
 {%include install/sampledata/sample-data-rc1-cli.md %}
 
@@ -115,4 +115,4 @@ A sample command follows:
 	rm -rf var/cache/* var/page_cache/* var/generation/*
 
 #### Start the upgrade
-Start your upgrade as discussed in [Start System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
+Start your upgrade as discussed in [开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).

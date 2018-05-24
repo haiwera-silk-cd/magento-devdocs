@@ -5,7 +5,7 @@ version: 2.0
 github_link: mtf/features/test_suite.md
 ---
 
-## 概述{#overview}
+## 概述 {#overview}
 
 In the Functional Testing Framework (FTF), you can run a group of tests, which is called **test suite**. A test suite is a collection of tests, grouped by a specified rule, that is used to test a custom scope of functionality.
 

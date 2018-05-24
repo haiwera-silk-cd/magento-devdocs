@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Component deployment failure
-menu_title: Component deployment failure
+title: 组件部署失败
+menu_title: 组件部署失败
 menu_order: 15
 menu_node:
 version: 2.1

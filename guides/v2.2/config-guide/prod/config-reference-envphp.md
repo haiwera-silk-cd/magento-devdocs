@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: env.php reference
-menu_title: env.php reference
+title: env.php参考
+menu_title: env.php参考
 menu_order: 5900
 menu_node:
 level3_menu_node: level3child
@@ -28,7 +28,7 @@ The `env.php` file contains the following sections:
 | `MAGE_MODE`       | The [Magento mode][magento-mode]               |
 | `cache_types`     | Cache storage settings                         |
 | `install`         | The installation date                          |
-| `queue`           | [Message queues][message-queues] settings      |
+| `queue`           | [消息队列][message-queues] settings      |
 
 [x-frame-options]: {{ page.baseurl }}/config-guide/secy/secy-xframe.html
 [magento-mode]: {{ page.baseurl }}/config-guide/bootstrap/magento-modes.html

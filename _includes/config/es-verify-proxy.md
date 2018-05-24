@@ -51,7 +51,7 @@ This time the command succeeds with a message similar to the following:
 
 
 ### Configure HTTP Basic authentication in the Magento Admin
-Perform the same tasks as discussed in [Configure Magento to use Elasticsearch](#elastic-m2-configure) *except* click **Yes** from the **Enable Elasticsearch HTTP Auth** list and enter your user name and password in the provided fields.
+Perform the same tasks as discussed in [配置Magento使用Elasticsearch](#elastic-m2-configure) *except* click **Yes** from the **Enable Elasticsearch HTTP Auth** list and enter your user name and password in the provided fields.
 
 The following figure shows an example:
 

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Redis troubleshooting
-menu_title: Redis troubleshooting
+title: Redis问题排查
+menu_title: Redis问题排查
 menu_order: 23
 menu_node:
 version: 2.0
@@ -25,7 +25,7 @@ Your Cloud systems and services have been updated to the latest Redis and PHP-Re
 * Use an Integration branch to add the code through your local.
 * Patch using the CLI command `composer update` in a terminal.
 * Push your code to deploy and test in an Intergration environment.
-* After testing completes, deploy your code to Staging and Production environments. For more information on deployments, see [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+* After testing completes, deploy your code to Staging and Production environments. For more information on deployments, see [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 We strongly recommend patching to update your PHP-Redis version. Your build and deploy will continue to encounter issues until updated to PHP-Redis 3.1.3.
@@ -56,7 +56,7 @@ This information helps if you receive a number of Redis connection errors in you
 To resolve, we recommend enabling and using Configuration Management options to move your static content deployment from the Deploy to Build phase.
 
 1. Remove all static content first from `pub/static/frontend/*` and also from `var/view_preprocessed`.
-2. Enable and use the recommended [`scd-dump` command](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html#cloud-config-specific-recomm) for Configuration Management (Pipeline Deployment). Remember, you will need to add and push the file generated to Git: `config.local.php` for 2.1.X or `config.php` for 2.2.X.
+2. Enable and use the recommended [`scd-dump` command](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html#cloud-config-specific-recomm) for Configuration Management (管道部署). Remember, you will need to add and push the file generated to Git: `config.local.php` for 2.1.X or `config.php` for 2.2.X.
 
 If you continue to encounter these issues after using this method of deployment, you can attempt the following work-around. However, this method will dramatically increase the static content deployment time as it reduces deployment to a single thread.
 

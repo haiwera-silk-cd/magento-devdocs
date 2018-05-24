@@ -18,7 +18,7 @@ In addition to understanding fundamental programming designs/concepts, you are e
   If you feel that Magento can be improved with your core code changes, please consider [contributing via Git]({{ page.baseurl }}/contributor-guide/contributing.html).
 
 ### Learn the architecture
-  To create the optimum module, you should get to know the Magento 2 architecture. Start off by familiarizing yourself with the [Admin Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html), the core [Magento Components]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html), and our [service contracts]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html) and [APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html).
+  To create the optimum module, you should get to know the Magento 2 architecture. Start off by familiarizing yourself with the [Admin Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html), the core [Magento组件]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html), and our [service contracts]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html) and [APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html).
 
 ### Check your extension configurations
   Make sure your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} is configured correctly in each of your extension's configuration files. Invalid or unexpected values will cause your extension to behave incorrectly within Magento.

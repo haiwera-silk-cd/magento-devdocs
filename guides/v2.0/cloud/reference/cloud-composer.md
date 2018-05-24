@@ -21,7 +21,7 @@ Composer is a dependency manager for PHP. Composer manages the dependencies you 
 
 The following sections detail the specifics of {{site.data.var.ece}} composer packages, how they work, and what they do within the code base.
 
-For information on what files should and shouldn't be in source control, see [Project structure]({{ page.baseurl }}/cloud/project/project-start.html). We provide a `.gitignore` file to aid.
+For information on what files should and shouldn't be in source control, see [项目结构]({{ page.baseurl }}/cloud/project/project-start.html). We provide a `.gitignore` file to aid.
 
 ## Your project's Composer files
 Your project root directory contains `composer.json` and `composer.lock`.
@@ -50,7 +50,7 @@ We use the following commands for Magento:
 * `composer install`: Use this command if you know extension and base code is updated. This command uses `composer.lock`, not `composer.json`. The command reads the lock file and checks the versions installed and listed in the file. If new lines are included or the file has a later version, the code is installed. After initial install, using the command only installs new code if you add new extensions or versions to `composer.lock`.
 * `composer update`: Use this command when you need to perform complete updates of all extensions and base code. This command uses `composer.json`, not `composer.lock`.
 
-## Magento Commerce (Cloud) packages
+## Magento企业版(云支持版) packages
 The following sections discuss the Composer packages used by {{site.data.var.ee}}:
 
 *	[`magento/magento-cloud-metapackage`](#cloud-composer-cloudmeta)

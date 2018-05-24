@@ -1,6 +1,6 @@
 ---
 group: extension-dev-guide
-subgroup: 09_Full page caching
+subgroup: 09_页面缓存
 title: Private content
 menu_title: Private content
 menu_order: 18

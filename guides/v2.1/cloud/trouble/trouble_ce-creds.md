@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Incorrect credentials
-menu_title: Incorrect credentials
+title: 证书不正确
+menu_title: 证书不正确
 menu_order: 7
 menu_node:
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Configuration
 ---
 
-## Incorrect credentials
+## 证书不正确
 This topic discusses how to resolve issues with incorrect credentials in your `auth.json`. You might have entered Magento Community Edition (CE) credentials or shared keys for Magento Enterprise Edition (EE).
 
 ### Symptom

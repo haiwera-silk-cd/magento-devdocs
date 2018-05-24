@@ -114,5 +114,5 @@ To use your modifier, add a dependency on [`\Magento\Ui\DataProvider\Modifier\Po
 
 ## Related reading
 
-- [Dependency injection]( {{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+- [依赖注入]( {{ page.baseurl }}/extension-dev-guide/depend-inj.html)
 - [How Do I: Customize product creation form]({{ page.baseurl }}/howdoi/customize_product.html#modifier)

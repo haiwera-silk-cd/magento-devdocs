@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Use environment variables to override configuration settings
-menu_title: Use environment variables to override configuration settings
+title: 使用环境变量覆盖配置设置
+menu_title: 使用环境变量覆盖配置设置
 menu_order: 5700
 menu_node:
 level3_menu_node: level3child
@@ -26,16 +26,16 @@ You can use variables for any of the following:
 *	[Sensitive values]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html) must be set using either environment variables or the [`magento config:sensitive:set`](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html) command.
 *	System-specific values must be set using:
 
-	*	Environment variables
+	*	环境变量
 	*	The [`magento config:set`](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html) command
 	*	The Magento Admin followed by the [`magento app:config:dump` command]({{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-deployment.html)
 
 Configuration paths can be found in:
 
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*	[Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*	[Magento Enterprise B2B Extension configuration paths reference](http://devdocs.magento.com/guides/v2.2/config-guide/prod/config-reference-b2b.html)
-*	[Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*	[Magento企业版B2B扩展配置路径参考](http://devdocs.magento.com/guides/v2.2/config-guide/prod/config-reference-b2b.html)
+*	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
 
 ### Variable names
 The general format of system settings variable names follows:
@@ -73,10 +73,10 @@ If a configuration path contains an underscore character, the underscore charact
 
 A complete list of configuration paths can be found in:
 
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*	[Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*	[Magento Enterprise B2B Extension configuration paths reference](http://devdocs.magento.com/guides/v2.2/config-guide/prod/config-reference-b2b.html)
-*	[Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*	[Magento企业版B2B扩展配置路径参考](http://devdocs.magento.com/guides/v2.2/config-guide/prod/config-reference-b2b.html)
+*	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
 
 ## Step 1: Find the website or store view scope value {#deploy-system-vars-scopes}
 This section discusses how you can find and set system configuration values per _scope_ (store view or website). To set global scope variables, see [Step 2:  Set global, website, or store view variables](#cloud-system-vars-sys).
@@ -206,7 +206,7 @@ To find the variable name for the shipping country origin:
 **Result**: The variable name is `CONFIG__WEBSITE__DEFAULT__SHIPPING__ORIGIN__COUNTRY_ID`
 
 ## How to use environment variables
-Set configuration values as variables using PHP's [`$_ENV`](http://php.net/manual/en/reserved.variables.environment.php){:target="\_blank"} associate array. You can set the values in any PHP script that runs when Magento runs, such as `index.php`.
+设置配置值 as variables using PHP's [`$_ENV`](http://php.net/manual/en/reserved.variables.environment.php){:target="\_blank"} associate array. You can set the values in any PHP script that runs when Magento runs, such as `index.php`.
 
 An example of setting two values follows:
 
@@ -215,7 +215,7 @@ $_ENV['CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME'] = 'http
 $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '1234';
 ```
 
-A step-by-step example is shown in [Set configuration values using environment variables](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/pipeline/example/environment-variables.html).
+A step-by-step example is shown in [设置配置值 using environment variables](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/pipeline/example/environment-variables.html).
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 -   To use values you set in the `$_ENV` array, you must set `variables_order = "EGPCS"` in your `php.ini` file. For details, see [PHP documentation](http://us.php.net/manual/en/ini.core.php#ini.variables-order){:target="\_blank"}.

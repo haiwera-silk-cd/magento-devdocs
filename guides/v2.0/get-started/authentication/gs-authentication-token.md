@@ -143,6 +143,6 @@ For example, to make a web API call with a customer token:
 <h2>Related topics</h2>
 [Construct a request]({{ page.baseurl }}/get-started/gs-web-api-request.html)
 
-[Configure services as web APIs]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html)
+[将服务配置成web API]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html)
 
 [Restricting access to anonymous web APIs]({{ page.baseurl }}/rest/anonymous-api-security.html)

@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Troubleshoot upgrade issues
-menu_title: Troubleshoot upgrade issues
+title: 解决升级问题
+menu_title: 解决升级问题
 menu_node:
 menu_order: 5
 version: 2.1
@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Troubleshoot upgrade issues
+## 解决升级问题
 This section discusses upgrade issues to Magento version 2.0.4. Symptoms include any of the following errors during the upgrade process:
 
 ### `Strict Notice` exception
@@ -44,7 +44,7 @@ To resolve these errors, perform the following tasks:
 		<your Magento install dir>/var/page_cache/*
 		<your Magento install dir>/var/generation/*
 
-3.	Run your upgrade again, making sure to complete _all tasks_ discussed in [Run System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
+3.	Run your upgrade again, making sure to complete _all tasks_ discussed in [运行系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
 
 
 ### `var/session` permissions failure {#compman-upgr-perms}
@@ -60,7 +60,7 @@ For example, if Magento is installed in `/var/www/magento2`, enter:
 
 	ls /var/www/magento2/var/session
 
-If there are files in that directory, you must set permissions; if there are no files in that directory, you can skip the remainder of this topic and continue with [Step 4. Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade.html).
+If there are files in that directory, you must set permissions; if there are no files in that directory, you can skip the remainder of this topic and continue with [步骤 4. 升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade.html).
 
 To set file system permissions before upgrade:
 

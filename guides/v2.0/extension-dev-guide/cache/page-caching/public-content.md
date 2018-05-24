@@ -1,6 +1,6 @@
 ---
 group: extension-dev-guide
-subgroup: 09_Full page caching
+subgroup: 09_页面缓存
 title: Public content
 menu_title: Public content
 menu_order: 17

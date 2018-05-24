@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Configure message queues
-menu_title: Configure message queues
+title: 配置消息队列
+menu_title: 配置消息队列
 menu_order: 26
 ee_only: True
 version: 2.2
@@ -239,9 +239,9 @@ The `connection` element is a subnode of the `publisher` element. There must not
 
 ### Updating `queue.xml` {#updatequeuexml}
 
-See [Migrate message queue configuration]({{ page.baseurl }}/extension-dev-guide/message-queues/queue-migration.html) for information about upgrading from Magento 2.0 or 2.1.
+See [迁移消息队列配置]({{ page.baseurl }}/extension-dev-guide/message-queues/queue-migration.html) for information about upgrading from Magento 2.0 or 2.1.
 
 ### Related Topics
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/config-guide/mq/manage-mysql.html">Manage message queues with MySQL</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/manage-mysql.html">管理消息队列 with MySQL</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>

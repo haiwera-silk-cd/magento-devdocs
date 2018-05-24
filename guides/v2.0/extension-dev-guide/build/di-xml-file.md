@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: The di.xml file
-menu_title: The di.xml file
+title: di.xml文件
+menu_title: di.xml文件
 menu_order: 1
 version: 2.0
 github_link: extension-dev-guide/build/di-xml-file.md
@@ -322,4 +322,4 @@ Also, every instance of `Magento\Filesystem` will get separate instance of `$ada
 **Related topics**
 
 * [ObjectManager]({{ page.baseurl }}/extension-dev-guide/object-manager.html)
-* [Dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
+* [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

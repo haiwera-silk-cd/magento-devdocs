@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 02_Security
-title: Security settings
-menu_title: Security settings
+title: 安全设置
+menu_title: 安全设置
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -13,6 +13,6 @@ functional_areas:
   - Setup
 ---
 
-## Security settings
+## 安全设置
 *	<a href="{{ page.baseurl }}/config-guide/secy/secy-cron.html">Secure cron.php</a>
-*	<a href="{{ page.baseurl }}/config-guide/secy/secy-xframe.html">X-Frame-Options header</a>
+*	<a href="{{ page.baseurl }}/config-guide/secy/secy-xframe.html">X-Frame-Options头</a>

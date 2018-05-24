@@ -1,6 +1,6 @@
 ---
 group: config-guide
-title: Use memcached for session storage
+title: 使用memcached做为session存储
 version: 2.0
 github_link: config-guide/memcache/memcache.md
 functional_areas:
@@ -20,5 +20,5 @@ Refer to [Why Redis is better]({{ page.baseurl }}/config-guide/redis/config-redi
 </div>
 
 #### 下一步
-*   [Install, configure, verify memcached on Ubuntu]({{ page.baseurl }}/config-guide/memcache/memcache_ubuntu.html)
-*   [Install, configure, verify memcached on CentOS]({{ page.baseurl }}/config-guide/memcache/memcache_centos.html)
+*   [在Ubuntu上安装、配置和验证memcached]({{ page.baseurl }}/config-guide/memcache/memcache_ubuntu.html)
+*   [在CentOS上安装、配置和验证memcached]({{ page.baseurl }}/config-guide/memcache/memcache_centos.html)

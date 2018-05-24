@@ -74,9 +74,9 @@ If Magento is installed from GitHub without using Composer, the `version` is not
 
 ## Related Topics
 
-[Module version dependencies][version-dependencies] - Information about how your module can depend on the version of other modules.
+[模块版本依赖][version-dependencies] - Information about how your module can depend on the version of other modules.
 
-[Codebase changes][codebase-changes] - Information on how changes in a Magento module's codebase affect versions.
+[基础代码修改][codebase-changes] - Information on how changes in a Magento module's codebase affect versions.
 
 [Backward compatible development]({{ page.baseurl }}/contributor-guide/backward-compatible-development/index.html) - Information about MAJOR and MINOR changes and how they impact extension developers.
 

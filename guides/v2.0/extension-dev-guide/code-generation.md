@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Code generation
-menu_title: Code generation
+title: 代码生成
+menu_title: 代码生成
 menu_order: 8
 version: 2.0
 github_link: extension-dev-guide/code-generation.md
@@ -40,10 +40,10 @@ Suppose a Factory or Proxy class for a Customer class is generated and the Custo
 If the code generator implementation itself is changed, you must regenerate all the classes. This is rare, however.
 
 <h3 id="codegen-over-adv">Advantages of generating code</h3>
-Code generation is required in Magento 2. Generating code assures you of the following:
+代码生成 is required in Magento 2. Generating code assures you of the following:
 
 *	The code is correct. You don’t have to worry that the generated code is delegating to the wrong method or forgetting a semicolon, and you don’t have to write tests for the generated code.
-*	Code generation writes the boilerplate code to enable you to write more challenging and interesting code.
+*	代码生成 writes the boilerplate code to enable you to write more challenging and interesting code.
 *	Consistent implementation.
 
 	All generated Factories work the same way. After you know how one Factory works, you know how they all work.

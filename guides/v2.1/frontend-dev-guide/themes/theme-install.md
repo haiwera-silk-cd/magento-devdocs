@@ -27,7 +27,7 @@ The following sections contain more information about each installation flow.
 
 [Set]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html) your Magento application to the developer or default [mode]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html).
 
-## Install a theme manually
+## 安装一个主题 manually
 
 To install a theme manually:
 
@@ -35,11 +35,11 @@ To install a theme manually:
 
 2. Copy this directory to the `<Magento root dir>/app/design/frontend` directory.
 
-## Install a theme as composer package
+## 安装一个主题 as composer package
 
 To install the theme as composer package, follow the instructions in the [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html) topic.
 
-## Install a theme as an extension
+## 安装一个主题 as an extension
 
 If a theme is distributed on [Magento Marketplace](https://marketplace.magento.com/), install it with **Web Setup Wizard**. For details, see [Install the Extension](http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html).
 

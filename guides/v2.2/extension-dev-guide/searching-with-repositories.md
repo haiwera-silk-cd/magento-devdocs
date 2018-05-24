@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Searching with Repositories
-menu_title: Searching with Repositories
+title: 使用模型仓库搜索
+menu_title: 使用模型仓库搜索
 menu_order: 35
 version: 2.2
 github_link: extension-dev-guide/searching-with-repositories.md

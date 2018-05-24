@@ -120,7 +120,7 @@ We address the following functional issues in this release.
 
 <!--- 57336-->* Magento no longer displays a "Wrong request parameters" error when you try to assign products to a {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} at the {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}store view{% endglossarytooltip %} level. Previously, Magento displayed a `levelWrong` request parameters error when you assigned products to a category.
 
-<!--- 59461-->* The Magento Framework now makes its dependencies explicit in the `composer.json` file. <a href="https://github.com/magento/magento2/issues/6442" target="_blank">(GITHUB-6442)</a>
+<!--- 59461-->* The Magento框架 now makes its dependencies explicit in the `composer.json` file. <a href="https://github.com/magento/magento2/issues/6442" target="_blank">(GITHUB-6442)</a>
 
 <!--- 59449-->* Magento now decrements stock as expected in a multi-website environment. 
 

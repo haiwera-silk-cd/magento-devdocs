@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Deploy code and migrate static files and data
-menu_title: Deploy code and migrate static files and data
+title: 部署代码并迁移静态文件和数据
+menu_title: 部署代码并迁移静态文件和数据
 menu_order: 50
 menu_node:
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Prepare to deploy to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
+[准备部署准生产和生产环境]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
 
 To migrate your database and static files to Staging and Production:
 
@@ -205,4 +205,4 @@ Use the database dump you just created to [migrate the database](#cloud-live-mig
 </div>
 
 #### 下一步
-[Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
+[测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html)

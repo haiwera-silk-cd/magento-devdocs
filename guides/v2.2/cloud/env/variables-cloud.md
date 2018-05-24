@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Cloud variables
+title: 云变量
 version: 2.2
 github_link: cloud/env/variables-cloud.md
 redirect_from:
@@ -12,7 +12,7 @@ functional_areas:
   - Configuration
 ---
 
-Environment variables that are specific to {{site.data.var.ece}} use the `MAGENTO_CLOUD_*` prefix:
+环境变量 that are specific to {{site.data.var.ece}} use the `MAGENTO_CLOUD_*` prefix:
 
 Variable | Description
 ----------- | ---------------

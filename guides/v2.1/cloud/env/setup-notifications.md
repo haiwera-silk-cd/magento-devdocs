@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Set up notifications
+title: 设置通知
 version: 2.1
 github_link: cloud/env/setup-notifications.md
 functional_areas:

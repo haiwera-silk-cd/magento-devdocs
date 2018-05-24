@@ -3,7 +3,7 @@
 ## Locate your session storage {#session-where}
 This topic discusses how to locate where your session files are stored. The Magento application uses the following logic to store session files:
 
-*	If you configured memcached, sessions are stored in RAM; for more information, see [Use memcached for session storage]({{ page.baseurl }}/config-guide/memcache/memcache.html).
+*	If you configured memcached, sessions are stored in RAM; for more information, see [使用memcached做为session存储]({{ page.baseurl }}/config-guide/memcache/memcache.html).
 *	If you configured Redis, sessions are stored on the Redis server; for more information, see [Use Redis for page caching or session storage]({{ page.baseurl }}/config-guide/redis/config-redis.html).
 *	If you're using the default file-based session storage, we store sessions in the following locations in the order shown:
 

@@ -27,7 +27,7 @@ functional_areas:
 <h2 id="new-cli-intro">Introducing the Magento command-line interface (CLI)</h2>
 {% include install/new-cli-intro.html %}
 
-This topic discusses installing the Magento software using the CLI. For information about configuring Magento, see the <a href="{{ page.baseurl }}/config-guide/bk-config-guide.html">Configuration Guide</a>.
+This topic discusses installing the Magento software using the CLI. For information about configuring Magento, see the <a href="{{ page.baseurl }}/config-guide/bk-config-guide.html">配置手册</a>.
 
 <h2 id="instgde-install-cli-prereq">在你开始安装之前</h2>
 {% include install/before-you-begin-cli.html %}

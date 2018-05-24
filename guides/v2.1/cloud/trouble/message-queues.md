@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Message queues
+title: 消息队列
 version: 2.1
 github_link: cloud/trouble/message-queues.md
 functional_areas:

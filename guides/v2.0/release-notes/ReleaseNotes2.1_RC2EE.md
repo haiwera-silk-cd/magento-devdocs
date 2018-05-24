@@ -215,7 +215,7 @@ Magento 2.1 RC2 includes the following known issues:
 
 
 
-<h3>Technology stack</h3>
+<h3>技术栈</h3>
 
 Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and MySQL. Magento 2.1 RC3 supports:
 
@@ -253,7 +253,7 @@ If you installed optional sample data, see [Upgrade to an RC with sample data](#
 </div>
 
 ### Upgrade using the Setup Wizard
-Use the instructions in [Start System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html). When prompted to choose a version, choose a Release Candidate.
+Use the instructions in [开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html). When prompted to choose a version, choose a Release Candidate.
 
 ### Upgrade an existing installation from the GitHub repository
 Developers who contribute to the Open Source codebase can <a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html" target="_blank">upgrade manually</a> from the Magento Open Source GitHub repository.

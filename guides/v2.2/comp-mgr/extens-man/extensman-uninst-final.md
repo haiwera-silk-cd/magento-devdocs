@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Step 4. Uninstall
-menu_title: Step 4. Uninstall
+title: 步骤4. 卸载
+menu_title: 步骤4. 卸载
 menu_node:
 menu_order: 100
 version: 2.2
@@ -14,7 +14,7 @@ redirect_from:
   - guides/v2.3/comp-mgr/module-man/compman-uninst-final.html
 ---
 
-## Step 4. Uninstall
+## 步骤4. 卸载
 Click **Uninstall** as the following figure shows.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ site.baseurl }}/common/images/extensman_uninst2.png" width="300px" alt="Click Uninstall">

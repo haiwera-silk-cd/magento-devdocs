@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Verify split databases
-menu_title: Verify split databases
+title: 数据库分库验证
+menu_title: 数据库分库验证
 menu_order: 5
 menu_node:
 version: 2.1
@@ -47,4 +47,4 @@ To verify your split databases are working properly, perform the following tasks
 
 
 #### 下一步 (optional)
-<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_slavedb.html">Set up optional database replication</a>
+<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_slavedb.html">设置可选数据库复制</a>

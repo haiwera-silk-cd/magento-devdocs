@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Module dependency types
-menu_title: Module dependency types
+title: 模块依赖类型
+menu_title: 模块依赖类型
 menu_order: 7
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -65,18 +65,18 @@ You can build dependencies between the modules belonging to different layers.
 
 ## Dependencies in the Framework layer {#m2devgde-moddep-frmwk-layer}
 
-Modules belonging to the Magento Framework can be used in the application layer by an explicit dependency.
+Modules belonging to the Magento框架 can be used in the application layer by an explicit dependency.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Note: In this case, using interfaces is preferable to using classes. </p>
-  <p>You can build dependencies between classes in the Magento Framework even if they belong to different modules.</p>
+  <p>You can build dependencies between classes in the Magento框架 even if they belong to different modules.</p>
 </div>
 
 ## Dependencies in the Application layer {#m2devgde-moddep-app-layer}
-Modules belonging to the application layer cannot be used in the Magento Framework.
+Modules belonging to the application layer cannot be used in the Magento框架.
 
 You can build dependencies between classes in the application layer, but these classes must belong to the same module. Dependencies between the modules of the application layer should be built only by the {% glossarytooltip cdf644c4-bc99-4550-a954-dd5ae165785a %}service contract{% endglossarytooltip %} or the service provider interface (SPI).
 
 ## Related topics {#m2arch-module-related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html">Module dependencies</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html">模块依赖</a>

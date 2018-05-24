@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Technical Details
-menu_title: Technical Details
+title: 技术细节
+menu_title: 技术细节
 menu_node:
 menu_order: 1200
 version: 2.2
@@ -16,7 +16,7 @@ functional_areas:
 
 This topic discusses technical implementation details about pipeline deployment in Magento 2.2 and later. Improvements can be divided into the following areas:
 
-*   [Configuration management](#config-deploy-configman)
+*   [配置管理](#config-deploy-configman)
 *   [Changes in the Magento Admin](#config-deploy-admin)
 *   [cron installation and removal](#config-deploy-cron)
 
@@ -24,7 +24,7 @@ This topic also discusses the [recommended workflow](#config-deploy-workflow) fo
 
 Before you get started, review the [prerequisite for your development, build, and production systems](#config-deploy-prereq).
 
-## Configuration management {#config-deploy-configman}
+## 配置管理 {#config-deploy-configman}
 
 To enable you to synchronize and maintain the configuration of your development and production systems, we use the following override scheme.
 
@@ -32,7 +32,7 @@ To enable you to synchronize and maintain the configuration of your development 
 
 As the diagram shows, we get configuration values in the following order:
 
-1. Environment variables, if they exist, override all other values.
+1. 环境变量, if they exist, override all other values.
 2. From the shared configuration files `env.php` and `config.php`.
    Values in `env.php` override values in `config.php`.
 3. From values stored in the database.
@@ -58,7 +58,7 @@ The sensitive configuration is also stored in `app/etc/env.php`.
 
 You can manage the sensitive configuration in any of the following ways:
 
-*	Environment variables
+*	环境变量
 *	Save the sensitive configuration in `env.php` on your production system using the [`magento config:set:sensitive` command]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-set.html)
 
 ### Configuration settings locked in the Magento Admin
@@ -144,7 +144,7 @@ On your production system:
 7.  Clean (also referred to as _flush_) the Magento cache.
 8.  End maintenance mode.
 
-## Configuration management commands
+## 配置管理 commands
 
 We provide the following commands to help you manage the configuration:
 
@@ -155,7 +155,7 @@ We provide the following commands to help you manage the configuration:
 *   [`magento config:sensitive:set`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-set.html) to set the values of sensitive settings on the production system.
 *   [`magento app:config:import`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-import.html) to import configuration changes from `config.php` and `env.php` to the production system.
 
-## Configuration management examples
+## 配置管理 examples
 
 This section shows examples of managing the configuration so you can see how changes are made to `config.php` and `env.php`.
 
@@ -297,9 +297,9 @@ File permissions and ownership must be consistent across development, build, and
 
 #### For more information
 
-*   For a complete list of system-specific and sensitive settings and corresponding configuration paths, see [Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html).
-*   [config.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html) for detailed information about the shared configuration file
-*   [env.php reference]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html) for detailed information about the system-specific configuration file
+*   For a complete list of system-specific and sensitive settings and corresponding configuration paths, see [敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html).
+*   [config.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-configphp.html) for detailed information about the shared configuration file
+*   [env.php参考]({{ page.baseurl }}/config-guide/prod/config-reference-envphp.html) for detailed information about the system-specific configuration file
 
 #### 下一步s
 

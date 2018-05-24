@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 01_Introduction
-title: Glossary of common terms
-menu_title: Glossary of common terms
+title: 常用术语表
+menu_title: 常用术语表
 menu_order: 5
 menu_node:
 version: 2.0

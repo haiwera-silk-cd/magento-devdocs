@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Deploy your store
-menu_title: Deploy your store
+title: 部署你的网店
+menu_title: 部署你的网店
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -61,7 +61,7 @@ After you know these URLs, you can access those environments without further int
 * Use the URL /admin to access the Admin panel.
 * (Pro) Use SSH access and Git CLI commands to deploy updated code to Staging or Production. Magento Cloud CLI commands are not available in Staging and Production.
 
-For more information, see [SSH and sFTP]({{ page.baseurl }}/cloud/env/environments-ssh.html).
+For more information, see [SSH和sFTP]({{ page.baseurl }}/cloud/env/environments-ssh.html).
 
 ## Read-only environments {#read-only}
 You should always deploy code by pushing your local Git branch to your environments. You should only directly modify configurations for a few key extensions directly in your Staging and Production environments through the Magento Admin or using environment variables.
@@ -75,11 +75,11 @@ Always update your code in a branch on your local environment, push to Git, and 
 ## Next steps
 To learn more, check the following:
 
-* [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
-* [Continuous integration]({{ page.baseurl }}/cloud/deploy/continuous-deployment.html)
-* [Protective block]({{ page.baseurl }}/cloud/live/live-prot.html)
-*	[Build and deploy to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
+* [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+* [持续集成]({{ page.baseurl }}/cloud/deploy/continuous-deployment.html)
+* [保护块]({{ page.baseurl }}/cloud/live/live-prot.html)
+*	[构建和部署 to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
 *	[Prepare to deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
 *	[Migrate and deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
-*	[Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
-* [Go live and launch]({{ page.baseurl }}/cloud/live/live.html)
+*	[测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
+* [上线和发布]({{ page.baseurl }}/cloud/live/live.html)

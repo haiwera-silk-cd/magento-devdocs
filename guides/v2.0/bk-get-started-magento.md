@@ -39,4 +39,4 @@ Feel free to contact the documentation team directly at
 #### 相关主题
 
 *   <a href="{{ page.baseurl }}/release-notes/bk-release-notes.html">Release Notes</a>
-*   <a href="{{ page.baseurl }}/architecture/bk-architecture.html">Architecture Guide</a>
+*   <a href="{{ page.baseurl }}/architecture/bk-architecture.html">架构指引</a>

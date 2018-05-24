@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: EAV and extension attributes
-menu_title: EAV and extension attributes
+title: 实体属性值(EAV)和扩展属性
+menu_title: 实体属性值(EAV)和扩展属性
 menu_order: 9
 version: 2.0
 github_link: extension-dev-guide/attributes.md

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Prepare to deploy to Staging and Production
-menu_title: Prepare to deploy to Staging and Production
+title: 准备部署准生产和生产环境
+menu_title: 准备部署准生产和生产环境
 menu_order: 40
 menu_node:
 version: 2.1
@@ -14,7 +14,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Build and deploy on local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
+[在本地构建和部署]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
 
 When you are ready to deploy your store, you need to complete deployment and testing in Staging first, then deploy to Production. The Staging environment provides a near-production environment with full services (including Fastly, New Relic, and Blackfire), database, web server, and more.
 
@@ -135,7 +135,7 @@ To set up an SSH agent:
 
 		Identity added: /home/magento_user/.ssh/id_rsa (/home/magento_user/.ssh/id_rsa)
 
-For more information on setting up SSH, see [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) as part of your local setup. For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.
+For more information on setting up SSH, see [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) as part of your local setup. For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.
 
 If you have a Pro project created **before October 23, 2017**, you need to enter a ticket with your public key to have it added to Staging and Production.
 

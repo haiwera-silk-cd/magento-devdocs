@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Continuous integration
-menu_title: Continuous integration
+title: 持续集成
+menu_title: 持续集成
 menu_order: 15
 menu_node:
 version: 2.0
@@ -56,5 +56,5 @@ We recommend the following best practices for {{site.data.var.ece}} environments
 *	[Starter Develop and Deploy Workflow]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html)
 * [Pro Architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html)
 *	[Pro Develop and Deploy Workflow]({{ page.baseurl }}/cloud/architecture/pro-develop-deploy-workflow.html)
-* [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html)
-* [Go live and launch]({{ page.baseurl }}/cloud/live/live.html)
+* [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html)
+* [上线和发布]({{ page.baseurl }}/cloud/live/live.html)

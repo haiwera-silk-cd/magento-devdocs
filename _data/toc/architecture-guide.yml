@@ -1,4 +1,4 @@
-label: Architecture Guide
+label: 架构指引
 pages:
     - label: 介绍
       url: /architecture/bk-architecture.html
@@ -7,69 +7,69 @@ pages:
       url: /architecture/archi_perspectives/ABasics_intro.html
       children:
 
-        - label: Extensibility and modularity
+        - label: 可扩展和模块化
           url: /architecture/extensibility.html
 
-        - label: Ease of frontend customization
+        - label: 容易的前端定制
           url: /architecture/frontend_custom_strategies.html
 
-        - label: Global features that support extensibility
+        - label: 全局可扩展的特性
           url: /architecture/global_extensibility_features.html
 
         - label: Security
           url: /architecture/security_intro.html
 
-        - label: Storefront customization strategies
+        - label: 网店前台自定义策略
           url: /architecture/storefront_customization.html
 
-        - label: Architectural diagrams
+        - label: 架构图
           url: /architecture/archi_perspectives/arch_diagrams.html
 
-        - label: Technology stack
+        - label: 技术栈
           url: /architecture/tech-stack.html
 
-    - label: Architectural layers
+    - label: 架构的分层
       url: /architecture/archi_perspectives/ALayers_intro.html
       children:
 
         - label: Presentation layer
           url: /architecture/archi_perspectives/present_layer.html
 
-        - label: Service layer
+        - label: 服务层
           url: /architecture/archi_perspectives/service_layer.html
 
-        - label: Domain layer
+        - label: 领域层
           url: /architecture/archi_perspectives/domain_layer.html
 
-        - label: Persistence layer
+        - label: 持久层
           url: /architecture/archi_perspectives/persist_layer.html
 
     - label: Components
       url: /architecture/archi_perspectives/components/AComponents.html
       children:
 
-        - label: Module overview
+        - label: 模块概述
           url: /architecture/archi_perspectives/components/modules/mod_intro.html
 
-        - label: Modules and areas
+        - label: 模块和地区
           url: /architecture/archi_perspectives/components/modules/mod_and_areas.html
 
-        - label: Module conventions
+        - label: 模块规范
           url: /architecture/archi_perspectives/components/modules/mod_conventions.html
 
-        - label: Module relationships
+        - label: 模块关系
           url: /architecture/archi_perspectives/components/modules/mod_relationships.html
 
-        - label: Module dependencies
+        - label: 模块依赖
           url: /architecture/archi_perspectives/components/modules/mod_depend.html
 
-        - label: Module dependency types
+        - label: 模块依赖类型
           url: /architecture/archi_perspectives/components/modules/mod_depend_types.html
 
-    - label: Magento Framework
+    - label: Magento框架
       url: /architecture/archi_perspectives/framework.html
 
-    - label: Third-party libraries
+    - label: 第三方库
       url: /architecture/archi_perspectives/third-party-libs.html
 
     - label: GDPR compliance

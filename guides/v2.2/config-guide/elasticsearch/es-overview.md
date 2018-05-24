@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 14_Elastic
-title: Install and configure Elasticsearch
-menu_title: Install and configure Elasticsearch (Magento Commerce only)
+title: 安装和配置Elasticsearch
+menu_title: 安装和配置Elasticsearch (Magento Commerce only)
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -15,9 +15,9 @@ functional_areas:
   - Setup
 ---
 
-*	[Configure nginx and Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-nginx.html)
-*	[Configure Apache and Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-apache.html)
-*	[Configure Elasticsearch stopwords]({{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html)
+*	[配置nginx和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-nginx.html)
+*	[配置Apache和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-apache.html)
+*	[配置Elasticsearch停用词]({{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html)
 
 ## Elasticsearch overview {#overview}
 
@@ -83,7 +83,7 @@ The tasks discussed in this section require the following:
 *	[Install Elasticsearch 5.x](#es-install-es5)
 *	[Install Elasticsearch 2.x](#es-install-es)
 *	[Upgrade from Elasticsearch 2.x to 5.x](#es-upgrade5)
-*	[Configure Magento to use Elasticsearch](#configure-magento-to-use-elasticsearch)
+*	[配置Magento使用Elasticsearch](#configure-magento-to-use-elasticsearch)
 
 {% include config/solr-elastic-selinux.md %}
 
@@ -206,6 +206,6 @@ For additional information, see [Elasticsearch documentation](https://www.elasti
 
 #### Next
 
-*	[Configure nginx and Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-nginx.html)
-*	[Configure Apache and Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-apache.html)
-*	[Configure Magento to use Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/configure-magento.html)
+*	[配置nginx和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-nginx.html)
+*	[配置Apache和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-apache.html)
+*	[配置Magento使用Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/configure-magento.html)

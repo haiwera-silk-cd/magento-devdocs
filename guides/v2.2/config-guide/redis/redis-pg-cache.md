@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Redis
-title: Use Redis for the Magento page and default cache
-menu_title: Use Redis for the Magento page and default cache
+title: 使用Redis作为Magento页面缓存和默认缓存
+menu_title: 使用Redis作为Magento页面缓存和默认缓存
 menu_order: 5
 menu_node:
 version: 2.2
@@ -17,7 +17,7 @@ Magento provides command line options to configure Redis page and default cachin
 
 You must  [install Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html#config-redis-install) before continuing.
 
-## Configure Redis default caching {#config-redis-config}
+## 配置Redis default caching {#config-redis-config}
 
 Run the `setup:config:set` command and specify parameters that specific to Redis default caching.
 
@@ -68,7 +68,7 @@ The following example enables Redis default caching, sets the host to `redis.exa
 `bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=redis.example.com --cache-backend-redis-db=0`
 
 
-## Configure Redis page caching
+## 配置Redis page caching
 
 To configure Redis page caching on Magento, run the `setup:config:set` command with additional parameters.
 
@@ -164,6 +164,6 @@ As a result of the two example commands, Magento adds lines similar to the follo
 
 #### 相关主题
 
-*	[Use Redis for session storage]({{ page.baseurl }}/config-guide/redis/redis-session.html)
-*  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
+*	[使用Redis作为Session存储]({{ page.baseurl }}/config-guide/redis/redis-session.html)
+*  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
 *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

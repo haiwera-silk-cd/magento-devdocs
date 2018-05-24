@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: How To
-title: Optional - Install sample data
-menu_title: Optional - Install sample data
+title: 可选 - 安装样本数据
+menu_title: 可选 - 安装样本数据
 menu_order: 70
 menu_node:
 version: 2.0

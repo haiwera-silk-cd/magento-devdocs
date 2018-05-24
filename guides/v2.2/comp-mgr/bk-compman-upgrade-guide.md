@@ -34,7 +34,7 @@ The way you upgrade (that is, patch) the Magento application depends on how you 
 
 		Run the System Upgrade utility as discussed in this topic using that subdomain or docroot.
 	*	Upgrade the Magento software using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
-*	To upgrade from {{site.data.var.ce}} to {{site.data.var.ee}}, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/ce-ee-upgrade-start.html">Upgrade from Open Source to Commerce</a>.
+*	To upgrade from {{site.data.var.ce}} to {{site.data.var.ee}}, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/ce-ee-upgrade-start.html">升级开源版到企业版</a>.
 
 <div class="bs-callout bs-callout-info" id="info">
 	<p><em>System upgrade</em> refers to updating the Magento 2.x core modules and other installed modules. To migrate from Magento 1.x to Magento 2, see the <a href="{{ page.baseurl }}/migration/bk-migration-guide.html">Migration Guide</a>.</p>

@@ -1,7 +1,7 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Magento Components
+title: Magento组件
 menu_title: Components
 menu_order:
 menu_node: parent

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 047_single-machine
-title: Single machine deployment
-menu_title: Single machine deployment
+title: 单机部署
+menu_title: 单机部署
 menu_node: parent
 menu_order: 2000
 version: 2.2

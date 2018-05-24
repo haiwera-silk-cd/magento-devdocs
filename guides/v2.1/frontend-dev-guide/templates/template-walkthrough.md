@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title: Templates customization walkthrough
-menu_title: Templates customization walkthrough
+title: 模板定制化演练
+menu_title: 模板定制化演练
 menu_order: 2
 version: 2.1
 github_link: frontend-dev-guide/templates/template-walkthrough.md

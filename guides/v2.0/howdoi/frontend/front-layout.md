@@ -26,7 +26,7 @@ functional_areas:
 	- 		<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_rearrange">Rearrange elements</a>
 	- 		<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_remove_elements">Remove elements</a>
 	- 		<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_replace_elements">Replace elements</a>
-- <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-email.html">Customize email templates</a>
+- <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-email.html">自定义邮件模板</a>
 - <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-walkthrough.html">Customize theme .phtml templates</a>
 
 	

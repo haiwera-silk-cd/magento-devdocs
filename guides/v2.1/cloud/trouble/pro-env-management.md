@@ -108,7 +108,7 @@ After conversion, you can manually migrate specific environment variables for St
 
 When accessing the Project Web Interface, you should see a hierarchy of branches starting from Production to Staging to Integration. Any branches you create display as children from Integration `master. For more information, see [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html).
 
-You can add environment-specific variables, including sensitive data and values, after we update your Project Web Interface. If you have environment variables in an `env.php` file, the file continues working after converting. See [Configure environments]({{ page.baseurl }}/cloud/env/environments.html).
+You can add environment-specific variables, including sensitive data and values, after we update your Project Web Interface. If you have environment variables in an `env.php` file, the file continues working after converting. See [配置环境]({{ page.baseurl }}/cloud/env/environments.html).
 
 ## Request an upgrade
 Enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) with the suggested title "Connect Stg / Prod to Project's UI", and request to enable your project with Staging and Production in the UI.

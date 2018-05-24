@@ -27,6 +27,6 @@ To upgrade to {{site.data.var.ee}} RC1 or RC2 with sample data using the Setup W
 {% include install/sampledata/file-sys-perms-digest.md %}
 
 ### Finish the upgrade
-After you set file system permissions, complete your upgrade as discussed in [Start System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
+After you set file system permissions, complete your upgrade as discussed in [开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
 
 {% endcollapsible %}

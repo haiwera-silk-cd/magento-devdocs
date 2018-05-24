@@ -441,9 +441,9 @@ $this->aggregatedFieldConverter->convert($fieldsToUpdate, $salesSetup->getConnec
 
 ## Related Topics
 
-* [Serialize Library][0]
-* [Extension Lifecycle][1]
+* [序列化库][0]
+* [扩展的生命周期][1]
 
 
-[0]: {{ page.baseurl }}/extension-dev-guide/framework/serializer.html "Serialize Library"
-[1]: {{ page.baseurl }}/extension-dev-guide/prepare/lifecycle.html "Extension Lifecycle"
+[0]: {{ page.baseurl }}/extension-dev-guide/framework/serializer.html "序列化库"
+[1]: {{ page.baseurl }}/extension-dev-guide/prepare/lifecycle.html "扩展的生命周期"

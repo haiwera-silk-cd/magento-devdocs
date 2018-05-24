@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: Security
-title: XSS prevention strategies
-menu_title: XSS prevention strategies
+title: XSS防范策略
+menu_title: XSS防范策略
 menu_order: 1100
 version: 2.2
 github_link: extension-dev-guide/xss-protection.md
@@ -45,4 +45,4 @@ Magento provides the [Escaper](https://github.com/magento/magento2/blob/2.2/lib/
 
 ### Related Topics
 
-* [Templates XSS security]({{ page.baseurl }}/frontend-dev-guide/templates/template-security.html){:target="_blank"}
+* [模板的XSS安全]({{ page.baseurl }}/frontend-dev-guide/templates/template-security.html){:target="_blank"}

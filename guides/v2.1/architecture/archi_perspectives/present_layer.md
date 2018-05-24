@@ -1,7 +1,7 @@
 ---
 group: arch-guide
 subgroup: Architectural Layers
-title: Presentation Layer
+title: 表示层
 menu_title: Presentation layer
 menu_order: 1
 version: 2.1
@@ -19,7 +19,7 @@ Presentation code controls web user interaction with the product and its appeara
 You can extensively customize the user interface by using HTML, CSS, and {% glossarytooltip ae0f1f68-c466-4189-88fd-6cd8b23c804f %}PHTML{% endglossarytooltip %} files to modify elements of the presentation layer.
 Presentation layer represents customization of HTML,CSS,Javascript,Magento UI,PHTML file and Block file.
 
-Presentation layer is Top layer among four layer(Presentational, Service, Domain, and Persistence layer) described by Magento architecture.
+Presentation layer is Top layer among four layer(Presentational, Service, Domain, and 持久层) described by Magento architecture.
 
 ## Who uses the Presentation layer?
 
@@ -70,10 +70,10 @@ Typically, the way it accesses the Model is through service contracts.
 ## Presentation layer flow
 
 Web users interact with components of the presentation layer to select actions that initiate calls to the underlying product layers.
-Presentation layer components make calls to the Service layer, which in turn sends requests to the {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}Domain{% endglossarytooltip %} (or business logic) layer.
+Presentation layer components make calls to the 服务层, which in turn sends requests to the {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}Domain{% endglossarytooltip %} (or business logic) layer.
 
 ## Related topics {#related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">Architectural diagrams</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">Architectural layers overview</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">分层架构概述</a>

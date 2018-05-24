@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Shared configuration
-menu_title: Shared configuration
+title: 共享配置
+menu_title: 共享配置
 menu_node:
 menu_order: 6100
 level3_menu_node: level3child
@@ -25,9 +25,9 @@ These settings are available in the Magento Admin in **Stores** > Settings > **C
 
 You can use the same procedure to configure any non-sensitive, non-system-specific settings in the following references:
 
-*	[Other configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
-*	[Payment configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*	[Magento Enterprise B2B Extension configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
+*	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
+*	[支付配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
+*	[Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
 ## Before you begin
 Before you begin, set up file system permissions and ownership as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).

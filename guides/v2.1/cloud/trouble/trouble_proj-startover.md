@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Resolve issues with a new project
-menu_title: Resolve issues with a new project
+title: 新项目的问题解决
+menu_title: 新项目的问题解决
 menu_order: 10
 menu_node:
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Setup
 ---
 
-## Resolve issues with a new project
+## 新项目的问题解决
 This topic discusses solutions to typical issues you might experience with a new project.
 
 ### Project has no code yet {#cloud-trouble-nocode}

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Configuration reference
-menu_title: Configuration reference
+title: 配置参考
+menu_title: 配置参考
 menu_order: 5000
 menu_node:
 level3_menu_node: level3parent

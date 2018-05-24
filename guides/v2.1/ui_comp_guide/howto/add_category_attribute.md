@@ -1,7 +1,7 @@
 ---
 group: UI_Components_guide
 subgroup: how tos
-title: How to add a Category Attribute
+title: 如何添加分类属性
 menu_title: Creating and displaying a category attribute with UI Components
 menu_order: 3
 contributor_name: SwiftOtter Studios

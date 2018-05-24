@@ -1,9 +1,9 @@
 ---
 group: fedg
 subgroup: E_rwd
-title: Add a custom breakpoint
+title: 添加自定义断点
 menu_order: 7
-menu_title: Add a custom breakpoint
+menu_title: 添加自定义断点
 version: 2.1
 github_link: frontend-dev-guide/responsive-web-design/rwd-breakpoints.md
 redirect_from:

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 12_cron
-title: Custom cron job and cron group reference
-menu_title: Custom cron job and cron group reference
+title: 自定义的定时任务和任务组(cron)参考
+menu_title: 自定义的定时任务和任务组(cron)参考
 menu_order: 2
 menu_node:
 version: 2.1

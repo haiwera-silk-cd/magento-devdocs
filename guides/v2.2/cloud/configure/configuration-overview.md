@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Configure your store
-menu_title: Configure your store
+title: 配置你的网店
+menu_title: 配置你的网店
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -23,9 +23,9 @@ The following options, tools, and features can be set up and configured in your 
 * [PayPal On-Boarding tool](http://devdocs.magento.com/guides/v2.1/cloud/live/paypal-onboarding.html) provides PayPal payment gateway checkout by connecting to your PayPal merchant account
 * [Magento B2B module](http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-b2b.html) for Business to Business features, Pro plan only
 * [cron jobs]({{ page.baseurl }}/cloud/configure/setup-cron-jobs.html) details how to create and configure Magento cron jobs in all environments
-* [Multiple websites or stores]({{ page.baseurl }}/cloud/project/project-multi-sites.html) details how to create and configure multi-sites for your store, for example multiple locales including English, French, and Spanish
+* [多站和多店]({{ page.baseurl }}/cloud/project/project-multi-sites.html) details how to create and configure multi-sites for your store, for example multiple locales including English, French, and Spanish
 * [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
-* [Install a theme]({{ page.baseurl }}/cloud/howtos/custom-theme.html) for your site and store
+* [安装一个主题]({{ page.baseurl }}/cloud/howtos/custom-theme.html) for your site and store
 
 ## Configure your deploy: build hooks, services, and routes {#deploy}
 After fully configuring your store, you should configure your deployment. This includes specific files to manage builds, deployments, services, and routes:
@@ -42,5 +42,5 @@ We also provide integrations with:
 * [Fastly]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html) configuration for CDN and caching
 * [GitHub]({{ page.baseurl }}/cloud/project/project-integrate-github.html) for managing your Git branches and code
 
-## Configuration management {#config-mgmt}
+## 配置管理 {#config-mgmt}
 We strongly recommend configuring settings, services, and integrations then using specific commands to manage the configurations. This command exports all of your modified configurations from database values into a file. You add this file to your code repository and push it for deployment across all environments. For details, see [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html).

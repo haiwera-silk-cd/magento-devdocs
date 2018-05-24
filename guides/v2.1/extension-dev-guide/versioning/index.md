@@ -172,9 +172,9 @@ This example uses several composer packages on the public github to simulate a m
 
 ## Related Topics
 
-[Module version dependencies][version-dependencies] - Information about how your module can depend on the version of other modules.
+[模块版本依赖][version-dependencies] - Information about how your module can depend on the version of other modules.
 
-[Codebase changes][codebase-changes] - Information on how changes in a Magento module's codebase affect versions.
+[基础代码修改][codebase-changes] - Information on how changes in a Magento module's codebase affect versions.
 
 [version-dependencies]: {{ page.baseurl }}/extension-dev-guide/versioning/dependencies.html
 [codebase-changes]: {{ page.baseurl }}/extension-dev-guide/versioning/codebase-changes.html

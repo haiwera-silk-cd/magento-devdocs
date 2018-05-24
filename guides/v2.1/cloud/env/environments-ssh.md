@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 020_tech
-title: SSH and sFTP
-menu_title: SSH and sFTP
+title: SSH和sFTP
+menu_title: SSH和sFTP
 menu_order: 35
 menu_node:
 version: 2.1
@@ -120,6 +120,6 @@ To add your SSH public key information to your client:
 
 Depending on the client, you may need to enter additional options and setup to complete SSH authentication for sFTP. Review the documentation for your selected client.
 
-For **Starter environments and Pro Integration environments**, you may also want to consider [adding a `mount`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#mounts) for access to a specific directory. You would add the mount to your `.magento.app.yaml` file. For a list of writable directories, see [Project structure]({{ page.baseurl }}/cloud/project/project-start.html). This mount point will only work in those environments.
+For **Starter environments and Pro Integration environments**, you may also want to consider [adding a `mount`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#mounts) for access to a specific directory. You would add the mount to your `.magento.app.yaml` file. For a list of writable directories, see [项目结构]({{ page.baseurl }}/cloud/project/project-start.html). This mount point will only work in those environments.
 
 For **Pro Staging and Production environments**, you need to enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) to request sFTP access in those environments. We can then create a mount point and provide access to the specific `pub/media` folder.

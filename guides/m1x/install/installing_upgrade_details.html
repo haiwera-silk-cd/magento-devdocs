@@ -57,10 +57,10 @@
 <p>This section discusses how to get ready for your upgrade by backing up the database and customizations on the file system. The steps that follow do not affect your current production system. You can continue serving customers with no downtime.</p>
 <p>To get ready for your upgrade:</p>
 <ol><li>Get the Magento installation archive as discussed in <a href="{{ site.m1xgdeurl }}install/installing.html#get" target="_blank">Getting Magento CE or EE</a>.</li>
-<li>Install Magento in a different directory:
+<li>安装Magento in a different directory:
 <ul><li><em>Recommended</em>. Set up a new system (that is, another host) on which to install Magento.<br />
 The system should be identical to, if not better than, your current system. The new system must meet the <a href="{{ site.m1xgdeurl }}system-requirements.html" target="_blank">Magento系统要求</a>.</li>
-<li>Install Magento in a new, empty root installation directory on the same server.</li>
+<li>安装Magento in a new, empty root installation directory on the same server.</li>
 <div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: <em>Do not</em> upgrade Magento in the same directory on the same server because post-upgrade errors are likely to occur.</span></div></li></ul>
 </li>
 <li>Magento <em>strongly</em> recommends you observe the following guidelines when you set up the Magento database in your development environment:
@@ -540,7 +540,7 @@ The way you do this is up to you; typically, you can configure your DNS server t
 <p>Congratulations! You successfully upgraded! Review our <a href="{{ site.m1xgdeurl }}ce19-ee114-home.html">welcome page</a> to see the improvements you're getting.</p>
 
 <h2 id="install-privs-after">Setting Magento File System Permissions and Ownership After Upgrade</h2>
-<p>To secure your Magento installation after the upgrade, see <a href="{{ site.m1xgdeurl }}install/installer-privileges_after.html" target="_blank">After You Install Magento: Recommended File System Ownership and Privileges</a>.</p>
+<p>To secure your Magento installation after the upgrade, see <a href="{{ site.m1xgdeurl }}install/installer-privileges_after.html" target="_blank">After You 安装Magento: Recommended File System Ownership and Privileges</a>.</p>
 
 <h2 id="upgrade-troubleshoot">故障排除</h2>
 <p>There is a known issue after upgrading to EE 1.13.1 that affects you <em>only</em> if you do <em>not</em> follow the recommended procedure to upgrade to a new environment as discussed in <a href="#prereq-tasks">Getting Ready For Your Upgrade</a>.</p>

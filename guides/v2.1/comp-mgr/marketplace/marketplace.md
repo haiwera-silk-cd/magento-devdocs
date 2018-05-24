@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 03_market
-title: Magento Marketplace example
-menu_title: Magento Marketplace example
+title: Magento市场(marketplace)使用示例
+menu_title: Magento市场(marketplace)使用示例
 menu_order: 1
 menu_node: parent
 version: 2.1

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Development System Setup
-menu_title: Development System Setup
+title: 开发系统设置
+menu_title: 开发系统设置
 menu_node:
 menu_order: 1300
 version: 2.2

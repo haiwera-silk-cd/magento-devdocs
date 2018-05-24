@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 130_upgrades
-title: Upgrades and Patches
-menu_title: Upgrades and Patches
+title: 升级和补丁
+menu_title: 升级和补丁
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -23,6 +23,6 @@ What you need:
 
 For detailed instructions:
 
-* [Upgrade Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/project/project-upgrade.html)
-* [Patch Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/project/project-patch.html)
-* Specifics for [upgrading from Magento Commerce (Cloud) 2.0.4]({{ page.baseurl }}/cloud/upgrade/upgrade-from-2-0-4.html)
+* [Magento企业版(云支持版)升级]({{ page.baseurl }}/cloud/project/project-upgrade.html)
+* [Magento企业版(云支持版)补丁]({{ page.baseurl }}/cloud/project/project-patch.html)
+* Specifics for [upgrading from Magento企业版(云支持版) 2.0.4]({{ page.baseurl }}/cloud/upgrade/upgrade-from-2-0-4.html)

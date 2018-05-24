@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Sensitive and system-specific
-menu_title: Sensitive and system-specific
+title: 敏感的和系统特定的
+menu_title: 敏感的和系统特定的
 menu_order: 5100
 menu_node:
 level3_menu_node: level3child
@@ -20,7 +20,7 @@ This topic lists configuration paths for system-specific and sensitive settings:
 *	The [`magento app:config:dump` command](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html) writes system-specific settings to the system-specific configuration file, `app/etc/env.php`, which should _not_ be in source control. It also writes shared configuration for all Magento instances to `app/etc/config.php`, this file _should_ be in source control.
 *	The [`magento config:sensitive:set` command](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html) writes sensitive settings to `app/etc/env.php`.
 
-	You can also set sensitive values using configuration variables as discussed in [Use environment variables to override configuration settings]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
+	You can also set sensitive values using configuration variables as discussed in [使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
 
 For a list of other configuration paths, see:
 

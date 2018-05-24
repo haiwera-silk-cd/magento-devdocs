@@ -1,8 +1,8 @@
 ---
 group: config-guide
-subgroup: 08_Configure caching
-title: Static content signing
-menu_title: Static content signing
+subgroup: 08_配置缓存
+title: 静态内容签名
+menu_title: 静态内容签名
 menu_node:
 menu_order: 3
 version: 2.2
@@ -21,7 +21,7 @@ This is a common [best practice](https://developer.yahoo.com/performance/rules.h
 When the browser caches a static resource and that resource changes on the server, you need to clear the browser cache so it can download the new version.
 Manually clearing the browser cache works if you are a {% glossarytooltip a3c8f20f-b067-414e-9781-06378c193155 %}website{% endglossarytooltip %} administrator, but this is not an appropriate request to make of your users when you want them to download new versions of a static resource.
 
-### Static content signing
+### 静态内容签名
 
 {% glossarytooltip a3e37235-4e8b-464f-a19d-4a120560206a %}Static content{% endglossarytooltip %} signing is a Magento feature that allows you to invalidate the browser cache for static resources.
 Magento accomplishes this by adding a deployment version to the URL of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %}.

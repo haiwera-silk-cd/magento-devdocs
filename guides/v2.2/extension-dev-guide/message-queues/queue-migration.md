@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Migrate message queue configuration
-menu_title: Migrate message queue configuration
+title: 迁移消息队列配置
+menu_title: 迁移消息队列配置
 menu_order: 27
 ee_only: True
 level3_menu_node: level3child
@@ -128,5 +128,5 @@ The first column in the following table lists the all the parameters in the `que
 `<publisher>/<connection>/disabled` | Not present in 2.0. Omit this parameter to accept the default value.
 
 #### 相关主题
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queues</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">配置消息队列</a>

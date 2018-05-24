@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 24_RabbitMQ
-title: Message Queues Overview
-menu_title: Message Queues (Magento Commerce only)
+title: 消息队列概述
+menu_title: 消息队列 (Magento Commerce only)
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -30,5 +30,5 @@ A basic message queue system can also be set up without using RabbitMQ. In this 
 
 #### 相关主题
 
-*	[Manage message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)
+*	[管理消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)
 *	[Install RabbitMQ]({{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html)

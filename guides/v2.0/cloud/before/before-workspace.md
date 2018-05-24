@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Prepare for local environment setup
-menu_title: Prepare for local environment setup
+title: 本地环境设置准备
+menu_title: 本地环境设置准备
 menu_order: 5
 menu_node:
 version: 2.0
@@ -24,7 +24,7 @@ To develop, deploy, and test {{site.data.var.ece}}, you need to setup your local
 This section walks through the steps for first time merchants with Magento, Magento SIs, and existing Magento merchants moving to the cloud. If you have already completed some of these steps or have an existing Magento developer environment, make sure to review the expected results to continue to the next. Some configurations and workflows differ for {{site.data.var.ee}} than a typical Enterprise Edition installation.
 
 ## Set up an account {#newaccount}
-To begin working with a project and develop your store, you should have received an e-mail invitation to [create a Magento Commerce (Cloud) account](https://accounts.magento.cloud){:target="_blank"}. The account provides access to your project for Magento development and deployment across all supported environments.
+To begin working with a project and develop your store, you should have received an e-mail invitation to [create a Magento企业版(云支持版) account](https://accounts.magento.cloud){:target="_blank"}. The account provides access to your project for Magento development and deployment across all supported environments.
 
 You should receive an e-mail invitation to verify and access the project. If you don't see the invitation, check your junk e-mail folder. Click the **Verify my account** option in the email to verify and access your project account.
 
@@ -54,15 +54,15 @@ Have the following prepared to complete your initial workspace and project setup
 You should be ready to go! The following sections provide a link to the previous step, instructions, and a link to the next step to start developing:
 
 * Install all prerequisite software and tools on your host system (laptop, desktop, etc) and local workspace (VM)
-* Install Magento Cloud CLI
+* 安装Magento Cloud CLI
 * Set up SSH keys
 * Configure the Magento file system owner (optional)
-* Clone and branch the project
-* Install Magento
+* 克隆并开发项目分支
+* 安装Magento
 * Complete configurations and file/folder permissions
 * Verify install, branches, and get to coding!
 
 For Pro projects, you also should deploy across to Staging and Production as part of your set up.
 
 #### 下一步:
-[Install Magento prerequisites]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
+[安装Magento所需的必要软件]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)

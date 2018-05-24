@@ -1,6 +1,6 @@
 ---
 group: perf-best-practices
-title: Development environment recommendations
+title: 开发环境推荐
 version: 2.3
 github_link: performance-best-practices/development-environment.md
 functional_areas:

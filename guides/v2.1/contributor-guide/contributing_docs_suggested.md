@@ -90,7 +90,7 @@ If you are interested in working on one of these projects, open a [pull request 
         <td><a href="https://github.com/magento/devdocs/issues/434" target="\_blank">Logging</a></td>
         <td>Large</td>
         <td>
-          <p>Help us improve the <a href="{{ page.baseurl }}/config-guide/log/log-intro.html">Custom logging</a> topic by adding more details and examples.</p>
+          <p>Help us improve the <a href="{{ page.baseurl }}/config-guide/log/log-intro.html">自定义日志</a> topic by adding more details and examples.</p>
           <p><strong>Acceptance criteria:</strong></p>
             <ul>
               <li>Describe what you can do with Magento's stock logger implementation and when you should extend it or implement your own.</li>

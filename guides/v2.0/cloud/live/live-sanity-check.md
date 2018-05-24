@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Build and deploy on local
-menu_title: Build and deploy on local
+title: 在本地构建和部署
+menu_title: 在本地构建和部署
 menu_order: 30
 menu_node:
 version: 2.0
@@ -20,7 +20,7 @@ These tasks walk through:
 * Complete a full build and deploy process on your local (deploys to the associated active development environment)
 * Test fully before continuing deployment to Staging
 
-For more information on the full five step process, see the [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
+For more information on the full five step process, see the [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 We highly recommend completing your testing in an Integration active environment and the Staging environment. Only complete final tests for going live in the Production environment. Your Staging environment is best for testing with code, data, and services including Fastly, New Relic, and others.
@@ -32,7 +32,7 @@ If you modified your [composer.json]({{ page.baseurl }}/cloud/cloud-composer.htm
 ## Verify all required files in Git {#files}
 Your Git branch must have the following files for building and deploying for your local and to Integration, Staging, and Production environments:
 
-* `auth.json` in the root Magento directory. This file includes the Magento authentication keys entered when creating the project. If you need to verify the file and settings, see [Troubleshoot deployment]({{ page.baseurl }}/cloud/access-acct/trouble.html).
+* `auth.json` in the root Magento directory. This file includes the Magento authentication keys entered when creating the project. If you need to verify the file and settings, see [部署故障排查]({{ page.baseurl }}/cloud/access-acct/trouble.html).
 * `config.local.php` if you used [Configuration Management](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html) for 2.1.X
 * `config.php` if you used [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) for 2.2.X
 * [`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html) is updated and saved in the root directory
@@ -74,7 +74,7 @@ To push code to your remote environment:
 ## Build phase {#build}
 During the [build phase]({{ page.baseurl }}/cloud/reference/discover-deploy.html#cloud-deploy-over-phases-build), we perform the following tasks:
 
-*	Apply patches distributed to all Magento Commerce (Cloud) accounts
+*	Apply patches distributed to all Magento企业版(云支持版) accounts
 *	Apply patches we provided specifically to you
 *	Enable all modules to build
 *	Compile code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration
@@ -85,7 +85,7 @@ Before you continue, you must know the file system path to any patch we provided
 
 To build your site:
 
-1.	Apply patches distributed to all Magento Commerce (Cloud) accounts.
+1.	Apply patches distributed to all Magento企业版(云支持版) accounts.
 
 	Enter the following command from the project root directory:
 
@@ -160,7 +160,7 @@ To deploy your site:
 
 		php bin/magento setup:upgrade
 
-	We highly recommend having Magento already installed if you followed the [First time deployment]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html). If you haven't installed the Magento application yet, use the [`magento setup:install`]({{ page.baseurl }}/install-gde/install/cli/install-cli.html) command instead. Be advised, you may encounter issues with enabled modules on a fresh installation.
+	We highly recommend having Magento already installed if you followed the [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html). If you haven't installed the Magento application yet, use the [`magento setup:install`]({{ page.baseurl }}/install-gde/install/cli/install-cli.html) command instead. Be advised, you may encounter issues with enabled modules on a fresh installation.
 4.	Clean the Magento cache:
 
 		php bin/magento cache:clean
@@ -171,4 +171,4 @@ To deploy your site:
 If errors display, debug them if possible, [review logs]({{ page.baseurl }}/cloud/trouble/environments-logs.html), or open a [support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) to get additional assistance.
 
 #### 下一步
-[Prepare to deploy to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
+[准备部署准生产和生产环境]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)

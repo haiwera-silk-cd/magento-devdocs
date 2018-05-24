@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Module configuration files
-menu_title: Module configuration files
+title: 模块配置文件
+menu_title: 模块配置文件
 menu_order: 5
 version: 2.1
 github_link: config-guide/config/config-files.md
@@ -28,7 +28,7 @@ Following are common terms used in this topic:
       <dt>Configuration stage</dt>
       <dd>Stages are defined as <em>primary</em>, <em>global</em>, and <em>area</em>. Each stage determines when configuration type is loaded and merged with same-named configuration types. (For example, <code>module.xml</code> files are merged with other <code>module.xml</code> files.) For more information, see <a href="#config-files-loadmerge">Configuration load and merge</a>.</dd>
       <dt>Configuration scope</dt>
-      <dd>Complementary to a configuration stages, a scope defines the configuration type model. For example, <code>adminhtml</code> is an area scope that is loaded with at the stage with other modules' <code>adminhtml</code> configurations. For more information, see <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_and_areas.html">Modules and areas</a>.</dd>
+      <dd>Complementary to a configuration stages, a scope defines the configuration type model. For example, <code>adminhtml</code> is an area scope that is loaded with at the stage with other modules' <code>adminhtml</code> configurations. For more information, see <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_and_areas.html">模块和地区</a>.</dd>
 </dl>
 
 <h2 id="config-files-loadmerge">Configuration load and merge</h2>
@@ -87,7 +87,7 @@ The following table shows each configuration type and the Magento configuration 
             </tr>
             <tr>
                   <td><code>di.xml</code></td>
-                  <td><a href="{{ page.baseurl }}/extension-dev-guide/depend-inj.html">Dependency injection</a> configuration</td>
+                  <td><a href="{{ page.baseurl }}/extension-dev-guide/depend-inj.html">依赖注入</a> configuration</td>
                   <td>primary, global, area</td>
                   <td><a href="{{ site.mage2000url }}lib/internal/Magento/Framework/ObjectManager/Config/Config.php" target="_blank">\Magento\Framework\ObjectManager\Config</a></td>
             </tr>
@@ -129,5 +129,5 @@ That is, the file system, database, other storage merges the configuration files
 
 #### 相关主题
 
- *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
+ *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
  *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

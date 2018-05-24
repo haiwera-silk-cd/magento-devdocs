@@ -1,7 +1,7 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Architectural basics overview
+title: 架构的基本概述
 menu_title: Architectural basics
 menu_node: parent
 menu_order: 1

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: Versioning
-title: Codebase changes
-menu_title: Codebase changes
+title: 基础代码修改
+menu_title: 基础代码修改
 menu_order: 1300
 version: 2.1
 github_link: extension-dev-guide/versioning/codebase-changes.md

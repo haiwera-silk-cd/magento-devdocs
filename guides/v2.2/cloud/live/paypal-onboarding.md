@@ -1,7 +1,7 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up PayPal payment methods
+title: 设置PayPal支付方式
 menu_title: Set up PayPal
 menu_order: 10
 menu_node:
@@ -13,7 +13,7 @@ functional_areas:
   - Services
 ---
 
-Magento Commerce (Cloud) provides an on-boarding tool to configure PayPal Express Checkout accounts directly through the Magento Admin panel. This tool is available for ECE 2.1.8 and later. To better support going live and testing PayPal payment methods, you can enable and configure your PayPal Express Checkout account for sandbox or production accounts.
+Magento企业版(云支持版) provides an on-boarding tool to configure PayPal Express Checkout accounts directly through the Magento Admin panel. This tool is available for ECE 2.1.8 and later. To better support going live and testing PayPal payment methods, you can enable and configure your PayPal Express Checkout account for sandbox or production accounts.
 
 You can configure either the sandbox or production account in every environment:
 
@@ -75,7 +75,7 @@ With the account configured and authenticated, you can enable and disable PayPal
 ## PayPal variables {#deploy}
 When using the PayPal on-boarding tool with {{site.data.var.ece}} 2.2, you need to add the following variable to `magento.app.yaml` in the environment variables section.
 
-    # Environment variables
+    # 环境变量
     variables:
       env:
         CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN: 'payment-broker.magento.com'

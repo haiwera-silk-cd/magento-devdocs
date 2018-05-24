@@ -1,8 +1,8 @@
 ---
 group: config-guide
-subgroup: 08_Configure caching
-title: Configure caching
-menu_title: Configure caching
+subgroup: 08_配置缓存
+title: 配置缓存
+menu_title: 配置缓存
 menu_order: 3
 menu_node: parent
 version: 2.0
@@ -42,5 +42,5 @@ This topic discusses the following options for configuring caching:
 *   Configuring your own custom cache frontend, which means you modify only `<your Magento install dir>/app/etc/env.php` because it overrides the equivalent configuration in `di.xml`
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Varnish requires no changes to the Magento configuration. For more information, see <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish.html">Configure and use Varnish</a>.</p>
+  <p>Varnish requires no changes to the Magento configuration. For more information, see <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>.</p>
 </div>

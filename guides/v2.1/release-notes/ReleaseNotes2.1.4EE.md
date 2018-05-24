@@ -16,7 +16,7 @@ github_link: release-notes/ReleaseNotes2.1.4EE.md
 We are pleased to present Magento Commerce (formerly Enterprise Edition) 2.1.4. This release includes many functional fixes and enhancements, plus one important security fix.
 
 
-Looking for the <a href="{{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes2.1.4.html" target="_blank">Magento Commerce (Cloud)  2.1.4 and 2.0.12 Release Notes</a>?
+Looking for the <a href="{{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes2.1.4.html" target="_blank">Magento企业版(云支持版)  2.1.4 and 2.0.12 Release Notes</a>?
 
 ## Highlights
 
@@ -212,7 +212,7 @@ We address the following functional issues in this release.
 
 	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the Web Setup Wizard from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
 
-	*	Install Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
+	*	安装Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
 
 
 

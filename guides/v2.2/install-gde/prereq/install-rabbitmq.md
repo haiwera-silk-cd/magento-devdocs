@@ -18,7 +18,7 @@ You must install and configure [RabbitMQ](http://rabbitmq.com){:target="&#95;bla
 
 RabbitMQ is an open source message broker that offers a reliable, highly available, scalable and portable messaging system.
 
-Message queues provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
+消息队列 provide an asynchronous communications mechanism in which the sender and the receiver of a message do not contact each other. Nor do they need to communicate with the message queue at the same time. When a sender places a messages onto a queue, it is stored until the recipient receives them.
 
 {{site.data.var.ee}} uses RabbitMQ to manage these message queues. RabbitMQ cannot be used with {{site.data.var.ce}} installations.
 
@@ -28,7 +28,7 @@ The message queue system must be established before you install Magento. The bas
 2. Connect RabbitMQ and Magento.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-A basic message queue system can be implemented on EE without using cron instead of RabbitMQ. See [Configure message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for more information.
+A basic message queue system can be implemented on EE without using cron instead of RabbitMQ. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for more information.
 </div>
 
 ## Install RabbitMQ on Ubuntu {#ubuntu-install}
@@ -80,7 +80,7 @@ Refer to [Installing on RPM-based Linux](https://www.rabbitmq.com/install-rpm.ht
 ## Configure RabbitMQ {#config}
 Review the official RabbitMQ documentation to configure and manage RabbitMQ. Pay attention to the following items:
 
-* Environment variables
+* 环境变量
 * Port access
 * Default user accounts
 * Starting and stopping the broker
@@ -154,7 +154,7 @@ To configure support for SSL, edit the `ssl` and `ssl_options` parameters in the
 
 ## Start the message queue consumers
 
-After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the message queue consumers. See [Configure message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for details.
+After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the message queue consumers. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for details.
 
 #### 相关主题
 *	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)
@@ -164,4 +164,4 @@ After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the m
 *	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
 *	[Message queue overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
-*	[Manage message queues]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)
+*	[管理消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)

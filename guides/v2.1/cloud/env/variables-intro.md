@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Environment variables
+title: 环境变量
 version: 2.1
 github_link: cloud/env/variables-intro.md
 functional_areas:

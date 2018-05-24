@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 01_Introduction
-title: Introduction to Composer
-menu_title: Introduction to Composer
+title: Composer介绍
+menu_title: Composer介绍
 menu_order: 2
 menu_node: 
 version: 2.0

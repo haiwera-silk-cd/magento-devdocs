@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Other configuration paths reference
-menu_title: Other configuration paths reference
+title: 其它配置路径参考
+menu_title: 其它配置路径参考
 menu_order: 5300
 menu_node:
 level3_menu_node: level3child
@@ -20,9 +20,9 @@ This topic lists all configuration paths _except_ payment variables, sensitive v
 For those configuration paths, see:
 
 *	[Payment configuration paths]({{ page.baseurl }}/config-guide/prod/config-reference-payment.html)
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
 
-To optionally override any configuration settings or to set sensitive settings, see [Use environment variables to override configuration settings]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
+To optionally override any configuration settings or to set sensitive settings, see [使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
 
 ## General category
 This section lists variable names and configuration paths available for options in the Admin under **Stores** > Settings > **Configuration** > **General**.

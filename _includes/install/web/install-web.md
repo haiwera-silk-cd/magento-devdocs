@@ -1,6 +1,6 @@
 <div markdown="1">
 
-This section discusses how to install the Magento software using a web-based wizard interface. To install Magento from the command line, see <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">Install Magento software using the command line</a>.
+This section discusses how to install the Magento software using a web-based wizard interface. To install Magento from the command line, see <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">安装Magento software using the command line</a>.
 
 <h2 id="instgde-install-prereq">在你开始安装之前</h2>
 

@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Build and deploy
+title: 构建和部署
 version: 2.1
 github_link: cloud/project/magento-env-yaml.md
 functional_areas:

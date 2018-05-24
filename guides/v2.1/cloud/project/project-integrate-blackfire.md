@@ -221,7 +221,7 @@ If you do not have a default route specified in the `routes.yaml` file, or want 
 	```
 
 1.  Use a text editor to locate and edit `<project root dir>/magento/routes.yaml` in your branch.
-1.  Add the route the file. See [Configure routes]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html).
+1.  Add the route the file. See [路由配置]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html).
 
 	```
 	"http://{default}/":

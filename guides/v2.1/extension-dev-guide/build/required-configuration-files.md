@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: Define your configuration files
-menu_title: Define your configuration files
+title: 定义你的配置文件
+menu_title: 定义你的配置文件
 menu_order: 2000
 version: 2.1
 github_link: extension-dev-guide/build/required-configuration-files.md
@@ -79,4 +79,4 @@ Keep in mind that you might be able to handle your module's configuration solely
 
 #### Next
 
-[Create your component file structure]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html)
+[创建你的组件文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html)

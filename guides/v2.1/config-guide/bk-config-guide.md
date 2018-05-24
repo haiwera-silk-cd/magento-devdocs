@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 01_Introduction
-title: Configuration Guide
-landing-page: Configuration Guide
+title: 配置手册
+landing-page: 配置手册
 menu_title: 介绍
 menu_order: 1
 menu_node: parent
@@ -26,8 +26,8 @@ You can 配置Magento应用 in any of the following ways:
 
 	*	[Set up Varnish]({{ page.baseurl }}/config-guide/varnish/config-varnish.html)
 	* [Set up caching]({{ page.baseurl }}/config-guide/cache.html)
-	*	[Use Redis for the Magento page and default cache]({{ page.baseurl }}/config-guide/redis/redis-pg-cache.html)
-	*	[Use Redis for session storage]({{ page.baseurl }}/config-guide/redis/redis-session.html)
+	*	[使用Redis作为Magento页面缓存和默认缓存]({{ page.baseurl }}/config-guide/redis/redis-pg-cache.html)
+	*	[使用Redis作为Session存储]({{ page.baseurl }}/config-guide/redis/redis-session.html)
 	*	[Set up database caching]({{ page.baseurl }}/config-guide/cache/caching-database.html)
 
 *	Magento in production
@@ -42,7 +42,7 @@ You can 配置Magento应用 in any of the following ways:
 
 *	{{site.data.var.ee}} only
 
-	*	[Install and configure Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-overview.html)
+	*	[安装和配置Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-overview.html)
 	*	<a href="{{ page.baseurl }}/config-guide/solr/solr-overview.html">Install and configure Solr</a>
 	*	<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master.html">Split databases</a>
-	*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message queues</a>
+	*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列</a>

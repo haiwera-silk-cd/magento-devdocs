@@ -1,15 +1,15 @@
 ---
 group: arch-guide
 subgroup: Architectural Layers
-title: Domain layer
-menu_title: Domain layer
+title: 领域层
+menu_title: 领域层
 menu_order: 3
 version: 2.1
 github_link: architecture/archi_perspectives/domain_layer.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/domain_layer.html
 ---
 
-## What is Magento Domain layer?
+## What is Magento 领域层?
 
 The {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}domain{% endglossarytooltip %} layer holds the business logic layer of a Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. It typically does not contain resource-specific or database-specific information. Its primary functions include:
 
@@ -29,11 +29,11 @@ Each domain-layer model contains a reference to a resource model, which it uses 
 
 There are three primary ways of accessing a module's domain-layer code:
 
-* Service contracts are the recommended way for one module to access another module's domain-level code. This loosely coupled solution is the optimal way for most modules to access another module.
+* 服务约定 are the recommended way for one module to access another module's domain-level code. This loosely coupled solution is the optimal way for most modules to access another module.
 
 * A module can directly call into another module. This tightly coupled solution is not recommended for most situations, but is sometimes unavoidable.
 
-* Domain layer code in one module can also plug itself into another module by:
+* 领域层 code in one module can also plug itself into another module by:
 
     * event hooks
 
@@ -45,6 +45,6 @@ Your strategy for calling another module's domain-layer code is highly dependent
 
 ## Related topics {#related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">Architectural diagrams</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">Architectural layers overview</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">分层架构概述</a>

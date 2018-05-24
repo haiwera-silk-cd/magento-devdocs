@@ -203,7 +203,7 @@ Magento Commerce 2.1, Release Candidate 3 includes the following known issues:
 <!--- 54320-->* The Category page displays the former price instead of the current price during scheduled updates. 
 
 
-<h3>Technology stack</h3>
+<h3>技术栈</h3>
 
 Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and MySQL. Magento 2.1 RC3 supports:
 

@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 32_UseUpgrade
-title: Start System Upgrade
-menu_title: Start System Upgrade
+title: 开始系统升级
+menu_title: 开始系统升级
 menu_node:
 menu_order: 3
 version: 2.0
@@ -21,9 +21,9 @@ Before continuing, complete all tasks discussed in <a href="{{ page.baseurl }}/c
 ## Optional custom maintenance page
 During the time you're upgrading, your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} is partially available. Users can see a list of files and so on but cannot shop or check out.
 
-To avoid the appearance of a disabled site and to set up a custom maintenance page that displays during the upgrade, see [Maintenance mode options for upgrade]({{ page.baseurl }}/comp-mgr/trouble/cman/maint-mode.html).
+To avoid the appearance of a disabled site and to set up a custom maintenance page that displays during the upgrade, see [维护模式下的升级选项]({{ page.baseurl }}/comp-mgr/trouble/cman/maint-mode.html).
 
-<h2 id="compman-access">Start System Upgrade from the Magento Admin</h2>
+<h2 id="compman-access">开始系统升级 from the Magento Admin</h2>
 To run System Upgrade:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
@@ -51,7 +51,7 @@ To run System Upgrade:
 
 	The page displays similar to the following when we find components to upgrade.<br><br>
 	<img src="{{ site.baseurl }}/common/images/upgr_stuff-2-upgrade.png" width="650px" alt="Magento finds software to upgrade"><br><br>
-4. 	Continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-main-pg.html">Step 1. Select versions to upgrade</a>.
+4. 	Continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-main-pg.html">步骤 1. 选择要升级的版本</a>.
 
 #### Error
 The following error can indicate one of several issues, including that you haven't entered your <a href="{{ page.baseurl }}/comp-mgr/prereq/prereq_auth-token.html">authentication keys</a> in the Magento Admin:

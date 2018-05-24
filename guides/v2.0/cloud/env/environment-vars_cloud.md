@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Cloud variables
+title: 云变量
 version: 2.0
 github_link: cloud/env/environment-vars_cloud.md
 functional_areas:
@@ -8,7 +8,7 @@ functional_areas:
   - Configuration
 ---
 
-Environment variables that are specific to {{site.data.var.ece}} are prefixed with `MAGENTO_CLOUD_*`.
+环境变量 that are specific to {{site.data.var.ece}} are prefixed with `MAGENTO_CLOUD_*`.
 
 -   **MAGENTO_CLOUD_APP_DIR**: The absolute path to the application directory.
 -   **MAGENTO_CLOUD_APPLICATION**: A base64-encoded JSON object that

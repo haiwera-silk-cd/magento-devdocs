@@ -71,7 +71,7 @@ run the `bin/magento setup:upgrade` command in your command line. If prompted, a
 
 
 For details about performing command line tasks, view the following topics:
-- [Command line configuration]({{ page.baseurl }}/config-guide/cli/config-cli.html)
+- [命令行配置]({{ page.baseurl }}/config-guide/cli/config-cli.html)
 - [卸载和重装Magento: Optionally keeping generated files]({{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-db-upgr.html)
 
 ## Open Admin in browser

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 10_mem
-title: Configure Magento to use memcached
-menu_title: Configure Magento to use memcached
+title: 配置Magento使用memcached
+menu_title: 配置Magento使用memcached
 menu_order: 30
 menu_node:
 version: 2.1

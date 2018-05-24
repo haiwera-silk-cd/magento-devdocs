@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Post-deploy variables
+title: 部署后变量
 version: 2.1
 github_link: cloud/env/variables-post-deploy.md
 functional_areas:
@@ -18,7 +18,7 @@ stage:
 For more information about customizing the build and deploy process:
 
 -  [Manage build and deploy actions]({{ page.baseurl }}/cloud/project/magento-env-yaml.html)
--  [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+-  [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
 
 ### `WARM_UP_PAGES`
 

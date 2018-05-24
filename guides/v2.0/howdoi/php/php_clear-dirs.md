@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Clear directories during development
-menu_title: Clear directories during development
+title: 部署期间清空目录
+menu_title: 部署期间清空目录
 menu_node: 
 menu_order: 200
 version: 2.0

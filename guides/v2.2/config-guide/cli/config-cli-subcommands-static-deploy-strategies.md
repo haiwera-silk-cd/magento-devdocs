@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Static files deployment strategies
-menu_title: Static files deployment strategies
+title: 静态文件部署策略
+menu_title: 静态文件部署策略
 menu_node:
 menu_order: 301
 level3_menu_node: level3child
@@ -29,7 +29,7 @@ The following sections describe the implementation details and features of each 
 ## Standard strategy {#static-file-standard}
 When the Standard strategy is used, all static view files for all packages are deployed, that is, processed by [`\Magento\Framework\App\View\Asset\Publisher`]({{ site.mage2200url }}lib/internal/Magento/Framework/App/View/Asset/Publisher.php){:target="\_blank"}.
 
-For more information, see [Deploy static view files]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html).
+For more information, see [部署静态视图文件]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html).
 
 ## Quick strategy {#static-file-quick}
 The quick strategy performs the following actions:

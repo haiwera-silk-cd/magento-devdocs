@@ -76,5 +76,5 @@ $customerResource->delete($customerModel);
 #### 相关主题
 {:.no_toc}
 
-* [EAV and extension attributes]({{ page.baseurl }}/extension-dev-guide/attributes.html)
+* [实体属性值(EAV)和扩展属性]({{ page.baseurl }}/extension-dev-guide/attributes.html)
 * [Instantiating objects with factories]({{ page.baseurl }}/extension-dev-guide/factories.html)

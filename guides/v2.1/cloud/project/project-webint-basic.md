@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Configure your project
-menu_title: Configure your project
+title: 配置你的项目
+menu_title: 配置你的项目
 menu_order: 5
 menu_node:
 version: 2.1
@@ -18,7 +18,7 @@ The {{site.data.var.ece}} [Project Web Interface](https://accounts.magento.cloud
 * Create and manage projects
 * Access active environments and branches using SSH, CLI, and URLs
 * Configure environment settings, environment variables, and routes
-* [Create and manage users]({{ page.baseurl }}/cloud/project/user-admin.html)
+* [创建和管理用户]({{ page.baseurl }}/cloud/project/user-admin.html)
 * [Manage Git branches]({{ page.baseurl }}/cloud/project/project-webint-branch.html)
 
 As you make changes to these settings, the branch redeploys to the environment. You can make these setting changes for all Starter and Pro environments.
@@ -81,7 +81,7 @@ One of these environment variables enables or disables outgoing emails for the e
 Configure your email notifications, services, and more as needed through the Magento Admin and test emails. If you need to enable this setting for Pro plan on Staging and Production, you will need to enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html).
 
 ## Set environment and project variables {#project-conf-env-var}
-You can set project wide and environment specific variables through the Project Web Interface. Variables can be either text or JSON format. For more information, see [Environment variables]({{ page.baseurl }}/cloud/env/variables-intro.html).
+You can set project wide and environment specific variables through the Project Web Interface. Variables can be either text or JSON format. For more information, see [环境变量]({{ page.baseurl }}/cloud/env/variables-intro.html).
 
 For an example of variables, we walk you through creating Magento Admin variables through Onboarding and project creation tasks. You may want to add _environment variables_ for sensitive data like payment method information. _Project variables_ are set across all branches and environments.
 
@@ -122,7 +122,7 @@ To set project variables in the Project Web Interface:
 6. As needed, select options for **JSON value**, **Visible during build**, and **Visible during runtime**. If you do not have Super User access, you may only see the JSON value option.
 7. Click **Add Variable**. After you add the variable, the environment will deploy. Wait until deployment completes before more edits.
 
-## Configure routes {#project-conf-env-route}
+## 路由配置 {#project-conf-env-route}
 Routes allow you to set redirects or upstream settings for applications for your specific environment. For full details on routes, see [routes.yaml]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html). These routes (or URLs) are used to access your Magento storefront.
 
 1. [Access your project](#project-access) and select a specific environment.

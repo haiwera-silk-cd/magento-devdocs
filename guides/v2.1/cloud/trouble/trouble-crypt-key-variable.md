@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Resolve issues with encryption key
-menu_title: Resolve issues with encryption key
+title: 解决加密密钥问题
+menu_title: 解决加密密钥问题
 menu_order: 25
 menu_node:
 version: 2.1

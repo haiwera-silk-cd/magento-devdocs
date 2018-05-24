@@ -23,8 +23,8 @@ You will [install]({{ page.baseurl }}/cloud/before/before-workspace-magento-prer
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 You must install the Magento Cloud CLI to your local workspace to issue commands. For details, see:
 
-* [Install Magento prerequisites]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
-* [Enable SSH keys]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
+* [安装Magento所需的必要软件]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
+* [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
 </div>
 
 The following Magento Cloud CLI commands can be run from any directory and run best from a project directory. When run from a project directory, you can omit the `-p <project ID>` parameter. These commands are meant to be used to manage Integration environments.

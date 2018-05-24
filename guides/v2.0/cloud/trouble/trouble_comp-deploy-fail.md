@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Component deployment failure
-menu_title: Component deployment failure
+title: 组件部署失败
+menu_title: 组件部署失败
 menu_order: 15
 menu_node:
 version: 2.0
@@ -62,6 +62,6 @@ To remove the component:
 
 
 #### 相关主题
-*	[Manage your projects]({{ page.baseurl }}/cloud/project/projects.html)
+*	[管理你的项目s]({{ page.baseurl }}/cloud/project/projects.html)
 *	[Manage your environments]({{ page.baseurl }}/cloud/env/environments.html)
 *	[Tutorials]({{ page.baseurl }}/cloud/howtos/how-to.html)

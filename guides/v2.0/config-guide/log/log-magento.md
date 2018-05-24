@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 500_log
-title: Magento logging in more detail
-menu_title: Magento logging in more detail
+title: Magento日志的更多细节
+menu_title: Magento日志的更多细节
 menu_node:
 menu_order: 2
 version: 2.0

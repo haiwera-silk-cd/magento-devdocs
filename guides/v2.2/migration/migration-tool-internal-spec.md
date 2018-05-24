@@ -10,7 +10,7 @@ github_link: migration/migration-tool-internal-spec.md
 redirect_from: /guides/v1.0/migration/migration-tool-internal-spec.html
 ---
 
-## 概述{#migrate-overview}
+## 概述 {#migrate-overview}
 
 This section describes an implementation details of 数据迁移工具 and how to extend its functionality.
 

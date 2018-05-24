@@ -1263,7 +1263,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 
 ### System requirements
-Our technology stack is built on PHP and MySQL. For details, see [Technology stack requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
+Our technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html)
 
 
 

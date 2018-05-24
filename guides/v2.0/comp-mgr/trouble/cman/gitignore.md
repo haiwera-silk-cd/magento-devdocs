@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Missing .gitignore files
-menu_title: Missing .gitignore files
+title: 缺少.gitignore文件
+menu_title: 缺少.gitignore文件
 menu_node:
 menu_order: 5
 version: 2.0

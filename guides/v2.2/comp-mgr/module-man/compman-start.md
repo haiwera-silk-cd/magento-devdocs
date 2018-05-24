@@ -20,7 +20,7 @@ To run the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% en
 
 	![]({{ site.magentourl }}/common/images/modman_select.png){:width="550px"}
 
-To upgrade Magento system software instead, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">Run System Upgrade</a>.
+To upgrade Magento system software instead, see <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">运行系统升级</a>.
 
 See one of the following sections:
 

@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Patch Magento Commerce (Cloud)
+title: Magento企业版(云支持版)补丁
 version: 2.2
 github_link: cloud/project/project-patch.md
 redirect_from:
@@ -16,7 +16,7 @@ You can apply patches to update {{site.data.var.ece}}. We recommend using a new 
 
 The `composer update` command performs a {{site.data.var.ece}} upgrade with patches and hotfixes. Check the `magento/magento-cloud-configuration/patches` folder for available patches.
 
-To upgrade and test {{site.data.var.ece}} (including patches and hotfixes), see [Upgrade Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/project/project-upgrade.html). Starting with 2.2.0, we use `magento/ece-tools` to update {{site.data.var.ece}} with new features and fixes and to update build and deploy processes.
+To upgrade and test {{site.data.var.ece}} (including patches and hotfixes), see [Magento企业版(云支持版)升级]({{ page.baseurl }}/cloud/project/project-upgrade.html). Starting with 2.2.0, we use `magento/ece-tools` to update {{site.data.var.ece}} with new features and fixes and to update build and deploy processes.
 
 Available patches are in the `vendor/magento/ece-patches` folder.
 

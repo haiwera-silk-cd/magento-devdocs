@@ -132,7 +132,7 @@ Magento\Framework\Model\Entity\MetadataPool::getMetadata(Magento\Catalog\Api\Dat
 ### Form initialization changes
 
 * A form is built with UI components ([more info about a form component][]).
-* The form is extended using a form configuration file [`<magento2>/app/code/Magento/Catalog/view/adminhtml/ui_component/category_form.xml`][] (see [Overview of UI components][]).
+* The form is extended using a form configuration file [`<magento2>/app/code/Magento/Catalog/view/adminhtml/ui_component/category_form.xml`][] (see [UI组件概述][]).
 * A data provider `\Magento\Catalog\Model\Category\DataProvider` is used to set data and fields {% glossarytooltip 3f0f2ef1-ad38-41c6-bd1e-390daaa71d76 %}metadata{% endglossarytooltip %} for the form.
 * Default form data is now a part of metadata that is fetched from the `\Magento\Catalog\Model\Category\DataProvider`.
 
@@ -149,7 +149,7 @@ When **Products -> Categories** menu item in the {% glossarytooltip 18b930cf-09c
 
 [{{site.data.var.ce}} backward incompatible changes]: {{ page.baseurl }}/release-notes/backward-incompatible-changes/open-source.html
 [{{site.data.var.ee}} backward incompatible changes]: {{ page.baseurl }}/release-notes/backward-incompatible-changes/commerce.html
-[Overview of UI components]: {{ page.baseurl }}/ui-components/ui-definition.html
+[UI组件概述]: {{ page.baseurl }}/ui-components/ui-definition.html
 [more info about a form component]: {{ page.baseurl }}/ui-components/ui-form.html
 
 <!-- ABBREVIATIONS -->

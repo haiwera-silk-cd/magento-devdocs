@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Configure environments
+title: 配置环境
 version: 2.1
 github_link: cloud/env/environments.md
 redirect_from:

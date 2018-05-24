@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Verify split databases
-menu_title: Verify split databases
+title: 数据库分库验证
+menu_title: 数据库分库验证
 menu_order: 5
 menu_node:
 version: 2.2
@@ -47,4 +47,4 @@ You must back up the two additional database instances manually. Magento backs u
 
 
 #### 下一步 (optional)
-[Set up optional database replication]({{ page.baseurl }}/config-guide/multi-master/multi-master_slavedb.html)
+[设置可选数据库复制]({{ page.baseurl }}/config-guide/multi-master/multi-master_slavedb.html)

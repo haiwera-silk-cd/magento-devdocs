@@ -20,7 +20,7 @@ Before starting migration, make sure the following requirements are met.
 
 	Use a topology and design that at least matches your existing Magento 1 system.
 
-*	[Install Magento 2]({{ page.baseurl }}/install-gde/bk-install-guide.html){:target="_blank"}.
+*	[安装Magento 2]({{ page.baseurl }}/install-gde/bk-install-guide.html){:target="_blank"}.
 
 ## Cron
 

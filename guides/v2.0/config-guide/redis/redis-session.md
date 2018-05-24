@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Redis
-title: Use Redis for session storage
-menu_title: Use Redis for session storage
+title: 使用Redis作为Session存储
+menu_title: 使用Redis作为Session存储
 menu_order: 10
 menu_node:
 version: 2.0
@@ -169,5 +169,5 @@ where
 
 #### 相关主题
 
- *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
+ *  <a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
  *  <a href="{{ page.baseurl }}/config-guide/config/config-php.html">Magento的布署配置</a>

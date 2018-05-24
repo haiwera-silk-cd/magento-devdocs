@@ -1,6 +1,6 @@
 ---
 group: perf-best-practices
-title: Software recommendations
+title: 软件推荐
 version: 2.2
 github_link: performance-best-practices/software.md
 functional_areas:
@@ -126,7 +126,7 @@ Parameter | Default | Description
 
 Magento highly recommends using Varnish as the full page cache server for your store. The PageCache module is still present in the codebase, but it should be used for development purposes only. It should not be used together with, or instead of, Varnish.
 
-Install Varnish on a separate server in front of the web tier. It should accept all incoming requests and provide cached page copies. To allow Varnish to work effectively with secured pages, an SSL termination proxy can be placed in front of Varnish. Nginx can be used for this purpose.
+安装Varnish on a separate server in front of the web tier. It should accept all incoming requests and provide cached page copies. To allow Varnish to work effectively with secured pages, an SSL termination proxy can be placed in front of Varnish. Nginx can be used for this purpose.
 
 Magento distributes a sample configuration file for Varnish (versions 4 and 5) that contains all recommended settings for performance. Among them the most critical in terms of performance are:
 
@@ -134,7 +134,7 @@ Magento distributes a sample configuration file for Varnish (versions 4 and 5) t
 * **Grace mode** allows you to instruct Varnish to keep an object in cache beyond its Time to Live (TTL) period and serve this stale content if Magento is not healthy or if fresh content hasn’t been fetched yet.
 * **Saint mode** blacklists unhealthy Magento servers for a configurable amount of time. As a result, unhealthy backends cannot serve traffic when using Varnish as a load balancer.
 
-See [Advanced Varnish configuration]({{ page.baseurl }}/config-guide/varnish/config-varnish-advanced.html) for more information about implementing these features.
+See [Varnish高级配置]({{ page.baseurl }}/config-guide/varnish/config-varnish-advanced.html) for more information about implementing these features.
 
 ### Optimize asset performance
 

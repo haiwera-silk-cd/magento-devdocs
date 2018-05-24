@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: Register your component
-menu_title: Register your component
+title: 注册你的组件
+menu_title: 注册你的组件
 menu_order: 4000
 version: 2.1
 github_link: extension-dev-guide/build/component-registration.md
@@ -79,4 +79,4 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_AdminNotificat
 {%endhighlight %}
 
 #### Next
-[URN schema validation]({{ page.baseurl }}/extension-dev-guide/build/XSD-XML-validation.html)
+[统一资源名称(URN)验证]({{ page.baseurl }}/extension-dev-guide/build/XSD-XML-validation.html)

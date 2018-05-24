@@ -29377,7 +29377,7 @@ module.exports = property;
 
 },{"../internal/baseProperty":89,"../internal/basePropertyDeep":90,"../internal/isKey":126}],160:[function(require,module,exports){
 /**
- * Module dependencies.
+ * 模块依赖.
  */
 
 var Emitter = require('emitter');

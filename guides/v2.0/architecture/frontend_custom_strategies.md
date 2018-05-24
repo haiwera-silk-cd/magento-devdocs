@@ -1,15 +1,15 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Ease of frontend customization
-menu_title: Ease of frontend customization
+title: 容易的前端定制
+menu_title: 容易的前端定制
 menu_node:
 menu_order:
 version: 2.0
 github_link: architecture/frontend_custom_strategies.md
 ---
 
-## 概述{#m2arch-whatis-overview}
+## 概述 {#m2arch-whatis-overview}
 
 The Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} is designed to optimize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} customization, with highly extensible <i>themes</i> being the central customization mechanism.
 
@@ -61,7 +61,7 @@ See <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理�
 
 ## Related topics {#m2arch-related}
 
-<a href="{{ page.baseurl }}/architecture/extensibility.html">Extensibility and modularity</a>
+<a href="{{ page.baseurl }}/architecture/extensibility.html">可扩展和模块化</a>
 
 <a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">Global extensibility features</a>
 

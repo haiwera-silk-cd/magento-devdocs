@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Adding a custom indexer
-menu_title: Adding a custom indexer
+title: 添加自定义索引
+menu_title: 添加自定义索引
 menu_order: 15
 version: 2.0
 level3_menu_node: level3child
@@ -10,7 +10,7 @@ level3_subgroup: index
 github_link: extension-dev-guide/indexing-custom.md
 ---
 
-## Adding a custom indexer {#m2devgde-indexing-custom}
+## 添加自定义索引 {#m2devgde-indexing-custom}
 This topic discusses how to create a custom indexer. We've recently made a performance improvment that enables you to declare one or more *shared* indexers; if one of the shared indexes is already up-to-date, it doesn't need to be reindexed.
 
 To implement your own indexer, add the following code in your module:

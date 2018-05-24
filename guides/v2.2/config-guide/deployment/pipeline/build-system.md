@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Build System Setup
-menu_title: Build System Setup
+title: 构建系统设置
+menu_title: 构建系统设置
 menu_node:
 menu_order: 1400
 version: 2.2

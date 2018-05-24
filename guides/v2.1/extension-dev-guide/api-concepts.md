@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Public interfaces & APIs
-menu_title: Public interfaces & APIs
+title: 公共接口和API
+menu_title: 公共接口和API
 menu_order: 3
 version: 2.1
 github_link: extension-dev-guide/api-concepts.md

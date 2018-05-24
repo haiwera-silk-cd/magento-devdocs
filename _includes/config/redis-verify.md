@@ -20,7 +20,7 @@ If you use Redis for session storage, you'll see output similar to the following
 	
 	... more ...
 
-#### Page caching
+#### 页面缓存
 If you use Redis for page caching, you'll see output similar to the following:
 
 	1476826133.810090 [0 127.0.0.1:52366] "select" "1"

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: How Varnish caching works
-menu_title: How Varnish caching works
+title: Varnish缓存是如何工作的
+menu_title: Varnish缓存是如何工作的
 menu_order: 105
 menu_node:
 version: 2.0

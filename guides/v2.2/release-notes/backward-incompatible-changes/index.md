@@ -309,7 +309,7 @@ Write an [upgrade script]({{ page.baseurl }}/ext-best-practices/tutorials/serial
 **See:**
 
 * [Serialize to JSON data upgrade]({{ page.baseurl }}/ext-best-practices/tutorials/serialized-to-json-data-upgrade.html)
-* [Serialize Library]({{ page.baseurl }}/extension-dev-guide/framework/serializer.html)
+* [序列化库]({{ page.baseurl }}/extension-dev-guide/framework/serializer.html)
 
 ## Database field changes
 

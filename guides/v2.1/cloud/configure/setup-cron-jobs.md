@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Set up cron jobs
+title: 设置定时任务
 version: 2.1
 github_link: cloud/configure/setup-cron-jobs.md
 functional_areas:
@@ -15,8 +15,8 @@ Magento uses cron jobs for numerous features to schedule activities. You can add
 The following links provide more information on crons for {{site.data.var.ee}}. You can use this information for setting up and understanding cron jobs in Magento. When you want to add cron jobs for {{site.data.var.ece}}, you manage all crons through `.magento.app.yaml`. For more information, review this topic.
 
 *   [Set up cron]({{ page.baseurl }}/install-gde/install/post-install-config.html)
-*   [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
-*   [Set up a custom cron job and cron group]({{ page.baseurl }}/config-guide/cron/custom-cron.html)
+*   [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
+*   [设置自定义的定时任务和任务组(cron)]({{ page.baseurl }}/config-guide/cron/custom-cron.html)
 
 ## Build a cron job {#build}
 A cron job includes the specification for scheduling and timing and the command to run at that time. For example, the general format is: `* * * * * <command>`

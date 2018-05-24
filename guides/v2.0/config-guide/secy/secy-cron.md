@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 02_Security
-title: Secure cron.php to run in a browser
-menu_title: Secure cron.php to run in a browser
+title: 确保cron.php文件在浏览器上的安全
+menu_title: 确保cron.php文件在浏览器上的安全
 menu_order: 2
 menu_node:
 version: 2.0
@@ -23,7 +23,7 @@ The Magento cron job runs a number of scheduled tasks and is a vital part of you
 -   Generating sitemaps
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Refer to [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html#config-cli-cron-group-run) for more information about cron groups.
+Refer to [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html#config-cli-cron-group-run) for more information about cron groups.
 </div>
 
 You can run a Magento cron job in the following ways:
@@ -258,5 +258,5 @@ For example,
 	http://magento.example.com/magento2/pub/cron.php?group=index
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-You must run cron twice: first to discover tasks to run and again to run the tasks themselves. Refer to [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html#config-cli-cron-group-run) for more information about cron groups.
+You must run cron twice: first to discover tasks to run and again to run the tasks themselves. Refer to [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html#config-cli-cron-group-run) for more information about cron groups.
 </div>

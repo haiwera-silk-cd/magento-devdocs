@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Redis
-title: Configure Redis
-menu_title: Configure Redis
+title: 配置Redis
+menu_title: 配置Redis
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -64,5 +64,5 @@ You can find more information about configuring Redis from the following:
 
 #### Next
 
-*	<a href="{{ page.baseurl }}/config-guide/redis/redis-pg-cache.html">Use Redis for the Magento page and default cache</a>
+*	<a href="{{ page.baseurl }}/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
 *	<a href="{{ page.baseurl }}/config-guide/redis/redis-session.html">使用redis存储session数据</a>

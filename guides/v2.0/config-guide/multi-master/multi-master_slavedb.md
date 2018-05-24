@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Set up optional database replication
-menu_title: Set up optional database replication
+title: 设置可选数据库复制
+menu_title: 设置可选数据库复制
 menu_order: 10
 menu_node:
 version: 2.0

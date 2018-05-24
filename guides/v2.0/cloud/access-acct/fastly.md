@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up Fastly
-menu_title: Set up Fastly
+title: 快速设置
+menu_title: 快速设置
 menu_order: 5
 menu_node:
 version: 2.0
@@ -23,7 +23,7 @@ The process for configuring Fastly includes:
 
 * Install Fastly module in Integration
 * Deploy code across Staging and Production
-* Configure Fastly credentials and settings
+* 快速配置 credentials and settings
 * Advanced configurations including VCL snippets
 
 ## Multiple Fastly accounts and assigned domains {#domain}
@@ -207,7 +207,7 @@ To create a custom error/maintenance page:
 5.	Click **Save Config** at the top of the page.
 
 ## Create custom VCL snippets {#custom-vcl}
-For extensive instructions to create custom VCL snippets and needed edge dictionaries or ACLs, see [Custom Fastly VCL snippets]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html)
+For extensive instructions to create custom VCL snippets and needed edge dictionaries or ACLs, see [快速定制VCL片段]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html)
 
 ## Extend Fastly timeout for the Magento Admin {#bulkaction}
 Fastly sets a 180 second-timeout for HTTPS requests to the Magento Admin, so you may encounter timeouts if you need to complete bulk actions that take longer than 3 minutes. You can manage timeouts using Fastly 1.2.41.
@@ -258,7 +258,7 @@ Another option for apex domain is to add A records, which maps a domain name to 
 * `151.101.129.124`
 * `151.101.193.124`
 
-Refer to [Go live checklist]({{ page.baseurl }}/cloud/live/go-live-checklist.html) for more information.
+Refer to [上线检查]({{ page.baseurl }}/cloud/live/go-live-checklist.html) for more information.
 
 ### TLS and Fastly {#fastly-tls}
 If you use TLS with Fastly enabled in your environment, you must provide your DNS provider with a TXT record from Fastly. We provide a Domain Validated SSL certificate with Subject Alternative Name enabled, issued by GLobalSign. When entering your [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) for [DNS information](#fastly-dns) and going live, let us know you are using TLS, provide your domain names, and request the TXT record. You can then send this record to your DNS provider. The domain validation process is executed by Fastly.
@@ -277,4 +277,4 @@ When you upgrade, the default VCL snippets you uploaded should not be affected o
 
 For information on upgrading modules, refer to [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html).
 
-If you created a custom VCL snippet using the same name as a default snippet, you may need to verify and update those snippets. We do not recommend replacing existing default snippets with custom snippets of the same name. For details on custom VCL, see [Custom Fastly VCL snippets]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
+If you created a custom VCL snippet using the same name as a default snippet, you may need to verify and update those snippets. We do not recommend replacing existing default snippets with custom snippets of the same name. For details on custom VCL, see [快速定制VCL片段]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).

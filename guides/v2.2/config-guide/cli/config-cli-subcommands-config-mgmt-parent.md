@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Configuration management
-menu_title: Configuration management
+title: 配置管理
+menu_title: 配置管理
 menu_order: 250
 menu_node:
 level3_menu_node: level3parent

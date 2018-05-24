@@ -1,6 +1,6 @@
 ---
 group: fedg
-title: Templates basic concepts
+title: 模板基本概念
 version: 2.1
 github_link: frontend-dev-guide/templates/template-override.md
 redirect_from: /guides/v1.0/frontend-dev-guide/templates/template-override.html

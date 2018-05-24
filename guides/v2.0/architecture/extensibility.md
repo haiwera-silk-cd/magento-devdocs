@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Extensibility and modularity
-menu_title: Extensibility and modularity
+title: 可扩展和模块化
+menu_title: 可扩展和模块化
 menu_node:
 menu_order:
 version: 2.0
@@ -13,7 +13,7 @@ github_link: architecture/extensibility.md
 
 Product <i>extensibility</i> describes how easy it is to expand a product's feature set. An extensible product has been designed from its earliest  stages for customization and enhancement. Extensible products are designed for ease in expanding your installation's feature set, enriching current features, and integrating with third-party software.
 
-Maximizing extensibility has been our goal through all aspects of Magento development. Core tasks such as shipping are packaged as discrete modules, and you expand your features by installing modules that you either buy from third-party vendors or create yourself. While logic specific to each {% glossarytooltip b51bd4e9-7174-4ca0-83a0-1a895c9fc9e8 %}shipping carrier{% endglossarytooltip %} is packaged in a discrete module, you can easily add or delete shipping providers by simply adding or deleting modules. The Magento Framework provides common logic to control routing and other core application functions.
+Maximizing extensibility has been our goal through all aspects of Magento development. Core tasks such as shipping are packaged as discrete modules, and you expand your features by installing modules that you either buy from third-party vendors or create yourself. While logic specific to each {% glossarytooltip b51bd4e9-7174-4ca0-83a0-1a895c9fc9e8 %}shipping carrier{% endglossarytooltip %} is packaged in a discrete module, you can easily add or delete shipping providers by simply adding or deleting modules. The Magento框架 provides common logic to control routing and other core application functions.
 
 ## What makes a product extensible?
 
@@ -35,12 +35,12 @@ Adherence to standard best practices for {% glossarytooltip bf703ab1-ca4b-48f9-b
 
 ### Upgrade and versioning strategies
 
-Magento has well-defined upgrade and versioning strategies that can help you avoid any problems with software component dependencies. Add modules after confirming that the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} version is compatible with the Magento Framework version.
+Magento has well-defined upgrade and versioning strategies that can help you avoid any problems with software component dependencies. Add modules after confirming that the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} version is compatible with the Magento框架 version.
 
 ## Related topics {#m2arch-related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">Architectural basics</a>
 
-<a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">Global features that support extensibility</a>
+<a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">全局可扩展的特性</a>
 
-<a href="{{ page.baseurl }}/architecture/frontend_custom_strategies.html">Ease of frontend customization</a>
+<a href="{{ page.baseurl }}/architecture/frontend_custom_strategies.html">容易的前端定制</a>

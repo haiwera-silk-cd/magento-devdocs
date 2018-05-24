@@ -22,16 +22,16 @@ functional_areas:
 {{site.data.var.ece}} supports variables for environments, projects, and applications. These variables affect all aspects of build, deployment, and configuration settings.
 
 * [Magento application environment variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html)
-* [Magento Commerce (Cloud) environment variables]({{ page.baseurl }}/cloud/env/environment-vars_cloud.html)
+* [Magento企业版(云支持版) environment variables]({{ page.baseurl }}/cloud/env/environment-vars_cloud.html)
 
 You can create all variables using the Magento Cloud CLI in all Starter environments and Pro Integration environments. You can create environment variables through the Project Web Interface for all Starter and Pro environments (created after October 23, 2017 or [updated]({{ page.baseurl }}/cloud/trouble/pro-env-management.html)).
 
 ## Additional information {#magevar}
 For additional information on Magento variables for v2.1.X and later, see the following:
 
-* [Sensitive and system-specific](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-sens.html)
+* [敏感的和系统特定的](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-sens.html)
 * [Sensitive configuration paths reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-payment.html)
-* [Other configuration paths reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-most.html)
+* [其它配置路径参考](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-most.html)
 * [System settings reference](http://devdocs.magento.com/guides/v2.1/config-guide/prod/config-reference-var-name.html)
 
 To use a configuration path as a variable:
@@ -40,7 +40,7 @@ To use a configuration path as a variable:
 *	Prefix the configuration path with the scope (the default scope, `CONFIG__DEFAULT`, or a specific scope).
 *	Replace `/` characters in the configuration path with two underscore characters.
 
-## Environment variables {#cloud-env-set-vars}
+## 环境变量 {#cloud-env-set-vars}
 {{site.data.var.ece}} enables you to create environment variables that override configuration options. For example, we strongly recommend you *immediately* change your Magento Admin URI and administrative user's password to prevent someone guessing your login and changing settings without your knowledge.
 
 We support the following types of variables:
@@ -54,7 +54,7 @@ Environment variable names must use the characters `a-z`, `A-Z`, `0-9`, and `.`,
 
 Platform variables that are expressed as base64-encoded JSON object can be up to 4KB in size.
 
-Environment variables have an `env` {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.
+环境变量 have an `env` {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Variables are <em>hierarchical</em>, which means that if a variable is not overridden, it is inherited from the parent environment and is indicated as <code>inherited</code>.</p>

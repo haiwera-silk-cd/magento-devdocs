@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 03_Bootstrap
-title: Set the value of bootstrap parameters
-menu_title: Set the value of bootstrap parameters
+title: 设置引导参数
+menu_title: 设置引导参数
 menu_order: 2
 menu_node:
 version: 2.0
@@ -171,6 +171,6 @@ After setting the mode, restart the web server:
 
 #### 相关主题
 
-*	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-dirs.html">Customize base directory paths (MAGE_DIRS)</a>
-*	<a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">Set the Magento mode</a>
+*	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
+*	<a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
 *	<a href="{{ page.baseurl }}/config-guide/bootstrap/mage-profiler.html">Enable an dependency graphs and built-in profiler (MAGE_PROFILER)</a>

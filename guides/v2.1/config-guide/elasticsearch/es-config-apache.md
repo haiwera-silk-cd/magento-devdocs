@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 14_Elastic
-title: Configure Apache and Elasticsearch
-menu_title: Configure Apache and Elasticsearch
+title: 配置Apache和Elasticsearch
+menu_title: 配置Apache和Elasticsearch
 menu_order: 7
 menu_node:
 version: 2.1
@@ -19,7 +19,7 @@ functional_areas:
 
 *	[Overview of secure web server communication](#es-ws-secure-over)
 *	[Set up a proxy](#es-apache-proxy)
-*	[Configure Magento to use Elasticsearch](#elastic-m2-configure)
+*	[配置Magento使用Elasticsearch](#elastic-m2-configure)
 *	[Secure communication with Apache](#es-ws-secure-apache)
 *	[Verify communication is secure](#es-ws-secure-verify)
 
@@ -73,7 +73,7 @@ This section discusses how to configure an Elasticsearch proxy using a virtual h
 		Connection: keep-alive
 
 		{"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}
-6.	Continue with [Configure Magento to use Elasticsearch](#elastic-m2-configure).
+6.	Continue with [配置Magento使用Elasticsearch](#elastic-m2-configure).
 
 ### Set up a proxy for Apache 2.2 {#es-apache-proxy-22}
 This section discusses how to configure an Elasticsearch proxy using a virtual host.
@@ -113,7 +113,7 @@ This section discusses how to configure an Elasticsearch proxy using a virtual h
 
 		{"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}
 
-## Configure Magento to use Elasticsearch {#elastic-m2-configure}
+## 配置Magento使用Elasticsearch {#elastic-m2-configure}
 
 {% include config/es-elasticsearch-magento.md %}
 
@@ -167,4 +167,4 @@ This section discusses how to specify who can access the Apache server.
 {% include config/es-verify-proxy.md %}
 
 #### Next
-<a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">Configure Elasticsearch stopwords</a>
+<a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>

@@ -14,7 +14,7 @@ functional_areas:
 
 <div class="flow-intro" markdown="1">
 Continue From:<br />
-**Install Magento**
+**安装Magento**
 </div>
 
 <div class="flow-arrow"> </div>
@@ -29,8 +29,8 @@ In the Magento root directory, run:
 
 See
 
-* [About Magento modes]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html)
-* [Get started with command-line configuration]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html)
+* [关于Magento的模式]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html)
+* [命令行配置起步]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html)
 
 <div class="bs-callout bs-callout-tip" markdown="1">
 To check the current mode of your Magento instance, in the root directory, run:

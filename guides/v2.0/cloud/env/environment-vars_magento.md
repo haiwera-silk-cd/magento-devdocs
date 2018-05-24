@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Application variables
+title: 应用程序变量
 version: 2.0
 github_link: cloud/env/environment-vars_magento.md
 functional_areas:
@@ -142,7 +142,7 @@ The following variables are available during the deploy process of build and dep
 </tr></tbody>
 </table>
 
-For information on the build and deploy process, see [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
+For information on the build and deploy process, see [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 ## Add environment variables {#addvariables}
 You can add environment variables for active environments through the Project Web Interface and through the Magento Cloud CLI. To create variables through the Project Web Interface, see [Set environment variables]({{ page.baseurl }}/cloud/project/project-webint-basic.html#project-conf-env-var).
@@ -168,4 +168,4 @@ In the event something goes wrong and you can not access your environment after 
         magento-cloud snapshot:list
         magento-cloud snapshot:restore <snapshot>
 
-For more information on snapshots, see [Snapshots and backup management]({{ page.baseurl }}/cloud/project/project-webint-snap.html).
+For more information on snapshots, see [快照和备份管理]({{ page.baseurl }}/cloud/project/project-webint-snap.html).

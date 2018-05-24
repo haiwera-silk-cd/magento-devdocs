@@ -79,6 +79,6 @@ For example:
 
 <ul>
 <li><a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">翻译概述</a></li>
-<li><a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">Translation dictionaries and language packages</a></li>
+<li><a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">翻译字典和语言包</a></li>
 <li><a href="{{ page.baseurl }}/frontend-dev-guide/translations/theme_dictionary.html">Using translation dictionary to customize strings</a></li>
 </ul>

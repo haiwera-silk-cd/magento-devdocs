@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Technologies and requirements
+title: 技术和要求
 version: 2.2
 github_link: cloud/requirements/cloud-requirements.md
 redirect_from:
@@ -135,7 +135,7 @@ The Account Owner creates the initial {{site.data.var.ece}} account with a purch
 
 To work with and deploy stores, you need the following:
 
-*	[Magento Commerce (Cloud) account]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#cloud-first-acct) already created or created via an invitation
+*	[Magento企业版(云支持版) account]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#cloud-first-acct) already created or created via an invitation
 *	[Project invitiation]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#users) for contributing developers from the Account Owner or a super user
 *	[Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html) for each user who contributes to the project
 

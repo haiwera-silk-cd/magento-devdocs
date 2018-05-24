@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Deploy code and migrate static files and data
+title: 部署代码并迁移静态文件和数据
 version: 2.0
 github_link: cloud/live/stage-prod-migrate.md
 functional_areas:
@@ -9,7 +9,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Prepare to deploy to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
+[准备部署准生产和生产环境]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
 
 To migrate your database and static files to Staging and Production:
 
@@ -204,4 +204,4 @@ After migrating the database, you can set up your stored procedures or views in 
 </div>
 
 #### 下一步
-[Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
+[测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html)

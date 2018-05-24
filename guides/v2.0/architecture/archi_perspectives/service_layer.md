@@ -1,15 +1,15 @@
 ---
 group: arch-guide
 subgroup: Architectural Layers
-title: Service layer
-menu_title: Service layer
+title: 服务层
+menu_title: 服务层
 menu_order: 2
 version: 2.0
 github_link: architecture/archi_perspectives/service_layer.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/service_layer.html
 ---
 
-## What is a Service layer?
+## What is a 服务层?
 
 The service layer provides a bridge between the presentation layer and the model layer of {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}domain{% endglossarytooltip %} logic and resource-specific data.
 This is implemented using *service contracts*, which are defined using {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} interfaces.
@@ -67,7 +67,7 @@ However, there is no requirement that service contracts conform to all three pat
 
 ## Advantages of service contracts
 
-Service contracts allow you to add a new customer {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} that adds or changes business logic-level resource models without breaking the system.
+服务约定 allow you to add a new customer {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} that adds or changes business logic-level resource models without breaking the system.
 
 This is done using the *&lt;preference&gt;* element in a custom module's {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration file (`di.xml`) file.
 
@@ -78,9 +78,9 @@ However, if the client code uses the interface definition only, no class change 
 
 ## Related topics {#related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">Architectural diagrams</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">Architectural layers overview</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/ALayers_intro.html">分层架构概述</a>
 
 [catalog-api]: {{ site.mage2000url }}app/code/Magento/Customer/Api
 [catalog-api-data]: {{ site.mage2000url }}app/code/Magento/Customer/Api/Data

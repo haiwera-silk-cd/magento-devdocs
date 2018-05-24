@@ -1,8 +1,8 @@
 ---
 group: release-notes
 subgroup: Third-party licenses
-menu_title: Magento Commerce (Cloud) third-party licenses
-title: Magento Commerce (Cloud) third-party licenses
+menu_title: Magento企业版(云支持版) third-party licenses
+title: Magento企业版(云支持版) third-party licenses
 menu_order: 3
 version: 2.2
 github_link: release-notes/thirdparty-mccloud.md

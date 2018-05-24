@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: Create your component file structure
-menu_title: Create your component file structure
+title: 创建你的组件文件结构
+menu_title: 创建你的组件文件结构
 menu_order: 3000
 version: 2.0
 github_link: extension-dev-guide/build/module-file-structure.md
@@ -101,4 +101,4 @@ For more details on the theme folder structure, see [Magento主题的结构]({{ 
 
 **Next**
 
-[Register your component]({{ page.baseurl }}/extension-dev-guide/build/component-registration.html)
+[注册你的组件]({{ page.baseurl }}/extension-dev-guide/build/component-registration.html)

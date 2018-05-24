@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 26_CE-EEUpgrade
-title: Upgrade from Open Source to Commerce
-menu_title: Upgrade from Open Source to Commerce
+title: 升级开源版到企业版
+menu_title: 升级开源版到企业版
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -30,7 +30,7 @@ In addition, you might need to install the {% glossarytooltip bf703ab1-ca4b-48f9
 	<p>Make sure you are authorized for {{site.data.var.ee}} access before you continue. Contact <a href="http://support.magentocommerce.com" target="_blank">Magento Support</a> if you have questions.</p>
 </div>
 
-<h2 id="compman-access">Start System Upgrade from the Magento Admin</h2>
+<h2 id="compman-access">开始系统升级 from the Magento Admin</h2>
 To run System Upgrade:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
@@ -66,9 +66,9 @@ After the upgrade completes, restart Varnish if you use it for page caching.
 		setup:upgrade {"command":"setup:upgrade"} successfully: Source 
 		class "\Cybersource" for "CybersourceLogger" generation does not exist.
 
-	For more information, see <a href="{{ page.baseurl }}/comp-mgr/trouble/cman/ce-ee-upgrade.html">Error upgrading from CE to EE</a>.
+	For more information, see <a href="{{ page.baseurl }}/comp-mgr/trouble/cman/ce-ee-upgrade.html">社区版升级到企业版发生错误</a>.
 
 
 
 <h2 id="ce-ee-continue">Continue your upgrade</h2>
-From here, your upgrade is the same as any other upgrade. Continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-main-pg.html">Step 1. Select versions to upgrade</a>.
+From here, your upgrade is the same as any other upgrade. Continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-main-pg.html">步骤 1. 选择要升级的版本</a>.

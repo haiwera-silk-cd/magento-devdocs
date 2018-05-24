@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: Versioning
-title: Module version dependencies
-menu_title: Module version dependencies
+title: 模块版本依赖
+menu_title: 模块版本依赖
 menu_order: 1200
 version: 2.0
 github_link: extension-dev-guide/versioning/dependencies.md

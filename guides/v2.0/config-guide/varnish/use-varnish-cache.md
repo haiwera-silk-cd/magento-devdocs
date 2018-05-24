@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: How Magento cache clearing works with Varnish
-menu_title: How Magento cache clearing works with Varnish
+title: 在Varnish下Magento的缓存清除是如何工作的
+menu_title: 在Varnish下Magento的缓存清除是如何工作的
 menu_order: 100
 menu_node:
 version: 2.0

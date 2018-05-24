@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Application variables
+title: 应用程序变量
 version: 2.2
 github_link: cloud/env/environment-vars_magento.md
 functional_areas:

@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Layers
-title: Architectural layers overview
-menu_title: Architectural layers
+title: 分层架构概述
+menu_title: 架构的分层
 menu_node: parent
 menu_order:
 version: 2.0
@@ -30,12 +30,12 @@ Layered application design offers many advantages, but users of Magento will app
 
 ## Related topics
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">Architectural diagrams</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/present_layer.html">Presentation layer</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">Service layer</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/domain_layer.html">Domain layer</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/domain_layer.html">领域层</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/persist_layer.html">Persistence layer</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/persist_layer.html">持久层</a>

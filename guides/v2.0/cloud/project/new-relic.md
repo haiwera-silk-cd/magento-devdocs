@@ -10,7 +10,7 @@ functional_areas:
   - Services
 ---
 
-The software analytics product [New Relic for application performance management (APM)](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm){:target="\_blank"} helps you to analyze and improve application interactions. Each {{site.data.var.ece}} plan includes a New Relic APM license that supports up to three instances across all environments. You do not need to purchase or install the New Relic extension (different than the APM service). For plan details, see [Subscriptions and plans]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html).
+The software analytics product [New Relic for application performance management (APM)](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm){:target="\_blank"} helps you to analyze and improve application interactions. Each {{site.data.var.ece}} plan includes a New Relic APM license that supports up to three instances across all environments. You do not need to purchase or install the New Relic extension (different than the APM service). For plan details, see [订阅和计划]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html).
 
 ## Key features {#features}
 

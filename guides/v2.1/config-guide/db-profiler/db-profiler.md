@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 13_DBProfiler
-title: Configure the database profiler
-menu_title: Configure the database profiler
+title: 配置数据库分析器
+menu_title: 配置数据库分析器
 menu_order: 1
 menu_node: parent
 version: 2.1

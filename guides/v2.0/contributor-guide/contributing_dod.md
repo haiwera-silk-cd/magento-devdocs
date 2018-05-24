@@ -55,7 +55,7 @@ Any backwards-incompatible changes must also be recorded in the accompanying doc
 Code changes must be covered by automated tests according to Classification of Magento Automated Tests.
 
 Before committing code changes, author must ensure successful execution of all tests by running all tests or at least those which might be affected by code changes.
-Continuous integration enforces execution of all tests and author is accountable for broken builds.
+持续集成 enforces execution of all tests and author is accountable for broken builds.
 
 #### Functional Tests
 Must cover new or changed application behavior (functional).

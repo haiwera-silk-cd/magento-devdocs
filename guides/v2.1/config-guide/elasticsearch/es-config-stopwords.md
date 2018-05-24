@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 14_Elastic
-title: Configure Elasticsearch stopwords
-menu_title: Configure Elasticsearch stopwords
+title: 配置Elasticsearch停用词
+menu_title: 配置Elasticsearch停用词
 menu_order: 10
 menu_node:
 version: 2.1

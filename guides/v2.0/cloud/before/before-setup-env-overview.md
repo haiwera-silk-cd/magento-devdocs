@@ -18,12 +18,12 @@ The steps in this section provide an order for setting up your local environment
 * Set up SSH keys (could have been completed with your workspace setup)
 * Clone the Magento Project, or master Git branch
 * Set up authentication keys for Magento and Git
-* Set up cron jobs for Magento
+* 设置定时任务 for Magento
 * Clone or create a Git branch from master
-* Install Magento locally (two options available)
+* 安装Magento locally (two options available)
 * Set file system permissions and ownership
 
-On your local, you will add extensions, develop and add any custom code, export configurations, and any additional work to iterate through code changes. Using Git processes with GitHub repos, push changes to your branch, test in the Integration development environment, prior to deployments for staging and production testing. For more information on the develop and deploy process, see the [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
+On your local, you will add extensions, develop and add any custom code, export configurations, and any additional work to iterate through code changes. Using Git processes with GitHub repos, push changes to your branch, test in the Integration development environment, prior to deployments for staging and production testing. For more information on the develop and deploy process, see the [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 #### 下一步
 [Step 1, Get started setting up an environment]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)

@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Install, manage, and upgrade extensions
+title: 安装、管理和升级扩展
 version: 2.1
 github_link: cloud/howtos/install-components.md
 redirect_from:
@@ -189,4 +189,4 @@ To update an extension:
     
 1.  Wait for the project to deploy and verify in your environment.
 
-If there are errors, see [Component deployment failure]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).
+If there are errors, see [组件部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).

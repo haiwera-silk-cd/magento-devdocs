@@ -1,6 +1,6 @@
 ---
 group: pattern
-subgroup: Displaying and Dealing with Data
+subgroup: 数据的展示和处理
 title: 管理面板用到的设计模式和库
 menu_title: Tree
 menu_order: 3

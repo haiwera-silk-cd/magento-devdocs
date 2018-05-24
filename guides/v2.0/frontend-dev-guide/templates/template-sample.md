@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title: Illustration of customizing templates
-menu_title: Illustration of customizing templates
+title:自定义模板图解
+menu_title:自定义模板图解
 menu_order: 3
 version: 2.0
 github_link: frontend-dev-guide/templates/template-sample.md

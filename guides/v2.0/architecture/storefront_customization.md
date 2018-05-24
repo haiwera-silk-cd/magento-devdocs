@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Storefront customization strategies
-menu_title: Storefront customization strategies
+title: 网店前台自定义策略
+menu_title: 网店前台自定义策略
 menu_order:
 version: 2.0
 github_link: architecture/storefront_customization.md

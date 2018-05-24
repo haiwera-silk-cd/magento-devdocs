@@ -22,9 +22,9 @@ Immediately after finishing your Magento installation, set up a *crontab* for th
 
 {% include config/setup-cron.md %}
 
-For more information about cron, including how to remove a crontab and run cron from the command line, see [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html).
+For more information about cron, including how to remove a crontab and run cron from the command line, see [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html).
 
-<h2 id="post-install-secy">Security settings</h2>
+<h2 id="post-install-secy">安全设置</h2>
 After installation, we recommend the following:
 
 *	Make sure your file ownership and permissions are set properly
@@ -87,4 +87,4 @@ You can configure the following only if you use {{site.data.var.ee}}:
 
 *	<a href="{{ page.baseurl }}/config-guide/solr/solr-overview.html">Apache Solr search</a>
 *	<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master.html">Split databases for checkout, order management, and other Magento database tables</a>
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message queues</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列</a>

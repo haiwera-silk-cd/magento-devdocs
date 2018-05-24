@@ -1,7 +1,7 @@
 ---
 group: cloud
 subgroup: 020_tech
-title: GitHub integration
+title: Github集成
 menu_title: GitHub
 menu_order: 10
 menu_node:
@@ -12,8 +12,8 @@ functional_areas:
   - Setup
 ---
 
-## About the GitHub integration {#cloud-int-gh-about}
-The GitHub integration enables you to manage your {{site.data.var.ece}} environments directly from your GitHub repository. The integration manages content already in GitHub and synchronizes it with {{site.data.var.ee}}. Therefore, before you begin, make sure your project and environments are in a GitHub repository.
+## About the Github集成 {#cloud-int-gh-about}
+The Github集成 enables you to manage your {{site.data.var.ece}} environments directly from your GitHub repository. The integration manages content already in GitHub and synchronizes it with {{site.data.var.ee}}. Therefore, before you begin, make sure your project and environments are in a GitHub repository.
 
 We strongly recommend you use a *private* GitHub repository.
 
@@ -47,8 +47,8 @@ To generate a token:
 
 	![Create a GitHub token for a private repository]({{ site.magentourl }}/common/images/cloud_github-token-copy.png){:width="600px"}
 
-## Enable the GitHub integration {#cloud-int-gh-enable}
-This section discusses how to enable the GitHub integration.
+## Enable the Github集成 {#cloud-int-gh-enable}
+This section discusses how to enable the Github集成.
 
 ### Get started
 To get started:
@@ -56,7 +56,7 @@ To get started:
 {% include cloud/cli-get-started.md %}
 
 ### Enable the integration
-To enable the GitHub integration for your environment:
+To enable the Github集成 for your environment:
 
 1.	Enable the integration:
 
@@ -76,11 +76,11 @@ To enable the GitHub integration for your environment:
 
 	`--fetch-branches` is an optional parameter that causes Magento Cloud to track branches and deploy after you update a branch (`true` by default)
 
-	**示例1**: Enable the GitHub integration for a personal, private repository:
+	**示例1**: Enable the Github集成 for a personal, private repository:
 
 		magento-cloud integration:add --type=github --project=ov58dlacU2e --token=<token> --repository=myUserName/myrepo
 
-	**Example 2**: Enable the GitHub integration for an organization repository:
+	**Example 2**: Enable the Github集成 for an organization repository:
 
 		magento-cloud integration:add --type=github --project=ov58dlacU2e --token=<token> --repository=Magento/teamrepo
 6.	Enter the required information when prompted.

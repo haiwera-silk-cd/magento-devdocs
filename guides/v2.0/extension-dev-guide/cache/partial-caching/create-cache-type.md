@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
-subgroup: 08_Partial caching
-title: Create a cache type
-menu_title: Create a cache type
+subgroup: 08_部份缓存
+title: 创建缓存类型
+menu_title: 创建缓存类型
 menu_order: 10
 menu_node:
 version: 2.0

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 02_Prepare
-title: About component file structure
-menu_title: About component file structure
+title: 关于组件的文件结构
+menu_title: 关于组件的文件结构
 menu_order: 10
 menu_node:
 version: 2.1
@@ -21,4 +21,4 @@ In addition, you can choose the component root directory to start development. T
 {% include php-dev/component-root.md %}
 
 #### Related topic
-<a href="{{ page.baseurl }}/extension-dev-guide/prepare/dev-summary.html">Roadmap for developing and packaging components</a>
+<a href="{{ page.baseurl }}/extension-dev-guide/prepare/dev-summary.html">开发和打包组件指引</a>

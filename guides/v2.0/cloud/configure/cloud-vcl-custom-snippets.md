@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Custom Fastly VCL snippets
-menu_title: Custom Fastly VCL snippets
+title: 快速定制VCL片段
+menu_title: 快速定制VCL片段
 menu_order: 7
 menu_node:
 version: 2.0
@@ -106,7 +106,7 @@ The following are **best practices and recommendations**:
 
 -   The default VCL snippets you uploaded include a prepended name of `magentomodule_` with a priority of `50`. For your custom VCL snippets, **do not use the `magentomodule_` name**. Also, consider the priority of your custom snippets and whether they should override the default snippets.
 -   Do not forget to _always_ locate and clone the active version, and edit the bash script with the new version! _Version_ is not part of your VCL snippet files.
--   If you want to override values and settings from the [default Fastly VCL snippets](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets){:target="\_blank"}, we recommend creating a new snippet with updated values and code with a higher priority value of `100`. You should not try to override default VCLs. We provide an example for [Custom extend Admin timeout VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-extend-timeout.html).
+-   If you want to override values and settings from the [default Fastly VCL snippets](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets){:target="\_blank"}, we recommend creating a new snippet with updated values and code with a higher priority value of `100`. You should not try to override default VCLs. We provide an example for [VCL自定义延长管理员超时]({{ page.baseurl }}/cloud/configure/fastly-vcl-extend-timeout.html).
 
 ## Export Fastly Service ID and API Token
 You can save Fastly service credentials into the bash environment variables and use them in cURL commands:
@@ -161,11 +161,11 @@ The values include:
 
 For detailed examples and custom code, see the following:
 
--   [Custom whitelist VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-whitelist.html)
--   [Custom blacklist VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-blacklist.html)
--   [Custom extend Admin timeout VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-extend-timeout.html)
+-   [定制VCL白名单]({{ page.baseurl }}/cloud/configure/fastly-vcl-whitelist.html)
+-   [定制VCL黑名单]({{ page.baseurl }}/cloud/configure/fastly-vcl-blacklist.html)
+-   [VCL自定义延长管理员超时]({{ page.baseurl }}/cloud/configure/fastly-vcl-extend-timeout.html)
 -   [Custom redirect to Wordpress VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-wordpress.html)
--   [Custom block bad referer VCL]({{ page.baseurl }}/cloud/configure/fastly-vcl-badreferer.html)
+-   [VCL自定义块坏引用]({{ page.baseurl }}/cloud/configure/fastly-vcl-badreferer.html)
 
 ## Add VCL snippets to Fastly configuration {#add-snippet}
 To upload a prepared VCL snippet:

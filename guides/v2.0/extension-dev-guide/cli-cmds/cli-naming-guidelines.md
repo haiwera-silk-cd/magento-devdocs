@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 65_CLI
-title: Command naming guidelines
-menu_title: Command naming guidelines
+title: 命令命名指南
+menu_title: 命令命名指南
 menu_node:
 menu_order: 2
 version: 2.0
@@ -151,4 +151,4 @@ To avoid naming your command the same as another command, we recommend:
 		dev:myname:theme:delete
 
 #### Related topic
-<a href="{{ page.baseurl }}/extension-dev-guide/cli-cmds/cli-howto.html">How to add CLI commands</a>
+<a href="{{ page.baseurl }}/extension-dev-guide/cli-cmds/cli-howto.html">如何添加命令行命令</a>

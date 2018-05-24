@@ -34,6 +34,6 @@ The best practice is <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme
 This chapter contains the following topics:
 
 * <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-walkthrough.html" target="_blank">Template customization walkthrough</a>
-* <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-override.html" target="_blank">Templates basic concepts</a>
+* <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-override.html" target="_blank">模板基本概念</a>
 * <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-sample.html" target="_blank">Illustration of customizing templates</a>
 * <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-email.html" target="_blank">Customizing email templates</a>

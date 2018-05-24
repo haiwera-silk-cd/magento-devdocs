@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 100_project
-title: Project structure
-menu_title: Project structure
+title: 项目结构
+menu_title: 项目结构
 menu_order: 10
 menu_node:
 version: 2.2

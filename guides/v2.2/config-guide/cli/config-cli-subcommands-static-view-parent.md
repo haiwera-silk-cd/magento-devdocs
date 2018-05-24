@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Static view files deployment
-menu_title: Static view files deployment
+title: 静态视图文件部署
+menu_title: 静态视图文件部署
 menu_order: 300
 menu_node:
 level3_menu_node: level3parent

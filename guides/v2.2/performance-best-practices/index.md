@@ -1,9 +1,9 @@
 ---
 group: perf-best-practices
-title: Performance Best Practices
+title: 最佳高效实践
 version: 2.2
 github_link: performance-best-practices/index.md
-landing-page: Performance Best Practices
+landing-page: 最佳高效实践
 redirect_from: /guides/v2.2/config-guide/prod/prod_perf-optimize.html
 functional_areas:
   - Configuration
@@ -11,7 +11,7 @@ functional_areas:
   - Setup
 ---
 
-_Performance Best Practices_ provides recommendations and instructions for optimizing the performance of your production deployment. Technical users who are responsible for maintaining stores in production mode should use the best practices described in this guide to help ensure your stores are running at peak efficiency at all times.
+_最佳高效实践_ provides recommendations and instructions for optimizing the performance of your production deployment. Technical users who are responsible for maintaining stores in production mode should use the best practices described in this guide to help ensure your stores are running at peak efficiency at all times.
 
 ### Assumptions
 

@@ -1,8 +1,8 @@
 ---
 group:
 subgroup:
-title: Magento Commerce (Cloud) 2.2 Release Notes
-menu_title: Magento Commerce (Cloud) 2.2 Release Notes
+title: Magento企业版(云支持版) 2.2 Release Notes
+menu_title: Magento企业版(云支持版) 2.2 Release Notes
 menu_order: 
 level3_menu_node:
 level3_subgroup:

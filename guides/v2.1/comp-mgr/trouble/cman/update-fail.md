@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Roll back after update failure
-menu_title: Roll back after update failure
+title: 更新失败回滚
+menu_title: 更新失败回滚
 menu_node:
 menu_order: 110
 version: 2.1

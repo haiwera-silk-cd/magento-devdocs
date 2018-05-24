@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 020_onboarding
-title: Onboarding tasks
-menu_title: Onboarding tasks
+title: 新手上路任务
+menu_title: 新手上路任务
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -34,7 +34,7 @@ The _Project Owner_ is typically a "business user" in your business or finance o
 
 Typically, the only user the Project Owner must create is the _Technical Admin_. This user should have a user account with the Super User role. Your Technical Admin can create user accounts for developers, set environment permissions, and manage all branches and environments. Typically, the Technical Admin is a developer, consultant, a [Magento Solution Partner](https://magento.com/find-a-partner){:target="\_blank"}, or yourself.
 
-## Sign up for a Magento Commerce (Cloud) account {#cloud-first-acct}
+## Sign up for a Magento企业版(云支持版) account {#cloud-first-acct}
 Don't have a {{site.data.var.ece}} account yet? Sign up for a [free 30-day trial](https://magento.com/trial){:target="\_blank"} for a Starter or Pro plan, or contact [Magento Sales](https://magento.com/explore/contact-sales){:target="\_blank"}. We will create your account and send you a welcome e-mail that provides instructions to access the project.
 
 The person who signs up for a {{site.data.var.ece}} account is referred to as the _Project Owner_. You receive a welcome e-mail that enables you to set up the project initially. You can also access your project by [logging in to your account](https://accounts.magento.cloud){:target="\_blank"}.

@@ -57,7 +57,7 @@ Assume that class `SlowLoading` has a non-trivial performance impact when instan
 ### Proxies are generated code
 Magento has a solution for this situation: proxies. <a href="http://en.wikipedia.org/wiki/Proxy_pattern" target="_blank">Proxies</a> extend other classes to become lazy-loaded versions of them. That is, a real instance of the class a proxy extends created only after one of the class's methods is actually called. A proxy implements the same interface as the original class and so can be used as a dependency anywhere the original class can.  Unlike its parent, a proxy has only once dependency: the object manager.
 
-Proxies are generated code and therefore do not need to be manually written.  (See <a href="{{ page.baseurl }}/extension-dev-guide/code-generation.html">Code generation</a> for more information.) Simply reference a class in the form `\Original\Class\Name\Proxy`, and the class is generated if it does not exist.
+Proxies are generated code and therefore do not need to be manually written.  (See <a href="{{ page.baseurl }}/extension-dev-guide/code-generation.html">代码生成</a> for more information.) Simply reference a class in the form `\Original\Class\Name\Proxy`, and the class is generated if it does not exist.
 
 Using the preceding example, a proxy can be passed into the constructor arguments instead of the original class, using DI configuration as follows:
 

@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Step 3. Data Option
+title: 步骤3. 数据选项
 menu_title: Data Option
 menu_node:
 menu_order: 12
@@ -33,5 +33,5 @@ Click one of the following:
 
 	You can click **Back** to back up the database first if you did not do so already.
 
-Continue with [Step 4. Uninstall]({{ page.baseurl }}/comp-mgr/module-man/compman-uninst-final.html)
+Continue with [步骤4. 卸载]({{ page.baseurl }}/comp-mgr/module-man/compman-uninst-final.html)
 

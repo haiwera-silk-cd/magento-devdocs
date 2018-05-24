@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 045_pipeline
-title: Production System Setup
-menu_title: Production System Setup
+title: 生产系统设置
+menu_title: 生产系统设置
 menu_node:
 menu_order: 1500
 version: 2.2
@@ -63,7 +63,7 @@ To set up a production machine:
 
 	The following section shows an example.
 
-## Set configuration values on your production system
+## 设置配置值 on your production system
 This section discusses how to set sensitive values on your production system using the `magento config:sensitive:set` command.
 
 To set sensitive values:
@@ -100,5 +100,5 @@ To set sensitive values:
 *	[`magento app:config:import` command]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-import.html)
 *	[Example of setting configuration values using environment variables]({{ page.baseurl }}/config-guide/deployment/pipeline/example/environment-variables.html)
 *	[Example of setting configuration values using CLI commands]({{ page.baseurl }}/config-guide/deployment/pipeline/example/cli.html)
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
-*	[Use environment variables to override configuration settings]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html)

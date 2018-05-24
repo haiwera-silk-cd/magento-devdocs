@@ -28,7 +28,7 @@ We've been working hard with the development community to help you use your Mage
 
 Also, we have developed the <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a>, which will help to port your extensions and custom code to Magento 2, significantly reducing your efforts.
 
-More information on developing extensions for Magento 2 is available in the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html" target="_blank">PHP Developer Guide</a>.
+More information on developing extensions for Magento 2 is available in the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html" target="_blank">PHP开发文档</a>.
 
 ### Themes and customizations {#migrate-themes-customizations}
 

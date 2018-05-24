@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 01_Introduction
-title: PHP Developer Guide
-landing-page: PHP Developer Guide
+title: PHP开发文档
+landing-page: PHP开发文档
 menu_title: 介绍
 menu_order: 1
 menu_node: parent
@@ -35,6 +35,6 @@ The Magento application is made up of *Modules*, *Themes*, and *Language Package
 
 #### 相关主题
 
-*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html">Developer roadmap</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/intro-composer.html">Introduction to Composer</a>
-*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/intro-composer-gloss.html">Glossary of common terms</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/developers_roadmap.html">开发者指引</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/intro-composer.html">Composer介绍</a>
+*	<a href="{{ page.baseurl }}/extension-dev-guide/intro/intro-composer-gloss.html">常用术语表</a>

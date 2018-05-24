@@ -32,7 +32,7 @@ Migration is a perfect moment to make serious changes and get your site ready fo
 
 * Set up a Magento 2 hardware system using topology and design that at least matches your existing Magento 1 system
 
-* Install Magento 2.x (with all modules of this release) and the 数据迁移工具 on a system that meets the [Magento系统要求]
+* 安装Magento 2.x (with all modules of this release) and the 数据迁移工具 on a system that meets the [Magento系统要求]
 
 * Make your custom adjustments to the 数据迁移工具 code in case you do not need to migrate some data (like CMS Pages, Sales Rules, etc.) or want to convert your Magento customization during migration. Read the 数据迁移工具's [Technical Specification] to better understand how migration works from inside
 

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Custom redirect to WordPress VCL
-menu_title: Custom redirect to WordPress VCL
+title: VCL自定义自重向到WordPress
+menu_title: VCL自定义自重向到WordPress
 menu_order:
 menu_node:
 version: 2.0
@@ -20,7 +20,7 @@ You must have the following information to complete this VCL code snippet:
 * Account access and URL to the Magento Admin for the Staging or Production environment
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-This information is just the code portion for setting up your VCL. Use this information with [Custom Fastly VCL snippets]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
+This information is just the code portion for setting up your VCL. Use this information with [快速定制VCL片段]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
 </div>
 
 ## Create WordPress Edge Dictionary {#edge-dictionary}
@@ -69,4 +69,4 @@ For this VCL snippet to work, you also need to attach a condition to the WordPre
 
 
 ## Finish adding the VCL {#complete}
-When saved, continue creating other VCLs. You can then run the bash script, then validate and activate your VCLs to complete the process. For complete steps, see [Custom Fastly VCL snippets]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).
+When saved, continue creating other VCLs. You can then run the bash script, then validate and activate your VCLs to complete the process. For complete steps, see [快速定制VCL片段]({{ page.baseurl }}/cloud/configure/cloud-vcl-custom-snippets.html).

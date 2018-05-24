@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 999_prod
-title: Single machine deployment
-menu_title: Single machine deployment
+title: 单机部署
+menu_title: 单机部署
 menu_node:
 menu_order: 500
 version: 2.1

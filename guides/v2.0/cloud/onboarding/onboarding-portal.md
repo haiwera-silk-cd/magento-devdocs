@@ -11,7 +11,7 @@ redirect_to:
 The Onboarding Portal gives business and technical users a central location to get started with a {{site.data.var.ece}} project and environments. If you are not sure who the Project Owner is, you can check the Project Owner page in the portal. If you need to change this user, enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html).
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-The Onboarding Portal is available for new trial accounts and projects for Starter and Pro. Existing projects or non-trial new accounts cannot access the portal at this time. For more information, see [Subscriptions and plans]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html)
+The Onboarding Portal is available for new trial accounts and projects for Starter and Pro. Existing projects or non-trial new accounts cannot access the portal at this time. For more information, see [订阅和计划]({{ page.baseurl }}/cloud/basic-information/cloud-plans.html)
 </div>
 
 Through the portal, you can:
@@ -80,11 +80,11 @@ The technical admin, technical users, developers, and others can directly access
 ## Prepare to go live {#launch}
 When you are ready to launch your sites and stores, work through Launch options:
 
-* **UAT Checklist**: A high-level checklist for verifying Magento features and your configured settings, extensions, products, and more. You can follow this checklist along with the [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html) information.
-* **Site Launch**: A high-level checklist for your initial "go live". After completing the checklist, you can enter Live Site Configuration information to enter a Submit a Support ticket. You can follow this checklist along with the [Go live checklist]({{ page.baseurl }}/cloud/live/go-live-checklist.html) and [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html) information.
+* **UAT Checklist**: A high-level checklist for verifying Magento features and your configured settings, extensions, products, and more. You can follow this checklist along with the [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html) information.
+* **Site Launch**: A high-level checklist for your initial "go live". After completing the checklist, you can enter Live Site Configuration information to enter a Submit a Support ticket. You can follow this checklist along with the [上线检查]({{ page.baseurl }}/cloud/live/go-live-checklist.html) and [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html) information.
 
 #### 相关主题
-* [Manage your project]({{ page.baseurl }}/cloud/project/projects.html)
-* [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
+* [管理你的项目]({{ page.baseurl }}/cloud/project/projects.html)
+* [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
 * [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html)
-* [Welcome to Magento Commerce (Cloud)]({{ page.baseurl }}/cloud/bk-cloud.html)
+* [欢迎使用Magento企业版(云支持版)]({{ page.baseurl }}/cloud/bk-cloud.html)

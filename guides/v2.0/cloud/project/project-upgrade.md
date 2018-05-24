@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 130_upgrades
-title: Upgrade Magento Commerce (Cloud)
-menu_title: Upgrade Magento Commerce (Cloud)
+title: Magento企业版(云支持版)升级
+menu_title: Magento企业版(云支持版)升级
 menu_order: 10
 menu_node:
 version: 2.0

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Automatically configure master databases
-menu_title: Automatically configure master databases
+title: 自动配置主数据库
+menu_title: 自动配置主数据库
 menu_order: 2
 menu_node:
 version: 2.0
@@ -32,4 +32,4 @@ You can enable split databases at any time after you install the {{site.data.var
 {% include config/split-db.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_verify.html">Verify split databases</a>
+<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>

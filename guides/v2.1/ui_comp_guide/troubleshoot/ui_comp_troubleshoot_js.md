@@ -1,8 +1,8 @@
 ---
 group: UI_Components_guide
 subgroup: troubleshoot
-title: Debug UI components JavaScript
-menu_title: Debug UI components JavaScript
+title: js调试UI组件
+menu_title: js调试UI组件
 menu_order: 1
 version: 2.1
 github_link: ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.md

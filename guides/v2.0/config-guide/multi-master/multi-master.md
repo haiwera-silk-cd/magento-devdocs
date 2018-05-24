@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 20_cqrs
-title: Split database performance solution (Magento Commerce only)
-menu_title: Split database performance solution (Magento Commerce only)
+title: 数据库分库执行方案(仅企业版)
+menu_title: 数据库分库执行方案(仅企业版)
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -91,5 +91,5 @@ In this guide, the three master databases are named:
 
 #### 下一步
 
-*	If you have not installed components or put Magento into production: <a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_masterdb.html">Automatically configure master databases</a>
-*	If Magento is already in production or if you've already installed components: <a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_manual.html">Manually configure master databases</a>
+*	If you have not installed components or put Magento into production: <a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_masterdb.html">自动配置主数据库</a>
+*	If Magento is already in production or if you've already installed components: <a href="{{ page.baseurl }}/config-guide/multi-master/multi-master_manual.html">手动配置主数据库</a>

@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: How To
-title: Configure Xdebug
-menu_title: Configure Xdebug
+title: 配置Xdebug
+menu_title: 配置Xdebug
 menu_order: 100
 menu_node:
 version: 2.1
@@ -21,7 +21,7 @@ Once configured, you can debug [CLI commands](#debugcli), [web requests](#webreq
 ## Requirements {#usexdebug}
 To run and use Xdebug, you will need the environment's SSH URL. You can locate the information through the [Project Web Interface]({{ page.baseurl }}/cloud/project/projects.html) or your spreadsheet.
 
-## Configure Xdebug {#configure}
+## 配置Xdebug {#configure}
 To configure Xdebug, you need to do the following:
 
 * [Work in a branch](#branch) to push file updates

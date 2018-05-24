@@ -1,8 +1,8 @@
 ---
 group: config-guide
-subgroup: 08_Configure caching
-title: Associate cache frontends with cache types
-menu_title: Associate cache frontends with cache types
+subgroup: 08_配置缓存
+title: 将缓存前端与缓存类型关联
+menu_title: 将缓存前端与缓存类型关联
 menu_order: 1
 menu_node:
 version: 2.1
@@ -21,7 +21,7 @@ functional_areas:
 The Magento application has a `default` cache {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} you can use for any <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean-over">cache type</a>. This section discusses how to optionally define a {% glossarytooltip ca5ad9ac-9d39-45b5-80b1-e90d192f20d0 %}cache frontend{% endglossarytooltip %} with a different name, which is preferable if you expect to customize your frontend.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>To use the <code>default</code> cache type, you don't need to modify <code>env.php</code> at all; you modify Magento's global <code>di.xml</code>. See the topics referenced in <a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">Low-level cache options</a>. </p>
+  <p>To use the <code>default</code> cache type, you don't need to modify <code>env.php</code> at all; you modify Magento's global <code>di.xml</code>. See the topics referenced in <a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">底层缓存选项</a>. </p>
 </div>
 
 You must specify a custom cache frontend either `app/etc/env.php` or Magento's global `app/etc/di.xml`.
@@ -78,4 +78,4 @@ where
 *   `<backend_option>`, `<backend_option_value>` are the name and value of options the Magento framework passes as an associative array to backend cache upon its creation.
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">Low-level cache options</a>
+<a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">底层缓存选项</a>

@@ -84,19 +84,19 @@ pages:
       url: /frontend-dev-guide/templates/template-overview.html
       children:
 
-        - label: Templates customization walkthrough
+        - label: 模板定制化演练
           url: /frontend-dev-guide/templates/template-walkthrough.html
 
-        - label: Templates basic concepts
+        - label: 模板基本概念
           url: /frontend-dev-guide/templates/template-override.html
 
-        - label: Illustration of customizing templates
+        - label:自定义模板图解
           url: /frontend-dev-guide/templates/template-sample.html
 
-        - label: Customize email templates
+        - label: 自定义邮件模板
           url: /frontend-dev-guide/templates/template-email.html
 
-        - label: Templates XSS security
+        - label: 模板的XSS安全
           url: /frontend-dev-guide/templates/template-security.html
 
     - label: 层叠样式表(CSS)
@@ -143,7 +143,7 @@ pages:
         - label: 客户端LESS样式编译与服务器简单修改
           url: /frontend-dev-guide/css-guide/css_quick_guide_mode.html
 
-    - label: How to Make Your Theme Responsive and Mobile
+    - label: 如何使用的主题响应式及兼容移动端
       url: /frontend-dev-guide/responsive-web-design/rwd_overview.html
       children:
 
@@ -159,7 +159,7 @@ pages:
         - label: Customizing RWD illustration
           url: /frontend-dev-guide/responsive-web-design/rwd_practice.html
 
-        - label: Add a custom breakpoint
+        - label: 添加自定义断点
           url: /frontend-dev-guide/responsive-web-design/rwd-breakpoints.html
 
     - label: Translations

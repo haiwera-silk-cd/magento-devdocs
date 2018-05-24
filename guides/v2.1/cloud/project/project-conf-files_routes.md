@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Configure routes
+title: 路由配置
 version: 2.1
 github_link: cloud/project/project-conf-files_routes.md
 functional_areas:

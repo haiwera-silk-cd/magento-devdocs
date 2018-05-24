@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Manage your components
-menu_title: Manage your components
+title: 管理你的组件
+menu_title: 管理你的组件
 menu_node:
 menu_order: 3
 version: 2.1

@@ -20,7 +20,7 @@ How you deploy changes to Magento depends on the setup of your production server
 
 The following is a list of recommended strategies for production deployment:
 
-* [Single machine deployment][0]
+* [单机部署][0]
 * [{{site.data.var.ece}} deployment][1]
 * [Deployment strategies from the community][2]
 

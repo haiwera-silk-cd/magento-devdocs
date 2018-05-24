@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 06_Validate
-title: Test your component
-menu_title: Test your component
+title: 测试你的组件
+menu_title: 测试你的组件
 menu_order: 2
 menu_node:
 version: 2.1
@@ -23,7 +23,7 @@ For further testing with the Magento functional testing frameworks, see
 [Functional Testing Framework]({{ page.baseurl }}/mtf/mtf_introduction.html).
 
 ## Test using Community Edition {#test-comm}
-Test your component by deploying Magento Community Edition and adding the component to the project's <code>composer.json</code>.
+测试你的组件 by deploying Magento Community Edition and adding the component to the project's <code>composer.json</code>.
 
 {% highlight JSON %}
 "require": {

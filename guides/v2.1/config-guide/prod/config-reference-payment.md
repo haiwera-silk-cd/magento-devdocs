@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Payment configuration paths reference
-menu_title: Payment configuration paths reference
+title: 支付配置路径参考
+menu_title: 支付配置路径参考
 menu_order: 5200
 menu_node:
 level3_menu_node: level3child
@@ -20,9 +20,9 @@ This topic lists payment-related configuration paths that are neither sensitive 
 For a list of other configuration paths, see:
 
 *	[All configuration paths except payments]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
-*	[Sensitive and system-specific configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
+*	[敏感的和系统特定的 configuration paths reference]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html)
 
-To optionally override any configuration settings or to set sensitive settings, see [Use environment variables to override configuration settings]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
+To optionally override any configuration settings or to set sensitive settings, see [使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html).
 
 ## Payment methods paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Payment Methods**.

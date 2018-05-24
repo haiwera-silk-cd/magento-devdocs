@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
-subgroup: 08_Partial caching
-title: Create custom cache engines
-menu_title: Create custom cache engines
+subgroup: 08_部份缓存
+title: 创建自定义缓存引擎
+menu_title: 创建自定义缓存引擎
 menu_order: 9
 menu_node:
 version: 2.1

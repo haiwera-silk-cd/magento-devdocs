@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Patch Cloud tools
+title: Patch Cloud工具
 version: 2.1
 github_link: cloud/composer-packages/ece-tools.md
 functional_areas:
@@ -18,7 +18,7 @@ functional_areas:
 #### New features
 
 - **Configuring read-only connections to non-master nodes**—This release adds the ability to configure a read-only connection to a non-master node to receive read-only traffic (for <!--MAGECLOUD-143 -->[Redis]({{ page.baseurl }}/cloud/env/variables-deploy.html#redisuseslaveconnection) and for <!--MAGECLOUD-143 --> [MariaDB]({{ page.baseurl }}/cloud/env/variables-deploy.html#mysqluseslaveconnection)).
--  <!--MAGECLOUD-1910 -->**Configuration Wizard**—Added a new wizard to help verify your configuration for static content deployment. See [Smart wizards]({{ page.baseurl }}/cloud/env/smart-wizards.html).
+-  <!--MAGECLOUD-1910 -->**Configuration Wizard**—Added a new wizard to help verify your configuration for static content deployment. See [小向导]({{ page.baseurl }}/cloud/env/smart-wizards.html).
 -  <!-- MAGECLOUD-1966-->**Symfony Console support**—Added support for Symfony Console 4 with Magento 2.3.
 -  <!-- MAGECLOUD-1607 -->**Cron scheduling optimizations**—Improved the queue management and enhanced logging to help with debugging cron-related issues.
 
@@ -51,13 +51,13 @@ functional_areas:
 
 -  <!-- MAGECLOUD-1842 -->**Optimization**—Optimized moving or copying files during deployment to improve deployment speed and decrease loads on the file system.
 
--  <!-- MAGECLOUD-1751 -->**Deployment Logging**—Added the ability to enable Syslog and Graylog Extended Log Format (GELF) handlers for outputting logs during the deployment process. See [Logging handlers]({{ page.baseurl }}/cloud/env/log-handlers.html).
+-  <!-- MAGECLOUD-1751 -->**Deployment Logging**—Added the ability to enable Syslog and Graylog Extended Log Format (GELF) handlers for outputting logs during the deployment process. See [日志处理]({{ page.baseurl }}/cloud/env/log-handlers.html).
 
--  Added the following new [**Environment variables**](http://devdocs.magento.com/guides/v2.2/cloud/env/variables-intro.html):
+-  Added the following new [**环境变量**](http://devdocs.magento.com/guides/v2.2/cloud/env/variables-intro.html):
     -  <!-- MAGECLOUD-1556 -->`CRYPT_KEY`—Provide a cryptographic key to another environment when moving a database.
     -  <!-- MAGECLOUD-1621 and MAGECLOUD-1736-->`SKIP_HTML_MINIFICATION`—_Global_ environment variable that skips copying the static view files in the `var/view_preprocessed` directory and generates minified HTML when requested.
     -  <!-- MAGECLOUD-1738 -->`SCD_ON_DEMAND`—_Global_ environment variable to generate static content when requested.
-    -   `WARM_UP_PAGES`—You can list the pages to use to pre-load the cache. Available in the new [Post-deploy variables](http://devdocs.magento.com/guides/v2.1/cloud/env/variables-post-deploy.html).
+    -   `WARM_UP_PAGES`—You can list the pages to use to pre-load the cache. Available in the new [部署后变量](http://devdocs.magento.com/guides/v2.1/cloud/env/variables-post-deploy.html).
 
 #### Fixed issues
 
@@ -82,7 +82,7 @@ You must [upgrade the {{site.data.var.ece}} metapackage](http://devdocs.magento.
 
 -   <!-- MAGECLOUD-1437 -->**Search, AMQP, and Redis service improvements**—We unified the service configuration flow so that it now behaves the same way for all services. Manually editing the `env.php` file to configure services is no longer supported. You must use environment variables or the `.magento.env.yaml` file instead.
 
--   **Environment variables**
+-   **环境变量**
 
     -    <!-- MAGECLOUD-1507 -->The use of `env:STATIC_CONTENT_THREADS` was deprecated and will be removed in a future release. Use the `STATIC_CONTENT_THREADS` environment variable instead.
 
@@ -170,13 +170,13 @@ We merged `vendor/magento/ece-patches` with `vendor/magento/ece-tools` in this r
 
     -   [Magento application environment variables](http://devdocs.magento.com/guides/v2.1/cloud/env/environment-vars_magento.html)
     -   [Static content deployment performance](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html#cloud-confman-scd-over)
-    -   [Deployment process](http://devdocs.magento.com/guides/v2.1/cloud/reference/discover-deploy.html)
+    -   [部署过程](http://devdocs.magento.com/guides/v2.1/cloud/reference/discover-deploy.html)
 
--   **Configuration management**—We now auto-generate an `app/etc/config.php` file in your git repository during the build phase if it doesn't already exist. The auto-generated file includes only a list of modules and extensions. If the file already exists, the build phase continues as normal. If you follow [Configuration Management](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html) at a later time, the commands update the file without requiring additional steps. Refer to [Deployment process](http://devdocs.magento.com/guides/v2.1/cloud/reference/discover-deploy.html) for more information.
+-   **配置管理**—We now auto-generate an `app/etc/config.php` file in your git repository during the build phase if it doesn't already exist. The auto-generated file includes only a list of modules and extensions. If the file already exists, the build phase continues as normal. If you follow [Configuration Management](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html) at a later time, the commands update the file without requiring additional steps. Refer to [部署过程](http://devdocs.magento.com/guides/v2.1/cloud/reference/discover-deploy.html) for more information.
 
--   **Database dumps**—We added a new `magento/ece-tools` CLI command for creating database dumps in all environments. For Pro plan Production environments, this command only dumps from one of three high-availability nodes, so production data written to a different node during the dump may not be copied. We recommend putting the application in maintenance mode before doing a database dump in Production environments. See [Snapshots and backup management](http://devdocs.magento.com/guides/v2.1/cloud/project/project-webint-snap.html#db-dump) for more information.
+-   **Database dumps**—We added a new `magento/ece-tools` CLI command for creating database dumps in all environments. For Pro plan Production environments, this command only dumps from one of three high-availability nodes, so production data written to a different node during the dump may not be copied. We recommend putting the application in maintenance mode before doing a database dump in Production environments. See [快照和备份管理](http://devdocs.magento.com/guides/v2.1/cloud/project/project-webint-snap.html#db-dump) for more information.
 
--   **Cron interval limitations lifted**—The default cron interval for all environments provisioned in the us-3, eu-3, and ap-3 regions is 1 minute. The default cron interval in all other regions is 5 minutes for Pro Integration environments and 1 minute for Pro Staging and Production environments. To modify your existing cron jobs, edit your settings in `.magento.app.yaml` or create a support ticket for Production/Staging environments. Refer to [Set up cron jobs](http://devdocs.magento.com/guides/v2.1/cloud/configure/setup-cron-jobs.html) for more information.
+-   **Cron interval limitations lifted**—The default cron interval for all environments provisioned in the us-3, eu-3, and ap-3 regions is 1 minute. The default cron interval in all other regions is 5 minutes for Pro Integration environments and 1 minute for Pro Staging and Production environments. To modify your existing cron jobs, edit your settings in `.magento.app.yaml` or create a support ticket for Production/Staging environments. Refer to [设置定时任务](http://devdocs.magento.com/guides/v2.1/cloud/configure/setup-cron-jobs.html) for more information.
 
 #### Fixed issues
 -   <!-- MAGECLOUD-1327 -->We fixed an issue that was causing long deploy times due to the deploy process invoking the `cache-clean` operation before static content deployment.

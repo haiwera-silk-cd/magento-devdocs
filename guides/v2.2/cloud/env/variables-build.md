@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Build variables
+title: 构建变量
 version: 2.2
 github_link: cloud/env/variables-build.md
 functional_areas:
@@ -19,7 +19,7 @@ stage:
 For more information about customizing the build and deploy process:
 
 -  [Manage build and deploy actions]({{ page.baseurl }}/cloud/project/magento-env-yaml.html)
--  [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+-  [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
 
 {% include note.html type="info" content="You can still use the `build_options.ini` file, but we recommend using the `.magento.env.yaml` file instead because it centralizes the management of build and deploy actions across all of your environments—including Pro Staging and Production—without requiring a support ticket." %}
 
@@ -59,7 +59,7 @@ stage:
 -  **Default**—`quick`
 -  **Version**—Magento 2.2.0 and later
 
-Customize the [deployment strategy](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html) for static content. See [Deploy static view files](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html).
+Customize the [deployment strategy](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html) for static content. See [部署静态视图文件](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html).
 
 Use these options _only_ if you have more than one locale:
 

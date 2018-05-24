@@ -49,7 +49,7 @@ One of the following displays:
 	</tr>
 	<tr>
 		<td><img src="{{ site.baseurl }}/common/images/elastic_test-success.png"></td>
-		<td>Magento successfully connected to the Elasticsearch server. Continue with <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-apache.html">Configure Apache and Elasticsearch</a>或<a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-nginx.html">Configure nginx and Elasticsearch</a>.</td>
+		<td>Magento successfully connected to the Elasticsearch server. Continue with <a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-apache.html">配置Apache和Elasticsearch</a>或<a href="{{ site.gdeurl21 }}config-guide/elasticsearch/es-config-nginx.html">配置nginx和Elasticsearch</a>.</td>
 	</tr>
 	<tr>
 		<td><img src="{{ site.baseurl }}/common/images/elastic_test-fail.png"></td>

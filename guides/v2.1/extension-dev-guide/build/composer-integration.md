@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: The composer.json file
-menu_title: The composer.json file
+title: composer.json文件
+menu_title: composer.json文件
 menu_order: 1000
 version: 2.1
 github_link: extension-dev-guide/build/composer-integration.md
@@ -77,7 +77,7 @@ Magento system integrators use this `composer.json` file to deploy the Magento E
 
 ----
 
-### Magento Framework
+### Magento框架
 **Location:** `lib/internal/Magento/Framework/composer.json`
 
 **Name:** `magento/framework`
@@ -188,7 +188,7 @@ Where:
 ---
 
 **Next:**
-[Define your configuration files]({{ page.baseurl }}/extension-dev-guide/build/required-configuration-files.html)
+[定义你的配置文件]({{ page.baseurl }}/extension-dev-guide/build/required-configuration-files.html)
 
 [0]: https://getcomposer.org/
 [1]: {{ page.baseurl }}/comp-mgr/compman-start.html

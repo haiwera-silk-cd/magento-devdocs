@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 28_cli-upgr
-title: Command-line upgrade to Magento 2.1 with sample data
-menu_title: Command-line upgrade to Magento 2.1 with sample data
+title: 命令行升级有样本数据的系统到Magento 2.1
+menu_title: 命令行升级有样本数据的系统到Magento 2.1
 menu_node:
 menu_order: 2
 version: 2.1
@@ -11,6 +11,6 @@ functional_areas:
   - Upgrade
 ---
 
-## Command-line upgrade to Magento 2.1 with sample data
+## 命令行升级有样本数据的系统到Magento 2.1
 
 {%include install/sampledata/sample-data-rc1-cli.md %}

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 11_sites
-title: Set up multiple websites, stores, and store views in the Admin
-menu_title: Set up multiple websites, stores, and store views in the Admin
+title: 在管理面板设置多站、多店及网店视图
+menu_title: 在管理面板设置多站、多店及网店视图
 menu_order: 2
 menu_node:
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-## Set up multiple websites, stores, and store views in the Admin
+## 在管理面板设置多站、多店及网店视图
 This task requires you to create a root {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} (and additional categories if desired) for each store.
 
 The tasks discussed in this topic provide one way to set up multiple stores. For additional information, see the following resources in the Magento User Guide:
@@ -184,7 +184,7 @@ You must perform this step last because after it's done, you'll lose access to t
 
 #### 下一步
 *	{{site.data.var.ece}}: [Set up multiple {{site.data.var.ece}} websites or stores]({{ page.baseurl }}/cloud/project/project-multi-sites.html)
-*	[Tutorial&mdash;Set up multiple websites or stores with nginx]({{ page.baseurl }}/config-guide/multi-site/ms_nginx.html)
+*	[Tutorial&mdash;设置多站和多店 with nginx]({{ page.baseurl }}/config-guide/multi-site/ms_nginx.html)
 *	[Tutorial&mdash;Set up multiple websites with Apache]({{ page.baseurl }}/config-guide/multi-site/ms_apache.html)
 
 #### Related information

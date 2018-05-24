@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 12_cron
-title: Set up a custom cron job and cron group
-menu_title: Set up a custom cron job and cron group
+title: 设置自定义的定时任务和任务组(cron)
+menu_title: 设置自定义的定时任务和任务组(cron)
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -27,5 +27,5 @@ The Magento application provides the following cron groups:
 
 See the following topics for details:
 
-*	[Custom cron job and cron group reference]({{ page.baseurl }}/config-guide/cron/custom-cron-ref.html)
-*	[Configure a custom cron job and cron group (tutorial)]({{ page.baseurl }}/config-guide/cron/custom-cron-tut.html)
+*	[自定义的定时任务和任务组(cron)参考]({{ page.baseurl }}/config-guide/cron/custom-cron-ref.html)
+*	[配置自定义的定时任务和任务组(cron)(教程)]({{ page.baseurl }}/config-guide/cron/custom-cron-tut.html)

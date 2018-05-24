@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Sorry, we can't take that action right now
-menu_title: Sorry, we can't take that action right now
+title: 对不起，我们现在还不能做这个动作
+menu_title: 对不起，我们现在还不能做这个动作
 menu_node:
 menu_order: 2
 version: 2.2

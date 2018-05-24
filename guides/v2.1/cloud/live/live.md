@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 165_live
-title: Go live and launch
-menu_title: Go live and launch
+title: 上线和发布
+menu_title: 上线和发布
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -22,7 +22,7 @@ You need the following information to go live:
 * List of all storefront domains to add to the certificate
 * SSL certificate if not using the shared-SSL (requires option purchase)
 
-As part of Magento Commerce (Cloud) subscription, you have access to a shared Domain-Validated SSL (HTTPS) certificate that is issued by GlobalSign. This certificate is shared with other merchants and included for all Cloud accounts. If you want to deploy an Extended Validation SSL (not-shared) certificate for your company, this option can be purchased when you first sign-up with Magento Commerce. If you need to purchase this option, contact your account representative.
+As part of Magento企业版(云支持版) subscription, you have access to a shared Domain-Validated SSL (HTTPS) certificate that is issued by GlobalSign. This certificate is shared with other merchants and included for all Cloud accounts. If you want to deploy an Extended Validation SSL (not-shared) certificate for your company, this option can be purchased when you first sign-up with Magento Commerce. If you need to purchase this option, contact your account representative.
 
 ## Why test fully in Integration and Staging? {#whytest}
 We strongly recommend testing in these environments due to the complexity of your custom code, themes, Magento extensions, 3rd party integrations all working together to provide a single or multiple stores. Every deployment can differ between merchants. The following are common issues you can find early and solve before touching Production:
@@ -63,5 +63,5 @@ Scan results include a general label that describes whether a site passed or fai
 ## Ready to go live {#ready}
 You are ready to start go live steps:
 
-* [Go live checklist]({{ page.baseurl }}/cloud/live/go-live-checklist.html)
-* [Launch steps]({{ page.baseurl }}/cloud/live/launch-steps.html)
+* [上线检查]({{ page.baseurl }}/cloud/live/go-live-checklist.html)
+* [发布步骤]({{ page.baseurl }}/cloud/live/launch-steps.html)

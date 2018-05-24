@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Troubleshoot cron
-menu_title: Troubleshoot cron
+title: 排除定时任务的问题
+menu_title: 排除定时任务的问题
 menu_node:
 menu_order: 7
 version: 2.0

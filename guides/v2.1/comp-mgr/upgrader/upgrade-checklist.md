@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 32_UseUpgrade
-title: Run System Upgrade
-menu_title: Run System Upgrade
+title: 运行系统升级
+menu_title: 运行系统升级
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -36,4 +36,4 @@ You can upgrade in any of the following ways:
 {% include comp-man/checklist.md %}
 
 #### 下一步
-[Start System Upgrade]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)
+[开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)

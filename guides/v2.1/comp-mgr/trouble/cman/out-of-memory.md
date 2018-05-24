@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Out of memory errors
-menu_title: Out of memory errors
+title: 内存溢出错误
+menu_title: 内存溢出错误
 menu_node:
 menu_order: 4
 version: 2.1

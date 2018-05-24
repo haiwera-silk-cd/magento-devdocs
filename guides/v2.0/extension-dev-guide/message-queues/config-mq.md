@@ -158,6 +158,6 @@ The `bind` elements link topics to queues and exchanges, defining the message qu
 {% endhighlight %}
 
 #### 相关主题
-*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message Queues Overview</a>
-*	<a href="{{ page.baseurl }}/config-guide/mq/manage-mysql.html">Manage message queues</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
+*	<a href="{{ page.baseurl }}/config-guide/mq/manage-mysql.html">管理消息队列</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>

@@ -109,7 +109,7 @@ For this example, we'll download and extract an archive.
 
 7. If prompted, enter your [Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html).
 
-8. Install Magento from the [命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html).
+8. 安装Magento from the [命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html).
 
 		cd /var/www/html/magento2/bin
 		./magento setup:install --base-url=http://www.magento-dev.com/ --db-host=localhost --db-name=magento --db-user=magento --db-password=magento --admin-firstname=admin --admin-lastname=admin --admin-email=admin@admin.com --admin-user=admin --admin-password=admin123 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
@@ -297,7 +297,7 @@ For this example, we'll download and extract an archive.
 
 6. If prompted, enter your [Magento authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html).
 
-7. Install Magento from the [命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html).
+7. 安装Magento from the [命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html).
 
 		cd /usr/share/nginx/html/magento2/bin
 		./magento setup:install --base-url=http://www.magento-dev.com/ \

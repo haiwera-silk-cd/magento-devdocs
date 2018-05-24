@@ -43,7 +43,7 @@ To develop a module, you must:
     mkdir -p vendor/&lt;vendor_name>/module-&lt;module_name>/etc/integration
     mkdir -p vendor/&lt;vendor_name>/module-&lt;module_name>/Setup
    </pre>
-   For more detailed information, see [Create your component file structure]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
+   For more detailed information, see [创建你的组件文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
 2. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 

@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Architectural Basics
-title: Technology stack
-menu_title: Technology stack
+title: 技术栈
+menu_title: 技术栈
 menu_order: 2
 version: 2.2
 github_link: architecture/tech-stack.md
@@ -50,7 +50,7 @@ Magento's highly modular structure includes the following open-source technologi
 *	{% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} (primary {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} library)
 *	RequireJS (library that helps load JavaScript resources on demand)
 *	Knockout.js (simplifies JavaScript UIs with the Model-View-View Model pattern)
-*	Third-party libraries (Zend Framework 1, Zend Framework 2, Symfony)
+*	第三方库 (Zend Framework 1, Zend Framework 2, Symfony)
 *	Coding standards PSR-0 (autoloading standard), PSR-1 (basic coding standards), and PSR-2 (coding style guide), PSR-3, PSR-4
 
 ### Optional stack components

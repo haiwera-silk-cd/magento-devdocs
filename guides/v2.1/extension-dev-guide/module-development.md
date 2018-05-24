@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Component development
-menu_title: Component development
+title: 组件开发
+menu_title: 组件开发
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -14,12 +14,12 @@ Magento 2 is flexible and as a result has varied functionality, so developing a 
 
 
 * Compatibility (backward and forward)
-   * [Service contracts]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html)
+   * [服务约定]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html)
    * [Design patterns]({{ page.baseurl }}/extension-dev-guide/service-contracts/design-patterns.html)
 
 * [Working with public interfaces and APIs]({{ page.baseurl }}/extension-dev-guide/api-concepts.html)
 * [Object manager and dependency injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
-* [Code generation]({{ page.baseurl }}/extension-dev-guide/code-generation.html)
+* [代码生成]({{ page.baseurl }}/extension-dev-guide/code-generation.html)
 * [EAV attributes]({{ page.baseurl }}/extension-dev-guide/attributes.html)
 * [Plug-ins (aka interceptors)]({{ page.baseurl }}/extension-dev-guide/plugins.html)
 * [Routing]({{ page.baseurl }}/extension-dev-guide/routing.html)

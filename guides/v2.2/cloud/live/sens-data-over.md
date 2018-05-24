@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Configuration management for store settings
+title: 网店设置的配置管理
 version: 2.2
 github_link: cloud/live/sens-data-over.md
 functional_areas:
@@ -8,7 +8,7 @@ functional_areas:
   - Deploy
 ---
 
-Configuration management, or [Pipeline Deployment]({{ page.baseurl }}/config-guide/deployment/pipeline/), provides a way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. Add this file to your commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits:
+配置管理, or [管道部署]({{ page.baseurl }}/config-guide/deployment/pipeline/), provides a way to deploy across your environments with minimal downtime. The process extracts all configuration settings from your Magento implementation into a single file. Add this file to your commit and push it across all of your environments to keep consistent settings and reduce downtime. It provides the following benefits:
 
 *  Better way to [manage and synchronize](#cloud-confman-over) the configuration across your Integration, Staging, and Production environments.
 *  Less time required to [build](#cloud-confman-scd-over) and deploy your project by moving static file deployment from deploy to the build phase. Your site is in maintenance mode until deployment completes. For details, see [Deployment Process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
@@ -19,7 +19,7 @@ These methods are optional, but strongly recommended. The process ensures faster
 To complete configuration management tasks, you must have a project reader role with [environment administrator]({{ page.baseurl }}/cloud/project/user-admin.html#cloud-role-env) privileges.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-For extended technical information, see [Pipeline Deployment]({{ page.baseurl }}/config-guide/deployment/pipeline/). When configuring and using these features, follow this topic specifically. {{site.data.var.ece}} provides the build server, build and deploy scripts, and deployment environments. You only need to configure settings, generate the file, and deploy.
+For extended technical information, see [管道部署]({{ page.baseurl }}/config-guide/deployment/pipeline/). When configuring and using these features, follow this topic specifically. {{site.data.var.ece}} provides the build server, build and deploy scripts, and deployment environments. You only need to configure settings, generate the file, and deploy.
 </div>
 
 ## How it works {#cloud-confman-over}
@@ -137,7 +137,7 @@ The **Pro plan** environment high-level overview of this process:
 
 ![Overview of Pro configuration management]({{ site.magentourl }}/common/images/cloud_configmgmt-pro-2-2.png)
 
-### Step 1: Configure your store {#config-store}
+### Step 1: 配置你的网店 {#config-store}
 Complete all configurations for your stores in the Admin console:
 
 1. Log into the Magento Admin for one of the environments:

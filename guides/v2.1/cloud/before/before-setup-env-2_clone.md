@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Clone and branch the project
-menu_title: Clone and branch the project
+title: 克隆并开发项目分支
+menu_title: 克隆并开发项目分支
 menu_order: 30
 menu_node:
 version: 2.1
@@ -20,7 +20,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[Set up the Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html)
+[设置Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html)
 
 The Magento Commerce project is a Git repository of Magento code with a master origin. Develop your custom code and add extensions in one of eight active Git branches in your local. Each active environment includes a database and services to fully access the Magento site and store in the Integration environment.
 
@@ -72,7 +72,7 @@ To clone the project's `master` environment to your local:
 ## Change the Magento Admin URL, user name, and password on master {#setvariables}
 We recommend changing the following variables for the Magento Admin URL and administrator account. You should configure these settings for security reasons prior to branching from the cloned `master`. If you change the variables in the `master` branch, you only have to make these changes once. All branches inherit the variables from `master`.
 
-* `ADMIN_EMAIL`: Administrative user's e-mail address. This value is required for upgrading and patching Magento Commerce (Cloud) and is used to send password reset emails.
+* `ADMIN_EMAIL`: Administrative user's e-mail address. This value is required for upgrading and patching Magento企业版(云支持版) and is used to send password reset emails.
 * `ADMIN_USERNAME`: User name for a Magento administrative user. This user is an administrator and can create other users, including other administrative users. The default hardcoded username is `admin`. You can use `admin` or change it to another secure username.
 * `ADMIN_PASSWORD`: Administrative user's password. When the project is created, a random password is generated and an email is sent to the Project Owner. During project creation, the Project Owner should have already changed the password. You may need to contact the Project Owner for the updated password.
 * `ADMIN_URL`: The relative URL by which to access the Magento Admin. For example: <domain>/admin. For security reasons, we recommend you choose a value other than `admin`或`backend` or another term that is easy to guess.
@@ -187,4 +187,4 @@ To branch from master:
 		magento-cloud snapshot:create -e <environment ID>
 
 #### 下一步:
-[Install Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)
+[安装Magento]({{ page.baseurl }}/cloud/before/before-setup-env-install.html)

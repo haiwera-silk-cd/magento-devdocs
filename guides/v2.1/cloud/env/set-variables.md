@@ -11,7 +11,7 @@ github_link: cloud/env/set-variables.md
 
 For security reasons, we strongly recommend you change the Magento Admin URI, administrator user name, and the administrator's password. This makes it harder for someone else to log in to the Magento Admin and change settings.
 
-Environment variables are inherited from the parent environment to child environments. You should make these changes in the `master` environment so all other environments start with the same values.
+环境变量 are inherited from the parent environment to child environments. You should make these changes in the `master` environment so all other environments start with the same values.
 
 You can use the same tasks to change any variable discussed in the preceding section.
 

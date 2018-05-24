@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 11_sites
-title: Tutorial&mdash;Set up multiple websites or stores with nginx
-menu_title: Tutorial&mdash;Set up multiple websites or stores with nginx
+title: Tutorial&mdash;设置多站和多店 with nginx
+menu_title: Tutorial&mdash;设置多站和多店 with nginx
 menu_order: 3
 menu_node:
 version: 2.1

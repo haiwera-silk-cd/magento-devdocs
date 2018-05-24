@@ -1,29 +1,29 @@
-label: PHP Developer Guide
+label: PHP开发文档
 pages:
     - label: 介绍
       url: /extension-dev-guide/bk-extension-dev-guide.html
       children:
 
-        - label: Developer roadmap
+        - label: 开发者指引
           url: /extension-dev-guide/intro/developers_roadmap.html
 
-        - label: Introduction to Composer
+        - label: Composer介绍
           url: /extension-dev-guide/intro/intro-composer.html
 
-        - label: Glossary of common terms
+        - label: 常用术语表
           url: /extension-dev-guide/intro/intro-composer-gloss.html
 
-    - label: Prepare (development quick start)
+    - label: 准备(快速开始开发)
       url: /extension-dev-guide/prepare/prepare.html
       children:
 
-        - label: Component types
+        - label: 组件类型
           url: /extension-dev-guide/prepare/dev-modtypes.html
 
-        - label: About component file structure
+        - label: 关于组件的文件结构
           url: /extension-dev-guide/prepare/prepare_file-str.html
 
-        - label: Roadmap for developing and packaging components
+        - label: 开发和打包组件指引
           url: /extension-dev-guide/prepare/dev-summary.html
 
         - label: Extension lifecycle
@@ -33,65 +33,65 @@ pages:
       url: /extension-dev-guide/build/build.html
       children:
 
-        - label: The di.xml file
+        - label: di.xml文件
           url: /extension-dev-guide/build/di-xml-file.html
 
         - label: Optimal development environment
           versions: ["2.1","2.2", "2.3"]
           url: /extension-dev-guide/build/optimal-dev-environment.html
 
-        - label: The composer.json file
+        - label: composer.json文件
           url: /extension-dev-guide/build/composer-integration.html
 
-        - label: Define your configuration files
+        - label: 定义你的配置文件
           url: /extension-dev-guide/build/required-configuration-files.html
 
-        - label: Create your component file structure
+        - label: 创建你的组件文件结构
           url: /extension-dev-guide/build/module-file-structure.html
 
-        - label: Register your component
+        - label: 注册你的组件
           url: /extension-dev-guide/build/component-registration.html
 
-        - label: URN schema validation
+        - label: 统一资源名称(URN)验证
           url: /extension-dev-guide/build/XSD-XML-validation.html
 
-        - label: Name your component
+        - label: 你组件的名称
           url: /extension-dev-guide/build/create_component.html
 
-        - label: Component load order
+        - label: 组件加载顺序
           url: /extension-dev-guide/build/module-load-order.html
 
-        - label: Enable or disable your component
+        - label: 启用和禁用组件
           url: /extension-dev-guide/build/enable-module.html
 
     - label: Package
       url: /extension-dev-guide/package/package.html
       children:
 
-        - label: Package a component
+        - label: 打包组件
           url: /extension-dev-guide/package/package_module.html
 
-        - label: Upload your component to the Magento Marketplace
+        - label: 上传组件到Magento市场
           url: /extension-dev-guide/package/package_mktpl.html
 
     - label: Validate
       url: /extension-dev-guide/validate/validate.html
       children:
 
-        - label: Test your component
+        - label: 测试你的组件
           url: /extension-dev-guide/validate/test-module.html
 
-    - label: Partial caching
+    - label: 部份缓存
       url: /extension-dev-guide/cache/partial-caching.html
       children:
 
-        - label: Create custom cache engines
+        - label: 创建自定义缓存引擎
           url: /extension-dev-guide/cache/partial-caching/database-caching.html
 
-        - label: Create a cache type
+        - label: 创建缓存类型
           url: /extension-dev-guide/cache/partial-caching/create-cache-type.html
 
-    - label: Full page caching
+    - label: 页面缓存
       url: /extension-dev-guide/cache/page-caching.html
       children:
 
@@ -101,40 +101,40 @@ pages:
         - label: Private content
           url: /extension-dev-guide/cache/page-caching/private-content.html
 
-    - label: Add CLI commands
+    - label: 添加命令行命令
       url: /extension-dev-guide/cli-cmds/cli-add.html
       children:
 
-        - label: Command naming guidelines
+        - label: 命令命名指南
           url: /extension-dev-guide/cli-cmds/cli-naming-guidelines.html
 
-        - label: How to add CLI commands
+        - label: 如何添加命令行命令
           url: /extension-dev-guide/cli-cmds/cli-howto.html
 
     - label: Staging (Magento Commerce only)
       versions: ["2.1","2.2", "2.3"]
       url: /extension-dev-guide/staging.html
 
-    - label: Component development
+    - label: 组件开发
       url: /extension-dev-guide/module-development.html
       children:
 
-        - label: Service contracts
+        - label: 服务约定
           url: /extension-dev-guide/service-contracts/service-contracts.html
 
         - label: Public interfaces &amp; APIs
           url: /extension-dev-guide/api-concepts.html
 
-        - label: Service contract design patterns
+        - label: 服务契约设置模式
           url: /extension-dev-guide/service-contracts/design-patterns.html
 
-        - label: Dependency injection
+        - label: 依赖注入
           url: /extension-dev-guide/depend-inj.html
 
         - label: ObjectManager
           url: /extension-dev-guide/object-manager.html
 
-        - label: Events and observers
+        - label: 事件和观查者
           url: /extension-dev-guide/events-and-observers.html
 
         - label: Factories
@@ -143,13 +143,13 @@ pages:
         - label: Proxies
           url: /extension-dev-guide/proxies.html
 
-        - label: Code generation
+        - label: 代码生成
           url: /extension-dev-guide/code-generation.html
 
-        - label: EAV and extension attributes
+        - label: 实体属性值(EAV)和扩展属性
           url: /extension-dev-guide/attributes.html
 
-        - label: Plugins (Interceptors)
+        - label: 插件(拦截器)
           url: /extension-dev-guide/plugins.html
 
         - label: Routing
@@ -158,14 +158,14 @@ pages:
         - label: Indexing
           children:
 
-            - label: Indexing overview
+            - label: 索引概述
               url: /extension-dev-guide/indexing.html
 
-            - label: Indexer optimization
+            - label: 索引优化
               versions: ["2.2", "2.3"]
               url: /extension-dev-guide/indexer-batch.html
 
-            - label: Adding a custom indexer
+            - label: 添加自定义索引
               url: /extension-dev-guide/indexing-custom.html
 
         - label: Declarative schema
@@ -184,16 +184,16 @@ pages:
             - label: Develop data and schema patches
               url: /extension-dev-guide/declarative-schema/data-patches.html
 
-        - label: Message Queues (Magento Commerce Edition Only)
+        - label: 消息队列 (Magento Commerce Edition Only)
           children:
 
-            - label: Message queues overview
+            - label: 消息队列 overview
               url: /extension-dev-guide/message-queues/message-queues.html
 
             - label: Configure message Queues
               url: /extension-dev-guide/message-queues/config-mq.html
 
-            - label: Migrate message queue configuration
+            - label: 迁移消息队列配置
               versions: ["2.1", "2.2", "2.3"]
               url: /extension-dev-guide/message-queues/queue-migration.html
 
@@ -201,22 +201,22 @@ pages:
               versions: ["2.2", "2.3"]
               url: /extension-dev-guide/message-queues/bulk-operations.html
 
-            - label: Example bulk operations implementation
+            - label: 批量操作实现示例
               versions: ["2.2", "2.3"]
               url: /extension-dev-guide/message-queues/implement-bulk.html
 
 
-        - label: Adding extension attributes to entity
+        - label: 添加扩展属性到实体
           url: /extension-dev-guide/extension_attributes/adding-attributes.html
 
         - label: Searching with repositories
           versions: ["2.2", "2.3"]
           url: /extension-dev-guide/searching-with-repositories.html
 
-        - label: Configure services as web APIs
+        - label: 将服务配置成web API
           url: /extension-dev-guide/service-contracts/service-to-web-service.html
 
-        - label: Clear directories during development
+        - label: 部署期间清空目录
           url: /howdoi/php/php_clear-dirs.html
 
         - label: Adapters
@@ -234,7 +234,7 @@ pages:
     - label: Framework
       versions: ["2.2", "2.3"]
       children:
-        - label: Serialize Library
+        - label: 序列化库
           url: /extension-dev-guide/framework/serializer.html
 
     - label: Security
@@ -244,15 +244,15 @@ pages:
           versions: ["2.2", "2.3"]
           url: /extension-dev-guide/xss-protection.html
 
-        - label: Non-secure functions
+        - label: 不安全的方法
           url: /extension-dev-guide/security/non-secure-functions.html
 
     - label: Versioning
       url: /extension-dev-guide/versioning/
       children:
 
-        - label: Module version dependencies
+        - label: 模块版本依赖
           url: /extension-dev-guide/versioning/dependencies.html
 
-        - label: Codebase changes
+        - label: 基础代码修改
           url: /extension-dev-guide/versioning/codebase-changes.html

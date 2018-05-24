@@ -1,6 +1,6 @@
 <div markdown="1">
 
-*	_Shared configuration_, which is all settings that are neither system-specific nor sensitive.
+*	_共享配置_, which is all settings that are neither system-specific nor sensitive.
 
 	Shared settings are settings you want to be consistent on development and production systems. Set the shared configuration in the Magento Admin in your development (or {{site.data.var.ece}} _integration_) system.
 

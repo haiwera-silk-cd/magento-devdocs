@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Generate data for performance testing
-menu_title: Generate data for performance testing
+title: 为性能测试生成数据
+menu_title: 为性能测试生成数据
 menu_node:
 menu_order: 800
 version: 2.0
@@ -183,15 +183,15 @@ Sample output for the small profile:
 
 
 #### 相关主题
-*   [Manage the cache]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html)
-*   [Manage the indexers]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html)
-*   [Configure and run cron]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
-*   [Code compiler]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html)
-*   [Set the Magento mode]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html)
-*   [URN highlighter]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html)
-*   [Dependency reports]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-depen.html)
-*   [Translation dictionaries and language packages]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html)
-*   [Deploy static view files]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html)
-*   [Create symlinks to LESS files]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-less-sass.html)
-*   [Run unit tests]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-test.html)
-*   [Convert layout XML files]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-layout-xml.html)
+*   [管理缓存]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html)
+*   [管理索引]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html)
+*   [配置和执行定时任务]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html)
+*   [代码编译器]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html)
+*   [设置Magento的模式]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html)
+*   [统一资源名称(URN)高亮]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html)
+*   [依赖报告]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-depen.html)
+*   [翻译字典和语言包]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html)
+*   [部署静态视图文件]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html)
+*   [创建软链接到LESS文件]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-less-sass.html)
+*   [运行单元测试]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-test.html)
+*   [转换布局的XML文件]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-layout-xml.html)

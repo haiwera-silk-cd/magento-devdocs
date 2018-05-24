@@ -125,4 +125,4 @@ Mail Transfer Agent (MTA) or an SMTP server
 
 ### Documentation
 
-<a href="{{ page.baseurl }}/install-gde/prereq/prereq-overview.html">Install Magento prerequisites</a>
+<a href="{{ page.baseurl }}/install-gde/prereq/prereq-overview.html">安装Magento所需的必要软件</a>

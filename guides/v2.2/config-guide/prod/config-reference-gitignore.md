@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: .gitignore reference
-menu_title: .gitignore reference
+title: .gitignore参考
+menu_title: .gitignore参考
 menu_order: 5600
 menu_node:
 level3_menu_node: level3child

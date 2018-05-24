@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 120_env
-title: Manage branches with the CLI
-menu_title: Manage branches with the CLI
+title: 使用命令行管理分支
+menu_title: 使用命令行管理分支
 menu_order: 2
 menu_node:
 version: 2.1
@@ -20,7 +20,7 @@ functional_areas:
 
 When managing with your environment, you will tend to use the Magento CLI and SSH into the system. You should have the Magento CLI installed and SSH keys set up. For detailed information on the environment architecture, see [Starter]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html) or [Pro]({{ page.baseurl }}/cloud/architecture/pro-architecture.html) architecture information.
 
-To manage the branches and environments with the Project Web Interface, see [Manage branches with the Project Web Interface]({{ page.baseurl }}/cloud/project/project-webint-branch.html).
+To manage the branches and environments with the Project Web Interface, see [使用项目的web接口管理分支]({{ page.baseurl }}/cloud/project/project-webint-branch.html).
 
 ## Common Magento CLI commands {#env-start-comm}
 The following Magento CLI commands can be run from any directory and run best from a project directory. When run from a project directory, you can omit the `-p <project ID>` parameter. These commands are meant to be used to manage integration environments. You may notice these commands are similar to Git commands. The `magento-cloud` versions directly connect with Magento Git, the Magento ECE project, and provide Git features.

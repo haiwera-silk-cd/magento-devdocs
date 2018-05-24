@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 02_prereq
-title: Update and upgrade checklist
-menu_title: Update and upgrade checklist
+title: 更新和升级前检查
+menu_title: 更新和升级前检查
 menu_order: 200
 menu_node:
 version: 2.0

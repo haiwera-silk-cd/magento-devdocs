@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Module relationships
-menu_title: Module relationships
+title: 模块关系
+menu_title: 模块关系
 menu_order: 5
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.0/architecture/modules/mod_relationships.html
 ---
 
-## 概述{#m2arch-module-relationships-overview}
+## 概述 {#m2arch-module-relationships-overview}
 
 Understanding how one {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} relates to another helps determine how it reacts to changes in that module.
 
@@ -57,4 +57,4 @@ If module A replaces module B, it needs to be able to do so in such a way that o
 
 ## Related topics {#m2arch-module-related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">Module overview</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>

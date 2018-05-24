@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Run the Component Manager
-menu_title: Run the Component Manager
+title: 运行组件管理器
+menu_title: 运行组件管理器
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -30,4 +30,4 @@ Before continuing, complete all tasks discussed in <a href="{{ page.baseurl }}/c
 {% include comp-man/checklist.md %}
 
 #### 下一步
-[Run the Component Manager]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)
+[运行组件管理器]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)

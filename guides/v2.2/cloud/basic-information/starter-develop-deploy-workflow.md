@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 010_welcome
-title: Starter develop and deploy workflow
-menu_title: Starter develop and deploy workflow
+title: 开发和部署工作流起步
+menu_title: 开发和部署工作流起步
 menu_order: 25
 menu_node:
 version: 2.0
@@ -14,7 +14,7 @@ Everything in {{site.data.var.ece}} is Git-driven. Your [project]({{ page.baseur
 The general workflow for all development and deployment includes:
 
 * Push code to the remote Git branch
-* Build and deploy processes run
+* 构建和部署 processes run
 * The environments updated with code, services, and configurations
 
 The Starter plan gives you four active environments, including a `master` environment for your Production server. You have the option to use the remaining three active branches any way you want.
@@ -44,7 +44,7 @@ For your branches, you can follow any methodology. One example follows an Agile 
 
 From each sprint, you can have branches for every user story. All the stories become testable. You can continually merge to the sprint branch and validate that on a continuous basis. When the sprint ends, there is no testing bottleneck, and you can just merge to master and put the whole sprint into production.
 
-For detailed information, see [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html).
+For detailed information, see [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html).
 
 ## Development workflow {#development}
 Development and deployment on Starter plans begins with your initial project. You create your project with the "blank site", which is a {{site.data.var.ece}} template code repo with a fully prepared store. This creates a `master` branch of Git code in your Production environment.
@@ -116,7 +116,7 @@ When you are ready to configure your store, have all code pushed to your Integra
 
 For the best information on configurations, we recommend reviewing {{site.data.var.ee}} and your extension documentation. Here are some links and ideas to help you get kickstarted:
 
-* [Best practices for store configuration]({{ page.baseurl }}/cloud/configure/configure-best-practices.html) for specific best practices in the cloud
+* [网店配置最佳实践]({{ page.baseurl }}/cloud/configure/configure-best-practices.html) for specific best practices in the cloud
 * [Basic configuration](http://docs.magento.com/m2/ee/user_guide/configuration/configuration-basic.html){:target="_blank"} for store admin access, name, languages, currencies, branding, sites, store views and more
 * [Theme](http://docs.magento.com/m2/ee/user_guide/design/design-theme.html){:target="_blank"} for your look and feel of the site and stores including CSS and layouts
 * [System configuration](http://docs.magento.com/m2/ee/user_guide/system/system.html){:target="_blank"} for roles, tools, notifications, and your encryption key for your database
@@ -149,7 +149,7 @@ You will generate the file in the Integration environment where you configured M
 
 An additional feature of this command is part of {{site.data.var.ece}} 2.2. Any values determined to be sensitive data, like sandbox credentials for a PayPal module, will be generated into another configuration file called `env.php` in `app/etc/`. This file remains in the exact environment it is created without traveling with your code. You will not add this file to your code repository. You can also create environment variables with CLI commands in all {{site.data.var.ece}} versions.
 
-![Environment variables generate]({{ site.magentourl }}/common/images/cloud_workflow-env-variables.png)
+![环境变量 generate]({{ site.magentourl }}/common/images/cloud_workflow-env-variables.png)
 
 For more information, see [Configuration Management]({{ page.baseurl }}/cloud/live/sens-data-over.html).
 
@@ -211,26 +211,26 @@ Deploy scripts:
 
 When fully completed, your store comes back online, live, with all of your updated code and configurations.
 
-To learn more, see [Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
+To learn more, see [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 ### Push to Staging and test {#staging}
 You should always push all of your code in iterations to your Staging environment for full testing. The first time you use this environment, you will need to configure a few services including [Fastly]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html), [Blackfire Profiler]({{ page.baseurl }}/cloud/project/project-integrate-blackfire.html), and [New Relic APM]({{ page.baseurl }}/cloud/project/new-relic.html). We also recommend configuring payment gateways, shipping, notifications, and other vital services with sandbox or testing credentials.
 
 Staging is a pre-production environment, providing all services and settings as close to Production as possible. Thoroughly test every service, verify your performance testing tools, perform UAT testing as an administrator and customers, until you feel your store is ready for Production.
 
-To learn more, see [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+To learn more, see [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 
 ### Push to Master / Production {#pro}
 When you push to the `master` branch, you are pushing to Production. Treat configuration and testing of Production much as your Staging environment. The important difference in this environment is using live credentials. The moment you go live and launch, customers must be able to complete purchases and administrators should be able to manage your live store.
 
-To learn more, see [Deploy your store]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
+To learn more, see [部署你的网店]({{ page.baseurl }}/cloud/live/stage-prod-live.html).
 
 ### Go live {#go-live}
 We provide a clear walk-through for going live and launching. It requires more steps than pressing a button. But when complete, your store can serve up products in your customized theme for sale immediately.
 
-To learn more, check out [Go live and launch]({{ page.baseurl }}/cloud/live/live.html).
+To learn more, check out [上线和发布]({{ page.baseurl }}/cloud/live/live.html).
 
-## Continuous integration {#continuous-integration}
+## 持续集成 {#continuous-integration}
 Following your branching and development methodologies, you can easily develop new features, configure changes, and add extensions to continuously develop and deploy updates.
 
 {{site.data.var.ece}} environments support continous integration for constant updates. This workflow supports releases multiple times a day or on a set schedule according to your business needs.
@@ -240,4 +240,4 @@ Following your branching and development methodologies, you can easily develop n
 * Deploy and test in Staging
 * Deploy to Production
 
-For more information, see [Continuous integration]({{ page.baseurl }}/cloud/deploy/continuous-deployment.html).
+For more information, see [持续集成]({{ page.baseurl }}/cloud/deploy/continuous-deployment.html).

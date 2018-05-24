@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: Disable module output
-menu_title: Disable module output
+title: 禁用模块输出
+menu_title: 禁用模块输出
 menu_order: 15
 version: 2.2
 github_link: config-guide/config/disable-module-output.md
@@ -20,12 +20,12 @@ For example, the `Customer` module depends on the `Review` module, so the `Revie
 If a merchant used the Admin to disable a module's output in a previous release, you must manually configure the system to migrate these settings.
 </div>
 
-## Disable module output in a pipeline deployment
+## 禁用模块输出 in a pipeline deployment
 
 To disable module output in pipeline or any other deployment with multiple instances of Magento:.
 
 1. Edit the `Backend` module's `config.xml` file.
-2. Export the configuration changes.
+2. 导出配置 changes.
 
 ### Edit the `Backend` module's `config.xml` file
 
@@ -47,7 +47,7 @@ Here:
 
 As a sample result of this configuration, customers can no longer sign up to receive newsletters.
 
-### Export the configuration changes
+### 导出配置 changes
 
 Run the following command to export the configuration changes:
 
@@ -55,9 +55,9 @@ Run the following command to export the configuration changes:
 
 The results are written to the `<Magento_install_dir>/app/etc/config.php` file.
 
-For more information about this command, see [Export the configuration]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-export.html).
+For more information about this command, see [导出配置]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-config-mgmt-export.html).
 
-## Disable module output in a simple deployment
+## 禁用模块输出 in a simple deployment
 
 The procedure for disabling module output on a single instance of Magento is easier because the changes don't have to be distributed.
 

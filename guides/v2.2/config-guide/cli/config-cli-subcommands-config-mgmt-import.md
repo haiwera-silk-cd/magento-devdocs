@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Import data from configuration files
-menu_title: Import data from configuration files
+title: 从配置文件导入数据
+menu_title: 从配置文件导入数据
 menu_node:
 level3_menu_node: level3child
 level3_subgroup: cli-config-mgmt

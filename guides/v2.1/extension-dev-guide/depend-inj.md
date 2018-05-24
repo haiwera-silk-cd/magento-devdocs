@@ -1,7 +1,7 @@
 ---
 group: extension-dev-guide
-title: Dependency injection
-menu_title: Dependency injection
+title: 依赖注入
+menu_title: 依赖注入
 version: 2.1
 github_link: extension-dev-guide/depend-inj.md
 redirect_from: /guides/v1.0/extension-dev-guide/depend-inj.html
@@ -118,7 +118,7 @@ To get around this limitation, injectable objects can depend on [factories] that
 *	[ObjectManager]({{ page.baseurl }}/extension-dev-guide/object-manager.html)
 *	[Plugins]({{ page.baseurl }}/extension-dev-guide/plugins.html)
 *	[Routing]({{ page.baseurl }}/extension-dev-guide/routing.html)
-*	[Magento application initialization and bootstrap]({{ page.baseurl }}/config-guide/bootstrap/magento-bootstrap.html)
+*	[Magento初始化和引导]({{ page.baseurl }}/config-guide/bootstrap/magento-bootstrap.html)
 * [Module Dependencies]({{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html)
 *	[Programming concepts]({{ page.baseurl }}/extension-dev-guide/api-concepts.html)
 

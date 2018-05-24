@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 32_UseUpgrade
-title: Step 1. Select versions to upgrade
-menu_title: Step 1. Select versions to upgrade
+title: 步骤 1. 选择要升级的版本
+menu_title: 步骤 1. 选择要升级的版本
 menu_node:
 menu_order: 5
 version: 2.1
@@ -81,4 +81,4 @@ To upgrade components:
 
 		<img src="{{ site.baseurl }}/common/images/upgr_comp_no.png" alt="Do not upgrade this component">
 
-3.	Click **Next** and continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-readiness.html">Step 2. Readiness check</a>
+3.	Click **Next** and continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-readiness.html">步骤 2. 就绪检查</a>

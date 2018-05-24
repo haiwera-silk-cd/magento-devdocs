@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 04_CLI
-title: Deploy static view files
-menu_title: Deploy static view files
+title: 部署静态视图文件
+menu_title: 部署静态视图文件
 menu_node:
 menu_order: 302
 level3_menu_node: level3child
@@ -27,7 +27,7 @@ The term *static view file* refers to the following:
 
 Static view files are located in the `<your Magento install dir>/pub/static` directory, and some are cached in the `<your Magento install dir>/var/view_preprocessed` directory as well.
 
-Static view files deployment is affected by Magento modes as follows:
+静态视图文件部署 is affected by Magento modes as follows:
 
 -   **[Default]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#default-mode)** and **[developer]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#developer-mode)** modes: Magento generates them on demand, but the rest are cached in a file for speed of access.
 -   **[Production]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#production-mode)** mode: Static files are *not* generated or cached.
@@ -40,7 +40,7 @@ _Developer mode only_: When you install or enable a new module, it might load ne
 You can clean generated static view files in several ways. Refer to [Clean static files cache topic for details]({{ page.baseurl }}/howdoi/clean_static_cache.html) for more information.
 </div>
 
-## Deploy static view files {#config-cli-subcommands-staticview}
+## 部署静态视图文件 {#config-cli-subcommands-staticview}
 To deploy static view files:
 
 1.  Log in to the Magento server as, or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to</a>, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
@@ -453,7 +453,7 @@ Sample output:
 
     New version of deployed files: 1466711110
 
-### Deploy static view files without installing Magento {#deploy_without_db}
+### 部署静态视图文件 without installing Magento {#deploy_without_db}
 You might want to run the deployment process in a separate, non-production, environment, to avoid any build processes on sensitive production machines.
 
 To do this, take the following steps:
@@ -498,15 +498,15 @@ One of the options for making it atomic is to write to files stored in a tempora
 
 ## Related topics
 
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html">Manage the cache</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html">Manage the indexers</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html">Configure and run cron</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html">Code compiler</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">Set the Magento mode</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html">URN highlighter</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-depen.html">Dependency reports</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html">Translation dictionaries and language packages</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-less-sass.html">Create symlinks to LESS files</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-test.html">Run unit tests</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-layout-xml.html">Convert layout XML files</a>
--   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-perf-data.html">Generate data for performance testing</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a>
+-   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a>

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Adding extension attributes to entity
-menu_title: Adding extension attributes to entity
+title: 添加扩展属性到实体
+menu_title: 添加扩展属性到实体
 menu_order: 20
 version: 2.1
 github_link: extension-dev-guide/extension_attributes/adding-attributes.md

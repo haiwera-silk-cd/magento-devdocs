@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title: Templates basic concepts
-menu_title: Templates basic concepts
+title: 模板基本概念
+menu_title: 模板基本概念
 menu_order: 3
 version: 2.0
 github_link: frontend-dev-guide/templates/template-override.md

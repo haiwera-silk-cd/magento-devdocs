@@ -33,7 +33,7 @@ If you use a different version, some steps might be different.
 Consult your PhpStorm documentation for details.
 </div>
 
-## Run unit tests from the command line
+## 运行单元测试 from the command line
 To run PHPUnit unit tests from the command line:
 
 1.	Enter the following command to run a Bash shell in the web container.

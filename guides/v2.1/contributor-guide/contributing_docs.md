@@ -130,7 +130,7 @@ Refer to the following table for a description of each key-value pair.
          <td>Defines which guide the file belongs to, that is, which left-hand menu collection the file will show up in. Note that what you put here does not affect the top navigation menu. That is controlled by the `_/includes/navigation.html` file.</td>
       </tr>
       <tr>
-         <td>title: Install Magento</td>
+         <td>title: 安装Magento</td>
          <td>Sets the title of the page in the HTML meta and the main title on the page.</td>
       </tr>
       <tr>

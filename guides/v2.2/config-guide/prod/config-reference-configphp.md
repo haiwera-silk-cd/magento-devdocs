@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 07_conf
-title: config.php reference
-menu_title: config.php reference
+title: config.php参考
+menu_title: config.php参考
 menu_order: 5800
 menu_node:
 level3_menu_node: level3child

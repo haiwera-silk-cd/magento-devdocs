@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title: Customize email templates
-menu_title: Customize email templates
+title: 自定义邮件模板
+menu_title: 自定义邮件模板
 menu_order: 4
 version: 2.1
 github_link: frontend-dev-guide/templates/template-email.md
@@ -12,19 +12,19 @@ functional_areas:
 
 #### Contents
 
-<h2 id="customize-email-templates">Customize email templates</h2>
+<h2 id="customize-email-templates">自定义邮件模板</h2>
 Email templates are stored in the `<module_dir>/view/<area>/email` directory of their respective modules. For example, the template for the new order transactional email for the Sales module is located in <a href="{{ site.mage2100url }}app/code/Magento/Sales/view/frontend/email/order_new.html"><code>&lt;Magento_Sales_module_dir&gt;/view/frontend/email/order_new.html</code></a>. 
 
 We strongly recommend you not change the default Magento files. If you want to customize the default templates, you should create your custom templates and configure Magento to use them instead of the default templates. 
 
 You can add custom templates as physical files in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} or create them using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. Both approaches are described in the following sections.
  
-<h3 id="customize-email-theme">Customize email templates using a theme</h3>
+<h3 id="customize-email-theme">自定义邮件模板 using a theme</h3>
 Override email templates by creating templates in a new directory in your custom theme, using this pattern: `<theme_dir>/<ModuleVendorName>_<ModuleName>/email`. For example, to override the New Order email template, create a template named `order_new.html` in the `<theme_dir>/Magento_Sales/email` directory.
 
 <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-templates" target="_blank">Template fallback</a> is supported for email templates, so parent themes of your current theme are searched for templates.
  
-<h3 id="customize-email-admin">Customize email templates using the Magento Admin</h3>
+<h3 id="customize-email-admin">自定义邮件模板 using the Magento Admin</h3>
 
 Any templates configured in the Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} take precedence over default or theme-based templates.
 

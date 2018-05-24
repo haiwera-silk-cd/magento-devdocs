@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 03_Build
-title: Name your component
-menu_title: Name your component
+title: 你组件的名称
+menu_title: 你组件的名称
 menu_order: 6000
 version: 2.1
 github_link: extension-dev-guide/build/create_component.md
@@ -107,4 +107,4 @@ where:
 
 #### Next
 
-[Component load order]({{ page.baseurl }}/extension-dev-guide/build/module-load-order.html)
+[组件加载顺序]({{ page.baseurl }}/extension-dev-guide/build/module-load-order.html)

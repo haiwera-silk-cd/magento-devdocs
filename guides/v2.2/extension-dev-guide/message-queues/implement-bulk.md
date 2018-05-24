@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Example bulk operations implementation
-menu_title: Example bulk operations implementation
+title: 批量操作实现示例
+menu_title: 批量操作实现示例
 menu_order: 29
 ee_only: True
 level3_menu_node: level3child
@@ -282,7 +282,7 @@ class Consumer
 {% endhighlight %}
 {% endcollapsible %}
 
-### Configure message queues {#configmq}
+### 配置消息队列 {#configmq}
 
 The message queue topology must be configured to implement bulk operations. Create or edit the following files in the module's `app/code/<vendor>/<module_name>/etc` directory.
 
@@ -292,7 +292,7 @@ The message queue topology must be configured to implement bulk operations. Crea
 * `queue_publisher.xml`
 * `queue_topology.xml`
 
-For more information about the `di.xml` file, see [Dependency Injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html). For information the other files, see [Configure message queues]({{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html).
+For more information about the `di.xml` file, see [Dependency Injection]({{ page.baseurl }}/extension-dev-guide/depend-inj.html). For information the other files, see [配置消息队列]({{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html).
 
 #### Create `communication.xml`
 
@@ -353,6 +353,6 @@ The `queuetopology.xml` file defines the message routing rules and declares queu
 
 #### 相关主题
 
-* [Message Queues Overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
-* [Bulk Operations]({{ page.baseurl }}/extension-dev-guide/message-queues/bulk-operations.html)
-* [Configure message queues]({{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html)
+* [消息队列概述]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
+* [批量操作]({{ page.baseurl }}/extension-dev-guide/message-queues/bulk-operations.html)
+* [配置消息队列]({{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html)

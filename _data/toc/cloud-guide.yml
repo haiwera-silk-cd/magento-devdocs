@@ -1,22 +1,22 @@
-project-webint-basiclabel: Magento Commerce (Cloud) Guide
+project-webint-basiclabel: Magento企业版(云支持版) Guide
 pages:
-    - label: Welcome to Magento Commerce (Cloud)
+    - label: 欢迎使用Magento企业版(云支持版)
       url: /cloud/bk-cloud.html
       children:
-        - label: Subscriptions and plans
+        - label: 订阅和计划
           url: /cloud/basic-information/cloud-plans.html
 
-        - label: Onboarding tasks
+        - label: 新手上路任务
           url: /cloud/onboarding/onboarding-tasks.html
           versions: ["2.1", "2.2", "2.3"]
 
     - label: Architecture
       url: /cloud/architecture/cloud-architecture.html
       children:
-        - label: Starter architecture
+        - label: 架构起步
           url: /cloud/basic-information/starter-architecture.html
 
-        - label: Starter develop and deploy workflow
+        - label: 开发和部署工作流起步
           url: /cloud/basic-information/starter-develop-deploy-workflow.html
 
         - label: Pro architecture
@@ -31,7 +31,7 @@ pages:
         - label: Add Staging and Production to Pro projects UI
           url: /cloud/trouble/pro-env-management.html
 
-    - label: Technologies and requirements
+    - label: 技术和要求
       url: /cloud/requirements/cloud-requirements.html
       children:
         - label: Composer
@@ -43,13 +43,13 @@ pages:
         - label: Git
           url: /cloud/reference/git-integration.html
 
-        - label: Bitbucket integration
+        - label: Bitbucket集成
           url: /cloud/project/bitbucket-integration.html
 
-        - label: GitHub integration
+        - label: Github集成
           url: /cloud/project/project-integrate-github.html
 
-        - label: SSH and sFTP
+        - label: SSH和sFTP
           url: /cloud/env/environments-ssh.html
 
         - label: New Relic APM
@@ -62,60 +62,60 @@ pages:
           url: /cloud/project/sendgrid.html
           versions: ["2.1","2.2","2.3"]
 
-    - label: Local environment setup
+    - label: 本地环境设置
       url: /cloud/access-acct/first-time-setup.html
       children:
-        - label: Prepare for local environment setup
+        - label: 本地环境设置准备
           url: /cloud/before/before-workspace.html
 
-        - label: Install Magento prerequisites
+        - label: 安装Magento所需的必要软件
           url: /cloud/before/before-workspace-magento-prereqs.html
 
-        - label: Enable SSH keys
+        - label: 启用ssh密钥登录
           url: /cloud/before/before-workspace-ssh.html
 
-        - label: Set up the Magento file system owner
+        - label: 设置Magento文件系统所有者
           url: /cloud/before/before-workspace-file-sys-owner.html
 
-        - label: Clone and branch the project
+        - label: 克隆并开发项目分支
           url: /cloud/before/before-setup-env-2_clone.html
 
-        - label: Install Magento
+        - label: 安装Magento
           url: /cloud/before/before-setup-env-install.html
 
-        - label: First time deployment
+        - label: 首次部署
           url: /cloud/access-acct/first-time-deploy.html
 
-        - label: Optional - Install sample data
+        - label: 可选 - 安装样本数据
           url: /cloud/howtos/sample-data.html
 
-        - label: Optional - Configure Xdebug
+        - label: 可选 - 配置Xdebug
           url: /cloud/howtos/debug.html
 
-    - label: Import existing code into a project
+    - label: 导入现存的代码到项目
       url: /cloud/access-acct/first-time-setup_import-first-steps.html
       children:
         - label: Prepare your existing Magento Commerce system
           url: /cloud/access-acct/first-time-setup_import-prepare.html
 
-        - label: Import Magento Commerce into Magento Commerce (Cloud)
+        - label: Import Magento Commerce into Magento企业版(云支持版)
           url: /cloud/access-acct/first-time-setup_import-import.html
 
-    - label: Configure your store
+    - label: 配置你的网店
       url: /cloud/configure/configuration-overview.html
       children:
-        - label: Best practices for store configuration
+        - label: 网店配置最佳实践
           url: /cloud/configure/configure-best-practices.html
 
         - label: Set up PayPal
           url: /cloud/live/paypal-onboarding.html
           versions: ["2.1","2.2","2.3"]
 
-        - label: Set up Magento B2B
+        - label: 设置Magento B2B
           url: /cloud/configure/setup-b2b.html
           versions: ["2.2","2.3"]
 
-        - label: Set up cron jobs
+        - label: 设置定时任务
           url: /cloud/configure/setup-cron-jobs.html
 
         - label: Set up multiple Cloud websites or stores
@@ -124,69 +124,69 @@ pages:
         - label: Install, manage, and upgrade modules
           url: /cloud/howtos/install-components.html
 
-        - label: Install a theme
+        - label: 安装一个主题
           url: /cloud/howtos/custom-theme.html
 
-    - label: Configure Fastly
+    - label: 快速配置
       url: /cloud/basic-information/cloud-fastly.html
       children:
-        - label: Set up Fastly
+        - label: 快速设置
           url: /cloud/access-acct/fastly.html
 
-        - label: Custom Fastly VCL snippets
+        - label: 快速定制VCL片段
           url: /cloud/configure/cloud-vcl-custom-snippets.html
 
-        - label: Custom whitelist VCL
+        - label: 定制VCL白名单
           url: /cloud/configure/fastly-vcl-whitelist.html
 
-        - label: Custom blacklist VCL
+        - label: 定制VCL黑名单
           url: /cloud/configure/fastly-vcl-blacklist.html
 
-        - label: Custom extend Admin timeout VCL
+        - label: VCL自定义延长管理员超时
           url: /cloud/configure/fastly-vcl-extend-timeout.html
 
-        - label: Custom redirect to WordPress VCL
+        - label: VCL自定义自重向到WordPress
           url: /cloud/configure/fastly-vcl-wordpress.html
 
-        - label: Custom block bad referer VCL
+        - label: VCL自定义块坏引用
           url: /cloud/configure/fastly-vcl-badreferer.html
 
-        - label: Fastly troubleshooting
+        - label: 快速故障排查
           url: /cloud/trouble/trouble_fastly.html
 
-    - label: Configure environments
+    - label: 配置环境
       url: /cloud/env/environments.html
       children:
         - label: Application
           url: /cloud/project/project-conf-files_magento-app.html
 
-        - label: Build and deploy
+        - label: 构建和部署
           url: /cloud/project/magento-env-yaml.html
           versions: ["2.1","2.2","2.3"]
           children:
-            - label: Set up notifications
+            - label: 设置通知
               url: /cloud/env/setup-notifications.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Logging handlers
+            - label: 日志处理
               url: /cloud/env/log-handlers.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Smart wizards
+            - label: 小向导
               url: /cloud/env/smart-wizards.html
               versions: ["2.1","2.2","2.3"]
 
-        - label: Environment variables
+        - label: 环境变量
           url: /cloud/env/variables-intro.html
           children:
-            - label: Application variables
+            - label: 应用程序变量
               url: /cloud/env/environment-vars_magento.html
 
-            - label: Build variables
+            - label: 构建变量
               url: /cloud/env/variables-build.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Cloud variables
+            - label: 云变量
               url: /cloud/env/variables-cloud.html
               versions: ["2.1","2.2","2.3"]
 
@@ -194,11 +194,11 @@ pages:
               url: /cloud/env/variables-deploy.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Post-deploy variables
+            - label: 部署后变量
               url: /cloud/env/variables-post-deploy.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Working with variables
+            - label: 在变量下工作
               url: /cloud/env/working-with-variables.html
               versions: ["2.1","2.2","2.3"]
 
@@ -211,153 +211,153 @@ pages:
             - label: Redirects
               url: /cloud/project/project-routes-more-redir.html
 
-            - label: Server side includes
+            - label: 服务端引入
               url: /cloud/project/project-routes-more-ssi.html
 
         - label: Services
           url: /cloud/project/project-conf-files_services.html
           children:
-            - label: Set up MySQL service
+            - label: 设置MySQL服务
               url: /cloud/project/project-conf-files_services-mysql.html
 
-            - label: Set up Redis service
+            - label: 设置Redis服务
               url: /cloud/project/project-conf-files_services-redis.html
 
             - label: Set up Solr service
               url: /cloud/project/project-conf-files_services-solr.html
               versions: ["2.0"]
 
-            - label: Set up Elasticsearch service
+            - label: 设置Elasticsearch服务
               url: /cloud/project/project-conf-files_services-elastic.html
               versions: ["2.1","2.2","2.3"]
 
-            - label: Set up RabbitMQ service
+            - label: 设置RabbitMQ服务
               url: /cloud/project/project-conf-files_services-rabbit.html
 
-    - label: Configuration management for store settings
+    - label: 网店设置的配置管理
       url: /cloud/live/sens-data-over.html
       versions: ["2.1","2.2","2.3"]
       children:
-        - label: Example of managing system-specific settings
+        - label: 管理系统特定配置的示例
           url: /cloud/live/sens-data-initial.html
 
-    - label: Manage your project
+    - label: 管理你的项目
       url: /cloud/project/projects.html
       children:
 
-        - label: Configure your project
+        - label: 配置你的项目
           url: /cloud/project/project-webint-basic.html
 
-        - label: Project structure
+        - label: 项目结构
           url: /cloud/project/project-start.html
 
-        - label: Create and manage users
+        - label: 创建和管理用户
           url: /cloud/project/user-admin.html
 
         - label: Manage branches with the Interface
           url: /cloud/project/project-webint-branch.html
 
-        - label: Manage branches with the CLI
+        - label: 使用命令行管理分支
           url: /cloud/env/environments-start.html
 
-        - label: Snapshots and backup management
+        - label: 快照和备份管理
           url: /cloud/project/project-webint-snap.html
 
-    - label: Deploy your store
+    - label: 部署你的网店
       url: /cloud/live/stage-prod-live.html
       children:
-        - label: Deployment process
+        - label: 部署过程
           url: /cloud/reference/discover-deploy.html
 
         - label: Continuous deployment
           url: /cloud/deploy/continuous-deployment.html
 
-        - label: Protective block
+        - label: 保护块
           url: /cloud/live/live-prot.html
 
-        - label: Build and deploy on local
+        - label: 在本地构建和部署
           url: /cloud/live/live-sanity-check.html
 
-        - label: Prepare to deploy to Staging and Production
+        - label: 准备部署准生产和生产环境
           url: /cloud/live/stage-prod-migrate-prereq.html
 
-        - label: Deploy code and migrate static files and data
+        - label: 部署代码并迁移静态文件和数据
           url: /cloud/live/stage-prod-migrate.html
 
-        - label: Test deployment
+        - label: 测试部署
           url: /cloud/live/stage-prod-test.html
 
-    - label: Go live and launch
+    - label: 上线和发布
       url: /cloud/live/live.html
       children:
-        - label: Go live checklist
+        - label: 上线检查
           url: /cloud/live/go-live-checklist.html
 
-        - label: Launch steps
+        - label: 发布步骤
           url: /cloud/live/launch-steps.html
 
     - label: 故障排除
       url: /cloud/trouble/trouble.html
       children:
-        - label: Troubleshoot deployment
+        - label: 部署故障排查
           url: /cloud/access-acct/trouble.html
 
-        - label: View logs for troubleshooting
+        - label: 查看日志排查故障
           url: /cloud/trouble/environments-logs.html
 
-        - label: Incorrect credentials
+        - label: 证书不正确
           url: /cloud/trouble/trouble_ce-creds.html
 
-        - label: Resolve issues with a new project
+        - label: 新项目的问题解决
           url: /cloud/trouble/trouble_proj-startover.html
 
-        - label: Component deployment failure
+        - label: 组件部署失败
           url: /cloud/trouble/trouble_comp-deploy-fail.html
 
-        - label: Redis troubleshooting
+        - label: Redis问题排查
           url: /cloud/trouble/redis-troubleshooting.html
 
-        - label: Reset cron jobs
+        - label: 重置定时任务
           url: /cloud/trouble/reset-cron-jobs.html
           versions: ["2.2","2.3"]
 
-        - label: Resolve issues with encryption key
+        - label: 解决加密密钥问题
           url: /cloud/trouble/trouble-crypt-key-variable.html
 
-        - label: Resolve issues with HTML minification
+        - label: 解决HTML最小化问题
           url: /cloud/trouble/trouble-error-html-minification.html
 
-        - label: Resolve issues with Google Analytics during deployment
+        - label: 解决部署期间的google分析问题
           url: /cloud/trouble/trouble-google-analytics-deploy.html
 
-        - label: Restore configuration files
+        - label: 恢复配置文件
           url: /cloud/trouble/restore-configuration-files.html
           versions: ["2.1","2.2","2.3"]
 
-        - label: Site availability
+        - label: 站点可用性
           url: /cloud/trouble/site-availability.html
 
-        - label: Add site map and search engine robots
+        - label: 添加站点地图和搜索引擎的robots文件
           url: /cloud/trouble/robots-sitemap.html
 
-        - label: Theme troubleshooting
+        - label: 主题问题排查
           url: /cloud/trouble/theme-troubleshooting.html
 
-        - label: Message queues
+        - label: 消息队列
           url: /cloud/trouble/message-queues.html
           versions: ["2.1","2.2","2.3"]
 
-    - label: Upgrades and Patches
+    - label: 升级和补丁
       url: /cloud/project/project-upgrade-parent.html
       children:
-        - label: Patch Cloud tools
+        - label: Patch Cloud工具
           url: /cloud/composer-packages/ece-tools.html
           versions: ["2.1","2.2","2.3"]
 
-        - label: Patch Magento Commerce (Cloud)
+        - label: Magento企业版(云支持版)补丁
           url: /cloud/project/project-patch.html
 
-        - label: Upgrade Magento Commerce (Cloud)
+        - label: Magento企业版(云支持版)升级
           url: /cloud/project/project-upgrade.html
 
         - label: Upgrade from 2.0.4 (Cloud)

@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 01_Introduction
-title: Configuration Guide
-landing-page: Configuration Guide
+title: 配置手册
+landing-page: 配置手册
 menu_title: 介绍
 menu_order: 1
 menu_node: parent
@@ -49,4 +49,4 @@ You can 配置Magento应用 in any of the following ways:
 
 	*	<a href="{{ page.baseurl }}/config-guide/solr/solr-overview.html">Install and configure Solr</a>
 	*	<a href="{{ page.baseurl }}/config-guide/multi-master/multi-master.html">Split databases</a>
-	*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">Message queues</a>
+	*	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列</a>

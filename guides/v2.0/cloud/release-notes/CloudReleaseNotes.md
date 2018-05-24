@@ -1,8 +1,8 @@
 ---
 group: release-notes
 subgroup: 02_rel-notes
-title: Magento Commerce (Cloud) 2.0.x Release Notes
-menu_title: Magento Commerce (Cloud) 2.0.x Release Notes
+title: Magento企业版(云支持版) 2.0.x Release Notes
+menu_title: Magento企业版(云支持版) 2.0.x Release Notes
 menu_order: 325
 menu_node:
 level3_menu_node: level3parent

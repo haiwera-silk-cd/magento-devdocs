@@ -2,7 +2,7 @@
 group: fedg
 subgroup: E_rwd
 title: Magento响应式页面设计概述
-menu_title: How to Make Your Theme Responsive and Mobile
+menu_title: 如何使用的主题响应式及兼容移动端
 menu_order: 1
 menu_node: parent
 version: 2.0

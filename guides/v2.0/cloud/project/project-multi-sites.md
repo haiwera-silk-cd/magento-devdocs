@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 090_configure
-title: Set up multiple websites or stores
-menu_title: Set up multiple websites or stores
+title: 设置多站和多店
+menu_title: 设置多站和多店
 menu_order: 15
 menu_node:
 version: 2.0
@@ -23,17 +23,17 @@ To set up multiple stores, you must:
 3.	Push the changes to an Integration environment and test it.
 
 ## Configure your local installation
-To configure your local installation to use multiple stores, see [Multiple websites or stores]({{ page.baseurl }}/config-guide/multi-site/ms_over.html).
+To configure your local installation to use multiple stores, see [多站和多店]({{ page.baseurl }}/config-guide/multi-site/ms_over.html).
 
 ## Configure your Integration environment
 After successfully creating and testing multiple stores locally, you must:
 
-1.	[Configure routes](#cloud-multi-stores-routes), which specify how incoming URLs are handled by {{site.data.var.ee}}.
+1.	[路由配置](#cloud-multi-stores-routes), which specify how incoming URLs are handled by {{site.data.var.ee}}.
 2.	[Set up websites, stores, and store views](#cloud-multi-stores-admin) in your {{site.data.var.ee}} server's {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}.
 3.	[Modify `magento-vars.php`](#cloud-multi-stores-magento-vars) to specify the values of the `MAGE_RUN_TYPE` and `MAGE_RUN_CODE` variables.
 4.	[Deploy](#cloud-multi-stores-deploy) to your Integration branch and test.
 
-### Configure routes {#cloud-multi-stores-routes}
+### 路由配置 {#cloud-multi-stores-routes}
 Magento Enterprise Edition *routes* define how incoming URLs are processed. The way you configure routes depends on how you want your site to operate. We suggest configuring routes for integration as follows. You can edit the values later if your needs change.
 
 <div class="bs-callout bs-callout-info" id="info">
@@ -101,7 +101,7 @@ To get the access information you need to log in to the Magento Admin:
 #### Configure websites, stores, and store views
 Make sure you name your websites, stores, and store views in your Cloud Admin the same as you did when you set up your local installation.
 
-See [Set up multiple websites, stores, and store views in the Admin]({{ page.baseurl }}/config-guide/multi-site/ms_websites.html).
+See [在管理面板设置多站、多店及网店视图]({{ page.baseurl }}/config-guide/multi-site/ms_websites.html).
 
 ### Modify `magento-vars.php` {#cloud-multi-stores-magento-vars}
 Instead of configuring an {% glossarytooltip b14ef3d8-51fd-48fe-94df-ed069afb2cdc %}nginx{% endglossarytooltip %} virtual host, pass the `MAGE_RUN_CODE` and `MAGE_RUN_TYPE` variables using `magento-vars.php` which is located in your Magento root directory.

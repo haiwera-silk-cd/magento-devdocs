@@ -1,8 +1,8 @@
 ---
 group: arch-guide
 subgroup: Components
-title: Module overview
-menu_title: Module overview
+title: 模块概述
+menu_title: 模块概述
 menu_order: 3
 level3_menu_node: level3child
 level3_subgroup: modules
@@ -19,7 +19,7 @@ A <i>module</i> is a logical group -- that is, a directory containing blocks, co
 
 Modules and themes are the units of customization in Magento. Modules provide business features, with supporting logic,  while themes strongly influence user experience and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} appearance. Both components have a life cycle that allows them to be installed, deleted, and disabled. From the perspective of both merchants and {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers, modules are the central unit of Magento organization.
 
-The Magento Framework provides a set of core logic: {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code, libraries, and the basic functions that are inherited by the modules and other components.
+The Magento框架 provides a set of core logic: {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code, libraries, and the basic functions that are inherited by the modules and other components.
 
 ## Module purpose
 
@@ -46,15 +46,15 @@ Inside this folder, you will find all the code related to this module, including
 
 Magento developers, administrators, and anyone building a Magento web site will want to review all relevant topics surrounding their particular goals and use cases.
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP Developer Guide</a> for specific instructions on extending modules.
+See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for specific instructions on extending modules.
 
 See
 <a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a> for information on implementing themes and other components.
 
 ## Related topics {#arch-modules-related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html">Module dependencies</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html">模块依赖</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_and_areas.html">Modules and areas</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_and_areas.html">模块和地区</a>
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_conventions.html">Module location and naming conventions</a>

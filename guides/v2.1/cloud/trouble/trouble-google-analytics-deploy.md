@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Resolve issues with Google Analytics during deployment
-menu_title: Resolve issues with Google Analytics during deployment
+title: 解决部署期间的google分析问题
+menu_title: 解决部署期间的google分析问题
 menu_order: 35
 menu_node:
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
   - Services
 ---
 
-## Resolve issues with Google Analytics during deployment
+## 解决部署期间的google分析问题
 This topic discusses solutions to typical issues you might experience with Google Analytics during deployments from Integration to Staging to Production.
 
 ### Google Analytics disables when deployed

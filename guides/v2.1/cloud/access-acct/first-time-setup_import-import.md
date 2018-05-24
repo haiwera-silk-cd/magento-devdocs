@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 080_setup
-title: Import Magento EE into Magento Commerce (Cloud)
-menu_title: Import Magento EE into Magento Commerce (Cloud)
+title: 导入Magento企业版到Magento企业版(云支持版)
+menu_title: 导入Magento企业版到Magento企业版(云支持版)
 menu_order: 154
 menu_node:
 level3_menu_node: level3child

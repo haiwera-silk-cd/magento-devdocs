@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Deployment process
+title: 部署过程
 version: 2.1
 github_link: cloud/reference/discover-deploy.md
 functional_areas:
@@ -44,7 +44,7 @@ For all Starter environments and Pro Integration environments, pushing your Git 
 ## Required files for your Git branch {#requiredfiles}
 Your Git branch must have the following files for building and deploying in your local environment and to Integration, Staging, and Production environments:
 
--  `auth.json`—in the root Magento directory. This file includes the Magento Authentication keys entered when creating the project. The file is generated as part of autoprovisioning a new project using a blank template. If you need to verify the file and settings, see [Troubleshoot deployment]({{ page.baseurl }}/cloud/access-acct/trouble.html).
+-  `auth.json`—in the root Magento directory. This file includes the Magento Authentication keys entered when creating the project. The file is generated as part of autoprovisioning a new project using a blank template. If you need to verify the file and settings, see [部署故障排查]({{ page.baseurl }}/cloud/access-acct/trouble.html).
 -  [`app/etc/config.php`](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html)—auto-generated during the build phase if it does not exist.
 -  [`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html)—updated and saved to the root directory.
 -  [`.magento/services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html)—updated and saved to `magento/`.
@@ -71,7 +71,7 @@ Integration build and deployment consists of the following phases:
 [Phase 5: Deployment hooks](#cloud-deploy-over-phases-hook)  
 [Post-deployment: configure routing](#cloud-deploy-over-phases-route)  
 
-For detailed instructions, see [Build and deploy full steps](#steps).
+For detailed instructions, see [构建和部署 full steps](#steps).
 
 ### Phase 1: Code and configuration validation {#cloud-deploy-over-phases-conf}
 When you initially set up a project from a template, we retrieve the code from the [the {{site.data.var.ee}} template](https://github.com/magento/magento-cloud){:target="\_blank"}. This code repo is cloned to your project as the `master` branch.
@@ -149,7 +149,7 @@ Refer to [Magento deploy variables](http://devdocs.magento.com/guides/v2.1/cloud
 
 There are two default deploy hooks. The `pre-deploy.php` hook completes necessary cleanup and retrieval of resources and code generated in the build hook. The `php ./vendor/bin/m2-ece-deploy` hook runs a series of commands and scripts:
 
--  If Magento is **not installed**, it installs Magento with `bin/magento setup:install`, updates the deployment configuration, `app/etc/env.php`, and the database for your specified environment, such as Redis and website URLs. **Important:** When you completed the [First time deployment]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html) during setup, {{site.data.var.ee}} was installed and deployed across all environments.
+-  If Magento is **not installed**, it installs Magento with `bin/magento setup:install`, updates the deployment configuration, `app/etc/env.php`, and the database for your specified environment, such as Redis and website URLs. **Important:** When you completed the [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html) during setup, {{site.data.var.ee}} was installed and deployed across all environments.
 
 -  If Magento **is installed**, performs any necessary upgrades. The deployment script runs [`bin/magento setup:upgrade`]({{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-db-upgr.html) to update the database schema and data (which is necessary after extension or core code updates), and also updates the [deployment configuration]({{ page.baseurl }}/config-guide/config/config-php.html), `app/etc/env.php`, and the database for your environment. Finally, the deployment script clears the Magento cache.
 
@@ -170,11 +170,11 @@ If you enabled static content generation using the `SCD_ON_DEMAND` variable and 
 
 To review build and deploy logs, see [Use logs for troubleshooting]({{ page.baseurl }}/cloud/trouble/environments-logs.html).
 
-### Build and deploy full steps {#steps}
+### 构建和部署 full steps {#steps}
 With an understanding of the process, we provide the following instructions for build and deploy for your local, Integration, Staging, and finally Production environments:
 
--  [Build and deploy to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
+-  [构建和部署 to your local]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
 -  [Prepare to deploy]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
 -  [Deploy code and data]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
--  [Test deployment]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
--  [Go live and launch]({{ page.baseurl }}/cloud/live/live.html)
+-  [测试部署]({{ page.baseurl }}/cloud/live/stage-prod-test.html)
+-  [上线和发布]({{ page.baseurl }}/cloud/live/live.html)

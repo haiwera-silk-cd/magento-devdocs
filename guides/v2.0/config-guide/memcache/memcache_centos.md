@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 10_mem
-title: Install, configure, verify memcached on CentOS
-menu_title: Install, configure, verify memcached on CentOS
+title: 在CentOS上安装、配置和验证memcached
+menu_title: 在CentOS上安装、配置和验证memcached
 menu_order: 3
 menu_node:
 version: 2.0
@@ -175,4 +175,4 @@ Flush the memcache storage and quit Telnet:
 <a href="http://www.darkcoding.net/software/memcached-list-all-keys/" target="_blank">Additional information about the Telnet test</a>
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/memcache/memcache_magento.html">Configure Magento to use memcached</a>
+<a href="{{ page.baseurl }}/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>

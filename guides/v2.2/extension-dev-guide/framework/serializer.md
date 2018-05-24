@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
-title: Serialize Library
+title: 序列化库
 subgroup: Framework
-menu_title: Serialize Library
+menu_title: 序列化库
 menu_order: 1000
 version: 2.2
 github_link: extension-dev-guide/framework/serializer.md

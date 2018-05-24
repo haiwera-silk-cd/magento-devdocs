@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 10_mem
-title: Install, configure, verify memcached on Ubuntu
-menu_title: Install, configure, verify memcached on Ubuntu
+title: 在Ubuntu上安装、配置和验证memcached
+menu_title: 在Ubuntu上安装、配置和验证memcached
 menu_order: 2
 menu_node:
 version: 2.0
@@ -140,4 +140,4 @@ Flush memcache storage and quit Telnet:
 <a href="http://www.darkcoding.net/software/memcached-list-all-keys/" target="_blank">Additional information about the Telnet test</a>
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/memcache/memcache_magento.html">Configure Magento to use memcached</a>
+<a href="{{ page.baseurl }}/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>

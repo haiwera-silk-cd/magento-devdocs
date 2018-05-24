@@ -26,7 +26,7 @@ You can manage your cache in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024
 
 **Recommended Reading**
 
-* [Clear directories during development]({{ page.baseurl }}/howdoi/php/php_clear-dirs.html)
+* [部署期间清空目录]({{ page.baseurl }}/howdoi/php/php_clear-dirs.html)
 
 ### Consider different resolutions/devices
 

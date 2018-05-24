@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 14_Elastic
-title: Configure Magento to use Elasticsearch
-menu_title: Configure Magento to use Elasticsearch
+title: 配置Magento使用Elasticsearch
+menu_title: 配置Magento使用Elasticsearch
 menu_order: 900
 menu_node:
 version: 2.1

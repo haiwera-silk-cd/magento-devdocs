@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 14_Elastic
-title: Configure nginx and Elasticsearch
-menu_title: Configure nginx and Elasticsearch
+title: 配置nginx和Elasticsearch
+menu_title: 配置nginx和Elasticsearch
 menu_order: 5
 menu_node:
 version: 2.1
@@ -19,7 +19,7 @@ functional_areas:
 
 *	[Overview of secure web server communication](#es-ws-secure-over)
 *	[Set up a proxy](#es-nginx-proxy)
-*	[Configure Magento to use Elasticsearch](#elastic-m2-configure)
+*	[配置Magento使用Elasticsearch](#elastic-m2-configure)
 *	[Secure communication with nginx](#es-ws-secure-nginx)
 *	[Verify communication is secure](#es-ws-secure-verify)
 
@@ -77,7 +77,7 @@ This section discusses how to specify who can access the {% glossarytooltip b14e
 
 4.	Continue with the next section.
 
-## Configure Magento to use Elasticsearch {#elastic-m2-configure}
+## 配置Magento使用Elasticsearch {#elastic-m2-configure}
 
 {% include config/es-elasticsearch-magento.md %}
 
@@ -200,4 +200,4 @@ This section discusses how to specify who can access the Elasticsearch server.
 {% include config/es-verify-proxy.md %}
 
 #### Next
-<a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">Configure Elasticsearch stopwords</a>
+<a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>

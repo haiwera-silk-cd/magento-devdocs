@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: Troubleshoot deployment
-menu_title: Troubleshoot deployment
+title: 部署故障排查
+menu_title: 部署故障排查
 menu_order: 3
 menu_node:
 version: 2.1

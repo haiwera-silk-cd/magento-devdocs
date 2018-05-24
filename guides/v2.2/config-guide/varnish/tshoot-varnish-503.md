@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: 故障排除 503 errors
-menu_title: 故障排除 503 errors
+title: 排除503错误
+menu_title: 排除503错误
 menu_order: 500
 menu_node:
 version: 2.2
@@ -73,4 +73,4 @@ Because Admin is accessed through Varnish, you cannot log in to Admin to enable 
 
 `bin/magento cache:enable`
 
-For more information about using the command line, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html">Get started with command-line configuration</a>.
+For more information about using the command line, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>.

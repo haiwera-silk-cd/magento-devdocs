@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Configure environments
+title: 配置环境
 version: 2.0
 github_link: cloud/env/environments.md
 redirect_from:
@@ -62,13 +62,13 @@ For extensive details, see the following:
 
 *	Starter:
 
-	* [Starter architecture]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
-	*	[Starter develop and deploy workflow]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html)
+	* [架构起步]({{ page.baseurl }}/cloud/basic-information/starter-architecture.html)
+	*	[开发和部署工作流起步]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html)
 *	Pro:
 
 	* [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html)
 	*	[Pro develop and deploy workflow]({{ page.baseurl }}/cloud/architecture/pro-develop-deploy-workflow.html)
-*	[Deployment process]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
+*	[部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html)
 
 ## Environment services {#services}
 Your cloud environments for Starter and Pro configure the available and used database, web server, caching, and services per the settings entered for a series of YAML files. When you push Git code from your local, these services and more configure automatically in the environments hosted in the cloud (PaaS). For Pro Staging and Production environments (IaaS), you need to enter a ticket for those files to be migrated to configure those environment services and more. See [Configure your environments](#configenv).
@@ -108,4 +108,4 @@ For Pro, you need to enter a ticket to have these files and settings pushed to S
 
   * [Caching]({{ page.baseurl }}/cloud/project/project-routes-more-cache.html) configuration options for caches set in routes.yaml
   * [Redirect]({{ page.baseurl }}/cloud/project/project-routes-more-redir.html) configuration and rules for managing redirections set in routes.yaml
-  * [Server side includes]({{ page.baseurl }}/cloud/project/project-routes-more-ssi.html) configured set in routes.yaml
+  * [服务端引入]({{ page.baseurl }}/cloud/project/project-routes-more-ssi.html) configured set in routes.yaml

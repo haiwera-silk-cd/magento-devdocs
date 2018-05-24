@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: Maintenance mode options for upgrade
-menu_title: Maintenance mode options for upgrade
+title: 维护模式下的升级选项
+menu_title: 维护模式下的升级选项
 menu_node:
 menu_order: 200
 version: 2.0

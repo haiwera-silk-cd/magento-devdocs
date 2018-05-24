@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 170_trouble
-title: View logs for troubleshooting
-menu_title: View logs for troubleshooting
+title: 查看日志排查故障
+menu_title: 查看日志排查故障
 menu_order: 5
 menu_node:
 version: 2.1

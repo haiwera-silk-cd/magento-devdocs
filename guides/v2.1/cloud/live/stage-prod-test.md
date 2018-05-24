@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Test deployment
-menu_title: Test deployment
+title: 测试部署
+menu_title: 测试部署
 menu_order: 60
 menu_node:
 version: 2.1
@@ -14,7 +14,7 @@ functional_areas:
 ---
 
 #### Previous step:
-[迁移数据 and static files]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
+[迁移数据和静态文件]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
 
 When your code, files, and data is successfully migrated to Staging or Production, use the environment URLs to test your site(s) and store(s). For a list of your URLs, see [Starter]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#starter-urls) and [Pro]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#pro-urls) access information.
 
@@ -27,7 +27,7 @@ The deployment log is located in `/var/log/platform/<prodject ID>/post_deploy.lo
 
 When accessing logs in Production, you may need to SSH into each of the three nodes to locate the logs.
 
-For more information, see [View logs for troubleshooting]({{ page.baseurl }}/cloud/trouble/environments-logs.html)
+For more information, see [查看日志排查故障]({{ page.baseurl }}/cloud/trouble/environments-logs.html)
 
 ## Check the code base {#codebase}
 Verify your `master` code base correctly deployed to Staging and Production environments. The environments should have identical code bases.
@@ -82,7 +82,7 @@ To verify Fastly is enabled in Staging and Production, check the configuration i
 Make sure you entered the correct Fastly Service ID and API token in your Staging and Production environments. If you enter Staging credentials in your Production environment, you may not be able to upload your VCL snippets, caching will not work correctly, and your caching will be pointed to the wrong server and stores. Your Fastly credentials are created and mapped per service environment.
 </div>
 
-The module must be enabled to cache your site. If you have additional extensions enabled that affect headers, one of them could cause issues with Fastly. If you have further issues, see [Set up Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html) and [Fastly troubleshooting]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html).
+The module must be enabled to cache your site. If you have additional extensions enabled that affect headers, one of them could cause issues with Fastly. If you have further issues, see [快速设置]({{ page.baseurl }}/cloud/access-acct/fastly.html) and [快速故障排查]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html).
 
 ## Complete UAT testing {#uat-testing}
 Complete User Acceptance Testing (UAT) on Staging and Production. The following tests are a quick list of possible tasks and areas to test as a Merchant and Customer. Your list may be longer and include additional tests for custom modules, extensions, and 3rd party integrations. When testing, use desktops, laptops, and mobile devices.

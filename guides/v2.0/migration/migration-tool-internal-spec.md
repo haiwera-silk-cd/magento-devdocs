@@ -12,7 +12,7 @@ functional_areas:
   - Tools
 ---
 
-## 概述{#migrate-overview}
+## 概述 {#migrate-overview}
 
 This section describes an implementation details of 数据迁移工具 and how to extend its functionality.
 

@@ -40,7 +40,7 @@ To get the extension's Composer name and version from the Magento Marketplace:
 3.  Click **My Purchases**.
 
 	![Marketplace purchase history]({{ site.magentourl }}/common/images/marketplace-my-purchases.png){:width="650px"}
-4.  Find the extension you want to install and click **Technical Details**.
+4.  Find the extension you want to install and click **技术细节**.
 
 	![Technical details shows the extension's Composer name]({{ site.magentourl }}/common/images/marketplace-extension-technical-details.png){:width="200px"}
 <div class="bs-callout bs-callout-tip" markdown="1">

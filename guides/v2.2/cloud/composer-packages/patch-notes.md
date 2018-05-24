@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Magento Commerce (Cloud) package updates
+title: Magento企业版(云支持版) package updates
 version: 2.2
 github_link: cloud/composer-packages/patch-notes.md
 functional_areas:

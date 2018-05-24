@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 09_Varnish
-title: Configure Varnish and your web server
-menu_title: Configure Varnish and your web server
+title: 配置Varnish和你的web服务器
+menu_title: 配置Varnish和你的web服务器
 menu_order: 10
 menu_node:
 version: 2.2
@@ -220,4 +220,4 @@ Look for headers like the following:
 	X-Magento-Cache-Debug: HIT
 
 #### 下一步
-<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-magento.html">Configure Magento to use Varnish</a>
+<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>

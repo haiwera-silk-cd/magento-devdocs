@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Indexer optimization
-menu_title: Indexer optimization
+title: 索引优化
+menu_title: 索引优化
 menu_order: 14
 version: 2.2
 level3_menu_node: level3child
@@ -138,5 +138,5 @@ The indexer table switching mechanism requires additional database storage.
 ### Related topics
 {:.no_toc}
 
-* [Indexing overview]({{ page.baseurl }}/extension-dev-guide/indexing.html)
-* [Adding a custom indexer]({{ page.baseurl }}/extension-dev-guide/indexing-custom.html)
+* [索引概述]({{ page.baseurl }}/extension-dev-guide/indexing.html)
+* [添加自定义索引]({{ page.baseurl }}/extension-dev-guide/indexing-custom.html)

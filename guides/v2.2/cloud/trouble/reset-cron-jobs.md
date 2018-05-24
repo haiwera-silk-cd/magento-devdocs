@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Reset cron jobs
+title: 重置定时任务
 version: 2.2
 github_link: cloud/trouble/reset-cron-jobs.md
 functional_areas:

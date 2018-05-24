@@ -1,6 +1,6 @@
 ---
 group: cloud
-title: Install, manage, and upgrade extensions
+title: 安装、管理和升级扩展
 version: 2.0
 github_link: cloud/howtos/install-components.md
 redirect_from:
@@ -44,7 +44,7 @@ If you already know the extension's Composer name and version, skip this step an
 {% include cloud/composer-name.md %}
 
 ### Step 2: Update Magento's `composer.json` {#update}
-When adding the module to `composer.json`, the file [`app/etc/config.php`]({{ page.baseurl }}/config-guide/config/config-php.html) will also be updated. This file includes a list of installed modules, themes, and language packages,  shared configuration settings. This file also includes [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) (Pipeline Deployment) values too.
+When adding the module to `composer.json`, the file [`app/etc/config.php`]({{ page.baseurl }}/config-guide/config/config-php.html) will also be updated. This file includes a list of installed modules, themes, and language packages,  shared configuration settings. This file also includes [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) (管道部署) values too.
 
 To update `composer.json`:
 
@@ -161,4 +161,4 @@ To update an extension:
 
 1.  Wait for the project to deploy and verify in your environment.
 
-If there are errors, see [Component deployment failure]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).
+If there are errors, see [组件部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).

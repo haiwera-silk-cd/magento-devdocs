@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
-subgroup: 09_Full page caching
-title: Page caching
-menu_title: Full page caching
+subgroup: 09_页面缓存
+title: 页面缓存
+menu_title: 页面缓存
 menu_order: 16
 menu_node: parent
 version: 2.0

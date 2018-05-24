@@ -1,8 +1,8 @@
 ---
 group: cloud
 subgroup: 160_deploy
-title: Protective block
-menu_title: Protective block
+title: 保护块
+menu_title: 保护块
 menu_order: 20
 menu_node:
 version: 2.0
@@ -12,7 +12,7 @@ functional_areas:
   - Configuration
 ---
 
-Magento Commerce (Cloud) has a protective blocking feature that, under certain circumstances, restricts access to web sites with security vulnerabilities. We use this partial blocking method to prevent exploitation of known security vulnerabilities.
+Magento企业版(云支持版) has a protective blocking feature that, under certain circumstances, restricts access to web sites with security vulnerabilities. We use this partial blocking method to prevent exploitation of known security vulnerabilities.
 
 Outdated software often contains exploits we protect against by partially blocking access to these sites.
 

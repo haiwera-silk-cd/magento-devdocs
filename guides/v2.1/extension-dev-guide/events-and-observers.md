@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: Events and observers
-menu_title: Events and observers
+title: 事件和观查者
+menu_title: 事件和观查者
 menu_order: 6
 version: 2.1
 github_link: extension-dev-guide/events-and-observers.md

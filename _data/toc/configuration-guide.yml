@@ -1,37 +1,37 @@
-label: Configuration Guide
+label: 配置手册
 pages:
     - label: 介绍
       url: /config-guide/bk-config-guide.html
 
-    - label: Security settings
+    - label: 安全设置
       url: /config-guide/secy/secy.html
       children:
-        - label: Secure cron.php to run in a browser
+        - label: 确保cron.php文件在浏览器上的安全
           url: /config-guide/secy/secy-cron.html
 
-        - label: X-Frame-Options header
+        - label: X-Frame-Options头
           url: /config-guide/secy/secy-xframe.html
 
-        - label: Prevent cache poisoning
+        - label: 防止缓存中毒
           url: /config-guide/secy/secy-headers.html
 
-    - label: Magento application initialization and bootstrap
+    - label: Magento初始化和引导
       url: /config-guide/bootstrap/magento-bootstrap.html
       children:
 
-        - label: Set the value of bootstrap parameters
+        - label: 设置引导参数
           url: /config-guide/bootstrap/magento-how-to-set.html
 
-        - label: About Magento modes
+        - label: 关于Magento的模式
           url: /config-guide/bootstrap/magento-modes.html
 
-        - label: Customize base directory paths (MAGE_DIRS)
+        - label: 自定义基础目录路径(MAGE_DIRS)
           url: /config-guide/bootstrap/mage-dirs.html
 
-        - label: Enable profiling (MAGE_PROFILER)
+        - label: 开启扼要记录(MAGE_PROFILER)
           url: /config-guide/bootstrap/mage-profiler.html
 
-    - label: Pipeline Deployment
+    - label: 管道部署
       versions: ["2.2", "2.3"]
       url: /config-guide/deployment/
       children:
@@ -39,139 +39,139 @@ pages:
         - label: Overview
           url: /config-guide/deployment/pipeline/
 
-        - label: Technical Details
+        - label: 技术细节
           url: /config-guide/deployment/pipeline/technical-details.html
 
-        - label: Development System Setup
+        - label: 开发系统设置
           url: /config-guide/deployment/pipeline/development-system.html
 
-        - label: Build System Setup
+        - label: 构建系统设置
           url: /config-guide/deployment/pipeline/build-system.html
 
-        - label: Production System Setup
+        - label: 生产系统设置
           url: /config-guide/deployment/pipeline/production-system.html
 
-        - label: File systems access permissions
+        - label: 文件系统访问权限
           url: /config-guide/prod/prod_file-sys-perms.html
 
         - label: Examples
           children:
 
-            - label: Shared configuration
+            - label: 共享配置
               url: /config-guide/deployment/pipeline/example/shared-configuration.html
 
-            - label: Using CLI commands
+            - label: 使用命令行命令
               url: /config-guide/deployment/pipeline/example/cli.html
 
-            - label: Using environment variables
+            - label: 使用环境变量
               url: /config-guide/deployment/pipeline/example/environment-variables.html
 
-            - label: Using rsync
+            - label: 使用rsync同步命令
               url: /config-guide/deployment/pipeline/example/rsync.html
 
-    - label: Single machine deployment
+    - label: 单机部署
       versions: ["2.2", "2.3"]
       url: /config-guide/deployment/single-machine.html
 
-    - label: Command line configuration
+    - label: 命令行配置
       url: /config-guide/cli/config-cli.html
       children:
 
-        - label: Get started with command-line configuration
+        - label: 命令行配置起步
           url: /config-guide/cli/config-cli-subcommands.html
 
-        - label: Manage the cache
+        - label: 管理缓存
           url: /config-guide/cli/config-cli-subcommands-cache.html
 
-        - label: Manage the indexers
+        - label: 管理索引
           url: /config-guide/cli/config-cli-subcommands-index.html
 
-        - label: Configure and run cron
+        - label: 配置和执行定时任务
           url: /config-guide/cli/config-cli-subcommands-cron.html
 
-        - label: Code compiler
+        - label: 代码编译器
           url: /config-guide/cli/config-cli-subcommands-compiler.html
 
-        - label: Set the Magento mode
+        - label: 设置Magento的模式
           url: /config-guide/cli/config-cli-subcommands-mode.html
 
-        - label: URN highlighter
+        - label: 统一资源名称(URN)高亮
           url: /config-guide/cli/config-cli-subcommands-urn.html
 
-        - label: Dependency reports
+        - label: 依赖报告
           url: /config-guide/cli/config-cli-subcommands-depen.html
 
-        - label: Configuration management
+        - label: 配置管理
           versions: ["2.2", "2.3"]
           children:
 
-            - label: Export the configuration
+            - label: 导出配置
               url: /config-guide/cli/config-cli-subcommands-config-mgmt-export.html
 
-            - label: Set configuration values
+            - label: 设置配置值
               url: /config-guide/cli/config-cli-subcommands-config-mgmt-set.html
 
-            - label: Import data from configuration files
+            - label: 从配置文件导入数据
               url: /config-guide/cli/config-cli-subcommands-config-mgmt-import.html
 
-        - label: Translation dictionaries and language packages
+        - label: 翻译字典和语言包
           url: /config-guide/cli/config-cli-subcommands-i18n.html
 
-        - label: Static view files deployment
+        - label: 静态视图文件部署
           children:
 
-            - label: Static files deployment strategies
+            - label: 静态文件部署策略
               versions: ["2.2", "2.3"]
               url: /config-guide/cli/config-cli-subcommands-static-deploy-strategies.html
 
-            - label: Deploy static view files
+            - label: 部署静态视图文件
               url: /config-guide/cli/config-cli-subcommands-static-view.html
 
-        - label: Create symlinks to LESS files
+        - label: 创建软链接到LESS文件
           url: /config-guide/cli/config-cli-subcommands-less-sass.html
 
-        - label: Run unit tests
+        - label: 运行单元测试
           url: /config-guide/cli/config-cli-subcommands-test.html
 
-        - label: Convert layout XML files
+        - label: 转换布局的XML文件
           url: /config-guide/cli/config-cli-subcommands-layout-xml.html
 
-        - label: Generate data for performance testing
+        - label: 为性能测试生成数据
           url: /config-guide/cli/config-cli-subcommands-perf-data.html
 
-        - label: Run the support utilities (Magento Commerce only)
+        - label: 运行Magento支持工具 (Magento Commerce only)
           url: /config-guide/cli/config-cli-subcommands-spt-util.html
 
-    - label: Magento configuration files
+    - label: Magento配置文件
       url: /config-guide/config/config-magento.html
       children:
 
-        - label: Magento's deployment configuration
+        - label: Magento的部署配置
           url: /config-guide/config/config-php.html
 
-        - label: Module configuration files
+        - label: 模块配置文件
           url: /config-guide/config/config-files.html
 
-        - label: Create or extend configuration types
+        - label: 创建或扩展配置类型
           url: /config-guide/config/config-create.html
 
-        - label: Disable module output
+        - label: 禁用模块输出
           versions: ["2.2", "2.3"]
           url: /config-guide/config/disable-module-output.html
 
-        - label: Configuration reference
+        - label: 配置参考
           versions: ["2.1", "2.2", "2.3"]
           children:
 
-            - label: Sensitive and system-specific
+            - label: 敏感的和系统特定的
               url: /config-guide/prod/config-reference-sens.html
               versions: ["2.1", "2.2", "2.3"]
 
-            - label: Payment configuration paths reference
+            - label: 支付配置路径参考
               url: /config-guide/prod/config-reference-payment.html
               versions: ["2.1", "2.2", "2.3"]
 
-            - label: Other configuration paths reference
+            - label: 其它配置路径参考
               url: /config-guide/prod/config-reference-most.html
               versions: ["2.1", "2.2", "2.3"]
 
@@ -179,60 +179,60 @@ pages:
               url: /config-guide/prod/config-reference-b2b.html
               versions: ["2.2", "2.3"]
 
-            - label: .gitignore reference
+            - label: .gitignore参考
               url: /config-guide/prod/config-reference-gitignore.html
               versions: ["2.2", "2.3"]
 
-            - label: Use environment variables to override configuration settings
+            - label: 使用环境变量覆盖配置设置
               url: /config-guide/prod/config-reference-var-name.html
               versions: ["2.1", "2.2", "2.3"]
 
-            - label: config.php reference
+            - label: config.php参考
               url: /config-guide/prod/config-reference-configphp.html
               versions: ["2.2", "2.3"]
 
-            - label: env.php reference
+            - label: env.php参考
               url: /config-guide/prod/config-reference-envphp.html
               versions: ["2.2", "2.3"]
 
-    - label: Configure caching
+    - label: 配置缓存
       url: /config-guide/cache.html
       children:
 
-        - label: Associate cache frontends with cache types
+        - label: 将缓存前端与缓存类型关联
           url: /config-guide/cache/cache-types.html
 
-        - label: Low-level cache options
+        - label: 底层缓存选项
           url: /config-guide/cache/cache-options.html
 
-        - label: Static content signing
+        - label: 静态内容签名
           versions: ["2.2", "2.3"]
           url: /config-guide/cache/static-content-signing.html
 
-    - label: Configure Redis
+    - label: 配置Redis
       url: /config-guide/redis/config-redis.html
       children:
 
-        - label: Use Redis for the Magento page and default cache
+        - label: 使用Redis作为Magento页面缓存和默认缓存
           url: /config-guide/redis/redis-pg-cache.html
 
-        - label: Use Redis for session storage
+        - label: 使用Redis作为Session存储
           url: /config-guide/redis/redis-session.html
 
-    - label: Configure and use Varnish
+    - label: 配置和使用Varnish
       url: /config-guide/varnish/config-varnish.html
       children:
 
-        - label: Install Varnish
+        - label: 安装Varnish
           url: /config-guide/varnish/config-varnish-install.html
 
-        - label: Configure Varnish and your web server
+        - label: 配置Varnish和你的web服务器
           url: /config-guide/varnish/config-varnish-configure.html
 
-        - label: Configure Magento to use Varnish
+        - label: 配置Magento使用Varnish
           url: /config-guide/varnish/config-varnish-magento.html
 
-        - label: Advanced Varnish configuration
+        - label: Varnish高级配置
           versions: ["2.2", "2.3"]
           url: /config-guide/varnish/config-varnish-advanced.html
 
@@ -240,79 +240,79 @@ pages:
           versions: ["2.2", "2.3"]
           url: /config-guide/varnish/use-multiple-varnish-cache.html
 
-        - label: Final verification
+        - label: 最终校验
           url: /config-guide/varnish/config-varnish-final.html
 
-        - label: How Magento cache clearing works with Varnish
+        - label: 在Varnish下Magento的缓存清除是如何工作的
           url: /config-guide/varnish/use-varnish-cache.html
 
-        - label: How Varnish caching works
+        - label: Varnish缓存是如何工作的
           url: /config-guide/varnish/use-varnish-cache-how.html
 
-        - label: 故障排除 503 errors
+        - label: 排除503错误
           url: /config-guide/varnish/tshoot-varnish-503.html
 
-    - label: Use memcached for session storage
+    - label: 使用memcached做为session存储
       url: /config-guide/memcache/memcache.html
       children:
 
-        - label: Install, configure, verify memcached on Ubuntu
+        - label: 在Ubuntu上安装、配置和验证memcached
           url: /config-guide/memcache/memcache_ubuntu.html
 
-        - label: Install, configure, verify memcached on CentOS
+        - label: 在CentOS上安装、配置和验证memcached
           url: /config-guide/memcache/memcache_centos.html
 
-        - label: Configure Magento to use memcached
+        - label: 配置Magento使用memcached
           url: /config-guide/memcache/memcache_magento.html
 
-    - label: Multiple websites or stores
+    - label: 多站和多店
       url: /config-guide/multi-site/ms_over.html
       children:
 
-        - label: Set up multiple websites, stores, and store views in the Admin
+        - label: 在管理面板设置多站、多店及网店视图
           url: /config-guide/multi-site/ms_websites.html
 
-        - label: Tutorial—Set up multiple websites or stores with nginx
+        - label: 教程-在nginx下设置多站或多店
           url: /config-guide/multi-site/ms_nginx.html
 
-        - label: Tutorial—Set up multiple websites with Apache
+        - label: 教程-在Apache下设置多站或多店
           url: /config-guide/multi-site/ms_apache.html
 
-    - label: Set up a custom cron job and cron group
+    - label: 设置自定义的定时任务和任务组(cron)
       url: /config-guide/cron/custom-cron.html
       children:
 
-        - label: Custom cron job and cron group reference
+        - label: 自定义的定时任务和任务组(cron)参考
           url: /config-guide/cron/custom-cron-ref.html
 
-        - label: Configure a custom cron job and cron group (tutorial)
+        - label: 配置自定义的定时任务和任务组(cron)(教程)
           url: /config-guide/cron/custom-cron-tut.html
 
-    - label: Configure the database profiler
+    - label: 配置数据库分析器
       url: /config-guide/db-profiler/db-profiler.html
 
-    - label: Install and configure Elasticsearch (Magento Commerce only)
+    - label: 安装和配置Elasticsearch (Magento Commerce only)
       versions: ["2.1","2.2", "2.3"]
       url: /config-guide/elasticsearch/es-overview.html
       children:
 
-        - label: Configure nginx and Elasticsearch
+        - label: 配置nginx和Elasticsearch
           url: /config-guide/elasticsearch/es-config-nginx.html
 
-        - label: Configure Apache and Elasticsearch
+        - label: 配置Apache和Elasticsearch
           url: /config-guide/elasticsearch/es-config-apache.html
 
-        - label: Configure Elasticsearch stopwords
+        - label: 配置Elasticsearch停用词
           url: /config-guide/elasticsearch/es-config-stopwords.html
 
-        - label: Configure Magento to use Elasticsearch
+        - label: 配置Magento使用Elasticsearch
           url: /config-guide/elasticsearch/configure-magento.html
 
-    - label: Message Queues (Magento Commerce only)
+    - label: 消息队列 (Magento Commerce only)
       url: /config-guide/mq/rabbitmq-overview.html
       children:
 
-        - label: Manage message queues
+        - label: 管理消息队列
           url: /config-guide/mq/manage-mysql.html
 
 
@@ -327,33 +327,33 @@ pages:
         - label: Prepare Solr for production
           url: /config-guide/solr/solr-script.html
 
-    - label: Split database performance solution (Magento Commerce only)
+    - label: 数据库分库执行方案(仅企业版)
       url: /config-guide/multi-master/multi-master.html
       children:
 
-        - label: Automatically configure master databases
+        - label: 自动配置主数据库
           url: /config-guide/multi-master/multi-master_masterdb.html
 
-        - label: Manually configure master databases
+        - label: 手动配置主数据库
           url: /config-guide/multi-master/multi-master_manual.html
 
-        - label: Verify split databases
+        - label: 数据库分库验证
           url: /config-guide/multi-master/multi-master_verify.html
 
-        - label: Set up optional database replication
+        - label: 设置可选数据库复制
           url: /config-guide/multi-master/multi-master_slavedb.html
 
     - label: Custom Logging
       url: /config-guide/log/log-intro.html
       children:
 
-        - label: Magento logging in more detail
+        - label: Magento日志的更多细节
           url: /config-guide/log/log-magento.html
 
         - label: Example - logging database activity
           url: /config-guide/log/log-db.html
 
-    - label: How to locate your session files
+    - label: 如何定位你的session文件
       url: /config-guide/sessions.html
 
     - label: Deploy Magento to production
@@ -367,7 +367,7 @@ pages:
         - label: Deploy to production
           url: /config-guide/prod/prod_deploy.html
 
-        - label: Single machine deployment
+        - label: 单机部署
           url: /config-guide/prod/single-machine-deployment.html
 
     - label: Optimization
@@ -375,6 +375,6 @@ pages:
       children:
         - label: Magento Optimization Guide
           url: /config-guide/prod/prod_perf-optimize.html
-        - label: Development environment recommendations
+        - label: 开发环境推荐
           versions: ["2.1"]
           url: /config-guide/prod/development-environment.html

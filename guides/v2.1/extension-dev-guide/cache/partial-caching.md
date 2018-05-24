@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
-subgroup: 08_Partial caching
-title: Partial caching
-menu_title: Partial caching
+subgroup: 08_部份缓存
+title: 部份缓存
+menu_title: 部份缓存
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -46,9 +46,9 @@ The preceding lists all cache types and shows they are all enabled.
 ## More information about caching
 The following topics discuss how to set up caching:
 
-*	<a href="{{ page.baseurl }}/config-guide/cache/caching-cache-type.html">Create a cache type</a>
-*	<a href="{{ page.baseurl }}/config-guide/config/config-create.html">Create or extend configuration types</a>
-*	<a href="{{ page.baseurl }}/config-guide/config/caching_frontend-cache-types.html">Associate cache frontends with cache types</a>
-*	<a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">Low-level cache options</a>
-*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish.html">Configure and use Varnish</a>
-*	<a href="{{ page.baseurl }}/config-guide/redis/config-redis.html">Configure Redis</a>
+*	<a href="{{ page.baseurl }}/config-guide/cache/caching-cache-type.html">创建缓存类型</a>
+*	<a href="{{ page.baseurl }}/config-guide/config/config-create.html">创建或扩展配置类型</a>
+*	<a href="{{ page.baseurl }}/config-guide/config/caching_frontend-cache-types.html">将缓存前端与缓存类型关联</a>
+*	<a href="{{ page.baseurl }}/config-guide/cache/caching_low-level.html">底层缓存选项</a>
+*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>
+*	<a href="{{ page.baseurl }}/config-guide/redis/config-redis.html">配置Redis</a>

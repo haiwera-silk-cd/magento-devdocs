@@ -1,4 +1,4 @@
-label: Software Update Guide
+label: 软件升级手册
 pages:
 
     - label: Upgrade the Magento application and modules
@@ -8,37 +8,37 @@ pages:
       url: /comp-mgr/prereq/prereq_compman.html
       children:
 
-        - label: Enter your authentication keys in the Admin
+        - label: 在管理面板输入你的认证密钥
           versions: ["2.1", "2.0"]
           url: /comp-mgr/prereq/prereq_auth-token.html
 
-        - label: Set ulimit for the web server user
+        - label: 为web服务器设置资源使用限制(ulimit)
           url: /comp-mgr/prereq/prereq_compman-ulimit.html
 
-        - label: Set up cron for update and upgrade
+        - label: 为升级和更新设置定时任务(cron)
           url: /comp-mgr/prereq/prereq_cron.html
 
-        - label: Update and upgrade checklist
+        - label: 更新和升级前检查
           url: /comp-mgr/prereq/prereq_compman-checklist.html
 
-    - label: Magento Marketplace example
+    - label: Magento市场(marketplace)使用示例
       url: /comp-mgr/marketplace/marketplace.html
 
-    - label: Run the Component Manager
+    - label: 运行组件管理器
       versions: ["2.0","2.1"]
       url: /comp-mgr/module-man/compman-checklist.html
       children:
 
-        - label: Start the Component Manager
+        - label: 启动组件管理
           url: /comp-mgr/module-man/compman-start.html
 
-        - label: Manage your components
+        - label: 管理你的组件
           url: /comp-mgr/module-man/compman-main-pg.html
 
         - label: 步骤1.准备就绪检查
           url: /comp-mgr/module-man/compman-readiness.html
 
-        - label: Step 2. Back up the file system and database
+        - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/module-man/compman-backup.html
 
         - label: Step 3
@@ -56,7 +56,7 @@ pages:
             - label: Data Option
               url: /comp-mgr/module-man/compman-uninst-data.html
 
-        - label: Step 4. Uninstall
+        - label: 步骤4. 卸载
           url: /comp-mgr/module-man/compman-uninst-final.html
 
     - label: Run the Module Manager
@@ -70,7 +70,7 @@ pages:
         - label: 步骤1.准备就绪检查
           url: /comp-mgr/module-man/compman-readiness.html
 
-        - label: Step 2. Back up the file system and database
+        - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/module-man/compman-backup.html
 
         - label: Enable/Disable
@@ -96,7 +96,7 @@ pages:
             - label: Readiness check with multiple extension updates
               url: /comp-mgr/extens-man/extensman-readiness-multi.html
 
-        - label: Step 2. Back up the file system and database
+        - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/extens-man/extensman-backup.html
 
         - label: Step 3
@@ -111,7 +111,7 @@ pages:
             - label: Remove or Keep Data
               url: /comp-mgr/extens-man/extensman-uninst-data.html
 
-        - label: Step 4. Uninstall
+        - label: 步骤4. 卸载
           url: /comp-mgr/extens-man/extensman-uninst-final.html
 
     - label: Install extensions from the command line
@@ -125,60 +125,60 @@ pages:
     - label: Upgrade from Magento Open Source to Magento Commerce
       url: /comp-mgr/upgrader/ce-ee-upgrade-start.html
 
-    - label: Command-line upgrade
+    - label: 命令行升级
       url: /comp-mgr/cli/cli-upgrade.html
       children:
 
-        - label: Command-line upgrade to Magento 2.1 with sample data
+        - label: 命令行升级有样本数据的系统到Magento 2.1
           url: /comp-mgr/cli/cli-rc1-samp.html
 
-    - label: Run System Upgrade
+    - label: 运行系统升级
       url: /comp-mgr/upgrader/upgrade-checklist.html
       children:
 
-        - label: Start System Upgrade
+        - label: 开始系统升级
           url: /comp-mgr/upgrader/upgrade-start.html
 
-        - label: Step 1. Select versions to upgrade
+        - label: 步骤 1. 选择要升级的版本
           url: /comp-mgr/upgrader/upgrade-main-pg.html
 
-        - label: Step 2. Readiness check
+        - label: 步骤 2. 就绪检查
           url: /comp-mgr/upgrader/upgrade-readiness.html
 
-        - label: Step 3. Back up the file system and database
+        - label: 步骤 3. 备份文件系统和数据库
           url: /comp-mgr/upgrader/upgrade-backup.html
 
-        - label: Step 4. Upgrade
+        - label: 步骤 4. 升级
           url: /comp-mgr/upgrader/upgrade.html
 
-    - label: Update the updater application
+    - label: 更新更新器程序
       url: /comp-mgr/updater/update-updater.html
       children:
 
-        - label: Updater application
+        - label: 更新器程序
           url: /comp-mgr/updater/updater.html
 
     - label: 故障排除 suggestions
       url: /comp-mgr/trouble/tshoot.html
       children:
 
-        - label: Sorry, we can't take that action right now
+        - label: 对不起，我们现在还不能做这个动作
           url: /comp-mgr/trouble/cman/were-sorry.html
 
-        - label: Out of memory errors
+        - label: 内存溢出错误
           url: /comp-mgr/trouble/cman/out-of-memory.html
 
-        - label: Missing .gitignore files
+        - label: 缺少.gitignore文件
           url: /comp-mgr/trouble/cman/gitignore.html
 
-        - label: Troubleshoot upgrade issues
+        - label: 解决升级问题
           versions: ["2.1", "2.2", "2.3"]
           url: /comp-mgr/trouble/cman/upgrade_51431.html
 
-        - label: Troubleshoot cron
+        - label: 排除定时任务的问题
           url: /comp-mgr/trouble/cman/cron.html
 
-        - label: Troubleshoot the updater application
+        - label: 排除更新器程序的问题
           url: /comp-mgr/trouble/cman/updater.html
 
         - label: PHP版本就绪检查的问题
@@ -188,16 +188,16 @@ pages:
           versions: ["2.0", "2.1"]
           url: /comp-mgr/trouble/cman/rc_perms.html
 
-        - label: Roll back after update failure
+        - label: 更新失败回滚
           url: /comp-mgr/trouble/cman/update-fail.html
 
         - label: Resolve 组件依赖就绪检查的问题
           url: /comp-mgr/trouble/cman/component-depend.html
 
-        - label: Maintenance mode options for upgrade
+        - label: 维护模式下的升级选项
           url: /comp-mgr/trouble/cman/maint-mode.html
 
-        - label: Troubleshoot backups
+        - label: 解答备份问题
           url: /comp-mgr/trouble/cman/tshoot_backup.html
 
         - label: Error upgrading from Magento Open Source to Magento Commerce

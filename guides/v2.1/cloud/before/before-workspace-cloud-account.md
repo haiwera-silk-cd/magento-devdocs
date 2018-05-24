@@ -10,7 +10,7 @@ github_link: cloud/before/before-workspace-cloud-account.md
 ---
 
 #### Previous step:
-[Prepare for local environment setup]({{ page.baseurl }}/cloud/before/before-workspace.html)
+[本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html)
 
 To begin working with a project and develop your store, you should have received an e-mail invitation to [create a Mangento Enterprise Cloud Edition account](https://accounts.magento.cloud){:target="\_blank"}. The account provides access to your project for Magento development and deployment across all supported environments.
 
@@ -25,4 +25,4 @@ We recommend always starting with the blank site from a template as your initial
 {% include cloud/new-project-from-template.md %}
 
 #### 下一步
-[Install Magento prerequisites]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
+[安装Magento所需的必要软件]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
