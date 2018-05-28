@@ -1,16 +1,16 @@
 ---
 group: payments-integrations
 subgroup: D_Signifyd
-title: Signifyd fraud protection
-menu_title: Signifyd fraud protection
+title: Signifyd欺诈保护
+menu_title: Signifyd欺诈保护
 menu_node: parent
 version: 2.2
 github_link: payments-integrations/signifyd/signifyd.md
 ---
 
-## About this document
+## 关于这篇文章
 
-This document provides additional technical details for integrating Magento with the [Signifyd fraud protection system](https://www.signifyd.com/). The integration is based on the *Magento_Signifyd* module that uses the [Signifyd API](https://www.signifyd.com/docs/api/).
+This document provides additional technical details for integrating Magento with the [Signifyd欺诈保护 system](https://www.signifyd.com/). The integration is based on the *Magento_Signifyd* module that uses the [Signifyd API](https://www.signifyd.com/docs/api/).
 
 ## Magento_Signifyd模块 overview
 
@@ -58,7 +58,7 @@ To apply your mappings for the [Signifyd payment codes](https://www.signifyd.com
 
 2. Specify the needed mapping
 
-For example:
+例如:
 
 {%highlight xml startinline=1%}
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

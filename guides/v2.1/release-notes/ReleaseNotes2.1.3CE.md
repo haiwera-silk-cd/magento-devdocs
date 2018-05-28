@@ -239,7 +239,7 @@ We've enhanced the performance of configurable products in several ways:
 
 
 
-### Installation, upgrade, and deployment
+### 安装, upgrade, and deployment
 {:.no_toc} 
 
 
@@ -460,7 +460,7 @@ We've introduced a backward-incompatible change to the `Magento_Vault` module. W
 ### New method
 {:.no_toc} 
 
-This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToken` method. This method provides details about payment tokens to renderer components, such as public hash (allows to place orders) and available card or account details. Third-party developers can use this method to implement this functionality in their payment integrations. 
+This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToken` method. This method provides details about payment tokens to renderer 组件, such as public hash (allows to place orders) and available card or account details. Third-party developers can use this method to implement this functionality in their payment integrations. 
 
 
 
@@ -519,7 +519,7 @@ This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToke
 
 		bin/magento setup:static-content:deploy --theme=Magento/luma en_US de_DE
 
-	**Workaround**: Execute static content deployment command for every locale separately. For example:
+	**Workaround**: Execute static content deployment command for every locale separately. 例如:
 
 		bin/magento setup:static-content:deploy --theme=Magento/luma en_US
 		bin/magento setup:static-content:deploy --theme=Magento/luma de_D
@@ -533,7 +533,7 @@ This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToke
   
   **Workaround**:  You can avoid this fatal error by taking one of these actions: 
 
-	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the Web Setup Wizard from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
+	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the 网页安装向导 from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
 
 	*	安装Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
 
@@ -568,7 +568,7 @@ This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToke
 
 ## System requirements
 Our technology stack is built on PHP and MySQL. For more information, see
-<a href="{{ page.baseurl }}/install-gde/system-requirements.html" target="_blank">System Requirements</a>.
+<a href="{{ page.baseurl }}/install-gde/system-requirements.html" target="_blank">系统要求</a>.
 
 
 {% include install/releasenotes/ce_install_21.md %}
@@ -576,9 +576,9 @@ Our technology stack is built on PHP and MySQL. For more information, see
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 
 ## Credits
 Dear community members, thank you for your suggestions and bug reports. 

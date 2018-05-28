@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 Stylesheets are the main tool in responsive web design (RWD) implementation. This topic describes the mechanisms and approaches to building RWD used in the default Magento themes. To re-use them in your custom theme, make your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherit</a> from the Magento basic Blank theme.
 
@@ -54,7 +54,7 @@ In the Blank theme, the mobile and desktop styles are defined in separate files:
 
 
 
-<h2>Related topics</h2>
+<h2>相关主题</h2>
 
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html">Create a theme</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI库</a>

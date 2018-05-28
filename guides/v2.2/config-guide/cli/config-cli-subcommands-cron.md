@@ -30,7 +30,7 @@ You should remove the Magento crontab only before uninstalling the Magento appli
 
 To remove the Magento crontab:
 
-1.  Log in as or switch to the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.  Log in as or switch to the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.  Change to the Magento installation directory.
 3.  Enter the following command:
 

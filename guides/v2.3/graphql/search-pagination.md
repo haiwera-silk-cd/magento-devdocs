@@ -5,7 +5,7 @@ version: 2.3
 github_link: graphql/search-pagination.md
 ---
 
-A GraphQL search query can contain the following components:
+A GraphQL search query can contain the following 组件:
 
 * A full text search keyword
 * Filters (search criteria).

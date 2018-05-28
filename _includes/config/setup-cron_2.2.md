@@ -18,7 +18,7 @@ Magento uses cron for two sets of tasks, and for each, cron can run with a diffe
 </div>
 
 #### Create the Magento crontab
-Starting with version 2.2, Magento creates a crontab for you. We add the Magento crontab to any configured crontab for the Magento file system owner. In other words, if you already set up crontabs for other extensions or applications, we add the Magento crontab to it.
+Starting with version 2.2, Magento creates a crontab for you. We add the Magento crontab to any configured crontab for the Magento文件系统所有者. In other words, if you already set up crontabs for other extensions or applications, we add the Magento crontab to it.
 
 To create the Magento crontab, use the following command:
 
@@ -26,7 +26,7 @@ To create the Magento crontab, use the following command:
 
 Use `--force` to rewrite an existing Magento crontab. (Any existing crontab is not affected.)
 
-To view the crontab, switch to the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) and enter the following command:
+To view the crontab, switch to the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) and enter the following command:
 
 	crontab -l
 
@@ -38,5 +38,5 @@ A sample follows:
 	* * * * * /usr/bin/php /var/www/html/magento2ce/bin/magento setup:cron:run >> /var/www/html/magento2ce/var/log/setup.cron.log
 	#~ MAGENTO END
 
-#### Related topic
+#### 相关主题
 To remove the Magento crontab, see []({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cron.html#config-cron-remove).

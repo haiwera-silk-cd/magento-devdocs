@@ -1,10 +1,10 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: HtmlContent component
-menu_title: HtmlContent component
+group: UI_组件_guide
+subgroup: 组件
+title: Html内容组件
+menu_title: Html内容组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-htmlcontent.md
+github_link: ui_comp_guide/组件/ui-htmlcontent.md
 ---
 
 ## Overview
@@ -17,7 +17,7 @@ All blocks inside HtmlContent are integrated into the layout, so external blocks
 ## Structure
 The HtmlContent UI component comprises the following files:
 
-- JS component: [app/code/Magento/Ui/view/base/web/js/form/components/html.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/form/components/html.js)
+- JS component: [app/code/Magento/Ui/view/base/web/js/form/组件/html.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/form/组件/html.js)
 - template: [app/code/Magento/Ui/view/base/web/templates/content/content.html]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/templates/content/content.html)
 
 ## Configuration options
@@ -43,7 +43,7 @@ HtmlContent-specific options:
     <td><code>component</code></td>
     <td>The path to the component’s JS constructor in terms of RequireJS.</td>
     <td>String</td>
-    <td><code>Magento_Ui/js/form/components/html</code></td>
+    <td><code>Magento_Ui/js/form/组件/html</code></td>
   </tr>
   <tr>
     <td><code>content</code></td>
@@ -66,7 +66,7 @@ HtmlContent-specific options:
 </table>
 
 
-## Example of the HtmlContent component configuration
+## Example of the Html内容组件 configuration
 
 ### How to render layout in scope of UI configuration
 

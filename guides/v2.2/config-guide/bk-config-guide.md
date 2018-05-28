@@ -30,7 +30,7 @@ You can 配置Magento应用 in any of the following ways:
 	*	[使用Redis作为Session存储]({{ page.baseurl }}/config-guide/redis/redis-session.html)
 	*	[Set up database caching]({{ page.baseurl }}/config-guide/cache/caching-database.html)
 
-*	Magento in production
+*	生产环境的Magento
 
 	*	[pipeline deployment]({{ page.baseurl }}/config-guide/deployment/pipeline/)
 	*	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)

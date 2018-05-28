@@ -8,7 +8,7 @@ version: 2.2
 github_link: extension-dev-guide/xss-protection.md
 ---
 
-### Overview
+### 概述
 
 [Cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting){:target="_blank"}, or XSS, is a security vulnerability that can be found in web applications. This vulnerability allows attackers to inject malicious code into a web page viewed by users. Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers should be aware of these vulnerabilities to avoid introducing them in their code.
 

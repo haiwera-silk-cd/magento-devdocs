@@ -60,7 +60,7 @@ Make sure to upgrade the version of PHP on your local development workspace as w
 * [Magento 2.2.x技术栈要求](http://devdocs.magento.com/guides/v2.2/install-gde/system-requirements-tech.html#php)
 
 ### Configuration Management and upgrading {#config}
-If you are upgrading from 2.1.4 or later to 2.2.X and use Configuration Management, you need to migrate `config.local.php` to a temporary `config.php` file to your Git branch. When you upgrade without having this file prepared, you will encounter an error with a list of steps to complete prior to upgrading.
+If you are upgrading from 2.1.4或更新 to 2.2.X and use Configuration Management, you need to migrate `config.local.php` to a temporary `config.php` file to your Git branch. When you upgrade without having this file prepared, you will encounter an error with a list of steps to complete prior to upgrading.
 
 Previous versions with Configuration Management use a `config.local.php` file for Configuration Management. Starting with 2.2.0, [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) uses a different file name of `config.php`.
 
@@ -197,7 +197,7 @@ After fully upgrading, you need to create an updated `config.php` file. You will
 An updated file is generated with a module list and configuration settings at `/app/etc/config.php`.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Important: For an upgrade, you will delete `config.php`. Once this file is added to your code, you should not delete it. If you need to remove or edit settings, you must manually edit the file to make changes.
+重要: For an upgrade, you will delete `config.php`. Once this file is added to your code, you should not delete it. If you need to remove or edit settings, you must manually edit the file to make changes.
 </div>
 
 ## Verify and upgrade your extensions {#extensions}
@@ -216,7 +216,7 @@ We recommend [backing up your database]({{ page.baseurl }}/cloud/project/project
 Include the extensions in your going live steps to Production only after fully upgrading Production to v2.2. We strongly recommend fully upgrading your Production environment before including upgraded extensions.
 
 ### Additional extension upgrades {#moreextensions}
-We strongly recommend upgrading your Fastly module to v1.2.33 or later for {{site.data.var.ece}} 2.2.
+We strongly recommend upgrading your Fastly module to v1.2.33或更新 for {{site.data.var.ece}} 2.2.
 
 ## Troubleshoot your upgrade {#upgrade-verify-tshoot}
 In some cases, an error similar to the following displays when you try to access your storefront or the Magento Admin in a browser:

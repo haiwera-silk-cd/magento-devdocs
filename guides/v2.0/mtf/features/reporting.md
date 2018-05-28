@@ -197,11 +197,11 @@ The following example shows how to add a `custom` preset.
 
 **Solution**:
 
-Step 1. [Dispatch][dispatch] the `failure` event in the test case. This event already exists and is added to the code where the FTF processes the test failure.
+步骤1. [Dispatch][dispatch] the `failure` event in the test case. This event already exists and is added to the code where the FTF processes the test failure.
 
-Step 2. Open `<magento_2_root_dir>/dev/tests/functional/etc/events.xml`.
+步骤2. Open `<magento_2_root_dir>/dev/tests/functional/etc/events.xml`.
 
-Step 3. Add a preset with required observers and tags.
+步骤3. Add a preset with required observers and tags.
 
 {% highlight xml %}
 <preset name="custom">
@@ -242,9 +242,9 @@ The following example shows how to edit the `base` preset.
 
 **Solution**:
 
-Step 1. [Dispatch][dispatch] the events `click_before`, `click_after` and `set_value` in your code where applicable.
+步骤1. [Dispatch][dispatch] the events `click_before`, `click_after` and `set_value` in your code where applicable.
 
-Step 2. In the `base` preset, add required observer and event tags.
+步骤2. In the `base` preset, add required observer and event tags.
 
 {% highlight xml %}
 <preset name="base">
@@ -286,7 +286,7 @@ The following example shows how to use a custom observer in the example with the
 
 **Solution**:
 
-Step 1. Create an observer class `\Magento\Mtf\System\Observer\WebapiResponse` that stores incoming events in JSON files.
+步骤1. Create an observer class `\Magento\Mtf\System\Observer\WebapiResponse` that stores incoming events in JSON files.
 
 {% highlight php %}
 <?php
@@ -326,7 +326,7 @@ class WebapiResponse extends AbstractObserver
 }
 {% endhighlight %}
 
-Step 2. [Dispatch][dispatch] an event `webapi_failed` in the `\Magento\Tax\Test\Handler\TaxRule\WebApi::persist()` [handler] for failed responses.
+步骤2. [Dispatch][dispatch] an event `webapi_failed` in the `\Magento\Tax\Test\Handler\TaxRule\WebApi::persist()` [handler] for failed responses.
 
 ``` php?start_inline=1
 
@@ -343,7 +343,7 @@ public function persist(FixtureInterface $fixture = null)
 }
 ```
 
-Step 3. Add the observer and the tag to the `base` preset in `events.xml`.
+步骤3. Add the observer and the tag to the `base` preset in `events.xml`.
 
 In `<magento_2_root_dir>/dev/tests/functional/etc/events.xml`, add to a preset `<preset name="base">` an observer `<observer class="Magento\Mtf\System\Observer\WebapiResponse">` with a tag `<tag name="webapi_failed" />`:
 

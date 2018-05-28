@@ -1,14 +1,14 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Toolbar component
-menu_title: Toolbar component
+group: UI_组件_guide
+subgroup: 组件
+title: 工具栏组件
+menu_title: 工具栏组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-toolbar.md
+github_link: ui_comp_guide/组件/ui-toolbar.md
 ---
 ## Overview
 
-The Toolbar component implements a container for the listing-related elements like paging, mass actions, filters, bookmarks. That is, it aggregates all elements that serve as tools and renders them at the top of the main table. 
+The 工具栏组件 implements a container for the listing-related elements like paging, mass actions, filters, bookmarks. That is, it aggregates all elements that serve as tools and renders them at the top of the main table. 
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/toolbar.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/toolbar.js)
 

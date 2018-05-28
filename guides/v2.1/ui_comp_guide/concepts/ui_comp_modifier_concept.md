@@ -1,14 +1,14 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: About PHP modifiers in UI components
-menu_title: About PHP modifiers in UI components
+title: 关于UI组件的PHP修改
+menu_title: 关于UI组件的PHP修改
 menu_order: 40
 version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_modifier_concept.md
 ---
 
-## What's in this topic
+## 这里有什么
 
 This topic describes how to use {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} modifiers that are the server-side part of [UI components configuration]({{ page.baseurl }}/ui_comp_guide/concepts//ui_comp_config_flow_concept.html). Using modifiers is optional and might be necessary when [static declaration in XML configuration files]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html) is not suitable for the tasks. For example, in cases when additional data should be loaded from database. Or the other specific example is the [default product creation form]({{ page.baseurl }}/howdoi/customize_product.html), for which the modifier is a place where validations are added to display only certain fields for certain {% glossarytooltip 6e836354-0067-48ac-84ce-a4ab7c0c492e %}product types{% endglossarytooltip %}.
 
@@ -22,7 +22,7 @@ So in runtime, the component structure set in the modifier is merged with the co
 
 To add a PHP modifier for a UI component, take the following steps:
 
-**Step 1**
+**步骤1.*
 
 In your custom module, add a class that implements [`\Magento\Ui\DataProvider\Modifier\ModifierInterface`]({{ site.mage2100url }}app/code/Magento/Ui/DataProvider/Modifier/ModifierInterface.php) with the following methods:
 
@@ -86,7 +86,7 @@ class Example extends AbstractModifier
 }
 {%endhighlight%}
 
-**Step 2**
+**步骤2.*
 
 Declare your modifier in your module Di configuration `<Your_Module_dir>/etc/adminhtml/di.xml`. This declaration looks like the following:
 
@@ -107,7 +107,7 @@ Declare your modifier in your module Di configuration `<Your_Module_dir>/etc/adm
 
 (If you want to use this sample in your `di.xml`, replace the sample values with with the real names of your entities.)
 
-**Step 3**
+**步骤3.*
 
 To use your modifier, add a dependency on [`\Magento\Ui\DataProvider\Modifier\PoolInterface`]({{ site.mage2100url }}app/code/Magento/Ui/DataProvider/Modifier/PoolInterface.php) to your UI component data provider. For illustration see [`\Magento\Catalog\Ui\DataProvider\Product\Form\ProductDataProvider`]({{ site.mage2100url }}app/code/Magento/Catalog/Ui/DataProvider/Product/Form/ProductDataProvider.php)
 
@@ -115,4 +115,4 @@ To use your modifier, add a dependency on [`\Magento\Ui\DataProvider\Modifier\Po
 ## Related reading
 
 - [依赖注入]( {{ page.baseurl }}/extension-dev-guide/depend-inj.html)
-- [How Do I: Customize product creation form]({{ page.baseurl }}/howdoi/customize_product.html#modifier)
+- [How Do I: 自定义产品创建表单]({{ page.baseurl }}/howdoi/customize_product.html#modifier)

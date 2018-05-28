@@ -5,7 +5,7 @@ title: Listing/Grid Component
 menu_title: Listing/Grid Component
 menu_node: parent
 version: 2.0
-github_link: ui-components/ui-listing-grid.md
+github_link: ui-组件/ui-listing-grid.md
 redirect_from: /guides/v2.0/ui-library/ui-listing-grid.html
 ---
 
@@ -46,7 +46,7 @@ Example configuration of Listing Component instance:
 
 #### Data Source
 
-Data Source is another {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI Component{% endglossarytooltip %} that provides data in specific format which is shared among all UI Components. 
+Data Source is another {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI Component{% endglossarytooltip %} that provides data in specific format which is shared among all UI 组件. 
 
 The listing component requires the data source to be properly configured and associated with it:
 

@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Configure payment method by area
-menu_title: Configure payment method by area
+title: 根据地区配置支付方法
+menu_title: 根据地区配置支付方法
 menu_order: 10
 version: 2.1
 github_link: payments-integrations/base-integration/admin-integration.md

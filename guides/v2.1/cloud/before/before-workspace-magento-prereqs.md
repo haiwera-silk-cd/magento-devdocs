@@ -46,7 +46,7 @@ When using Vagrant, we also recommend the package [hostmanager](https://github.c
 ## Development tools {#devtools}
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"} - Provides code branching and management for accessing {{site.data.var.ee}} and your code repositories. Use Git command-line commands or applications of your choice to work with Git. You can install this on your local VM or on your host.
 	For more information, see [How Cloud uses Git]({{ page.baseurl }}/cloud/reference/git-integration.html).
-* [Composer](https://getcomposer.org/download/){:target="_blank"} - Used for dependency management. Composer enables us to manage the Magento components and their dependencies. Install on your local VM.
+* [Composer](https://getcomposer.org/download/){:target="_blank"} - Used for dependency management. Composer enables us to manage the Magento组件 and their dependencies. Install on your local VM.
 	For more information, see [How Cloud uses Composer]({{ page.baseurl }}/cloud/reference/cloud-composer.html).
 
 ## Web server (local) {#webserver}
@@ -161,9 +161,9 @@ These instructions discuss installation using commands for a Unix environment. F
 
 To install the Magento Cloud CLI:
 
-1.	Log in to your local development machine or switch to the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.	Log in to your local development machine or switch to the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 
-2.	Change to a directory to which the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} has write access, such as the home directory.
+2.	Change to a directory to which the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} has write access, such as the home directory.
 
 3.	Enter the following command:
 

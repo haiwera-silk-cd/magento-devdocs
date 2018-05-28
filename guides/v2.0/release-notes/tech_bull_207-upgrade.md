@@ -66,7 +66,7 @@ The following table summarizes what you need to do.
 </table>
 
 <h4>How to determine which version of 更新器程序 you are running</h4> 
-1. Log in to your Magento server as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1. Log in to your Magento server as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 
 2. Open the following file in a text editor:
 
@@ -131,7 +131,7 @@ To apply this patch:
 
 2.	Extract the patch in your Magento installation directory.
 
-	Log in as or change to the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>. Use one of the following commands to extract the archive.
+	Log in as or change to the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>. Use one of the following commands to extract the archive.
 
 	<table>
 	<tbody>

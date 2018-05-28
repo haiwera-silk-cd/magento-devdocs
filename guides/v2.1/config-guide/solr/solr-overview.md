@@ -2,7 +2,7 @@
 group: config-guide
 subgroup: 15_Solr
 title: Install and configure Solr
-menu_title: Install and configure Solr (Magento Commerce only)
+menu_title: Install and configure Solr (仅企业版适用)
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -162,7 +162,7 @@ See [this article on digitalocean](https://www.digitalocean.com/community/tutori
 
 Be sure to install the JDK and *not* the JRE.
 
-#### Install the Java 6 or later SDK on Ubuntu {#install-prereq-java-ubuntu}
+#### Install the Java 6或更新 SDK on Ubuntu {#install-prereq-java-ubuntu}
 To install the Java 6 SDK, enter the following command as a user with <code>root</code> privileges:
 
 <pre>apt-get install openjdk-6-jdk</pre>

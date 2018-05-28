@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Step 3. Extension Update
-menu_title: Extension Update
+title: 步骤3. 扩展更新
+menu_title: 扩展更新
 menu_node:
 menu_order: 30
 level3_menu_node: level3child
@@ -13,7 +13,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 3. Extension Update
+## 步骤3. 扩展更新
 This step displays if you're updating extensions. The following figure shows an example.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ site.baseurl }}/common/images/extensman_update-step.png" width="350px" alt="Click update to complete the task">
@@ -49,7 +49,7 @@ translate: 1 -> 0
 config_webservice: 1 -> 0
 
 [2016-07-27 20:37:02 UTC] Job "setup:cache:disable []" has been successfully completed
-[2016-07-27 15:38:02 CDT] Job "update {"components":[{"name":"magento/module-bundle-sample-data","version":"100.1.0"}]}" has been started
+[2016-07-27 15:38:02 CDT] Job "update {"组件":[{"name":"magento/module-bundle-sample-data","version":"100.1.0"}]}" has been started
 [2016-07-27 15:38:02 CDT] Starting composer update...
 [2016-07-27 15:38:04 CDT] ./composer.json has been updated
 

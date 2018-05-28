@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: Filter Component
 menu_title: Filter Component
 menu_node:
 menu_order: 1
 version: 2.0
-github_link: ui-components/ui-secondary-filter.md
+github_link: ui-组件/ui-secondary-filter.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-filter.html
 ---
 

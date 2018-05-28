@@ -28,7 +28,7 @@ Layered application design offers many advantages, but users of Magento will app
 
 * Clear organization of code predictably points {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers to code location.
 
-## Related topics
+## 相关主题
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 

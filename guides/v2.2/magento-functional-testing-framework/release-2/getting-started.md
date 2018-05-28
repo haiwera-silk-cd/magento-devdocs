@@ -1,6 +1,6 @@
 ---
 group: mftf
-title: Getting started
+title: 起步
 version: 2.2
 github_link: magento-functional-testing-framework/release-2/getting-started.md
 functional_areas:
@@ -54,7 +54,7 @@ To enable the **Admin Account Sharing** setting, to avoid unpredictable logout d
 
 Follow these steps in a command line interface to set up the MFTF on your system.
 
-### Step 1. Clone the `magento2` source code repository
+### 步骤1. Clone the `magento2` source code repository
 
 ```bash
 git clone https://github.com/magento/magento2.git
@@ -66,7 +66,7 @@ or
 git clone git@github.com:magento/magento2.git
 ```
 
-### Step 2. Install dependencies
+### 步骤2. 安装dependencies
 
 ```bash
 cd magento2/dev/tests/acceptance
@@ -75,7 +75,7 @@ cd magento2/dev/tests/acceptance
 composer install
 ```
 
-### Step 3. Build the project
+### 步骤3. Build the project
 
 In _magento2/dev/tests/acceptance_, run the following command:
 
@@ -88,7 +88,7 @@ To avoid typing `vendor/bin` every time, add your `<absolute path to acceptance 
 When added, you should be able to run the `robo`, `codecept`, and `phpunit` commands.
 </div>
 
-### Step 4. Edit environment settings
+### 步骤4. Edit environment settings
 
 In the _magento2/dev/tests/acceptance_ directory, edit the `.env` file to match your system. Use the following parameters, which are required to launch tests.
 
@@ -123,7 +123,7 @@ Example:
 http://127.0.0.1:4444/wd/hub
 ```
 
-### Step 5. Make `command.php` visible in the Magento testing environment
+### 步骤5. Make `command.php` visible in the Magento testing environment
 
 In your Magento installation, navigate to the _magento2/dev/tests/acceptance_ directory and run the following command to allow MFTF to send Magento CLI commands to your Magento instance.
 
@@ -135,7 +135,7 @@ cp .htaccess.sample .htaccess
 If you do not have access to your Magento installation and cannot complete the above steps you will not be able to run tests using Magento CLI commands.
 </div>
 
-### Step 6. Generate existing tests
+### 步骤6. Generate existing tests
 
 In the `magento2/dev/tests/acceptance` directory, run the following command to generate tests as PHP classes from XML files:
 
@@ -143,7 +143,7 @@ In the `magento2/dev/tests/acceptance` directory, run the following command to g
 vendor/bin/robo generate:tests
 ```
 
-### Step 7. Run tests
+### 步骤7. Run tests
 
 To run tests you need a running Selenium server and a [`codecept`](commands/codeception.html) or [`robo`](commands/robo.html) with required parameters.
 
@@ -169,7 +169,7 @@ vendor/bin/codecept run
 
 See more commands in [`robo`](commands/robo.html) and [`codecept`](commands/codeception.html).
 
-### Step 8. Generate reports {#allure}
+### 步骤8. Generate reports {#allure}
 
 Install [Allure](https://docs.qameta.io/allure/latest/), a tool that generates testing reports in HTML.
 Testing reports are generated in a CLI during testing.

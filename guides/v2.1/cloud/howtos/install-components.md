@@ -2,7 +2,7 @@
 group: cloud
 title: 安装、管理和升级扩展
 version: 2.1
-github_link: cloud/howtos/install-components.md
+github_link: cloud/howtos/install-组件.md
 redirect_from:
   - /guides/v2.1/cloud/howtos/update-components.html
 functional_areas:
@@ -38,12 +38,12 @@ We recommend using a branch for adding or updating, configuring, and testing you
 1.  In your local {{site.data.var.ece}} project, [update the Magento `composer.json`](#update) file with the name and version of the extension and add the code to Git. The code builds, deploys, and is available through the environment.
 1.  [Verify](#verify) the extension installed properly.
 
-### Step 1: Get the extension's Composer name and version {#compose}
+### 步骤1. Get the extension's Composer name and version {#compose}
 If you already know the extension's Composer name and version, skip this step and continue with [Update Magento's `composer.json`](#update).
 
 {% include cloud/composer-name.md %}
 
-### Step 2: Update Magento's `composer.json` {#update}
+### 步骤2. Update Magento's `composer.json` {#update}
 When adding the module to `composer.json`, the file [`app/etc/config.php`]({{ page.baseurl }}/config-guide/config/config-php.html) will also be updated. This file includes a list of installed modules, themes, and language packages, and shared configuration settings. This file differs from `config.local.php` used by [Configuration Management](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html).
 
 To update `composer.json`:
@@ -56,7 +56,7 @@ To update `composer.json`:
     composer update
     ```
 
-    For example:
+    例如:
 
     ```bash
     composer require pixlee/magento2:1.0.1 --no-update
@@ -78,7 +78,7 @@ If there are errors, see [extension deployment failure]({{ page.baseurl }}/cloud
 When installing and adding the module, you must add the `composer.lock` file to your Git branch for deployment. This ensures that the module loads properly when you use the `composer install` command.
 </div>
 
-### Step 3: Verify the extension {#verify}
+### 步骤3. Verify the extension {#verify}
 To verify the extension installed properly, you can check its functionality in the Magento Admin or you can make sure it is enabled as follows:
 
 1.  Open a terminal.
@@ -189,4 +189,4 @@ To update an extension:
     
 1.  Wait for the project to deploy and verify in your environment.
 
-If there are errors, see [组件部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).
+If there are errors, see [components部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).

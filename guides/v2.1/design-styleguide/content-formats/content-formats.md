@@ -28,17 +28,17 @@ When in doubt, spell it out. If there’s a chance a reader doesn't know an abbr
 
 * **Use all caps case.**
 
-* **First reference, spelled out.** Spell out term and append acronym in parenthesis.<br>*Correct examples:* content management system (CMS), Social Security Number (SSN)
+* **First reference, spelled out.** Spell out term and append acronym in parenthesis.<br>*Correct 例如:* content management system (CMS), Social Security Number (SSN)
 
 * **Second reference format.** Replace term and use only acronym.<br>*Correct example:* "When you sign into the content management system (CMS), enter the new content into the CMS."
 
-* **First reference, acronym only.** Some acronyms are used by themselves because they're better-known than their spelled-out terms. These acronyms are used on first reference.<br>*Correct examples:* DVD, ZIP Code, XML, API
+* **First reference, acronym only.** Some acronyms are used by themselves because they're better-known than their spelled-out terms. These acronyms are used on first reference.<br>*Correct 例如:* DVD, ZIP Code, XML, API
 
 ### File-Type Formats
 
 <ul>
 <li>Do not use a period or other punctuation before or after the file name.<br><br>
-<em>Examples:</em>
+<em>例如:</em>
 <ul style="list-style-type:none">
   <li><strong>否</strong> – “Pdf, Tiff, Html, Jpg, Css, Xml"</li>
   <li><strong>否</strong> – “.pdf, .tiff, .html, .jpg, xss, .xml"</li>

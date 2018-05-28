@@ -46,9 +46,9 @@ You can extend and override layouts in the `Magento\SharedCatalog\view\adminhtml
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The `Magento\SharedCatalog\view\adminhtml\ui_component` directory contains extensible UI components.
+The `Magento\SharedCatalog\view\adminhtml\ui_component` directory contains extensible UI 组件.
 
 * Forms: Company, catalog rule, catalog rule staging, product, sales rule, sales rule staging update, shared catalog, shared catalog tier price.
 

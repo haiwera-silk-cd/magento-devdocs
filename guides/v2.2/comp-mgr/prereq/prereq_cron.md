@@ -13,7 +13,7 @@ functional_areas:
 
 To enable us to update or upgrade your system, you must have two cron jobs. Each cron job should run every minute.
 
-The cron jobs schedule tasks for the Setup Wizard and for the updater application. These applications work together to install, update, and upgrade the Magento application and components.
+The cron jobs schedule tasks for the Setup Wizard and for the updater application. These applications work together to install, update, and upgrade the Magento application and 组件.
 
 {% include config/setup-cron_2.2_about.md %}
 

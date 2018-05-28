@@ -11,7 +11,7 @@ functional_areas:
   - Theme
 ---
 
-<h2 id="fedg_css-in-themes_overview">What's in this topic</h2>
+<h2 id="fedg_css-in-themes_overview">这里有什么</h2>
 
 <p>In the Magento application, {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} files are included in <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html" target="_blank">layout files</a>. </p>
 

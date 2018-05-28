@@ -27,9 +27,9 @@ To avoid the appearance of a disabled site and to set up a custom maintenance pa
 To run System Upgrade:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
-2.	Click **System** > Tools > **Web Setup Wizard**.
+2.	Click **System** > Tools > **网页安装向导**.
 	The following page displays.<br><br>
-	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage components or upgrade Magento">
+	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage 组件 or upgrade Magento">
 3.	Click **System Configuration**.
 4.	If you haven't already done so, enter your [authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html) in the provided fields.
 
@@ -49,7 +49,7 @@ To run System Upgrade:
 
 	<img src="{{ site.baseurl }}/common/images/upgr_initial-pg.png" width="650px" alt="Magento begins searching for upgrades right away">
 
-	The page displays similar to the following when we find components to upgrade.<br><br>
+	The page displays similar to the following when we find 组件 to upgrade.<br><br>
 	<img src="{{ site.baseurl }}/common/images/upgr_stuff-2-upgrade.png" width="650px" alt="Magento finds software to upgrade"><br><br>
 4. 	Continue with <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-main-pg.html">步骤 1. 选择要升级的版本</a>.
 
@@ -64,4 +64,4 @@ For suggested solutions to other causes indicated by this message, see <a href="
 The System Upgrade utility installs sample data for you but doesn't display it, if you:
 
 *	Used the [`magento sampledata:deploy`]({{ page.baseurl }}/install-gde/install/cli/install-cli-sample-data-composer.html) command to download, but not installed sample data
-*	You chose to update components at the same time as the Magento system software
+*	You chose to update 组件 at the same time as the Magento system software

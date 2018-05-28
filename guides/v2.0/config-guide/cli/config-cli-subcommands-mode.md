@@ -46,7 +46,7 @@ By default, Magento uses the `var` directories to store the cache, logs, and com
 </div>
 
 ## Display the current mode {#config-mode-show}
-The easiest way to do that is to run this command as the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>. If you have shared hosting, this is the user your provider gives you to log in to the server. If you have a private server, it's typically a local user account on the Magento server.
+The easiest way to do that is to run this command as the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>. If you have shared hosting, this is the user your provider gives you to log in to the server. If you have a private server, it's typically a local user account on the Magento server.
 
 命令用法：
 

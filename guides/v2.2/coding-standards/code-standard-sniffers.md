@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: Code sniffers
+title: 代码嗅探程序
 landing-page: Coding standards
-menu_title: PHP code sniffers
+menu_title: PHP代码嗅探程序
 menu_order: 3
 version: 2.2
 github_link: coding-standards/code-standard-sniffers.md

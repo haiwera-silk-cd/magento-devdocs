@@ -20,7 +20,7 @@ The Magento_CmsStaging模块 changes the CMS Pages and CMS Blocks creation pages
 
 You can stage the following parameters:
 
-- Enable/Disable CMS Page
+- 启用/禁用 CMS Page
 - Page Title
 - Content
     - Content Heading
@@ -38,13 +38,13 @@ You can stage the following parameters:
 
 The following parameters can be staged:
 
-- Enable/Disable CMS Block
+- 启用/禁用 CMS Block
 - Block Title
 - Identifier
 - {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}Store View{% endglossarytooltip %}
 - Content (WYSIWYG)
 
-### Installation details
+### 安装 details
 
 The Magento_CmsStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
@@ -58,7 +58,7 @@ You can find the list of modules that have dependencies on the Magento_CmsStagin
 
 [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CmsStaging模块.
 
-### UI components
+### UI 组件
 
 You can extend product and {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} updates using the UI components located in the `Magento\CmsStaging\view\adminhtml\ui_component` directory. For more information, see [UI Listing/Grid Component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-listing-grid.html).
 

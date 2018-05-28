@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Token UI component provider
-menu_title: Token UI component provider
+title: 令牌UI组件提供器
+menu_title: 令牌UI组件提供器
 menu_order: 15
 version: 2.1
 github_link: payments-integrations/vault/token-ui-component-provider.md
@@ -10,7 +10,7 @@ functional_areas:
   - Integration
 ---
 
-This topic describes how to create custom vault payments UI components, that are used to  display stored tokens on {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} page and order placing using vault. 
+This topic describes how to create custom vault payments UI 组件, that are used to  display stored tokens on {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} page and order placing using vault. 
 
 ## Token component provider {#token_provider}
 

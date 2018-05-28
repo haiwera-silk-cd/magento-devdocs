@@ -34,14 +34,14 @@ These users work within the (`frontend`) area.
 
 * **Web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} calls** can be made through HTTP just like browser requests, and can be made via AJAX calls from the user interface.
 
-## Presentation layer components
+## Presentation layer 组件
 
-One helpful way of understanding the Magento presentation layer components is by examining Magento <i>themes</i>.
+One helpful way of understanding the Magento presentation layer 组件 is by examining Magento <i>themes</i>.
 Magento themes organize both the visual aspect of your storefront and certain aspects of product behavior.
 
 Each {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} resides in a unique directory and contains custom page layouts, templates, skins, and language files that work together to create a distinct user experience.
 
-For an extensive introduction to theme elements and an overview of how to extend and override the default Magento themes, see the <a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a>.
+For an extensive introduction to theme elements and an overview of how to extend and override the default Magento themes, see the <a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a>.
 
 ## View model
 
@@ -69,10 +69,10 @@ Typically, the way it accesses the Model is through service contracts.
 
 ## Presentation layer flow
 
-Web users interact with components of the presentation layer to select actions that initiate calls to the underlying product layers.
-Presentation layer components make calls to the 服务层, which in turn sends requests to the {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}Domain{% endglossarytooltip %} (or business logic) layer.
+Web users interact with 组件 of the presentation layer to select actions that initiate calls to the underlying product layers.
+Presentation layer 组件 make calls to the 服务层, which in turn sends requests to the {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}Domain{% endglossarytooltip %} (or business logic) layer.
 
-## Related topics {#related}
+## 相关主题 {#related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
 

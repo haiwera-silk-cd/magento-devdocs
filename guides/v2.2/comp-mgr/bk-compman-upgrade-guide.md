@@ -1,9 +1,9 @@
 ---
 group: compman
 subgroup: 01_Introduction
-title: Upgrade the Magento application and modules
+title: 升级Magento及其模块
 landing-page: System Upgrade Guide
-menu_title: Upgrade the Magento application and modules
+menu_title: 升级Magento及其模块
 menu_node: parent
 menu_order: 1
 version: 2.2
@@ -12,7 +12,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Upgrade the Magento application and modules
+## 升级Magento及其模块
 This topic discusses the ways you can:
 
 *	Upgrade (that is, *patch*) the Magento software from version 2.0.0 to 2.0.1, for example

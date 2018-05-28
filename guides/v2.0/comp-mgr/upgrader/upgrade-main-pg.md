@@ -12,7 +12,7 @@ functional_areas:
 ---
 
 <h2 id="upgrade-access">System upgrade options</h2>
-To choose which components to upgrade:
+To choose which 组件 to upgrade:
 
 1.	After you <a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">run System Upgrade</a>, a page similar to the following displays:<br><br>
 	<img src="{{ site.baseurl }}/common/images/upgr_step1-mock.png" width="750px" alt="System Upgrade automatically checks for core module updates and third-party modules if you wish">
@@ -29,14 +29,14 @@ To choose which components to upgrade:
 			<p>Click <strong>Next</strong> to continue to the readiness check after making selections on this page.</p></td>
 	</tr>
 	<tr>
-		<td><p>Magento Core Components list</p></td>
+		<td><p>Magento Core 组件 list</p></td>
 		<td><p>Displays available core component versions for upgrade.</p>
 			<p><strong>(current)</strong> indicates the version you currently have.</p>
 			<p><strong>(latest)</strong> indicates the most recent available version for upgrade.</p></td>
 	</tr>
 	<tr>
-		<td><p>Other Components button</p></td>
-		<td><p>Enables you to search for upgrades for third-party components.</p>
+		<td><p>Other 组件 button</p></td>
+		<td><p>Enables you to search for upgrades for third-party 组件.</p>
 			<ul><li>To search for available component updates, click <strong>Yes</strong>.</li>
 			<li>To search only for Magento core component upgrades, click <strong>否</strong>.</li></ul></td>
 	</tr>
@@ -47,7 +47,7 @@ To choose which components to upgrade:
 			<p><img src="{{ site.baseurl }}/common/images/cman_page_move.png" width="100px" alt="Move back and forward or specify a page number">From left to right, move back one page, go to a specific page, or move forward one page.</p></td>
 	</tr>
 	<tr>
-		<td><p>List of components</p></td>
+		<td><p>List of 组件</p></td>
 		<td><p>For each component, you can:</p>
 			<ul><li>Set <strong>Upgrade</strong> to <strong>Yes</strong> to upgrade it.</li>
 				<li>Set <strong>Upgrade</strong> to <strong>否</strong> to skip it (that is, <em>not</em> upgrade that component).</li>
@@ -58,14 +58,14 @@ To choose which components to upgrade:
 	</tbody>
 	</table>
 
-<h2 id="upgr-comps">Upgrade components</h2>
-To upgrade components:
+<h2 id="upgr-comps">Upgrade 组件</h2>
+To upgrade 组件:
 
-1.	From the **Magento Core Components** list, click the core component version to which to upgrade.
+1.	From the **Magento Core 组件** list, click the core component version to which to upgrade.
 
 	For example, to upgrade to the latest version, click the one with **(latest)** in the name as the following figure shows.
 
-	<img src="{{ site.baseurl }}/common/images/upgr_step1_core-ver.png" alt="Select the version of Magento core components to which to upgrade">
+	<img src="{{ site.baseurl }}/common/images/upgr_step1_core-ver.png" alt="Select the version of Magento core 组件 to which to upgrade">
 
 2.	For each third-party component:
 

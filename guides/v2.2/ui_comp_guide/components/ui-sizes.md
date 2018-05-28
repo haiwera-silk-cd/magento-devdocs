@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Sizes component
-menu_title: Sizes component
+group: UI_组件_guide
+subgroup: 组件
+title: 表格显示数量控制组件
+menu_title: 表格显示数量控制组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-sizes.md
+github_link: ui_comp_guide/组件/ui-sizes.md
 ---
 
 ## Overview
 
-The Sizes component defines the maximum number of displayed records in a table (grid).
+The 表格显示数量控制组件 defines the maximum number of displayed records in a table (grid).
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/paging/sizes.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/paging/sizes.js)
 

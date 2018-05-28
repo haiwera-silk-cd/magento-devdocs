@@ -36,7 +36,7 @@ They are all related to the time period attributes. They can be set using stagin
 
 The Magento_CatalogStaging模块 enables you to stage the following category attributes:
 
-- Enable/disable Category
+- 启用/禁用 Category
 - Include in Menu
 - Category Name
 - Content
@@ -89,7 +89,7 @@ The following product attributes cannot be staged:
 - URL Key
 - {% glossarytooltip fd4bed67-7130-4415-8a6f-ad8d8ef8f25e %}SKU{% endglossarytooltip %}
 
-### Installation details
+### 安装 details
 
 The Magento_CatalogStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
@@ -103,7 +103,7 @@ You can find the list of modules that have dependencies on the Magento_CatalogSt
 
 [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.1/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CatalogStaging模块.
 
-### UI components
+### UI 组件
 
 You can extend product and category updates using the UI components located in the `Magento\CatalogStaging\view\adminhtml\ui_component` directory. For more information, see [UI Listing/Grid Component](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/components/ui-listing-grid.html).
 

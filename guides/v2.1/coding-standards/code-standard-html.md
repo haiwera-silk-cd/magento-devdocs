@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: HTML style guide
+title: HTML编码风格向导
 landing-page: Coding standards
-menu_title: HTML style guide
+menu_title: HTML编码风格向导
 menu_order: 9
 version: 2.1
 github_link: coding-standards/code-standard-html.md

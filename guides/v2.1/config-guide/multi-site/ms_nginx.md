@@ -50,7 +50,7 @@ Setting up multiple stores consists of the following tasks:
 
     *   `$MAGE_RUN_CODE` is the unique website or store view code that corresponds to `$MAGE_RUN_TYPE`
 
-## Step 2: Create nginx virtual hosts {#ms-nginx-vhosts}
+## 步骤2. Create nginx virtual hosts {#ms-nginx-vhosts}
 This section discusses how to load websites on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. You can use either websites or store views; if you use store views, you must adjust parameter values accordingly. You must complete the tasks in this section as a user with `root` privileges.
 
 {% collapsible To create virtual hosts: %}
@@ -106,7 +106,7 @@ For more detail about the map directive, see [nginx documentation on the map dir
 
 {% endcollapsible %}
 
-## Step 3: Modify nginx.conf.sample {#ms-nginx-conf-sample}
+## 步骤3. Modify nginx.conf.sample {#ms-nginx-conf-sample}
 {% collapsible To Edit PHP entry point for main application: %}
 1.	Open a text editor and review the file named nginx.conf.sample `<magento2_installation_directory>/nginx.conf.sample`. Specifically look for the following section:
 

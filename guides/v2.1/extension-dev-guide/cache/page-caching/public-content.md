@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 09_页面缓存
-title: Public content
-menu_title: Public content
+title: 公开内容
+menu_title: 公开内容
 menu_order: 17
 menu_node:
 version: 2.1

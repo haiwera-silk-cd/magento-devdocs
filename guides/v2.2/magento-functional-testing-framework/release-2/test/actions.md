@@ -437,7 +437,7 @@ Attribute|Type|Use|Description
 `before`|string|optional| `stepKey` of action that must be executed next.
 `after`|string|optional| `stepKey` of preceding action.
 
-#### Example of persisted data deletion
+#### 示例 of persisted data deletion
 
 Delete the entity that was previously created using [`createData`](#createdata) in the scope of the [test](../test.html#test-tag).
 
@@ -453,7 +453,7 @@ Delete the entity that was previously created using [`createData`](#createdata) 
 <deleteData createDataKey="createCategory" stepKey="deleteCategory"/>
 ```
 
-#### Example of existing data deletion
+#### 示例 of existing data deletion
 
 Delete an entity using [REST API]({{ page.baseurl }}/rest/bk-rest.html) request to the corresponding route:
 

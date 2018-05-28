@@ -1,6 +1,6 @@
 ---
 group: unit-testing
-title: Writing Testable Code
+title: 编写可测试的代码
 contributor_name: Vinai Kopp
 contributor_link: http://vinaikopp.com/
 version: 2.0
@@ -76,7 +76,7 @@ Even worse, the code is lying, because apparently there is a dependency on the i
 
 To illustrate, assume there is a theoretical `RequestInterface` with two methods, `getPathInfo()` and `getParam($name)`.
 
-For example:
+例如:
 
 {%highlight php startinline=true %}
 interface RequestInterface

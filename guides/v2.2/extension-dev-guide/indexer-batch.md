@@ -135,7 +135,7 @@ Make sure that these indexers are in "Update By Schedule" mode. If "Update On Sa
 The indexer table switching mechanism requires additional database storage.
 </div>
 
-### Related topics
+### 相关主题s
 {:.no_toc}
 
 * [索引概述]({{ page.baseurl }}/extension-dev-guide/indexing.html)

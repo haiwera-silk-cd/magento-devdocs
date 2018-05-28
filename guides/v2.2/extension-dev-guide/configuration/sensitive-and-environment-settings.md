@@ -10,7 +10,7 @@ functional_areas:
   - Configuration
 ---
 
-This topic discusses how third-party developers can create Magento components that designate configuration settings as being sensitive, system-specific, or both.
+This topic discusses how third-party developers can create Magento组件 that designate configuration settings as being sensitive, system-specific, or both.
 
 ## Guidelines
 
@@ -52,7 +52,7 @@ Examples of environment or system-specific values include:
 Add a reference to [`Magento\Config\Model\Config\TypePool`][typepool]{:target="_blank"} to the [`di.xml`][di-xml] file to specify either a system-specific or sensitive configuration value.
 
 
-### Example: Sensitive settings
+### 示例: Sensitive settings
 
 {% highlight php startinline=true %}
 <type name="Magento\Config\Model\Config\TypePool">
@@ -75,7 +75,7 @@ A message similar to the following is displayed:
     CONFIG__DEFAULT__PAYMENT__TEST__PASWORD for payment/test/password
     Done.
 
-### Example: System-specific settings
+### 示例: System-specific settings
 
 {% highlight php startinline=true %}
 <type name="Magento\Config\Model\Config\TypePool">

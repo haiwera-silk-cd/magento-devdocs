@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Multiselect component
-menu_title: Multiselect component
+group: UI_组件_guide
+subgroup: 组件
+title: 多选框组件
+menu_title: 多选框组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-multiselect.md
+github_link: ui_comp_guide/组件/ui-multiselect.md
 ---
 
 ## Overview
 
-The Multiselect component provides the interface for a list or a data set. Multiselect allows selecting multiple items.
+The 多选框组件 provides the interface for a list or a data set. Multiselect allows selecting multiple items.
 
 ## Сonfiguration options
 Extends all `abstract` and [Select]({{ page.baseurl }}/ui_comp_guide/components/ui-select.html) configurations.

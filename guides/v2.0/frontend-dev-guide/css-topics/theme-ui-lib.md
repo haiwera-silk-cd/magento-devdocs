@@ -11,13 +11,13 @@ functional_areas:
   - Theme
 ---
 
-<h2 id="fedg_using-ui-lib_overview">What's in this topic</h2>
+<h2 id="fedg_using-ui-lib_overview">这里有什么</h2>
 
 The Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} is a flexible <a href="http://lesscss.org/" target="_blank">LESS</a>-based {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} library designed to assist Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} developers. It employs a set of mixins for base elements to ease frontend theme development and customization. 
 
 This topic describes how the library is organized, and how to use it. 
 
-## Components provided by the UI library {#library_elements}
+## 组件 provided by the UI library {#library_elements}
 The Magento UI库 provides the ability to customize and reuse the following user interface elements and properties:
 
 *	actions-toolbar
@@ -113,7 +113,7 @@ When naming custom variables, please follow the [Magento naming convention for t
 
 You can use a mixin with default variables values, or you can redefine them when calling a mixin. The following paragraphs describe both ways to call a mixin.
 
-To use a mixin with default values, call the mixin without specifying any parameters. For example:
+To use a mixin with default values, call the mixin without specifying any parameters. 例如:
 
 <pre>.breadcrumbs {
     .breadcrumbs();

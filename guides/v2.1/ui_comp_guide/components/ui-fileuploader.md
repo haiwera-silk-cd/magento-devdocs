@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: FileUploader component
-menu_title: FileUploader component
+group: UI_组件_guide
+subgroup: 组件
+title: 文件上传组件
+menu_title: 文件上传组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-fileuploader.md
+github_link: ui_comp_guide/组件/ui-fileuploader.md
 ---
 
 ## Overview
 
-The File Uploader component is an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for the <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">jQuery-File-Upload</a> plugin used in Magento. This component integrates file upload functionality with UI components.
+The File Uploader component is an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for the <a href="https://github.com/blueimp/jQuery-File-Upload/wiki">jQuery-File-Upload</a> plugin used in Magento. This component integrates file upload functionality with UI 组件.
 
 ## Structure {#structure}
 

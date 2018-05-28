@@ -1,6 +1,6 @@
 ---
 group: coding-standards
-title: Web API technical vision
+title: Web API技术视角
 version: 2.1
 github_link: coding-standards/technical-vision/webapi.md
 ---
@@ -12,11 +12,11 @@ There are many headless Magento installations in which a merchant partially uses
 See [more details](https://en.wikipedia.org/wiki/Web_API) about importance of web APIs in modern web applications.
 
 
-### Components Dependencies
+### 组件 Dependencies
 
 The following diagram shows Web API component dependencies.
 
-![Web API components dependencies]({{ site.magentourl }}/common/images/coding-standards/webapi-components-dependencies.png)
+![Web API 组件 dependencies]({{ site.magentourl }}/common/images/coding-standards/webapi-组件-dependencies.png)
 
 ### High-level Architecture
 

@@ -43,7 +43,7 @@ But if there is something you want to improve, the only recommended way is creat
 
 Making changes in the Magento out-of-the-box themes is a bad idea, because can result in your changes being overwritten during upgrade.
 
-<h2>Related topics</h2>
+<h2>相关主题</h2>
 - <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-overview.html"> CSS in Magento themes</a>
 - <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
 - <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>

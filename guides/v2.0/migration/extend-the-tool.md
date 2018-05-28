@@ -88,7 +88,7 @@ In addition to the Map Step, there are other steps in the `config.xml` file whic
 Unlike the [Map Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#map-step), these steps scan a predefined list of tables instead of all tables.
 
 ### Create custom steps
-Using the same "GreatBlog" example, suppose the extension contains three tables in Magento 1, but was redesigned to have only one table in Magento 2. To migrate all data from multiple tables to a single table, you can create a custom step in the `config.xml` file. For example:
+Using the same "GreatBlog" example, suppose the extension contains three tables in Magento 1, but was redesigned to have only one table in Magento 2. To migrate all data from multiple tables to a single table, you can create a custom step in the `config.xml` file. 例如:
 
 ```xml
 <steps mode="data">

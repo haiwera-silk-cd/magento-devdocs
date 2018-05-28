@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Checkboxset component
-menu_title: Checkboxset component
+group: UI_组件_guide
+subgroup: 组件
+title: 单/复选框组组件
+menu_title: 单/复选框组组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-checkboxset.md
+github_link: ui_comp_guide/组件/ui-checkboxset.md
 ---
 
 ## Overview
 
-The Checkboxset component implements a group of `<input type="checkbox">`或`<input type="radio">` selection elements.
+The 单/复选框组组件 implements a group of `<input type="checkbox">`或`<input type="radio">` selection elements.
 
 ## Configuration options
 

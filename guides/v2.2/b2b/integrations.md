@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Integrate with B2B using REST
-menu_title: Integrate with B2B using REST
+title: 使用REST集成B2B
+menu_title: 使用REST集成B2B
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -112,7 +112,7 @@ companyTeamRepositoryV1
 configurableProductConfigurableProductManagementV1
 ```
 
-### Company credit
+### 公司信用帐户
 
 ```
 companyCreditCreditBalanceManagementV1

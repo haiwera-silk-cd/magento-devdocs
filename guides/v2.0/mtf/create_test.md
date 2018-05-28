@@ -10,9 +10,9 @@ The Magento testing framework (FTF) works with functional tests only. Functional
 Tests usually cover functionality of a business {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}. A goal is to find discrepancies between expected and real behaviour of the product.
 Magento provides functional tests in the `<magento2_root_dir>/dev/tests/functional/` directory. In this guide, we call them [out-of-the-box tests][out-of-the-box test]. You can use them to test the default Magento functionality. Also, you can create a test [extending from the out-of-the-box test][], or [create your own functional tests][].
 
-## Related topics
+## 相关主题
 
-[Out-of-the-box test][out-of-the-box test]
+[盒外测试模型][out-of-the-box test]
 
 [New functional test: Theory][]
 

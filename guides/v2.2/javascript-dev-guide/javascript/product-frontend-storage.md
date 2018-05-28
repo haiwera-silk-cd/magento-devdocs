@@ -110,7 +110,7 @@ Use the following REST endpoint to get product information:
 
 `/V1/products-render-info`
 
-For UI Components, add this information in the [`dataProvider`][datasource-component] entry inside your `etc/view/frontend/ui_component/<ui-component-name>.xml` file.
+For UI 组件, add this information in the [`dataProvider`][datasource-component] entry inside your `etc/view/frontend/ui_component/<ui-component-name>.xml` file.
 
 The following example is from the [recently-viewed widget][recently-viewed-widget]{:target="_blank"}:
 

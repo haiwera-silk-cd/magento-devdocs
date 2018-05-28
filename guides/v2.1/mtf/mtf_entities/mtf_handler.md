@@ -53,7 +53,7 @@ The following nodes influence handlers:
 </td></tr>
 </table>
 
-## Handler components {#mtf_handler-components}
+## Handler 组件 {#mtf_handler-组件}
 
 ### Handler interface {#mtf_handler_interface}
 

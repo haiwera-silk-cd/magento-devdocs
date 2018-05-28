@@ -52,7 +52,7 @@ At a high level, there are three main steps for managing module dependencies:
 
 Example: Module A declares a dependency upon Module B. Thus, in Module A's `module.xml` file, Module B is listed in the &lt;sequence> list, so that B's files are loaded before A's. Additionally, you must declare a dependency upon Module B in A's `composer.json` file. Furthermore, in the <a href="{{ page.baseurl }}/config-guide/config/config-php.html">部署配置</a>, Modules A and B must both be defined as enabled.
 
-## Related topics {#m2arch-module-related}
+## 相关主题 {#m2arch-module-related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
 

@@ -14,9 +14,9 @@ functional_areas:
 Sometimes when you attempt to install or update, you can encounter an error due to your system running out of physical memory. We recommend you create a swap file to avoid this error.
 
 ### Symptom
-When installing or updating the Magento application or components like extensions, themes, or language packages, an error similar to the following displays:
+When installing or updating the Magento application or 组件 like extensions, themes, or language packages, an error similar to the following displays:
 
-	Could not complete update {"components":[
+	Could not complete update {"组件":[
 	{"name":"magento/module-bundle-sample-data","version":"100.1.0"}
 	]} successfully: proc_open(): fork failed - Cannot allocate memory
 

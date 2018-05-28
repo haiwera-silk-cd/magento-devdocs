@@ -1,6 +1,6 @@
 ---
 group: unit-testing
-title: Running Unit Tests in the CLI
+title: 在命令行运行单元测试
 contributor_name: Vinai Kopp
 contributor_link: http://vinaikopp.com/
 version: 2.1
@@ -62,7 +62,7 @@ Some examples follow:
 	* Homebrew: `/usr/local/Cellar/php56/5.6.19/bin/php`
 	* MAMP: `/Applications/MAMP/bin/php/php5.6.19/bin/php`
 
-You can either fix your `$PATH` (please refer to your system documentation on how to do that), or specify the full path to the PHP interpreter. For example:
+You can either fix your `$PATH` (please refer to your system documentation on how to do that), or specify the full path to the PHP interpreter. 例如:
 
 ```bash
 /usr/local/Cellar/php56/5.6.19/bin/php -f vendor/bin/phpunit -- -c dev/tests/unit/phpunit.xml.dist

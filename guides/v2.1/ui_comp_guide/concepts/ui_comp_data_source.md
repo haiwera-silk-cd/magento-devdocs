@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: The DataSource Component
-menu_title: Providing Data to UI Components
+title: 数据源组件
+menu_title: 提供数据到UI组件
 menu_order: 20
 contributor_name: SwiftOtter Studios
 contributor_link: https://swiftotter.com/
@@ -11,7 +11,7 @@ github_link: ui_comp_guide/concepts/ui_comp_data_source.md
 ---
 
 ## Overview
-Magento provides the DataSource object, which is designed to interact with data in your {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. Many of the core UI components use this DataSource component. Many UI components require that this object is included. However, there are specific requirements it has in order for it to work correctly.
+Magento provides the DataSource object, which is designed to interact with data in your {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. Many of the core UI 组件 use this DataSource component. Many UI 组件 require that this object is included. However, there are specific requirements it has in order for it to work correctly.
 
 In this topic, we will explain how to take advantage of the powerful functionality of the data provider in a UI Component.
 
@@ -40,7 +40,7 @@ Declare a `getData()` method in the data provider class that was referenced in t
 
 
 <div class="bs-callout bs-callout-info" id="info">
-    <p>A Javascript "component" is actually a Javascript file loaded through RequireJS. It should return a Javascript object that defines a module or function. Do not confuse Javascript components with UI components.</p>
+    <p>A Javascript "component" is actually a Javascript file loaded through RequireJS. It should return a Javascript object that defines a module or function. Do not confuse Javascript 组件 with UI 组件.</p>
 </div>
 
 Include the Form Provider Javascript component by adding this inside the `<dataSource />` node:
@@ -67,19 +67,19 @@ A good way to keep configuration data out of the javascript is to declare a "pro
 
 This example declares the name of the data provider class and will be output in the JSON that contains the UI component's configuration. It can then be used to locate the data source component. This is essentially declaring a variable that will be available to a javascript class.
 
-# Javascript Template Literals
+# Javascript 模板常量
 
-Throughout Magento's core Javascript components there are strings like this: `'${ $.provider }:data.totalRecords'`. These are ES2015 [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). The `${ }` surrounds an expression that will be parsed as Javascript. `$.provider` is the expression, in this example.
+Throughout Magento's core Javascript 组件 there are strings like this: `'${ $.provider }:data.totalRecords'`. These are ES2015 [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). The `${ }` surrounds an expression that will be parsed as Javascript. `$.provider` is the expression, in this example.
 
 The template literal is in a single-quote string, however, not the back-ticks which are standard for ES2015. As a result, they would normally be treated as a string. Since Magento needs to support browsers that don't recognize template literals a special interpreter was built for them. If the browser does support standard back-tick template literals, Magento will use that, and if not, it evaluates the value manually.
 
 When the component is initialized, it will automatically evaluate all string literals in properties. In the example above, `$.provider` will become  `[ComponentName].[ComponentName]_data_source`. The value of this `provider` was declared in the `js_config` block in the XML above. It is possible to pass nearly any configuration value this way and access it using template literals.
 
-But, XML is static and while that gets us the name of the data provider component, it still doesn't actually provide data. There is one more important step in providing data to Javascript components.
+But, XML is static and while that gets us the name of the data provider component, it still doesn't actually provide data. There is one more important step in providing data to Javascript 组件.
 
 # Javascript Component Linking
 
-Every Javascript component should extend the core Element class in some way (mapped to [`uiElement`]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_uielement_concept.html) with RequireJS and located in `Magento/Ui/view/base/web/js/lib/core/element/element.js`.  When this class initializes it runs an `initLinks()` method. That method, in turn, passes a few class properties into a method that handles linking components together. This file (`lib/core/element/link.js`) binds the values of those parameters to actual components.
+Every Javascript component should extend the core Element class in some way (mapped to [`uiElement`]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_uielement_concept.html) with RequireJS and located in `Magento/Ui/view/base/web/js/lib/core/element/element.js`.  When this class initializes it runs an `initLinks()` method. That method, in turn, passes a few class properties into a method that handles linking 组件 together. This file (`lib/core/element/link.js`) binds the values of those parameters to actual 组件.
 
 The properties Magento will parse are:
 

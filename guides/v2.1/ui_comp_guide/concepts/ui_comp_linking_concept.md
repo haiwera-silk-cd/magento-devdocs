@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: Linking properties of UI components
-menu_title: Linking properties of UI components
+title: UI组件连接属性
+menu_title: UI组件连接属性
 menu_order: 100
 version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_linking_concept.md
@@ -10,7 +10,7 @@ github_link: ui_comp_guide/concepts/ui_comp_linking_concept.md
 
 ## Linking properties implementation
 
-The following properties are used for linking observable properties and methods of UI components:
+The following properties are used for linking observable properties and methods of UI 组件:
 
 - `exports`
 - `imports`
@@ -162,7 +162,7 @@ The options of linking properties can contain template strings in the `'${...}'`
 
 So if we put a variable name in `'${...}'`, it is processed into a string representation of the variable’s value.
 
-When working with UI components, we often need to use the string representation of a certain property of the {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. To address a property of the UI component in the scope of this component, the `$.someProperty` syntax is used.
+When working with UI 组件, we often need to use the string representation of a certain property of the {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. To address a property of the UI component in the scope of this component, the `$.someProperty` syntax is used.
 
 As a result, if the component's property is the variable for the template string, we get notation similar to the following:
 

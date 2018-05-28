@@ -1,7 +1,7 @@
 ---
 youtube_id: 4q43-auwAbU
 duration: "4:20"
-group: "Fundamentals of Magento 2 Development"
+group: "Magento开发基础"
 title: "How to Add a JavaScript Module"
 thumbnail: "fundamentals/thumbs/add-js-module.png"
 menu_order: 1
@@ -24,7 +24,7 @@ The steps we’ll need to take are:
 
 Let’s go through each step.
 
-## Step 1: Create a new module
+## 步骤1. Create a new module
 
 We will create a new module called Learning_Js:
 
@@ -64,7 +64,7 @@ Now create two files:
   {% endhighlight %}
 {% endcollapsible %}
 
-## Step 2: Create a requirejs-config.js and a JavaScript module file
+## 步骤2. Create a requirejs-config.js and a JavaScript module file
 
 Next, we’ll create a view folder:
 
@@ -111,7 +111,7 @@ define([
   {% endhighlight %}
 {% endcollapsible %}
 
-## Step 3: Create a layout update to add a template that will enable the JavaScript module
+## 步骤3. Create a layout update to add a template that will enable the JavaScript module
 
 First, we need to create the layout folder:
 
@@ -138,7 +138,7 @@ And the add the file `catalog_product_view.xml`:
   {% endhighlight %}
 {% endcollapsible %}
 
-## Step 4: Create a template file
+## 步骤4. Create a template file
 
 Now, we’ll create the template that will enable JavaScript.
 
@@ -168,7 +168,7 @@ In this case, the JavaScript module should return a function with two parameters
 
 Other popular options for executing JavaScript code in Magento 2 include applying the same configuration to multiple DOM elements, or, when the JavaScript is not related to any DOM nodes, using an asterisk(*) instead of a CSS selector.
 
-## Step 5: Add a module and test it
+## 步骤5. Add a module and test it
 
 Finally, let’s add our module and test the result.
 

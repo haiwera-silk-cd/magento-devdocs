@@ -87,7 +87,7 @@ To use Elasticsearch, you must perform all the tasks discussed in this section.
 
 {% endcollapsible %}
 
-### Step 1: Update .magento.app.yaml
+### 步骤1. Update .magento.app.yaml
 
 {% collapsible To update .magento.app.yaml: %}
 
@@ -107,7 +107,7 @@ To use Elasticsearch, you must perform all the tasks discussed in this section.
 
 {% endcollapsible %}
 
-### Step 2: Update .magento/services.yaml
+### 步骤2. Update .magento/services.yaml
 
 {% collapsible To update .magento/services.yaml: %}
 
@@ -122,7 +122,7 @@ To use Elasticsearch, you must perform all the tasks discussed in this section.
 
 {% endcollapsible %}
 
-### Step 3: Push the changes and redeploy the environment
+### 步骤3. Push the changes and redeploy the environment
 
 {% collapsible To push the changes: %}
 
@@ -134,7 +134,7 @@ To use Elasticsearch, you must perform all the tasks discussed in this section.
 
 {% endcollapsible %}
 
-### Step 4: Get Elasticsearch connection information {#cloud-es-config-mg}
+### 步骤4. Get Elasticsearch connection information {#cloud-es-config-mg}
 This section discusses how to get connection information for Elasticsearch so you can 配置Magento应用 to use it as your search engine.
 
 {% collapsible To get Elasticsearch connection information: %}
@@ -189,9 +189,9 @@ This section discusses how to get connection information for Elasticsearch so yo
 
 {% endcollapsible %}
 
-### Step 5: 配置Magento应用 to use Elasticsearch
+### 步骤5. 配置Magento应用 to use Elasticsearch
 
-Configure Magento using the instructions in the [Magento configuration for Elasticsearch](http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/configure-magento.html) guide.
+配置Magento using the instructions in the [Magento configuration for Elasticsearch](http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/configure-magento.html) guide.
 
 ## Fixed issue
 

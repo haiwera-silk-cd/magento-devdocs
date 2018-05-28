@@ -17,7 +17,7 @@ functional_areas:
 
 This topic discusses suggested solutions to issues you might counter when installing or using Magento DevBox.
 
-{% collapsibleh2 Problem: Cannot install Magento %}
+{% collapsibleh2 问题: Cannot install Magento %}
 
 This section discusses errors that prevent you from installing DevBox.
 
@@ -49,7 +49,7 @@ _Solution_: Run the Terminal (Mac OS) as `root` or run DOS Command Prompt (Windo
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: Error displays in the Magento Admin %}
+{% collapsibleh2 问题: Error displays in the Magento Admin %}
 
 After you log in to the Magento Admin, the following notification error might display:
 
@@ -59,7 +59,7 @@ This error results from the fact that the Magento application is running in deve
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: 404 error accessing the Magento Admin, storefront is accessible %}
+{% collapsibleh2 问题: 404 error accessing the Magento Admin, storefront is accessible %}
 
 When you access the Magento Admin, the following error displays in the browser:
 
@@ -71,7 +71,7 @@ _Solution_: The most likely cause of this error is missing `.htaccess` files the
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: Cannot access the Magento storefront or Admin %}
+{% collapsibleh2 问题: Cannot access the Magento storefront or Admin %}
 
 If you are having trouble accessing your Magento storefront and Magento Admin, connect to the web container and run some additional commands.
 
@@ -91,7 +91,7 @@ If you are having trouble accessing your Magento storefront and Magento Admin, c
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: Errors display on Windows %}
+{% collapsibleh2 问题: Errors display on Windows %}
 
 During installation, errors similar to the following display in your primary command window:
 
@@ -108,13 +108,13 @@ Other errors might display in a secondary command window:
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: Error during installation %}
+{% collapsibleh2 问题: Error during installation %}
 
 During DevBox installation, the following error might display:
 
 <pre class="no-copy">ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network</pre>
 
-_Solution_: Try the following:
+_Solution_: 尝试下面的方法:
 
 *	If you're connected to a VPN network, end your VPN session and try to install DevBox again.
 *	Check the total number of active Docker networks:
@@ -131,7 +131,7 @@ For more information, see the [Docker GitHub issue](https://github.com/docker/li
 
 {% endcollapsibleh2 %}
 
-{% collapsibleh2 Problem: You want to start over %}
+{% collapsibleh2 问题: You want to start over %}
 
 In the event you want to start over with a new Magento application installation, use the following steps from the directory to which you copied the DevBox scripts:
 

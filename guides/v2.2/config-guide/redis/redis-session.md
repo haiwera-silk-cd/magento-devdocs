@@ -185,7 +185,7 @@ where
 </tbody>
 </table>
 
-### Example command
+### 示例 command
 
 The following example sets Redis as the session data store, sets the host to `redis.example.com`, sets the log level to 3, and sets the datbase number to 2. All other parameters are set to the default value.
 

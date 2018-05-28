@@ -8,7 +8,7 @@ version: 2.1
 github_link: extension-dev-guide/events-and-observers.md
 ---
 
-### Overview
+### 概述
 
 Working with events and observers is one of the main ways to extend Magento functionality. The events and observers implementation in Magento 2 is based on the [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern){:target="_self"}. Using events and observers, you can run your custom code in response to a specific Magento {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} or even a custom event.
 
@@ -139,4 +139,4 @@ Observer names must be unique per event definition. This means that you cannot h
 
 ### Recommended Reading
 
-* [Observers best practices]({{ page.baseurl }}/ext-best-practices/extension-coding/observers-bp.html)
+* [观察者最佳实践]({{ page.baseurl }}/ext-best-practices/extension-coding/observers-bp.html)

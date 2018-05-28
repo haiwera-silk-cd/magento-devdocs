@@ -11,11 +11,11 @@ redirect_from: /guides/v1.0/frontend-dev-guide/layouts/layout-overview.html
 functional_areas:
   - Frontend
 ---
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 This article describes the basic concepts you need to know to create layouts for your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 <h2>Introduction</h2>
-In Magento, the basic components of page design are layouts, containers, and blocks. A *layout* represents the structure of a web page (1). *Containers* represent the placeholders within that web page structure (2). And *blocks* represent the UI controls or components within the container placeholders (3). These terms are illustrated and defined below.
+In Magento, the basic 组件 of page design are layouts, containers, and blocks. A *layout* represents the structure of a web page (1). *Containers* represent the placeholders within that web page structure (2). And *blocks* represent the UI controls or 组件 within the container placeholders (3). These terms are illustrated and defined below.
 
 <img src="{{ site.baseurl }}/common/images/layouts_block_containers_defn21.png"/>
 
@@ -36,7 +36,7 @@ These basic page configuration layouts are extended in other Magento modules and
 
 You can also [extend]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html) or [override]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html) these files in your custom theme. 
 
-## Layout handles {#layout-over-terms}
+## 布局处理 {#layout-over-terms}
 
 <span id="handle"></span>
 
@@ -48,11 +48,11 @@ There are three kinds of layout handles:
 - **page layout handles** – Identifiers of specific pages. Correspond to controller actions with parameters that identify specific pages, for example, catalog_product_view_type_simple_id_128 or for a CMS page, cms_page_view_id_home.xml.
 - **arbitrary handles** - Do not correspond to any page type, but other handles use them by including.
 
-## Layout files types and conventions
+## 布局文件类型和习惯
 
 ### 布局文件类型: by role
 
-For a particular page, its layout is defined by two major layout components: *page layout* file and *page configuration* file (or *generic layout* for pages returned in AJAX requests, emails, and so on).
+For a particular page, its layout is defined by two major layout 组件: *page layout* file and *page configuration* file (or *generic layout* for pages returned in AJAX requests, emails, and so on).
 
 Following are the definitions of each layout file type:
 
@@ -64,9 +64,9 @@ For details, refer to <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/lay
 
 In this guide we use *layout files* when talking about concepts which are similarly applied to all of these types of layout files.
 
-<h3 id="layout-loc">Module and theme layout files</h3>
+<h3 id="layout-loc">模块和主题布局文件</h3>
 
-The following terms are used to distinguish layouts provided by different application components:
+The following terms are used to distinguish layouts provided by different application 组件:
 
 * *Base layouts*: Layout files provided by modules. Conventional location: 
 	* Page configuration and generic layout files: `<module_dir>/view/frontend/layout`
@@ -76,13 +76,13 @@ The following terms are used to distinguish layouts provided by different applic
 	* Page layout files: `<theme_dir>/<Namespace>_<Module>/page_layout`
 
 
-## Customize layout {#layout-custom}
+## 自定义布局 {#layout-custom}
 
 To ensure stability and secure your customizations from being deleted during upgrade, do not change out-of-the-box Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and theme layouts.
 
 To make the necessary changes, create <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">extending</a>和<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">overriding</a> layout files in your custom theme. 
 
-## Layout files processing {#layout_processing}
+## 布局文件处理 {#layout_processing}
 
 
 The Magento application processes layout files in the following order:
@@ -104,13 +104,13 @@ The Magento application processes layout files in the following order:
 
 
 
-## Related topics
+## 相关主题
 
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html" target="_blank">常见的布局定制任务</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a>
 *	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-override.html" target="_blank">覆盖一个布局</a>
-*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-practice.html" target="_blank">Customizing layout - step-by-step illustration</a>
+*	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-practice.html" target="_blank">自定义主题 - 一步步图解</a>
 
 
 

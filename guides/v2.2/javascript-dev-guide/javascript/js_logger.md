@@ -259,15 +259,15 @@ The default level of logs that Magento displays in the console starts from the `
     - Logging when a template's loading starts.
     - Logging when a template is loaded. (from cache or from server)
     - Logging error if a template's loading failed.
-- `UI Components loading:`
+- `UI 组件 loading:`
     - Logging when a component's loading starts.
     - Logging when a component is loaded.
     - Logging error if a component loading failed.
-- `Requests for UI Components dependencies:`
+- `Requests for UI 组件 dependencies:`
     - Logging when a component sends request for dependencies.
     - Logging when a component's dependencies are successfully received.
     - Logging when a component's receiving is failed.
-- `Requests for UI Components by scope binding:`
+- `Requests for UI 组件 by scope binding:`
     - Logging when a component sends request for dependencies.
     - Logging when dependencies are successfully received.
     - Logging when dependencies receiving failed.

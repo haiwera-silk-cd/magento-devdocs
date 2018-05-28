@@ -17,7 +17,7 @@ The Magento_BundleStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e14
 
 The Magento_BundleStaging模块 extends the functionality of the Magento_Bundle模块. When you schedule an update for a bundle product, all bundle item options for that concrete product are available and can be edited. All the bundle product attributes can be staged.
 
-### Installation details
+### 安装 details
 
 The Magento_BundleStaging模块 makes irreversible changes in the database during installation. You cannot uninstall this module.
 
@@ -31,7 +31,7 @@ You can find the list of modules that have dependencies on the Magento_BundleSta
 
 [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_BundleStaging模块.
 
-### UI components
+### UI 组件
 
 You can extend Bundle updates product listing using  the grid {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %} located in the `Magento/BundleStaging/view/adminhtml/ui_component/bundle_update_product_listing.xml`. For more information, see [UI Listing/Grid Component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-listing-grid.html).
 

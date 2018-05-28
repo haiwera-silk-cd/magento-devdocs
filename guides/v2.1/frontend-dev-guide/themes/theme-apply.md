@@ -11,7 +11,7 @@ functional_areas:
   - Theme
 ---
 
-<h2 id="theme-apply-overview">What's in this topic</h2>
+<h2 id="theme-apply-overview">这里有什么</h2>
 
 The topic describes how to apply a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} for your store. This is a required step if you want a theme to be used on a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
 Also, it gives information how to add a theme independent logo for your store.
@@ -26,8 +26,8 @@ After you <a href="{{ site.gdeurl21 }}frontend-dev-guide/themes/theme-create.htm
 
 To apply a theme:
 
-1. In Admin, go to **CONTENT** > **Design** > **Configuration**. A Design Configuration page opens. It contains a grid with the available configuration scopes. For example: <br><img src="{{ site.baseurl }}/common/images/design_conf1.png" alt="Design Configuration page">
-2. In the configuration record corresponding to your store view, click **Edit**. The page with design configuration for the selected scope opens. For example:
+1. In Admin, go to **CONTENT** > **Design** > **Configuration**. A Design Configuration page opens. It contains a grid with the available configuration scopes. 例如: <br><img src="{{ site.baseurl }}/common/images/design_conf1.png" alt="Design Configuration page">
+2. In the configuration record corresponding to your store view, click **Edit**. The page with design configuration for the selected scope opens. 例如:
 <br><img src="{{ site.baseurl }}/common/images/fdg/applied_theme.png" alt="Design Configuration page for a particular scope">
 4. On the **Default Theme** tab, in the **Applied Theme** drop-down, select your newly created theme.
 5. Click **Save Configuration**.

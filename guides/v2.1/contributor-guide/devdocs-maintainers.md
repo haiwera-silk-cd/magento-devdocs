@@ -1,6 +1,6 @@
 ---
 group: contributor
-title: Community maintainers
+title: 社区维护者
 version: 2.1
 github_link: contributor-guide/devdocs-maintainers.md
 ---

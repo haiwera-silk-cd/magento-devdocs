@@ -25,7 +25,7 @@ If you receive the following errors with Fastly, check the following:
 ### 503 timeouts {#timeouts}
 If you receive a 503 error, check the following logs and information to better troubleshoot the issue.
 
-First, check your [error log]({{ page.baseurl }}/cloud/trouble/environments-logs.html) on your Production or Staging environment: `/var/log/platform/<project_ID>/error.log`.  The log will include possible errors from the application or PHP engine. For example: `memory_limit`或`max_execution_time exceeded`
+First, check your [error log]({{ page.baseurl }}/cloud/trouble/environments-logs.html) on your Production or Staging environment: `/var/log/platform/<project_ID>/error.log`.  The log will include possible errors from the application or PHP engine. 例如: `memory_limit`或`max_execution_time exceeded`
 
 If the logs do not include errors related to Fastly, check the PHP access log: `/var/log/platform/<project_ID>/php.access.log`. Check the log for an HTTP code 200 for the URL that threw a 503 error. If a 200 is returned for the URL, Magento returned the page without errors. The issue could have occurred after the interval that exceeds `first_byte_timeout` timeout configured by Fastly.
 
@@ -76,7 +76,7 @@ Check response headers with **curl command**:
 		curl http://<live URL> -vo /dev/null -HFastly-Debug:1 [--resolve]
 
 	Use `--resolve` only if your live URL isn't set up with DNS and you don't have a static route set.
-	For example: `curl http://www.mymagento.biz -vo /dev/null -HFastly-Debug:1`
+	例如: `curl http://www.mymagento.biz -vo /dev/null -HFastly-Debug:1`
 2. Verify the [response headers](#response-headers) to ensure Fastly is working. The output for this command is similar to curl Staging and Production. For example, you should see the returned unique headers by this command:
 
 		< Fastly-Magento-VCL-Uploaded: yes

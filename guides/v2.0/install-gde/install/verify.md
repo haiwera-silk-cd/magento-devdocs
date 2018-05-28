@@ -14,7 +14,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="instgde-verify-front-sample">Verify the storefront (with optional sample data)</h2>
+<h2 id="instgde-verify-front-sample">验证网店 (with optional sample data)</h2>
 Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in a web browser. For example, if your Magento installation base {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} is `http://www.example.com`, enter it in your browser's address or location bar.
 
 The following figure shows a sample storefront page. If it displays as follows, your installation was a success!
@@ -22,7 +22,7 @@ The following figure shows a sample storefront page. If it displays as follows, 
 <p><img src="{{ site.baseurl }}/common/images/install-success_store-luma.png" alt="Magento storefront with the Luma theme"></p>
 
 
-<h2 id="instgde-verify-front">Verify the storefront (no sample data)</h2>
+<h2 id="instgde-verify-front">验证网店 (no sample data)</h2>
 
 Go to the storefront in a web browser. For example, if your Magento installation base URL is `http://www.example.com`, enter it in your browser's address or location bar.
 

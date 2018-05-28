@@ -74,7 +74,7 @@ Continue with one of the following sections:
 *	<a href="#instgde-prereq-php55-install-centos">PHP 5.5 on CentOS</a>
 
 ## PHP 7 on CentOS {#php-centos-7}
-There is more than one way to install PHP 7.0.2 or later; the following is a suggestion only. Consult a reference for additional options.
+There is more than one way to install PHP 7.0.2或更新; the following is a suggestion only. Consult a reference for additional options.
 
 {% collapsible To install PHP 7 on CentOS 6 or 7: %}
 
@@ -214,6 +214,6 @@ There is more than one way to upgrade CentOS 6 to PHP 5.5; the following is a su
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

@@ -1,17 +1,17 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Nav component
-menu_title: Nav component
+group: UI_组件_guide
+subgroup: 组件
+title: 导航栏组件
+menu_title: 导航栏组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-nav.md
+github_link: ui_comp_guide/组件/ui-nav.md
 ---
 
 ## Overview
 
-The Nav component implements tabs navigation.
+The 导航栏组件 implements tabs navigation.
 
-See the [管理面板用到的设计模式和库 (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the Nav component.
+See the [管理面板用到的设计模式和库 (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the 导航栏组件.
 
 ## Configuration options
 
@@ -36,7 +36,7 @@ Nav-specific options:
     <td><code>component</code></td>
     <td>The path to the component’s JS constructor, in terms of RequireJS.</td>
     <td>String</td>
-    <td><code>Magento_Ui/js/form/components/tab_group</code></td>
+    <td><code>Magento_Ui/js/form/组件/tab_group</code></td>
   </tr>
   <tr>
     <td><code>opened</code></td>

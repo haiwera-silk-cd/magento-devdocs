@@ -1,8 +1,8 @@
 ---
 group: compman
-subgroup: 10_Install extensions from the command line
-title: Install extensions from the command line
-menu_title: Install extensions from the command line
+subgroup: 10_从命令行安装扩展
+title: 从命令行安装扩展
+menu_title: 从命令行安装扩展
 menu_order: 1
 menu_node: parent
 version: 2.2

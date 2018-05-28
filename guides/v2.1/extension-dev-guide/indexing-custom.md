@@ -56,7 +56,7 @@ Add the `mview.xml` configuration file in the `etc` module directory, where you 
 
 All Mview declarations related to a module should be declared in one file.
 
-### Example of a custom indexer implementation
+### 示例 of a custom indexer implementation
 
 To push best-selling products to the top of a category listing, process statistics about sales to change the product position dynamically.
 

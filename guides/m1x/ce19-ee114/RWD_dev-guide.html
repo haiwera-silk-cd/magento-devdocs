@@ -110,7 +110,7 @@
 <p>Magento's responsive theme was developed with full support for the following devices and browsers:</p>
 <ul>
     <li>Windows:
-	<ul><li>Internet Explorer 9 and later</li>
+	<ul><li>IE9 and later</li>
     <li>Latest stable version of Chrome</li>
     <li>Latest stable version of Firefox</li></ul>
 	</li>
@@ -122,7 +122,7 @@
     <li>iOs (iPhone and iPad): Safari on iOs 7</li>
     <li>Android: Chrome browser on Android 4.0+ (also known as Ice Cream Sandwich)</li>
 </ul>
-<p>Basic compatibility should be expected on Android 2.3+ (and other mobile devices) and Internet Explorer 8, but full support is not guaranteed.</p>
+<p>Basic compatibility should be expected on Android 2.3+ (and other mobile devices) and IE8, but full support is not guaranteed.</p>
 
 <h2 id="changes">Understanding the Changes in the Responsive Theme</h2>
 <p>The new responsive theme in EE 1.14 and CE 1.9 is based on the existing <tt>base/default</tt> theme. The new responsive theme has about 130 template files that have been modified to better handle the needs of responsive development. Following are some of the changes that have been made in these template files:</p>
@@ -189,14 +189,14 @@ The following figure shows an example.<br />
 <h2 id="theme">Copying Files to Create Your Custom Theme</h2>
 <p>This section discusses how to start building a custom responsive theme. </p>
 <p>See one of the following sections for more information:</p>
-<ul><li><a href="#theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</a></li>
-<li><a href="#theme-copyfiles">Step 2: Copying Files For Your Theme</a></li>
-<li><a href="#theme-compass">Step 3: Configuring a Compass Watcher</a></li>
-<li><a href="#theme-admin">Step 4: Configuring Magento to Load Your Theme</a></li>
-<li><a href="#theme-verify">Step 5: Verifying Your Custom Theme</a></li>
+<ul><li><a href="#theme-structure">步骤1. Creating a Directory Structure for Your Responsive Theme</a></li>
+<li><a href="#theme-copyfiles">步骤2. Copying Files For Your Theme</a></li>
+<li><a href="#theme-compass">步骤3. Configuring a Compass Watcher</a></li>
+<li><a href="#theme-admin">步骤4. Configuring Magento to Load Your Theme</a></li>
+<li><a href="#theme-verify">步骤5. Verifying Your Custom Theme</a></li>
 <li><a href="#theme-admin-trouble">故障排除 Theme Configuration</a></li></ul>
 
-<h3 id="theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</h3>
+<h3 id="theme-structure">步骤1. Creating a Directory Structure for Your Responsive Theme</h3>
 <p>You'll do your responsive theme development using a copy of the responsive theme provided with Magento CE and EE. This section discusses how to create new top-level directories for your theme and to copy files to those directories.</p>
 <p>The <tt>rwd/default</tt> theme falls back directly to the <tt>base/default</tt> theme, so themes in the <tt>default</tt> package will never be included as a part of the fallback chain.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: <em>Magento EE only.</em> The <tt>enterprise/default</tt> theme is completely replaced by <tt>rwd/enterprise</tt> and therefore, <tt>enterprise/default</tt> is not included as a part of the fallback chain.</div>
@@ -227,7 +227,7 @@ cd app/design/frontend/custompackage/customtheme/etc</pre></li>
 </ul>
 </li></ol>
 
-<h3 id="theme-copyfiles">Step 2: Copying Files For Your Theme</h3>
+<h3 id="theme-copyfiles">步骤2. Copying Files For Your Theme</h3>
 <p>Use the following commands to copy files for your custom theme:</p>
 <pre>cd <a href="#intro-convention">[your Magento install dir]</a>
 cp -R skin/frontend/rwd/default/images skin/frontend/custompackage/customtheme
@@ -237,7 +237,7 @@ cp -R skin/frontend/rwd/default/scss skin/frontend/custompackage/customtheme
 <p>The following figure shows how your custom theme directory structure looks after copying these files and directories.</p>
 <img src="{{ site.baseurl }}/common/images/m1x/custom_skin-dir.png">
 
-<h3 id="theme-compass">Step 3: Configuring a Compass Watcher</h3>
+<h3 id="theme-compass">步骤3. Configuring a Compass Watcher</h3>
 <p>You can configure Compass to watch your skin directories for changes to CSS and JavaScript and to compile them when something changes.</p>
 <p>You can do this in either of the following ways:</p>
 <ul><li><em>(Recommended)</em> Using your PHP IDE. For example, if you use PHP Storm, see <a href="http://www.jetbrains.com/phpstorm/webhelp/working-with-sass-and-scss-in-compass-projects.html" target="_blank">Working with SASS and SCSS in Compass Projects</a>和<a href="http://www.jetbrains.com/phpstorm/webhelp/using-file-watchers.html" target="_blank">Using File Watchers</a>.</li>
@@ -270,9 +270,9 @@ ls skin/frontend/custompackage/customtheme/scss</pre>
 <pre>cp skin/frontend/rwd/default/scss/config.rb skin/frontend/custompackage/customtheme/scss</pre>
 <p>Compass requires a <tt>config.rb</tt> file located in the directory from which you run this command. The sample provided with Magento CE and EE follows:</p>
 <script src="https://gist.github.com/xcomSteveJohnson/11048374.js"></script>
-<p>After correcting the issue, try the <tt>compass watch</tt> commands discussed in <a href="#theme-compass">Step 3: Configuring a Compass Watcher</a>.</p>
+<p>After correcting the issue, try the <tt>compass watch</tt> commands discussed in <a href="#theme-compass">步骤3. Configuring a Compass Watcher</a>.</p>
 
-<h3 id="theme-admin">Step 4: Configuring Magento to Load Your Theme</h3>
+<h3 id="theme-admin">步骤4. Configuring Magento to Load Your Theme</h3>
 <p>This section discusses how to configure Magento to load your new theme.</p>
 <ol><li>Log in to the Magento Admin Panel as an administrator.</li>
 <li>Click <strong>System</strong> > <strong>Configuration</strong> > GENERAL > <strong>Design</strong>.</li>
@@ -290,7 +290,7 @@ If an error displays when you attempt to save the configuration, see <a href="#t
 </li>
 </ol>
 
-<h3 id="theme-verify">Step 5: Verifying Your Custom Theme</h3>
+<h3 id="theme-verify">步骤5. Verifying Your Custom Theme</h3>
 <p>To verify that Magento loads your theme:</p>
 <ol><li>Navigate to your web store in a web browser.</li>
 <li>View the web page source.</li>
@@ -311,17 +311,17 @@ If an error displays when you attempt to save the configuration, see <a href="#t
 <pre>http://www.example.com/magento/skin/frontend/base/default/css/styles.css</pre>
 <p><em>Solution</em>: Enter the following command:</p>
 <pre>cat <a href="#intro-convention">[your Magento install dir]</a>/app/design/frontend/custompackage/customtheme/etc/theme.xml</pre>
-<p>If the error <tt>No such file or directory</tt> displays, check your directory paths and create <tt>theme.xml</tt> as discussed in <a href="#theme-copyfiles">Step 2: Copying Files For Your Theme</a>.</p>
+<p>If the error <tt>No such file or directory</tt> displays, check your directory paths and create <tt>theme.xml</tt> as discussed in <a href="#theme-copyfiles">步骤2. Copying Files For Your Theme</a>.</p>
 <p>If you have a <tt>theme.xml</tt>, check to make sure it's configured <em>exactly</em> as shown <a href="#themexml">here</a>.</p>
 
 <h5>Error saving the custom package and theme in the Admin Panel</h5>
 <p><em>Symptom</em>: The following error displays:</p>
 <pre>An error occurred while saving this configuration: package with this name does not exist and cannot be set.</pre>
 <p><em>描述</em>: The package and theme names you entered in the Admin Panel must be directories in a specific location on the file system. These directories don't exist. (See the figure in <a href="#theme-admin-trouble-files">Directory and File Reference</a>.) Check the path and spelling.</p>
-<p><em>Solution</em>: Repeat the tasks discussed in <a href="#theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</a>.</p>
+<p><em>Solution</em>: Repeat the tasks discussed in <a href="#theme-structure">步骤1. Creating a Directory Structure for Your Responsive Theme</a>.</p>
 
 <h5>Wrong formatting in the web store</h5>
-<p><em>Symptom</em>: Examples:</p>
+<p><em>Symptom</em>: 例如:</p>
   <ul><li>No images display</li>
   <li>Only a list of categories displays on the left side of the page, with images after the text</li></ul>
 <p><em>描述</em>: There is a different <tt>theme.xml</tt> for CE and EE. You might have used an EE <tt>theme.xml</tt> with CE or vice versa.</p>
@@ -329,7 +329,7 @@ If an error displays when you attempt to save the configuration, see <a href="#t
   <ul><li><tt>styles.css</tt> loads from the correct directory</tt>
   <li>Some HTTP 403 (Forbidden) errors loading images</li>
   <li>Some HTTP 404 (Not Found) errors loading images from <tt>skin/frontend/base/default/images/media</tt> (which doesn't exist)</li></ul>
-<p><em>Solution</em>: Review the information discussed in <a href="#theme-copyfiles">Step 2: Copying Files For Your Theme</a>.</p>
+<p><em>Solution</em>: Review the information discussed in <a href="#theme-copyfiles">步骤2. Copying Files For Your Theme</a>.</p>
 <p>Make sure <tt>theme.xml</tt> for CE or EE is configured <em>exactly</em> as shown <a href="#themexml">here</a>.</p>
 
 <h4 id="theme-admin-trouble-files">Directory and File Reference</h4>
@@ -355,7 +355,7 @@ For more information about this setting, see <a href="http://compass-style.org/h
 
 <h3 id="customizing-theme-sass-struct">Understanding the Sass Structure</h3>
 <p>In previous versions of Magento, all CSS styles were grouped into a massive <tt>styles.css</tt> file that was cumbersome and difficult to navigate. The CSS in the responsive theme is organized into individual files referred to as <em>Sass partials</em>.</p>
-<p>When Compass compiles the Sass partials, the output is a set of CSS files that are loaded by the browser: <tt>styles-ie8.css</tt> is for Internet Explorer 8 and earlier, and <tt>styles.css</tt> is for all other browsers.</p>
+<p>When Compass compiles the Sass partials, the output is a set of CSS files that are loaded by the browser: <tt>styles-ie8.css</tt> is for IE8 and earlier, and <tt>styles.css</tt> is for all other browsers.</p>
 <p>Following is the directory structure of the <tt>skin/frontend/custompackage/customtheme</tt> directory.</p>
 <div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: This structure does not include the sample data assets that you will <a href="#remove-sample-content">remove later in this guide</a>.</div>
 
@@ -445,7 +445,7 @@ For more information about this setting, see <a href="http://compass-style.org/h
 <ul>
    <li><tt>config.rb</tt>: Configuration values that tell Compass to look in the <tt>scss</tt> directory for Sass files and to export the CSS to the <tt>css</tt> directory. It also includes information about how Compass should format the compiled CSS.</li>
    <li><tt>scss/styles.scss</tt>: Wrapper that imports the <tt>framework.scss</tt>和<tt>core.scss</tt> files.</li>
-   <li><tt>scss/styles-ie8.scss</tt>: Identical to <tt>styles.css</tt> file, except it does not include any media queries because Internet Explorer 8 and earlier don't support media queries. For more information, see <a href="#breakpoint-ie8">Using the bp() mixin for older Internet Explorer Browser Versions</a>.</li>
+   <li><tt>scss/styles-ie8.scss</tt>: Identical to <tt>styles.css</tt> file, except it does not include any media queries because IE8 and earlier don't support media queries. For more information, see <a href="#breakpoint-ie8">Using the bp() mixin for older IEBrowser Versions</a>.</li>
 
    <li><tt>scss/_framework.scss</tt>: Imports all of the libraries, variables, functions, and mixins used by the other stylesheets. The files imported by <tt>framework.scss</tt> do not output any CSS on their own. Because of that, this file can be imported by other Sass files that are intended to compile directly to CSS files.<br />
    For example, in Magento EE, the <tt>skin/frontend/rwd/enterprise/scss/enterprise.scss</tt> file imports <tt>skin/frontend/rwd/default/scss/_framework.scss</tt> so the Magento EE partials can use the common variables, mixins, and so on imported by <tt>framework.scss</tt>.</p>
@@ -491,8 +491,8 @@ $bp-xlarge: 1199px;</pre>
 <script src="https://gist.github.com/xcomSteveJohnson/11231104.js"></script>
 <p>The breakpoint variables are intended to be used with <tt>max-width</tt> by default. When you use the breakpoint with <tt>min-width</tt>, you should add a pixel <tt>($bp-medium+1)</tt> so the <tt>min-width</tt>和<tt>max-width</tt> styles don't both get applied to the same viewport size.</p>
 
-<h4 id="breakpoint-ie8">Using the bp() mixin for older Internet Explorer Browser Versions</h4>
-It is important to use the <tt>bp()</tt> mixin for your media query breakpoints because Internet Explorer 8 and earlier do not support media queries. While you can use a polyfill like <a href="https://github.com/scottjehl/Respond" target="_blank">respond.js</a> to add media query support to IE versions 6&ndash;8, doing so will impact performance. Additionally, using a polyfill doesn't add much value because nearly all IE 6&ndash;8 users view web pages on a large screen device (1024px or larger), so those users won't benefit from media queries anyway.</p>
+<h4 id="breakpoint-ie8">Using the bp() mixin for older IEBrowser Versions</h4>
+It is important to use the <tt>bp()</tt> mixin for your media query breakpoints because IE8 and earlier do not support media queries. While you can use a polyfill like <a href="https://github.com/scottjehl/Respond" target="_blank">respond.js</a> to add media query support to IE versions 6&ndash;8, doing so will impact performance. Additionally, using a polyfill doesn't add much value because nearly all IE 6&ndash;8 users view web pages on a large screen device (1024px or larger), so those users won't benefit from media queries anyway.</p>
 <p>To address the fact that IE 6&ndash;8 doesn't support media queries, the <tt>styles-ie8.scss</tt> stylesheet defines a couple of variables:</p>
 <pre>$mq-support: false;
 $mq-fixed-value: 1024px;</pre>
@@ -509,8 +509,8 @@ $mq-fixed-value: 1024px;</pre>
 <ol><li>Log in to the Magento Admin Panel as an administrator.</li>
     <li>Click <strong>System</strong> > <strong>Configuration</strong> > GENERAL > <strong>Design</strong>.</li>
     <li>In the right pane, click <strong>Header</strong> to expand it.</li>
-    <li>In the <strong>Logo Image Src</strong> field, enter the path of your primary logo. For example: <tt>images/logo.png</tt>.</li>
-    <li>In the <strong>Small Logo Image Src</strong> field, enter the path of your logo for small viewports. For example: <tt>images/logo_small.png</tt>.</li>
+    <li>In the <strong>Logo Image Src</strong> field, enter the path of your primary logo. 例如: <tt>images/logo.png</tt>.</li>
+    <li>In the <strong>Small Logo Image Src</strong> field, enter the path of your logo for small viewports. 例如: <tt>images/logo_small.png</tt>.</li>
     <li>In the top right corner of the page, click <strong>Save Config</strong>.</li>
     <li>If prompted, flush the cache:
         <ol><li>Click <strong>System</strong> > <strong>Configuration</strong> > <strong>Cache Management</strong>.</li>
@@ -532,7 +532,7 @@ $mq-fixed-value: 1024px;</pre>
     <li><a href="http://jquery.malsup.com/cycle2/" title="Cycle2 Documentation" target="_blank">jquery.cycle2.min.js</a>: Powers the rotating banners on the homepage (requires Magento's sample data). This library can be removed if you aren't using the sample data. If you want to implement slide shows, <a href="http://www.owlgraphic.com/owlcarousel" target="_blank">Owl Carousel</a> is recommended over Cycle2, as it has true swipe support and has more options.</li>
     <li><tt>jquery.cycle2.swipe.min.js</tt>: Adds pseudo-swipe support to Cycle2.</li>
     <li><a href="http://jquery.com/" target="_blank">jquery-1.10.2.min.js</a>: jQuery library</li>
-    <li><a href="https://github.com/paulirish/matchMedia.js" title="matchMedia.js Github" target="_blank">matchMedia.js and matchMedia.addListener.js</a>: Used by <tt>enquire.js</tt> to provide support for Internet Explorer 9.</li>
+    <li><a href="https://github.com/paulirish/matchMedia.js" title="matchMedia.js Github" target="_blank">matchMedia.js and matchMedia.addListener.js</a>: Used by <tt>enquire.js</tt> to provide support for IE9.</li>
     <li><a href="http://modernizr.com/" target="_blank">modernizr.custom.min.js</a>: Adds classes to the <tt>&lt;html&gt;</tt> tag to indicate whether browser supports certain CSS3 features and whether device is touch-enabled. The <tt>.touch</tt>和<tt>.no-touch</tt> classes are used in the Sass partials. They provide a <tt>Modernizr.mq</tt> function to test a media query in a cross-browser manner.</li>
     <li><a href="http://selectivizr.com/" target="_blank">selectivizr.js</a>: Adds support for CSS3 selectors in IE 6&#8211;8</li>
     <li><a href="http://www.elevateweb.co.uk/image-zoom" target="_blank">elevatezoom/jquery.elevateZoom-3.0.8.min.js</a>: Powers image zoom on product detail pages.</li>
@@ -558,7 +558,7 @@ The preceding XML:
     </li>
 <li>Update this line in <tt>skin/frontend/custompackage/customtheme/scss/_var.scss</tt> to reference whatever font you want to use for your custom site font:
         <pre>$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;</pre> 
-        <p>If you want to use a custom web font for your theme (such as a <a href="https://www.google.com/fonts" target="_blank">Google Font</a>, add XML like this to the <tt>&lt;reference name=&quot;head&quot;&gt;</tt> section of <tt>layout.xml</tt> (see step 3). Customize the <tt>&lt;href></tt> value to the value that your custom web font provider gives you. It is recommended to include the same font weights that are referenced below (300,400,500,700,600) because the responsive theme uses each of those font weights.</p>
+        <p>If you want to use a custom web font for your theme (such as a <a href="https://www.google.com/fonts" target="_blank">Google Font</a>, add XML like this to the <tt>&lt;reference name=&quot;head&quot;&gt;</tt> section of <tt>layout.xml</tt> (see 步骤3). Customize the <tt>&lt;href></tt> value to the value that your custom web font provider gives you. It is recommended to include the same font weights that are referenced below (300,400,500,700,600) because the responsive theme uses each of those font weights.</p>
         <script src="https://gist.github.com/xcomSteveJohnson/1081640af28ab619f259.js"></script>
     </li>
 </ol>
@@ -579,7 +579,7 @@ environment = &#58;production</pre>
 <h3 id="sass-fallback-structure">Sass Fallback Structure</h3>
 <p>We recommend copying all of the Sass files from <tt>skin/frontend/rwd/default/scss</tt> to <tt>skin/frontend/custompackage/customtheme/scss</tt> to make it easy to get started with custom theme development. The downside of this approach is that it results in duplicating many files that you never edit directly.</p>
 <p>In the end, your custom theme must include all Sass partials you want to override. There are at least two ways to do this:</p>
-<ul><li>If you followed the setup instructions in <a href="#theme-structure">Step 1: Creating a Directory Structure for Your Responsive Theme</a>, you must delete some files from your custom theme.<br />
+<ul><li>If you followed the setup instructions in <a href="#theme-structure">步骤1. Creating a Directory Structure for Your Responsive Theme</a>, you must delete some files from your custom theme.<br />
 Delete the following directories to remove all the Sass partials that you copied from <tt>rwd/default</tt>:<br />
 <pre>skin/frontend/custompackage/customtheme/scss/core/
 skin/frontend/custompackage/customtheme/scss/function/

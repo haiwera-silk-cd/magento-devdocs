@@ -55,7 +55,7 @@ For all known {{site.data.var.ee}} 2.2.1  issues, see [Magento Commerce 2.2.1 Re
 ## Fixed issues {#fixed}
 <!-- MAGECLOUD-1355 -->* You can now [manually reset stuck Magento cron jobs](http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html#reset-cron-jobs) using a CLI command in all environments via SSH access. The deployment process automatically resets cron jobs. You must [patch magento/ece-tools](http://devdocs.magento.com/guides/v2.2/cloud/project/project-patch.html#patch-magentoece-tools) to get this update.
 
-<!--- MAGECLOUD-1121 -->* We resolved an issue with the ElasticSearch option being added and saved to `app/etc/env.php`. When ElasticSearch is configured and activated in your environment, the setting properly saves in the `env.php` file. For example:  
+<!--- MAGECLOUD-1121 -->* We resolved an issue with the ElasticSearch option being added and saved to `app/etc/env.php`. When ElasticSearch is configured and activated in your environment, the setting properly saves in the `env.php` file. 例如:  
 
 <code><?php
 //........
@@ -91,7 +91,7 @@ We are grateful to the wider Magento community and would like to acknowledge the
 ## System requirements {#requirements}
 For {{site.data.var.ece}} requirements, see [Technologies and Requirements](http://devdocs.magento.com/guides/v2.2/cloud/requirements/cloud-requirements.html).
 
-The {{site.data.var.ee}} technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html) and [System Requirements]({{ site.baseurl }}/magento-system-requirements.html).
+The {{site.data.var.ee}} technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html) and [系统要求]({{ site.baseurl }}/magento-system-requirements.html).
 
 ## Installation and upgrade instructions {#install-upgrade}
 If installing and working with {{site.data.var.ece}} for the first time, we recommend [First-time local environment setup]({{ page.baseurl }}/cloud/access-acct/first-time-setup.html).

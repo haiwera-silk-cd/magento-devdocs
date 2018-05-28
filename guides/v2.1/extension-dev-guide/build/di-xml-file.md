@@ -27,7 +27,7 @@ Magento loads The configuration in the following stages:
 
 During [bootstrapping]({{ page.baseurl }}/config-guide/bootstrap/magento-bootstrap.html), each application entry point loads the appropriate `di.xml` files for the requested [area]({{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_and_areas.html).
 
-**Examples:**
+**例如:**
 
 * In `index.php`, the [`\Magento\Framework\App\Http`](https://github.com/magento/magento2/blob/2.0/lib/internal/Magento/Framework/App/Http.php#L130-L132){:target="_blank"} class loads the area based on the front-name provided in {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}url{% endglossarytooltip %}.
 
@@ -196,7 +196,7 @@ When Magento loads a new configuration at a later time, either by a more specifi
 
 ---
 
-**Argument Examples:**
+**Argument 例如:**
 
 {% highlight xml %}
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
@@ -319,7 +319,7 @@ The `shared` property determines the lifestyle of both `argument` and `type` con
 In this example `Magento\Filesystem` is not shared, so all clients will retrieve separate instances of `Magento\Filesystem`.
 Also, every instance of `Magento\Filesystem` will get separate instance of `$adapter`, because it too is non-shared.
 
-**Related topics**
+**相关主题**
 
 * [ObjectManager]({{ page.baseurl }}/extension-dev-guide/object-manager.html)
 * [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

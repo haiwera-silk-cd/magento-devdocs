@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Start the Extension Manager
-menu_title: Start the Extension Manager
+title: 开启扩展管理器
+menu_title: 开启扩展管理器
 menu_node:
 menu_order: 2
 version: 2.2
@@ -11,12 +11,12 @@ functional_areas:
   - Upgrade
 ---
 
-## Start the Extension Manager from the Magento Admin
+## 开启扩展管理器 from the Magento Admin
 To start the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} Manager:
 
 1.	If you haven't done so already, create or get your [authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html).
 2.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
-3.	Click **System** > **Web Setup Wizard**.
+3.	Click **System** > **网页安装向导**.
 4.	Click **Extension Manager** as the following figure shows.
 
 	![Click the Extension Manager]({{ site.magentourl }}/common/images/extens_mgr_select.png){:width="550px"}
@@ -164,7 +164,7 @@ The following table shows which actions are available for a metapackage.
 
 ## Install extensions {#extensman-install}
 
-{% collapsible To install extensions: %}
+{% collapsible 安装扩展: %}
 
 Click **Review and Install** as the following figure shows.
 
@@ -197,7 +197,7 @@ To install more than one extension:
 
 ## Uninstall extensions {#extensman-uninstall}
 
-{% collapsible To uninstall extensions: %}
+{% collapsible 卸载扩展: %}
 
 1.	In the Installed Extensions section, click **Uninstall** from the **Actions** list as the following figure shows.
 

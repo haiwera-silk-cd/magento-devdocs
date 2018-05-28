@@ -16,7 +16,7 @@ functional_areas:
 
 You can have any number of development systems, provided the following is true of all of them:
 
-*	They all run Magento 2.2 or later
+*	They all run Magento 2.2或更新
 *	All Magento code is under source control in the same repository as the build and production systems
 *	Each development system should use either [default mode]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#default-mode) or [开发者模式]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#developer-mode)
 *	It has Magento文件系统所有者和权限 set as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).

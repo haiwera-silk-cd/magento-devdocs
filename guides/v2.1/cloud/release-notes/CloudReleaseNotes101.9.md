@@ -27,7 +27,7 @@ In `magento-cloud-configuration` release 101.9.0, we provide the following impro
 
 
 ## How to get `magento-cloud-configuration` release 101.9.x
-{{site.data.var.ece}} periodically provides patch releases in components like `magento-cloud-configuration`.
+{{site.data.var.ece}} periodically provides patch releases in 组件 like `magento-cloud-configuration`.
 
 To test and implement your {{site.data.var.ece}} upgrade, see [Test a Magento upgrade]({{ page.baseurl }}/cloud/project/project-upgrade.html).
 

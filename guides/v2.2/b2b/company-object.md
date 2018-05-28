@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage company objects
-menu_title: Manage company objects
+title: 管理公司对像
+menu_title: 管理公司对像
 menu_order: 12
 version: 2.2
 ee_only: True
@@ -15,7 +15,7 @@ functional_areas:
 ---
 
 
-## Manage company objects
+## 管理公司对像
 
 This section describes the REST endpoints used to manage `Company` objects.
 
@@ -367,7 +367,7 @@ None
 
 ## Related information
 
-* [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-* [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-* [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
-* [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+* [集成公司模块]({{ page.baseurl }}/b2b/company.html)
+* [管理公司用户]({{ page.baseurl }}/b2b/company-users.html)
+* [管理公司角色]({{ page.baseurl }}/b2b/roles.html)
+* [管理公司结构]({{ page.baseurl }}/b2b/company-structures.html)

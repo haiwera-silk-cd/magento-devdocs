@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Form component
-menu_title: Form component
+group: UI_组件_guide
+subgroup: 组件
+title: 表单组件
+menu_title: 表单组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-form.md
+github_link: ui_comp_guide/组件/ui-form.md
 ---
 
 
 ## Overview
-The Form component is a collection of fields that can be grouped in tabs and fieldsets. It enables [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations.
+The 表单组件 is a collection of fields that can be grouped in tabs and fieldsets. It enables [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations.
 
 Form is a [basic component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure).
 
@@ -18,9 +18,9 @@ Form is a [basic component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#ge
 
 {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}Javascript{% endglossarytooltip %} constructor: [form.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/form/form.js)
 
-### Related UI components
+### Related UI 组件
 
-The following components can be used in the scope of the Form component:
+The following 组件 can be used in the scope of the 表单组件:
 
 * ActionDelete
 * Checkbox
@@ -128,7 +128,7 @@ Form-specific configuration:
           receives the notification. Can use string templates.
           </li>
         </ul>
-For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html">Linking properties of UI components</a> topic.
+For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html">UI组件连接属性</a> topic.
       </td>
       <td>
         Object
@@ -161,7 +161,7 @@ For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_c
           tracked for changes. Can use string templates.
           </li>
         </ul>
-For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html">Linking properties of UI components</a> topic.
+For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html">UI组件连接属性</a> topic.
       </td>
       <td>
         Object
@@ -222,9 +222,9 @@ For more details see the <a href="{{ page.baseurl }}/ui_comp_guide/concepts/ui_c
 
 
 
-## Create an instance of the Form component
+## Create an instance of the 表单组件
 
-To create an instance of the Form component, you need to do the following:
+To create an instance of the 表单组件, you need to do the following:
 
 1. In you custom module, add a configuration file for the instance, for example: `customer_form.xml`.
 2. Add a set of fields (the Fieldset component with the component of the Field) for {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} or     to implement the upload of meta info in the DataProvider.
@@ -244,7 +244,7 @@ Example:
 </page>
 {% endhighlight %}
 
-## Configure the Form component
+## Configure the 表单组件
 
 Component could be configured in two ways:
 
@@ -278,7 +278,7 @@ Nodes are optional and contain parameters required for component:
 
 * layout - configuration class meets the visualization component. Names for deps and provider are specified with a complete path from the root component with the separator "."
 
-Add a description of the fields in the form using components and Field Fieldset:
+Add a description of the fields in the form using 组件 and Field Fieldset:
 
 {%highlight xml%}
 ...
@@ -301,14 +301,14 @@ Add a description of the fields in the form using components and Field Fieldset:
 …
 {% endhighlight%}
 
-To group components you can use the component container as in example below:
+To group 组件 you can use the component container as in example below:
 
 {% highlight xml%}
 <container name="container_group">
     <argument name="data" xsi:type="array">
         <item name="type" xsi:type="string">group</item>
         <item name="js_config" xsi:type="array">
-            <item name="component" xsi:type="string">Magento_Ui/js/form/components/group</item>
+            <item name="component" xsi:type="string">Magento_Ui/js/form/组件/group</item>
         </item>
         <item name="config" xsi:type="array">
             <item name="label" xsi:type="string" translate="true">Group</item>
@@ -327,7 +327,7 @@ To group components you can use the component container as in example below:
 {% endhighlight %}
 
 ## Creating DataSource
-You need to configure component's DataSource in order to provide data and meta information for your Form component.
+You need to configure component's DataSource in order to provide data and meta information for your 表单组件.
 
 DataSource aggregates an object of class implements the interface `\Magento\Framework\View\Element\UiComponent\DataProvider\DataProviderInterface`
 
@@ -381,14 +381,14 @@ Component configuration:
 
 * js_config -> component - > JS indication of a responsible component
 
-Data provided by data source is shared and available for all components in the Assembly (in this case for all child components of UI Form).
+Data provided by data source is shared and available for all 组件 in the Assembly (in this case for all child 组件 of UI Form).
 
-Data Source is another {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI Component{% endglossarytooltip %} that provides data in specific format which is shared among all UI Components.
+Data Source is another {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI Component{% endglossarytooltip %} that provides data in specific format which is shared among all UI 组件.
 
 ## Replacing
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Replacing principles are the same for all UI Components.</p>
+  <p>Replacing principles are the same for all UI 组件.</p>
 </div>
 
 #### Global replacement

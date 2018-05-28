@@ -12,9 +12,9 @@ redirect_from:
 ---
 
 <h2 id="custom_js_overview">概述</h2>
-This topic discusses how to use custom {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components with the components provided by Magento or having replaced them with custom implementations.
+This topic discusses how to use custom {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 with the 组件 provided by Magento or having replaced them with custom implementations.
 
-We strongly recommend not changing the source code of default Magento components and widgets. All customizations must be implemented in custom modules or themes.
+We strongly recommend not changing the source code of default Magento组件 and widgets. All customizations must be implemented in custom modules or themes.
 
 ## Add a custom JS component 
 
@@ -191,7 +191,7 @@ For information about how to initialize your custom JS component in a `.phtml` t
 
 <h2 id="disable_default_js">Disable default Magento JS</h2>
 
-To disable the auto-loading of default Magento JS components and widget initialization:
+To disable the auto-loading of default Magento JS 组件 and widget initialization:
 <ol>
   <li>Create a <code>requirejs-config.js</code> file with the
   following content: {% highlight JavaScript %} var config = {
@@ -208,14 +208,14 @@ To disable the auto-loading of default Magento JS components and widget initiali
     </ul>
   </li>
 </ol>
-If you need to enable the loading of default Magento JS components and widget initialization on a certain stage, add the following code in your JS script:
+If you need to enable the loading of default Magento JS 组件 and widget initialization on a certain stage, add the following code in your JS script:
 
 {% highlight JavaScript %}
 $(mage.apply);
 {% endhighlight %}
 
 
-#### Related topic
+#### 相关主题
 
 - [Magento js资源]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html)
 - [About AMD modules and RequireJS]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html)

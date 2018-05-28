@@ -76,9 +76,9 @@ github_link: cloud/basic-information/cloud-plans.md
       <td>Magento Business Intelligence Essentials giving you full visibility into your data with 75 reports and 5 dashboards available out of the box</td>
     </tr>
     <tr>
-      <td>High availability infrastructure</td>
+      <td>高可用性 infrastructure</td>
       <td class="blank"></td>
-      <td>High availability architecture with a three-server setup in the underlying Infrastructure-as-a-Service (IaaS) to provide enterprise grade reliability and availability</td>
+      <td>高可用性 architecture with a three-server setup in the underlying Infrastructure-as-a-Service (IaaS) to provide enterprise grade reliability and availability</td>
     </tr>
     <tr>
       <td>Dedicated hardware</td>

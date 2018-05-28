@@ -1,6 +1,6 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 网店前台自定义策略
 menu_title: 网店前台自定义策略
 menu_order:
@@ -34,8 +34,8 @@ Delivering a sharply different shopping experience than the default Magento inst
   <p>Any customization of your storefront will work optimally, and provide the easiest path for later upgrades, if you follow the best practice of consistently compartmentalizing code by type. For example, keep all HTML in {% glossarytooltip ae0f1f68-c466-4189-88fd-6cd8b23c804f %}PHTML{% endglossarytooltip %} files; keep all JavaScript in JavaScript files.</p>
 </div>
 
-### Related topics
+### 相关主题s
 
-<a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html" target="_blank">Frontend Developer Guide</a>
+<a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html" target="_blank">前端工程师手册</a>
 
 <a href="{{ page.baseurl }}/javascript-dev-guide/bk-javascript-dev-guide.html" target="_blank">js开发者手册</a>

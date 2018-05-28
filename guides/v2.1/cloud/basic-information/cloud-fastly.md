@@ -31,7 +31,7 @@ Fastly provides the following powerful tools for Magento:
 
 We highly recommend enabling and using Fastly for your caching and CDN. The only situation you may not want to enable is for a headless deployment.
 
-We strongly recommend installing Fastly module 1.2.33 or later.
+We strongly recommend installing Fastly module 1.2.33或更新.
 
 ## Fastly and 503 timeouts {#timeouts}
 When you receive a 503 error from Fastly, it may be due to a lengthy operation or performing bulk actions. Fastly has a default 60 second time out. Any request that takes longer than 60 seconds will return a 503 error.
@@ -87,7 +87,7 @@ Fastly supports forcing unencrypted requests to TLS through the Force TLS featur
 ## GeoIP service support {#geoip}
 Fastly provides a GeoIP service and supports some GeoIP functionality. GeoIP handling manages visitor redirection (automatically) and store matching (select from list) based on their obtained country code. For more information, see Fastly's [GeoIP documentation](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#geoip-handling){:target="_blank"}.
 
-## Installation and configuration {#install-configure}
+## 安装和配置 {#install-configure}
 The installation and configuration process is:
 
 * Install the Fastly module in an Integration branch, without configuring settings or entering credentials.

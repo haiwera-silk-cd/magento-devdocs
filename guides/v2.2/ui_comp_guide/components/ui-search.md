@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Search component
-menu_title: Search component
+group: UI_组件_guide
+subgroup: 组件
+title: 搜索组件
+menu_title: 搜索组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-search.md
+github_link: ui_comp_guide/组件/ui-search.md
 ---
 
 ## Overview
 
-The Search component allows searching through the grid records. It is a generic tool for filtering content that aggregates all other filter elements.
+The 搜索组件 allows searching through the grid records. It is a generic tool for filtering content that aggregates all other filter elements.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/search/search.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/search/search.js)
 

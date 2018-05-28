@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup:
-title: Add a custom payment method to checkout
-menu_title: Add a custom payment method to checkout
+title: 为结算添加自定义的支付方式
+menu_title: 为结算添加自定义的支付方式
 menu_order: 3
 version: 2.1
 github_link: howdoi/checkout/checkout_payment.md
@@ -10,7 +10,7 @@ functional_areas:
   - Checkout
 ---
 
-<h2> What's in this topic </h2>
+<h2> 这里有什么 </h2>
 
 Out of the box, Magento {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} consists of two steps:
 
@@ -158,7 +158,7 @@ If your payment method requires credit cards information, you might use the Mage
 </table>
 
 ### Access the system config data
-Your payment method might need to get data that cannot be defined in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} configuration, JS components or templates directly, for example, data from the Magento system config.
+Your payment method might need to get data that cannot be defined in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} configuration, JS 组件 or templates directly, for example, data from the Magento system config.
 This configuration is stored in the `window.checkoutConfig` variable that is defined in root checkout template.
 
 In order to get access to the system configuration, your payment method or a group of payment methods has to implement the [`\Magento\Checkout\Model\ConfigProviderInterface`]({{ site.mage2000url }}app/code/Magento/Checkout/Model/ConfigProviderInterface.php) interface, and the class implementing it must be injected to the composite config provider via DI {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} configuration. The following code samples illustrate this.
@@ -196,7 +196,7 @@ A sample DI configuration file of a custom module `<your_module_dir>/etc/fronten
 {%endhighlight%}
 
 ### Add other payment-related features
-You can also add payment-related features (like reward points, gift registry, an so on) to the Review and Payment Information checkout step. They must be implemented as UI components as well, and can be displayed before or after the list of payment methods. This is configured in the [checkout page layout file correspondingly](#layout).
+You can also add payment-related features (like reward points, gift registry, an so on) to the Review and Payment Information checkout step. They must be implemented as UI 组件 as well, and can be displayed before or after the list of payment methods. This is configured in the [checkout page layout file correspondingly](#layout).
 
 ## Create the .js component that registers the renderer {#register}
 In you custom module directory create the `.js` UI component that registers the payment method renderer in the renderers list. It must be located under the `<your_module_dir>/view/frontend/web/js/view/` directory. For example in the Magento modules, the payment methods renderers are stored in the `<Magento_module_dir>/view/frontend/web/js/view/payment/` directory.
@@ -243,7 +243,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
+                    <item name="组件" xsi:type="array">
                         <item name="checkout" xsi:type="array">
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">
@@ -253,7 +253,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
                                             <item name="children" xsi:type="array">
                                                 <item name="payment" xsi:type="array">
                                                     <item name="children" xsi:type="array">
-                                                        <!-- Declare additional before payment components. START -->
+                                                        <!-- Declare additional before payment 组件. START -->
                                                         <item name="beforeMethods" xsi:type="array">
                                                             <item name="component" xsi:type="string">uiComponent</item>
                                                             <item name="displayArea" xsi:type="string">beforeMethods</item>
@@ -263,7 +263,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
                                                                 </item>
                                                             </item>
                                                         </item>
-                                                        <!-- Declare additional before payment components. END -->
+                                                        <!-- Declare additional before payment 组件. END -->
                                                         <!-- Declare the payment method (the component that registrates in the list). START -->
                                                         <item name="renders" xsi:type="array">
                                                             <item name="children" xsi:type="array">
@@ -280,7 +280,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
                                                                 </item>
                                                             </item>
                                                             <!-- Declare the payment method (the component that registrates in the list). END -->
-                                                            <!-- Declare additional after payment components. START -->
+                                                            <!-- Declare additional after payment 组件. START -->
                                                             <item name="afterMethods" xsi:type="array">
                                                                 <item name="component" xsi:type="string">uiComponent</item>
                                                                 <item name="displayArea" xsi:type="string">afterMethods</item>
@@ -290,7 +290,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
                                                                     </item>
                                                                 </item>
                                                             </item>
-                                                            <!-- Declare additional after payment components. END -->
+                                                            <!-- Declare additional after payment 组件. END -->
                                                         </item>
                                                     </item>
                                                 </item>

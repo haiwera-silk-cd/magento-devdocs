@@ -109,17 +109,17 @@ Pages are merged module by module in the order that modules are loaded in Magent
 
 To add blocks from different modules to the page, you can merge pages by following steps:
 
-**Step 1.** [Create an XML page](#mtf_page_create) in the corresponding module
+**步骤1.** [Create an XML page](#mtf_page_create) in the corresponding module
 
-**Step 2.** Assign [page attributes](#mtf_page_attributes)
+**步骤2.** Assign [page attributes](#mtf_page_attributes)
 
 * with the same name as the page you want to merge
 * with the same `mca`
 * the `module` and `area` attributes can be omitted
 
-**Step 3.** Add blocks to the page
+**步骤3.** Add blocks to the page
 
-**Step 4.** Run the page generator
+**步骤4.** Run the page generator
 
 For example, we have `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` page and want to add three blocks from the Magento_Review模块.
 
@@ -296,17 +296,17 @@ Your module can influence functionality of another module that is defined in a c
 
 To override blocks, follow:
 
-**Step 1.** [Create an XML page](#mtf_page_create) in your new module with the name of page you want to merge.
+**步骤1.** [Create an XML page](#mtf_page_create) in your new module with the name of page you want to merge.
 
-**Step 2.** Assign [page attributes](#mtf_page_attributes)
+**步骤2.** Assign [page attributes](#mtf_page_attributes)
 
 * with the same name as the page you want to merge
 * with the same `mca`
 * without `module` and `area` attributes
 
-**Step 3.** Add blocks that you want to override (indicating a block class with new behaviour)
+**步骤3.** Add blocks that you want to override (indicating a block class with new behaviour)
 
-**Step 4.** Run the page generator.
+**步骤4.** Run the page generator.
 
 Let's see an example with the following use case:
 
@@ -347,9 +347,9 @@ Assume that we already created the new block `\Magento\NewModule\Test\Block\Admi
 
 To use the `editForm` block from the Magento_NewModule, we must follow:
 
-**Step 1.** Create a `CatalogCategoryEdit.xml` page in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/NewModule/Test/Page/Adminhtml` directory.
+**步骤1.** Create a `CatalogCategoryEdit.xml` page in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/NewModule/Test/Page/Adminhtml` directory.
 
-**Step 2.** Assign page attributes
+**步骤2.** Assign page attributes
 
  * with the same name as the page you want to merge
  * with the same `mca`
@@ -365,7 +365,7 @@ To use the `editForm` block from the Magento_NewModule, we must follow:
 
 {% endhighlight %}
 
-**Step 3.** Add blocks that you want to {% glossarytooltip 510de766-1ebd-4546-bf38-c618c9c945d2 %}redirect{% endglossarytooltip %}.
+**步骤3.** Add blocks that you want to {% glossarytooltip 510de766-1ebd-4546-bf38-c618c9c945d2 %}redirect{% endglossarytooltip %}.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -376,7 +376,7 @@ To use the `editForm` block from the Magento_NewModule, we must follow:
 </config>
 {% endhighlight %}
 
-**Step 4.** Run the page generator.
+**步骤4.** Run the page generator.
 
 Enter in terminal:
 

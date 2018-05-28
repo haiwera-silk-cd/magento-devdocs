@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 40_Authentication
-title: OAuth-based authentication
-menu_title: OAuth-based authentication
+title: 基于OAuth的认证
+menu_title: 基于OAuth的认证
 menu_order: 2
 version: 2.0
 github_link: get-started/authentication/gs-authentication-oauth.md
@@ -22,7 +22,7 @@ The following diagram shows the OAuth authentication process. Each step is descr
 ![OAuth flow]({{ page.baseurl }}/get-started/authentication/images/oauthflow.png)
 
 
-1. **Create an integration**.  The merchant creates an integration from {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. Magento generates a consumer key and a consumer secret.
+1. **创建一个集成**.  The merchant creates an integration from {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. Magento generates a consumer key and a consumer secret.
 
 2. **Activate the integration**. The OAuth process begins when the merchant activates the integration. Magento sends the OAuth consumer key and secret, an OAuth verifier, and the store {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} to the external application via HTTPS post to the page defined in the **Callback Link** field in Admin. See [Activate an integration](#activate) for more information.
 
@@ -507,12 +507,12 @@ class OauthClient extends AbstractService
 {% endhighlight %}
 {% endcollapsible %}
 
-## Related topics
+## 相关主题
 
-[Create an integration]( {{ page.baseurl }}/get-started/create-integration.html )
+[创建一个集成]( {{ page.baseurl }}/get-started/create-integration.html )
 
-[OAuth error codes]( {{ page.baseurl }}/get-started/authentication/oauth-errors.html )
+[OAuth错误码]( {{ page.baseurl }}/get-started/authentication/oauth-errors.html )
 
-[Construct a request]( {{ page.baseurl }}/get-started/gs-web-api-request.html )
+[构造一个请求]( {{ page.baseurl }}/get-started/gs-web-api-request.html )
 
 [将服务配置成web API]( {{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html )

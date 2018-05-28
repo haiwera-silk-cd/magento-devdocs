@@ -20,7 +20,7 @@ The module implementation allows you to:
 
 ## Extensibility
 
-The Magento_Signifyd模块 does not have own Events, Layouts, and UI Components as extension points.
+The Magento_Signifyd模块 does not have own Events, Layouts, and UI 组件 as extension points.
 
 ### Public API
 

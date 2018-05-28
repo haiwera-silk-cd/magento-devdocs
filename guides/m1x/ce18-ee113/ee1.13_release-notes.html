@@ -617,7 +617,7 @@ This column specifies the store view for which the URL redirect is defined.</li>
 <li>The following apply to enabling the canonical meta tag options for categories and products:
 <ul><li>If <strong>Use Canonical Meta Tag for Categories</strong> is enabled, the category page on your web store includes a canonical URL to the full category URL. For example, <code>http://www.example.com/mens/shoes</code></li>
 <li>If <strong>Use Canonical Meta Tag for Products</strong> is enabled, the product page includes a canonical URL to <code><em>domain-name</em>/<em>product-url-key</em></code> because product URL keys must be globally unique.<br />
-If you also enable the option <strong>Use Categories Path for Product URLs</strong>, the canonical URL is still <code><em>domain-name</em>/<em>product-url-key</em></code> but the product can also be accessed using its full URL (including the category hierarchy). Examples:<br />
+If you also enable the option <strong>Use Categories Path for Product URLs</strong>, the canonical URL is still <code><em>domain-name</em>/<em>product-url-key</em></code> but the product can also be accessed using its full URL (including the category hierarchy). 例如:<br />
 If the product URL key is <code>producturlkey</code> and it's assigned to the <strong>Apparel > Womens > Purses</strong> category, the product can be accessed using both of the following URLs:<br />
 <code>http://www.example.com/producturlkey</code><br />
 <code>http://www.example.com/apparel/womens/purses/producturlkey</code><br />
@@ -725,7 +725,7 @@ Now, the session ID changes after successful registration, making unauthorized u
 <p><em>Issue</em>: Magento is subject to XSS attacks because the SID cookie value is not sanitized by default.</p>
 <p><em>Suggested solution</em>: Either disable <strong>Use SID on Frontend</strong>或<a href="http://stackoverflow.com/questions/4213686/best-practice-for-php-output" target="_blank">output-encode</a> any usage of the SID cookie value before using it or passing it as a parameter to any page cache helper functions.</p>
 <p>Additional references:</p>
-<ul><li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank">XSS Prevention Cheat Sheet</a></li>
+<ul><li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank">XSS防范 Cheat Sheet</a></li>
 <li><a href="https://www.owasp.org/index.php/HttpOnly" target="_blank">HttpOnly reference</a></li>
 <li><a href="https://www.owasp.org/index.php/Category:OWASP_Code_Review_Project" target="_blank">Open Web Application Security Project (OWASP) Code Review Guide V2.0</a></li>
 <li><a href="https://www.owasp.org/index.php/Reviewing_Code_for_Cross-site_scripting" target="_blank">Reviewing Code for Cross-Site Scripting</a></li>

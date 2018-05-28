@@ -29,9 +29,9 @@ A sample result follows:
 
 #### Create the cron job
 
-To create a cron job for the Magento file system owner, enter the following command as a user with `root` privileges:
+To create a cron job for the Magento文件系统所有者, enter the following command as a user with `root` privileges:
 
-	crontab -u <Magento file system owner user name> -e
+	crontab -u <Magento文件系统所有者 user name> -e
 
 For example,
 
@@ -65,10 +65,10 @@ Example:
 	* * * * * /usr/bin/php /var/www/magento2/update/cron.php >> /var/www/magento2/var/log/update.cron.log
 	* * * * * /usr/bin/php /var/www/magento2/bin/magento setup:cron:run >> /var/www/magento2/var/log/setup.cron.log
 
-**Example 2:** Contributing developers only (that is, you cloned the Magento 2 GitHub repository):
+**Example 2:** 仅贡献开发者 (that is, you cloned the Magento 2 GitHub repository):
 
 	* * * * * /usr/bin/php /var/www/magento2/bin/magento cron:run | grep -v "Ran jobs by schedule" >> /var/www/magento2/var/log/magento.cron.log
 
-The preceding works for contributing developers because if you cloned the GitHub repository you don't have an `update` directory and errors result if you run `magento setup:cron:run`. These cron jobs work in the Web Setup Wizard, which contributing developers cannot use for installing or updating the Magento application or components. 
+The preceding works for contributing developers because if you cloned the GitHub repository you don't have an `update` directory and errors result if you run `magento setup:cron:run`. These cron jobs work in the 网页安装向导, which contributing developers cannot use for installing or updating the Magento application or 组件. 
 
 Save your changes to the crontab and exit the editor.

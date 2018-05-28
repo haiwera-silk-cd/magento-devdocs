@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Payment info rendering in Admin checkout
-menu_title: Payment info rendering in Admin checkout
+title: 管理面板的支付信息渲染
+menu_title: 管理面板的支付信息渲染
 menu_order: 4
 version: 2.1
 github_link: payments-integrations/base-integration/formblocktype.md
@@ -91,5 +91,5 @@ The following example adds the Braintree-specific template [`app/code/Magento/Pa
 
 ## What's next
 
-- [Payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html)
+- [支集方式外观接口]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html)
 - [Add a gateway command]({{ page.baseurl }}/payments-integrations/base-integration/payment-action.html) 

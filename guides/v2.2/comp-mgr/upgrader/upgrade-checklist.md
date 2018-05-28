@@ -12,7 +12,7 @@ functional_areas:
 ---
 
 <h2 id="compman-overview">Overview of System Upgrade</h2>
-This section discusses how to start System Upgrade, which upgrades the version of Magento core components as well as any other installed components.
+This section discusses how to start System Upgrade, which upgrades the version of Magento core 组件 as well as any other installed 组件.
 
 You can upgrade in any of the following ways:
 

@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: Tutorials
-title: Serialized to JSON data upgrade
-menu_title: Serialized to JSON data upgrade
+title: 序列化为JSON数据升级
+menu_title: 序列化为JSON数据升级
 menu_order: 1000
 version: 2.2
 github_link: ext-best-practices/tutorials/serialized-to-json-data-upgrade.md
@@ -14,7 +14,7 @@ The following tutorial lists the steps needed to create an upgrade script that c
 
 Use this tutorial to create an upgrade script to update your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} to work with Magento 2.2 and above.
 
-## Before you begin
+## 在开始之前
 
 Identify the data you need to convert to JSON in the database.
 
@@ -47,7 +47,7 @@ This tutorial uses the following framework {% glossarytooltip 786086f2-622b-4007
 
 * `\Magento\Framework\Module\Manager` - This class checks the status of a module.
 
-## Step 1: Create the basic upgrade script
+## 步骤1. Create the basic upgrade script
 {:#step-1}
 
 The upgrade script is what gets run during the upgrade step of your extension's [lifecycle][1].
@@ -122,7 +122,7 @@ class UpgradeData implements \Magento\Framework\Setup\UpgradeDataInterface
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 2: Check that the module exists
+## 步骤2. Check that the module exists
 {:#step-2}
 
 Any module can replace another module in Magento.
@@ -140,14 +140,14 @@ if ($this->moduleManager->isEnabled('Magento_Sales')) {
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 3: Write the conversion logic
+## 步骤3. Write the conversion logic
 {:#step-3}
 
 The {% glossarytooltip 38c73ce4-8f01-4f74-ab30-1134cec5664f %}conversion{% endglossarytooltip %} logic in your script depends on how your extension stores the serialized data.
 
 If your extension stores serialized data in different ways, you will need to use different conversion methods.
 
-### Step 3a: Convert data in a column for all rows
+### 步骤3.: Convert data in a column for all rows
 {:#step-3a}
 
 Use a `FieldDataConverterFactory` to create a `FieldDataConverter` instance with the appropriate data converter.
@@ -167,7 +167,7 @@ $fieldDataConverter->convert(
 {% endhighlight %}
 {% endcollapsible %}
 
-### Step 3b: Convert data in specific rows for a field
+### 步骤3.: Convert data in specific rows for a field
 {:#step-3b}
 
 | option_id | code           | value                         |
@@ -273,7 +273,7 @@ foreach ($iterator as $selectByRange) {
 {% endhighlight %}
 {% endcollapsible %}
 
-### Step 3c: Convert nested serialized data
+### 步骤3.: Convert nested serialized data
 {:#step-3c}
 
 If your module uses nested serialized data in the database, create a custom data converter to hold the logic for converting the data.
@@ -387,7 +387,7 @@ $fieldDataConverter->convert(
 {% endhighlight %}
 {% endcollapsible %}
 
-### Step 3d: Convert data in a multi-database setup
+### 步骤3.: Convert data in a multi-database setup
 {:#step-3d}
 
 The Magento Enterprise Edition supports storing Quote, Sales and Inventory data in separate databases.
@@ -408,7 +408,7 @@ $fieldDataConverter->convert(
 {% endhighlight %}
 {% endcollapsible %}
 
-### Step 3e: Convert data from multiple fields
+### 步骤3.: Convert data from multiple fields
 
 Use the `\Magento\Framework\DB\AggregatedFieldDataConverter` class to update multiple files instead of `\Magento\Framework\DB\FieldDataConverter`.
 The following code sample updates two fields in different tables taking into account setup version of the module.

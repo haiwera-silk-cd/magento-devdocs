@@ -14,7 +14,7 @@ redirect_from:
 
 ## 概述 {#m2devgde-js-resources-intro}
 
-This topic describes the general concepts of how work with {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components is organized in Magento.
+This topic describes the general concepts of how work with {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 is organized in Magento.
 
 To address the problem of slow page load, we exclude JavaScript from the page headers and we added the ability to use the <a href="http://requirejs.org" target="_blank">RequireJS library</a>.
 
@@ -24,7 +24,7 @@ RequireJS improves the perceived page load, time because it allows JavaScript to
 
 ### JS resources location
 
-In Magento, you can find the JS components on the following levels:
+In Magento, you can find the JS 组件 on the following levels:
 
 *   {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}Library{% endglossarytooltip %} level (`lib/web`). Resources located here are available in any place in Magento.
 *	Module level (`<module_dir>/view/<areaname>/web`). If the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is enabled, resources added here are available in other modules and themes.
@@ -43,7 +43,7 @@ We recommend specifying JavaScript resources in the templates rather than in the
 
 JS resources are accessed using relative paths.
 
-Examples:
+例如:
 
 **示例1**
 
@@ -149,7 +149,7 @@ To be available for the entire Magento instance, RequireJS library is included i
 	    <block class="Magento\RequireJs\Block\Html\Head\Config" name="requirejs-config"/>
             <block class="Magento\Translation\Block\Html\Head\Config" name="translate-config"/>
             <block class="Magento\Translation\Block\Js" name="translate" template="Magento_Translation::translate.phtml"/>
-            <block class="Magento\Framework\View\Element\Js\Components" name="head.components" as="components" template="Magento_Backend::page/js/components.phtml"/>
+            <block class="Magento\Framework\View\Element\Js\组件" name="head.组件" as="组件" template="Magento_Backend::page/js/组件.phtml"/>
             <block class="Magento\Framework\View\Element\Html\Calendar" name="head.calendar" as="calendar" template="Magento_Backend::page/js/calendar.phtml"/>
         </referenceContainer>
     </body>

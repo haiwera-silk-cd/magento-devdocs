@@ -155,7 +155,7 @@ The format for adding your mount to this list is as follows:
 -  `disk` key defines the size available for that `shared` volume
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-Important: The subpath portion of the mount is the unique identifier of the files area. If changed, files at the old location will be permanently lost. Do not change this value once your site has data unless you really want to lose all existing data.
+重要: The subpath portion of the mount is the unique identifier of the files area. If changed, files at the old location will be permanently lost. Do not change this value once your site has data unless you really want to lose all existing data.
 </div>
 
 If you also want the mount web accessible, you must add it to the [`web`](#web) block of locations.
@@ -226,7 +226,7 @@ hooks:
 You must compile SASS files using `grunt` before static content deployment, which happens during the build. Place the `grunt` command before the `build` command.
 
 ### `crons`
-`crons` describes processes that are triggered on a schedule. We recommend you run cron as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html). Do not run cron as `root`. We also recommend against running cron as the web server user.
+`crons` describes processes that are triggered on a schedule. We recommend you run cron as the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html). Do not run cron as `root`. We also recommend against running cron as the web server user.
 
 `crons` support the following:
 
@@ -348,7 +348,7 @@ Optional PHP extensions available to install:
 -  [xhprof](http://php.net/manual/en/book.xhprof.php){:target="\_blank"}
 -  [xmlrpc](http://php.net/manual/en/book.xmlrpc.php){:target="\_blank"}
 
-{% include note.html type="info" content="Important: PHP compiled with debug is not supported and the Probe may conflict with XDebug or XHProf. Disable those extensions when enabling the Probe. The Probe conflicts with some PHP extensions like Pinba or IonCube." %}
+{% include note.html type="info" content="重要: PHP compiled with debug is not supported and the Probe may conflict with XDebug or XHProf. Disable those extensions when enabling the Probe. The Probe conflicts with some PHP extensions like Pinba or IonCube." %}
 
 ### Customize `php.ini` settings
 You can also create and push a `php.ini` file that is appended to the configuration maintained by {{site.data.var.ee}}.

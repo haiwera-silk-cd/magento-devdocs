@@ -122,7 +122,7 @@ For the best information on configurations, we recommend reviewing {{site.data.v
 * [System configuration](http://docs.magento.com/m2/ee/user_guide/system/system.html){:target="_blank"} for roles, tools, notifications, and your encryption key for your database
 * Extension settings using their documentation
 
-Beyond just store settings, you can further configure multiple sites and stores, configured services, and more. For details, see [Configure Magento Commerce]({{ page.baseurl }}/cloud/configure/configuration-overview.html).
+Beyond just store settings, you can further configure multiple sites and stores, configured services, and more. For details, see [配置Magento Commerce]({{ page.baseurl }}/cloud/configure/configuration-overview.html).
 
 Now you need to get these settings into your code. We have a helpful command to do this, keep reading.
 
@@ -185,7 +185,7 @@ Prior to pushing the data to another environment, you should consider sanitizing
 </div>
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-Important: We don't recommend pushing a database from an Integration or Staging environment. This data will overwrite your Production live data including sales, orders, new and updated customers, and much more.
+重要: We don't recommend pushing a database from an Integration or Staging environment. This data will overwrite your Production live data including sales, orders, new and updated customers, and much more.
 </div>
 
 ## Deployment workflow {#deploy}

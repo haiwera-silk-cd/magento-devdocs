@@ -2,7 +2,7 @@
 
 Before you continue, to avoid errors during your installation or update, make sure you verify *all* of the following:
 
-*	You set up a [Magento file system owner](#magento-owner-group) and shared that owner's group with the web server user group
+*	You set up a [Magento文件系统所有者](#magento-owner-group) and shared that owner's group with the web server user group
 *	Your [cron jobs](#magento-cron) are set up and running
 *	[File system permissions](#perms) are set properly
 
@@ -10,17 +10,17 @@ Before you continue, to avoid errors during your installation or update, make su
     <p>Do not continue without performing these checks. Failure to do so could result in errors.</p>
 </div>
 
-### Magento file system owner and group {#magento-owner-group}
-The [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group must have write access to Magento directories and files.
+### Magento文件系统所有者 and group {#magento-owner-group}
+The [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group must have write access to Magento directories and files.
 
 ### Cron jobs are running {#magento-cron}
-Magento requires three cron jobs, all running as the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+Magento requires three cron jobs, all running as the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 
 To verify your cron jobs are set up properly, enter the following command as a user with `root` privileges:
 
 	crontab -u <magento file system owner> -l
 
-For example, if your Magento file system owner is named `magento_user`, enter:
+For example, if your Magento文件系统所有者 is named `magento_user`, enter:
 
 	crontab -u magento_user -l
 
@@ -43,7 +43,7 @@ For details, see [Set up cron]({{ page.baseurl }}/install-gde/install/post-insta
 ### File system permissions {#perms}
 For security reasons, Magento requires certain permissions on the file system. Permissions are different from [*ownership*](#magento-owner-group). Ownership determines *who* can perform actions on the file system; permissions determine *what* the user can do.
 
-Directories in the Magento file system must be writable by the [Magento file system owner's]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group.
+Directories in the Magento file system must be writable by the [Magento文件系统所有者's]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group.
 
 To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider's file manager application.
 
@@ -88,7 +88,7 @@ drwxrws---. 11 magento_user apache   4096 Jun 13 16:05 var
 drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor
 {% endhighlight %}
 
-In the preceding example, the Magento file system owner is `magento_user`. Directories in the Magento file system have `drwxrwx---` permissions (775) and files have `-rw-rw-rw-` permissions (664).
+In the preceding example, the Magento文件系统所有者 is `magento_user`. Directories in the Magento file system have `drwxrwx---` permissions (775) and files have `-rw-rw-rw-` permissions (664).
 
 To get more detailed information, you can optionally enter the following command:
 

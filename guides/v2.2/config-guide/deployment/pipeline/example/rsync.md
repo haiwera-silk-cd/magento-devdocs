@@ -34,8 +34,8 @@ You can use the same procedure to configure any settings in the following refere
 *	[其它配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-most.html)
 *	[Magento企业版B2B扩展配置路径参考]({{ page.baseurl }}/config-guide/prod/config-reference-b2b.html)
 
-## Before you begin
-Before you begin, set up file system permissions and ownership as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
+## 在开始之前
+开始之前, set up file system permissions and ownership as discussed in [Prerequisite for your development, build, and production systems]({{ page.baseurl }}/config-guide/deployment/pipeline/technical-details.html#config-deploy-prereq).
 
 ## Assumptions
 This topic provides an example of modifying the production system configuration. You can choose different configuration options if you wish.
@@ -46,7 +46,7 @@ For the purposes of this example, we assume the following:
 *	The development system is available in a Git remote repository named `mconfig`
 *	Your Git working branch is named `m2.2_deploy`
 
-## Step 1: Set the configuration in the development system {#deploy-sens-setconfig}
+## 步骤1. Set the configuration in the development system {#deploy-sens-setconfig}
 To set the default locale and weight units in your development system:
 
 1.	Log in to the Magento Admin.
@@ -73,19 +73,19 @@ To set the default locale and weight units in your development system:
 15.	Click **Save Config**.
 11.	If prompted, flush the cache.
 
-## Step 2: Update the configuration
+## 步骤2. Update the configuration
 Now that you've changed the configuration in the Magento Admin, write the shared configuration to a file as discussed in this section.
 
 {% include config/split-deploy/example_save-shared-config.md %}
 
 Note that even though `app/etc/env.php` (the system-specific configuration) was updated, don't check it in to source control. You'll create the same configuration settings on your production system later in this procedure.
 
-## Step 3: Update your build system and generate files
+## 步骤3. Update your build system and generate files
 Now that you've committed your changes to the shared configuration to source control, you can pull those changes in your build system, compile code, and generate static files. The last step is to pull those changes to your production system.
 
 {% include config/split-deploy/example_build-sync.md %}
 
-## Step 4: Update the production system
+## 步骤4. Update the production system
 The last step in the process is to update your production system. You must do it in two parts:
 
 *	[Update the sensitive and system-specific settings](#config-split-verify-sens)
@@ -96,7 +96,7 @@ To set the sensitive and system-specific settings using environment variables, y
 
 *	Each setting's scope
 
-	If you followed the instructions in [Step 1](#deploy-sens-setconfig), the scope for Send Emails To is global (that is, the Default Config scope) and the scope for Default Email Domain is website.
+	If you followed the instructions in [步骤1.(#deploy-sens-setconfig), the scope for Send Emails To is global (that is, the Default Config scope) and the scope for Default Email Domain is website.
 
 	You must know the website's code to set the Default Email Domain configuration value. See [使用环境变量覆盖配置设置]({{ page.baseurl }}/config-guide/prod/config-reference-var-name.html) for more information on finding it.
 *	Each setting's configuration path
@@ -137,7 +137,7 @@ You can set the variable values in the Magento `index.php` using the following f
 
 To set variable values:
 
-1.	Log in to your production system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1.	Log in to your production system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 2.	Open `<Magento root dir>/index.php` in a text editor.
 3.	Anywhere in `index.php`, set values for the variables similar to the following:
 

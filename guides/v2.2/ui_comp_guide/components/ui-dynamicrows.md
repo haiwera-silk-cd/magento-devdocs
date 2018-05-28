@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: DynamicRows component
-menu_title: DynamicRows component
+group: UI_组件_guide
+subgroup: 组件
+title: 动态行组件
+menu_title: 动态行组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-dynamicrows.md
+github_link: ui_comp_guide/组件/ui-dynamicrows.md
 ---
 
 ## Overview
 
-The DynamicRows component is a dynamic collection of records. The user can edit the records, change their position, and navigate through the collection.
+The 动态行组件 is a dynamic collection of records. The user can edit the records, change their position, and navigate through the collection.
 
 ## DynamicRows configuration
 

@@ -60,7 +60,7 @@ A typical {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% end
     │   │   ├── _actions-toolbar.less
     │   │   ├── _breadcrumbs.less
     │   │   ├── _buttons.less
-    │   │   ├── components
+    │   │   ├── 组件
     │   │   │   └── _modals_extend.less
     │   │   ├── _icons.less
     │   │   ├── _layout.less
@@ -101,4 +101,4 @@ For more details on the theme folder structure, see [Magento主题的结构]({{ 
 
 **Next**
 
-[注册你的组件]({{ page.baseurl }}/extension-dev-guide/build/component-registration.html)
+[注册你的components]({{ page.baseurl }}/extension-dev-guide/build/component-registration.html)

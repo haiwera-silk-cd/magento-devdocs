@@ -57,7 +57,7 @@ To add a service, you add the following data to `services.yaml`:
      type: name:version
      disk: value
 
-For example:
+例如:
 
   mysql:
      type: mysql:10.0

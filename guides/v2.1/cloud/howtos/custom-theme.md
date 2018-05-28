@@ -43,7 +43,7 @@ To install a theme manually:
 
 1.	Copy the theme's code under `<Magento root dir>/app/design/frontend` for a storefront theme or `<Magento root dir>/app/design/adminhtml` for an Admin theme. Make sure the top-level directory is `<VendorName>`; otherwise, the theme won't install properly.
 
-    For example:
+    例如:
 
         cp -r ExampleTheme <Magento root dir>/app/design/frontend
 2.  Confirm the theme copied to the correct place.

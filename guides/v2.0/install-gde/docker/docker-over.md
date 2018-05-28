@@ -24,7 +24,7 @@ Magento's DevBox installation is a step-by-step wizard that enables you to downl
 
 A new installation or using an existing Magento installation takes about 15 minutes.
 
-Optional sample data takes a few additional minutes.
+可选安装样本数据 takes a few additional minutes.
 
 ## Get Magento DevBox now
 <div class="bs-callout bs-callout-info" id="info" markdown="1">

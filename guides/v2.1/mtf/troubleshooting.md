@@ -5,7 +5,7 @@ version: 2.1
 github_link: mtf/troubleshooting.md
 ---
 
-### Installation issues {#install-issues}
+### 安装 issues {#install-issues}
 
 #### Selenium Server issue
 

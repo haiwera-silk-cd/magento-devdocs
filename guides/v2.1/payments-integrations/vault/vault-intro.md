@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Adding vault integration
-menu_title: Adding vault integration
+title: 添加vault集成
+menu_title: 添加vault集成
 menu_order: 10
 menu_node: parent
 version: 2.1
@@ -31,7 +31,7 @@ You do not need to create a new {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1
 
 The topics of this chapter describe how to add the vault functionality to a payment method (the payment method must be implemented using Magento payment gateway):
 
-1. [Add vault to module dependencies]({{ page.baseurl }}/payments-integrations/vault/module-configuration.html).
+1. [添加vault到模块依赖]({{ page.baseurl }}/payments-integrations/vault/module-configuration.html).
 2. [Configure vault general parameters]({{ page.baseurl }}/payments-integrations/vault/vault-payment-configuration.html).
 3. [Add vault and payment methods entities using dependency injection configuration]({{ page.baseurl }}/payments-integrations/vault/vault-di.html).
 4. [Implement the ability for customers to choose whether to use vault]({{ page.baseurl }}/payments-integrations/vault/enabler.html).

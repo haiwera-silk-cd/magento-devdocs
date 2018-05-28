@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 01_Admin
-title: Admin Panel Placement and Design
-menu_title: Admin Panel Placement and Design
+title: 管理面板的定位和设计
+menu_title: 管理面板的定位和设计
 menu_order: 1
 version: 2.0
 github_link: ext-best-practices/admin/placement-and-design.md

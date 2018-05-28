@@ -48,7 +48,7 @@ The following sections discusses the structure and contents of the deployment co
 ## Manage installed modules {#config-php-contents-config-php}
 `config.php` lists your installed modules. Magento provides both command-line and web-based utilities to manage modules (install, uninstall, enable, disable, or upgrade).
 
-Examples:
+例如:
 
 * Uninstall components: <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-uninstall.html">bin/magento setup:uninstall</a>
 * Enable or disable components: <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable">bin/magento module:enable</a>, <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable">bin/magento module:disable</a>.

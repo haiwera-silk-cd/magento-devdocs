@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: UI-select Component
 menu_title: UI-select Component
 menu_node:
 menu_order: 6
 version: 2.0
-github_link: ui-components/ui-secondary-uiselect.md
+github_link: ui-组件/ui-secondary-uiselect.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-uiselect.html
 
 ---
@@ -71,7 +71,7 @@ Navigation keys:
     
     `app\code\Magento\Ui\view\base\web\templates\grid\filters\elements\ui-select.html`
     
-* Dependencies on Other Components
+* Dependencies on Other 组件
 
     Abstract
     

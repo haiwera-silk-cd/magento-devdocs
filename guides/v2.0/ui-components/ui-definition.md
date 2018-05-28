@@ -5,7 +5,7 @@ title: definition.xml
 menu_title: definition.xml
 menu_node: parent
 version: 2.0
-github_link: ui-components/ui-definition.md
+github_link: ui-组件/ui-definition.md
 redirect_from: /guides/v2.0/ui-library/ui-definition.html
 
 ---
@@ -20,17 +20,17 @@ redirect_from: /guides/v2.0/ui-library/ui-definition.html
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <!-- Include section -->
-    <xs:include schemaLocation="urn:magento:module:Magento_Ui:etc/ui_components.xsd"/>
+    <xs:include schemaLocation="urn:magento:module:Magento_Ui:etc/ui_组件.xsd"/>
     <!-- Definition the document element -->
-    <xs:element name="components" type="definition"/>
-    <!-- Registering components in the system -->
+    <xs:element name="组件" type="definition"/>
+    <!-- Registering 组件 in the system -->
     <xs:complexType name="definition">
         <xs:annotation>
-            <xs:appinfo>Registering components in the system and basic setup</xs:appinfo>
-            <xs:documentation>Registering components in the system and basic setup</xs:documentation>
+            <xs:appinfo>Registering 组件 in the system and basic setup</xs:appinfo>
+            <xs:documentation>Registering 组件 in the system and basic setup</xs:documentation>
         </xs:annotation>
         <xs:all>
-            <!-- Components list -->
+            <!-- 组件 list -->
             <xs:element type="range" name="range"/>
             <xs:element type="tab" name="tab"/>
             <xs:element type="dataSource" name="dataSource"/>

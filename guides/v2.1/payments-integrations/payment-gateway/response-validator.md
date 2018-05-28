@@ -1,20 +1,20 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Response Validator
-menu_title: Response Validator
+title: 响应校验器
+menu_title: 响应校验器
 menu_node:
 menu_order: 6
 version: 2.1
 github_link: payments-integrations/payment-gateway/response-validator.md
 ---
 
-Response Validator is a component of the Magento payment provider gateway that performs gateway response verification. This may include low level data formatting, security verification, and even execution of some business logic required by the store configuration.
+响应校验器 is a component of the Magento支付提供商网关 that performs gateway response verification. This may include low level data formatting, security verification, and even execution of some business logic required by the store configuration.
 
-Response Validator returns a Result object, containing validation result as Boolean value and errors description as a list of [Phrase]({{ site.mage2000url }}lib/internal/Magento/Framework/Phrase.php).
+响应校验器 returns a Result object, containing validation result as Boolean value and errors description as a list of [Phrase]({{ site.mage2000url }}lib/internal/Magento/Framework/Phrase.php).
 
 ## Interfaces
-Response Validator must implement [`Magento\Payment\Gateway\Validator\ValidatorInterface`]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Validator/ValidatorInterface.php)
+响应校验器 must implement [`Magento\Payment\Gateway\Validator\ValidatorInterface`]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Validator/ValidatorInterface.php)
 
 Result class must implement [`Magento\Payment\Gateway\Validator\ResultInterface`]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Validator/ResultInterface.php)
 

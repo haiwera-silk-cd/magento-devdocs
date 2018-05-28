@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 20_REST
-title: Construct a request
-menu_title: Construct a request
+title: 构造一个请求
+menu_title: 构造一个请求
 menu_order: 1
 
 version: 2.0
@@ -185,7 +185,7 @@ You specify input attributes in a JSON- or XML-formatted request body. For examp
 
 This JSON-formatted request body includes a `customer` object with the customer email, first name, and last name, and customer address information. The information in this request body is used to populate the new customer account.
 
-## Construct a request {#construct-request}
+## 构造一个请求 {#construct-request}
 This example shows you how to construct a REST web API call to create an account.
 
 <ol><li>Open the <a href="{{ site.mage2000url }}app/code/Magento/Customer/etc/webapi.xml" target="_blank">Magento/Customer/etc/webapi.xml</a> configuration file.</li>

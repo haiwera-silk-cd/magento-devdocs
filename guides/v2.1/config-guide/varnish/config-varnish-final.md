@@ -60,7 +60,7 @@ For example, to use the Chrome inspector:
 <h3 id="config-varnish-final-verify-cache">Verify the Magento cache</h3>
 Make sure the `<your Magento install dir>/var/page_cache` directory is empty:
 
-1.	Log in to your Magento server, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1.	Log in to your Magento server, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 2.	Enter the following command:
 
 		rm -rf <your Magento install dir>/var/page_cache/*

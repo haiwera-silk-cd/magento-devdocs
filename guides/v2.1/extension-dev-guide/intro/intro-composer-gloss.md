@@ -14,18 +14,18 @@ redirect_from:
 ---
 
 ### Component {#gloss-component}
-We refer to what you're coding as *components*. (Composer refers to them as <a href="https://getcomposer.org/doc/05-repositories.md#packages" target="_blank">*packages*</a>; the terms component and package are equivalent.) A {% glossarytooltip 3425e9ae-5edf-4fc6-b645-06023e9e5e5b %}Magento component{% endglossarytooltip %} can be classified into the following *types*:
+We refer to what you're coding as *组件*. (Composer refers to them as <a href="https://getcomposer.org/doc/05-repositories.md#packages" target="_blank">*packages*</a>; the terms component and package are equivalent.) A {% glossarytooltip 3425e9ae-5edf-4fc6-b645-06023e9e5e5b %}Magento component{% endglossarytooltip %} can be classified into the following *types*:
 
 *	{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} (extend Magento capabilities)
 *	{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} (change the look and feel of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and Admin)
 *	{% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}Language package{% endglossarytooltip %} (localize the storefront and Admin)
 
-You can *package* your components as follows:
+You can *package* your 组件 as follows:
 
 *	Individually
 *	As a <a href="https://getcomposer.org/doc/04-schema.md#type" target="_blank">metapackage</a>, which is a Magento Marketplace requirement if you're developing a product that has more than one component.
 
-	A metapackage consists of *shared packages*. Examples: a metapackage that consists of a module and a theme, two modules, two themes, and so on.
+	A metapackage consists of *shared packages*. 例如: a metapackage that consists of a module and a theme, two modules, two themes, and so on.
 
 	More information about metapackages can be found in the next section.
 
@@ -34,11 +34,11 @@ You can *package* your components as follows:
 </div>
 
 ### Metapackage {#gloss-meta}
-Magento Marketplace requires more than one component to be packaged as a *metapackage*, which consists of only a `composer.json` that specifies individual components and their dependencies. (Magento Marketplace also refers to a metapackage as an *extension*.)
+Magento Marketplace requires more than one component to be packaged as a *metapackage*, which consists of only a `composer.json` that specifies individual 组件 and their dependencies. (Magento Marketplace also refers to a metapackage as an *extension*.)
 
-A metapackage requires or suggests components that we refer to as *shared packages*. You can use a shared package in multiple metapackages if you wish. (If you use shared packages, Marketplace requires that *all* components in a metapackage be shared packages.)
+A metapackage requires or suggests 组件 that we refer to as *shared packages*. You can use a shared package in multiple metapackages if you wish. (If you use shared packages, Marketplace requires that *all* 组件 in a metapackage be shared packages.)
 
-For example, you might want to list two metapackages in the Magento Marketplace&mdash;a standard package and a premium package. All of the standard package components could be shared packages used by the premium package. Among other things, this enables merchants to easily upgrade from your standard package to your premium package using the <a href="#gloss-compman">Magento Component Manager</a>.
+For example, you might want to list two metapackages in the Magento Marketplace&mdash;a standard package and a premium package. All of the standard package 组件 could be shared packages used by the premium package. Among other things, this enables merchants to easily upgrade from your standard package to your premium package using the <a href="#gloss-compman">Magento Component Manager</a>.
 
 Merchants do not need to understand that, under the covers, some packages are shared.
 
@@ -57,6 +57,6 @@ Merchants use the [Component Manager]({{ page.baseurl }}/comp-mgr/module-man/com
 *	Update
 *	Enable, disable
 
-If you package and upload your components as discussed in this guide and in the <em>Marketplace User Guide</em>, merchants can easily update your components after you publish them.
+If you package and upload your 组件 as discussed in this guide and in the <em>Marketplace User Guide</em>, merchants can easily update your 组件 after you publish them.
 
 For details, see [Supported actions for each component type]({{ page.baseurl }}/comp-mgr/module-man/compman-main-pg.html#compman-access-types)

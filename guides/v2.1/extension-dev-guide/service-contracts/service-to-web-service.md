@@ -89,7 +89,7 @@ Following are some examples of various types and what they would look like in th
 </div>
 
 <h2 id="configuration-options">webapi.xml configuration options</h2>
-<p>To define web API components, set these attributes on these XML elements in the
+<p>To define web API 组件, set these attributes on these XML elements in the
    <code>webapi.xml</code> configuration file, as follows:
 </p>
 <table style="width:100%">

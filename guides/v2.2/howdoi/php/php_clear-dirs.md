@@ -15,7 +15,7 @@ github_link: howdoi/php/php_clear-dirs.md
 *	<a href="#howdoi-clear-how">How to clear the directories</a>
 
 <h2 id="howdoi-clear-over">Overview of directory clearing</h2>
-While you're developing Magento components (modules, themes, and language packages), your rapidly changing environment requires you to periodically clear certain directories and caches. Otherwise, your code runs with exceptions and won't function properly.
+While you're developing Magento组件 (modules, themes, and language packages), your rapidly changing environment requires you to periodically clear certain directories and caches. Otherwise, your code runs with exceptions and won't function properly.
 
 This topic provides guidelines on what directories to clear and when to clear them.
 
@@ -24,7 +24,7 @@ This topic provides guidelines on what directories to clear and when to clear th
   	<li>This topic is not comprehensive. Please help us improve it by clicking <strong>Edit this page on GitHub</strong> at the top of this page. Watch this page for updates.</li></ul>
 </div> 
 
-When you're developing Magento components (modules, themes, and language packages), the following directories contain temporary or generated files you can clear periodically:
+When you're developing Magento组件 (modules, themes, and language packages), the following directories contain temporary or generated files you can clear periodically:
 
 <table>
 	<col width="25%">
@@ -45,7 +45,7 @@ When you're developing Magento components (modules, themes, and language package
 	<tr>
 		<td>var/composer_home</td>
 		<td><p>Home directory for the Setup Wizard artifacts. Typically, you shouldn't touch this directory; clear it only if you're an experienced developer and are familiar with the Magento plug-in.</p>
-			<p>For example, if the Component Manager or System Upgrade web-based utilities cannot find the correct components you can try clearing this directory; however, doing so adversely affects the performance of those utilities.</p></td>
+			<p>For example, if the Component Manager or System Upgrade web-based utilities cannot find the correct 组件 you can try clearing this directory; however, doing so adversely affects the performance of those utilities.</p></td>
 	</tr>
 	<tr>
 		<td>generated/code</td>
@@ -100,7 +100,7 @@ The following table provides guidelines on what you should clear and when.
 </table>
 
 <h2 id="howdoi-clear-how">How to clear the directories</h2>
-To only clear directories and not perform other actions, log in to the Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a> and clear directories using a command like the following:
+To only clear directories and not perform other actions, log in to the Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a> and clear directories using a command like the following:
 
 	rm -rf <your Magento install dir>/generated/metadata/* <your Magento install dir>/generated/code/*
 

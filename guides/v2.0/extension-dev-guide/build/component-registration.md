@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 ## Registration overview {#register-overview}
-Magento components, including modules, themes, and language packages, must be registered in the Magento system through the Magento `ComponentRegistrar` class.
+Magento组件, including modules, themes, and language packages, must be registered in the Magento system through the Magento `ComponentRegistrar` class.
 
 Each component must have a file called `registration.php` in its root directory. For example, here is the `registration.php` file for Magento's [AdminNotification module]({{ site.mage2000url }}app/code/Magento/AdminNotification/registration.php). Depending on the type of component, registration is performed through `registration.php` by adding to it as follows:
 
@@ -25,7 +25,7 @@ where &lt;VendorName> is the name of the company providing the {% glossarytoolti
 
 Do not use "Ui" for your custom module name because the <code>%Vendor%_Ui</code> notation, required when specifying paths, might cause issues.
 
-### Example
+### 示例
     use \Magento\Framework\Component\ComponentRegistrar;
     ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_AdminNotification', __DIR__);
 
@@ -37,7 +37,7 @@ Register themes with:
 where &lt;area> is the functional area of the module (frontend, controller, and so on.), &lt;vendor> is the name of the company providing the theme, and &lt;theme name> is the name of the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 
-### Example
+### 示例
      ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Magento/luma', __DIR__);
 
 <p>&nbsp;</p>
@@ -50,7 +50,7 @@ Register language packages with:
 
 where &lt;VendorName> is the name of the company providing the package and &lt;packageName> is the name of the package.
 
-### Example
+### 示例
      ComponentRegistrar::register(ComponentRegistrar::LANGUAGE, 'magento_de_de', __DIR__);
 
 <p>&nbsp;</p>
@@ -78,5 +78,5 @@ use \Magento\Framework\Component\ComponentRegistrar;
 ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_AdminNotification', __DIR__);
 {%endhighlight %}
 
-#### Next
+#### 下一步
 [统一资源名称(URN)验证]({{ page.baseurl }}/extension-dev-guide/build/XSD-XML-validation.html)

@@ -2,7 +2,7 @@
 
 Before you continue, to avoid errors during your installation or update, make sure you verify *all* of the following:
 
-*	You set up a [Magento file system owner](#magento-owner-group) and shared that owner's group with the web server user group
+*	You set up a [Magento文件系统所有者](#magento-owner-group) and shared that owner's group with the web server user group
 *	Your [cron jobs](#magento-cron) are set up and running
 *	[Set a value for DATA_CONVERTER_BATCH_SIZE](#batch-size)
 *	[File system permissions](#perms) are set properly
@@ -18,7 +18,7 @@ One or more fields in the following tables are affected: `sales_order`, `sales_o
 
 If you have a large amount of data, you can improve performance by setting the value of an environment variable, `DATA_CONVERTER_BATCH_SIZE`. By default, it's set to a value of 50,000.
 
-To set the variable, before the upgrade starts enter the following command as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} in a bash shell prompt:
+To set the variable, before the upgrade starts enter the following command as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} in a bash shell prompt:
 
 	export DATA_CONVERTER_BATCH_SIZE <value>
 
@@ -34,13 +34,13 @@ After your upgrade completes, you can unset the variable as follows:
 `DATA_CONVERTER_BATCH_SIZE` requires memory; avoid setting it to a very large value (approximately 1GB) without testing it first.
 </div>
 
-### Magento file system owner and group {#magento-owner-group}
-The {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} group must have write access to Magento directories and files.
+### Magento文件系统所有者 and group {#magento-owner-group}
+The {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} group must have write access to Magento directories and files.
 
 ### Cron jobs are running {#magento-cron}
-Magento requires three cron jobs, all running as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+Magento requires three cron jobs, all running as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 
-To verify your cron jobs are set up properly, enter the following command as the Magento file system owner:
+To verify your cron jobs are set up properly, enter the following command as the Magento文件系统所有者:
 
 	crontab -l
 
@@ -63,7 +63,7 @@ For details, see [Set up cron]({{ page.baseurl }}/install-gde/install/post-insta
 ### File system permissions {#perms}
 For security reasons, Magento requires certain permissions on the file system. Permissions are different from [*ownership*](#magento-owner-group). Ownership determines *who* can perform actions on the file system; permissions determine *what* the user can do.
 
-Directories in the Magento file system must be writable by the [Magento file system owner's]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group.
+Directories in the Magento file system must be writable by the [Magento文件系统所有者's]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html) group.
 
 To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider's file manager application.
 
@@ -108,7 +108,7 @@ drwxrws---. 11 magento_user apache   4096 Jun 13 16:05 var
 drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor
 {% endhighlight %}
 
-In the preceding example, the Magento file system owner is `magento_user`. Directories in the Magento file system have `drwxrwx---` permissions (775) and files have `-rw-rw-rw-` permissions (664).
+In the preceding example, the Magento文件系统所有者 is `magento_user`. Directories in the Magento file system have `drwxrwx---` permissions (775) and files have `-rw-rw-rw-` permissions (664).
 
 To get more detailed information, you can optionally enter the following command:
 

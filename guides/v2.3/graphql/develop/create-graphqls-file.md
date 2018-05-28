@@ -134,6 +134,6 @@ You can describe any attribute, type definition, or other entity within a `schem
 
 `@doc(description: "<Text>")`
 
-For example:
+例如:
 
 `sku: FilterTypeInput @doc(description: "A number or code assigned to a product to identify the product, options, price, and manufacturer")`

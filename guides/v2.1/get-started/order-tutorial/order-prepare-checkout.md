@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 6. Prepare for checkout
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤6. 准备结算
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 6
 level3_menu_node:

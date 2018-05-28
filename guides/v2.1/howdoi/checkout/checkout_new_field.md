@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup:
-title: Add a new field in address form
-menu_title: Add a new field in address form
+title: 添加一个新的输入项到地址表单
+menu_title: 添加一个新的输入项到地址表单
 menu_order: 9
 version: 2.1
 github_link: howdoi/checkout/checkout_new_field.md
@@ -17,7 +17,7 @@ This topic describes how to add new fields to default {% glossarytooltip 278c3ce
 To add your custom field to the checkout address form and access its value on the client side,
 take the steps described further.
 
-**Step 1**
+**步骤1.*
 
 Add the field to layout. Both shipping address and billing address forms are [generated dynamically]({{ page.baseurl }}/howdoi/checkout/checkout_form.html#dynamic_form). So to modify its layout, you need to create a [plugin]({{ page.baseurl }}/extension-dev-guide/plugins.html) for the `\Magento\Checkout\Block\Checkout\LayoutProcessor::process` method.
 
@@ -51,7 +51,7 @@ $customField = [
     'visible' => true,
 ];
 
-$jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children'][$customAttributeCode] = $customField;
+$jsLayout['组件']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children'][$customAttributeCode] = $customField;
 {%endhighlight%}
 
 This way, your field is added to the `customAttributes` property of `'Magento_Checkout/js/model/new-customer-address.js`, a JS object that lists all predefined address attributes and matches the corresponding server-side interface `\Magento\Quote\Api\Data\AddressInterface`. The `customAttributes` property was designed to contain custom EAV address attributes and is related to `\Magento\Quote\Model\Quote\Address\CustomAttributeListInterface::getAttributes` method. The code above will automatically handle local storage persistence on {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %}.
@@ -73,7 +73,7 @@ Optionally, instead of adding a plugin, you can use [dependency injection (DI)](
 where `%unique_name%` and `%path\to\your\LayoutProcessor%` must be replaced by your real values.
 
 
-**Step 2**
+**步骤2.*
 
 Add a JS {% glossarytooltip 1a305bdb-9be8-44aa-adad-98758821d6a7 %}mixin{% endglossarytooltip %} to change the behavior of the component responsible for the data submission to the {% glossarytooltip ebe2cd14-d6d4-4d75-b3d7-a4f2384e5af9 %}server side{% endglossarytooltip %}. For this, in your custom module, define a mixin as a separate AMD module that returns a callback function. Add the mixin file anywhere in the `<your_module_dir>/view/frontend/web` directory. There are no strict requirements for the mixin file naming.
 
@@ -105,10 +105,10 @@ define([
 });
 {%endhighlight%}
 
-When adding a field to the billing address form, you need to modify the behavior of one of the following components: `Magento_Checkout/js/action/place-order`或`Magento_Checkout/js/action/set-payment-information`, depending on when do you need the custom field valued to be passed to the server side. For example of a mixin, modifying one of these components, see the [place-order-mixin.js]({{ site.mage2100url }}app/code/Magento/CheckoutAgreements/view/frontend/web/js/model/place-order-mixin.js) in the Magento_CheckoutAgreements {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
+When adding a field to the billing address form, you need to modify the behavior of one of the following 组件: `Magento_Checkout/js/action/place-order`或`Magento_Checkout/js/action/set-payment-information`, depending on when do you need the custom field valued to be passed to the server side. For example of a mixin, modifying one of these 组件, see the [place-order-mixin.js]({{ site.mage2100url }}app/code/Magento/CheckoutAgreements/view/frontend/web/js/model/place-order-mixin.js) in the Magento_CheckoutAgreements {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
 
-**Step 3**
+**步骤3.*
 
 Tell Magento to load your mixin for the corresponding JS component. For this, in the `<YourModule_dir>/view/frontend/` directory, add the `requirejs-config.js`.
 
@@ -128,7 +128,7 @@ var config = {
 {%endhighlight%}
 
 
-**Step 4**
+**步骤4.*
 
 To add the field to the address model on the server side, add the `extension_attributes.xml` file in the `<YourModule_dir>/etc/` directory.
 

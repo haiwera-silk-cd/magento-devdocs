@@ -1,6 +1,6 @@
 ---
 group: payments-integrations
-title: Error Code Mapping
+title: 错误码映射
 github_link: payments-integrations/payment-gateway/error-code-mapper.md
 ---
 

@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage company credit
-menu_title: Manage company credit
+title: 管理公司信用帐户
+menu_title: 管理公司信用帐户
 menu_order: 18
 level3_menu_node: level3child
 level3_subgroup: credit
@@ -22,7 +22,7 @@ The company credit entity operates with the following attributes:
 
 The credit limit is allocated by seller, while available credit and outstanding balance are automatically calculated by the system based on the buyer transactions (place an order, return) and seller's transactions (refund, reimburse, update credit limit, cancel order).
 
-## Manage company credit limits
+## 管理公司信用帐户 limits
 
 When you create a company, the credit limit is set to 0. Use the `PUT /V1/companyCredits/:id` call to change this value and perform other updates to the company's credit settings.
 
@@ -35,7 +35,7 @@ GET /V1/companyCredits/company/:companyId
 GET /V1/companyCredits/
 {% endhighlight %}
 
-**Company credit parameters**
+**公司信用帐户 parameters**
 
 Name | Description | Format | Requirements
 --- | --- | --- | ---
@@ -400,4 +400,4 @@ Not applicable
 
 ## Related information
 
-[Integrate with the CompanyCredit module]({{ page.baseurl }}/b2b/company-credit.html)
+[与CompanyCredit模块集成]({{ page.baseurl }}/b2b/company-credit.html)

@@ -13,14 +13,14 @@ This topic provides some basic information about our ownership and permissions g
 *	[安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html)
 *	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
-### Magento file system owner
-We refer to the *Magento file system owner* as a user who owns and can write to files in the Magento file system.
+### Magento文件系统所有者
+We refer to the *Magento文件系统所有者* as a user who owns and can write to files in the Magento file system.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>The Magento file system owner is sometimes referred to as the <em>command-line user</em>.</p>
+  <p>The Magento文件系统所有者 is sometimes referred to as the <em>command-line user</em>.</p>
 </div>
 
-The Magento file system owner is any of the following:
+The Magento文件系统所有者 is any of the following:
 
 *	A single user, which is typical of shared hosting. 
 

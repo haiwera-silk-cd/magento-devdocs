@@ -18,11 +18,11 @@ For information about how JS resources are located and configured, see the <a hr
 <h2 id="#js_contents">What's in this guide</h2>
 Topics of this book describe the following:
 
-- [JavaScript initialization]({{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html): how to initialize JavaScript components and widgets in JavaScript files and `.phtml` templates
-- [使用定制脚本]({{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html): how to extend or replace default JavaScript components/widgets.
-- [Locate JavaScript]({{ page.baseurl }}/javascript-dev-guide/javascript/js_debug.html) components: how to define which components (scripts) are used on a particular store page.
+- [JavaScript initialization]({{ page.baseurl }}/javascript-dev-guide/javascript/js_init.html): how to initialize JavaScript 组件 and widgets in JavaScript files and `.phtml` templates
+- [使用定制脚本]({{ page.baseurl }}/javascript-dev-guide/javascript/custom_js.html): how to extend or replace default JavaScript 组件/widgets.
+- [Locate JavaScript]({{ page.baseurl }}/javascript-dev-guide/javascript/js_debug.html) 组件: how to define which 组件 (scripts) are used on a particular store page.
 - [Magento jq小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/jquery-widgets-about.html): Magento {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} documentation.
-- [图解如何定制js组件]({{ page.baseurl }}/javascript-dev-guide/javascript/js_practice.html): practical illustration of custom widgets related tasks.
+- [图解如何定制jscomponents]({{ page.baseurl }}/javascript-dev-guide/javascript/js_practice.html): practical illustration of custom widgets related tasks.
 
 JavaScript automatic testing is described in a separate [JavaScript unit testing]({{ page.baseurl }}/test/js/jasmine.html) topic.
 
@@ -68,7 +68,7 @@ A JS component/widget provided by <a href="{{ site.mage2000url }}lib/web/jquery/
 <i>jQuery widget</i>
 </td>
 <td>
-Custom widget created using jQuery UI Widget Factory and decorated as AMD {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. Many Magento JS components are jQuery widget.
+Custom widget created using jQuery UI Widget Factory and decorated as AMD {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. Many Magento JS 组件 are jQuery widget.
 </td>
 </tr>
 </table>

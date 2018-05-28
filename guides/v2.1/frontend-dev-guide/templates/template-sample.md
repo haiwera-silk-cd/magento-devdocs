@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: C_Templates
-title:自定义模板图解
-menu_title:自定义模板图解
+title: 自定义模板图解
+menu_title: 自定义模板图解
 menu_order: 3
 version: 2.1
 github_link: frontend-dev-guide/templates/template-sample.md
@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 This topic contains a step-by-step illustration of solving a typical design customization task using templates.
 
 <h2>Sample template customization: changing a layout of the mini shopping cart</h2>

@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: About the uiCollection class
-menu_title: About the uiCollection class
+title: 关于uiCollection类
+menu_title: 关于uiCollection类
 menu_order: 80
 version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_uicollection_concept.md
@@ -29,7 +29,7 @@ The `uiCollection` class implements the following methods:
   }
   {%endhighlight%}
 
-* The `destroy()` method removes the following for the child components and itself:
+* The `destroy()` method removes the following for the child 组件 and itself:
 	* link to the component in `uiRegistry`
 	* link to the component in the parent component
 	* event listeners
@@ -41,7 +41,7 @@ The `uiCollection` class implements the following methods:
     this.destroy();
 {%endhighlight%}
 
-* The `getChild()` method returns an element from the collection of child UI components.
+* The `getChild()` method returns an element from the collection of child UI 组件.
 
   Example:
 {%highlight js%}
@@ -53,7 +53,7 @@ The `uiCollection` class implements the following methods:
 
 ## Commonly used `uiCollection` properties
 
-* `elems` is the observable property that contains the collection of child UI components.
+* `elems` is the observable property that contains the collection of child UI 组件.
 
   Example:
 
@@ -84,4 +84,4 @@ It looks like following:
 </each>
 {%endhighlight%}
 
- Here `elems` is the collection of the child elements of `uiCollection`. As far as `elems` is the observable property, the templates of the components added to `elems` in the runtime, are also rendered.
+ Here `elems` is the collection of the child elements of `uiCollection`. As far as `elems` is the observable property, the templates of the 组件 added to `elems` in the runtime, are also rendered.

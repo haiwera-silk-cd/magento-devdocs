@@ -78,9 +78,9 @@ Available actions:
 
 ### Customization
 
-You can customize a grid using the standard grid settings located above the grid or by directly manipulating the corresponding UI components.
+You can customize a grid using the standard grid settings located above the grid or by directly manipulating the corresponding UI 组件.
 
-#### Timeline/Grid view UI components
+#### Timeline/Grid view UI 组件
 
 You can manipulate the timeline view and the grid view of a dashboard in the `app\code\Magento\Staging\view\adminhtml\ui_component\staging_update_grid.xml` configuration file as a [simple grid](devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-listing-grid.html) with the following custom settings:
 
@@ -250,7 +250,7 @@ Extension points enable extension developers to interact with the Magento_Stagin
 
 You can use public API defined in the `Api` directory.
 
-### UI components
+### UI 组件
 
 You can extend the UI components in the `view/adminhtml/ui_component` directory. For more information, see [UI Listing/Grid Component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
 

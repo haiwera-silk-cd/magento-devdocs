@@ -80,7 +80,7 @@ For more information, see our [PHP配置要求]({{ page.baseurl }}/install-gde/p
 *	Self-signed SSL certificates are not supported.
 *	Transport Layer Security (TLS) requirement
 
-	PayPal and `repo.magento.com` both require TLS 1.1 or later
+	PayPal and `repo.magento.com` both require TLS 1.1或更新
 
 	*	[More information about PayPal]({{ page.baseurl }}/install-gde/system-requirements_tls1-2.html)
 
@@ -110,14 +110,14 @@ Mail Transfer Agent (MTA) or an SMTP server
 
 ### Optional but recommended:
 
-*	<a href="http://xdebug.org/download.php" target="_blank">php_xdebug2.2.0</a> or later (development environments only; can have an adverse effect on performance)
+*	<a href="http://xdebug.org/download.php" target="_blank">php_xdebug2.2.0</a>或更新 (development environments only; can have an adverse effect on performance)
 
 <div class="bs-callout bs-callout-info" id="info">
 	<p>There is a known issue with <code>xdebug</code> that can affect Magento installations or access to the storefront or Magento Admin after installation.</p>
 	<p>For details, see <a href="{{ page.baseurl }}/install-gde/trouble/tshoot_install-issues.html#known-devbeta-xdebug">Known issue with xdebug</a>.</p>
 </div>
 
-*	PHPUnit (as a command-line tool) 4.1 or later
+*	PHPUnit (as a command-line tool) 4.1或更新
 
 ### Documentation
 

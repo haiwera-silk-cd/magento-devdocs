@@ -1,15 +1,15 @@
 ---
 group: howdoi
 subgroup:
-title: Add custom validations before order placement
-menu_title: Add custom validations before order placement
+title: 添加提交前自定义数据校验
+menu_title: 添加提交前自定义数据校验
 menu_order: 4
 version: 2.0
 github_link: howdoi/checkout/checkout_order.md
 functional_areas:
   - Checkout
 ---
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 This topic describes how to add custom validations to be performed before the order is placed during {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. Namely, the validations which are performed after a shopper clicks the **Place Order** button. Writing the validation logic itself is not covered in this topic.
 
@@ -77,7 +77,7 @@ In this file, add the following:
 <referenceBlock name="checkout.root">
     <arguments>
         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
+            <item name="组件" xsi:type="array">
                 <item name="checkout" xsi:type="array">
                     <item name="children" xsi:type="array">
                         <item name="steps" xsi:type="array">

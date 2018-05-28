@@ -17,7 +17,7 @@ The Magento_GiftWrappingStaging {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1
 
 The Magento_GiftWrappingStaging模块 adds to the Schedule Update form of a product the following functionality:
 
-- Enable/disable gift wrapping ("Allow Gift Wrapping" field)
+- 启用/禁用 gift wrapping ("Allow Gift Wrapping" field)
 - Set a price for the gift wrapping ("Price for Gift Wrapping" field).
 
 ## Dependencies

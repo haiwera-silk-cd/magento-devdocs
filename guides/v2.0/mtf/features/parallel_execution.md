@@ -21,11 +21,11 @@ Comparatively to the common testing flow
 
 you can run a test suite using parallel execution flow with one Magento instance
 
-![Parallel execution flow with one instance image]({{ site.magentourl }}/common/images/ftf/mtf_features_parallel_one_dia.png)
+![并行执行流程 with one instance image]({{ site.magentourl }}/common/images/ftf/mtf_features_parallel_one_dia.png)
 
 or run a test suite using parallel execution flow with multiple Magento instances.
 
-![Common flow and Parallel execution flow image]({{ site.magentourl }}/common/images/ftf/mtf_features_parallel_multi_dia.png)
+![Common flow and 并行执行流程 image]({{ site.magentourl }}/common/images/ftf/mtf_features_parallel_multi_dia.png)
 
 ## Set up parallel execution
 
@@ -47,12 +47,12 @@ To set up a parallel execution flow, add Magento instances to `<magento2_root_di
     <p>The default elements <code>"app_frontend_url"</code>和<code>"app_backend_url"</code> must be added obligatory. Otherwise FTF returns an error. The default instances are ignored if <code>"app_instances"</code> element is present.</p>
 </div>
 
-### Parallel execution flow with one Magento instance
+### 并行执行流程 with one Magento instance
 
-Parallel execution flow with one Magento instance should be used with a caution. In this mode, test cases are executed simultaneously and can conflict with each other (for example, when different tests set the same parameter in different states).
+并行执行流程 with one Magento instance should be used with a caution. In this mode, test cases are executed simultaneously and can conflict with each other (for example, when different tests set the same parameter in different states).
 
 <div class="bs-callout bs-callout-warning">
-    <p>Parallel execution flow with one Magento instance can cause conflict between tests running at the same time.</p>
+    <p>并行执行流程 with one Magento instance can cause conflict between tests running at the same time.</p>
 </div>
 
 The following example shows a setup configuration of the flow with one Magento instance.
@@ -76,7 +76,7 @@ The following example shows a setup configuration of the flow with one Magento i
 
 {% endhighlight %}
 
-### Parallel execution flow with multiple Magento instances
+### 并行执行流程 with multiple Magento instances
 
 The following example shows a setup configuration of the flow with three Magento instances.
 

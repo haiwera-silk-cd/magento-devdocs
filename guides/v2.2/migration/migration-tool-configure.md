@@ -31,7 +31,7 @@ Before you migrate any data, you must create a `config.xml` configuration file f
 
 To create a configuration file:
 
-1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 
 2.	Change to the following directory:
 
@@ -89,7 +89,7 @@ You can also connect to a database using the TLS protocol (i.e., using public/pr
 -   `ssl_cert`
 -   `ssl_key`
 
-For example:
+例如:
 
 {% highlight xml %}
 <source>

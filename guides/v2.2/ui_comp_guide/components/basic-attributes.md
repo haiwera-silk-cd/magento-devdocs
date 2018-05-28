@@ -1,11 +1,11 @@
 ---
-group: UI_Components_guide
-subgroup: components
+group: UI_组件_guide
+subgroup: 组件
 title: Basic attributes
 menu_title: Basic attributes
 menu_order: 1
 version: 2.2
-github_link: ui_comp_guide/components/basic-attributes.md
+github_link: ui_comp_guide/组件/basic-attributes.md
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ This topic describes the general UI components configuration attributes. There's
 
 ## General attributes 
 
-The following attributes are available for all UI components, including the basic UI components.
+The following attributes are available for all UI 组件, including the basic UI 组件.
 
 <table>
   <tr>
@@ -50,9 +50,9 @@ The following attributes are available for all UI components, including the basi
 </table>
 
 
-## Basic components' options
+## Basic 组件' options
 
-The following options are available for all basic components:
+The following options are available for all basic 组件:
 
 <table>
   <tr>

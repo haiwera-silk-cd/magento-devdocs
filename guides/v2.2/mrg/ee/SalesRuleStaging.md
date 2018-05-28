@@ -28,7 +28,7 @@ The Magento_SalesRuleStaging模块 enables you to stage the following sales rule
 
 This module depends on the Magento_SalesRule模块 and extends its functionality. It changes the database structure of the Magento_SalesRule模块 and the way in which sales rules are managed.
 
-### Installation details
+### 安装 details
 
 Do not uninstall the Magento_SalesRuleStaging模块, because it makes irreversible changes in the database during installation. Also, the Magento_SalesRule模块 cannot be disabled.
 

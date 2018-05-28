@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Add vault to module dependencies
-menu_title: Add vault to module dependencies
+title: 添加vault到模块依赖
+menu_title: 添加vault到模块依赖
 menu_order: 1
 version: 2.1
 github_link: payments-integrations/vault/module-configuration.md

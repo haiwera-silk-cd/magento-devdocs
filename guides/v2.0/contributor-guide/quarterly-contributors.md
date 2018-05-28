@@ -1,6 +1,6 @@
 ---
 group: contributor
-title: DevDocs Contributors
+title: 开发文档贡献者
 menu_order: 1000
 version: 2.0
 github_link: contributor-guide/quarterly-contributors.md

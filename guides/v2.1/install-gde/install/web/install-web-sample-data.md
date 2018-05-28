@@ -15,7 +15,7 @@ functional_areas:
 
 {% include install/sampledata/sample-data-intro.md %}
 
-For more information, see:
+更多信息请参考:
 
 *	[使用Composer安装]({{ page.baseurl }}/install-gde/install/web/install-web-sample-data-composer.html)
 *	[克隆仓库的方式安装]({{ page.baseurl }}/install-gde/install/web/install-web-sample-data-clone.html)

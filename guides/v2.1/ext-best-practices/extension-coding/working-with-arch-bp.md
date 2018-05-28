@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Working with the Architecture
-menu_title: Working with the Architecture
+title: 在构架下工作
+menu_title: 在构架下工作
 menu_order: 2
 version: 2.1
 github_link: ext-best-practices/extension-coding/working-with-arch-bp.md
@@ -18,7 +18,7 @@ In addition to understanding fundamental programming designs/concepts, you are e
   If you feel that Magento can be improved with your core code changes, please consider [contributing via Git]({{ page.baseurl }}/contributor-guide/contributing.html).
 
 ### Learn the architecture
-  To create the optimum module, you should get to know the Magento 2 architecture. Start off by familiarizing yourself with the [Admin Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html), the core [Magento组件]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html), and our [service contracts]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html) and [APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html).
+  To create the optimum module, you should get to know the Magento 2 architecture. Start off by familiarizing yourself with the [Admin Pattern Library]({{ page.baseurl }}/pattern-library/bk-pattern.html), the core [Magentocomponents]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html), and our [service contracts]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html) and [APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html).
 
 ### Check your extension configurations
   Make sure your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} is configured correctly in each of your extension's configuration files. Invalid or unexpected values will cause your extension to behave incorrectly within Magento.
@@ -26,7 +26,7 @@ In addition to understanding fundamental programming designs/concepts, you are e
 ### Know and leverage the Magento 2 framework
   There have been some significant changes from Magento 1. Be sure to study the capabilities and standards of the Magento 2 Framework.
 
-  For example:
+  例如:
 
   - Instead of creating custom validators from scratch, implement the [`\Magento\Framework\Validator\ValidatorInterface`]({{ site.mage2000url }}lib/internal/Magento/Framework/Validator/ValidatorInterface.php){:target="_blank"}.
   - Instantiating a database connection can be expensive and unneccessary. Magento provides resource models for performing SQL commands. (See [Persistence Layer]({{ page.baseurl }}/architecture/archi_perspectives/persist_layer.html))

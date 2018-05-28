@@ -12,7 +12,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/introduction.html
 
 This guide is for developers that are building a new *component* from scratch for custom {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of Magento functionality.
 
-## Magento is made up of the following types of components:
+## Magento is made up of the following types of 组件:
 
 
 	*	Modules (extend Magento capabilities)
@@ -29,7 +29,7 @@ A *package* is a component that is wrapped up in a distributable form. Usually y
 An *extension* is a component that are packaged for sale on Magento Marketplace.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Magento Marketplace is one way to distribute your components. This guide provide information about how to distribute your components using other means as well (such as a separate source control repository).</p>
+  <p>Magento Marketplace is one way to distribute your 组件. This guide provide information about how to distribute your 组件 using other means as well (such as a separate source control repository).</p>
 </div>
 
 

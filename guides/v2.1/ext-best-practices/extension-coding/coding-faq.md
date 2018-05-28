@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Coding FAQ
-menu_title: Coding FAQ
+title: 编码常见问题
+menu_title: 编码常见问题
 menu_order: 1000
 version: 2.1
 github_link: ext-best-practices/extension-coding/coding-faq.md

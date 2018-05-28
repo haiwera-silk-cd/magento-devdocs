@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Vault payment configuration
-menu_title: Vault payment configuration
+title: vault支付配置
+menu_title: vault支付配置
 menu_order: 2
 version: 2.1
 github_link: payments-integrations/vault/vault-payment-configuration.md

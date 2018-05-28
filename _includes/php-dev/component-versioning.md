@@ -1,6 +1,6 @@
 <div markdown="1">
 
-Components have the following types of versions:
+组件 have the following types of versions:
 
 *	Marketing version; in other words, the version the merchant interacts with. 
 

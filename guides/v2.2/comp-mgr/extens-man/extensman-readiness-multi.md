@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Readiness check with multiple extension updates
-menu_title: Readiness check with multiple extension updates
+title: Readiness check with multiple 扩展更新s
+menu_title: Readiness check with multiple 扩展更新s
 menu_node:
 menu_order: 8
 level3_menu_node: level3child
@@ -13,18 +13,18 @@ functional_areas:
   - Upgrade
 ---
 
-## Readiness check with multiple extension updates {#extensman-readiness-multi}
+## Readiness check with multiple 扩展更新s {#extensman-readiness-multi}
 If you're updating multiple extensions, the readiness check displays success and failure as discussed in this topic.
 
 ### Successful readiness check {#extensman-readiness-multi-success}
 
 {% collapsible Successful readiness check %}
 
-![Readiness check with multiple extension updates]({{ site.magentourl }}/common/images/extensman_read-upd-multi-success.png){:width="600px"}
+![Readiness check with multiple 扩展更新s]({{ site.magentourl }}/common/images/extensman_read-upd-multi-success.png){:width="600px"}
 
 You have the following options:
 
-*	Click **Update** or **Next** to continue to [Step 2. Backup]({{ page.baseurl }}/comp-mgr/extens-man/extensman-backup.html) with no changes
+*	Click **Update** or **Next** to continue to [步骤2. Backup]({{ page.baseurl }}/comp-mgr/extens-man/extensman-backup.html) with no changes
 *	To update the extension to a different version, select the desired version from the list 
 *	To remove the extension from the list and *not* update it, click ![Remove extension from the list]({{ site.magentourl }}/common/images/extensman_delete.png) (delete)
 
@@ -70,4 +70,4 @@ In the event of failure, see one of the following sections:
 {% endcollapsible %}
 
 #### 下一步
-[Step 2. Backup]({{ page.baseurl }}/comp-mgr/extens-man/extensman-backup.html)
+[步骤2. Backup]({{ page.baseurl }}/comp-mgr/extens-man/extensman-backup.html)

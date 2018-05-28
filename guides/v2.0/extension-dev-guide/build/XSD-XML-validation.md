@@ -45,7 +45,7 @@ The syntax for the framework XSD is a colon separated declaration. An example fo
 where
 
 *  `urn:magento` is the URN identifier
-*  `framework` is the reference type identifier. You can also add additional framework libraries as separate components with `framework-<sub-name>`
+*  `framework` is the reference type identifier. You can also add additional framework libraries as separate 组件 with `framework-<sub-name>`
 * `Api/etc/extension_attributes.xsd` is the relative path to the framework&#8217;s directory.
 
 
@@ -73,5 +73,5 @@ libxml_set_external_entity_loader(['Magento\Framework\Config\Dom\UrnResolver', '
 
 
 
-#### Next
-[你组件的名称]({{ page.baseurl }}/extension-dev-guide/build/create_component.html)
+#### 下一步
+[你components的名称]({{ page.baseurl }}/extension-dev-guide/build/create_component.html)

@@ -30,7 +30,7 @@ Or, if you added path of the Robo executable file to the system *PATH*, then run
 robo command [options] [arguments]
 ```
 
-### Example
+### 示例
 
 * Original:
   ```bash

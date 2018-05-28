@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: jQuery widget coding standard
+title: jq小工具编码规范
 landing-page: Coding standards
-menu_title: jQuery widget coding standard
+menu_title: jq小工具编码规范
 menu_order: 7
 version: 2.0
 github_link: coding-standards/code-standard-jquery-widgets.md
@@ -15,7 +15,7 @@ functional_areas:
 In the Magento system, all jQuery UI widgets and interactions are built on a simple, reusable base&mdash;the [jQuery UI Widget Factory][jquery-ui-widget-factory]{:target="_blank"}.
 
 The factory provides a flexible base for building complex, stateful plug-ins with a consistent {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %}.
-It is designed not only for plug-ins that are part of {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} UI, but for general usage by developers who want to create object-oriented components without reinventing common infrastructure.
+It is designed not only for plug-ins that are part of {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} UI, but for general usage by developers who want to create object-oriented 组件 without reinventing common infrastructure.
 
 For more information, see the [jQuery Widget API documentation][jquery-ui-api-doc]{:target="_blank"}.
 
@@ -51,15 +51,15 @@ Use [RFC 2119][rfc2119]{:target="_blank"} to interpret the "must," "must not," "
 
 ## Instantiation and resources
 
-* Additional {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} files used as a resources must be dynamically loaded using the `$.mage.components()` method and must not be included in the `<head>` block.
-* Use the `$.mage.components()` method to load additional JavaScript resource files not included in the `<head>` block.
+* Additional {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} files used as a resources must be dynamically loaded using the `$.mage.组件()` method and must not be included in the `<head>` block.
+* Use the `$.mage.组件()` method to load additional JavaScript resource files not included in the `<head>` block.
 * You must use `$.mage.extend()` to extend an existing set of widget resources.
 * You must instantiate widgets using the `data-mage-init` attribute.
   You can use the `.mage()` {% glossarytooltip 9fceecbe-31be-4e49-aac7-11d155a85382 %}plug-in{% endglossarytooltip %} to instantiate widgets that use callback methods.
 
   Benefits:
 
-  * You leverage the benefits of `$.mage.extend()` and `$.mage.components()`.
+  * You leverage the benefits of `$.mage.extend()` and `$.mage.组件()`.
   * Using `data-mage-init` minimizes the inline JavaScript code footprint.
   * You can modify widget initialization parameters.
 
@@ -201,7 +201,7 @@ $.widget("mage.form," {
 
 * Place abstract, share-able widgets under the `<install dir>/pub/lib/<your company>` directory so non-Magento applications can access them.
 
-  For example:
+  例如:
 
   ~~~
 /pub
@@ -214,7 +214,7 @@ $.widget("mage.form," {
 
 * Place Magento-specific widgets under the `<install dir>/app/code/<namespace>/<module-name>/view/<area-name>/js` directory.
 
-  For example:
+  例如:
 
   ~~~
 /app
@@ -280,7 +280,7 @@ $('selector')
   Benefits:
 
   * Delegation is supported using selectors in the event names.
-    For example: `click.foo`.
+    例如: `click.foo`.
   * Maintains proper `this` context inside the handlers, so it is not necessary to use the `$.proxy()` method.
   * Event handlers are automatically namespaced and cleaned up on destruction.
 

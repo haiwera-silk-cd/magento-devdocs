@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 20_REST
-title: Status codes and responses
-menu_title: Status codes and responses
+title: 响应和状态码
+menu_title: 响应和状态码
 menu_order: 3
 
 version: 2.1

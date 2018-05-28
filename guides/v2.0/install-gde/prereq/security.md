@@ -14,13 +14,13 @@ functional_areas:
 ---
 
 <h2 id="install-prereq-selinux">SELinux</h2>
-<a href="http://selinuxproject.org/page/Main_Page" target="_blank">Security Enhanced Linux (SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux *and* Apache must initiate a connection to another host, you must run the commands discussed in this section.
+<a href="http://selinuxproject.org/page/Main_Page" target="_blank">Linux增强安全(SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux *and* Apache must initiate a connection to another host, you must run the commands discussed in this section.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Magento has no recommendation about using SELinux; you can use it for enhanced security if you wish. If you use SELinux, you must configure it properly or the Magento application will function unpredictably. If you choose to use SELinux, consult a resource like <a href="http://wiki.centos.org/HowTos/SELinux" target="_blank">the CentOS wiki</a> to set up rules to enable communication.</p>
 </div>
 
-### Suggestion for installing the Magento software with Apache
+### 在Apache环境下安装Magento的建议
 If you choose to enable SELinux, you might have issues running the installer unless you change the *security context* of some directories as follows:
 
 	chcon -R --type httpd_sys_rw_content_t <your Magento install dir>/app/etc
@@ -28,13 +28,13 @@ If you choose to enable SELinux, you might have issues running the installer unl
 	chcon -R --type httpd_sys_rw_content_t <your Magento install dir>/pub/media
 	chcon -R --type httpd_sys_rw_content_t <your Magento install dir>/pub/static
 
-The preceding commands work only with the Apache web server. Because of the variety of configurations and security requirements, we don't guarantee these commands work in all situations. For more information, see:
+The preceding commands work only with the Apache web server. Because of the variety of configurations and security requirements, we don't guarantee these commands work in all situations. 更多信息请参考:
 
 *	<a href="http://linux.die.net/man/8/httpd_selinux" target="_blank">man page</a>
 *	<a href="http://www.serverlab.ca/tutorials/linux/web-servers-linux/configuring-selinux-policies-for-apache-web-servers/" target="_blank">serverlab</a>
 
-### Enable inter-server communication
-If Apache and the database server are on the same host, you can skip this section and continue with <a href="#install-iptables">Opening Ports In Your Firewall</a>.
+### 允许服务器交互通信
+If Apache and the database server are on the same host, you can skip this section and continue with <a href="#install-iptables">开户防火墙端口</a>.
 
 To enable Apache to initiate a connection to another host with SELinux enabled:
 
@@ -50,7 +50,7 @@ To enable Apache to initiate a connection to another host with SELinux enabled:
 
 	Ubuntu: `setsebool -P apache2_can_network_connect=1`
 
-<h2 id="install-iptables">Opening Ports In Your Firewall</h2>
+<h2 id="install-iptables">开户防火墙端口</h2>
 Depending on your security requirements, you might find it necessary to open port 80 and other ports in your firewall. Because of the sensitive nature of networking security, Magento strongly recommends you consult with your IT department before proceeding. Following are some suggested references:
 
 *	Ubuntu: <a href="https://help.ubuntu.com/community/IptablesHowTo" target="_blank">Ubuntu documentation page</a>.

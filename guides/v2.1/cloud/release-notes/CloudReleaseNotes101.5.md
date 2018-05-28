@@ -47,7 +47,7 @@ In `magento-cloud-configuration` release 101.5.2 on Magento Enterprise Cloud Edi
 
 
 ## How to get `magento-cloud-configuration` release 101.5.x
-Magento  Commerce (Cloud) periodically provides patch releases in components like `magento-cloud-configuration`.
+Magento  Commerce (Cloud) periodically provides patch releases in 组件 like `magento-cloud-configuration`.
 
 To test and implement your {{site.data.var.ece}} upgrade, see [Test a Magento upgrade]({{ page.baseurl }}/cloud/project/project-upgrade.html).
 

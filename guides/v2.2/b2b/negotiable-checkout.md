@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Negotiable quote checkout
-menu_title: Negotiable quote checkout
+title: 协商报价结算
+menu_title: 协商报价结算
 menu_order: 34
 version: 2.2
 ee_only: True
@@ -966,7 +966,7 @@ Not applicable
 
 ## Related information
 
-* [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-* [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-* [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-* [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+* [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
+* [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)
+* [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)
+* [生成协商报价订单]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)

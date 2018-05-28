@@ -138,7 +138,7 @@ On your production system:
 2.  Pull code and configuration updates from source control.
 3.  If you use {{site.data.var.ee}}, stop queue workers.
 4.  Use the `magento app:config:import` command to import configuration changes in the production system.
-5.  If you installed components that changed the database schema, run `magento setup:upgrade --keep-generated` to update the database schema and data, preserving generated static files.
+5.  If you installed 组件 that changed the database schema, run `magento setup:upgrade --keep-generated` to update the database schema and data, preserving generated static files.
 5.  To set system-specific settings, use either the `magento config:set` command or environment variables.
 6.  To set sensitive settings, use either the `magento config:sensitive:set` command or environment variables.
 7.  Clean (also referred to as _flush_) the Magento cache.
@@ -283,16 +283,16 @@ File permissions and ownership must be consistent across development, build, and
 
 *   All of the following:
 
-    *   Set up the same {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} user name on all systems
+    *   Set up the same {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} user name on all systems
     *   Make sure the web server runs as the same user on all systems
-    *   Make sure the Magento file system owner is in the web server group on all systems
+    *   Make sure the Magento文件系统所有者 is in the web server group on all systems
 *   Change Magento file system permissions and ownership on each system as necessary using the following guidelines:
 
     *   Development and build: [安装前设置所有者和权限 (two users)]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html#perms-private)
     *   Production: [Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
     <div class="bs-callout bs-callout-info" id="info" markdown="1">
-    If you choose this approach, you must set file system permissions and ownership every time you pull code from your build system (if the Magento file system owner or web server user are different on your build system).
+    If you choose this approach, you must set file system permissions and ownership every time you pull code from your build system (if the Magento文件系统所有者 or web server user are different on your build system).
     </div>
 
 #### For more information

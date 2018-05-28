@@ -47,7 +47,7 @@ Advantages of Redis include:
    <p>Starting in Magento 2.0.6, you can use either Redis or <a href="{{ page.baseurl }}/config-guide/memcache/memcache.html">memcached</a> for session storage. Earlier issues with the Redis session handler and session locking have been resolved.</p></span>
 </div>
 
-<h2 id="config-redis-install">Install Redis</h2>
+<h2 id="config-redis-install">安装Redis</h2>
 Installing and configuring the Redis software is beyond the scope of this guide. Consult resources such as:
 
 *	<a href="http://redis.io/download" target="_blank">Download Redis page</a>
@@ -62,7 +62,7 @@ You can find more information about configuring Redis from the following:
 *	<a href="http://www.techytalk.info/configuring-cache-storage-backends-magento-2-redis/" target="_blank">TechyTalk</a>
 <!-- *	<a href="http://info2.magento.com/rs/magentoenterprise/images/MagentoECG-UsingRedisasaCacheBackendinMagento.pdf" target="_blank">Magento Expert Consulting Group (ECG) article <em>written for Magento 1.x</em> -->
 
-#### Next
+#### 下一步
 
 *	<a href="{{ page.baseurl }}/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
 *	<a href="{{ page.baseurl }}/config-guide/redis/redis-session.html">使用redis存储session数据</a>

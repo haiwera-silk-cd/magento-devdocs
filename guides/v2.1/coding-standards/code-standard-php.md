@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: PHP coding standard
+title: PHP编码规范
 landing-page: Coding standards
-menu_title: PHP coding standard
+menu_title: PHP编码规范
 menu_order: 2
 version: 2.1
 github_link: coding-standards/code-standard-php.md
@@ -28,7 +28,7 @@ This includes references to:
 * {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}Namespace{% endglossarytooltip %} relative class name
 * Import relative class name
 
-Examples:
+例如:
 
 {% highlight php startinline=true %}
   $this->get(ClassName::class);

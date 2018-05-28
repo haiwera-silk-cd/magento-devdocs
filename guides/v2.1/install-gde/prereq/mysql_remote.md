@@ -12,7 +12,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="instgde-prereq-mysql-remote-over">When to set up a remote database connection</h2>
+<h2 id="instgde-prereq-mysql-remote-over">何时设置远程数据库连接</h2>
 This topic discusses how to set up a connection from your Magento web node to a MySQL server on another host. If you have a separate database host, you must perform the tasks discussed in this topic to install and use the Magento software. (The Magento *web node* is the server on which you installed the Magento software and that runs your web server.)
 
 <div class="bs-callout bs-callout-info" id="info">
@@ -20,13 +20,13 @@ This topic discusses how to set up a connection from your Magento web node to a 
 </div>
 
 ### 先决条件
-Before you begin, you must:
+开始之前, you must:
 
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">Install MySQL server</a> on the database server 
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html#instgde-prereq-mysql-config">Create a database instance</a> on the database server
 *	Install the MySQL client on your Magento web node. Consult MySQL documentation for details.
 
-### High availability
+### 高可用性
 Use the following guidelines to configure remote database connections if your web server or database server are clustered:
 
 *	You must configure a connection for each web server node
@@ -34,10 +34,10 @@ Use the following guidelines to configure remote database connections if your we
 
 	For more information, see <a href="https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html" target="_blank">MySQL documentation</a>.
 
-### Resolving connection issues
+### 解决连接问题
 If you have issues connecting to either host, first ping the other host to make sure it's reachable. You also might need to allow connections from one host to another by modifying firewall and SELinux rules (if you use SELinux).
 
-<h2 id="instgde-prereq-mysql-remote-create">Create the remote connection</h2>
+<h2 id="instgde-prereq-mysql-remote-create">创建远程连接</h2>
 To create a remote connection:
 
 1.	On your database server, as a user with `root` privileges, open your MySQL configuration file.
@@ -76,7 +76,7 @@ To create a remote connection:
   	<p>If MySQL fails to start, look in syslog for the source of the issue. Resolve the issue using <a href="https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address" target="_blank">MySQL documentation</a> or another authoritative source.</p>
 </div>
 
-<h2 id="instgde-prereq-mysql-remote-access">Grant access to a database user</h2>
+<h2 id="instgde-prereq-mysql-remote-access">授权远程用户访问</h2>
 To enable your web node to connect to the database server, you must grant a web node database user access to the database on the remote server.
 
 This example grants the `root` database user full access to the database on the remote host.
@@ -97,7 +97,7 @@ To grant access to a database user:
   <p>If your web server is clustered, enter the same command on every web server. You must use the same user name for every web server.</p>
 </div>
 
-<h2 id="instgde-prereq-mysql-remote-verify">Verify database access</h2>
+<h2 id="instgde-prereq-mysql-remote-verify">验证数据库访问</h2>
 On your web node host, enter the following command to verify the connection works:
 
 	mysql -u <local database user name> -h <database server ip address> -p
@@ -135,5 +135,5 @@ When you install the Magento software using either the command line or Setup Wiz
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

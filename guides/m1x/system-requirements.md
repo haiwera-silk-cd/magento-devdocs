@@ -1,6 +1,6 @@
 ---
 layout: m1x
-title: System Requirements for Magento Enterprise Edition and Community Edition (Current Shipping Versions)
+title: 系统要求 for Magento Enterprise Edition and Community Edition (Current Shipping Versions)
 ---
 
 <p>Magento requires a LAMP or LNMP stack</p>

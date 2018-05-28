@@ -1,92 +1,92 @@
-label: Payment Provider Gateway
+label: 支付提供商网关
 pages:
     - label: 介绍
       url: /payments-integrations/bk-payments-integrations.html
 
-    - label: Magento payment provider gateway
+    - label: Magento支付提供商网关
       url: /payments-integrations/payment-gateway/payment-gateway-intro.html
       children:
 
-        - label: Payment provider gateway structure
+        - label: 支付提供商网关结构
           url: /payments-integrations/payment-gateway/payment-gateway-structure.html
 
-        - label: Gateway Command
+        - label: 网关命令
           url: /payments-integrations/payment-gateway/gateway-command.html
 
-        - label: Gateway Command Pool
+        - label: 网关命令池
           url: /payments-integrations/payment-gateway/command-pool.html
 
-        - label: Request Builder
+        - label: 请求构造器
           url: /payments-integrations/payment-gateway/request-builder.html
 
-        - label: Gateway Client
+        - label: 网关客户端
           url: /payments-integrations/payment-gateway/gateway-client.html
 
-        - label: Response Validator
+        - label: 响应校验器
           url: /payments-integrations/payment-gateway/response-validator.html
 
-        - label: Response Handler
+        - label: 响应处理器
           url: /payments-integrations/payment-gateway/response-handler.html
 
-        - label: Error Code Mapping
+        - label: 错误码映射
           versions: ["2.2", "2.3"]
           url: /payments-integrations/payment-gateway/error-code-mapper.html
 
-    - label: Adding a new payment integration (payment method)
+    - label: 添加一个新的支付集成(支付方式)
       versions: ["2.1","2.2", "2.3"]
       url: /payments-integrations/base-integration/integration-intro.html
       children:
 
-        - label: Payment method module configuration
+        - label: 支集模块配置
           url: /payments-integrations/base-integration/module-configuration.html
 
-        - label: Payment method configuration
+        - label: 支集方式配置
           url: /payments-integrations/base-integration/payment-option-config.html
 
-        - label: Payment method facade
+        - label: 支集方式外观接口
           url: /payments-integrations/base-integration/facade-configuration.html
 
-        - label: Payment info rendering in Admin checkout
+        - label: 管理面板的支付信息渲染
           url: /payments-integrations/base-integration/formblocktype.html
 
-        - label: Add a payment action
+        - label: 添加支付动作
           url: /payments-integrations/base-integration/payment-action.html
 
-        - label: Get payment information from frontend to backend
+        - label: 从前台获取支付信息到后台
           url: /payments-integrations/base-integration/get-payment-info.html
 
-        - label: Configure payment method by area
+        - label: 根据地区配置支付方法
           url: /payments-integrations/base-integration/admin-integration.html
 
-    - label: Adding vault integration
+    - label: 添加vault集成
       versions: ["2.1", "2.2", "2.3"]
       url: /payments-integrations/vault/vault-intro.html
       children:
 
-        - label: Add vault to module dependencies
+        - label: 添加vault到模块依赖
           url: /payments-integrations/vault/module-configuration.html
 
-        - label: Vault payment configuration
+        - label: vault支付配置
           url: /payments-integrations/vault/vault-payment-configuration.html
 
-        - label: Vault DI configuration
+        - label: vault依赖注入配置
           url: /payments-integrations/vault/vault-di.html
 
-        - label: Enable vault
+        - label: 启用vault
           url: /payments-integrations/vault/enabler.html
 
-        - label: Payment Token
+        - label: 支付令牌
           url: /payments-integrations/vault/payment-token.html
 
-        - label: Token UI component provider
+        - label: 令牌UI组件提供器
           url: /payments-integrations/vault/token-ui-component-provider.html
 
-        - label: Display the stored information
+        - label: 显示存储的信息
           url: /payments-integrations/vault/customer-stored-payments.html
 
-        - label: Vault implementation for Admin
+        - label: vault管理面板实现
           url: /payments-integrations/vault/admin-integration.html
 
-    - label: Signifyd fraud protection
+    - label: Signifyd欺诈保护
       versions: ["2.2", "2.3"]
       url: /payments-integrations/signifyd/signifyd.html

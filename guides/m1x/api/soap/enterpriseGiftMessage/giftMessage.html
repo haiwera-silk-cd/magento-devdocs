@@ -59,7 +59,7 @@ title: Enterprise Gift Message
 		<pre class="theme: Default; brush: java; gutter: false">$proxy = new SoapClient('http://magentohost/api/soap/?wsdl');
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey');
 
-// Create a quote, get quote identifier
+// 创建一个报价, get quote identifier
 $shoppingCartId = $proxy-&gt;call( $sessionId, 'cart.create', array( 'magento_store' ) );
 
 // set gift message for quote
@@ -121,4 +121,4 @@ print_r( $giftMessageSetForProductResult );</pre>
 </div></div>
 
 				    
-Create the Magento file system owner                   			    
+Create the Magento文件系统所有者                   			    

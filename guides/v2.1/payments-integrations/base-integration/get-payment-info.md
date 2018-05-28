@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Get payment information from frontend to backend
-menu_title: Get payment information from frontend to backend
+title: 从前台获取支付信息到后台
+menu_title: 从前台获取支付信息到后台
 menu_order: 6
 version: 2.1
 github_link: payments-integrations/base-integration/get-payment-info.md

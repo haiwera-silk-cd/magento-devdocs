@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: DragAndDrop component
-menu_title: DragAndDrop component
+group: UI_组件_guide
+subgroup: 组件
+title: 可拖曳组件
+menu_title: 可拖曳组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-draganddrop.md
+github_link: ui_comp_guide/组件/ui-draganddrop.md
 ---
 
 ## Overview
 
-The DragAndDrop component is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} for [Columns]({{ page.baseurl }}/ui_comp_guide/components/ui-columns.html), allowing users to change columns position in the table.
+The 可拖曳components is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} for [Columns]({{ page.baseurl }}/ui_comp_guide/components/ui-columns.html), allowing users to change columns position in the table.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/dnd.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/dnd.js)
 

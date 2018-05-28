@@ -3,7 +3,7 @@ layout: m1x
 title: nginx configuration
 ---
 
-<h2 id="instgde-pre-nginx-install">Install nginx</h2>
+<h2 id="instgde-pre-nginx-install">安装nginx</h2>
 We support nginx version 1.7.x. Installing the nginx software is beyond the scope of this guide. You can refer to a resource like the following:
 
 *	<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank">nginx wiki</a>

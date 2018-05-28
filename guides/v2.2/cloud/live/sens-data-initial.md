@@ -44,7 +44,7 @@ To complete these configuration management tasks, you need the following:
 	* For Starter: To an Integration branch and environment
 	* For Pro: To the Integration `master` branch and environment
 
-## Configure Magento through the Integration Admin panel {#configure}
+## 配置Magento through the Integration Admin panel {#configure}
 
 Log into the Magento Admin panel in Integration to modify configurations. For a list of settings, see [List of system-specific configuration settings]({{ page.baseurl }}/cloud/live/sens-data-over.html#cloud-clp-settings) for details.
 
@@ -128,7 +128,7 @@ The following snippet from `config.php` shows an example of changing the default
 </pre>
 
 ## Push and deploy config.php to environments {#deploy}
-Now that you've created `config.php` and transferred it to your local system, commit it to Git and push it to your environments. This procedure corresponds to step 3 and 4 in the [recommended procedure]({{ page.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm).
+Now that you've created `config.php` and transferred it to your local system, commit it to Git and push it to your environments. This procedure corresponds to 步骤3 and 4 in the [recommended procedure]({{ page.baseurl }}/cloud/live/sens-data-over.html#cloud-config-specific-recomm).
 
 The following command adds, commits, and pushes to master:
 

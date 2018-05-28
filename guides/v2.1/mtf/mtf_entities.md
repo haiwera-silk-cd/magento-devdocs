@@ -20,13 +20,13 @@ Following is a list of all FTF entities.
   - <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_fixture.html#mtf_fixture_extend">Extend fixture</a>
   
   
-- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_fixture-repo.html">Fixture Repository</a>
+- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_fixture-repo.html">固定数据仓库</a>
 
 - <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_handler.html">Handler</a>
 
 - <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_block.html">Block</a>
 
-- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_typified-element.html">Typified element</a>
+- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_typified-element.html">典型元素</a>
 
 - <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_page.html">Page</a>
 
@@ -34,8 +34,8 @@ Following is a list of all FTF entities.
 
 - <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_dataset.html">Data set</a>
 
-- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_testcase.html">Test case</a>
+- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_testcase.html">测试用例</a>
 
-- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_scenariotest.html">Scenario test</a>
+- <a href="{{ page.baseurl }}/mtf/mtf_entities/mtf_scenariotest.html">场景测试</a>
 
 

@@ -227,7 +227,7 @@ hooks:
 You must compile SASS files using `grunt` before static content deployment, which happens during the build. Place the `grunt` command before the `build` command.
 
 ### `crons`
-`crons` describes processes that are triggered on a schedule. We recommend you run cron as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html). Do not run cron as `root`. We also recommend against running cron as the web server user.
+`crons` describes processes that are triggered on a schedule. We recommend you run cron as the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html). Do not run cron as `root`. We also recommend against running cron as the web server user.
 
 More information about crons:
 
@@ -327,7 +327,7 @@ Other PHP extensions you can optionally install:
 *	[xhprof](http://php.net/manual/en/book.xhprof.php){:target="\_blank"}
 *	[xmlrpc](http://php.net/manual/en/book.xmlrpc.php){:target="\_blank"}
 
-{% include note.html type="info" content="Important: PHP compiled with debug is not supported and the Probe may conflict with XDebug or XHProf. Disable those extensions when enabling the Probe. The Probe conflicts with some PHP extensions like Pinba or IonCube." %}
+{% include note.html type="info" content="重要: PHP compiled with debug is not supported and the Probe may conflict with XDebug or XHProf. Disable those extensions when enabling the Probe. The Probe conflicts with some PHP extensions like Pinba or IonCube." %}
 
 ### Customize `php.ini` settings 
 

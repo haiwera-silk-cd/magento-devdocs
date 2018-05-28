@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Columns component
-menu_title: Columns component
+group: UI_组件_guide
+subgroup: 组件
+title: 多表格列组件
+menu_title: 多表格列组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-columns.md
+github_link: ui_comp_guide/组件/ui-columns.md
 ---
 
 ## Overview
 
-The Columns component is a collection of columns. It renders the `<table>` element and displays the records of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html) in this table.
+The 多表格列components is a collection of columns. It renders the `<table>` element and displays the records of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html) in this table.
 
 ## Configuration options
 
@@ -71,13 +71,13 @@ Columns-specific options:
       <code>dndConfig</code>
     </td>
     <td>
-      Configuration of the DragAndDrop component.
+      Configuration of the 可拖曳组件.
     </td>
     <td>
       Object
     </td>
     <td>
-      Specified in the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-draganddrop.html">DragAndDrop component configuration</a>.
+      Specified in the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-draganddrop.html">可拖曳组件 configuration</a>.
     </td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ Columns-specific options:
       <code>stickyTmpl</code>
     </td>
     <td>
-      Path to the <code>.html</code> template used for the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-toolbar.html"> Toolbar component</a> when it receives a fixed position.
+      Path to the <code>.html</code> template used for the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-toolbar.html"> 工具栏组件</a> when it receives a fixed position.
     </td>
     <td>
       String

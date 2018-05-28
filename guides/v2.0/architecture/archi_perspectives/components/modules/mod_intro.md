@@ -49,9 +49,9 @@ Magento developers, administrators, and anyone building a Magento web site will 
 See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for specific instructions on extending modules.
 
 See
-<a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">Frontend Developer Guide</a> for information on implementing themes and other components.
+<a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a> for information on implementing themes and other components.
 
-## Related topics {#arch-modules-related}
+## 相关主题 {#arch-modules-related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend.html">模块依赖</a>
 

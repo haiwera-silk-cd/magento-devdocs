@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Hidden component
-menu_title: Hidden component
+group: UI_组件_guide
+subgroup: 组件
+title: 隐藏域组件
+menu_title: 隐藏域组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-hidden.md
+github_link: ui_comp_guide/组件/ui-hidden.md
 ---
 
 ## Overview
 
-The Hidden component is a form element that implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="hidden">` field.
+The 隐藏域组件 is a form element that implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="hidden">` field.
 
 ## Configuration options
 

@@ -2,7 +2,7 @@
 group: install_pre
 subgroup: 先决条件
 title: RabbitMQ
-menu_title: RabbitMQ (Magento Commerce only)
+menu_title: RabbitMQ (仅企业版适用)
 menu_order: 50
 version: 2.0
 ee_only: True
@@ -28,7 +28,7 @@ The message queue system must be established before you install Magento. The bas
 A basic message queue system can be implemented on {{site.data.var.ee}} using cron instead of RabbitMQ. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for more information.
 </div>
 
-## Install RabbitMQ on Ubuntu {#ubuntu-install}
+## 在Ubuntu上安装RabbitMQ {#ubuntu-install}
 
 To install RabbitMQ on Ubuntu 16 enter the following command:
 
@@ -43,9 +43,9 @@ If you have an older version of Ubuntu, RabbitMQ recommends installing the packa
 
 Refer to [Installing on Debian/Ubuntu](https://www.rabbitmq.com/install-debian.html){:target="&#95;blank"} for more information.
 
-## Install RabbitMQ on CentOS {#centos-install}
+## 在CentOS上安装RabbitMQ {#centos-install}
 
-### Install Erlang
+### 安装Erlang
 
 RabbitMQ was written using the Erlang programming language, which must be installed on the same system as RabbitMQ.
 
@@ -56,7 +56,7 @@ Run the following commands to install this feature.
 1. `wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm`
 2. `rpm -Uvh erlang-solutions-1.0-1.noarch.rpm`
 
-### Install RabbitMQ
+### 安装RabbitMQ
 
 The RabbitMQ server is included on CentOS, but the version is often old. RabbitMQ recommends installing the package from their website.
 
@@ -115,7 +115,7 @@ where:
 </tr>
 </table>
 
-## Start the message queue consumers
+## 启动消息队列消费进程
 
 After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the message queue consumers. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for details.
 
@@ -124,7 +124,7 @@ After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the m
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
-*	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
+*	[配置安全选项]({{ page.baseurl }}/install-gde/prereq/security.html)
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
-*	[Message queue overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
+*	[消息队列概述]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
 *	[管理消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)

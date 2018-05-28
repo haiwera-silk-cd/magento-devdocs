@@ -1,13 +1,13 @@
 ---
 group: integration-testing
 version: 2.0
-title: Using DocBlock Annotations
+title: 使用文档块注解
 github_link: test/integration/annotations.md
 ---
 
 DocBlock annotations help to declare context in your code. In addition to built-in [PHPUnit annotations], the Integration testing framework provides custom annotations described in this topic.
 
-### Quick overview
+### 快速概览
 
 The following annotations are available in integration tests:
 
@@ -18,8 +18,8 @@ Configuration Fixture|`@magentoConfigFixture`|`@magentoConfigFixture [<store_cod
 Database Isolation|`@magentoDbIsolation`|`@magentoDbIsolation enabled|disabled`|Enables or disables database isolation. Disabled by default, unless you are using `@magentoDataFixture`, in which case it is enabled by default. All data, required for a test, live during transaction only. Any test results won't be written in a database.
 Data Fixture|`@magentoDataFixture`|`@magentoDataFixture <script_filename>|<method_name>`|Points to a class or a method which creates testing entities (fixtures) for test execution.
 Application Area|`@magentoAppArea`|`@magentoAppArea adminhtml|frontend|global`|Configures test environment in the context of specified application area.
-Enable/Disable Cache|`@magentoCache`|`@magentoCache <type>|all enabled|disabled`|Enables or disables certain cache segment or all of them to prevent isolation problems.
-Register Components|`@magentoComponentsDir`|`@magentoComponentsDir <dir_path>`|Registers fixture components from specified directory (recursively). Unregisters the components after the test is finished.
+启用/禁用 Cache|`@magentoCache`|`@magentoCache <type>|all enabled|disabled`|Enables or disables certain cache segment or all of them to prevent isolation problems.
+Register 组件|`@magento组件Dir`|`@magento组件Dir <dir_path>`|Registers fixture 组件 from specified directory (recursively). Unregisters the 组件 after the test is finished.
 
 ### Applying annotations
 
@@ -28,7 +28,7 @@ The Magento-specific annotations for integration tests are applied in the follow
 1. `@magentoAppIsolation`
 1. `@magentoDbIsolation`
 1. `@magentoDataFixture`
-1. `@magentoComponentsDir`
+1. `@magento组件Dir`
 1. `@magentoAppArea`
 1. `@magentoCache`
 1. `@magentoConfigFixture`

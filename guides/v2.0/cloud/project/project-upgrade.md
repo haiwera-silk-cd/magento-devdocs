@@ -143,7 +143,7 @@ To resolve the error:
 
         git add -A && git commit -m "fixed deployment failure" && git push origin <branch name>
 
-#### Related topic
+#### 相关主题
 * [Composer]({{ page.baseurl }}/cloud/reference/cloud-composer.html)
 * [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
 * [Install optional sample data]({{ page.baseurl }}/cloud/howtos/sample-data.html)

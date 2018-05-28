@@ -47,7 +47,7 @@ If you're currently set for [生产模式]({{ page.baseurl }}/config-guide/boots
 #### Solution
 Don't install sample data in production mode. Switch to developer mode and clear some `var` directories and try again.
 
-Enter the following commands in the order shown as the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html):
+Enter the following commands in the order shown as the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html):
 
 	cd <your Magento install dir>
 	php bin/magento deploy:mode:set developer

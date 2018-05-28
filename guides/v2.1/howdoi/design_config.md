@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: Customize Design Configuration
-title: Customize Design Configuration
-menu_title: Customize Design Configuration
+subgroup: 自定义设计配置
+title: 自定义设计配置
+menu_title: 自定义设计配置
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -10,7 +10,7 @@ github_link: howdoi/design_config.md
 
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 This topic describes how to customize (add, delete, change) the configuration options available in {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} under **CONTENT** > **Design** > **Configuration**. These options define the various aspects of {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} design. In Magento 2.0.x and earlier these options were set under **STORES** > **Configuration** > **Design**. But starting from Magento 2.1.0 they were moved to the new location, and the configuration form was refactored.
 
@@ -26,7 +26,7 @@ For example, the default set of design options for the {% glossarytooltip ca5a9f
 
 <img src="{{ site.baseurl }}/common/images/design_conf2.png" alt="Design Configuration page">
 
-Both the grid and the configuration form are implemented using UI components.
+Both the grid and the configuration form are implemented using UI 组件.
 
 To change the grid view, you need to customize the grid configuration by adding your custom `design_config_listing.xml` in your {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 

@@ -13,7 +13,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 Breakpoints are used in stylesheets to set up the screen width at which the design changes, for example from the mobile to the desktop version. Themes provided with Magento implement a list of [default breakpoints]({{ page.baseurl }}/frontend-dev-guide/responsive-web-design/rwd_css.html#fedg_rwd_css_break). This topic describes how to add a custom breakpoint in your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. 
 
@@ -33,7 +33,7 @@ In your custom theme directory, add a `/web/css/source/variables.less` in one of
 
 In `variable.less`, add the variable for your new breakpoint.
 
-For example:
+例如:
 
     @your__breakpoint: 1280px;
 

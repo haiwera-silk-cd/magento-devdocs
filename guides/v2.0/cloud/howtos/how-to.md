@@ -17,7 +17,7 @@ Have suggestions? Open [an issue](https://github.com/magento/devdocs/issues){:ta
 
 Current topics:
 
-*	Install components, upgrade, update
+*	Install 组件, upgrade, update
 
 	*	[Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
 	*	[Test a Magento patch before deploying it]({{ page.baseurl }}/cloud/project/project-upgrade.html)

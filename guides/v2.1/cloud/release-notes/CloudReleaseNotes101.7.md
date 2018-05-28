@@ -52,7 +52,7 @@ In `magento-cloud-configuration` releases 101.7.3, 101.7.4, 101.7.5, and 101.7.6
 
 
 ## How to get `magento-cloud-configuration` release 101.7.x
-{{site.data.var.ece}} periodically provides patch releases in components like `magento-cloud-configuration`.
+{{site.data.var.ece}} periodically provides patch releases in 组件 like `magento-cloud-configuration`.
 
 To test and implement your {{site.data.var.ece}} upgrade, see [Test a Magento upgrade]({{ page.baseurl }}/cloud/project/project-upgrade.html).
 

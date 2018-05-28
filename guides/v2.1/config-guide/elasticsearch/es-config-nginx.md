@@ -34,15 +34,15 @@ This section discusses how to configure nginx as an *unsecure* proxy so that Mag
 
 See one of the following sections for more information:
 
-*	[Step 1: Specify additional configuration files in your global `nginx.conf`](#es-ws-secure-nginx-conf)
-*	[Step 2: Set up nginx as a proxy](#es-ws-secure-nginx-proxy)
+*	[步骤1. Specify additional configuration files in your global `nginx.conf`](#es-ws-secure-nginx-conf)
+*	[步骤2. Set up nginx as a proxy](#es-ws-secure-nginx-proxy)
 
-### Step 1: Specify additional configuration files in your global `nginx.conf` {#es-ws-secure-nginx-conf}
+### 步骤1. Specify additional configuration files in your global `nginx.conf` {#es-ws-secure-nginx-conf}
 Make sure your global `/etc/nginx/nginx.conf` contains the following line so it loads the other configuration files discussed in the following sections:
 
 	include /etc/nginx/conf.d/*.conf;
 
-### Step 2: Set up nginx as a proxy {#es-ws-secure-nginx-proxy}
+### 步骤2. Set up nginx as a proxy {#es-ws-secure-nginx-proxy}
 This section discusses how to specify who can access the {% glossarytooltip b14ef3d8-51fd-48fe-94df-ed069afb2cdc %}nginx{% endglossarytooltip %} server.
 
 1.	Use a text editor to create a new file `/etc/nginx/conf.d/magento_es_auth.conf` with the following contents:
@@ -94,12 +94,12 @@ Additional resources:
 
 See the following sections for more information:
 
-*	[Step 1: Create passwords](#es-ws-secure-nginx-pwd)
-*	[Step 2: Set up access to nginx](#es-ws-secure-nginx-access)
-*	[Step 3: Set up a restricted context for Elasticsearch](#es-ws-secure-nginx-context)
+*	[步骤1. Create passwords](#es-ws-secure-nginx-pwd)
+*	[步骤2. Set up access to nginx](#es-ws-secure-nginx-access)
+*	[步骤3. Set up a restricted context for Elasticsearch](#es-ws-secure-nginx-context)
 *	[Verify communication is secure](#es-ws-secure-verify)
 
-### Step 1: Create a password {#es-ws-secure-nginx-pwd}
+### 步骤1. Create a password {#es-ws-secure-nginx-pwd}
 We recommend you use the Apache `htpasswd` command to encode passwords for a user with access to Elasticsearch (named `magento_elasticsearch` in this example).
 
 To create a password:
@@ -134,7 +134,7 @@ To create a password:
 		htpasswd /etc/nginx/passwd/.<filename> <username>
 6.	Verify that the contents of `/etc/nginx/passwd` is correct.
 
-### Step 3: Set up access to nginx {#es-ws-secure-nginx-access}
+### 步骤3. Set up access to nginx {#es-ws-secure-nginx-access}
 This section discusses how to specify who can access the nginx server.
 
 <div class="bs-callout bs-callout-warning">
@@ -174,7 +174,7 @@ Use a text editor to modify either `/etc/nginx/conf.d/magento_es_auth.conf` (uns
 	<p>The Elasticsearch listen port shown in the preceding example are examples only. For security reasons, we recommend you use a non-default listen port for Elasticsearch.</p>
 </div>
 
-### Step 4: Set up a restricted context for Elasticsearch {#es-ws-secure-nginx-context}
+### 步骤4. Set up a restricted context for Elasticsearch {#es-ws-secure-nginx-context}
 This section discusses how to specify who can access the Elasticsearch server.
 
 1.	Enter the following command to create a new directory to store the authentication configuration:
@@ -199,5 +199,5 @@ This section discusses how to specify who can access the Elasticsearch server.
 
 {% include config/es-verify-proxy.md %}
 
-#### Next
+#### 下一步
 <a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>

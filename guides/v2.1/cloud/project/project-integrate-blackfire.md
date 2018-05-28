@@ -118,7 +118,7 @@ We recommend working in a branch and creating a snapshot prior to installing. If
 	magento-cloud snapshot:create -e <environment_ID>
 	```
 
-#### Next, modify the `.magento.app.yaml` file:
+#### 下一步, modify the `.magento.app.yaml` file:
 
 1.  Use a text editor to locate and edit `<project root dir>/.magento.app.yaml` in your branch.
 1.  Enter `- name: blackfire` in the `extensions` block under `runtime`.
@@ -148,7 +148,7 @@ We recommend working in a branch and creating a snapshot prior to installing. If
 Add project variables for Blackfire for the server ID and token. You can add these using the Magento Cloud CLI or the Project Web Interface. The following instructions walk through adding them using CLI commands.
 
 1.  Open a terminal and navigate to your {{site.data.var.ece}} project.
-1.  Copy the commands from step 3 on the Blackfire _Magento Cloud Integration_ page.
+1.  Copy the commands from 步骤3 on the Blackfire _Magento Cloud Integration_ page.
 1.  Paste and enter the commands in the Magento Cloud CLI. Since you are already in your project, remove the `--project='<Project ID>'` content from the command. The commands include the Project ID and Blackfire server ID and token, similar to the following:
 
     ```bash

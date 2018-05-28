@@ -40,7 +40,7 @@ You can 配置Magento应用 in any of the following ways:
 	*	[Logging]({{ page.baseurl }}/config-guide/log/log-intro.html)
 	*	[Database profiler]({{ page.baseurl }}/config-guide/db-profiler/db-profiler.html)
 
-*	Magento in production
+*	生产环境的Magento
 
 	*	[Deployment steps]({{ page.baseurl }}/config-guide/prod/prod_deploy.html)
 	*	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)

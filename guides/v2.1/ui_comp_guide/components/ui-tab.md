@@ -1,17 +1,17 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Tab component
-menu_title: Tab component
+group: UI_组件_guide
+subgroup: 组件
+title: 标签页组件
+menu_title: 标签页组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-tab.md
+github_link: ui_comp_guide/组件/ui-tab.md
 ---
 
 ## Overview
 
-The Tab component implements a tab content area.
+The 标签页组件 implements a tab content area.
 
-See the [管理面板用到的设计模式和库 (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the Tab component.
+See the [管理面板用到的设计模式和库 (Tabs)]({{ page.baseurl }}/pattern-library/containers/tabs/tabs.html) topic for information about the UI design patterns that can be implemented using the 标签页组件.
 
 ## Configuration options
 
@@ -30,7 +30,7 @@ Tab-specific options:
     <td><code>component</code></td>
     <td>The path to the component’s JS constructor, in terms of RequireJS.</td>
     <td>String</td>
-    <td><code>Magento_Ui/js/form/components/area</code></td>
+    <td><code>Magento_Ui/js/form/组件/area</code></td>
   </tr>
   <tr>
     <td><code>template</code></td>

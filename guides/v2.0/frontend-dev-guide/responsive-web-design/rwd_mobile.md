@@ -10,7 +10,7 @@ redirect_from: /guides/v1.0/frontend-dev-guide/responsive-web-design/rwd_mobile.
 functional_areas:
   - Frontend
 ---
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 The topic describes how to create a responsive mobile-specific {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} using the default Magento approaches. 
 
 <h2>Creating a mobile-specific theme</h2>

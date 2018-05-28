@@ -36,9 +36,9 @@ You can extend and override layouts in the `Magento\CompanyPayment\view\frontend
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directory contains extensible UI components:
+The following directory contains extensible UI 组件:
 
 * `Magento\CompanyPayment\view\frontend\ui_component` - company form
 

@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: Security
-title: Writing secure code
-menu_title: Writing secure code
+title: 编写安全的代码
+menu_title: 编写安全的代码
 menu_order: 2100
 version: 2.2
 github_link: ext-best-practices/security/writing-secure-code.md

@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: DateColumn component
-menu_title: DateColumn component
+group: UI_组件_guide
+subgroup: 组件
+title: 数据列组件
+menu_title: 数据列组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-datecolumn.md
+github_link: ui_comp_guide/组件/ui-datecolumn.md
 ---
 
 ## Overview
 
-The DateColumn component implements a table column that displays dates.
+The 数据列组件 implements a table column that displays dates.
 
 DateColumn сonstructor: [app/code/Magento/Ui/view/base/web/js/grid/columns/date.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/columns/date.js)
 

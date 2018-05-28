@@ -16,7 +16,7 @@ Added configuration info for [creating nginx virtual hosts](https://devdocs.mage
 Updated the Cloud build and deploy [environment variable](https://devdocs.magento.com/guides/v2.1/cloud/env/variables-intro.html) descriptions and samples.|2.1.x, 2.2.x, 2.3.x|Technical changes|May 08
 You must bypass Fastly when profiling with [Blackfire](https://devdocs.magento.com/guides/v2.2/cloud/project/project-integrate-blackfire.html) in your Cloud Production environment.|2.1.x, 2.2.x|Technical changes|May 07
 Added the [参考架构](https://devdocs.magento.com/guides/v2.2/performance-best-practices/reference-architecture.html) topic|2.2.x, 2.3.x|New topic|May 07
-Contributed to [Linking properties of UI components]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html).|2.x|Technical changes|May 07
+Contributed to [UIcomponents连接属性]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html).|2.x|Technical changes|May 07
 You must bypass Fastly when profiling with [Blackfire](https://devdocs.magento.com/guides/v2.2/cloud/project/project-integrate-blackfire.html) in your Cloud Production environment.|2.1.x, 2.2.x|Technical changes|May 07
 You can trigger a [redeploy]({{ page.baseurl }}/cloud/reference/cli-ref-topic.html) of your Cloud environment.|2.1.x, 2.2.x, 2.3.x|Technical changes|May 05
 Updated the example in [Example_logging database activity](https://devdocs.magento.com/guides/v2.2/config-guide/log/log-db.html)|2.2.x|Technical changes|May 04
@@ -50,7 +50,7 @@ Changed [CLI examples](http://devdocs.magento.com/guides/v2.2/config-guide/cli/c
 Removed the deprecated `--dry-run` CLI option from the [部署静态视图文件 topic](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html).|2.2.x|Updated|Apr 09
 Added a topic about [Metadata](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-2/metadata.html) to the MFTF Guide.|2.2.x, 2.3.x|New|Apr 05
 Removed a confusing and obsolete topic from the [新手上路任务](http://devdocs.magento.com/guides/v2.2/cloud/onboarding/onboarding-tasks.html) section of the Magento企业版(云支持版) guide.|2.x|Updated|Apr 04
-Updated the [2.2 Programming Best Practices](http://devdocs.magento.com/guides/v2.2/ext-best-practices/extension-coding/common-programming-bp.html) topic with information about using the `after` plugin.|2.2.x|Updated|Apr 03
+Updated the [2.2 最佳编程实践](http://devdocs.magento.com/guides/v2.2/ext-best-practices/extension-coding/common-programming-bp.html) topic with information about using the `after` plugin.|2.2.x|Updated|Apr 03
 Added the `WARM_UP_PAGES` variable for customizing the list of pages to use to pre-load the cache. Available in the new [部署后变量](http://devdocs.magento.com/guides/v2.1/cloud/env/variables-post-deploy.html) topic.|2.1.x, 2.2.x|New|Apr 02
 Added an example of pushing logs with syslog using the .magento.env.yaml file. See the new [日志处理]({{ page.baseurl }}/cloud/env/log-handlers.html) topic.|2.1.x, 2.2.x|New|Apr 02
 Added Elasticsearch 5.2 to the list of supported version in the [Magento企业版(云支持版)](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_services-elastic.html) guide.|2.2.x, 2.3.x|Updated|Apr 02
@@ -67,7 +67,7 @@ Description  | Versions applied to  | New or Updated | Date
 -------------|--------------|----------------------|--------
 Removed references to VPN connections from the [Magento企业版(云支持版) guide](http://devdocs.magento.com/guides/v2.2/cloud/basic-information/cloud-plans.html#vpn) because they are not currently supported.|2.x|Updated|Mar 30
 Updated references to Fastly IP addresses in the [Magento企业版(云支持版) guide](http://devdocs.magento.com/guides/v2.2/cloud/bk-cloud.html) with the list of preferred IP addresses provided by Fastly.|2.x|Updated|Mar 30
-Added a link to the Private Packagist documentation in the [打包组件](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/package/package_module.html) topic.|2.x|Updated|Mar 26
+Added a link to the Private Packagist documentation in the [打包components](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/package/package_module.html) topic.|2.x|Updated|Mar 26
 Added new options to `generate:tests` in [Robo commands](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-2/commands/robo.html#generate).|2.2.x, 2.3.x|Updated|Mar 21
 Added a cross reference about Redis to the [memcache](http://devdocs.magento.com/guides/v2.2/config-guide/memcache/memcache.html) topic.|2.x|Updated|Mar 21
 Added a [descriptive video](http://devdocs.magento.com/guides/v2.0/contributor-guide/contributing.html) showing how to keep your fork updated with the latest changes.|2.x|Updated|Mar 20
@@ -98,7 +98,7 @@ Updated the [DevDocs contributions](http://devdocs.magento.com/guides/v2.2/contr
 Formatting to improve consistency in the [配置手册](http://devdocs.magento.com/guides/v2.0/config-guide/bootstrap/magento-modes.html).||Updated|Feb 26
 Added upgrade path for Magento Cloud metapackage. | 2.1.x, 2.2.x | Updated | Feb 23
 Added reference and [examples](http://devdocs.magento.com/guides/v2.2/cloud/env/working-with-variables.html#redis) for two, new [environment variables](http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#deploy)—`CACHE_CONFIGURATION` and `SESSION_CONFIGURATION`—that help with customizing Redis storage and default caching configuration. | 2.1.x, 2.2.x | Updated | Feb 20
-Listed the `adminhtml` option in the [Observers best practices](http://devdocs.magento.com/guides/v2.0/ext-best-practices/extension-coding/observers-bp.html) topic.|2.x|Updated|Feb 09
+Listed the `adminhtml` option in the [观察者最佳实践](http://devdocs.magento.com/guides/v2.0/ext-best-practices/extension-coding/observers-bp.html) topic.|2.x|Updated|Feb 09
 The [MFTF-2 Guide](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html) has been added to Magento 2.2 documentation|2.2.x|Updated|Feb 09
 Learn how to customize and extend the acceptance functional tests using [Merging](http://devdocs.magento.com/guides/v2.3/magento-functional-testing-framework/release-2/merging.html) in the MFTF 2.|2.3 pre-release|New|Feb 07
 We added a [new troubleshooting topic](http://devdocs.magento.com/guides/v2.2/cloud/trouble/message-queues.html) to help customers resolve an issue with message queues.|2.2.x|New|Feb 07
@@ -118,7 +118,7 @@ You can now [manage build and deploy actions](http://devdocs.magento.com/guides/
 You can now unlock specific stuck cron jobs in Magento企业版(云支持版) with the [cron:unlock](http://devdocs.magento.com/guides/v2.2/cloud/trouble/reset-cron-jobs.html) command instead of stopping and re-launching all of them.|2.2.x|Updated|Jan 31
 The deployment process creates backup files for the configuration files. You can restore the configuration files using the [restore](http://devdocs.magento.com/guides/v2.2/cloud/trouble/restore-configuration-files.html) command.|2.2.x|Updated|Jan 31
 MFTF 1.0: Updated descriptions for the `before` and `after` attributes in [Actions](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-1/cest/actions.html)|2.2.x|Updated|Jan 23
-Advanced Reporting: added more details to [先决条件](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html)|2.2.x|Updated|Jan 22
+高级报表: added more details to [先决条件](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html)|2.2.x|Updated|Jan 22
 We updated the [quarterly contributors](http://devdocs.magento.com/guides/v2.2/contributor-guide/quarterly-contributors.html) page for Q4 2017.|2.x|Updated|Jan 18
 MFTF: Updated [actions](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/cest/actions.html) and added [Changelog](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/changelog.html)|2.2.x|Updated|Jan 12
 Added information about the index prefix when [configuring Elasticsearch](http://devdocs.magento.com/guides/v2.2/config-guide/elasticsearch/configure-magento.html), which is necessary when using a single Elasticsearch instance with multiple Magento installations, like Staging and Production environments.|2.1.x, 2.2.x|Updated|Jan 10
@@ -140,7 +140,7 @@ Added a new topic about setting up the [Bitbucket集成](http://devdocs.magento.
 You must prepend [environment variables](http://devdocs.magento.com/guides/v2.2/cloud/project/project-conf-files_magento-app.html#variables) with `env:` when using the Magento企业版(云支持版) Project Web Interface to override configuration settings.|2.x|Updated|Dec 14
 Advanced reporting: [Overview](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html), [Modules](http://devdocs.magento.com/guides/v2.2/advanced-reporting/modules.html), [Data collection](http://devdocs.magento.com/guides/v2.2/advanced-reporting/data-collection.html), [Report XML](http://devdocs.magento.com/guides/v2.2/advanced-reporting/report-xml.html)|2.2.x|New|Dec 13
 Added info about backward incompatible changes ([Open Source 2.1.10 - 2.1.11](http://devdocs.magento.com/guides/v2.1/release-notes/backward-incompatible-changes/open-source.html) and [Commerce 2.1.10-2.1.11](http://devdocs.magento.com/guides/v2.1/release-notes/backward-incompatible-changes/commerce.html); [Open Source 2.2.1 - 2.2.2](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html) and [Commerce 2.2.1-2.2.2](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html); [B2B](http://devdocs.magento.com/guides/v2.2/release-notes/changes/b2b_changes.html))|2.1.x, 2.2.x|Updated|Dec 13
-[Magento Functional Testing Framework Guide](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/introduction.html)|2.2.x|New|Dec 08
+[Magento功能测试框架手册](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/introduction.html)|2.2.x|New|Dec 08
 [即时购买模块](http://devdocs.magento.com/guides/v2.2/mrg/ce/instant-purchase/)|2.2.x|New|Dec 07
 Revised guidance on which environments are limited to 5-minute cron intervals in the Magento企业版(云支持版) guide. See [Configure cron settings in the Magento Admin](http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html#add-cron) for more information.|2.2.x|Updated|Dec 06
 Added a new topic to the Magento企业版(云支持版) guide about [configuring email and Slack notifications](http://devdocs.magento.com/guides/v2.2/cloud/env/setup-notifications.html) for build/deploy actions in an environment.|2.2.x|New|Dec 06
@@ -237,7 +237,7 @@ Added information for Fastly [set up](http://devdocs.magento.com/guides/v2.2/clo
 Added backward incompatible changes for 2.2.0 RC2.2 in [Open Source](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html) and [Commerce](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html)|2.2.x|Updated|Aug 28
 Added backward incompatible changes for 2.2.0 RC2.1 in [Open Source](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html) and [Commerce](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html)|2.2.x|Updated|Aug 22
 [Frontend Product Repository](http://devdocs.magento.com/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html)<br/>[Render prices on frontend with Ui component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/howto/price_rendering.html)<br/>[Added backward incompatible changes](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/index.html#recently-viewed-and-recently-compared-widgets)<br/>[Updated the list of REST endpoints](http://devdocs.magento.com/guides/v2.2/rest/list.html#catalog)|2.2.x|New and Updated|Aug 21
-[Rendering prices with UI Components](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/howto/price_rendering.html)<br/>[Frontend Product Repository](http://devdocs.magento.com/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html)|2.2.x|New|Aug 21
+[Rendering prices with UI components](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/howto/price_rendering.html)<br/>[Frontend Product Repository](http://devdocs.magento.com/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html)|2.2.x|New|Aug 21
 [Elasticsearch update](http://devdocs.magento.com/guides/v2.2/config-guide/elasticsearch/es-overview.html)|2.2.x|Updated|Aug 21
 Added backward incompatible changes for 2.2.0 RC2.0 in [Open Source](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/open-source.html) and [Commerce](http://devdocs.magento.com/guides/v2.2/release-notes/backward-incompatible-changes/commerce.html)|2.2.x|Updated|Aug 18
 Added [Composer-based installation instructions](http://devdocs.magento.com/guides/v2.2/release-notes/release-candidate/install.html) for 2.2.0 RC 2.0.|2.2.x|Updated|Aug 16
@@ -326,13 +326,13 @@ Description  | Versions applied to  | New or Updated | Date
 | [Go live]({{ page.baseurl }}/cloud/live/live.html){:target="_blank"} | 2.0, 2.1, 2.2 |  Updated | June 29  |
 | [Magento application environment variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html){:target="_blank"} | 2.0, 2.1, 2.2 |  Updated | June 27  |
 
-### B2B Developer Guide
+### B2B开发者文档
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [B2B Developer Guide](http://devdocs.magento.com/guides/v2.2/b2b/bk-b2b.html){:target="_blank"} | 2.2  |  New | June 23  |
+| [B2B开发者文档](http://devdocs.magento.com/guides/v2.2/b2b/bk-b2b.html){:target="_blank"} | 2.2  |  New | June 23  |
 
-### Frontend Developer Guide
+### 前端工程师手册
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
@@ -345,12 +345,12 @@ Description  | Versions applied to  | New or Updated | Date
 | [Additional tools for frontend developers](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/tools/tools_overview.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Using Grunt for Magento tasks](http://devdocs.magento.com/guides/v2.2/frontend-dev-guide/tools/using_grunt.html){:target="_blank"} | 2.2 |  New | June 23  |
 
-### UI Components Guide
+### UI 组件 Guide
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
 | [Using the new structure in UI components XML configuration](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/best-practices/semantic_config.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Magento custom Knockout.js bindings](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/concepts/knockout-bindings.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [Magento自定义Knockout.js绑定](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/concepts/knockout-bindings.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [UI components XML configuration structure](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/concepts/ui_comp_xmlconfig_structure.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Declare a custom UI component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/howto/new_component_declaration.html){:target="_blank"} | 2.2 |  New | June 23  |
 
@@ -358,7 +358,7 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Advanced Reporting modules](http://devdocs.magento.com/guides/v2.2/mrg/ce/Analytics/description.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [高级报表 modules](http://devdocs.magento.com/guides/v2.2/mrg/ce/Analytics/description.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [B2B modules](http://devdocs.magento.com/guides/v2.2/mrg/b2b/b2b-intro.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Magento_Signifyd模块](http://devdocs.magento.com/guides/v2.2/mrg/ee/Signifyd.html){:target="_blank"} | 2.2 |  New | June 23  |
 
@@ -366,18 +366,18 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Upgrade the Magento application and modules](http://devdocs.magento.com/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [升级Magento及其模块](http://devdocs.magento.com/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [命令行升级](http://devdocs.magento.com/guides/v2.2/comp-mgr/cli/cli-upgrade.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Run the Extension Manager](http://devdocs.magento.com/guides/v2.2/comp-mgr/extens-man/extensman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Run the Module Manager](http://devdocs.magento.com/guides/v2.2/comp-mgr/module-man/compman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [运行扩展管理器](http://devdocs.magento.com/guides/v2.2/comp-mgr/extens-man/extensman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [运行Magento模块管理器](http://devdocs.magento.com/guides/v2.2/comp-mgr/module-man/compman-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [先决条件](http://devdocs.magento.com/guides/v2.2/comp-mgr/prereq/prereq_compman.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [运行系统升级](http://devdocs.magento.com/guides/v2.2/comp-mgr/upgrader/upgrade-checklist.html){:target="_blank"} | 2.2 |  New | June 23  |
 
-### Magento payment provider gateway
+### Magento支付提供商网关
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Signifyd fraud protection](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [Signifyd欺诈保护](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### REST and SOAP References
 
@@ -410,15 +410,15 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [功能测试框架配置](http://devdocs.magento.com/guides/v2.2/mtf/configuration.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [功能测试框架中的测试集](http://devdocs.magento.com/guides/v2.2/mtf/features/test_suite.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Typified element](http://devdocs.magento.com/guides/v2.2/mtf/mtf_entities/mtf_typified-element.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [典型元素](http://devdocs.magento.com/guides/v2.2/mtf/mtf_entities/mtf_typified-element.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [快速开始，准备Magento应用](http://devdocs.magento.com/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_magento.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Extension Developer Best Practices
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Writing secure code](http://devdocs.magento.com/guides/v2.2/ext-best-practices/security/writing-secure-code.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Serialized to JSON data upgrade](http://devdocs.magento.com/guides/v2.2/ext-best-practices/tutorials/serialized-to-json-data-upgrade.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [编写安全的代码](http://devdocs.magento.com/guides/v2.2/ext-best-practices/security/writing-secure-code.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [序列化为JSON数据升级](http://devdocs.magento.com/guides/v2.2/ext-best-practices/tutorials/serialized-to-json-data-upgrade.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### js开发者手册
 
@@ -430,16 +430,16 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Customize the list of shipping methods](http://devdocs.magento.com/guides/v2.2/howdoi/checkout/checkout_shipping_methods.html){:target="_blank"} | 2.2 |  New | June 23  |
+| [自定义物流方式列表](http://devdocs.magento.com/guides/v2.2/howdoi/checkout/checkout_shipping_methods.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [部署期间清空目录](http://devdocs.magento.com/guides/v2.2/howdoi/php/php_clear-dirs.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [Add custom fields that influence other Checkout fields](http://devdocs.magento.com/guides/v2.1/howdoi/checkout/checkout_custom_checkbox.html){:target="_blank"} | 2.0, 2.1  |  New | June 8  |
+| [添加自定义影响其它输入的输入项](http://devdocs.magento.com/guides/v2.1/howdoi/checkout/checkout_custom_checkbox.html){:target="_blank"} | 2.0, 2.1  |  New | June 8  |
 | [JavaScript unit testing with Jasmine](http://devdocs.magento.com/guides/v2.2/test/js/jasmine.html){:target="_blank"} | 2.2 |  New | June 23  |
 {% endcollapsibleh2 %}
 
 {% collapsibleh2 May 2017 %}
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [Magento custom Knockout.js bindings](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html){:target="_blank"} | 2.1  |  New | May 25  |
+| [Magento自定义Knockout.js绑定](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html){:target="_blank"} | 2.1  |  New | May 25  |
 
 {% endcollapsibleh2 %}
 
@@ -451,7 +451,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [安装第三方前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-install.html){:target="_blank"} | 2.x  |  New | Apr 27  |
 | [卸载前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.x  |  New | Apr 27  |
 | Payments integrations: [response validators]({{ page.gdeurl }}payments-integrations/payment-gateway/response-validator.html){:target="_blank"} and [payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html){:target="_blank"}| 2.0, 2.1.x | Updated | Apr 27  |
-| [Technical guidelines for working with Events]({{ page.baseurl }}/coding-standards/technical-guidelines/technical-guidelines.html#events){:target="_blank"} | 2.1.x |  New | Apr 19  |
+| [技术指南 for working with Events]({{ page.baseurl }}/coding-standards/technical-guidelines/technical-guidelines.html#events){:target="_blank"} | 2.1.x |  New | Apr 19  |
 | [Migration: Follow-up after running the 数据迁移工具]({{ page.baseurl }}/migration/migration-migrate-follow-up.html){:target="_blank"} | 2.x  |  Updated | Apr 14  |
 
 {% endcollapsibleh2 %}
@@ -514,7 +514,7 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [Asynchronous module definition and RequireJS concepts]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html){:target="_blank"} | 2.1.x | New | Jan 25 |
 | [Added information about the RequireJS library]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html){:target="_blank"} | 2.x | Updated | Jan 26 |
-| [Data Migration Guide troubleshooting]({{ page.baseurl }}/migration/migration-troubleshooting.html){:target="_blank"}  | 2.x  | New  |  Jan 20 |
+| [数据迁移 Guide troubleshooting]({{ page.baseurl }}/migration/migration-troubleshooting.html){:target="_blank"}  | 2.x  | New  |  Jan 20 |
 | [Updated `@deprecated` tag and added requirements for `@inheritdoc`]({{ page.baseurl }}/coding-standards/docblock-standard-general.html){:target="_blank"}  |  2.x | Updated  |  Jan 20 |
 | [How to install and use Magento DevBox (easy developer installation)]({{ page.baseurl }}/install-gde/docker/docker-over.html){:target="_blank"}  | 2.x  | New  | Jan 19  |
 |  [Functional Testing Framework isolation management tutorial]({{ page.baseurl }}/mtf/features/isolation.html){:target="_blank"} | 2.x  | New  | Jan 18  |
@@ -535,7 +535,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [Magento Enterprise Edition (EE) 2.1.3 Release Notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.3EE.html){:target="_blank"}   | 2.1.3  | New  | Dec 16  |
 | [Magento EE 2.0.11 Release Notes]({{ site.gdeurl }}release-notes/ReleaseNotes2.0.11EE.html){:target="_blank"}   |  2.0.11  |  New | Dec 16  |
 | [Configure the Magento functional testing framework]({{ page.baseurl }}/mtf/configuration.html){:target="_blank"}   | 2.x | New  | Dec 16  |
-| [Add custom integrations and vault payments to the Magento payment provider gateway]({{ page.baseurl }}/payments-integrations/bk-payments-integrations.html){:target="_blank"}  |  2.x |  New | Dec 9 |
+| [Add custom integrations and vault payments to the Magento支付提供商网关]({{ page.baseurl }}/payments-integrations/bk-payments-integrations.html){:target="_blank"}  |  2.x |  New | Dec 9 |
 
 {% endcollapsibleh2 %}
 
@@ -588,7 +588,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [Magento EE 2.0.10 release notes]({{ site.gdeurl }}release-notes/ReleaseNotes2.0.10EE.html){:target="_blank"} | 2.0.x  | New| Oct 14 |
 | [Magento CE 2.1.2 release notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.2CE.html){:target="_blank"} | 2.1.x  | New| Oct 14 |
 | [Magento EE 2.1.2 release notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.2EE.html){:target="_blank"}  | 2.1.x  | New| Oct 14 |
-| [Proposed outline for evolving UI Components guide]({{ site.gdeurl21 }}ui_comp_guide/ui_comp_outline_proposed.html){:target="_blank"} |2.1.x| New  |  Oct 14 |
+| [Proposed outline for evolving UI components guide]({{ site.gdeurl21 }}ui_comp_guide/ui_comp_outline_proposed.html){:target="_blank"} |2.1.x| New  |  Oct 14 |
 | [Preventing cache poisoning]({{ page.baseurl }}/config-guide/secy/secy-headers.html){:target="_blank"}  | See topic  |New|  Oct 14 |
 | [Updated system requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html){:target="_blank"} | 2.x  |Updated| Oct 14 |
 | [JSON responses added by Tim Reynolds]({{ site.m1xgdeurl }}api/rest/Resources/resource_customer_addresses.html){:target="_blank"}  |  1.x |Updated| Oct 14 |
@@ -602,7 +602,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [MECE add more information about project directory structure]({{ page.baseurl }}/cloud/access-acct/first-time-setup_dir-structure.html){:target="_blank"}  | 2.x  | Updated  |  Oct 7 |
 | [MECE completely revise new environment setup]({{ page.baseurl }}/cloud/before/before-setup-env-1_get-start.html){:target="_blank"} | 2.x  |  Updated | Oct 7 |
 | [MECE responsibilities of the account owner]({{ page.baseurl }}/cloud/before/before-project-owner.html){:target="_blank"}  | 2.x  |  New |  Oct 7 |
-| [MECE Magento file system owner for local development]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html){:target="_blank"}| 2.x  | New  | Oct 7 |
+| [MECE Magento文件系统所有者 for local development]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html){:target="_blank"}| 2.x  | New  | Oct 7 |
 | [MECE setting MySQL `auto_increment_increment=3`]({{ page.baseurl }}/cloud/before/before-workspace-php.html){:target="_blank"}  |  2.x | New  | Oct 7 |
 | [MECE moving from integration to staging and production]({{ page.baseurl }}/cloud/live/stage-prod-over.html){:target="_blank"} (see also associated topics)  | 2.x  |  New | Oct 7 |
 | [Added info about using tokens in authentication requests]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html){:target="_blank"}| 2.x | Updated | Oct 7 |

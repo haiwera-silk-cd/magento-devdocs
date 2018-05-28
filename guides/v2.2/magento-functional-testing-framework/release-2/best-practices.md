@@ -77,7 +77,7 @@ Use an upper case first letter for:
  
 Use a lower case first letter for:
  - Data keys. Example: `<data key="firstName">`.
- - Element names. Examples: `<element name="confirmDeleteButton"/>`.
+ - Element names. 例如: `<element name="confirmDeleteButton"/>`.
  
 ## Page object
 

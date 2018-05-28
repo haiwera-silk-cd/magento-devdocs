@@ -1,6 +1,6 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 安全概述
 menu_title: Security
 menu_order:
@@ -34,6 +34,6 @@ Magento safeguards your store from clickjacking attacks by using an X-Frame-Opti
 
 A simple {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} (like `admin`或`backend`) makes it easy to target attacks on specific locations using automated password guessing. To prevent against this type of attack, Magento by default creates a random Admin URI when you install the product. The CLI is provided so that you can  see the password if you forget it. You can also use the CLI to change this URI.  Although the use of a non-default admin URL will not secure the site, its use will help prevent large-scale automated attacks. See <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a> in 配置手册 for more information.
 
-## Related topics
+## 相关主题
 
 <a href="{{ page.baseurl }}/config-guide/bk-config-guide.html">配置手册</a>

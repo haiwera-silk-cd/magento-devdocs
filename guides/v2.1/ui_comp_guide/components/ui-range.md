@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Range component
-menu_title: Range component
+group: UI_组件_guide
+subgroup: 组件
+title: 范围筛选组件
+menu_title: 范围筛选组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-range.md
+github_link: ui_comp_guide/组件/ui-range.md
 ---
 
 ## Overview
 
-The Range component implements the range for filtering rows in a grid. Visually, this component represents two input fields of `date`或`text` type, for entering the "from" and "to" range limits.
+The 范围筛选组件 implements the range for filtering rows in a grid. Visually, this component represents two input fields of `date`或`text` type, for entering the "from" and "to" range limits.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/filters/range.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/filters/range.js)
 

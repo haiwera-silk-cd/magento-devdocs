@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: Sticky Header Component
 menu_title: Sticky Header Component
 menu_node:
 menu_order: 11
 version: 2.0
-github_link: ui-components/ui-secondary-header.md
+github_link: ui-组件/ui-secondary-header.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-header.html
 ---
 
@@ -95,20 +95,20 @@ The sticky header component consists of the following elements:
 	
 
 <h2 id="sticky_dependencies">Dependencies</h2>
-The sticky header component depends on the following components:
+The sticky header component depends on the following 组件:
 
  - Listing
  - Toolbar
 
 
-It also works both with and without the following components, preserving their functionality:
+It also works both with and without the following 组件, preserving their functionality:
 
-- Listing child components:
+- Listing child 组件:
 	- Dnd
 	- <a href="{{ page.baseurl }}/ui-library/ui-secondary-resize.html">Resize</a>
 	- Bulk Edit
 	- <a href="{{ page.baseurl }}/ui-library/ui-secondary-resize.html">Inline Edit</a>
-- Toolbar child components:
+- Toolbar child 组件:
 	- <a href="{{ page.baseurl }}/ui-library/ui-secondary-pagination.html">Pagination</a>
 	- <a href="{{ page.baseurl }}/ui-library/ui-secondary-filter.html">Filter</a>
 	- <a href="{{ page.baseurl }}/ui-library/ui-secondary-column.html">Column</a>

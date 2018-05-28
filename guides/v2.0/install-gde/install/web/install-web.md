@@ -27,4 +27,4 @@ functional_areas:
 {% include install/web/install-web.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/web/install-web_1-readiness.html">Step 1: Readiness Check</a>
+<a href="{{ page.baseurl }}/install-gde/install/web/install-web_1-readiness.html">步骤1. Readiness Check</a>

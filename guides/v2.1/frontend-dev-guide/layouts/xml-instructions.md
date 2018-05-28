@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2 id="fedg_layout_xml-instruc_overview">What's in this topic</h2>
+<h2 id="fedg_layout_xml-instruc_overview">这里有什么</h2>
 
 
 Changing {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files is one of the two possible ways to customize page layout in Magento (the second way is altering templates). 

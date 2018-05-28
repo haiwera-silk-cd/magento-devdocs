@@ -17,7 +17,7 @@ You can specify needed changes to an existing file and merge them to produce a m
 
 Merging operates at the XML tag level, triggered by our parser when there are two (or more) entities with the same name. Your update (XML node with changes) must have the same attribute `name` as its base node (target object to be changed).
 
-For example:
+例如:
 * All tests with `<test name="SampleTest>` will be merged into one.
 * All pages with `<page name="SamplePage>` will be merged into one.
 * All sections with `<section name="SampleAction">` will be merged into one.

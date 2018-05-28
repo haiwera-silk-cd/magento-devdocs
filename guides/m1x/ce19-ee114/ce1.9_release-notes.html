@@ -54,7 +54,7 @@
 </ul></div>
 
 <h2 id="upgrade">Important Upgrade Information</h2>
-<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: Use Magento Open Source 1.9.3.0 or later for <em>all new Magento Open Source installations and upgrades</em> to get the latest fixes, features, and security updates.</span></div>
+<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: Use Magento Open Source 1.9.3.0或更新 for <em>all new Magento Open Source installations and upgrades</em> to get the latest fixes, features, and security updates.</span></div>
 
 
 <h2 id="ce19-1938">Magento Open Source 1.9.3.8 Release Notes</h2>
@@ -323,7 +323,7 @@ skin/adminhtml/default/default/media/uploaderSingle.swf</pre>
 <h3 id="ce19-1930back">Backward-Incompatible Changes</h3>
 <p>The following backward-incompatible changes were made in this release:</p>
 <p><code>Mage_Adminhtml_Block_Cms_Wysiwyg_Images_Content_Uploader</code>: Parent class was removed.</p>
-<p><code>Mage_Uploader_Model_Config_Abstract</code>: Overrides the magic method <code>__call</code> and its behavior can be inconsistent. For example: </p>
+<p><code>Mage_Uploader_Model_Config_Abstract</code>: Overrides the magic method <code>__call</code> and its behavior can be inconsistent. 例如: </p>
 
 <pre>->setData('underscore_key', 1)
 ->getUnderscoreKey() //null</pre>
@@ -601,7 +601,7 @@ To enable cross-border trade in the Admin Panel, click <strong>System</strong> >
 <ul class="level3"><li>No <strong>Change</strong> link displays next to a customer's shipping address on the PayPal site.</li>
 <li>In the event of a shipping address mismatch between Magento and PayPal, the following message displays when the customer attempts to pay using PayPal:<br />
 <pre>The address you entered on <em>store-name</em> is different than your PayPal preferred shipping address. 
-Return to <em>store-name</em> if you'd like to change the shipping address</pre>
+返回到 <em>store-name</em> if you'd like to change the shipping address</pre>
 The user can select the <strong>Use as preferred shipping address</strong> check box to instruct PayPal to change their shipping address.</li>
 </li></ul>
 </li></ul>
@@ -641,7 +641,7 @@ To enable product price display including tax: <strong>System</strong> > <strong
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-4753" target="_blank">MPERF-4753</a>  -->Resolved issues with applying a 100% discount to an order.</li>
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-3657" target="_blank">MPERF-3657</a>  -->Customers are no longer redirected to the home page when they have permission to view a category.</li>
 <li><!-- <a href="https://jira.corp.x.com/browse/MPERF-1360" target="_blank">MPERF-1360</a>  -->Discount amount displays correctly for products with custom options.</li>
-<li><!-- <a href="https://jira.corp.x.com/browse/MPERF-5232" target="_blank">MPERF-5232</a>  -->Issues with placing PayPal Payments Advanced or PayPal Payflow Link orders using Internet Explorer 9 have been resolved.</li>
+<li><!-- <a href="https://jira.corp.x.com/browse/MPERF-5232" target="_blank">MPERF-5232</a>  -->Issues with placing PayPal Payments Advanced or PayPal Payflow Link orders using IE9 have been resolved.</li>
 </ul>
 
 <h4 id="ce19-1900fixes-price-rules">Promotional Price Rule Fixes</h4>

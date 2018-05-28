@@ -1,5 +1,5 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
 title: uiRegistry
 menu_title: uiRegistry
@@ -26,7 +26,7 @@ Now we have `uiRegistry` instance in the `registry` variable. We can use it to g
 var component = registry.get('%componentName%');
 {%endhighlight%}
 
-For example:
+例如:
 
 {%highlight js%}
 // Admin > Products > Catalog > Add Product

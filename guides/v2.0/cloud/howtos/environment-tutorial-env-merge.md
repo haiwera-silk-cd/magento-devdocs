@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 ## Merge an environment {#tut-env-merge}
-This tutorial shows how to merge changes from an environment to its parent, which in this case is the master branch. You can, for example, merge code updates, new components, changes to themes, and so on.
+This tutorial shows how to merge changes from an environment to its parent, which in this case is the master branch. You can, for example, merge code updates, new 组件, changes to themes, and so on.
 
 You can then optionally delete the environment.
 
@@ -107,5 +107,5 @@ Wait for the environment to delete.
   <p>To activate the environment later, use the <code>magento-cloud environment:activate</code> command.</p>
 </div>
 
-#### Related topic
+#### 相关主题
 [Set Magento environment variables]({{ page.baseurl }}/cloud/env/set-variables.html)

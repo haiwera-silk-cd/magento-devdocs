@@ -3,7 +3,7 @@
 To apply a patch:
 
 1.	Copy the patch file to your Magento installation directory.
-2.	As the Magento file system owner, use one of the following commands to extract it:
+2.	As the Magento文件系统所有者, use one of the following commands to extract it:
 
 <table>
 <tbody>

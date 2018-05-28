@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 20_REST
-title: Use cURL to run the request
-menu_title: Use cURL to run the request
+title: 使用curl执行这个请求
+menu_title: 使用curl执行这个请求
 menu_order: 2
 version: 2.1
 github_link: get-started/gs-curl.md
@@ -17,7 +17,7 @@ functional_areas:
 </p>
 
 <p>To use cURL to run your REST web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} call, use the cURL command syntax to construct the cURL command.</p>
-<p>To create the endpoint in the call, append the REST URI that you constructed in <a href="{{ page.baseurl }}/get-started/gs-web-api-request.html">Step 3. Construct a request</a> to this URL:</p>
+<p>To create the endpoint in the call, append the REST URI that you constructed in <a href="{{ page.baseurl }}/get-started/gs-web-api-request.html">步骤3. 构造一个请求</a> to this URL:</p>
 <pre>https://&lt;MAGENTO_HOST_OR_IP&gt;/&lt;MAGENTO_BASE_INSTALL_DIR&gt;/rest/</pre>
 <p>To pass the customer data object in the POST call payload, specify a JSON or {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} request body on the call.</p>
 <p>For a complete list of cURL command options, see <a href="http://curl.haxx.se/docs/manpage.html">curl.1 the man page</a>.</p>
@@ -101,5 +101,5 @@ functional_areas:
 
 <h2>Next step</h2>
 <ul>
-   <li><a href="{{ page.baseurl }}/get-started/gs-web-api-response.html">Status codes and responses</a></li>
+   <li><a href="{{ page.baseurl }}/get-started/gs-web-api-response.html">响应和状态码</a></li>
 </ul>

@@ -126,7 +126,7 @@ Within the 日历小工具, the following will apply to time fields:
 
 * 	Tabbing out completes the entry, removing focus from the field
 
-* 	For date fields, user have the ability to enter any formats besides DD MMM YYY, and the system should automatically correct the date format. (For example: user enter 10/3/2013, and the system will make a guess and reformat to 3 OCT 2013 once on keystroke up.) 
+* 	For date fields, user have the ability to enter any formats besides DD MMM YYY, and the system should automatically correct the date format. (例如: user enter 10/3/2013, and the system will make a guess and reformat to 3 OCT 2013 once on keystroke up.) 
 
 * 	Date format input accepted:
 	* 	MM/DD/YYYY **

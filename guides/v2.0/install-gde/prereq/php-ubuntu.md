@@ -154,6 +154,6 @@ If PHP is *not* installed, see one of the following sections:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

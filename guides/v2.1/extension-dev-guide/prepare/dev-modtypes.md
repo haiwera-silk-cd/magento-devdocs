@@ -18,7 +18,7 @@ Each component type has a different [directory structure][directory-structure] a
 
 {% include php-dev/composer-types.md %}
 
-#### Next
+#### 下一步
 [关于组件的文件结构][component-file-structure]
 
 [directory-structure]: {{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html

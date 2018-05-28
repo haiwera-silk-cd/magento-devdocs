@@ -13,7 +13,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 1: Readiness check
+## 步骤1. Readiness check
 The readiness check makes sure your server and environment are set up correctly for installing, uninstalling, or updating. In the {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} of errors, you can consult troubleshooting suggestions in this guide.
 
 To start, click either **Start Readiness Check** or **Next**. A sample follows.
@@ -24,5 +24,5 @@ After the readiness check completes, see one of the following:
 
 *	[Readiness check success]({{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-success.html)
 *	[Readiness check failure]({{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-fail.html)
-*	[Readiness check with multiple extension updates]({{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-multi.html)
+*	[Readiness check with multiple 扩展更新s]({{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-multi.html)
 

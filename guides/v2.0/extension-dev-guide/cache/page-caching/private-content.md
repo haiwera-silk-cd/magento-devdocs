@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 09_页面缓存
-title: Private content
-menu_title: Private content
+title: 隐私内容
+menu_title: 隐私内容
 menu_order: 18
 menu_node:
 version: 2.0
@@ -109,14 +109,14 @@ The following example adds comments to [app/code/Magento/Catalog/etc/frontend/se
 Use only HTTP POST or PUT methods to change state (e.g., adding to a shopping cart, adding to a wishlist, etc.) and don't expect to see caching on these methods. Using GET or HEAD methods might trigger caching and prevent updates to private content. For more information about caching, see [RFC-2616 section 13](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html) {:target="&#95;blank"}
 </div>
 
-Other examples:
+Other 例如:
 
 -   [Checkout]({{ site.mage2000url }}app/code/Magento/Checkout/etc/frontend/sections.xml){:target="&#95;blank"}
 
 -   [Customer]({{ site.mage2000url }}app/code/Magento/Customer/etc/frontend/sections.xml){:target="&#95;blank"}
 
 ## Version private content {#config-priv-vers}
-Private content, which is stored in the browser local storage, uses the `private_content_version` cookie to store the version.
+隐私内容, which is stored in the browser local storage, uses the `private_content_version` cookie to store the version.
 
 Versioning works as follows:
 

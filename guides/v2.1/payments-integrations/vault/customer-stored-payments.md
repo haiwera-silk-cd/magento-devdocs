@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Display the stored information
-menu_title: Display the stored information
+title: 显示存储的信息
+menu_title: 显示存储的信息
 menu_order: 20
 version: 2.1
 github_link: payments-integrations/vault/customer-stored-payments.md

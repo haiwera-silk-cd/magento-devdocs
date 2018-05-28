@@ -55,6 +55,6 @@ If module A replaces module B, it needs to be able to do so in such a way that o
 
 ![Module relationship scenarios: A replaces B]({{ site.magentourl }}/common/images/archi_fourth_relate.png)
 
-## Related topics {#m2arch-module-related}
+## 相关主题 {#m2arch-module-related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>

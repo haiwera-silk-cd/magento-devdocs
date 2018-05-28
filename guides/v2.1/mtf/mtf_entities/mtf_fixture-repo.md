@@ -510,7 +510,7 @@ There are two ways to paste credentials:
 - **Using path**. If a field in a repository has a `name` that matches field `path` in `credentials.xml`, then the value of this field will be substituted for the value from `credential.xml` during the test.
 - **Using placeholder**. If a field in a repository has value wrapped in `% %` that matches the value of the `replace` field attribute in `credentials.xml`, then the value of this field will be substituted for the value from `credential.xml` during the test.
 
-### Example with substitution by <code>path</code> {#mtf_repo_credent_path}
+### 示例 with substitution by <code>path</code> {#mtf_repo_credent_path}
 
 Assume, that you have the following credentials in `credentials.xml`.
 
@@ -556,7 +556,7 @@ In the repository these fields can be defined as:
 
 During the test run these fields are filled with values from `credentials.xml`.
 
-### Example with replacement by <code>replace</code> {#mtf_repo_credent_replace}
+### 示例 with replacement by <code>replace</code> {#mtf_repo_credent_replace}
 
 For example, you have the following credentials in `credentials.xml`:
 
@@ -599,7 +599,7 @@ When the test is run, credentials from `credentials.xml` are transferred to the 
 
 You can use `%isolation%` placeholder where you want to put a random value. It is useful when you need a unique value, for example `sku`, that has to be unique each test cycle.
 
-Some examples:
+Some 例如:
 
 {%highlight xml%}
 <field name="title" xsi:type="string">Cms Page Link %isolation%</field>

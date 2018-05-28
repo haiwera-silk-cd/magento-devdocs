@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: Theme development
-title: Theme development
-menu_title: Theme development
+subgroup: 主题开发
+title: 主题开发
+menu_title: 主题开发
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -12,7 +12,7 @@ functional_areas:
   - Theme
 ---
 
-## Theme development
+## 主题开发
 - [Add a theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html)
 - [Apply and configure a theme in Admin]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html)
 - [Configure product images]({{ page.baseurl }}/frontend-dev-guide/themes/theme-images.html)

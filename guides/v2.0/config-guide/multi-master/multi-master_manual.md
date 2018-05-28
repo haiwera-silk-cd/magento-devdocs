@@ -15,7 +15,7 @@ functional_areas:
 ---
 
 ## Overview of manual split database configuration {#config-ee-multidb-manual-over}
-If the Magento application is already in production or if you've already installed custom code or components, you might need to configure split databases manually. Before continuing, contact Magento Support to see if this is necessary in your case.
+If the Magento application is already in production or if you've already installed custom code or 组件, you might need to configure split databases manually. Before continuing, contact Magento Support to see if this is necessary in your case.
 
 Manually splitting databases involves:
 
@@ -52,7 +52,7 @@ We strongly recommend you back up your current database and file system so you c
 
 To back up your system:
 
-1.  Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
+1.  Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
 2.  Enter the following commands:
 
         magento setup:backup --code --media --db
@@ -111,7 +111,7 @@ Sales database table names start with:
   <p>This section contains scripts with specific database table names. If you've performed customizations or if you want to see a complete list of tables before you perform actions on them, see <a href="#split-db-ref">Reference scripts</a>.</p>
 </div>
 
-For more information, see:
+更多信息请参考:
 
 *   [Create sales database SQL scripts](#config-ee-multidb-sql-oms)
 *   [Back up sales data](#sales-backup)
@@ -416,7 +416,7 @@ The final step in manually splitting databases is to add connection and resource
 
 {% collapsible Click to update the Magento deployment configuration %}
 
-1.  Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.  Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.  Back up your deployment configuration:
 
         cp <your Magento install dir>/app/etc/env.php <your Magento install dir>/app/etc/env.php.orig

@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-## Before you begin
+## 在开始之前
 {% include install/before-you-begin-web.html %}
 
 {% include install/web/install-web_1-readiness.md %}

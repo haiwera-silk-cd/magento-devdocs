@@ -174,7 +174,7 @@ You can also connect to a database using the TLS protocol (i.e., using public/pr
 -   `ssl_cert`
 -   `ssl_key`
 
-For example:
+例如:
 
 {% highlight xml %}
 <source>

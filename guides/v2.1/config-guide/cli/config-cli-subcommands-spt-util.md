@@ -2,7 +2,7 @@
 group: config-guide
 subgroup: 04_CLI
 title: 运行Magento支持工具
-menu_title: 运行Magento支持工具 (Magento Commerce only)
+menu_title: 运行Magento支持工具 (仅企业版适用)
 menu_node:
 menu_order: 900
 version: 2.1

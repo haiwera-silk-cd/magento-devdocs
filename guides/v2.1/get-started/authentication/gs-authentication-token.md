@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 40_Authentication
-title: Token-based authentication
-menu_title: Token-based authentication
+title: 基于访问令牌的认证
+menu_title: 基于访问令牌的认证
 menu_order: 1
 version: 2.1
 github_link: get-started/authentication/gs-authentication-token.md
@@ -24,7 +24,7 @@ Customer | Magento grants access to resources with the `anonymous`或`self` perm
 
 ## Integration tokens
 
-When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html), but token-based authentication requires only the access token.
+When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [基于OAuth的认证]({{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html), but token-based authentication requires only the access token.
 
 Use the following steps to generate an access token:
 
@@ -91,7 +91,7 @@ A access token request contains three basic elements:
    </tr>
 </table>
 
-#### Examples {#token-example}
+#### 示例 {#token-example}
 
 The following image shows a token request for the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}admin{% endglossarytooltip %} account using a REST client:
 
@@ -113,7 +113,7 @@ curl -X POST "http://magento.vg/index.php/rest/V1/integration/customer/token" \
      -d "<login><username>customer1@example.com</username><password>customer1pw</password></login>"
 ```
 
-For more information about the `curl` command, see [Use cURL to run the request]({{ page.baseurl }}/get-started/gs-curl.html)
+For more information about the `curl` command, see [使用curl执行这个请求]({{ page.baseurl }}/get-started/gs-curl.html)
 
 ## Authentication token response {#auth-response}
 
@@ -140,8 +140,8 @@ Customers can access only resources with `self` permissions.
 For example, to make a web API call with a customer token:
 `curl -X GET "http://magento.ll/index.php/rest/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
 
-<h2>Related topics</h2>
-[Construct a request]({{ page.baseurl }}/get-started/gs-web-api-request.html)
+<h2>相关主题</h2>
+[构造一个请求]({{ page.baseurl }}/get-started/gs-web-api-request.html)
 
 [将服务配置成web API]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html)
 

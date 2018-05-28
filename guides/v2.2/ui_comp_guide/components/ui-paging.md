@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Paging component
-menu_title: Paging component
+group: UI_组件_guide
+subgroup: 组件
+title: 分页组件
+menu_title: 分页组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-paging.md
+github_link: ui_comp_guide/组件/ui-paging.md
 ---
 
 ## Overview
 
-The Paging component implements pagination in grids implemented using [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html). It also creates an instance of the child Sizes component which allows to define the number of records displayed in the associated table.
+The 分页components implements pagination in grids implemented using [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html). It also creates an instance of the child 表格显示数量控制组件 which allows to define the number of records displayed in the associated table.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/paging/paging.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/paging/paging.js)
 

@@ -15,7 +15,7 @@ functional_areas:
 This topic discusses the ways you can:
 
 *	Upgrade (that is, *patch*) the Magento software from version 2.0.0 to 2.0.1, for example
-*	Update *components*, which can be any of the following:
+*	Update *组件*, which can be any of the following:
 
 	*	Modules (extend Magento capabilities)
 	*	Themes (change the look and feel of your storefront and Admin)
@@ -44,10 +44,10 @@ The way you upgrade (that is, patch) the Magento application depends on how you 
     	<li><a href="http://docs.magento.com/m2/ce/user_guide/magento/magento-account-share.html" target="_blank">Shared account</a> authentication keys</li></ul>   
 </div>
 
-<h2>Update components</h2>
-To update Magento components, use the <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-start.html">Component Manager</a>.
+<h2>Update 组件</h2>
+To update Magentocomponents, use the <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-start.html">Component Manager</a>.
 
-### Next step
+### 下一步
 Complete the tasks discussed in <a href="{{ page.baseurl }}/comp-mgr/prereq/prereq_compman.html">先决条件</a>.
 
 

@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: LESS coding standard
+title: LESS编码规范
 landing-page: Coding standards
-menu_title: LESS coding standard
+menu_title: LESS编码规范
 menu_order: 8
 version: 2.1
 github_link: coding-standards/code-standard-less.md
@@ -259,7 +259,7 @@ First, second and third level comments should have two spaces after "//". Inline
 
 #### Types
 
-Magento supports the two most recent versions of all major browsers. Internet Explorer is supported from version 9 and later.
+Magento supports the two most recent versions of all major browsers. IEis supported from version 9 and later.
 
 You can use almost all CSS3 selectors: descendants, attributes, pseudo classes, structural, pseudo elements, and so on.
 

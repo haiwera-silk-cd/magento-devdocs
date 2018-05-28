@@ -7,10 +7,10 @@ github_link: install-gde/tutorials/change-docroot-to-pub.md
 
 If you installed Magento in Apache's default docroot `/var/www/html`, the Magento file system is vulnerable because it's accessible from a browser. This topic describes how to change the Apache [docroot]({{ page.baseurl }}/install-gde/basics/basics_docroot.html) on an existing Magento instance to serve files from the Magento `pub/` directory, which is more secure.
 
-Serving files from the `pub/` directory prevents site visitors from accessing the Web Setup Wizard and other sensitive areas of the Magento file system from a browser.
+Serving files from the `pub/` directory prevents site visitors from accessing the 网页安装向导 and other sensitive areas of the Magento file system from a browser.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-If you're accustomed to using the Web Setup Wizard during development, be aware that you won't be able to access it when serving files from the `pub/` directory.
+If you're accustomed to using the 网页安装向导 during development, be aware that you won't be able to access it when serving files from the `pub/` directory.
 </div>
 
 <div class="bs-callout bs-callout-tip" markdown="1">
@@ -34,7 +34,7 @@ The sample configuration overrides your server's docroot settings to serve files
 
 </div>
 
-## Before you begin
+## 在开始之前
 To complete this tutorial, you'll need access to a working Magento installation running on a [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)){:target="\_blank"} stack:
 
 -   Linux
@@ -47,7 +47,7 @@ To complete this tutorial, you'll need access to a working Magento installation 
 Refer to [先决条件]({{ page.baseurl }}/install-gde/prereq/prereq-overview.html) and the [安装向导]({{ page.baseurl }}/install-gde/bk-install-guide.html) for more information.
 </div>
 
-## 1. Edit your server configuration
+## 1. 编辑你的服务器配置
 The name and location of your virtual host file depends on which version of Apache you're running. This example shows the name and location of the virtual host file on Apache v2.4.
 
 1.  Log in to your Magento server.
@@ -94,7 +94,7 @@ Replace `192.168.33.10` with your server's hostname.
 
         UPDATE core_config_data SET value='http://192.168.33.10' WHERE path='web/unsecure/base_url';
 
-## 3. Switch modes
+## 3. 切换模式
 [Magento modes]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html), which include `production` and `developer`, are designed to improve security and make development easier. As the names suggest, you should switch to `developer` mode when extending or customizing Magento and switch to `production` mode when running Magento in a live environment.
 
 Switching between modes is an important step in verifying that your server configuration is working properly. You can switch between modes using the Magento CLI tool:
@@ -113,7 +113,7 @@ Switching between modes is an important step in verifying that your server confi
 
 5.  Refresh your browser and verify that the storefront displays properly.
 
-## 4. Verify the storefront
+## 4. 验证网店
 Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in a web browser to verify that everything is working.
 
 1.  Open a web browser and enter your server's hostname or IP address in the address bar. For example, http://192.168.33.10.
@@ -124,11 +124,11 @@ Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{%
 
     Refer to the [troubleshooting section]({{ page.baseurl }}/install-gde/trouble/tshoot_no-styles.html) if the page displays a 404 (Not Found) or fails to load other assets like images, CSS, and JS.
 
-2.  Try accessing the Magento directory for the Web Setup Wizard from a browser. Append "_setup/_" to your server's hostname or IP address in the address bar:
+2.  Try accessing the Magento directory for the 网页安装向导 from a browser. Append "_setup/_" to your server's hostname or IP address in the address bar:
 
     If you see a 404 or the "Access denied" message, you've successfully restricted access to the Magento file system.
 
     <img src="{{ site.baseurl }}/common/images/access-denied.png" alt="Access denied">
 
-## Congratulations! You're finished.
+## 恭喜，你已经完成了！
 {:.no_toc}

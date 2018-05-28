@@ -119,12 +119,12 @@ If PHP is *not* installed, see one of the following sections:
 
 {% endcollapsible %}
 
-#### Next
+#### 下一步
 [PHP配置要求]({{ page.baseurl }}/install-gde/prereq/php-settings.html)
 
 #### 相关主题
 *	[MySQL]({{ page.baseurl }}/install-gde/prereq/mysql.html)
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.6 or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
-*	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
+*	[配置安全选项]({{ page.baseurl }}/install-gde/prereq/security.html)
 *	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)

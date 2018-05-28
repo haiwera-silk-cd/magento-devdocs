@@ -11,7 +11,7 @@ mftf-release: 2.2.0
 _This topic was updated due to the {{page.mftf-release}} MFTF release._
 {: style="text-align: right"}
 
-Test cases in the Magento Functional Testing Framework (MFTF) are defined in XML as [`<tests>`](#test-tag).
+测试用例s in the Magento Functional Testing Framework (MFTF) are defined in XML as [`<tests>`](#test-tag).
 `<tests>` is a [Codeception test container](https://codeception.com/docs/07-AdvancedUsage) that contains multiple individual tests with test metadata and before and after actions.
 
 MFTF `<tests>` is considered a sequence of actions with associated parameters.

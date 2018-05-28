@@ -71,7 +71,7 @@ We address the following functional issues in this release.
 
 
 
-### Installation, configuration, and deployment
+### 安装, configuration, and deployment
 
 <!--- 62400-->* Third-party command line tools no longer fail when you run `setup:di:compile`.
 
@@ -94,7 +94,7 @@ We address the following functional issues in this release.
 <!---59416 -->* {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} users with appropriate permissions can now reset the passwords of more than one customer at a time. <a href="https://github.com/magento/magento2/issues/5260" target="_blank">(GITHUB-5260)</a>
 
 
-<!---59142 -->* Admin interface forms now load data as expected after initializing all components. Previously, under certain conditions, the load indicator would spin indefinitely, and Magento did not load data. 
+<!---59142 -->* Admin interface forms now load data as expected after initializing all 组件. Previously, under certain conditions, the load indicator would spin indefinitely, and Magento did not load data. 
 
 
 
@@ -214,7 +214,7 @@ We address the following functional issues in this release.
   
   **Workaround**:  You can avoid this fatal error by taking one of these actions: 
 
-	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the Web Setup Wizard from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
+	*	If your Magento root directory is `<Magento install dir>/pub`,  then start the 网页安装向导 from `http://<Magento host or IP>/setup` instead of from `http://<Magento host or IP>`
 
 	*	安装Magento using the [命令行]({{ page.baseurl }}/comp-mgr/cli/cli-upgrade.html).
 
@@ -266,7 +266,7 @@ We address the following functional issues in this release.
 
 ## System requirements
 Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and MySQL. For more information, see
-<a href="{{ page.baseurl }}/install-gde/system-requirements.html" target="_blank">System Requirements</a>.
+<a href="{{ page.baseurl }}/install-gde/system-requirements.html" target="_blank">系统要求</a>.
 
 
 {% include install/releasenotes/ce_install_21.md %}
@@ -274,9 +274,9 @@ Our technology stack is built on {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a8
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 
 ## Credits
 Dear community members, thank you for your suggestions and bug reports. 

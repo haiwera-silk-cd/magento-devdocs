@@ -129,9 +129,9 @@ To migrate static files:
 
 ## Migrate the database {#cloud-live-migrate-db}
 
-**Prerequisite:** A database dump (see Step 3) should include database triggers. For dumping them, make sure you have the [TRIGGER privilege](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_trigger){:target="\_blank"}.
+**Prerequisite:** A database dump (see 步骤3. should include database triggers. For dumping them, make sure you have the [TRIGGER privilege](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_trigger){:target="\_blank"}.
 
-**Important:** The Integration environment database is strictly for development testing and may include data you may not want to migrate into Staging and Production.
+**重要:** The Integration environment database is strictly for development testing and may include data you may not want to migrate into Staging and Production.
 
 For continuous integration deployments, we **do not recommend** migrating data from Integration to Staging and Production. You could pass testing data or overwrite important data. Any vital configurations will be passed using the [configuration file](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html) and `setup:upgrade` command during build and deploy.
 

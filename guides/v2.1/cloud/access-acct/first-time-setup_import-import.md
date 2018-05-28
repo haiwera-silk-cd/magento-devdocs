@@ -34,7 +34,7 @@ Before you continue, make sure you know the SSH or HTTPS {% glossarytooltip a05c
 
 To create a remote Git reference:
 
-1.  Log in to your local {{site.data.var.ece}} development machine as, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.  Log in to your local {{site.data.var.ece}} development machine as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 1.  Make a copy of `composer.json` _in a non-tracked directory_ so it doesn't get overwritten.
 
     ```

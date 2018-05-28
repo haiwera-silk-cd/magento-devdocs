@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 10_mem
-title: 在CentOS上安装、配置和验证memcached
-menu_title: 在CentOS上安装、配置和验证memcached
+title: 在CentOS上安装、配置和验证memcached
+menu_title: 在CentOS上安装、配置和验证memcached
 menu_order: 3
 menu_node:
 version: 2.1
@@ -83,7 +83,7 @@ To verify memcached is recognized by the web server:
 
     <img src="{{ site.baseurl }}/common/images/config_memcache.png" alt="Confirm memcache is recognized by the web server">
 
-    Verify you're using memcached version 3.0.5 or later.
+    Verify you're using memcached version 3.0.5或更新.
 
     If memcache does not display, restart the web server and refresh the browser page. If it still does not display, verify you installed the `php-pecl-memcache` extension.
 

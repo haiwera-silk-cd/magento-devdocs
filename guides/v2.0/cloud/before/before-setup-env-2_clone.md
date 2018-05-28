@@ -38,7 +38,7 @@ You should complete these instructions in the following order:
 
 To clone the project's `master` environment to your local:
 
-1.	Log in to your local development machine with a [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) account.
+1.	Log in to your local development machine with a [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) account.
 
 2.  Change to the web server or virtual host docroot.
 
@@ -75,7 +75,7 @@ We recommend changing the following variables for the Magento Admin URL and admi
 * `ADMIN_EMAIL`: Administrative user's e-mail address. This value is required for upgrading and patching Magento企业版(云支持版) and is used to send password reset emails.
 * `ADMIN_USERNAME`: User name for a Magento administrative user. This user is an administrator and can create other users, including other administrative users. The default hardcoded username is `admin`. You can use `admin` or change it to another secure username.
 * `ADMIN_PASSWORD`: Administrative user's password. When the project is created, a random password is generated and an email is sent to the Project Owner. During project creation, the Project Owner should have already changed the password. You may need to contact the Project Owner for the updated password.
-* `ADMIN_URL`: The relative URL by which to access the Magento Admin. For example: <domain>/admin. For security reasons, we recommend you choose a value other than `admin`或`backend` or another term that is easy to guess.
+* `ADMIN_URL`: The relative URL by which to access the Magento Admin. 例如: <domain>/admin. For security reasons, we recommend you choose a value other than `admin`或`backend` or another term that is easy to guess.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 Make note of any changes you make. You may need them when installing Magento with the command line and when verifying the installation.

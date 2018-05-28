@@ -1,7 +1,7 @@
 ---
 group: ext-best-practices
-title: Best Practices for Extension Developers
-landing-page: Best Practices for Extension Developers
+title: 扩展开发者最佳实践
+landing-page: 扩展开发者最佳实践
 menu_title: 介绍
 menu_order: 1
 version: 2.1
@@ -21,9 +21,9 @@ We want your feedback; please do a pull request on <a href="https://github.com/m
   </p>
 </div>
 
-Magento consists of the core product code plus optional components that enhance or replace the core product code. There are over 100 out-of-the-box components in the form of modules, themes, and language packages available for Magento 2.
+Magento consists of the core product code plus optional 组件 that enhance or replace the core product code. There are over 100 out-of-the-box 组件 in the form of modules, themes, and language packages available for Magento 2.
 
-Magento's architecture allows for enhancements by letting you develop your own component. Keep in mind that in addition to Magento's own modules, your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} will be running alongside components from other developers. For this reason, it is important that your component behaves correctly in Magento's modular environment.
+Magento's architecture allows for enhancements by letting you develop your own component. Keep in mind that in addition to Magento's own modules, your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} will be running alongside 组件 from other developers. For this reason, it is important that your component behaves correctly in Magento's modular environment.
 
 The table below is data from a recent poll that shows the distribution of the amount of extensions installed on a Magento instance for each edition. So for example, 32% of merchants on EE have over 50 different extensions installed!
 
@@ -32,7 +32,7 @@ The table below is data from a recent poll that shows the distribution of the am
 | Community | 10% | 53%   | 26%   | 11% |
 | Enterprise| 9%  | 32%   | 27%   | 32% |
 
-This guide provides best practices, guidelines, and tips for creating Magento extensions.  We encourage you to follow our best practices when developing code for your Magento components.
+This guide provides best practices, guidelines, and tips for creating Magento extensions.  We encourage you to follow our best practices when developing code for your Magento组件.
 
 ### Sections
 
@@ -45,5 +45,5 @@ This guide provides best practices, guidelines, and tips for creating Magento ex
 ### Related Content
 
 * [管理面板用到的设计模式和库]({{ page.baseurl }}/pattern-library/bk-pattern.html) - An in depth guide to the design patterns used in the Admin.
-* [PHP开发文档]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html) - An in depth guide to creating Magento components.
-* [Frontend Developer Guide]({{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html) - An in depth guide to creating a Magento storefront theme.
+* [PHP开发文档]({{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html) - An in depth guide to creating Magento组件.
+* [前端工程师手册]({{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html) - An in depth guide to creating a Magento storefront theme.

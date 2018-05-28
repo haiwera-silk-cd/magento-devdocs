@@ -17,7 +17,7 @@ redirect_from:
 *   <a href="#packaging">Package and publish your extension</a>
 
 <h2 id="package-over">Overview of packaging</h2>
-The Magento application uses {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} packages to distribute, install, and upgrade components in an application instance.
+The Magento application uses {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} packages to distribute, install, and upgrade 组件 in an application instance.
 
 To package a component, you must:
 
@@ -127,7 +127,7 @@ The following example is a `composer.json` file for a module:
 {% endhighlight %}
 
 <h2 id="packaging">Package and publish your extension</h2>
-Create a package of your extension by performing a zip operation on the directory with your extension (excluding unnecessary directories). For example:
+Create a package of your extension by performing a zip operation on the directory with your extension (excluding unnecessary directories). 例如:
 
     zip -r vendor-name_package-name-1.0.0.zip package-path/ -x 'package-path/.git/*'
 

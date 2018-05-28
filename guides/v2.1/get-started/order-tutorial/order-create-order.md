@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 7. Create an order
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤7. 创建订单
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 7
 level3_menu_node:

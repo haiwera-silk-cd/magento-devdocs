@@ -1,7 +1,7 @@
 label: 软件升级手册
 pages:
 
-    - label: Upgrade the Magento application and modules
+    - label: 升级Magento及其模块
       url: /comp-mgr/bk-compman-upgrade-guide.html
 
     - label: 先决条件
@@ -41,7 +41,7 @@ pages:
         - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/module-man/compman-backup.html
 
-        - label: Step 3
+        - label: 步骤3
           children:
 
             - label: Component Install
@@ -50,7 +50,7 @@ pages:
             - label: Component Update
               url: /comp-mgr/module-man/compman-update.html
 
-            - label: Enable/Disable
+            - label: 启用/禁用
               url: /comp-mgr/module-man/compman-enable-disable.html
 
             - label: Data Option
@@ -59,12 +59,12 @@ pages:
         - label: 步骤4. 卸载
           url: /comp-mgr/module-man/compman-uninst-final.html
 
-    - label: Run the Module Manager
+    - label: 运行Magento模块管理器
       versions: ["2.2", "2.3"]
       url: /comp-mgr/module-man/compman-checklist.html
       children:
 
-        - label: Start the Module Manager
+        - label: 启动模块管理器
           url: /comp-mgr/module-man/compman-start.html
 
         - label: 步骤1.准备就绪检查
@@ -73,15 +73,15 @@ pages:
         - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/module-man/compman-backup.html
 
-        - label: Enable/Disable
+        - label: 启用/禁用
           url: /comp-mgr/module-man/modman-enable-disable.html
 
-    - label: Run the Extension Manager
+    - label: 运行扩展管理器
       versions: ["2.2", "2.3"]
       url: /comp-mgr/extens-man/extensman-checklist.html
       children:
 
-        - label: Start the Extension Manager
+        - label: 开启扩展管理器
           url: /comp-mgr/extens-man/extensman-main-pg.html
 
         - label: 步骤1.准备就绪检查
@@ -93,36 +93,36 @@ pages:
             - label: Readiness check failure
               url: /comp-mgr/extens-man/extensman-readiness-fail.html
 
-            - label: Readiness check with multiple extension updates
+            - label: Readiness check with multiple 扩展更新s
               url: /comp-mgr/extens-man/extensman-readiness-multi.html
 
         - label: 步骤2. 备份文件系统和数据库
           url: /comp-mgr/extens-man/extensman-backup.html
 
-        - label: Step 3
+        - label: 步骤3
           children:
 
             - label: Install
               url: /comp-mgr/extens-man/extensman-new-purchase.html
 
-            - label: Extension Update
+            - label: 扩展更新
               url: /comp-mgr/extens-man/extensman-update.html
 
-            - label: Remove or Keep Data
+            - label: 移除或保持数据
               url: /comp-mgr/extens-man/extensman-uninst-data.html
 
         - label: 步骤4. 卸载
           url: /comp-mgr/extens-man/extensman-uninst-final.html
 
-    - label: Install extensions from the command line
+    - label: 从命令行安装扩展
       versions: ["2.2", "2.3"]
       url: /comp-mgr/install-extensions.html
       children:
 
-        - label: Install the B2B extension
+        - label: 安装B2B扩展
           url: /comp-mgr/install-extensions/b2b-installation.html
 
-    - label: Upgrade from Magento Open Source to Magento Commerce
+    - label: 从Magento开源版升级到Magento企业版
       url: /comp-mgr/upgrader/ce-ee-upgrade-start.html
 
     - label: 命令行升级
@@ -158,7 +158,7 @@ pages:
         - label: 更新器程序
           url: /comp-mgr/updater/updater.html
 
-    - label: 故障排除 suggestions
+    - label: 故障排除建议
       url: /comp-mgr/trouble/tshoot.html
       children:
 
@@ -200,7 +200,7 @@ pages:
         - label: 解答备份问题
           url: /comp-mgr/trouble/cman/tshoot_backup.html
 
-        - label: Error upgrading from Magento Open Source to Magento Commerce
+        - label: 升级Magento开源版升级到Magento企业版发生错误
           url: /comp-mgr/trouble/cman/ce-ee-upgrade.html
 
         - label: magento/theme-doc-blank failure

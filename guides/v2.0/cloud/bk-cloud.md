@@ -62,7 +62,7 @@ If you create your account with the 30-day trial, we set you up quickly to get s
 To get started, see:
 
 * [新手上路任务]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html) of first things to do right after signing up.
-* Sign up for [status updates]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#status) for components and services.
+* Sign up for [status updates]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#status) for 组件 and services.
 
 To better understand {{site.data.var.ee}}, your plan, architecture, and workflows, see the following starting points:
 

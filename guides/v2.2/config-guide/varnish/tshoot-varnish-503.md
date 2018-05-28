@@ -39,7 +39,7 @@ To resolve this issue, increase the default value of the `http_resp_hdr_len` par
 
 	For example, setting the value to 65536 bytes should work if your largest category has 3,000 products.
 
-	For example:
+	例如:
 
 		-p http_resp_hdr_len=65536 \
 

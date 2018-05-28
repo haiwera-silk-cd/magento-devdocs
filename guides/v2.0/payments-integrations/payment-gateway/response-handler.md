@@ -1,15 +1,15 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Response Handler
-menu_title: Response Handler
+title: 响应处理器
+menu_title: 响应处理器
 menu_node: 
 menu_order: 7
 version: 2.0
 github_link: payments-integrations/payment-gateway/response-handler.md
 ---
 
-Response Handler is the component of Magento payment provider gateway, that processes payment provider response. Typically, the response requires one of the following actions:
+响应处理器 is the component of Magento支付提供商网关, that processes payment provider response. Typically, the response requires one of the following actions:
 
 - Modify the {% glossarytooltip ab517fb3-c9ff-4da8-b7f9-00337c57b3a5 %}order status{% endglossarytooltip %}
 - Save information that was provided in a transaction response
@@ -26,7 +26,7 @@ Basic interface for a response handler is [`Magento\Payment\Gateway\Response\Han
 
 `\Magento\Payment\Gateway\Response\HandlerChain` might be used as a basic container of response handlers, handling different parts.
 
-### Example
+### 示例
 
 Example of a simple response handler ([`app/code/Magento/Braintree/Gateway/Response/PayPalDetailsHandler.php`]({{ site.mage2100url }}app/code/Magento/Braintree/Gateway/Response/PayPalDetailsHandler.php)):
 

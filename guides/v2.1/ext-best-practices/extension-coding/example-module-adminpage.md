@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Creating a Magento admin page
-menu_title: Creating a Magento admin page
+title: 新建一个Magento管理面板页面
+menu_title: 新建一个Magento管理面板页面
 menu_order: 1000
 version: 2.1
 github_link: ext-best-practices/extension-coding/example-module-adminpage.md
@@ -10,7 +10,7 @@ functional_areas:
   - Standards
 ---
 
-### Overview
+### 概述
 
 This tutorial gives instructions for the creation of a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} that displays a simple page in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 

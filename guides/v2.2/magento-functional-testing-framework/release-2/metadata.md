@@ -348,7 +348,7 @@ PUT is used for updating objects.<br/>
 DELETE is used for deleting objects.<br/>" %}
 
 The following is a list with descriptions the `auth` possible values:
-- `adminOath` is used for REST API persistence in the Admin area with [OAuth-based authentication][oauth].
+- `adminOath` is used for REST API persistence in the Admin area with [基于OAuth的认证][oauth].
 - `adminFormKey` is used for HTML form persistence in the Admin area.
 - `customerFormKey` is used for HTML form persistence in the Customer area.
 - `anonymous` is used for REST API persistence without authorization.

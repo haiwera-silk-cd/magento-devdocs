@@ -20,7 +20,7 @@ Isolation strategy parameter defines when the isolation script must be run relat
 
 The following example demonstrates how you can use isolation management.
 
-## Step 1: Create an isolation script {#step-1}
+## 步骤1. Create an isolation script {#step-1}
 
 Assume that we want to return a database, dumped to `/var/www/magento/magento.dump.sql`, to its initial state. You can implement it using the following code:
 
@@ -40,7 +40,7 @@ It means that during test run the FTF would call `http://magento2ce.com/dev/test
 Isolation script is run in a web browser and must be accessible by a web server.
 </div>
 
-## Step 2: Set isolation script {#step-2}
+## 步骤2. Set isolation script {#step-2}
 
 You can set isolation script globally, in configuration file, or locally, directly in a test case. The following examples show different options.
 
@@ -48,7 +48,7 @@ You can set isolation script globally, in configuration file, or locally, direct
 隔离管理 for a certain test or test case has higher priority than global.
 </div>
 
-### Step 2(a): Globally set isolation script to be run after each test case {#step-2a}
+### 步骤2.a): Globally set isolation script to be run after each test case {#step-2a}
 
 - Open `<magento root dir>/dev/tests/functional/config.xml`.
 - In `<isolation>`, set `<testCase>after</testCase>`, for example:
@@ -62,7 +62,7 @@ You can set isolation script globally, in configuration file, or locally, direct
 </isolation>
 {%endhighlight%}
 
-### Step 2(b): Globally set isolation script to be run before each test {#step-2b}
+### 步骤2.b): Globally set isolation script to be run before each test {#step-2b}
 
 - Open `<magento root dir>/dev/tests/functional/config.xml`.
 - In `<isolation>`, set `<test>before</test>`, for example:
@@ -76,7 +76,7 @@ You can set isolation script globally, in configuration file, or locally, direct
 </isolation>
 {%endhighlight%}
 
-### Step 2(c): Globally set isolation script to be run before and after a test suite {#step-2c}
+### 步骤2.c): Globally set isolation script to be run before and after a test suite {#step-2c}
 
 - Open `<magento root dir>/dev/tests/functional/config.xml`.
 - In `<isolation>`, set `<testSuite>both</testSuite>`, for example:
@@ -90,7 +90,7 @@ You can set isolation script globally, in configuration file, or locally, direct
 </isolation>
 {%endhighlight%}
 
-### Step 2(d): Locally set isolation script to be run after a test case {#step-2d}
+### 步骤2.d): Locally set isolation script to be run after a test case {#step-2d}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 
@@ -106,7 +106,7 @@ class OnePageCheckoutTest extends Scenario
 ...
 ```
 
-### Step 2(e): Locally set isolation script to be run after each test of a test case {#step-2e}
+### 步骤2.e): Locally set isolation script to be run after each test of a test case {#step-2e}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 
@@ -122,7 +122,7 @@ class OnePageCheckoutTest extends Scenario
 ...
 ```
 
-### Step 2(f): Locally set isolation script to be run before test of a test case {#step-2f}
+### 步骤2.f): Locally set isolation script to be run before test of a test case {#step-2f}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 Example test: `test()`.
@@ -140,7 +140,7 @@ Example test: `test()`.
     ...
 ```
 
-### Step 2(g): Locally set isolation script to be run before a test case and after a test {#step-2g}
+### 步骤2.g): Locally set isolation script to be run before a test case and after a test {#step-2g}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 Example test: `test()`.
@@ -164,7 +164,7 @@ class OnePageCheckoutTest extends Scenario
     }
 ```
 
-### Step 2(h): Locally set isolation script to be excluded for a test case {#step-2h}
+### 步骤2.h): Locally set isolation script to be excluded for a test case {#step-2h}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 
@@ -180,7 +180,7 @@ class OnePageCheckoutTest extends Scenario
 ...
 ```
 
-### Step 2(i): Locally set isolation script to be excluded for a test {#step-2i}
+### 步骤2.i): Locally set isolation script to be excluded for a test {#step-2i}
 
 Example test case: `\Magento\Checkout\Test\TestCase\OnePageCheckoutTest`.
 Example test: `test()`.

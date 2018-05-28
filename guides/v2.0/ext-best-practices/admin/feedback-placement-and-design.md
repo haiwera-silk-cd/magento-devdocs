@@ -1,5 +1,5 @@
 ---
-menu_title: Feedback for Admin Panel Placement and Design
+menu_title: Feedback for 管理面板的定位和设计
 menu_order: 1
 version: 2.0
 github_link: ext-best-practices/admin/feedback-placement-and-design.md
@@ -7,7 +7,7 @@ functional_areas:
   - Standards
 ---
 
-Please provide feedback for the article: [Admin Panel Placement and Design]({{ page.baseurl }}/ext-best-practices/admin/placement-and-design.html) on this page via GitHub.
+Please provide feedback for the article: [管理面板的定位和设计]({{ page.baseurl }}/ext-best-practices/admin/placement-and-design.html) on this page via GitHub.
 
 You can leave high-level feedback for specific sections by clicking the Edit icon above, and adding comments beneath the relevant section name below.
 

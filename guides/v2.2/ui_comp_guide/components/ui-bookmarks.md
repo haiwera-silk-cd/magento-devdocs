@@ -1,14 +1,14 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Bookmarks component
-menu_title: Bookmarks component
+group: UI_组件_guide
+subgroup: 组件
+title: 书签组件
+menu_title: 书签组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-bookmarks.md
+github_link: ui_comp_guide/组件/ui-bookmarks.md
 ---
 
 ## Overview
-The Bookmarks component stores active and changed state of a grid implemented using [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html). It includes the state of filters, columns position, applied sorting, pagination, and so on.
+The 书签components stores active and changed state of a grid implemented using [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html). It includes the state of filters, columns position, applied sorting, pagination, and so on.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/controls/bookmarks/bookmarks.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/controls/bookmarks/bookmarks.js)
 

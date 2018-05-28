@@ -11,11 +11,11 @@ functional_areas:
   - Upgrade
 ---
 
-In some cases, you might need to update the updater application, which is responsible for updating components and the Magento application. You should do this only if instructed to do so.
+In some cases, you might need to update the updater application, which is responsible for updating 组件 and the Magento application. You should do this only if instructed to do so.
 
 To update the updater application:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
 2.	Delete, move, or rename the directory containing the updater application.
 
 	For example,

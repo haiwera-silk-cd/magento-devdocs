@@ -9,9 +9,9 @@ github_link: extension-dev-guide/build/module-load-order.md
 redirect_from: /guides/v2.0/extension-dev-guide/module-load-order.html
 ---
 
-You may need to specify your component's dependency on other components or files from other components using your component's <a href="{{ page.baseurl }}/extension-dev-guide/build/create_component.html#add-component-xml">composer.json</a>. Further, you can specify a load order in your component's `module.xml` file using the `<sequence>` tag to ensure that needed files from other components are already loaded when your component loads.
+You may need to specify your component's dependency on other components or files from other components using your component's <a href="{{ page.baseurl }}/extension-dev-guide/build/create_component.html#add-component-xml">composer.json</a>. Further, you can specify a load order in your component's `module.xml` file using the `<sequence>` tag to ensure that needed files from other 组件 are already loaded when your component loads.
 
-`<sequence>` declares the list of components that must be loaded before the current component is loaded. It's used for loading different kind of files: configuration files, view files (including CSS, LESS, and template files), or setup classes. Note that `<sequence>` does not affect the loading of regular classes (non-setup classes).
+`<sequence>` declares the list of 组件 that must be loaded before the current component is loaded. It's used for loading different kind of files: configuration files, view files (including CSS, LESS, and template files), or setup classes. Note that `<sequence>` does not affect the loading of regular classes (non-setup classes).
 *Setup* classes are classes in the component that create or update {% glossarytooltip 66b924b4-8097-4aea-93d9-05a81e6cc00c %}数据库表结构{% endglossarytooltip %} or data.
 
 If you know that your component's logic depends on something in another component, then you should add this component to `require` in `composer.json` and `<sequence>` in `module.xml`.
@@ -21,11 +21,11 @@ You can check your module's load order from the `<your Magento install dir>/app/
 <div class="bs-callout bs-callout-info" id="info">
 	<span class="glyphicon-class">
 	<p>If you change the component load order using <code>&lt;sequence></code>, you must regenerate the component list in <code>config.php</code>; otherwise, the load order does not take effect.</p>
-<p>Currently, the only way to do this is to enable the component using <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable"><code>magento module:enable &lt;module-list></code></a>, where <code>&lt;module-list></code> is the component or components to which you added <code>&lt;sequence></code>.</p></span>
+<p>Currently, the only way to do this is to enable the component using <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable"><code>magento module:enable &lt;module-list></code></a>, where <code>&lt;module-list></code> is the component or 组件 to which you added <code>&lt;sequence></code>.</p></span>
 </div>
 
 
-### Examples
+### 示例
 
 Assume you have a component that needs a configuration file from another component:
 
@@ -43,7 +43,7 @@ __Component A__ introduces `gadgetlayout.xml`, which updates block `gadgetBlock`
 </config>
 {% endhighlight %}
 
-For each particular scenario, files of the same type are loaded from different components taking into account the sequence information provided in each component's `module.xml` file.
+For each particular scenario, files of the same type are loaded from different 组件 taking into account the sequence information provided in each component's `module.xml` file.
 
 In another scenario, let's say you want to load all of the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files with the name `default.xml`. __Component A__ specifies __component B__ in `<sequence>`. The files load in the following order:
 
@@ -58,9 +58,9 @@ If you do specify a component in `<sequence>`, make sure that you have also adde
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>Take care when using <code>&lt;sequence></code> in multiple components because it's possible to define circular dependencies. If you do, Magento aborts the installation when it detects the circular dependency.</p></span>
+  <p>Take care when using <code>&lt;sequence></code> in multiple 组件 because it's possible to define circular dependencies. If you do, Magento aborts the installation when it detects the circular dependency.</p></span>
 </div>
 
 ## Next
 
-[启用和禁用组件]({{ page.baseurl }}/extension-dev-guide/build/enable-module.html)
+[启用和禁用components]({{ page.baseurl }}/extension-dev-guide/build/enable-module.html)

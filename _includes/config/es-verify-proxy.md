@@ -35,7 +35,7 @@ Now try the following command:
 
 	curl -i -u <user name>:<password> http://<host name, ip, or localhost>:<proxy port>/_cluster/health
 
-For example:
+例如:
 
 	curl -i -u magento_elasticsearch:mypassword http://localhost:8080/_cluster/health
 

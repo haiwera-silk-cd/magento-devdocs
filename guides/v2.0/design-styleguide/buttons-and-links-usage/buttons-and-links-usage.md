@@ -14,7 +14,7 @@ However, both buttons and links can function as calls to action (CTAs). Whether 
 
 For more details, see [Title Case standards]({{ page.baseurl }}/design-styleguide/capitalization/capitalization.html#title-case) in Capitalization.
 
-*Examples:*
+*例如:*
 
 <ul style="list-style-type:none">
   <li><strong>否</strong> – “Free Demo”</li>

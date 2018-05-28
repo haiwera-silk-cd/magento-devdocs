@@ -30,7 +30,7 @@ If a Test includes an `@env` tag, you MUST include the [`--env ENV_NAME`][--env]
  
 [Learn more about `@env` tag usage][env].
 
-### Examples
+### 示例
 
 Run ALL Functional Tests without an `@env` tag:
 

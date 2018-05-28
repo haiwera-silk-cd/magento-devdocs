@@ -26,7 +26,7 @@ Configuration options:
 - The `preview_quota_lifetime` parameter in the `Magento/CheckoutStaging/etc/config.xml` sets the lifetime of the demo quote.
 - The `schedule` parameter in the `Magento/CheckoutStaging/etc/crontab.xml` sets a launch schedule of the cron.
 
-### Installation details
+### 安装 details
 
 The Magento_CheckoutStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 

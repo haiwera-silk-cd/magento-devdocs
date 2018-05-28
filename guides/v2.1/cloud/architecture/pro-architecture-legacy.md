@@ -192,7 +192,7 @@ This software is *not* upgradable but versions for the following software is con
 -   [RabbitMQ]({{ page.baseurl }}/cloud/project/project-conf-files_services-rabbit.html)
 -   [Elasticsearch]({{ page.baseurl }}/cloud/project/project-conf-files_services-elastic.html)
 
-For Staging and Production environments, use Fastly for CDN and caching. We recommend installing the Fastly module 1.2.33 or later. See [Fastly in Cloud]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html).
+For Staging and Production environments, use Fastly for CDN and caching. We recommend installing the Fastly module 1.2.33或更新. See [Fastly in Cloud]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html).
 
 Edit the following YAML files to configure specific software versions to use in your implementation.
 

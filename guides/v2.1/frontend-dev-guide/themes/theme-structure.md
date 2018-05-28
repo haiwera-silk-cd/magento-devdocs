@@ -12,7 +12,7 @@ functional_areas:
   - Theme
 ---
 
-<h2 id="theme-structure-intro">What's in this topic</h2>
+<h2 id="theme-structure-intro">这里有什么</h2>
 A <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-general.html#theme-gen-overview" target="_blank">design theme</a> is an important part of the Magento application. This topic describes the file structure of a Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}.
 
 <h2 id="theme-structure-loc">Magento theme location</h2>
@@ -27,7 +27,7 @@ app/design/frontend/&lt;Vendor&gt;/
 ├--...
 </pre>
 
-<h2 id="theme-structure-comp">Theme components</h2>
+<h2 id="theme-structure-comp">Theme 组件</h2>
 The structure of a Magento theme directory typically would be like following:
 <pre>
 &lt;theme_dir&gt;/

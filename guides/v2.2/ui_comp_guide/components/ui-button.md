@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Button component
-menu_title: Button component
+group: UI_组件_guide
+subgroup: 组件
+title: 按钮组件
+menu_title: 按钮组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-button.md
+github_link: ui_comp_guide/组件/ui-button.md
 ---
 
 ## Overview
 
-The Button component allows user to perform a list of predefined actions by clicking on the corresponding button. Its default display mode is the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<button>` element, which be configured to display a link.
+The 按钮组件 allows user to perform a list of predefined actions by clicking on the corresponding button. Its default display mode is the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<button>` element, which be configured to display a link.
 
 ## Configuration options
 
@@ -28,7 +28,7 @@ Button-specific configuration:
     <td><code>component</code></td>
     <td>The path to the component’s JS constructor in terms of RequireJS.</td>
     <td>String</td>
-    <td><code>Magento_Ui/js/form/components/button</code></td>
+    <td><code>Magento_Ui/js/form/组件/button</code></td>
   </tr>
   <tr>
     <td><code>additionalClasses</code></td>

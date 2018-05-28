@@ -44,7 +44,7 @@ Make note of this path because you will need it later when you configure this ne
 
     1. If you haven't done so already, log in to the Magento Admin as an administrator.
     1. Click **STORES** > Settings > **Configuration** > SALES > **Sales Emails**.
-    2. In the left pane, locate the section that contains the template you want to override. This is the section referenced by **Currently Used For** in your new template. (See step 3 earlier in this section.)
+    2. In the left pane, locate the section that contains the template you want to override. This is the section referenced by **Currently Used For** in your new template. (See 步骤3 earlier in this section.)
     <br>For example, if you created a "New Order" template, the configuration section is **Order** as the following figure shows.
     <br><img src="{{ site.baseurl }}/common/images/email_choose-template.png" alt="Choosing a custom template" width="70%" height="70%"/>
     3. Select your newly created template from the list.

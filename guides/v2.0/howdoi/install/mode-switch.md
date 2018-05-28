@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: Installation and configuration
-title: Magento mode switch
-menu_title: Magento mode switch
+subgroup: 安装和配置
+title: Magento模式切换
+menu_title: Magento模式切换
 menu_node: parent
 menu_order: 1
 version: 2.0
@@ -21,7 +21,7 @@ Not only do these modes enable you to change Magento application behavior, switc
 
 To switch modes:
 
-1.  Log in as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.  Log in as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 1.  Change to the `<your Magento install dir>/bin` directory.
 1.  Use the `magento deploy:mode:set` command as summarized in the following table.
 

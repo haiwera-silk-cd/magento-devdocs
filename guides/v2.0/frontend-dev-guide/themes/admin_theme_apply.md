@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
   - Theme
 ---
-<h2 id="favicon-intro">What's in this topic</h2>
+<h2 id="favicon-intro">这里有什么</h2>
 
 This topic describes how to apply your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
@@ -64,9 +64,9 @@ In `<your_module_dir>/etc/adminhtml/di.xml` add the following (replace the place
 </config>
 {%endhighlight%}
 
-## Update components to actually apply the Admin theme
+## Update 组件 to actually apply the Admin theme
 
-For your changes to take effect, you need to update Magento components. For this, 
+For your changes to take effect, you need to update Magento组件. For this, 
 run the `bin/magento setup:upgrade` command in your command line. If prompted, also run `bin/magento setup:di:compile`.
 
 

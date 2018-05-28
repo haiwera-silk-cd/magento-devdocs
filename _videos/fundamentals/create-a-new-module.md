@@ -1,7 +1,7 @@
 ---
 youtube_id: 682p52tFcmY
 duration: "5:18"
-group: "Fundamentals of Magento 2 Development"
+group: "Magento开发基础"
 title: "Create a New Module"
 thumbnail: "fundamentals/thumbs/create-new-module.png"
 menu_order: 1

@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: PHP Development
-title: PHP Development
-menu_title: PHP Development
+subgroup: PHP开发
+title: PHP开发
+menu_title: PHP开发
 menu_node: parent
 menu_order: 1
 version: 2.0

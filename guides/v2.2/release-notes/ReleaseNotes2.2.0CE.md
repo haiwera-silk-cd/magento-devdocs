@@ -78,7 +78,7 @@ Magento 2.2.0 GA includes the following known issues. Fixes for these issues are
 ## Fixed issues
 This release contains hundreds of fixes and enhancements.
 
-### Installation, upgrade, deployment
+### 安装, upgrade, deployment
 
 <!--- 55357/53777-->* You can now run `magento setup:upgrade --keep-generated` in production mode. Previously, Magento would throw an error when you ran `setup:upgrade` after compiling dependency injection. (This significantly curtailed your ability to deploy continuous integration.) [GitHub-4795](https://github.com/magento/magento2/issues/4795)
 
@@ -517,7 +517,7 @@ Thanks to our hardworking Magento Open Source community members for the followin
 
 <!---59416 -->* {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} users with appropriate permissions can now reset the passwords of more than one customer at a time. [GitHub-5260](https://github.com/magento/magento2/issues/5260)
 
-<!---59142 -->* Admin interface forms now load data as expected after initializing all components. Previously, under certain conditions, the load indicator would spin indefinitely, and Magento would not load data.
+<!---59142 -->* Admin interface forms now load data as expected after initializing all 组件. Previously, under certain conditions, the load indicator would spin indefinitely, and Magento would not load data.
 
 <!---59810 -->* Showing reports on the **Reports > Coupons** page no longer throws an error when the user is in a non-default Admin locale.  [GitHub-7037](https://github.com/magento/magento2/issues/7037) 
 
@@ -802,7 +802,7 @@ Thanks to our hardworking Magento Open Source community members for the followin
 
 <!--- 64413-->* The expiration year validator now works as expected. [GitHub-8482](https://github.com/magento/magento2/issues/8482)
 
-* We've introduced the `Magento\Vault\Block\TokenRendererInterface::getToken` method. This method provides details about payment tokens to renderer components, such as public hash and available card or account details. Third-party developers can use this method to implement this functionality in their payment integrations.
+* We've introduced the `Magento\Vault\Block\TokenRendererInterface::getToken` method. This method provides details about payment tokens to renderer 组件, such as public hash and available card or account details. Third-party developers can use this method to implement this functionality in their payment integrations.
 
 
 #### Braintree
@@ -1172,9 +1172,9 @@ Our technology stack is built on PHP and MySQL. For details, see [技术栈 requ
 
 
 
-For more information, [System Requirements]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"}.
+For more information, [系统要求]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"}.
 
-### Installation and upgrade instructions
+### 安装 and upgrade instructions
 
 You can install Magento Open Source 2.2 General Availability (GA) using Composer.
 
@@ -1182,6 +1182,6 @@ You can install Magento Open Source 2.2 General Availability (GA) using Composer
 {% include install/releasenotes/ce_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

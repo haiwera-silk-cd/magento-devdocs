@@ -25,7 +25,7 @@ Look for the following highlights in this release:
 
 ### New Features
 
-* **Advanced Reporting powered by Magento Business Intelligence**. Access easy-to-use order, product, and customer reports right from the Magento Admin to gain new insights and enable data-driven decision making. See [Advanced Reporting](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html) for more information.
+* **高级报表 powered by Magento Business Intelligence**. Access easy-to-use order, product, and customer reports right from the Magento Admin to gain new insights and enable data-driven decision making. See [高级报表](http://devdocs.magento.com/guides/v2.2/advanced-reporting/overview.html) for more information.
 
 * **Magento Shipping** (powered by Temando). This new feature provides integrated advanced multi-carrier shipping and fulfillment.  (In addition to these release notes, you can find Magento Shipping-specific release notes in [Magento Shipping Release Notes]({{ page.baseurl }}/release-notes/ReleaseNotesMagentoShipping2.2.x.html).)
 
@@ -54,7 +54,7 @@ Looking for more information on these new features as well as many others? Check
 
 ## Fixed issues
 
-### Installation, setup, and deployment
+### 安装, setup, and deployment
 <!--- MAGETWO-82747 -->* We've increased the `memory_limit` of the `.user.ini` files to 2GB. [GitHub-11322](https://github.com/magento/magento2/issues/11322)
 
 <!--- MAGETWO-72301 -->* The contents of the `js-translation.json` files are now correct when you deploy static content with multiple locales.
@@ -271,7 +271,7 @@ Looking for more information on these new features as well as many others? Check
 
 <!--- MAGETWO-82955 -->* The Visual Swatch Attribute drop-down menu (accessible from Manage Swatch tab) now works as expected. Previously, when you clicked the **Add Swatch** button from this tab, the drop-down menu was not displayed. *Fix submitted by [@enriquei4](https://github.com/enriquei4) in pull request 11747*. [GitHub-11534](https://github.com/magento/magento2/issues/11534)
 
-<!--- MAGETWO-71458 -->* Users are now subscribed by default to the Advanced Reporting service.
+<!--- MAGETWO-71458 -->* Users are now subscribed by default to the 高级报表 service.
 
 <!--- MAGETWO-81679 -->* The design rule hint message no longer includes a typo. *Fix submitted by [Javier Villanueva](https://github.com/jahvi) in pull request 11390*. [GitHub-8958](https://github.com/magento/magento2/issues/8958)
 
@@ -1133,9 +1133,9 @@ Our technology stack is built on PHP and MySQL. For details, see [技术栈 requ
 
 
 
-For more information, [System Requirements]({{ site.baseurl }}/magento-system-requirements.html).
+For more information, [系统要求]({{ site.baseurl }}/magento-system-requirements.html).
 
-### Installation and upgrade instructions
+### 安装 and upgrade instructions
 
 You can install Magento Commerce 2.2 General Availability (GA) using Composer.
 
@@ -1143,6 +1143,6 @@ You can install Magento Commerce 2.2 General Availability (GA) using Composer.
 {% include install/releasenotes/ee_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

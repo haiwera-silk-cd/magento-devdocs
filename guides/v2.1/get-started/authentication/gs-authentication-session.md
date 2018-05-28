@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 40_Authentication
-title: Session-based authentication
-menu_title: Session-based authentication
+title: 基于Session的认证
+menu_title: 基于Session的认证
 menu_order: 4
 version: 2.1
 github_link: get-started/authentication/gs-authentication-session.md

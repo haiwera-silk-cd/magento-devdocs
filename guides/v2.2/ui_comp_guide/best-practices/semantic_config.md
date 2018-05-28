@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: best practices
-title: Using the new structure in UI components XML configuration
-menu_title: Using the new structure in UI components XML configuration
+title: Using the new structure in UI 组件 XML configuration
+menu_title: Using the new structure in UI 组件 XML configuration
 menu_order: 1
 version: 2.2
 github_link: ui_comp_guide/best-practices/semantic_config.md
@@ -10,7 +10,7 @@ github_link: ui_comp_guide/best-practices/semantic_config.md
 
 Magento 2.2.0 introduces a new structure for [UI components XML configuration]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html), aimed at improving configuration semantics.
 
-The arbitrary structure, used in UI components {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} configuration in previous Magento 2 versions, is also supported, and during XML files merging, the configuration files that use the arbitrary structure have higher priority.
+The arbitrary structure, used in UI 组件 {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} configuration in previous Magento 2 versions, is also supported, and during XML files merging, the configuration files that use the arbitrary structure have higher priority.
 
 Still, using the new structure for your customizations in Magento 2.2.0 and later, is the best practice, because the old "arbitrary" structure will become deprecated at some point.
 
@@ -21,7 +21,7 @@ Declaring the custom UI component is an exception, use the arbitrary structure w
 The main advantages of the new structure are described in the following sections.
 
 ## Readability
-All components options are separate nodes, and a node's purpose is defined by its name. The number of abstract-named nodes like `<item>`或`<argument>` is minimized.
+All 组件 options are separate nodes, and a node's purpose is defined by its name. The number of abstract-named nodes like `<item>`或`<argument>` is minimized.
 {% collapsible Illustration %}
 {% highlight xml%}
 <field name="default_billing" formElement="checkbox">
@@ -94,20 +94,20 @@ When editing XML configuration files in an IDE, you get visual notifications if 
 {% collapsible Illustration %}
 * If the node name is misspelled:
 
-![first_way_ui_components_declaration]({{ site.magentourl }}/common/images/ui_comps/validation1.png){:width="410px"}
+![first_way_ui_组件_declaration]({{ site.magentourl }}/common/images/ui_comps/validation1.png){:width="410px"}
 
 * If the required attribute is missing:
 
-![first_way_ui_components_declaration]({{ site.magentourl }}/common/images/ui_comps/validation2.png){:width="410px"}
+![first_way_ui_组件_declaration]({{ site.magentourl }}/common/images/ui_comps/validation2.png){:width="410px"}
 
 * The tooltip displayed if you move the pointer over the underlined element:
 
-![first_way_ui_components_declaration]({{ site.magentourl }}/common/images/ui_comps/validation3.png){:width="410px"}
+![first_way_ui_组件_declaration]({{ site.magentourl }}/common/images/ui_comps/validation3.png){:width="410px"}
 
 * Validating the complete file:
 
-![first_way_ui_components_declaration]({{ site.magentourl }}/common/images/ui_comps/validation_file.png){:width="520px"}
-![first_way_ui_components_declaration]({{ site.magentourl }}/common/images/ui_comps/validation_messages.png)
+![first_way_ui_组件_declaration]({{ site.magentourl }}/common/images/ui_comps/validation_file.png){:width="520px"}
+![first_way_ui_组件_declaration]({{ site.magentourl }}/common/images/ui_comps/validation_messages.png)
 
 {% endcollapsible %}
 

@@ -1,5 +1,5 @@
 ---
-group: UI Components
+group: UI 组件
 subgroup: Concepts
 title: your page title
 menu_title:

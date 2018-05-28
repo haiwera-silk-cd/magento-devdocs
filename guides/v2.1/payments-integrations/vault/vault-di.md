@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: C_vault
-title: Vault DI configuration
-menu_title: Vault DI configuration
+title: vault依赖注入配置
+menu_title: vault依赖注入配置
 menu_order: 3
 version: 2.1
 github_link: payments-integrations/vault/vault-di.md

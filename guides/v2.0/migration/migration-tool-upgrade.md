@@ -55,7 +55,7 @@ See the [安装数据迁移工具]({{ page.baseurl }}/migration/migration-tool-i
 
 ## 升级数据迁移工具 {#data-migrate-upgr}
 
-1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.
 2.	Change to Magento 2 root directory.
 3. 	Enter the following command:
 
@@ -68,7 +68,7 @@ See the [安装数据迁移工具]({{ page.baseurl }}/migration/migration-tool-i
 	`composer require magento/data-migration-tool:2.1.2`
 4.	Wait while the command completes.
 
-## Related topics
+## 相关主题
 
 * <a href="{{ page.baseurl }}/migration/migration-tool-configure.html">配置迁移</a>
 * <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">先决条件</a>

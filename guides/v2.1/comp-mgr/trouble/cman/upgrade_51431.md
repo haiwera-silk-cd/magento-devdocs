@@ -33,7 +33,7 @@ A snippet from this error follows:
 ## Solution
 To resolve these errors, perform the following tasks:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
 
 	If you don't have access to the Magento server file system, connect to it using an FTP application.
 2.	Remove the following files so you can upgrade again:
@@ -52,7 +52,7 @@ If your Magento application is set to write session data to the `<your Magento i
 
 [How to find where Magento stores session files]({{ page.baseurl }}/config-guide/sessions.html).
 
-To verify whether or not sessions are stored in `<your Magento install dir>/var/session`, log in to your Magento server, or switch to, [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html) and enter the following command:
+To verify whether or not sessions are stored in `<your Magento install dir>/var/session`, log in to your Magento server, or switch to, [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/apache-user.html) and enter the following command:
 
 	ls <your Magento file install dir>/var/session
 
@@ -64,7 +64,7 @@ If there are files in that directory, you must set permissions; if there are no 
 
 To set file system permissions before upgrade:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/apache-user.html).
 2.	Enter one of the following commands:
 
 	*	One Magento user (typical of shared hosting):

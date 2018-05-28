@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: Layout development
-title: Layout development
-menu_title: Layout development
+subgroup: 布局开发
+title: 布局开发
+menu_title: 布局开发
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-## Layout development
+## 布局开发
 
 - 	<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_columns">Set the page layout</a>
 	- 		<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_css">Include static resources (JavaScript, CSS, fonts) in &lt;head&gt;</a>

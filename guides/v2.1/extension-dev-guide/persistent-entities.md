@@ -8,7 +8,7 @@ version: 2.1
 github_link: extension-dev-guide/persistent-entities.md
 ---
 
-### Overview
+### 概述
 
 In Magento, an *entity* is a unique object that contains different attributes or parameters. Magento modules use entities in their business logic to represent something that is either concrete or abstract. Examples of Magento entities include product, order, customer, sale, and so on. Models with class attributes represent these entities in memory, and the underlying database provide and store the data for them.
 

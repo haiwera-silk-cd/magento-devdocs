@@ -35,7 +35,7 @@ You must run cron twice: the first time to discover tasks to run and the second 
 ## Run cron in the background {#config-cli-cron-bkg}
 This section discusses how to run all Magento cron jobs every minute, which is the recommended interval for both {{site.data.var.ce}} and {{site.data.var.ee}}.
 
-Run Magento cron jobs as the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+Run Magento cron jobs as the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 
 {% include config/setup-cron.md %}
 

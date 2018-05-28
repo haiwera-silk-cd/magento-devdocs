@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: Resize Component
 menu_title: Resize Component
 menu_node:
 menu_order: 10
 version: 2.0
-github_link: ui-components/ui-secondary-resize.md
+github_link: ui-组件/ui-secondary-resize.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-resize.html
 
 ---
@@ -49,9 +49,9 @@ The Resize component is currently configured as a plugin for the Listing compone
 
 The following is the component's element: `<Magento_Ui_module_dir>/view/base/web/js/grid/resize.js`
 
-#### Dependencies on other components
+#### Dependencies on other 组件
 
-The Resize components does not depend on other components
+The Resize 组件 does not depend on other 组件
 
 #### Component Options
 

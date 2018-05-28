@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Input component
-menu_title: Input component
+group: UI_组件_guide
+subgroup: 组件
+title: 输入框组件
+menu_title: 输入框组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-input.md
+github_link: ui_comp_guide/组件/ui-input.md
 ---
 
 ## Overview
 
-The Input component implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="text">` field.
+The 输入框组件 implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="text">` field.
 
 ## Configuration options
 

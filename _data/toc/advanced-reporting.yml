@@ -1,14 +1,14 @@
-label: Advanced Reporting
+label: 高级报表
 pages:
-  - label: Overview
+  - label: 概述
     url: /advanced-reporting/overview.html
     versions: ["2.2", "2.3"]
-  - label: Modules
+  - label: 模块
     url: /advanced-reporting/modules.html
     versions: ["2.2", "2.3"]
-  - label: Data collection
+  - label: 数据集
     url: /advanced-reporting/data-collection.html
     versions: ["2.2", "2.3"]
-  - label: Report XML
+  - label: XML报告
     url: /advanced-reporting/report-xml.html
     versions: ["2.2", "2.3"]

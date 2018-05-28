@@ -29,7 +29,7 @@ This topic discusses how to set required {% glossarytooltip bf703ab1-ca4b-48f9-b
 	Our detailed recommendations are:
 
 	*	Compiling code or deploying static assets, `756M`
-    *	Installing and updating Magento components from Magento Marketplace, `2G`
+    *	Installing and updating Magento组件 from Magento Marketplace, `2G`
     *	Testing, `2G`
 *	Disable [`asp_tags`](http://php.net/manual/en/ini.core.php#ini.asp-tags){:target="_blank"}
 
@@ -48,7 +48,7 @@ This topic discusses how to set required {% glossarytooltip bf703ab1-ca4b-48f9-b
 
 {% endcollapsible %}
 
-### Step 1: Find PHP configuration files {#php-required-find}
+### 步骤1. Find PHP configuration files {#php-required-find}
 This section discusses how you find the configuration files necesary to update required settings.
 
 {% collapsible To find the PHP configuration file, php.ini: %}
@@ -90,7 +90,7 @@ If you have more than one `opcache.ini`, modify all of them.
 
 {% endcollapsible %}
 
-### Step 2: How to set PHP options {#php-required-set}
+### 步骤2. How to set PHP options {#php-required-set}
 
 {% collapsible To set PHP options: %}
 
@@ -117,7 +117,7 @@ If you have more than one `opcache.ini`, modify all of them.
 
 {% endcollapsible %}
 
-### Step 3: Set OPcache options {#php-required-opcache}
+### 步骤3. Set OPcache options {#php-required-opcache}
 
 {% collapsible To set opcache.ini options: %}
 
@@ -142,7 +142,7 @@ If you have more than one `opcache.ini`, modify all of them.
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/apache.html">Apache</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
 

@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Data set
+title: 数据集
 version: 2.1
 github_link: mtf/mtf_entities/mtf_dataset.md
 ---
@@ -203,7 +203,7 @@ As you can see in the [structure table](#dataset_struct_table), the `name` data 
 
 Data mapping by `name` is performed for the test methods in test case  and `processAssert()` method in constraints. Let's see the logic of the `<data>` processing.
 
-Slash `/` means array nesting. For example:
+Slash `/` means array nesting. 例如:
 
 - `<data name=var/index1>value</data>` is converted as `var[index1 => value]`
 - `<data name=var/index1/index2>value</data>` is converted as `var[index1 => [index2 => value]]`
@@ -269,7 +269,7 @@ To assign it with `10` in one of the variations, add the following field to a va
 
 ### Set data to a fixture field {#fixture_field}
 
-In your test you often need to use injectable [fixture] instances. For example:
+In your test you often need to use injectable [fixture] instances. 例如:
 
 {%highlight php%}
 <?php

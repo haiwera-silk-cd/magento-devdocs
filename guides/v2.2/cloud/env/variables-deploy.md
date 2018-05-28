@@ -207,7 +207,7 @@ To further reduce deployment time, we recommend using [Configuration Management]
 -  **Default**—_Not set_
 -  **Version**—Magento 2.1.4 and later
 
-Use this environment variable to retain customized search service settings between deployments. For example:
+Use this environment variable to retain customized search service settings between deployments. 例如:
 
 ```yaml
 stage:
@@ -227,7 +227,7 @@ By default, the deployment process overwrites all settings in the `env.php` file
 -  **Default**—_Not set_
 -  **Version**—Magento 2.1.4 and later
 
-配置Redis session storage. You must specify the `save`, `redis`, `host`, `port`, and `database` options for the session storage variable. For example:
+配置Redis session storage. You must specify the `save`, `redis`, `host`, `port`, and `database` options for the session storage variable. 例如:
 
 ```yaml
 stage: 

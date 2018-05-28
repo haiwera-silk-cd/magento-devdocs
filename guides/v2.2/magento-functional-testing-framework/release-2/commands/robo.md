@@ -29,7 +29,7 @@ Or, if you added the path of the Robo executable file to the system *PATH*, then
 robo command [options] [arguments]
 ```
 
-### Example
+### 示例
 
 * Original:
   ```bash
@@ -207,7 +207,7 @@ Path to a directory with generated tests:  `tests/functional/Magento/FunctionalT
 `generate:tests --tests "<json configuration>"`   | Generates only the tests and suites in the specified JSON configuration. See examples of the JSON configurations and the entire command below.
 `generate:suite <suiteName>`   | Generates tests for the specified suite only.
 
-##### Examples of the JSON configuration
+##### 示例 of the JSON configuration
 
 The configuration to generate a single test with no suites:
 ```json

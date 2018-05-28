@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 <h2 id="compman-access">Component Management options</h2>
-To choose whether to upgrade or uninstall components:
+To choose whether to upgrade or uninstall 组件:
 
 1.	After you <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-start.html">run the Component Manager</a>, a page similar to the following displays:<br><br>
 	<img src="{{ site.baseurl }}/common/images/cman_initial-page.png" width="750px" alt="The Component Manager page enables you to synchronize with Magento Marketplace to see if updates are available">
@@ -37,7 +37,7 @@ To choose whether to upgrade or uninstall components:
 		<td><p>Click <strong>Sync</strong> to compare the component versions you're currently using with those available on Magento Marketplace.</p></td>
 	</tr>
 	<tr>
-		<td><p>List of components</p></td>
+		<td><p>List of 组件</p></td>
 		<td><p>For each component, one of the following status indicators displays in the left column:</p>
 			<ul><li><img src="{{ site.baseurl }}/common/images/cman_comp-status-green.png" alt="A green icon means that the component is enabled and is current as of the last sync">Green, which means the component is enabled and its status was current the last time you synchronized with Magento Marketplace.</li>
 				<li><img src="{{ site.baseurl }}/common/images/cman_comp-status-info.png" alt="An info icon means there is an update available">An update is available.</li>
@@ -49,7 +49,7 @@ To choose whether to upgrade or uninstall components:
 		<td><p>Actions</p></td>
 		<td><p>Displays a list of actions available for that component type. <a href="#compman-access-types">Details about available actions</a>.</p>
 			<p>The following figure shows an example.</p>
-			<img src="{{ site.baseurl }}/common/images/cman_actions.png" alt="You can enable, disable, or update components">
+			<img src="{{ site.baseurl }}/common/images/cman_actions.png" alt="You can enable, disable, or update 组件">
 			
 	<tr>
 		<td><p>Pagination</p></td>
@@ -76,13 +76,13 @@ To install a new purchase:
 
 	<img src="{{ site.baseurl }}/common/images/compman_new-purchases1.png" width="450px">
 
-2.	On the next page, select the components to install.
+2.	On the next page, select the 组件 to install.
 
 	To install all of them, click **Select all** from the list.
 
-	To install components individually, either select the check box next to the component or click **Install** in the Action column.
+	To install 组件 individually, either select the check box next to the component or click **Install** in the Action column.
 
-	The following figure shows an example of selecting all components.
+	The following figure shows an example of selecting all 组件.
 
 	<img src="{{ site.baseurl }}/common/images/compman_new-purchases2.png" width="700px">
 3.	Click **Install**.
@@ -91,13 +91,13 @@ To install a new purchase:
 
 
 <h2 id="compman-access-sync">Update a component</h2>
-To see if any of your components can be updated, click **Sync**.
+To see if any of your 组件 can be updated, click **Sync**.
 
 <img src="{{ site.baseurl }}/common/images/cman_comp-status-info.png" alt="An info icon means there is an update available"> displays in the left column of each component that you can update. 
 
 The following figure shows an example.
 
-<img src="{{ site.baseurl }}/common/images/cman_component-needs-update.png" width="650px" alt="Example showing components that need updating">
+<img src="{{ site.baseurl }}/common/images/cman_component-needs-update.png" width="650px" alt="Example showing 组件 that need updating">
 
 To update the component, click **Update** from the **Actions** list. A sample follows.
 
@@ -124,7 +124,7 @@ Continue with <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-readiness.
 
 
 <h2 id="compman-access-types">Supported actions for each component type</h2>
-We define the following *components*:
+We define the following *组件*:
 
 *	`module` for a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} or {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} (that is, {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code that modifies Magento behavior)
 *	`language` for a {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} used to translate the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}
@@ -132,23 +132,23 @@ We define the following *components*:
 *	`library` for a library&mdash;such as a shared third-party {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}
 *	`component` for any type of component that must be installed in the Magento root directory (this is a relatively uncommon type)
 
-We also use `metapackage` to group components; Magento Community Edition (CE) and Magento Enterprise Edition (EE) are examples of metapackages.
+We also use `metapackage` to group 组件; Magento Community Edition (CE) and Magento Enterprise Edition (EE) are examples of metapackages.
 
-You can perform actions on components differently, depending on whether the component is part of a {% glossarytooltip 7490850a-0654-4ce1-83ff-d88c1d7d07fa %}metapackage{% endglossarytooltip %} or not.
+You can perform actions on 组件 differently, depending on whether the component is part of a {% glossarytooltip 7490850a-0654-4ce1-83ff-d88c1d7d07fa %}metapackage{% endglossarytooltip %} or not.
 
 The following sections provide details:
 
-*	<a href="#compman-access-types-meta">Actions available for metapackage components</a>
-*	<a href="#compman-access-types-non-meta">Actions available for non-metapackage components</a>
+*	<a href="#compman-access-types-meta">Actions available for metapackage 组件</a>
+*	<a href="#compman-access-types-non-meta">Actions available for non-metapackage 组件</a>
 
-<h3 id="compman-access-types-meta">Actions available for metapackage components</h3>
+<h3 id="compman-access-types-meta">Actions available for metapackage 组件</h3>
 Magento requires any component that has more than one type to be a metapackage. For example, we require a component that contains a module and a {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} to be packaged as a metapackage.
 
 <div class="bs-callout bs-callout-info" id="info">
       <p>We currently do not support uninstalling a metapackage.</p>
 </div>
 
-The following table shows which actions are available for components that are part of a metapackage.
+The following table shows which actions are available for 组件 that are part of a metapackage.
 
 <table>
 	<col width="40%">
@@ -199,7 +199,7 @@ The following table shows which actions are available for components that are pa
       <p><strong>Update</strong> displays as an action only if an update is available for that component.</p>
 </div>
 
-<h3 id="compman-access-types-non-meta">Actions available for non-metapackage components</h3>
+<h3 id="compman-access-types-non-meta">Actions available for non-metapackage 组件</h3>
 Typically, a component that you download from Magento Marketplace is not part of a metapackage; in other words, a single module is probably not part of a metapackage.
 
 The following table shows which actions are supported for each non-metapackage component.
@@ -249,5 +249,5 @@ The following table shows which actions are supported for each non-metapackage c
 		</tbody>
 	</table>
 
-#### Next
-[Step 1: Readiness check]({{ page.baseurl }}/comp-mgr/module-man/compman-readiness.html)
+#### 下一步
+[步骤1. Readiness check]({{ page.baseurl }}/comp-mgr/module-man/compman-readiness.html)

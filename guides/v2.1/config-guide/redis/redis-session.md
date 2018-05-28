@@ -21,7 +21,7 @@ Before you continue, [install Redis]({{ page.baseurl }}/config-guide/redis/confi
   <p>You can use Redis for session storage in Magento versions 2.0.6 and later only.</p></span>
 </div>
 
-<h2 id="config-redis-config">Configure Magento to use Redis for session storage</h2>
+<h2 id="config-redis-config">配置Magento to use Redis for session storage</h2>
 Following is a sample configuration to add to `<your Magento install dir>app/etc/env.php`:
 
     'session' =>

@@ -17,7 +17,7 @@ See one of the following sections for more information:
 
 *	[Upgrade to Magento Open Source or Commerce version 2.1 *without* sample data](#tb-upgr-nosamp)
 *	[Upgrade to Magento Open Source or Commerce version 2.1 with sample data](#tb-upgr-samp)
-*	[Enterprise Edition only: Web Setup Wizard upgrade to Magento Commerce version 2.1 with sample data](#tb-upgr-samp-wiz)
+*	[Enterprise Edition only: 网页安装向导 upgrade to Magento Commerce version 2.1 with sample data](#tb-upgr-samp-wiz)
 
 ### Upgrade to Magento Open Source or Commerce version 2.1 *without* sample data {#tb-upgr-nosamp}
 Upgrades to version 2.1 without sample data can fail because of an issue with the Magento `composer-installer` component. It doesn't correctly detect code changes and therefore doesn't update the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and compiled code directories properly. As a result, fatal errors display during the upgrade.
@@ -34,7 +34,7 @@ Use the following instructions to get the patch named `MDVA-532.*`, then transfe
 {% endcollapsible %}
 
 #### Apply the patch
-As the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html), extract the patch in your Magento installation directory.
+As the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html), extract the patch in your Magento installation directory.
 
 {% collapsible To apply the patch: %}
 
@@ -57,7 +57,7 @@ After applying the patch, complete your upgrade as follows:
 {%include install/sampledata/sample-data-rc1-cli.md %}
 
 
-### Commerce only: Web Setup Wizard upgrade to Magento Commerce version 2.1 with sample data {#tb-upgr-samp-wiz}
+### Commerce only: 网页安装向导 upgrade to Magento Commerce version 2.1 with sample data {#tb-upgr-samp-wiz}
 Upgrades to Magento Commerce 2.1 with sample data can fail because of the following issues:
 
 *	An issue with the Magento `composer-installer` component. It doesn't correctly detect code changes and therefore doesn't update the cache and compiled code directories properly. As a result, fatal errors display during the upgrade.
@@ -77,7 +77,7 @@ Use the following instructions to get the patch named `MDVA-532.*`, then transfe
 {% endcollapsible %}
 
 #### Apply the patch
-As the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html), extract the patch in your Magento installation directory.
+As the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html), extract the patch in your Magento installation directory.
 
 {% collapsible To apply the patch: %}
 
@@ -93,7 +93,7 @@ For example, to change to the `magento_user` and extract `MDVA-532.zip` into `/v
 
 {% collapsible To fix composer.lock: %}
 
-1.	As the Magento file system owner, open `<your Magento install dir>/composer.lock` in a text editor.
+1.	As the Magento文件系统所有者, open `<your Magento install dir>/composer.lock` in a text editor.
 2.	Change the following entry.
 
 	from:

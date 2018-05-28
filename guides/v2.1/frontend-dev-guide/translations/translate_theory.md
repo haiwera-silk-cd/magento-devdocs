@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
 ---
 
-## What's in this topic ##
+## 这里有什么 ##
 
 Your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} might contain new strings that are not present in the Magento out of the box themes. To ensure that your theme is displayed correctly with any language applied on a store view, you need to make sure that the unique strings of your theme are added to the translation <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">dictionary</a> when the <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict" target="_blank">i18n tool</a> is run.
 Then when a new {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} is created and used to translate a store view, all theme strings are translated as well.
@@ -21,7 +21,7 @@ This topic describes how to add theme strings in a way that they get collected b
 
 To ensure that your new string is added to the dictionary and translated, use the `__('<your_string>')` method when outputting a string in a <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-overview.html" target="_blank">.phtml template</a>.
 
-For example:
+例如:
 
 {% highlight html+php %}
 	<h3><?php echo __('Create Backup') ?></h3>
@@ -42,9 +42,9 @@ To make sure the strings of an email template are added to the dictionary, use t
 
 Custom email templates <a href="{{ page.baseurl }}/frontend-dev-guide/templates/template-email.html#customize-email-admin" target="_blank">added using the Admin panel</a>, are not stored in the file system, and their stings are not added to the dictionary.
 
-<h2 id="add_strings_ui_html">Strings added in UI components' templates</h2>
+<h2 id="add_strings_ui_html">Strings added in UI 组件' templates</h2>
 
-To ensure that the text you add in `.html` templates of UI components is added to the dictionary, mark the text using the `i18n` custom binding. The following code samples illustrate how it should be used for different cases of adding a text:
+To ensure that the text you add in `.html` templates of UI 组件 is added to the dictionary, mark the text using the `i18n` custom binding. The following code samples illustrate how it should be used for different cases of adding a text:
 
 - when a string is added in the scope of an HTML element:
 
@@ -64,9 +64,9 @@ To ensure that the text you add in `.html` templates of UI components is added t
     <input type="text" data-bind="attr: {placeholder: $t('First Name')}" />
 {% endhighlight HTML%}
 
-<h2 id="add_strings_ui_xml">Strings added in UI components configuration files</h2>
+<h2 id="add_strings_ui_xml">Strings added in UI 组件 configuration files</h2>
 
-To ensure that the text you add in UI components configuration `.xml` files is added to the dictionary, use the `translate` attribute: set `translate=true` for the corresponding element. The following code sample is an illustration:
+To ensure that the text you add in UI 组件 configuration `.xml` files is added to the dictionary, use the `translate` attribute: set `translate=true` for the corresponding element. The following code sample is an illustration:
 
 {% highlight xml%}
     <item name="label" xsi:type="string" translate="true">Delete</item>

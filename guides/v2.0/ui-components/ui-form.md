@@ -5,19 +5,19 @@ title: Form Component
 menu_title: Form Component
 menu_node: parent
 version: 2.0
-github_link: ui-components/ui-form.md
+github_link: ui-组件/ui-form.md
 redirect_from: /guides/v2.0/ui-library/ui-form.html
 redirect_from: /guides/v2.0/ui_comp_guide/components/ui-form.html
 ---
 
 ## Overview
-Form component allows performing <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations on an {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}. 
+表单组件 allows performing <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations on an {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}. 
 
-The following are the components element, the constructor: `<Magento_Ui_module_dir>/view/base/web/js/form/form.js`
+The following are the 组件 element, the constructor: `<Magento_Ui_module_dir>/view/base/web/js/form/form.js`
 
-<h4>Related UI components</h4>
+<h4>Related UI 组件</h4>
 
-The following components are used to extend the Form component:
+The following 组件 are used to extend the 表单组件:
 
 * DataSource
 * FieldSet
@@ -34,7 +34,7 @@ The following components are used to extend the Form component:
 * layout - configuration class meets the visualization component
     (See examples in 'Configuring' section)
 
-## Create an instance of the Form component
+## Create an instance of the 表单组件
 
 * Create configuration file for the instance (for example: customer_form.xml)
 
@@ -55,7 +55,7 @@ Example:
 </page>
 {% endhighlight %}
  
-## Configure the Form component
+## Configure the 表单组件
 
 Component could be configured in two ways:
 
@@ -89,7 +89,7 @@ Nodes are optional and contain parameters required for component:
 
 * layout - configuration class meets the visualization component. Names for deps and provider are specified with a complete path from the root component with the separator "."
 
-Add a description of the fields in the form using components and Field Fieldset:
+Add a description of the fields in the form using 组件 and Field Fieldset:
 
 {%highlight xml%}
 ...
@@ -112,14 +112,14 @@ Add a description of the fields in the form using components and Field Fieldset:
 …
 {% endhighlight%}
 
-To group components you can use the component container as in example below:
+To group 组件 you can use the component container as in example below:
 
 {% highlight xml%}
 <container name="container_group">
     <argument name="data" xsi:type="array">
         <item name="type" xsi:type="string">group</item>
         <item name="js_config" xsi:type="array">
-            <item name="component" xsi:type="string">Magento_Ui/js/form/components/group</item>
+            <item name="component" xsi:type="string">Magento_Ui/js/form/组件/group</item>
         </item>
         <item name="config" xsi:type="array">
             <item name="label" xsi:type="string" translate="true">Group</item>

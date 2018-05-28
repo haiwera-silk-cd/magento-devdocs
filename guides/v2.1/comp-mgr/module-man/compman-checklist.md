@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 <h2 id="compman-overview">Overview of the Component Manager</h2>
-This section discusses how to start the Component Manager, which updates or uninstalls Magento components:
+This section discusses how to start the Component Manager, which updates or uninstalls Magento组件:
 
 *	Modules (extend Magento capabilities)
 *	Themes (change the look and feel of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and Admin)
@@ -30,4 +30,4 @@ Before continuing, complete all tasks discussed in <a href="{{ page.baseurl }}/c
 {% include comp-man/checklist.md %}
 
 #### 下一步
-[运行组件管理器]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)
+[运行components管理器]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)

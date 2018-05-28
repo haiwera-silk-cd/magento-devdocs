@@ -13,7 +13,7 @@ functional_areas:
   - test
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 <p>
 The topic describes how to install, configure and use <a href="http://gruntjs.com/" target="_blank">Grunt JavaScript task runner</a> for compiling <code>.less</code> files in Magento 2. </p>
@@ -104,7 +104,7 @@ Action
 grunt clean:&lt;theme&gt;
 </pre>
 
-For example:
+例如:
 <pre>
 grunt clean:blank
 </pre>
@@ -179,11 +179,11 @@ After you customize the content of any <code>.less</code> file, changes are appl
 
 When using Grunt for styles preprocessing, you can enable the CSS source maps displaying in your browser. It will make the theme styles debugging easier.
 
-For each theme, Magento compliles all theme `.less` files into two CSS files: `styles-m.css` and `styles-l.css`. So when you debug a theme, you browser only sees `styles-m.css` and it might be difficult to define which exactly `.css`或`.less` file requires corrections. For example:
+For each theme, Magento compliles all theme `.less` files into two CSS files: `styles-m.css` and `styles-l.css`. So when you debug a theme, you browser only sees `styles-m.css` and it might be difficult to define which exactly `.css`或`.less` file requires corrections. 例如:
 
 ![node declaration autocomplete]({{ site.magentourl }}/common/images/fdg/no-map.png){:width="610px"}
 
-CSS source maps solve this issue. They help to find the `.less` file, where the style is specified. For example:
+CSS source maps solve this issue. They help to find the `.less` file, where the style is specified. 例如:
 
 ![node declaration autocomplete]({{ site.magentourl }}/common/images/fdg/with-map.png){:width="610px"}
 

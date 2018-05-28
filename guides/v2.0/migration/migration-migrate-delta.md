@@ -57,7 +57,7 @@ If an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endg
 
 3. Add the name of the newly created class to the delta mode section of `config.xml`
 
-## Related topics
+## 相关主题
 
 * <a href="{{ page.baseurl }}/migration/migration-manually.html">须要手动迁移的数据</a>
 

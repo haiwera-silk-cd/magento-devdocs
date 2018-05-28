@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 ## Overview
-Magento 2 uses [Composer][0]{:target="\_blank"}, a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} dependency manager, to package components and product editions.
+Magento 2 uses [Composer][0]{:target="\_blank"}, a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} dependency manager, to package 组件 and product editions.
 
 Composer reads a `composer.json` file in Magento's root directory to download third-party dependencies listed in the file.
 
@@ -40,7 +40,7 @@ The [installation instructions for system integrators][10] use the {{site.data.v
 A "product" package is the actual application pointed to by the `composer.json` file after you download and install the project package using `composer create-project`.  
 
 ## Descriptions of different composer.json files {#composerjson-overview}
-The following Magento components and product editions use a `composer.json` file.
+The following Magento组件 and product editions use a `composer.json` file.
 
 ### Magento Root
 **Location:** `composer.json`
@@ -49,7 +49,7 @@ The following Magento components and product editions use a `composer.json` file
 
 **Type:** `project`
 
-This is Magento's main `composer.json` file which declares dependencies and third-party components.
+This is Magento's main `composer.json` file which declares dependencies and third-party 组件.
 
 Other root `composer.json` files use this file as a template.
 

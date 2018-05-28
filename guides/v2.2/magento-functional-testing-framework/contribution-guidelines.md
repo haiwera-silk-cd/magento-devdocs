@@ -13,7 +13,7 @@ Use the [fork] & [pull] model to contribute to the Magento Functional Testing Fr
 This contribution model has contributors maintaining their own copy of the forked code base (which can be easily synced with the main copy).
 The forked repository is then used to submit a request to the base repository to pull a set of changes (pull request).
 
-Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
+Contributions can take the form of new 组件 or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
 The MFTF development team reviews all issues and contributions submitted by the community of developers in a FIFO basis.
  During the review we might require clarifications from the contributor.
@@ -25,7 +25,7 @@ If you’re ever curious what the different labels mean, see the [table][labels]
 Please refer to [Magento Contributor Agreement] for detailed information about the License Agreement.
 All contributors are required to submit a click-through form to agree to the terms.
 
-## Contribution requirements
+## 贡献要求
 
 1.	Contributions must adhere to [Magento coding standards].
 2.	Refer to the Magento development team’s [Definition of Done].
@@ -42,7 +42,7 @@ This may prevent duplicate or unnecessary effort, and it may gain you some addit
 8.	To report a bug, please [open an issue][issue], and follow [guidelines about bugfix issues][issue reporting].
 9.	All automated tests must pass successfully (all builds on [Travis CI] must be green).
 
-## Fork a repository {#fork}
+## fork一个仓库 {#fork}
 
 To fork a repository on Github, do the following:
 
@@ -82,7 +82,7 @@ Provide a descriptive name for your pull request in the provided field.
 
 Scroll to the bottom of the page and click **Merge pull request**, then click **Confirm Merge**.
 
-## Create a pull request {#pull-request}
+## 创建合并请求 {#pull-request}
 
 First, check the [existing PRs] and make sure you are not duplicating others’ work!
 
@@ -101,7 +101,7 @@ After submitting your PR, you can head over to the repository’s [Pull Requests
  Your PR undergoes automated testing, and if it passes, the core team considers it for inclusion in the Magento Functional Testing Framework core.
  If some tests fail, please make the corresponding corrections in your code.
 
-## Report an issue {#issue}
+## 报告问题 {#issue}
 
 If you find a bug in Magento Functional Testing Framework code, you can report it by creating an issue in the Magento Functional Testing Framework repository.
 

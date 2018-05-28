@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: UI components XML configuration structure
-menu_title: UI components XML configuration structure  
+title: UI 组件 XML configuration structure
+menu_title: UI 组件 XML configuration structure  
 menu_order: 15
 version: 2.2
 github_link: ui_comp_guide/concepts/ui_comp_xmlconfig_structure.md
@@ -10,7 +10,7 @@ github_link: ui_comp_guide/concepts/ui_comp_xmlconfig_structure.md
 
 ## Overview
 
-This topic describes the basic elements used in XML configuration files for declaring  UI components. These elements co structure is strict and third party developers must follow it when customizing existing UI components' configuration or declaring new ones.  
+This topic describes the basic elements used in XML configuration files for declaring  UI 组件. These elements co structure is strict and third party developers must follow it when customizing existing UI 组件' configuration or declaring new ones.  
 
 ## Basic configuration elements
 <table>
@@ -163,16 +163,16 @@ This topic describes the basic elements used in XML configuration files for decl
   </tr>
 </table>
 
-## Example of the basic UI components configuration structure
+## Example of the basic UI 组件 configuration structure
 
 {%highlight xml%}
 
 <form>
     <arguments name=“data”>
-        // The old arbitrary structure that declares the configuration of the Form component
+        // The old arbitrary structure that declares the configuration of the 表单组件
     </arguments>
     <settings>
-        // The new strict structure that declares the configuration of the Form component
+        // The new strict structure that declares the configuration of the 表单组件
     </settings>
     <fieldset name=“fieldsetName”>
         <arguments name=“data”>

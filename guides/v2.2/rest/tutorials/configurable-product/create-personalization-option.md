@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 group: rest
-title: Step 5. Create the personalization option
-menu_title: Step 5. Create the personalization option
+title: 步骤5. Create the personalization option
+menu_title: 步骤5. Create the personalization option
 menu_order: 50
 level3_subgroup: configurable-product-tutorial
 version: 2.2
@@ -71,6 +71,6 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
   ## Congratulations! You've finished.
   {:.no_toc}
 
-  ## Related topics
+  ## 相关主题
 
-  * [Order Processing with REST APIs Tutorial]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)
+  * [使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)

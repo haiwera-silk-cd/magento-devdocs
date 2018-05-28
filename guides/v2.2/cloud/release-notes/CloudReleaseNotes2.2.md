@@ -38,7 +38,7 @@ Look for the following {{site.data.var.ece}} highlights in this release:
 
 * **Bundled extensions**. This release of Magento includes the first third-party extension that we are bundling with Magento Commerce -- Magento Social. This extension establishes a connection between your store and your corporate Facebook account, and creates a page with products from your catalog. When shoppers click a product, they are redirected to the corresponding product page in your Magento store.
 
-* **Integrated Signifyd fraud protection**. You can learn more about this fraud protection service, which can help merchants eliminate liability for any losses or fees from fraudulent orders, in [Signifyd fraud protection](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html).
+* **Integrated Signifyd欺诈保护**. You can learn more about this fraud protection service, which can help merchants eliminate liability for any losses or fees from fraudulent orders, in [Signifyd欺诈保护](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html).
 
 * **Significant enhancements in platform security and developer experience**. Security improvements include the removal of unserialize calls and protection of this functionality to increase resilence against dangerous code execution attacks. We have also continued to review and improve our protection against Cross-Site Scripting (XSS) attacks.
 
@@ -117,7 +117,7 @@ We are grateful to the wider Magento community and would like to acknowledge the
 ## System requirements {#requirements}
 For {{site.data.var.ece}} requirements, see [Technologies and Requirements](http://devdocs.magento.com/guides/v2.2/cloud/requirements/cloud-requirements.html).
 
-The {{site.data.var.ee}} technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html) and [System Requirements]({{ site.baseurl }}/magento-system-requirements.html){:target="\_blank"}.
+The {{site.data.var.ee}} technology stack is built on PHP and MySQL. For details, see [技术栈 requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html) and [系统要求]({{ site.baseurl }}/magento-system-requirements.html){:target="\_blank"}.
 
 ## Installation and upgrade instructions {#install-upgrade}
 If installing and working with {{site.data.var.ece}} for the first time, we recommend [First-time local environment setup]({{ page.baseurl }}/cloud/access-acct/first-time-setup.html).

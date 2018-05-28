@@ -34,7 +34,7 @@ Do not use a timeline as an alternative display mode for tree, card or data tabl
 <h3 id="terminology">Staging terminology and definitions</h3>
 
 #### Stage-able entity:
-A part of Magento that can be scheduled to change, within an update. Examples: Products, Categories<br>
+A part of Magento that can be scheduled to change, within an update. 例如: Products, Categories<br>
 
 #### Update:
 A combination of changes to a stage-able {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}. Multiple updates are shown on the staging timeline. An update’s state is either completed, active or scheduled to be activated.Most updates are scheduled for a temporary span of time, but some can be permanent. <br>

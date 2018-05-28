@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Integrate with the Company module
-menu_title: Integrate with the Company module
+title: 集成公司模块
+menu_title: 集成公司模块
 menu_order: 11
 version: 2.2
 ee_only: True
@@ -18,7 +18,7 @@ The `Company` module allows multiple buyers that belong to the same company to v
 
 ## Related information
 
-* [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-* [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-* [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
-* [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+* [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)
+* [管理公司用户]({{ page.baseurl }}/b2b/company-users.html)
+* [管理公司角色]({{ page.baseurl }}/b2b/roles.html)
+* [管理公司结构]({{ page.baseurl }}/b2b/company-structures.html)

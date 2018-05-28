@@ -21,7 +21,7 @@ The accordion {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工�
 
 <h2 id="accordion_init">Initialize the 手风琴菜单小工具</h2>
 
-<h3>Initialize accordion in JS components</h3>
+<h3>Initialize accordion in JS 组件</h3>
 
 <h4>Initialize accordion with <code>data-*</code> attributes specified</h4>
 Generally the 手风琴菜单小工具 is instantiated like following:
@@ -58,7 +58,7 @@ Accordions support arbitrary markup, but the following requirements should be ke
 <li>The header, trigger and content are specified, either by adding the <code>data-*</code> attributes for the corresponding children elements or by specifying these elements with selectors as options.</li>
 </ol>
 
-Mark-up examples:
+Mark-up 例如:
 
 {%highlight html%}
 <div id="element">
@@ -97,7 +97,7 @@ Mark-up examples:
 
 <h4>Initialize accordion with option</h4>
 You can specify the header, content, trigger as options when you initialize the widget.
-For example:
+例如:
 <pre>
 $("#element").accordion({
     header : "#title-1",
@@ -181,7 +181,7 @@ Activate a tab with the specified `index`.
 
 If no `index` is passed, all panels are activated.
 
-Code examples:
+Code 例如:
 <pre>
 $( "#element" ).accordion( "activate" );
 $( "#element" ).accordion( "activate", 1 );
@@ -196,7 +196,7 @@ Deactivate a tab with the specified `index`.
 
 If no index is passed, all panels are deactivated.
 
-Code examples:
+Code 例如:
 
 <pre>
 $( "#element" ).accordion( "deactivate" );

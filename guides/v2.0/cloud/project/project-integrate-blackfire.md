@@ -163,7 +163,7 @@ Add project variables for Blackfire for the server ID and token. You can add the
 	magento-cloud login
 	```
 
-1.  Copy the commands from step 3 on the Blackfire Magento Cloud integration page.
+1.  Copy the commands from 步骤3 on the Blackfire Magento Cloud integration page.
 1.  Paste and enter the commands in the Magento Cloud CLI. Since you are already in your project, remove the `--project='<Project ID>'` content from the command. The commands include the Project ID and Blackfire server ID and token. The commands may look like the following:
 
 	```bash

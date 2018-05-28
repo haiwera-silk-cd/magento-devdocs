@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 This topic discusses the main concepts of how default templates work in the Magento application. 
 
 <h2 id="template-layout">How templates are initiated</h2>
@@ -36,7 +36,7 @@ The next section describes where templates can be located in general.
 * <span id="module">Module templates: <code>&lt;module_dir&gt;/view/frontend/templates/&lt;path_to_templates&gt;</code>
 * <span id="theme">Theme templates: <code>&lt;theme_dir&gt;/&lt;Namespace&gt;_&lt;Module&gt;/templates/&lt;path_to_templates&gt;</code>
 
-Here <code>&lt;path_to_templates&gt;</code> might have several levels of directory nesting, or might be empty. Examples:
+Here <code>&lt;path_to_templates&gt;</code> might have several levels of directory nesting, or might be empty. 例如:
 
 * `<Magento_Catalog_module_dir>/view/frontend/templates/product/widget/new/content/new_grid.phtml`
 * `<Magento_Checkout_module_dir>/view/frontend/templates/cart.phtml`

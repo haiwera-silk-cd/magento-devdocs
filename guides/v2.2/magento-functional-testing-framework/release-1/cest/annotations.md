@@ -60,7 +60,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <description value="Add Catalog via Admin"/>
@@ -86,7 +86,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <env value="chrome"/>
@@ -112,7 +112,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <features value="Catalog"/>
@@ -140,7 +140,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <group value="catalog"/>
@@ -166,7 +166,7 @@ Attribute|Type|Use
 value|string|required
 
 
-#### Example 
+#### 示例 
 
 ```xml
 <return value="void"/>
@@ -191,7 +191,7 @@ Attribute|Type|Use|Acceptable values
 ---|---|---|---
 value|string|required|`"BLOCKER"`, `"CRITICAL"`, `"NORMAL"`, `"MINOR"`, `"TRIVIAL"`
 
-#### Example 
+#### 示例 
 
 ```xml
 <severity value="CRITICAL"/>
@@ -216,7 +216,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <stories value="Add Catalog"/>
@@ -245,7 +245,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <testCaseId value="#"/>
@@ -272,7 +272,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <useCaseId value="USECASE-1"/>
@@ -296,7 +296,7 @@ Attribute|Type|Use
 ---|---|--
 value|string|required
 
-#### Example 
+#### 示例 
 
 ```xml
 <title value="Add Catalog"/>

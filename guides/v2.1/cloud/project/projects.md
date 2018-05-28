@@ -93,7 +93,7 @@ The following table details the branches for Pro:
 <tr>
 <td>(no branch)</td>
 <td>Global Master</td>
-<td>This "branch" captures global project changes including adding user accounts and variables. <b>Important:</b> Do not create branches from or merge to Global Master.
+<td>This "branch" captures global project changes including adding user accounts and variables. <b>重要:</b> Do not create branches from or merge to Global Master.
 </td>
 </tr>
 <tr>

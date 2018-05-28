@@ -50,7 +50,7 @@ In addition to those files, a Magento 2 module also has nested configuration dir
 *	`<your module root dir>/etc/webapi_rest/`
 *	`<your module root dir>/etc/webapi_soap/`
 
-### Configuration files
+### 配置文件
 *	Configuration files that are in the top level of that module's `etc` directory are global to that component.
 *	Configuration files placed in subdirectories (`adminhtml`, `frontend`, `webapi_rest`, `webapi_soap`) apply only to those respective functional areas.
 
@@ -64,7 +64,7 @@ The exact set of configuration files required for your module depends on what yo
 *	`<your module root dir>/etc/adminhtml/di.xml`
 *	`<your module root dir>/etc/adminhtml/routes.xml`
 
-Similarly, if your module changes the UI, you should add the needed configuration files to `~/etc/frontend/`. For example:
+Similarly, if your module changes the UI, you should add the needed configuration files to `~/etc/frontend/`. 例如:
 
 *	`<your module root dir>/etc/frontend/di.xml`
 *	`<your module root dir>/etc/frontend/page_types.xml`
@@ -77,6 +77,6 @@ If the module is a service that may call an API, or does some other work that is
 Keep in mind that you might be able to handle your module's configuration solely with configuration files at the top level of your module's `etc` directory, but the nested directory is a useful way to keep the configuration neatly compartmentalized.
 
 
-#### Next
+#### 下一步
 
-[创建你的组件文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html)
+[创建你的components文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html)

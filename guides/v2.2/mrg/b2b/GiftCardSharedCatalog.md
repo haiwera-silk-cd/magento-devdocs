@@ -40,9 +40,9 @@ You can extend and override layouts in the `Magento\GiftCardSharedCatalog\view\a
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directory contains extensible UI components:
+The following directory contains extensible UI 组件:
 
 * `Magento\GiftCardSharedCatalog\view\adminhtml\ui_component` - renderer for pricing and structure listings
 

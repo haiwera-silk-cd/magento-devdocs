@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Integrate with the NegotiableQuote module
-menu_title: Integrate with the NegotiableQuote module
+title: 与NegotiableQuote模块集成
+menu_title: 与NegotiableQuote模块集成
 menu_order: 31
 version: 2.2
 ee_only: True
@@ -119,7 +119,7 @@ The following diagram shows the negotiable quote lifecycle from the perspective 
 
 ## Related information
 
-* [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-* [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-* [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-* [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+* [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)
+* [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)
+* [协商报价结算]({{ page.baseurl }}/b2b/negotiable-checkout.html)
+* [生成协商报价订单]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)

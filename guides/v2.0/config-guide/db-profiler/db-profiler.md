@@ -18,7 +18,7 @@ functional_areas:
 ## About the database profiler
 The Magento database profiler displays all queries executed on a page, including the time for each query and what parameters were executed.
 
-## Step 1: Modify the deployment configuration
+## 步骤1. Modify the deployment configuration
 Modify `<your Magento install dir>/app/etc/env.php` to add the following reference to the [database profiler class]({{ site.mage2000url }}lib/internal/Magento/Framework/DB/Profiler.php){:target="_blank"}:
 
 {% highlight php startinline=true %}
@@ -56,7 +56,7 @@ An example follows:
   {% endhighlight %}
 
 
-## Step 2: Configure the output
+## 步骤2. Configure the output
 Configure the output in your Magento application boostrap file; this might be `<your Magento install dir>/index.php` or it could be located in a web server virtual host configuration.
 
 The following example displays results in a three-column table:
@@ -89,7 +89,7 @@ foreach ($profiler->getQueryProfiles() as $query) {
 echo "</table>";
 {% endhighlight %}
 
-## Step 3: View the results
+## 步骤3. View the results
 Go to any page in your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} or {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} to view the results. A sample follows:
 
 ![Sample database profiler results]({{ site.magentourl }}/common/images/config_db-profiler-results.png){:width="800px"}

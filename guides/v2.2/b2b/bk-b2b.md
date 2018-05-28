@@ -1,9 +1,9 @@
 ---
 group: b2b
 subgroup: 01_Introduction
-title: B2B Developer Guide
+title: B2B开发者文档
 landing-page: B2B
-menu_title: B2B Developer Guide
+menu_title: B2B开发者文档
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -56,5 +56,5 @@ RequisitionList | Allows a buyer to create multiple lists of frequently-purchase
 SharedCatalog | Defines the visibility of products and prices in the catalog and in B2B quotes for different company accounts. | Yes
 
 ## Related information
-* [Install the B2B extension]({{ page.baseurl }}/comp-mgr/install-extensions/b2b-installation.html)
-* [Getting started with {{site.data.var.b2b}}](http://docs.magento.com/m2/b2b/user_guide/getting-started.html)
+* [安装B2B扩展]({{ page.baseurl }}/comp-mgr/install-extensions/b2b-installation.html)
+* [起步 with {{site.data.var.b2b}}](http://docs.magento.com/m2/b2b/user_guide/getting-started.html)

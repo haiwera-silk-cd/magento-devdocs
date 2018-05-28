@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 1. 配置网店
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤1. 配置网店
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 1
 level3_menu_node:

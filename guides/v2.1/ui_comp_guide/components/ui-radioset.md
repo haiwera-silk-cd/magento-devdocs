@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Radioset component
-menu_title: Radioset component
+group: UI_组件_guide
+subgroup: 组件
+title: 单选组组件
+menu_title: 单选组组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-radioset.md
+github_link: ui_comp_guide/组件/ui-radioset.md
 ---
 
 ## Overview
 
-The Radioset component is a shortcut for [Checkboxset]({{ page.baseurl }}/ui_comp_guide/components/ui-checkboxset.html), with the input type set to the radio button.
+The 单选组components is a shortcut for [Checkboxset]({{ page.baseurl }}/ui_comp_guide/components/ui-checkboxset.html), with the input type set to the radio button.
 
 ## Configuration options
 

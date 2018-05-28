@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: TreeMassActions component
-menu_title: TreeMassActions component
+group: UI_组件_guide
+subgroup: 组件
+title: 树形下拉操作组件
+menu_title: 树形下拉操作组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-treemassactions.md
+github_link: ui_comp_guide/组件/ui-treemassactions.md
 ---
 
 ## Overview
 
-The TreeMassActions component is a decorator for [MassActions]({{ page.baseurl }}/ui_comp_guide/components/ui-massactions.html) that adds the support of nested actions.
+The 树形下拉操作components is a decorator for [MassActions]({{ page.baseurl }}/ui_comp_guide/components/ui-massactions.html) that adds the support of nested actions.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/tree-massactions.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/tree-massactions.js)
 

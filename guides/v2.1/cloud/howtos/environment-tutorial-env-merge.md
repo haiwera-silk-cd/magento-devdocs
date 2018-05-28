@@ -9,7 +9,7 @@ functional_areas:
 ---
 
 ## Merge an environment {#tut-env-merge}
-This tutorial shows how to merge changes from an environment to its parent, which in this case is the master branch. You can, for example, merge code updates, new components, changes to themes, and so on.
+This tutorial shows how to merge changes from an environment to its parent, which in this case is the master branch. You can, for example, merge code updates, new 组件, changes to themes, and so on.
 
 You can then optionally delete the environment.
 

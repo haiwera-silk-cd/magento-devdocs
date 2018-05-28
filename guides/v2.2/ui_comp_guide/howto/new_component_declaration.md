@@ -1,5 +1,5 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: how tos
 title: Declare a custom UI component
 menu_title: Declare a custom UI component
@@ -45,7 +45,7 @@ For the component configuration inside `<container>` and `<component>`, [use the
 
 If the custom component you create is a [basic UI component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure) (like Form or Listing), you need to take the following steps to declare it:
 
-1. Specify the XML file with its configuration it in the page layout file in your module, as described in the [About XML сonfiguration of UI сomponents]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html#about-the-layout-configuration-file-and-ui-component-declaration) topic.
+1. Specify the XML file with its configuration it in the page layout file in your module, as described in the [关于UIcomponents的XML配置]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html#about-the-layout-configuration-file-and-ui-component-declaration) topic.
 2. Declare the component in a separate `.xml` file using the `<container>`或`<component>` as parent node.
 
 ## Declare a custom secondary component 
@@ -53,7 +53,7 @@ If the custom component you create is a [basic UI component]({{ page.baseurl }}/
 If the custom component you create is secondary (not a basic one), it is declared using  `<container>`或`<component>` in the XML configuration file of the basic component.
 
 ## Example: Creating a custom secondary (not basic) component 
-Task: In the Customer form, replace the select field with a custom UI component. The custom component extends the Select component by adding a custom option that enables custom functionality. 
+Task: In the Customer form, replace the select field with a custom UI component. The custom component extends the 单选框组件 by adding a custom option that enables custom functionality. 
 
 The Customer form configuration is defined in `<Magento_Customer_module_dir>/view/base/ui_component/customer_form.xml`. The default configuration of the select field we will extend is following:
 
@@ -89,7 +89,7 @@ The Customer form configuration is defined in `<Magento_Customer_module_dir>/vie
 </form>
 {%endhighlight%}
 
-The custom component we create extends Select, and is also a simple component (does not have child components), so we use the `<component>` element for its declaration. To add the declaration, we need to create the `customer_form.xml` file in the custom module, and put it in the same location relative to the module directory as the original `customer_form.xml` resides. So the custom form configuration file will be: `<YourVendor_YourModule_dir>/view/base/ui_component/customer_form.xml`.
+The custom component we create extends Select, and is also a simple component (does not have child 组件), so we use the `<component>` element for its declaration. To add the declaration, we need to create the `customer_form.xml` file in the custom module, and put it in the same location relative to the module directory as the original `customer_form.xml` resides. So the custom form configuration file will be: `<YourVendor_YourModule_dir>/view/base/ui_component/customer_form.xml`.
 
 We copy the `<field>` configuration, remove the `<select>` node and its configuration, and replace it with `<component>` and its configuration:
 

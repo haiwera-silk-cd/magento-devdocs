@@ -64,5 +64,5 @@ The preceding example shows that `SomeModel` receives a `\Psr\Log\LoggerInterfac
 
 [RFC 5424](https://tools.ietf.org/html/rfc5424){:target="_blank"} defines eight log levels (debug, info, notice, warning, error, critical, alert, and emergency).
 
-#### Next
+#### 下一步
 [Example&mdash;logging database activity]({{ page.baseurl }}/config-guide/log/log-db.html)

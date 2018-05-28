@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Observers Best Practices
-menu_title: Observers best practices
+title: 观察者最佳实践
+menu_title: 观察者最佳实践
 menu_order: 4
 version: 2.0
 github_link: ext-best-practices/extension-coding/observers-bp.md
@@ -10,7 +10,7 @@ functional_areas:
   - Standards
 ---
 
-### Overview
+### 概述
 [Observers]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html) are capable of modifying the behavior of a Magento application because they are dynamically injected into the execution flow. Poorly designed and coded observers can cause issues, instabilities, or otherwise break the application.
 
 We encourage you to follow these best practices aimed towards reducing problems when your observer is executed.

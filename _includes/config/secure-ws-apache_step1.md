@@ -35,7 +35,7 @@ where
 
 Follow the prompts on your screen to create a password for the user.
 
-#### Examples
+#### 示例
 
 **Example 1: cron**
 You must set up authentication for only one user for cron; in this example, we use the web server user. To create a password file for the web server user, enter the following commands:

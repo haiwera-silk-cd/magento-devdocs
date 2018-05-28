@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 10_mem
-title: 在Ubuntu上安装、配置和验证memcached
-menu_title: 在Ubuntu上安装、配置和验证memcached
+title: 在Ubuntu上安装、配置和验证memcached
+menu_title: 在Ubuntu上安装、配置和验证memcached
 menu_order: 2
 menu_node:
 version: 2.0
@@ -21,7 +21,7 @@ This section provides instructions to install memcached on Ubuntu. For additiona
 
 <div class="bs-callout bs-callout-info" id="info">
    <span class="glyphicon-class">
-   <p>We recommend using memcached version 3.0.5 or later.</p></span>
+   <p>We recommend using memcached version 3.0.5或更新.</p></span>
 </div>
 
 To install and configure memcached on Ubuntu:
@@ -71,7 +71,7 @@ To verify memcached is recognized by the web server:
 
     <img src="{{ site.baseurl }}/common/images/config_memcache-ubuntu.png" alt="Confirm memcache is recognized by the web server">
 
-    Verify you're using memcached version 3.0.5 or later.
+    Verify you're using memcached version 3.0.5或更新.
 
     If memcache does not display, restart the web server and refresh the browser page. If it still does not display, verify you installed the `php-pecl-memcache` extension.
 

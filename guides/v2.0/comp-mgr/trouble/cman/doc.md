@@ -29,9 +29,9 @@ When installing new purchases, you might see an error like the following during 
 	Read <http://getcomposer.org/doc/articles/troubleshooting.md> for further common problems.
 
 ### Workaround
-This issue is caused by two `doc`-related components we published by mistake. They can't be installed. 
+This issue is caused by two `doc`-related 组件 we published by mistake. They can't be installed. 
 
-The workaround is to go back to the Component Manager and unselect the following components:
+The workaround is to go back to the Component Manager and unselect the following 组件:
 
 *	magento/theme-doc-blank
 *	magento/module-doc

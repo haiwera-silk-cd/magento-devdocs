@@ -47,7 +47,7 @@ This section discusses how to get current code by cloning the Magento GitHub's d
 Currently, the `develop` branch is the default but you can checkout a release branch like `2.1.0` after cloning.
 
 ### Creating an authorization file {#instgde-prereq-compose-clone-auth}
-The Magento 2 GitHub repository requires you to authenticate. The `composer install` commands fails if you do not. To authenticate, <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">generate authentication keys</a>, after which you create an `auth.json` file in the home directory of the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+The Magento 2 GitHub repository requires you to authenticate. The `composer install` commands fails if you do not. To authenticate, <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">generate authentication keys</a>, after which you create an `auth.json` file in the home directory of the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 
 #### Create `auth.json`
 {% include install/auth-json.md %}

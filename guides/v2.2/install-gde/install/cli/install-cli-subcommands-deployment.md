@@ -136,9 +136,9 @@ functional_areas:
 
 {% include install/sens-data.md %}
 
-If applicable, continue your Magento software installation:
+If applicable, continue your Magento安装:
 
-*	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-install.html">Command line installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-install.html">命令行安装</a>
 *	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">网页向导安装</a>
 
 <!-- <h2 id="instgde-cli-subcommands-dep-config-enable-modules">关于启用和禁用模块</h2>

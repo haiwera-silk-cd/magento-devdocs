@@ -113,7 +113,7 @@ Then {{site.data.var.ee}} will cache a different response for each value of the 
 ### `cookies` {#cloud-cache-attrib-cook}
 The `cookies` key define on which values the cache key must depend.
 
-For example:
+例如:
 
 {% highlight yaml %}
 cache:

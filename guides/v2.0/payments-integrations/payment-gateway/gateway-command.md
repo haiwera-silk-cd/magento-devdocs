@@ -1,15 +1,15 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Gateway Command
-menu_title: Gateway Command 
+title: 网关命令
+menu_title: 网关命令 
 menu_node: 
 menu_order: 2 
 version: 2.0
 github_link: payments-integrations/payment-gateway/gateway-command.md
 ---
 
-Gateway Command is a component of the Magento {% glossarytooltip 5b963536-8f03-45c4-963b-688021f4eea7 %}payment gateway{% endglossarytooltip %} that takes the [payload]({{ page.baseurl }}/payments-integrations/payment-gateway/payment-gateway-intro.html#terms) required for a particular payment provider and sends, receives, and processes the provider's response. 
+网关命令 is a component of the Magento {% glossarytooltip 5b963536-8f03-45c4-963b-688021f4eea7 %}payment gateway{% endglossarytooltip %} that takes the [payload]({{ page.baseurl }}/payments-integrations/payment-gateway/payment-gateway-intro.html#terms) required for a particular payment provider and sends, receives, and processes the provider's response. 
 For each operation (authorization, capture and so on) of a certain payment provider - a separate gateway command is added.
 
 ## Interface
@@ -42,7 +42,7 @@ A gateway command must be configured with the following arguments:
 
 * `requestBuilder`: [request builder]({{ page.baseurl }}/payments-integrations/payment-gateway/request-builder.html), builds an array of provider-specific arguments using the order information. 
 
-* `transferFactory`: [transfer factory]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html#transfer_factory), creates transfer object from request data, which will be used by Gateway Client to process requests. For details see [Gateway Client #Transfer Factory]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html#transfer_factory)
+* `transferFactory`: [transfer factory]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html#transfer_factory), creates transfer object from request data, which will be used by 网关客户端 to process requests. For details see [网关客户端 #Transfer Factory]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html#transfer_factory)
 
 * `client`: [gateway client]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html), takes the provider-specific arguments and performs a low-level call to the provider.
 

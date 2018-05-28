@@ -24,7 +24,7 @@ Now that you've installed prerequisites and taken the first steps (merchant, sys
 *	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">Command line</a>, which gives you more control but requires more experience and also access to the Magento server
 
 ## Already installed the Magento software?
-You might want to manage Magento components or to upgrade:
+You might want to manage Magento组件 or to upgrade:
 
 *	<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager Guide</a>
 *	<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Upgrade Guide</a>

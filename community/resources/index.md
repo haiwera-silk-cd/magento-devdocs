@@ -45,14 +45,14 @@ They are listed here because the content has been well received within the Magen
 ## Automated Testing
 * *Presentation:* [Writing testable code][10]{:target="_blank"} by Vinai Kopp (**Bonus:** [Video Presentation][11]{:target="_blank"})
 * *Book:* [Test Driven Magento Extension Development][12]{:target="_blank"} by Allan MacGregor
-* *Blog post:* [Integration Tests with Magento 2][19]{:target="_blank"} by Andreas von Studnitz
+* *Blog post:* [集成测试 with Magento 2][19]{:target="_blank"} by Andreas von Studnitz
 
 ## Mastering Magento 2
 
 * *Book:* [Magento 2 DIY][7]{:target="_blank"} by Viktor Khliupko
 * *Book:* [Magento 2 Cookbook][8]{:target="_blank"} by Ray Bogman and Vladimir Kerkhoff
 * *Presentation:* [Staging and Preview][9]{:target="_blank"} by Igor Melnykov
-* *Blog post:* [Introducing UI Components][13]{:target="_blank"} by Alan Storm
+* *Blog post:* [Introducing UI 组件][13]{:target="_blank"} by Alan Storm
 * *Presentation:* [Micro Services][14]{:target="_blank"} by Ivan Chepurnyi
 * *Blog post:* [10 Practical Rules to Build High Quality Magento 2 Module][20]{:target="_blank"} by Max Pronko
 
@@ -73,7 +73,7 @@ They are listed here because the content has been well received within the Magen
 [10]: http://www.slideshare.net/vinaikopp/writing-testable-code-for-magento-1-and-2-2016-romaina
 [11]: https://www.youtube.com/watch?v=eF2EoF0WKoo
 [12]: https://leanpub.com/tdd-magento-extension
-[13]: http://alanstorm.com/magento_2_introducing_ui_components/
+[13]: http://alanstorm.com/magento_2_introducing_ui_组件/
 [14]: https://www.dropbox.com/s/j9a65kmqo5s4zys/MageTitansUSA%202016%20-%20Creating%20Micro-Services%20for%20Magento%202.pdf?dl=0
 [15]: http://www.slideshare.net/StaceyWhitney1/mage-titans-usa-2016-miguel-balparda-magento-2-premium-performance-with-php-7-and-varnish
 [16]: https://nickrigby.uk/magento/deploying-magento-2-with-composer-and-envoyer.html

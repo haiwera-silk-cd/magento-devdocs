@@ -101,4 +101,4 @@ maxMessages | Specifies the maximum number of messages to consume.
 #### 相关主题
 *	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
 *	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">安装RabbitMQ</a>

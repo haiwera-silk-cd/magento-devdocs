@@ -3,46 +3,46 @@ pages:
     - label: 介绍
       url: /get-started/bk-get-started-api.html
 
-    - label: Use REST APIs
+    - label: 使用REST API
       url: /get-started/rest_front.html
       children:
 
-        - label: Construct a request
+        - label: 构造一个请求
           url: /get-started/gs-web-api-request.html
 
-        - label: Use cURL to run the request
+        - label: 使用curl执行这个请求
           url: /get-started/gs-curl.html
 
-        - label: Status codes and responses
+        - label: 响应和状态码
           url: /get-started/gs-web-api-response.html
 
-        - label: Order Processing with REST APIs Tutorial
+        - label: 使用REST API的订单处理教程
           class: tutorial
           url: /get-started/order-tutorial/order-intro.html
           versions: ["2.1", "2.2", "2.3"]
 
 
-    - label: Use SOAP Services
+    - label: 使用SOAP服务
       url: /get-started/soap/soap-web-api-calls.html
 
     - label: Authentication
       url: /get-started/authentication/gs-authentication.html
       children:
 
-        - label: Token-based authentication
+        - label: 基于访问令牌的认证
           url: /get-started/authentication/gs-authentication-token.html
 
-        - label: OAuth-based authentication
+        - label: 基于OAuth的认证
           url: /get-started/authentication/gs-authentication-oauth.html
 
-        - label: OAuth error codes
+        - label: OAuth错误码
           url: /get-started/authentication/oauth-errors.html
 
-        - label: Session-based authentication
+        - label: 基于Session的认证
           url: /get-started/authentication/gs-authentication-session.html
 
-    - label: Create an integration
+    - label: 创建一个集成
       url: /get-started/create-integration.html
 
-    - label: Web API functional testing
+    - label: Web API功能测试
       url: /get-started/web-api-functional-testing.html

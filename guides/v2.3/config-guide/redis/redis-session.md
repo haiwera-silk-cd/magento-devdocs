@@ -13,7 +13,7 @@ functional_areas:
 
 If Redis will be used for default or page caching, you must [install Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html#config-redis-install) before continuing. .
 
-## Configure Magento to use Redis for session storage {#config-redis-config}
+## 配置Magento to use Redis for session storage {#config-redis-config}
 
 Magento now provides command line options to configure Redis session storage. In previous releases, you edited the `<Magento install dir>app/etc/env.php` file. The command line provides validation and is the recommended configuration method, but you can still edit the `env.php` file.
 
@@ -223,7 +223,7 @@ where
 </tbody>
 </table>
 
-### Example command
+### 示例 command
 
 The following example sets Redis as the session data store, sets the host to `redis.example.com`, sets the log level to 3, and sets the datbase number to 2. All other parameters are set to the default value.
 

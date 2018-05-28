@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: SelectColumn component
-menu_title: SelectColumn component
+group: UI_组件_guide
+subgroup: 组件
+title: 单选列组件
+menu_title: 单选列组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-selectcolumn.md
+github_link: ui_comp_guide/组件/ui-selectcolumn.md
 ---
 
 ## Overview
 
-The SelectColumn component receives an array of values and displays the column with corresponding labels. The value-label correspondence is set in the component's configuration.
+The 单选列组件 receives an array of values and displays the column with corresponding labels. The value-label correspondence is set in the component's configuration.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/columns/select.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/columns/select.js)
 

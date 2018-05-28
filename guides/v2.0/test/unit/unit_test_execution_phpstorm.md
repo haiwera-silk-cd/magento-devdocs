@@ -1,6 +1,6 @@
 ---
 group: unit-testing
-title: Running Unit Tests in PHPStorm
+title: 在PHPStorm运行单元测试
 contributor_name: Vinai Kopp
 contributor_link: http://vinaikopp.com/
 version: 2.0

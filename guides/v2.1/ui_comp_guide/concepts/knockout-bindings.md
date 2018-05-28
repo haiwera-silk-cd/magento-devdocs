@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: Magento custom Knockout.js bindings
-menu_title: Magento custom Knockout.js bindings
+title: Magento自定义Knockout.js绑定
+menu_title: Magento自定义Knockout.js绑定
 menu_order: 60
 version: 2.1
 github_link: ui_comp_guide/concepts/knockout-bindings.md

@@ -26,6 +26,6 @@ To develop your component, use the following steps:
 	Use our [validation tool](https://github.com/magento/marketplace-tools){:target="_blank"} to check your package before you distribute it.
 
 4.	<a href="{{ page.baseurl }}/extension-dev-guide/validate/test-module.html">Validate your component</a>
-4.	Upload the components to the Magento Marketplace.
+4.	Upload the 组件 to the Magento Marketplace.
 
 	See the <a href="http://docs.magento.com/marketplace/user_guide/getting-started.html" target="_blank">Magento Marketplace User Guide</a> for details.

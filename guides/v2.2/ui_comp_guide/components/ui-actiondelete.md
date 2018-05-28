@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
+group: UI_组件_guide
+subgroup: 组件
 title: ActionDelete component
 menu_title: ActionDelete component
 version: 2.2
-github_link: ui_comp_guide/components/ui-actiondelete.md
+github_link: ui_comp_guide/组件/ui-actiondelete.md
 ---
 
 ## Overview
 
-The ActionDelete component provides a user interface for deleting records of the [DynamicRows component]({{ page.baseurl }}/ui_comp_guide/components/ui-dynamicrows.html).
+The ActionDelete component provides a user interface for deleting records of the [动态行components]({{ page.baseurl }}/ui_comp_guide/components/ui-dynamicrows.html).
 
 ## ActionDelete options
 

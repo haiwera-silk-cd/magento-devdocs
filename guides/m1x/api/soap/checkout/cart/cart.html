@@ -16,7 +16,7 @@ title: Cart
 <p><b>Methods</b>:</p>
 <ul>
 	<li><a href="cart.create.html" title="cart.create">cart.create</a><font color="#000000">&nbsp;&#45; Create a blank shopping cart</font></li>
-	<li><a href="cart.order.html" title="cart.order">cart.order</a><font color="#000000">&nbsp;&#45; Create an order from a shopping cart</font></li>
+	<li><a href="cart.order.html" title="cart.order">cart.order</a><font color="#000000">&nbsp;&#45; 创建订单 from a shopping cart</font></li>
 	<li><a href="cart.info.html" title="cart.info">cart.info</a><font color="#000000">&nbsp;&#45; Get full information about the current shopping cart</font></li>
 	<li><a href="cart.totals.html" title="cart.totals">cart.totals</a><font color="#000000">&nbsp;&#45; Get all available prices for items in shopping cart, using additional parameters</font></li>
 	<li><a href="cart.license.html" title="cart.license">cart.licenseAgreement</a><font color="#000000">&nbsp;&#45; Get website license agreement</font></li>
@@ -74,7 +74,7 @@ title: Cart
 		<pre class="theme: Default; brush: java; gutter: false">$proxy = new SoapClient('http://magentohost/api/soap/?wsdl');
 $sessionId = $proxy-&gt;login('apiUser', 'apiKey');
 
-// Create a quote, get quote identifier
+// 创建一个报价, get quote identifier
 $shoppingCartId = $proxy-&gt;call( $sessionId, 'cart.create', array( 'magento_store' ) );
 
 // Set customer, for example guest

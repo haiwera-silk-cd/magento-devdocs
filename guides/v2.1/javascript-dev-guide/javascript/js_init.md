@@ -45,13 +45,13 @@ When inserted in a certain element, the script is called only for this particula
 
 ##### How `data-mage-init` is processed {#init_process}
 
-On DOM ready, the `data-mage-init` attribute is parsed to extract components' names and configuration to be applied to the element.
+On DOM ready, the `data-mage-init` attribute is parsed to extract 组件' names and configuration to be applied to the element.
 Depending on the type of the inserted JS component, processing is performed as follows:
 <ul>
 
 <li>If an object is returned, the initializer tries to find the <code>&lt;component_name&gt;</code> key. If the corresponding value is a function, the initializer passes the <code>config</code>和<code>element</code> values to this function.
 
-For example:
+例如:
 <pre>
 return {
     '&lt;component_name&gt;': function(config, element) { ... }
@@ -60,7 +60,7 @@ return {
 </li>
 <li>If a function is returned, the initializer passes the <code>config</code>和<code>element</code> values to this function.
 
-For example:
+例如:
 
 <pre>
 return function(config, element) { ... };
@@ -69,7 +69,7 @@ return function(config, element) { ... };
 </li>
 <li>If neither a function nor an object with the <code>"&lt;component_name&gt;"</code> key are returned, then the initializer tries to search for <code>"&lt;component_name&gt;"</code> in the {% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} prototype. If found, the initializer applies it as <code>$(element).&lt;component_name&gt;(config)</code>.
 
-For example:
+例如:
 <pre>
 $.fn.&lt;component_name&gt; = function() { ... };
 return;
@@ -77,7 +77,7 @@ return;
 </li>
 
 <li>If none of the previous cases is true, the component is executed with no further processing.
-Such a component does not require either <code>config</code>或<code>element</code>. The recommended way to declare such components is <a href="#init_script">using the &lt;script&gt; tag</a>.</li>
+Such a component does not require either <code>config</code>或<code>element</code>. The recommended way to declare such 组件 is <a href="#init_script">using the &lt;script&gt; tag</a>.</li>
 </ul>
 
 #### Declarative notation using the `<script type="text/x-magento-init" />` tag {decl_tag}
@@ -87,12 +87,12 @@ To call a JS component on a HTML element without direct access to the element or
 {%highlight html%}
 <script type="text/x-magento-init">
 {
-    // components initialized on the element defined by selector
+    // 组件 initialized on the element defined by selector
 	"<element_selector>": {
 		"<js_component1>": ...,
 		"<js_component2>": ...
     },
-    // components initialized without binding to an element
+    // 组件 initialized without binding to an element
     "*": {
         "<js_component3>": ...
     }
@@ -102,8 +102,8 @@ To call a JS component on a HTML element without direct access to the element or
 
 Where:
 <ul>
-<li><code>&lt;element_selector&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">selector</a> (in terms of querySelectorAll) for the element on which the following JS components are called.</li>
-<li><code>&lt;js_component1&gt;</code>和<code>&lt;js_component2&gt;</code> are the JS components being initialized on the element with the selector specified as <code>&lt;element_selector&gt;</code>.</li>
+<li><code>&lt;element_selector&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">selector</a> (in terms of querySelectorAll) for the element on which the following JS 组件 are called.</li>
+<li><code>&lt;js_component1&gt;</code>和<code>&lt;js_component2&gt;</code> are the JS 组件 being initialized on the element with the selector specified as <code>&lt;element_selector&gt;</code>.</li>
 <li><code>&lt;js_component3&gt;</code> is the JS component called with no binding to an element.</li>
 </ul>
 
@@ -147,7 +147,7 @@ require([
 {%endhighlight%}
 
 
-## Calling JS components requiring initialization in JS files {#js_widget_init}
+## Calling JS 组件 requiring initialization in JS files {#js_widget_init}
 
 To call a widget in JS code, use a notation similar to the following ([accordion]({{ site.gdeurl }}frontend-dev-guide/javascript/widget_accordion.html) widget is intiialized on the `[data-role=example]` element as illustration):
 
@@ -175,7 +175,7 @@ $(function () { // to ensure that code evaluates on page load
 
 In a similar way, you can initialize any JS component that a returns callback function accepting a `config` object and `element` (a DOM node).
 
-For example:
+例如:
 
 {%highlight js%}
 define ([

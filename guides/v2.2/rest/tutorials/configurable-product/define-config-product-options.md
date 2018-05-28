@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 group: rest
-title: Step 4. Define configurable product options
-menu_title: Step 4. Define configurable product options
+title: 步骤4. Define configurable product options
+menu_title: 步骤4. Define configurable product options
 menu_order: 40
 level3_subgroup: configurable-product-tutorial
 version: 2.2

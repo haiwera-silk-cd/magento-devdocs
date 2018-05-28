@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 999_prod
-title: Deploy to production
-menu_title: Deploy to production
+title: 部署到生产环境
+menu_title: 部署到生产环境
 menu_node:
 menu_order: 10
 version: 2.0

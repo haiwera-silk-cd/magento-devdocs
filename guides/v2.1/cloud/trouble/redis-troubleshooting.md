@@ -39,11 +39,11 @@ See the following instructions based on your {{site.data.var.ece}} version:
 
   If you hardcoded or modified your MCC, run `composer update` in a terminal. After the composer update complees, verify following `magento/magento-cloud-configuration` version displays in `composer.lock`:
 
-  * 2.1.4: `magento/magento-cloud-configuration 101.4.5` or later
-  * 2.1.5: `magento/magento-cloud-configuration 101.5.4` or later
-  * 2.1.6: `magento/magento-cloud-configuration 101.6.6` or later
-  * 2.1.7: `magento/magento-cloud-configuration 101.7.6` or later
-  * 2.1.8: `magento/magento-cloud-configuration 101.8.1` or later
+  * 2.1.4: `magento/magento-cloud-configuration 101.4.5`或更新
+  * 2.1.5: `magento/magento-cloud-configuration 101.5.4`或更新
+  * 2.1.6: `magento/magento-cloud-configuration 101.6.6`或更新
+  * 2.1.7: `magento/magento-cloud-configuration 101.7.6`或更新
+  * 2.1.8: `magento/magento-cloud-configuration 101.8.1`或更新
 * 2.2: This PHP-Redis upgrade is already included. v2.2 is coming soon for {{site.data.var.ece}}.
 
 For details on MCC and the update command, see [Composer]({{ page.baseurl }}/cloud/reference/cloud-composer.html).

@@ -1,15 +1,15 @@
 ---
 group: howdoi
 subgroup: product-create-page
-title: Customize product creation form
-menu_title: Customize product creation form
+title: 自定义产品创建表单
+menu_title: 自定义产品创建表单
 menu_node: parent
 menu_order: 1
 version: 2.1
 github_link: howdoi/customize_product.md
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 This topic describes how developers can customize the product creation form used on the product creation and product edit pages in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}.
 
@@ -127,7 +127,7 @@ In your custom module directory, add the modifier class that implements the `Mag
 
 In the modifier class, you can add UI elements using the same structure as in the {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} configuration.
 
-For example:
+例如:
 {% highlight php %}
 
 <?php
@@ -224,5 +224,5 @@ For reference about setting conditions for displaying certain elements for certa
 ## Recommended reading:
 
  - [Form UI component]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html)
- - [About PHP modifiers in UI components]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_modifier_concept.html)
+ - [关于UIcomponents的PHP修改]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_modifier_concept.html)
  - [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

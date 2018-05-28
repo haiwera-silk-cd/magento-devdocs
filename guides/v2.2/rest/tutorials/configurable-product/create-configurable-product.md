@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 group: rest
-title: Step 2. Create the configurable product
-menu_title: Step 2. Create the configurable product
+title: 步骤2. Create the configurable product
+menu_title: 步骤2. Create the configurable product
 menu_order: 20
 level3_subgroup: configurable-product-tutorial
 version: 2.2

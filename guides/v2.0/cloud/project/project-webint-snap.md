@@ -77,7 +77,7 @@ To restore an environment snapshot using the Magento CLI:
 
 			magento-cloud snapshot:restore <id>
 
-	For example: `magento-cloud snapshot:restore 92c9a4b2aa75422efb3d`
+	例如: `magento-cloud snapshot:restore 92c9a4b2aa75422efb3d`
 
 	The following modifiers further specify how to restore the snapshot:
 

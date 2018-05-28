@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Gateway Command Pool
-menu_title:  Gateway Command Pool
+title: 网关命令池
+menu_title:  网关命令池
 menu_node: 
 menu_order: 3
 version: 2.0

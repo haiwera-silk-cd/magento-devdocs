@@ -1,7 +1,7 @@
 ---
 youtube_id: GMOtt5mai5A
 duration: "6:11"
-group: "Fundamentals of Magento 2 Development"
+group: "Magento开发基础"
 title: "How to Add a New Table to a Database"
 thumbnail: "fundamentals/thumbs/add-table.png"
 menu_order: 0
@@ -34,7 +34,7 @@ The steps we need to take to accomplish these tasks are:
 6. Create an UpgradeData script.
 7. Run the upgrade scripts and verify that the table has changed.
 
-## Step 1: Create a new module
+## 步骤1. Create a new module
 
 Create a new module called `Learning_GreetingMessage`.
 
@@ -85,7 +85,7 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 2: Create an InstallSchema script
+## 步骤2. Create an InstallSchema script
 
 To create an InstallSchema script, navigate to the `app/code/Learning/GreetingMessage` folder and create a `Setup` folder.
 
@@ -155,7 +155,7 @@ The connection is an instance of the `Magento\Framework\DB\Adapter\Pdo\Mysql` cl
 Magento uses DDL (Data Definition Language) to manipulate the database.
 You can find various examples of DDL in the Magento 2 core code.
 
-## Step 3: Create an InstallData script
+## 步骤3. Create an InstallData script
 
 Let’s create the `Setup/InstallData.php` file:
 
@@ -187,7 +187,7 @@ class InstallData implements InstallDataInterface
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
           /**
-           * Install messages
+           * 安装messages
            */
           $data = [
               ['message' => 'Happy New Year'],
@@ -203,7 +203,7 @@ class InstallData implements InstallDataInterface
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 4: Add a new module and verify that a table with data was created
+## 步骤4. Add a new module and verify that a table with data was created
 
 Run the `setup:upgrade` script to verify that a table with the initial data is there:
 
@@ -255,7 +255,7 @@ The next time you run the `bin/magento setup:upgrade` script, it will find a rec
 If the versions match, it will do nothing.
 If the current version is higher, it will run the upgrade scripts (discussed next).
 
-## Step 5:  Create an UpgradeSchema script
+## 步骤5.  Create an UpgradeSchema script
 
 To see how the upgrade scripts work, we’ll add some data to the database.
 
@@ -316,7 +316,7 @@ As described earlier, the UpgradeScript will be executed every time the version 
 So we only want the current version upgrade script to execute, and not previous upgrades.
 That’s why we put upgrades into “if” clauses.
 
-## Step 6: Create the UpgradeData script
+## 步骤6. Create the UpgradeData script
 
 To create the `Setup/UpgradeData.php` file:
 
@@ -362,7 +362,7 @@ class UpgradeData implements UpgradeDataInterface
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 7: Run the upgrade scripts and verify that the table has changed
+## 步骤7. Run the upgrade scripts and verify that the table has changed
 
 Run the SetupUpgrade script again:
 

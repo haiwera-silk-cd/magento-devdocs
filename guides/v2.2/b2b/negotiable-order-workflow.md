@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Place a negotiable quote order
-menu_title: Place a negotiable quote order
+title: 生成协商报价订单
+menu_title: 生成协商报价订单
 menu_order: 35
 version: 2.2
 ee_only: true
@@ -21,7 +21,7 @@ This topic describes how REST calls can be used to place items in a shopping car
 
 ## Prepare the order
 
-The steps in this section are similar to those [Order Processing with REST APIs Tutorial]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html), except that different products are added to the cart.
+The steps in this section are similar to those [使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html), except that different products are added to the cart.
 
 ### Create a shopping cart
 
@@ -998,8 +998,8 @@ Authorization Bearer <admin token>
 
 ## Related information
 
-* [Order Processing with REST APIs Tutorial]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)
-* [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-* [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-* [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-* [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
+* [使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)
+* [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
+* [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)
+* [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)
+* [协商报价结算]({{ page.baseurl }}/b2b/negotiable-checkout.html)

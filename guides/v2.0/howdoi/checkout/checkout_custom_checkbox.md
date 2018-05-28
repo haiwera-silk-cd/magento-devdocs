@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup:
-title: Add custom fields that influence other Checkout fields
-menu_title: Add custom fields that influence other Checkout fields
+title: 添加自定义影响其它输入的输入项
+menu_title: 添加自定义影响其它输入的输入项
 menu_order: 90
 version: 2.0
 github_link: howdoi/checkout/checkout_custom_checkbox.md
@@ -36,9 +36,9 @@ class SomeProcessor
      */
     public function afterProcess(\Magento\Checkout\Block\Checkout\LayoutProcessor $processor, $jsLayout)
     {
-        $shippingConfiguration = &$jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']
+        $shippingConfiguration = &$jsLayout['组件']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['shipping-address-fieldset']['children'];
-        $billingConfiguration = &$jsLayout['components']['checkout']['children']['steps']['children']['billing-step']
+        $billingConfiguration = &$jsLayout['组件']['checkout']['children']['steps']['children']['billing-step']
         ['children']['payment']['children']['payments-list']['children'];
 
         //Checks if shipping step available.

@@ -19,7 +19,7 @@ Messages similar to the following display if any readiness check fails.
 ![You must resolve all readiness check failures before you continue]({{ site.magentourl }}/common/images/cman_readiness-fail-ex.png)
 
 <div class="bs-callout bs-callout-info" id="info">
-	<p>If you're updating multiple extensions, see <a href="{{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-multi.html#extensman-readiness-multi-fail">Readiness check with multiple extension updates</a> instead.</p>
+	<p>If you're updating multiple extensions, see <a href="{{ page.baseurl }}/comp-mgr/extens-man/extensman-readiness-multi.html#extensman-readiness-multi-fail">Readiness check with multiple 扩展更新s</a> instead.</p>
 </div>
 
 In the {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} of failure, see one of the following sections:

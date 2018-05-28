@@ -1,147 +1,147 @@
-label: UI Components Guide
+label: UI 组件 Guide
 pages:
     - label: UI组件概述
       url: /ui_comp_guide/bk-ui_comps.html
 
-    - label: Components
+    - label: 组件
       children:
 
-        - label: ActionsColumn component
+        - label: 操作列组件
           url: /ui_comp_guide/components/ui-actionscolumn.html
 
-        - label: Bookmarks component
+        - label: 书签组件
           url: /ui_comp_guide/components/ui-bookmarks.html
 
-        - label: Button component
+        - label: 按钮组件
           url: /ui_comp_guide/components/ui-button.html
 
-        - label: Checkbox component
+        - label: 复选框组件
           url: /ui_comp_guide/components/ui-checkbox.html
 
-        - label: Checkboxset component
+        - label: 单/复选框组组件
           url: /ui_comp_guide/components/ui-checkboxset.html
 
-        - label: Column component
+        - label: 表格列组件
           url: /ui_comp_guide/components/ui-column.html
 
-        - label: Columns component
+        - label: 多表格列组件
           url: /ui_comp_guide/components/ui-columns.html
 
-        - label: ColumnsControls component
+        - label: 可控多表格列组件
           url: /ui_comp_guide/components/ui-columnscontrols.html
 
-        - label: Date component
+        - label: 数据组件
           url: /ui_comp_guide/components/ui-date.html
 
-        - label: DateColumn component
+        - label: 数据列组件
           url: /ui_comp_guide/components/ui-datecolumn.html
 
-        - label: DragAndDrop component
+        - label: 可拖曳组件
           url: /ui_comp_guide/components/ui-draganddrop.html
 
-        - label: DynamicRows component
+        - label: 动态行组件
           url: /ui_comp_guide/components/ui-dynamicrows.html
 
-        - label: Email component
+        - label: 邮件组件
           url: /ui_comp_guide/components/ui-email.html
 
-        - label: ExportButton component
+        - label: 导出按钮组件
           url: /ui_comp_guide/components/ui-exportbutton.html
 
         - label: Fieldset component
           url: /ui_comp_guide/components/ui-fieldset.html
 
-        - label: File component
+        - label: 文件组件
           url: /ui_comp_guide/components/ui-file.html
 
-        - label: FileUploader component
+        - label: 文件上传组件
           url: /ui_comp_guide/components/ui-fileuploader.html
 
-        - label: Filters component
+        - label: 过滤器组件
           url: /ui_comp_guide/components/ui-filters.html
 
-        - label: FiltersChips component
+        - label: 标签过滤器组件
           url: /ui_comp_guide/components/ui-filterschips.html
 
-        - label: Form component
+        - label: 表单组件
           url: /ui_comp_guide/components/ui-form.html
 
-        - label: Hidden component
+        - label: 隐藏域组件
           url: /ui_comp_guide/components/ui-hidden.html
 
-        - label: HtmlContent component
+        - label: Html内容组件
           url: /ui_comp_guide/components/ui-htmlcontent.html
 
-        - label: Input component
+        - label: 输入框组件
           url: /ui_comp_guide/components/ui-input.html
 
-        - label: InsertForm component
+        - label: 可插入表单组件
           url: /ui_comp_guide/components/ui-insertform.html
 
-        - label: InsertListing component
+        - label: 可插入列表组件
           url: /ui_comp_guide/components/ui-insertlisting.html
 
-        - label: Listing (grid) component
+        - label: 列表(网格)组件
           url: /ui_comp_guide/components/ui-listing-grid.html
 
-        - label: MassActions component
+        - label: 下拉操作组件
           url: /ui_comp_guide/components/ui-massactions.html
 
         - label: Modal component
           url: /ui_comp_guide/components/ui-modal.html
 
-        - label: Multiline component
+        - label: 多输入组件
           url: /ui_comp_guide/components/ui-multiline.html
 
-        - label: Multiselect component
+        - label: 多选框组件
           url: /ui_comp_guide/components/ui-multiselect.html
 
-        - label: MultiselectColumn component
+        - label: 多选框列组件
           url: /ui_comp_guide/components/ui-multiselectcolumn.html
 
-        - label: Nav component
+        - label: 导航栏组件
           url: /ui_comp_guide/components/ui-nav.html
 
-        - label: OnOffColumn component
+        - label: 开关列组件
           url: /ui_comp_guide/components/ui-onoffcolumn.html
 
-        - label: Paging component
+        - label: 分页组件
           url: /ui_comp_guide/components/ui-paging.html
 
-        - label: Radioset component
+        - label: 单选组组件
           url: /ui_comp_guide/components/ui-radioset.html
 
-        - label: Range component
+        - label: 范围筛选组件
           url: /ui_comp_guide/components/ui-range.html
 
-        - label: Search component
+        - label: 搜索组件
           url: /ui_comp_guide/components/ui-search.html
 
-        - label: Select component
+        - label: 单选框组件
           url: /ui_comp_guide/components/ui-select.html
 
-        - label: SelectColumn component
+        - label: 单选列组件
           url: /ui_comp_guide/components/ui-selectcolumn.html
 
-        - label: Sizes component
+        - label: 表格显示数量控制组件
           url: /ui_comp_guide/components/ui-sizes.html
 
-        - label: Tab component
+        - label: 标签页组件
           url: /ui_comp_guide/components/ui-tab.html
 
-        - label: Text component
+        - label: 文本组件
           url: /ui_comp_guide/components/ui-text.html
 
-        - label: Textarea component
+        - label: 文本输入框组件
           url: /ui_comp_guide/components/ui-textarea.html
 
-        - label: ThumbnailColumn component
+        - label: 缩略图列组件
           url: /ui_comp_guide/components/ui-thumbnailcolumn.html
 
-        - label: Toolbar component
+        - label: 工具栏组件
           url: /ui_comp_guide/components/ui-toolbar.html
 
-        - label: TreeMassActions component
+        - label: 树形下拉操作组件
           url: /ui_comp_guide/components/ui-treemassactions.html
 
         - label: WYSIWYG component
@@ -150,37 +150,37 @@ pages:
     - label: Concepts
       children:
 
-        - label: Configuration flow of UI components
+        - label: UI组件配置流程
           url: /ui_comp_guide/concepts/ui_comp_config_flow_concept.html
 
-        - label: About XML сonfiguration of UI сomponents
+        - label: 关于UI组件的XML配置
           url: /ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html
 
-        - label: Providing Data to UI Components
+        - label: 提供数据到UI组件
           url: /ui_comp_guide/concepts/ui_comp_data_source.html
 
-        - label: About PHP modifiers in UI components
+        - label: 关于UI组件的PHP修改
           url: /ui_comp_guide/concepts/ui_comp_modifier_concept.html
 
-        - label: Template Literals
+        - label: 模板常量
           url: /ui_comp_guide/concepts/ui_comp_template_literals.html
 
-        - label: Magento custom Knockout.js bindings
+        - label: Magento自定义Knockout.js绑定
           url: /ui_comp_guide/concepts/knockout-bindings.html
 
-        - label: About the uiClass library
+        - label: 关于uiClass库
           url: /ui_comp_guide/concepts/ui_comp_uiclass_concept.html
 
-        - label: About the uiElement class
+        - label: 关于uiElement类
           url: /ui_comp_guide/concepts/ui_comp_uielement_concept.html
 
-        - label: About the uiCollection class
+        - label: 关于uiCollection类
           url: /ui_comp_guide/concepts/ui_comp_uicollection_concept.html
 
-        - label: The uiLayout service object
+        - label: 关于uLayout服务类
           url: /ui_comp_guide/concepts/ui_comp_uilayout_concept.html
 
-        - label: Linking properties of UI components
+        - label: UI组件连接属性
           url: /ui_comp_guide/concepts/ui_comp_linking_concept.html
 
         - label: uiRegistry
@@ -189,7 +189,7 @@ pages:
     - label: 如何
       children:
 
-        - label: Creating and displaying a category attribute with UI Components
+        - label: Creating and displaying a category attribute with UI 组件
           url: /ui_comp_guide/howto/add_category_attribute.html
 
     - label: Troubleshoot

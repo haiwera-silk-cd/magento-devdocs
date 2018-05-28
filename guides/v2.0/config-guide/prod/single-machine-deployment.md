@@ -32,7 +32,7 @@ Contributing developers should use [this guide][6] to update their Magento insta
 
 ## Deployment steps
 
-1. Log in to your production server as, or switch to, the [Magento file system owner][10].
+1. Log in to your production server as, or switch to, the [Magento文件系统所有者][10].
 
 2. Change directory to the Magento base directory:
 
@@ -42,20 +42,20 @@ Contributing developers should use [this guide][6] to update their Magento insta
 
         php bin/magento maintenance:enable
 
-4. Apply updates to Magento or its components using the following command pattern:
+4. Apply updates to Magento or its 组件 using the following command pattern:
 
         composer require <package> <version> --no-update
 
    **package**: The name of the package you want to update.
 
-   For example:
+   例如:
 
    * `magento/product-community-edition`
    * `magento/product-enterprise-edition`
 
    **version**: The target version of the package you want to update.
 
-5. Update Magento's components with Composer:
+5. Update Magento's 组件 with Composer:
 
         composer update
 
@@ -81,12 +81,12 @@ For deployment strategies developed by the Magento community, see the blog posts
 
 In Magento 2.2, a near-zero downtime deployment model will be available for a variety of complex environments, including {{site.data.var.ece}}.
 
-## Related topics
+## 相关主题
 
 * [开启或关闭维护模式][4]
 * [Command line upgrade][1]
 * [更新Magento][2]
-* [User Guide: Web Setup Wizard][3]
+* [User Guide: 网页安装向导][3]
 * [Running the System Upgrade][9]
 
 [0]: {{ page.baseurl }}/

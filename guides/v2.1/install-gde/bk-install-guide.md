@@ -80,22 +80,22 @@ functional_areas:
 	</tbody>
 </table>
 
-## Useful information
+## 有用的信息
 
-At any time during your installation, take advantage of our [installation quick reference (tutorial)] or [installation roadmap (reference)]. They're really easy to use; the tutorial walks you through a sample installation. The roadmap provides links to common tasks throughout the guide.
+在你安装的过程中,take advantage of our [快速安装参考（教程）] or [一步步安装(参考)]. They're really easy to use; the tutorial walks you through a sample installation. The roadmap provides links to common tasks throughout the guide.
 
 Use the links on the left side of the page to navigate topics in each part of the installation.
 
-## Required server permissions
+## 要求的服务器权限
 
 UNIX systems require `root` privileges to install and configure software like a web server, PHP, and so on. If you need to install this software, make sure you have `root` access.
 
 You should *not* install the Magento software in the web server docroot as the `root` user because the web server might not be able to interact with those files.
 
-You'll also need `root` privileges to create the [Magento file system owner] and add that owner to the web server's group. You'll use the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} to run any commands from the 命令行 and to set up the Magento cron job, which schedules tasks for you.
+You'll also need `root` privileges to create the [Magento文件系统所有者] and add that owner to the web server's group. You'll use the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} to run any commands from the 命令行 and to set up the Magento cron job, which schedules tasks for you.
 
 <!-- LINK DEFINITIONS -->
 
-[installation quick reference (tutorial)]: {{ page.baseurl }}/install-gde/install-quick-ref.html
-[installation roadmap (reference)]: {{ page.baseurl }}/install-gde/install-roadmap_part1.html
-[Magento file system owner]: {{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html
+[快速安装参考（教程）]: {{ page.baseurl }}/install-gde/install-quick-ref.html
+[一步步安装(参考)]: {{ page.baseurl }}/install-gde/install-roadmap_part1.html
+[Magento文件系统所有者]: {{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html

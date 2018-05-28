@@ -1,6 +1,6 @@
 ---
 group: coding-standards
-title: Technical guidelines
+title: 技术指南
 github_link: coding-standards/technical-guidelines.md
 version: 2.2
 redirect_from:
@@ -9,9 +9,9 @@ functional_areas:
     - Standards
 ---
 
-## About this document
+## 关于这篇文章
 
-### Overview
+### 概述
 
 This document lists the fundamental coding and application design principles that guide Magento 2 developer team members.
 
@@ -53,7 +53,7 @@ Use [RFC2119] to interpret keywords like:
 
 2.2. Object MUST be ready for use after instantiation. No additional public initialization methods are allowed.
 
-{% collapsible Examples: %}
+{% collapsible 例如: %}
 <table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
@@ -137,7 +137,7 @@ class Composite
 {:start="3.2"}
 2.3.2. Events MUST NOT be triggered in constructors.
 
-{% collapsible Examples: %}
+{% collapsible 例如: %}
 <table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
@@ -193,7 +193,7 @@ class Config
 {:start="2.4"}
 2.4. All dependencies MUST be requested by the most generic type that is required by the client object.
 
-{% collapsible Examples: %}
+{% collapsible 例如: %}
 <table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
@@ -241,7 +241,7 @@ class SessionManager
 2.5. Proxies and interceptors MUST NEVER be explicitly requested in constructors.
 
 2.6. Inheritance SHOULD NOT be used. Composition SHOULD be used for code reuse.
-{% collapsible Examples: %}
+{% collapsible 例如: %}
 <table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
@@ -514,7 +514,7 @@ class View extends Template
 
 * **Command** for Actions
 
-* **Query** for {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}Layout{% endglossarytooltip %} and its elements (Blocks and UI Components)
+* **Query** for {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}Layout{% endglossarytooltip %} and its elements (Blocks and UI 组件)
 
 6.2.2. Request, Response, Session, Store Manager and Cookie objects MUST be used only in the Presentation layer.
 

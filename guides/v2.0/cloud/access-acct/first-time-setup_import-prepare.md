@@ -46,7 +46,7 @@ You need to add these files to your {{site.data.var.ee}} code:
     ![Switch to your current Magento Commerce branch]({{ site.magentourl }}/common/images/cloud_cloud-git-214.png){:width="600px"}
 
     In the procedure that follows, you'll copy the contents of some of these files to your {{site.data.var.ee}} system.
-3.  Log in to your {{site.data.var.ee}} system as, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+3.  Log in to your {{site.data.var.ee}} system as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 4.  Enter the following commands in the order shown:
 
         cd <Magento installation dir>
@@ -107,7 +107,7 @@ Before you push code to the {{site.data.var.ece}} Git repository, modify your `c
 
 To edit `composer.json`:
 
-1.  If you haven't done so already, log in to your {{site.data.var.ece}} server as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.  If you haven't done so already, log in to your {{site.data.var.ece}} server as the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 2.  In a text editor, open `composer.json` in the project root directory.
 3.  Substitute the following value in the `require` section:
 

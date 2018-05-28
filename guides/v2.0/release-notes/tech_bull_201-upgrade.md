@@ -126,7 +126,7 @@ To apply the patch:
 
 2.	Extract the patch in your Magento installation directory.
 
-	Log in as or change to the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>. Use one of the following commands to extract the archive.
+	Log in as or change to the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>. Use one of the following commands to extract the archive.
 
 	<table>
 	<tbody>
@@ -160,7 +160,7 @@ To resolve the missing `.gitignore` files issue using this method, all of the fo
 
 To resolve the issue:
 
-1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 2.	Change to your Magento installation directory.
 3.	Run the following command:
 
@@ -189,11 +189,11 @@ To resolve the missing `.gitignore` files issue using this method, all of the fo
 *	You must have command-line access to your Magento server
 *	You must have attempted to upgrade to either 2.0.1 or 2.0.2 and failed
 
-You must run `composer update` twice to update components and then delete two files: one that recorded the failed upgrade and another that tells Magento your store is in maintenance mode.
+You must run `composer update` twice to update 组件 and then delete two files: one that recorded the failed upgrade and another that tells Magento your store is in maintenance mode.
 
 To resolve the issue:
 
-1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 2.	Change to your Magento installation directory.
 4.	If prompted, enter your <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">authentication keys</a>.
 5.	Enter the following command:

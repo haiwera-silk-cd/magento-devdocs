@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Extension Coding
-menu_title: Extension Coding
+title: 扩展编码
+menu_title: 扩展编码
 menu_order: 1
 menu_node: parent
 version: 2.1

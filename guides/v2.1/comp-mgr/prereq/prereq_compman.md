@@ -20,5 +20,5 @@ Before running the Component Manager or System Upgrade, complete the following t
 
 After you've completed all prerequisites, continue with:
 
-*	[启动组件管理]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)
+*	[启动components管理]({{ page.baseurl }}/comp-mgr/module-man/compman-start.html)
 *	[开始系统升级]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html)

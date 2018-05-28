@@ -22,7 +22,7 @@ A module in functional tests (`<magento2_root_dir>/dev/tests/app/Magento/`) stor
 
 The constraint {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class must:
 
-* Have unique name created using the following template `Assert{MagentoEntityName}{verification|action|place}`. For example:
+* Have unique name created using the following template `Assert{MagentoEntityName}{verification|action|place}`. 例如:
 
   * `AssertUserSuccessDeleteMessage` corresponds to `Assert{entityName}{verification}`
   * `AssertOrderPlaced` corresponds to `Assert{entityName}{action}`
@@ -140,16 +140,16 @@ For example, `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Catalog
 
 Use case: We want to assert widget availability in a widget grid.
 
-Step 1. What module does it belong?
+步骤1. What module does it belong?
   
   Widget grid and widget fixture are related to the Magento_Widget模块.
   Thus, we need to create constraint in the Magento_Widget模块, in `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint`.
   
-Step 2. What name should constraint have?
+步骤2. What name should constraint have?
   
   Using [constraint naming principle](#mtf_constraint_assert), the constraint should be named as `AssertWidgetInGrid`.
 
-Step 3. Create `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint/AssertWidgetInGrid.php` with [required structure](#mtf_constraint_assert)
+步骤3. Create `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint/AssertWidgetInGrid.php` with [required structure](#mtf_constraint_assert)
 
 {% highlight php %}
 
@@ -187,7 +187,7 @@ class AssertWidgetInGrid extends AbstractConstraint
 
 {% endhighlight %}
 
-Step 4. Implement assertion in `processAssert()`
+步骤4. Implement assertion in `processAssert()`
 
 **Assertion logic**: Take title of the widget from the widget [fixture][], open the page with a grid, check if the grid has our title.
 

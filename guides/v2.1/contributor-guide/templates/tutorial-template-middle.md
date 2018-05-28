@@ -2,8 +2,8 @@
 layout: tutorial
 group: contributor
 subgroup:
-title: Step 1. Start the procedure
-subtitle: Sample template tutorial
+title: 步骤1. Start the procedure
+subtitle: 样例模板教程
 menu_title:
 menu_order: 1
 level3_menu_node:

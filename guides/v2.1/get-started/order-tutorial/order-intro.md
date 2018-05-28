@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup: 20_REST
-title: Order Processing with REST APIs Tutorial
-menu_title: Initial tasks
+title: 使用REST API的订单处理教程
+menu_title: 初始化工作
 menu_order: 0
 level3_menu_node:
 level3_subgroup: order-tutorial
@@ -16,7 +16,7 @@ functional_areas:
   - Sales
 ---
 
-### Before you begin
+### 在开始之前
 {:.tutorial-before}
 
 This tutorial shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
@@ -31,7 +31,7 @@ The sample data defines a functional store, called Luma, that sells fitness clot
 
 * Install a REST client. You can use any REST client to send calls to Magento. [Postman](https://www.getpostman.com/){:target="_blank"} is recommended.
 
-* Know how to construct a REST call in Magento. See [Construct a request]({{ page.baseurl }}/get-started/gs-web-api-request.html) for details.
+* Know how to construct a REST call in Magento. See [构造一个请求]({{ page.baseurl }}/get-started/gs-web-api-request.html) for details.
 
 * Find the Magento REST API documentation. You can view the [static REST API documentation on devdocs](http://devdocs.magento.com/swagger/){:target="_blank"} or [generate a local API reference]({{ page.baseurl }}/rest/generate-local.html).
 

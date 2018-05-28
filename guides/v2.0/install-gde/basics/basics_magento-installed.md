@@ -41,11 +41,11 @@ Magento storefront:
 
 ## What if Magento is installed?
 
-If Magento *is* installed and you want to manage or upgrade components, see the following guides instead:
+If Magento *is* installed and you want to manage or upgrade 组件, see the following guides instead:
 
 *	<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager Guide</a>
 
-	A Magento *component* is an extension, language package, or theme. The Component Manager installs, uninstalls, updates, enables, or disables components.
+	A Magento *component* is an extension, language package, or theme. The Component Manager installs, uninstalls, updates, enables, or disables 组件.
 *	<a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">Upgrade Guide</a>
 
-	Upgrade the Magento software or components.
+	Upgrade the Magento software or 组件.

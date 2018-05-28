@@ -1,6 +1,6 @@
 <div markdown="1">
 
-<h2 id="instgde-install-magento-web-step6">Step 6: Install</h2>
+<h2 id="instgde-install-magento-web-step6">步骤6. Install</h2>
 
 After completing all preceding steps in the Setup Wizard, click **Install Now**.
 
@@ -39,5 +39,5 @@ The value of `sys_temp_dir` determines where `install.log` is located. If the va
 
 A typical default value is `/tmp`. If that's the case, the log is `/tmp/install.log`.
 
-### Next step
+### 下一步
 <a href="{{ page.baseurl }}/install-gde/install/verify.html">验证你的安装</a>

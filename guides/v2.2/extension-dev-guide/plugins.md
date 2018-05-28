@@ -10,7 +10,7 @@ redirect_from:
 
 ---
 
-### Overview
+### 概述
 A plugin, or interceptor, is a class that modifies the behavior of public class functions by intercepting a function call and running code before, after, or around that function call. This allows you to *substitute* or *extend* the behavior of original, public methods for any *class* or *interface*.
 
 Extensions that wish to intercept and change the behavior of a *public method* can create a `Plugin` class.
@@ -278,7 +278,7 @@ Magento uses plugins defined in the global scope when the system is in a specifi
 
 For example, the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
 
-### Related topics
+### 相关主题s
 
 *  [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
 *  [事件和观查者]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html)

@@ -17,11 +17,11 @@ The following error might display at the start of your upgrade:
 
 See one of the following sections for possible solutions:
 
-*	[Problem: you're not authenticated](#not-auth)
-*	[Problem: the updater application isn't initialized](#updater)
-*	[Problem: you cloned the Magento GitHub repository](#git-clone)
+*	[问题: you're not authenticated](#not-auth)
+*	[问题: the updater application isn't initialized](#updater)
+*	[问题: you cloned the Magento GitHub repository](#git-clone)
 
-### Problem: you're not authenticated {#not-auth}
+### 问题: you're not authenticated {#not-auth}
 You might not have entered your authentication keys in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 #### Solution
@@ -29,7 +29,7 @@ Enter your <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">aut
 
 If that doesn't work, try generating <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">new authentication keys</a> and enter those in the Admin. Then try your upgrade again.
 
-### Problem: the updater application isn't initialized {#updater}
+### 问题: the updater application isn't initialized {#updater}
 In some cases (especially if you downloaded the Magento software from <a href="https://packagist.org/" target="_blank">packagist</a>), the updater application might not be initialized. (A common way for this to happen is to not specify our `https://repo.magento.com` repository in the `composer create-project` command.)
 
 The updater application uses a cron job to run the upgrade; if it's not initialized, your update fails.
@@ -37,7 +37,7 @@ The updater application uses a cron job to run the upgrade; if it's not initiali
 #### Solution
 Modify Magento's `composer.json` to reference the `https://repo.magento.com` repository and run `composer install` in the updater's root directory to resolve dependencies and initialize it as follows:
 
-1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 2.	Change to your Magento installation directory.
 3.	Back up your existing `composer.json`:
 

@@ -11,7 +11,7 @@ functional_areas:
   - Theme
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 This topic describes how default strings can be changed in your custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} using <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">translation dictionaries</a>. It also gives a short overview of the order in which translations are searched and applied by the Magento application.
 

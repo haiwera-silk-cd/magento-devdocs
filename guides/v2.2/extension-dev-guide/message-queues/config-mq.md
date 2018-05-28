@@ -18,7 +18,7 @@ functional_areas:
 
 The message queue topology is a {{site.data.var.ee}} feature. It can be included as part of {{site.data.var.ee}} installation, or you can add it existing modules.
 
-### Overview ###
+### 概述 ###
 Configuring the message queue topology involves creating and modifying the following configuration files in the `<module>/etc` directory:
 
 * [`communication.xml`](#communicationxml) - Defines aspects of the message queue system that all communication types have in common.
@@ -82,7 +82,7 @@ disabled | Determines whether this handler is disabled. The default value is `fa
 ### `queue_consumer.xml` {#queueconsumerxml}
 The `queue_consumer.xml` file contains one or more `consumer` elements:
 
-#### Example `queue_consumer` file ####
+#### 示例 `queue_consumer` file ####
 {:.no_toc}
 
 {% highlight xml %}
@@ -115,7 +115,7 @@ The `queue_topology.xml` file defines the message routing rules and declares que
 * `exchange/arguments` (optional)
 * `exchange/binding/arguments` (optional)
 
-#### Example `queue_topology.xml` file
+#### 示例 `queue_topology.xml` file
 {:.no_toc}
 
 {% highlight xml %}
@@ -204,7 +204,7 @@ The `queue_publisher.xml` file defines which connection and exchange to use to p
 * {% glossarytooltip d5777fe2-f786-45d9-b052-cca8a10120d9 %}publisher{% endglossarytooltip %}
 * publisher/connection
 
-#### Example `queue_publisher.xml` file
+#### 示例 `queue_publisher.xml` file
 {:.no_toc}
 
 {% highlight xml %}
@@ -244,4 +244,4 @@ See [迁移消息队列配置]({{ page.baseurl }}/extension-dev-guide/message-qu
 ### Related Topics
 *	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
 *	<a href="{{ page.baseurl }}/config-guide/mq/manage-mysql.html">管理消息队列 with MySQL</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">安装RabbitMQ</a>

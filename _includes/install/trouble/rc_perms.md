@@ -1,7 +1,7 @@
 <div markdown="1">
 
 ## 文件权限就绪检查的问题
-Directories in the Magento file system must be writable by the web server user and the Magento file system owner, if applicable. An error similar to the following displays in the Web Setup Wizard if your permissions are not set properly:
+Directories in the Magento file system must be writable by the web server user and the Magento文件系统所有者, if applicable. An error similar to the following displays in the 网页安装向导 if your permissions are not set properly:
 
 ![Magento checks file permissions before you install]({{ site.magentourl }}/common/images/install_rc_file-perms.png)
 

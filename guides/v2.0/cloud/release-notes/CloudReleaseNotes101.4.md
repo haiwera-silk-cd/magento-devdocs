@@ -44,7 +44,7 @@ In `magento-cloud-configuration` release 101.4.1 on {{site.data.var.ece}} 2.1.4,
 For details, see [Overview of configuration management]({{ site.gdeurl21 }}cloud/live/sens-data-over.html).
 
 ## How to get `magento-cloud-configuration` release 101.4.x
-{{site.data.var.ece}} periodically provides patch releases in components like `magento-cloud-configuration`.
+{{site.data.var.ece}} periodically provides patch releases in 组件 like `magento-cloud-configuration`.
 
 To test and implement your {{site.data.var.ece}} upgrade, see [Test a Magento upgrade]({{ page.baseurl }}/cloud/project/project-upgrade.html).
 

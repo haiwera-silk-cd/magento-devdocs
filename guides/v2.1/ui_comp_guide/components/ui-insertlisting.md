@@ -1,13 +1,13 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: InsertListing component
-menu_title: InsertListing component
+group: UI_组件_guide
+subgroup: 组件
+title: 可插入列表组件
+menu_title: 可插入列表组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-insertlisting.md
+github_link: ui_comp_guide/组件/ui-insertlisting.md
 ---
 ## Overview
-The InsertListing component inserts [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html) into other components.
+The 可插入列表components inserts [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html) into other 组件.
 
 ## Configuration options
 
@@ -76,7 +76,7 @@ InsertListing-specific configuration:
       String
     </td>
     <td>
-      <code>Magento_Ui/js/form/components/insert-listing</code>
+      <code>Magento_Ui/js/form/组件/insert-listing</code>
     </td>
   </tr>
   <tr>
@@ -132,7 +132,7 @@ InsertListing-specific configuration:
       Enable link between insertListing's externalValue and value.
       Here <code>link</code> means the two-way <a href=
       "{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html#links">
-      links property</a> of UI components, which allows immediate
+      links property</a> of UI 组件, which allows immediate
       update.
     </td>
     <td>

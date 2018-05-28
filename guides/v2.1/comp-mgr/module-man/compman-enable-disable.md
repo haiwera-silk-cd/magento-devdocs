@@ -2,7 +2,7 @@
 group: compman
 subgroup: 05_UseCompMan
 title: 步骤3. 启用/禁用
-menu_title: Enable/Disable
+menu_title: 启用/禁用
 menu_node:
 level3_menu_node: level3child
 level3_subgroup: step3

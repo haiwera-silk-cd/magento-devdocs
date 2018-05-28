@@ -47,7 +47,7 @@ Magento contains several indexers out of the box, but you might want to add your
 This topic provides a high level description of how indexing is implemented from a developer's point of view, and practical advice of how to add your own indexer.
 
 <h2 id="m2devgde-indexing-implementation">How Magento implements indexing</h2>
-The following components are involved in the indexing process:
+The following 组件 are involved in the indexing process:
 
 <table>
 	<tbody>

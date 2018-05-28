@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 group: rest
-title: Step 3. Create the simple products
-menu_title: Step 3. Create the simple products
+title: 步骤3. Create the simple products
+menu_title: 步骤3. Create the simple products
 menu_order: 30
 level3_subgroup: configurable-product-tutorial
 version: 2.2

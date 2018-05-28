@@ -1,15 +1,15 @@
 ---
 group: howdoi
 subgroup:
-title: Add custom input mask for ZIP code
-menu_title: Add custom input mask for ZIP code
+title: 为邮编添加自定义掩码
+menu_title: 为邮编添加自定义掩码
 menu_order: 6
 version: 2.1
 github_link: howdoi/checkout/checkout_zip.md
 functional_areas:
   - Checkout
 ---
-## What's in this topic
+## 这里有什么
 
 When a shopper specifies the country and ZIP code in the shipping address during {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} or in the shopping cart, Magento checks if the format of the entered code is valid for the specified country. This validation is implemented using the input masks for the ZIP code field. In Magento, these input masks are regular expressions which define which format is allowed.
 This topic describes how a developer can add custom input masks.

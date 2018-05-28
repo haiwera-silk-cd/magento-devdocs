@@ -15,10 +15,10 @@ functional_areas:
 
 <h2 id="js_debug_overview">概述</h2>
 
-This topic discusses how to define which {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components and widgets are used on a particular Magento store page.
+This topic discusses how to define which {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 and widgets are used on a particular Magento store page.
 
 
-<h2 id="locate_widget">Locate JS components: walkthrough</h2>
+<h2 id="locate_widget">Locate JS 组件: walkthrough</h2>
 
 To locate scripts used for a certain element:
 
@@ -53,7 +53,7 @@ To find the source file of the used script:
 <h2>Locate JS component: example</h2>
 
 As we discussed in the preceding section, you use browser debugging tools to define which JavaScript component or {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} is used for an element. An example follows.
-To find what JS components are used for displaying the main navigation menu in the Luma theme:
+To find what JS 组件 are used for displaying the main navigation menu in the Luma theme:
 
 <ol>
 <li>Using the Inspect Element feature of the browser, define that the menu section <code>id</code> is <code>store.menu</code>:
@@ -76,7 +76,7 @@ We can see that there's a <code>data-mage-init</code> attribute in the scope of 
 data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'
 </pre>
 
-According to the JS components initialization notation, this means that this code calls <code>menu.js</code>.
+According to the JS 组件 initialization notation, this means that this code calls <code>menu.js</code>.
 </li>
 <li>To find the source file of <code>menu.js</code></li>, let's open <code>requirejs-config.js</code> by clicking the link to it in the <head></head> section of the page source. The path to <code>menu.js</code> is specified there as follows:
 <pre>

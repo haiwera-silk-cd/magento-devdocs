@@ -92,7 +92,7 @@ This phase builds the codebase and runs hooks in the `build` section of `.magent
 *	Enables all extensions. To best build all code for deployment, we enable all extensions, build, then disable extensions you had disabled in your configuration.
 *	Regenerates code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration (that is, the Magento `var/generation` and `var/di` directories) using `bin/magento setup:di:compile`.
 
-**Important:** At this point the cluster has not been created yet. So you should not try to connect to a database or imagine anything was daemonized.
+**重要:** At this point the cluster has not been created yet. So you should not try to connect to a database or imagine anything was daemonized.
 
 Once the application has been built it is mounted on a **read-only file system**. You will be able to configure specific mount points that are going to be read/write. For the project structure, see [Local project directory structure]({{ page.baseurl }}/cloud/project/project-start.html#cloud-structure-local).
 
@@ -137,7 +137,7 @@ If the `config.local.php` file does not exist in the codebase, static file deplo
 
 There are two default deploy hooks. `pre-deploy.php` completes necessary cleanup and retrieval of resources and code generated in the build hook. `bin/magento magento-cloud:deploy` runs a series of commands and scripts:
 
-*	If Magento is **not installed**, it installs Magento with `bin/magento setup:install`, updates the deployment configuration, `app/etc/env.php`, and the database for your specified environment (for example, Redis and website URLs). **Important:** When you completed the [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html) during setup, {{site.data.var.ee}} was installed and deployed across all environments.
+*	If Magento is **not installed**, it installs Magento with `bin/magento setup:install`, updates the deployment configuration, `app/etc/env.php`, and the database for your specified environment (for example, Redis and website URLs). **重要:** When you completed the [首次部署]({{ page.baseurl }}/cloud/access-acct/first-time-deploy.html) during setup, {{site.data.var.ee}} was installed and deployed across all environments.
 
 *	If Magento **is installed**, performs any necessary upgrades. The deployment script runs [`bin/magento setup:upgrade`]({{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-db-upgr.html) to update the database schema and data (which is necessary after extension or core code updates), and also updates the [deployment configuration]({{ page.baseurl }}/config-guide/config/config-php.html), `app/etc/env.php`, and the database for your environment. Finally, the deployment script clears the Magento cache.
 

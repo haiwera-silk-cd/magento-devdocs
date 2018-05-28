@@ -83,10 +83,10 @@ Efforts should be made to optimize icons and/or icon fonts for assistive technol
 Use "aria-hidden" attribute:
 Modern versions of assistive technologies will announce CSS generated content, as well as specific Unicode characters. To avoid unintended and confusing output in screen readers hide them with the aria-hidden="true" attribute.
 
-From: [http://getbootstrap.com/components/](http://getbootstrap.com/components/){:target="_blank}
+From: [http://getbootstrap.com/组件/](http://getbootstrap.com/组件/){:target="_blank}
 
 
-### Example of "aria-hidden" attribute
+### 示例 of "aria-hidden" attribute
 
 ```php?start_inline=1
 <style>

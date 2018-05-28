@@ -35,7 +35,7 @@ Magento 2 has the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30
     <tr>
       <td><p>Layout</p></td>
       <td><p>layout</p></td>
-      <td><p>Compiled page layouts (that is, the layout components from all components).</p>
+      <td><p>Compiled page layouts (that is, the layout 组件 from all 组件).</p>
 	<p>Clean or flush this cache type after modifying layout files.</p></td>
     </tr>
     <tr>

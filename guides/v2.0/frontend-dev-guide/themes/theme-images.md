@@ -11,7 +11,7 @@ functional_areas:
   - Theme
 ---
 
-## What's in this topic ##
+## 这里有什么 ##
 
 The properties of product images used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} are stored in the `view.xml` configuration file. This topic provides all details about what properties are available and how to configure them.
 

@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: InsertForm component
-menu_title: InsertForm component
+group: UI_组件_guide
+subgroup: 组件
+title: 可插入表单组件
+menu_title: 可插入表单组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-form.md
+github_link: ui_comp_guide/组件/ui-form.md
 ---
 
 ## Overview
 
-The InsertForm component inserts the [Form component]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) into other components.
+The 可插入表单components inserts the [表单components]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) into other 组件.
 
 ## Сonfiguration options
 
@@ -37,7 +37,7 @@ InsertForm-specific options:
       <code>autoRender</code>
     </td>
     <td>
-      When set to true, the Form component is automatically
+      When set to true, the 表单组件 is automatically
       rendered during Insertform initialization. Otherwise,
       insertListing's <code>render</code> method should be called
       to render the Form.
@@ -61,7 +61,7 @@ InsertForm-specific options:
       String
     </td>
     <td>
-      <code>Magento_Ui/js/form/components/insert-form</code>
+      <code>Magento_Ui/js/form/组件/insert-form</code>
     </td>
   </tr>
   <tr>
@@ -154,7 +154,7 @@ InsertForm-specific options:
       Enables link between insertForms's externalValue and value.
       Here 'link' means the two-way <a href=
       "{{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_linking_concept.html#links">
-      links property</a> of UI components, which allows immediate
+      links property</a> of UI 组件, which allows immediate
       update.
     </td>
     <td>

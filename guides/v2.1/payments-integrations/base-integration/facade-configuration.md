@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Payment method facade
-menu_title: Payment method facade
+title: 支集方式外观接口
+menu_title: 支集方式外观接口
 menu_order: 3
 version: 2.1
 github_link: payments-integrations/base-integration/facade-configuration.md
@@ -132,5 +132,5 @@ Then, the newly created validator needs to be added to the global pool of valida
 
 ## What's next
 
-- [Payment info rendering in Admin checkout]({{ page.baseurl }}/payments-integrations/base-integration/formblocktype.html)
+- [管理面板的支付信息渲染]({{ page.baseurl }}/payments-integrations/base-integration/formblocktype.html)
 - [Add a gateway command]({{ page.baseurl }}/payments-integrations/base-integration/payment-action.html) 

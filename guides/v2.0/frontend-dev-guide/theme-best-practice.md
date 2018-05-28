@@ -15,7 +15,7 @@ This topic describes the recommended approaches and things to consider when work
 
 These approaches give higher chances to avoid conflicts and issues with your theme after your Magento instance get updated or upgraded, or a custom extension is installed.
 
-## Theme development best practice
+## 主题开发 best practice
 
 1. When [inheriting]({{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html) from a default Magento theme, rather extend, than override the default styles: whenever possible, put your customizations in the `_extend.less`或`_theme.less` file, instead of overriding a `.less` file from a parent theme. 
 2. Customize or create new `.xml` layout files instead of customizing and overriding `.phtml` templates. For example, if you need to create a new container, it is better to add an `.xml` file and create it there, than override a template. 

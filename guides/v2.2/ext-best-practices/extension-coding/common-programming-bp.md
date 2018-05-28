@@ -1,6 +1,6 @@
 ---
 group: ext-best-practices
-title: Programming Best Practices
+title: 最佳编程实践
 version: 2.2
 github_link: ext-best-practices/extension-coding/common-programming-bp.md
 functional_areas:
@@ -14,7 +14,7 @@ The following list of best practices addresses commonly reported issues in third
 ### Follow a set of coding standards
 Coding standards are a set of guidelines that describe how code should be written. These standards define coding practices that determine the style of the code. Whether you are a solo developer or part of a team, following a set of coding standards will help make your code consistent and maintainable.
 
-[Magento's Coding Standards]({{ page.baseurl }}/coding-standards/bk-coding-standards.html) are based on the following:
+[Magento's 编码规范]({{ page.baseurl }}/coding-standards/bk-coding-standards.html) are based on the following:
 
 * [Zend Coding standards](http://framework.zend.com/manual/1.12/en/coding-standard.html){:target="_blank"}
 * [PSR2](http://www.php-fig.org/psr/psr-2/){:target="_blank"}
@@ -64,6 +64,6 @@ Since 2.2, [after method plugins]({{ page.baseurl }}/extension-dev-guide/plugins
 
 ### Test your code
 
-Write testable code and follow the [Magento Testing Guide]({{ page.baseurl }}/test/testing.html) to create tests for your code.
+Write testable code and follow the [Magento测试手册]({{ page.baseurl }}/test/testing.html) to create tests for your code.
 
 Tests help describe what your code does under different conditions and define its functionality. Make sure your tests cover a variety of conditions to prevent the introduction of bugs when you add new code.

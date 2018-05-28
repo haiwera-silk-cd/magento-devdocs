@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup: clear-static-files
-title: Clean static files cache
-menu_title: Clean static files cache
+title: 清除静态文件缓存
+menu_title: 清除静态文件缓存
 menu_node: parent
 menu_order: 1
 version: 2.1

@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: DocBlock standard
+title: 注释文档块规范
 landing-page: Coding standards
-menu_title: DocBlock standard
+menu_title: 注释文档块规范
 menu_order: 4
 version: 2.0
 github_link: coding-standards/docblock-standard-general.md
@@ -29,7 +29,7 @@ The goal of this standard is to unify usage of code DocBlocks for all files, not
 The following is assumed by default:
 
 * Formatting according [phpDocumentor](https://www.phpdoc.org/docs/latest/guides/docblocks.html){:target="_blank"} standard
-* Requirements apply for all files regardless of programming language, but a DocBlock standard for the particular language may override it.
+* Requirements apply for all files regardless of programming language, but a 注释文档块规范 for the particular language may override it.
 
 ## General principles
 
@@ -183,7 +183,7 @@ interface MetadataObjectInterface
 {:#code-elements}
 
 A structural element is defined in [phpDocumentor](http://phpdoc.org/) as part of imperative source code, such as PHP or JavaScript, or procedural SQL.
-For example: namespace, class, interface, function, property, method, and so on.
+例如: namespace, class, interface, function, property, method, and so on.
 
 If the source code file has one and only one standalone structural element (class, interface, function, and so on), as it may be required by language-specific coding standard, the file DocBlock is to be reused for this element.
 
@@ -337,7 +337,7 @@ Functions and methods must have:
 
 * Short description
 * Long description that explains the motivation behind the implementation.
-  For example:
+  例如:
 
    * If a workaround or hack is implemented, explain why it is necessary and include any other details necessary to understand the algorithm.
    * For non-obvious implementations where the implementation logic is complicated or does not correspond to the Technical Vision or other known best practices, include an explanation in the doc block's description.
@@ -368,7 +368,7 @@ Functions and methods must have:
 
   * There is more than one possible input/output type.
 
-    For example: `@return Config|null`.
+    例如: `@return Config|null`.
     The DockBlock needs to explain what situations return `null`.
 
     Another example: `@param FileInterface | null`.
@@ -458,7 +458,7 @@ public function setAttribute($elementId, $attribute, $value)
 In this general case, if an exception is thrown in a sub-routine, then `@throws` must not be used in the parent method.
 
 However, if the only purpose of the referred sub-routine is to throw a specific exception – then `@throws` must be used in the parent method.
-For example:
+例如:
 
 **Throwing Exception Implicitly**
 
@@ -631,7 +631,7 @@ Use the `@deprecated` tag to indicate an element is to be deprecated.
 Motivation behind the added `@deprecated` tag MUST be explained.
 `@see` tag MUST be used with reference to new implementation when code is deprecated and there is a new alternative.
 
-For example:
+例如:
 
 {% highlight php startinline=true %}
 /**

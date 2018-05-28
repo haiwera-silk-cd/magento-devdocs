@@ -1,6 +1,6 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 可扩展和模块化
 menu_title: 可扩展和模块化
 menu_node:
@@ -31,15 +31,15 @@ Magento is built on open-source technologies, created for the development commun
 
 ### Coding standards
 
-Adherence to standard best practices for {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} code ensures that the code base is sound. Magento has adopted most of the Zend Framework Coding Standards for PHP. See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">Coding Standards</a> for more information.
+Adherence to standard best practices for {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} code ensures that the code base is sound. Magento has adopted most of the Zend Framework 编码规范 for PHP. See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a> for more information.
 
 ### Upgrade and versioning strategies
 
 Magento has well-defined upgrade and versioning strategies that can help you avoid any problems with software component dependencies. Add modules after confirming that the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} version is compatible with the Magento框架 version.
 
-## Related topics {#m2arch-related}
+## 相关主题 {#m2arch-related}
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">Architectural basics</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">架构基础</a>
 
 <a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">全局可扩展的特性</a>
 

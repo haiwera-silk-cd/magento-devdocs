@@ -125,14 +125,14 @@ This section discusses how to secure communication between Apache and Elasticsea
 
 See one of the following sections:
 
-*	[Step 1: Create a password file](#es-ws-secure-apache-pwd)
-*	[Step 2: Configure your secure virtual host](#es-ws-secure-finish)
+*	[步骤1. Create a password file](#es-ws-secure-apache-pwd)
+*	[步骤2. Configure your secure virtual host](#es-ws-secure-finish)
 *	[Verify communication is secure](#es-ws-secure-verify)
 
-### Step 1: Create a password {#es-ws-secure-apache-pwd}
+### 步骤1. Create a password {#es-ws-secure-apache-pwd}
 {% include config/secure-ws-apache_step1.md %}
 
-### Step 2: Secure communication with Apache {#es-ws-secure-finish}
+### 步骤2. Secure communication with Apache {#es-ws-secure-finish}
 This section discusses how to set up [HTTP Basic authentication](https://httpd.apache.org/docs/2.2/howto/auth.html){:target="_blank"}. Use of TLS and HTTP Basic authentication together prevents anyone from intercepting communication with Elasticsearch or with your Magento server.
 
 This section discusses how to specify who can access the Apache server.
@@ -166,5 +166,5 @@ This section discusses how to specify who can access the Apache server.
 
 {% include config/es-verify-proxy.md %}
 
-#### Next
+#### 下一步
 <a href="{{ page.baseurl }}/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>

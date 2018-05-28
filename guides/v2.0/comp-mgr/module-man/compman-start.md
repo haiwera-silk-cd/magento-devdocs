@@ -20,9 +20,9 @@ functional_areas:
 To run the Component Manager:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
-2.	Click **System** > **Web Setup Wizard**.
+2.	Click **System** > **网页安装向导**.
 	The following page displays.<br><br>
-	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage components or upgrade Magento"><br><br>
+	<img src="{{ site.baseurl }}/common/images/cman_upgr_initial.png" width="650px" alt="Specify whether to manage 组件 or upgrade Magento"><br><br>
 3.	Click **System Configuration**.
 4.	If you haven't already done so, enter your [authentication keys]({{ page.baseurl }}/install-gde/prereq/connect-auth.html) in the provided fields.
 

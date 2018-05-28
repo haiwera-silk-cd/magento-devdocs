@@ -1,5 +1,5 @@
 ---
-group: UI Components
+group: UI 组件
 subgroup:
 title:
 menu_title:
@@ -9,7 +9,7 @@ version: 2.1
 github_link: contributor-guide/basic_template.md
 ---
 
-### Overview
+### 概述
 
 One or two sentences, describing what is the procedure and when the user might need it. High-level workflow.
 

@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup:
-title: Add a custom template for a form field on Checkout page
-menu_title: Add a custom template for a form field on Checkout page
+title: 在结算页为表单输入添加自定义模板
+menu_title: 在结算页为表单输入添加自定义模板
 menu_order: 7
 version: 2.0
 github_link: howdoi/checkout/checkout_edit_form.md
@@ -10,7 +10,7 @@ functional_areas:
   - Checkout
 ---
 
-<h2> What's in this topic</h2>
+<h2> 这里有什么</h2>
 This topic describes how to replace the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} template for a form field on the {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} page. You might need to replace the template in order to add elements displayed with the field, change the {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} class assigned to it, add attributes and so on.
 
 <h2> Overview </h2>
@@ -72,7 +72,7 @@ In this file, add content similar to the following:
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
+                    <item name="组件" xsi:type="array">
                         <item name="checkout" xsi:type="array">
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">

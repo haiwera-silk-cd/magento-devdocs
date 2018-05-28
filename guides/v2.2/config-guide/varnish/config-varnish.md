@@ -23,7 +23,7 @@ functional_areas:
 	*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-install.html">安装Varnish</a>
 	*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>
 	*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>
-	*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache.html">Configure Magento to use multiple Varnish instances</a>
+	*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache.html">配置Magento to use multiple Varnish instances</a>
 	*	<a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-final.html">最终校验</a>
 *	Use Varnish:
 	*	<a href="{{ page.baseurl }}/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>

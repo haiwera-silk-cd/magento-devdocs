@@ -1,5 +1,5 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: troubleshoot
 title: js调试UI组件
 menu_title: js调试UI组件
@@ -10,9 +10,9 @@ github_link: ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.md
 
 ## Overview
 
-This article describes how to define what UI components are used on a particular page, their {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} components and what data they use.
+This article describes how to define what UI 组件 are used on a particular page, their {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 and what data they use.
 
-To define the UI components used on a page, you can use browser built-in developer tools, or install additionally a plugin, for example Knockoutjs context debugger for Google Chrome.
+To define the UI 组件 used on a page, you can use browser built-in developer tools, or install additionally a plugin, for example Knockoutjs context debugger for Google Chrome.
 
 ## Debugging using Knockout.js plugin
 
@@ -57,7 +57,7 @@ var context = ko.contextFor($0);
 
 , where `$0` is a [special variable](https://developers.google.com/web/tools/chrome-devtools/debug/command-line/command-line-reference#section-1) in browser console. It contains a link to a DOM element that is last inspected.
 
-For example:
+例如:
 {%highlight js%}
 // Admin > Products > Catalog > Add Product
 // Inspect "Product Name"

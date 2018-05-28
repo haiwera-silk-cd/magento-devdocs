@@ -9,7 +9,7 @@ These instructions apply to Magento Community Edition (CE) and Magento Enterpris
 
 To upgrade to Magento 2.1 sample data using the command line:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.	Change to the Magento installation directory.
 3.	Back up your current `composer.json`:
 
@@ -43,7 +43,7 @@ To upgrade to Magento 2.1 sample data using the command line:
 ### Finish your upgrade
 After you've reset file system permissions:
 
-1.	If you haven't done so already, log in to your Magento server as, or switch to, the Magento file system owner.
+1.	If you haven't done so already, log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to your Magento installation directory.
 2.	Manually clear the `var/cache`, `var/page_cache`, and `var/generation` directories.
 

@@ -22,7 +22,7 @@ Typically, you'll test your own modules; replace the paths shown in the examples
 {% include install/docker/docker-phpstorm.md %}
 
 ## 先决条件
-Before you begin, make sure you have completed all of the following tasks:
+开始之前, make sure you have completed all of the following tasks:
 
 *	[PhpStorm prerequisites]({{ page.baseurl }}/install-gde/docker/docker-phpstorm-prereq.html)
 *	[Set up your PhpStorm project]({{ page.baseurl }}/install-gde/docker/docker-phpstorm-project.html)

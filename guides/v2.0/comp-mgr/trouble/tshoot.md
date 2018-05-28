@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 50_trouble
-title: 故障排除 suggestions
-menu_title: 故障排除 suggestions
+title: 故障排除建议
+menu_title: 故障排除建议
 menu_node: parent
 menu_order: 1
 version: 2.0

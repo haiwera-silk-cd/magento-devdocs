@@ -18,7 +18,7 @@ To migrate successfully and avoid issues, you need to thourougly plan and test y
 
 Migration is a perfect moment to make serious changes and get your site ready for the next level of growth. Consider whether your new site needs to be designed with more hardware or a more advanced topology with better caching tiers, etc.
 
-## Step 1: Review extensions on your current site
+## 步骤1. Review extensions on your current site
 
 * What extensions have you installed?
 
@@ -28,7 +28,7 @@ Migration is a perfect moment to make serious changes and get your site ready fo
 
 * What database assets from your extensions do you want to migrate?
 
-## Step 2: Build and prepare Magento 2 store for migration
+## 步骤2. Build and prepare Magento 2 store for migration
 
 * Set up a Magento 2 hardware system using topology and design that at least matches your existing Magento 1 system
 
@@ -36,7 +36,7 @@ Migration is a perfect moment to make serious changes and get your site ready fo
 
 * Make your custom adjustments to the 数据迁移工具 code in case you do not need to migrate some data (like CMS Pages, Sales Rules, etc.) or want to convert your Magento customization during migration. Read the 数据迁移工具's [Technical Specification] to better understand how migration works from inside
 
-## Step 3: Dry run
+## 步骤3. Dry run
 
 Before you start migration on the production environment, it would be best to go through all the migration steps on your testing environment.
 
@@ -48,7 +48,7 @@ In such migration testing, follow these steps:
 
 * Thoroughly test your new store
 
-## Step 4: Start your migration
+## 步骤4. Start your migration
 
 1. Make sure that the 数据迁移工具 has a network access to connect to Magento 1 and Magento 2 databases. Open the corresponding ports in your firewall.
 
@@ -58,7 +58,7 @@ In such migration testing, follow these steps:
 
    Still, if some jobs are required to run during migration, make sure they do not create new database entities or change the existing ones in the way that such entities cannot be processed by the Delta mode.
 
-   For example: the `enterprise_salesarchive_archive_orders` cron job moves old orders to archive. Running this job during migration is safe because the Delta mode takes the job into account and thus properly processes the archived orders.
+   例如: the `enterprise_salesarchive_archive_orders` cron job moves old orders to archive. Running this job during migration is safe because the Delta mode takes the job into account and thus properly processes the archived orders.
 
 {:start="4"}
 4. Use the 数据迁移工具 to migrate settings and websites.
@@ -75,7 +75,7 @@ In such migration testing, follow these steps:
 {:start="7"}
 7. Reindex all Magento 2.x indexers. For details, see the [Configuration guide].
 
-## Step 5: Make changes to the migrated data (if needed)
+## 步骤5. Make changes to the migrated data (if needed)
 
 Sometimes you may want to have your Magento 2 store with different catalog structure, sales rules, CMS pages, etc. after migration.
 
@@ -83,7 +83,7 @@ It is is important to practice caution while working through manual data changes
 
 For example, a product deleted from Magento 2: the one that has been bought on your live Magento 1 store and which is not available anymore in your Magento 2 store. Transferring data about such purchase might cause an error while running the 数据迁移工具 in Delta mode.
 
-## Step 6: Update incremental data
+## 步骤6. Update incremental data
 
 After migrating data, you must incrementally capture data updates that have been added in the Magento 1 store (such as new orders, reviews, and changes in customer profiles) and transfer these updates to the Magento 2 store using the Delta mode.
 
@@ -97,7 +97,7 @@ In case of such issues, press `Ctrl+C` to stop incremental migration and start i
   <p>Volume check warnings may appear in case you conduct testing of your Magento 2 site and run migration process at the same time. It happens because in Magento 2 you create entities that do not exist in Magento 1 instance.</p>
 </div>
 
-## Step 7: Go live
+## 步骤7. Go live
 
 Now that your Magento 2 site is up-to-date with Magento 1 and is functioning normally, do the following to cut over to the new site:
 

@@ -95,7 +95,7 @@ We recommend testing patches in an active branch, prior to deploying to Staging 
 
 To test a general patch on your local system, you create a branch from the Pro Integration `master` branch or Starter plan `staging` branch. The commands used in the instructions are for Pro plan using the `master` branch.
 
-1.	On your local system, enter the following commands as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html):
+1.	On your local system, enter the following commands as the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html):
 
 		cd <project root dir>
 		magento-cloud environment:checkout master
@@ -166,7 +166,7 @@ We recommend you test a patch locally in an active branch. After completing test
 
 To test a custom patch on your local system:
 
-1.	On your local system, enter the following command as the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) if you haven't done so already:
+1.	On your local system, enter the following command as the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html) if you haven't done so already:
 
 		mkdir <Magento project root dir>/m2-hotfixes
 3.	Copy the patch file to that directory.

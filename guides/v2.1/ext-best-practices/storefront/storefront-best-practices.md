@@ -1,7 +1,7 @@
 ---
 group: ext-best-practices
 subgroup: 03_Storefront
-title: Storefront UI best practices
+title: 网店前台UI最佳实践
 menu_title: Storefront
 menu_order: 1
 menu_node: parent

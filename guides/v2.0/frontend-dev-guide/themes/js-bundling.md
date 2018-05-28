@@ -14,7 +14,7 @@ functional_areas:
 JavaScript bundling is an optimization technique you can use to reduce the number of server requests for JavaScript files.
 Bundling accomplishes this by merging multiple JavaScript files together into one file to reduce the number of page requests.
 
-## Enable JavaScript bundling
+## 开启js打包
 
 Magento must be set to [生产模式][production-mode] in order for bundling to work.
 
@@ -44,7 +44,7 @@ Do not bundle JavaScript files used for testing or development because these wil
 
 The following code snippet from [Magento's Luma theme][luma-view-xml]{:target="_blank"} shows the types of files you should exclude in your theme.
 
-{% collapsible Show example %}
+{% collapsible 查看示例 %}
 
 {% highlight xml %}
 <vars module="Js_Bundle">
@@ -76,8 +76,8 @@ The following code snippet from [Magento's Luma theme][luma-view-xml]{:target="_
     <item type="file">Magento_Ui::js/lib/step-wizard.js</item>
     <item type="file">Magento_Ui::js/form/element/ui-select.js</item>
     <item type="file">Magento_Ui::js/form/element/file-uploader.js</item>
-    <item type="file">Magento_Ui::js/form/components/insert.js</item>
-    <item type="file">Magento_Ui::js/form/components/insert-listing.js</item>
+    <item type="file">Magento_Ui::js/form/组件/insert.js</item>
+    <item type="file">Magento_Ui::js/form/组件/insert-listing.js</item>
     <item type="directory">Magento_Ui::js/timeline</item>
     <item type="directory">Magento_Ui::js/grid</item>
     <item type="directory">Magento_Ui::js/dynamic-rows</item>

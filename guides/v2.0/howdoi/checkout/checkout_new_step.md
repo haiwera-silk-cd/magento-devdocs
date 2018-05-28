@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup:
-title: Add a new checkout step
-menu_title: Add a new checkout step
+title: 添加一个结算步骤
+menu_title: 添加一个结算步骤
 menu_order: 1
 version: 2.0
 github_link: howdoi/checkout/checkout_new_step.md
@@ -10,7 +10,7 @@ functional_areas:
   - Checkout
 ---
 
-## What's in this topic
+## 这里有什么
 The default Magento {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} consists of two steps:
 
  - Shipping Information
@@ -167,7 +167,7 @@ A sample `checkout_index_index.xml` follows:
         <referenceBlock name="checkout.root">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
-                        <item name="components" xsi:type="array">
+                        <item name="组件" xsi:type="array">
                             <item name="checkout" xsi:type="array">
                                 <item name="children" xsi:type="array">
                                     <item name="steps" xsi:type="array">

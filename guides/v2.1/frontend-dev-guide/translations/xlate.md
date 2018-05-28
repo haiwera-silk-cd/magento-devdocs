@@ -110,7 +110,7 @@ Assembling the preceding `pt_BR.csv` files across all modules and the current th
 <h2 id="m2devgde-xlate-languagepack">Language packages</h2>
 Magento enables you to create the following types of language packages:
 
-*	A set of .csv files for modules and themes. These packages files are intended to be deployed in modules. For example:
+*	A set of .csv files for modules and themes. These packages files are intended to be deployed in modules. 例如:
 
 		__/app
 		 |__/code

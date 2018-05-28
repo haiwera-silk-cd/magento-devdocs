@@ -46,9 +46,9 @@ You can extend and override layouts in the `Magento\NegotiableQuote\view\adminht
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directories contain extensible UI components:
+The following directories contain extensible UI 组件:
 
 * `Magento\NegotiableQuote\view\adminhtml\ui_component` -  company form, negotiable quote grid
 

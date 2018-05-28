@@ -1,7 +1,7 @@
 ---
 group: get-started
 subgroup: 20_REST
-title: Use REST APIs
+title: 使用REST API
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -32,12 +32,12 @@ Read the following sections to get up and running with the Magento web APIs:
    </li>
    <li>
       <p>
-         <a href="{{ page.baseurl }}/get-started/gs-web-api-request.html">Construct a request</a>
+         <a href="{{ page.baseurl }}/get-started/gs-web-api-request.html">构造一个请求</a>
       </p>
    </li>
    <li>
       <p>
-         <a href="{{ page.baseurl }}/get-started/gs-curl.html">Use cURL to run the request</a>
+         <a href="{{ page.baseurl }}/get-started/gs-curl.html">使用curl执行这个请求</a>
       </p>
    </li>
    <li>

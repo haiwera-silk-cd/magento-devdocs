@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: how tos
 title: 如何添加分类属性
-menu_title: Creating and displaying a category attribute with UI Components
+menu_title: Creating and displaying a category attribute with UI 组件
 menu_order: 3
 contributor_name: SwiftOtter Studios
 contributor_link: https://swiftotter.com/

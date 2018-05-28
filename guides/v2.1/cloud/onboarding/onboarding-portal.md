@@ -46,7 +46,7 @@ The focus of this portal is for business users who may need a bit more planning 
 ![Onboarding Portal getting started]({{ site.magentourl }}/common/images/cloud_portal-getstarted1.png)
 
 ## Set a Technical Admin {#tech-admin}
-**Important:** This step is required for the Project Owner.
+**重要:** This step is required for the Project Owner.
 
 The _Technical Admin_ is a user account in the Project Web Interface with super user permissions. This admin is your point of contact for all technical information and project management. Managing a project includes Git code branches, adding user accounts, setting environment variables and settings, adding routes, and deploying software to environments.
 

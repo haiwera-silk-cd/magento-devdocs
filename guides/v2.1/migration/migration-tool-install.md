@@ -68,7 +68,7 @@ You may install the 数据迁移工具 from:
 
 To install the 数据迁移工具, you must update `composer.json` in the Magento root installation directory to provide the location of the 数据迁移工具 package.
 
-1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.
 2.	Change to Magento 2 root directory.
 3.	Enter the following commands:
 
@@ -88,7 +88,7 @@ To install the 数据迁移工具, you must update `composer.json` in the Magent
 
 If you've cloned Magento 2 from the GitHub repository, follow the steps below to install the 数据迁移工具.
 
-1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.
 2.	Change to Magento 2 root directory.
 3.	Enter the following commands:
 
@@ -110,7 +110,7 @@ If you've cloned Magento 2 from the GitHub repository, follow the steps below to
 
 3. The `version` entry in that file is the version of the 数据迁移工具.
 
-## Related topics
+## 相关主题
 
 * <a href="{{ page.baseurl }}/migration/migration-tool-configure.html">配置迁移</a>
 * <a href="{{ page.baseurl }}/migration/migration-tool-preconditions.html">先决条件</a>

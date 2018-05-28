@@ -24,7 +24,7 @@ For example, during initial development you may prefer email notifications that 
 
 {% include note.html type="info" content="The configuration file used to set up notifications is at the root of your project directory, so it applies when you push changes to any environment. If you want to customize notifications per environment, you must modify the configuration file before pushing it to that environment." %}
 
-## Configure notifications
+## 配置notifications
 To configure notifications:
 
 1.  Open a terminal and [checkout a branch]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html#branch) in your local environment.
@@ -58,7 +58,7 @@ To configure notifications:
     git push origin <branch-name>
     ```
 
-### Example Slack configuration
+### 示例 Slack configuration
 The following example shows a Slack-only configuration:
 
 ```yaml
@@ -75,7 +75,7 @@ log:
 -   `username`—Username {{site.data.var.ece}} uses to send notification messages in Slack.
 -   `min_level`—Minimum log level for notification messages. We recommend using `info`.
 
-### Example email configuration
+### 示例 email configuration
 The following example shows an email-only configuration:
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">

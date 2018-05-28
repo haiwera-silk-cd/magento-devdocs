@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Payment method module configuration
-menu_title: Payment method module configuration
+title: 支集模块配置
+menu_title: 支集模块配置
 menu_order: 1
 version: 2.1
 github_link: payments-integrations/base-integration/module-configuration.md
@@ -19,7 +19,7 @@ You can use the [sample Magento_SamplePaymentGateway模块](https://github.com/m
 Your custom payment integration module must have at least the following dependencies:
 
 - Magento_Sales模块: to be able to get order details
-- Magento_Payment模块: to use the Magento payment provider gateway infrastructure
+- Magento_Payment模块: to use the Magento支付提供商网关 infrastructure
 - Magento_Checkout模块: to be able to add the new {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} to {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. If you do not plan to use it on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} checkout, this dependency is not required. 
 
 
@@ -68,6 +68,6 @@ Your payment method implementation might require adding more dependencies.
 
 ## What's next
 
-[Payment method configuration]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html).
+[支集方式配置]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html).
 
 

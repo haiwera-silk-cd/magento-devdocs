@@ -19,8 +19,8 @@ functional_areas:
 ## System requirements {#devbox-sys-req}
 To use the Magento DevBox, you must have a system with the following:
 
-*	64-bit Windows 10 Pro, Enterprise and Education (1511 November update, Build 10586 or later)
-*	Mac OS 10.10.3 "Yosemite" or later
+*	64-bit Windows 10 Pro, Enterprise and Education (1511 November update, Build 10586或更新)
+*	Mac OS 10.10.3 "Yosemite"或更新
 
 Magento DevBox is packaged with the following:
 
@@ -182,7 +182,7 @@ See <a href="#devbox-download">How to download Magento code</a>.
 #### Select Magento Edition
 For new installations, you have the option to install {{site.data.var.ce}} or {{site.data.var.ee}}. Both editions require authentication; to get {{site.data.var.ee}} authentication credentials, you must be a licensed customer.
 
-**Optional sample data** Optional sample data provides a storefront based on the Luma theme outfitted with products, categories, customer registration, and so on. It functions just like a Magento storefront and you can manipulate prices, inventory, and promotional pricing rules using the Magento Admin.
+**可选安装样本数据** 可选安装样本数据 provides a storefront based on the Luma theme outfitted with products, categories, customer registration, and so on. It functions just like a Magento storefront and you can manipulate prices, inventory, and promotional pricing rules using the Magento Admin.
 
 Select the check box to install optional sample data. This option increases your installation time by a few minutes.
 

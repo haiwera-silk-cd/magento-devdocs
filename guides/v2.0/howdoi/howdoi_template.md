@@ -30,7 +30,7 @@ INTRODUCTORY TEXT, EXPLAIN WHAT YOUR ARTICLE IS ABOUT
 
 1.	Step 1
 2.	Step 2
-3.	Step 3
+3.	步骤3
 
 <!-- Image link -->
 

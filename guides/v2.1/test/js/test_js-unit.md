@@ -69,7 +69,7 @@ return array(
         '/lib/web/jquery/ui',
         '/lib/web/mage/localization',
         '/lib/web/mage/validation',
-        '/lib/web/mage/components'),
+        '/lib/web/mage/组件'),
     'test' => array('/dev/tests/js/testsuite'),
     'serve' => array('/lib/web/mage/calendar')
 );
@@ -120,7 +120,7 @@ To complete the unit tests, the PHP script completes this processing:
 4. The script determines the order in which the JsTestDriver loads certain JavaScript files through the `jsTestDriverOrder.php` configuration file in the `<magento2_root_dir>/dev/tests/js` directory.
 
 
-## Step 1. Before you begin {#test-prereqs}
+## 步骤1. 开始之前 {#test-prereqs}
 
 On the system where you plan to run the unit tests, install the following prerequisite software:
 
@@ -133,7 +133,7 @@ On the system where you plan to run the unit tests, install the following prereq
 
 * **`JsTestDriver.jar`**
 
-## Step 2. Configure unit tests {#main-api}
+## 步骤2. Configure unit tests {#main-api}
 
 Configuration files are located in the `<magento2_root_dir>/dev/tests/js` directory.
 
@@ -149,7 +149,7 @@ Browser
 JsTestDriver
 : Required. Defines the file path to the `JsTestDriver.jar` file.
 
-## Step 3. 运行单元测试 {#run-js-unit-tests}
+## 步骤3. 运行单元测试 {#run-js-unit-tests}
 
 To run the automated JavaScript tests, run the `run_js_tests.php` script inside the PHP interpreter from the command line:
 
@@ -198,7 +198,7 @@ serve:
   ...
 {% endhighlight %}
 
-## Step 4. Use PhpStorm to run unit tests {#phpstorm}
+## 步骤4. Use PhpStorm to run unit tests {#phpstorm}
 
 After the PHP interpreter runs for the first time, you can [run the JavaScript unit tests from the PhpStorm IDE][PhpStorm].
 

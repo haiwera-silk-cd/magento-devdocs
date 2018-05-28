@@ -18,7 +18,7 @@ The Magento_DownloadableStaging模块 changes the Downloadable Product creation 
 
 The Magento_DownloadableStaging模块 adds the "Downloadable information" tab to the Schedule Update form for a product.
 
-### Installation details
+### 安装 details
 
 The Magento_DownloadableStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 
@@ -33,7 +33,7 @@ For more information about the Magento extension mechanism, see [Magento plug-in
 
 [The Magento dependency injection mechanism](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_DownloadableStaging模块.
 
-### UI components
+### UI 组件
 
 You can extend product and {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} updates using the UI components located in the `Magento\DownloadableStaging\view\adminhtml\ui_component` directory. For more information, see [UI Listing/Grid Component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/components/ui-listing-grid.html).
 

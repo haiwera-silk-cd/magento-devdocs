@@ -17,9 +17,9 @@ redirect_from:
   - /guides/v2.1/mktpl-quickstart/intro-moreinfo.html
 ---
 
-The {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} Developer Guide contains information for developers who want to know more about developing or modifying Magento components. With this knowledge you can extend or customize any of the existing components in the Magento application. You can also create components that introduce new functionality and distribute them to merchants.
+The {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} Developer Guide contains information for developers who want to know more about developing or modifying Magento组件. With this knowledge you can extend or customize any of the existing 组件 in the Magento application. You can also create 组件 that introduce new functionality and distribute them to merchants.
 
-## Magento components
+## Magento组件
 
 The Magento application is made up of *Modules*, *Themes*, and *Language Packages*:
 

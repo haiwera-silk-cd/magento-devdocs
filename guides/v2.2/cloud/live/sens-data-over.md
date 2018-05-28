@@ -137,7 +137,7 @@ The **Pro plan** environment high-level overview of this process:
 
 ![Overview of Pro configuration management]({{ site.magentourl }}/common/images/cloud_configmgmt-pro-2-2.png)
 
-### Step 1: 配置你的网店 {#config-store}
+### 步骤1. 配置你的网店 {#config-store}
 Complete all configurations for your stores in the Admin console:
 
 1. Log into the Magento Admin for one of the environments:
@@ -154,13 +154,13 @@ Complete all configurations for your stores in the Admin console:
 
     ssh itnu84v4m4e5k-master-ouhx5wq@ssh.us.magentosite.cloud "php vendor/bin/m2-ece-scd-dump"
 
-**Important:** The `config.php` file includes the following settings and configuration values:
+**重要:** The `config.php` file includes the following settings and configuration values:
 
 * Configured values for settings entered through the Magento Admin
 * Configured extension settings
 * Scopes value for static content deployment (default is [`quick`](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html#static-file-quick))
 
-### Step 2: Transfer and add the file to Git {#transfer-file}
+### 步骤2. Transfer and add the file to Git {#transfer-file}
 Push `config.php` to Git. To push this file to the `master` Git branch, you need to complete a few extra steps because this environment is read-only.
 
 1. Transfer `config.php` to your local system using `rsync`或`scp`. You can only add this file to the Git branch through your local.
@@ -177,7 +177,7 @@ When you add `config.php` to Git, all build and deploy processes move static con
 Once this file is added to your code, you should not delete it. If you need to remove or edit settings, you must manually edit the file to make changes.
 </div>
 
-### Step 3 & 4: Push Git branch to Staging and Production {#push-git}
+### 步骤3.& 4: Push Git branch to Staging and Production {#push-git}
 Log into the Magento Admin in those environments to verify the settings. If you used `scd-dump`, only configured settings display. You can continue configuring the environment if needed.
 
 For Starter, when you push, the updated code pushes to the active environment. Merge the branch to Staging and finally `master` for Production. Complete any additional configurations in Staging and Production as needed.
@@ -196,7 +196,7 @@ You should never delete `config.php` to rebuild it. Deleting the file can remove
 </div>
 
 ## Migrate config.local.php to config.php {#migrate}
-If you upgrade to {{site.data.var.ece}} 2.2 or later, you may want to migrate settings from `config.local.php` to your new `config.php` file. If the configuration settings in your Magento Admin match the contents of the file, you can follow the instructions to generate and add `config.php`.
+If you upgrade to {{site.data.var.ece}} 2.2或更新, you may want to migrate settings from `config.local.php` to your new `config.php` file. If the configuration settings in your Magento Admin match the contents of the file, you can follow the instructions to generate and add `config.php`.
 
 If they differ, you can append content from `config.local.php` to your new `config.php` file:
 

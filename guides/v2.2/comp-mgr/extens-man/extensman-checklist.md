@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Run the Extension Manager
-menu_title: Run the Extension Manager
+title: 运行扩展管理器
+menu_title: 运行扩展管理器
 menu_node: parent
 menu_order: 1
 version: 2.2
@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Run the Extension Manager from the Magento Admin
+## 运行扩展管理器 from the Magento Admin
 The {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} Manager enables you to install, uninstall, and update extensions, including those you purchase from Magento Marketplace. The term *extension* means:
 
 *	Modules (extend Magento capabilities)
@@ -25,8 +25,8 @@ The {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglo
 ## 先决条件
 Before continuing, complete all tasks discussed in [先决条件]({{ page.baseurl }}/comp-mgr/prereq/prereq_compman.html).
 
-## Extension Manager checklist
+## 扩展管理器检查
 {% include comp-man/checklist_2.2.md %}
 
 #### 下一步
-[Start the Extension Manager]({{ page.baseurl }}/comp-mgr/extens-man/extensman-main-pg.html)
+[开启扩展管理器]({{ page.baseurl }}/comp-mgr/extens-man/extensman-main-pg.html)

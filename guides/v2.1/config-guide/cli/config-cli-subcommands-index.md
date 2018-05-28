@@ -96,7 +96,7 @@ Sample result:
 Reindexing all indexers can take a long time for stores with large numbers of products, customers, categories, and promotional rules.
 </div>
 
-## Configure indexers
+## 配置indexers
 Use this command to set the following indexer options:
 
 -   **Update on save (`realtime`):** Indexed data is updated as soon as a change is made in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. (For example, the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} products index is reindex after products are added to a category in the Admin.) This is the default.
@@ -124,7 +124,7 @@ Sample result:
 	Catalog Product Rule:                              Update on Save
 	Catalog Search:                                    Update on Save
 
-### Configure indexers
+### 配置indexers
 To specify the indexer configuration:
 
 	bin/magento indexer:set-mode {realtime|schedule} [indexer]

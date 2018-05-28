@@ -1,6 +1,6 @@
 ---
 group: contributor
-title: DevDocs Contributors
+title: 开发文档贡献者
 version: 2.1
 github_link: contributor-guide/quarterly-contributors.md
 redirect_from: /guides/v2.0/howdoi/howdoi_bios.html

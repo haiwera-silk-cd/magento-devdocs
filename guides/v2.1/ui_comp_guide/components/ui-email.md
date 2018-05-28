@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title:  Email component
-menu_title: Email component
+group: UI_组件_guide
+subgroup: 组件
+title:  邮件组件
+menu_title: 邮件组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-email.md
+github_link: ui_comp_guide/组件/ui-email.md
 ---
 
 ## Overview
 
-The Email component implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="email">` form field.
+The 邮件组件 implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="email">` form field.
 
 ## Email configuration
 

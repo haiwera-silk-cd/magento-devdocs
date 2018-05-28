@@ -189,7 +189,7 @@ where
 The `bin/magento config:show` command displays the values of any [encrypted values]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html) as a series of asterisks: `******`.
 </div>
 
-### Examples
+### 示例
 
 **Show all saved configurations**:
 
@@ -237,5 +237,5 @@ Result:
 
 <pre class="no-copy">web/unsecure/base_url - http://example-for-store.com/</pre>
 
-#### Related topic
+#### 相关主题
 [Deployment general overview]({{ page.baseurl }}/config-guide/deployment/pipeline/)

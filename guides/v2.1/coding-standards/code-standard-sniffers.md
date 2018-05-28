@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: Code sniffers
+title: 代码嗅探程序
 landing-page: Coding standards
-menu_title: PHP code sniffers
+menu_title: PHP代码嗅探程序
 menu_order: 3
 version: 2.1
 github_link: coding-standards/code-standard-sniffers.md
@@ -11,7 +11,7 @@ functional_areas:
   - Standards
 ---
 
-## PHP code sniffers
+## PHP代码嗅探程序
 
 We recommend the consistent use of a <i>code sniffer</i> to enhance the readability of your code and help ensure that it meets Magento code standards.  A code sniffer is a tool that automates the process of identifying code irregularities. Although a sniffer will identify many more inconsistencies and errors than a manual edit, we recommend that you evaluate and make any fixes that your sniffer program identifies.
 

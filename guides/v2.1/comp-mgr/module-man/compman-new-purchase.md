@@ -26,7 +26,7 @@ Messages display in the Console Log as your new purchases are installed. Followi
 [2016-04-07 09:37:06 CDT] Job "maintenance_mode {"enable":true}" has been started
 [2016-04-07 09:37:06 CDT] Magento maintenance mode is enabled.
 [2016-04-07 09:37:06 CDT] Job "maintenance_mode {"enable":true}" has successfully completed
-[2016-04-07 09:37:06 CDT] Job "update {"components":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.2"}}}" has been started
+[2016-04-07 09:37:06 CDT] Job "update {"组件":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.2"}}}" has been started
 [2016-04-07 09:37:06 CDT] Starting composer update...
 [2016-04-07 09:37:07 CDT] ./composer.json has been updated
 
@@ -43,7 +43,7 @@ Writing lock file
 Generating autoload files
 
 [2016-04-07 09:37:45 CDT] Composer update completed successfully
-[2016-04-07 09:37:45 CDT] Job "update {"components":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.2"}}}" has successfully completed
+[2016-04-07 09:37:45 CDT] Job "update {"组件":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.2"}}}" has successfully completed
 [2016-04-07 14:38:06 UTC] Job "setup:upgrade []" has started
 Cache cleared successfully
 File system cleanup:

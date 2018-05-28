@@ -19,7 +19,7 @@ View a detailed list of PHP code changes that were made in the "2.3-develop" bra
 
 **Affected framework libraries**: `Search`
 
-**Action**: Affected components were updated to use single interface. The interface is `\Magento\Framework\Search\EngineResolverInterface`. Its implementation is `\Magento\Search\Model\EngineResolver`.
+**Action**: Affected 组件 were updated to use single interface. The interface is `\Magento\Framework\Search\EngineResolverInterface`. Its implementation is `\Magento\Search\Model\EngineResolver`.
 
 **Reason**: To resolve a search engine currently set in System Configuration.
 

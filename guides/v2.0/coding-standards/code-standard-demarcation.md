@@ -2,8 +2,8 @@
 group: coding-standards
 subgroup: 01_Coding standards
 landing-page: Coding standards
-title: Code demarcation standard
-menu_title: Code demarcation standard
+title: 代码界定标准
+menu_title: 代码界定标准
 menu_order: 1
 version: 2.0
 github_link: coding-standards/code-standard-demarcation.md
@@ -55,7 +55,7 @@ functional_areas:
 
 ### Semantic representation may rely on ID attribute
 <ul>
-   <li>Forces engineers to think about reusable page components instead of unique singleton components.</li>
+   <li>Forces engineers to think about reusable page 组件 instead of unique singleton 组件.</li>
    <li>Reduces long-term maintenance efforts.</li>
 </ul>
 

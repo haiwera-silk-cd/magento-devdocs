@@ -1,17 +1,17 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: MassActions component
-menu_title: MassActions component
+group: UI_组件_guide
+subgroup: 组件
+title: 下拉操作组件
+menu_title: 下拉操作组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-massactions.md
+github_link: ui_comp_guide/组件/ui-massactions.md
 ---
 
 ## Overview
 
-The MassActions component allows performing actions with multiple selected items. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
+The 下拉操作components allows performing actions with multiple selected items. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
 
-See the [管理面板用到的设计模式和库 (MassActions)]({{ page.baseurl }}/pattern-library/displaying-data/datatable/datatable.html#massactions) topic for information about the UI design patterns that can be implemented using the MassActions component.
+See the [管理面板用到的设计模式和库 (MassActions)]({{ page.baseurl }}/pattern-library/displaying-data/datatable/datatable.html#massactions) topic for information about the UI design patterns that can be implemented using the 下拉操作组件.
 
 #### Component Elements (classes, files)
 
@@ -20,9 +20,9 @@ The following are the component elements:
 * Constructor `app\code\Magento\Ui\view\base\web\js\grid\massactions.js`
 * Template: `app\code\Magento\Ui\view\base\web\templates\grid\actions.html`
 
-#### Dependencies on Other Components
+#### Dependencies on Other 组件
 
-Dependency on the following components:
+Dependency on the following 组件:
 
 * Collapsible: `app\code\Magento\Ui\view\base\web\js\lib\collapsible.js`
 * Modal window with confirmation: `app\code\Magento\Ui\view\base\web\js\modal\confirm.js`
@@ -115,7 +115,7 @@ The following {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% en
 * <code>applyAction</code> - applies the specified action as identifier action
 * <code>getSelections</code> - returns the object with current selections
 
-#### Example configuration modifications:
+#### 示例 configuration modifications:
 
 ##### Redefining the link to the template
 

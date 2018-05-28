@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Magento payment provider gateway
-menu_title: Magento payment provider gateway 
+title: Magento支付提供商网关
+menu_title: Magento支付提供商网关 
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -10,10 +10,10 @@ github_link: payments-integrations/payment-gateway/payment-gateway-intro.md
 
 ---
 
-### What is Magento payment provider gateway
-The Magento payment provider gateway is a mechanism that allows you to integrate your stores with payment service providers. As a result, you can create and handle transactions based on order details.
+### What is Magento支付提供商网关
+The Magento支付提供商网关 is a mechanism that allows you to integrate your stores with payment service providers. As a result, you can create and handle transactions based on order details.
 
-The following diagram shows a simplified interaction flow between Magento sales management and external payment service provider using Magento payment provider gateway: 
+The following diagram shows a simplified interaction flow between Magento sales management and external payment service provider using Magento支付提供商网关: 
 
 ![Payment Gateway Interaction]({{ site.magentourl }}/common/images/payments-integrations/pg_interaction_flow.png)
 
@@ -27,15 +27,15 @@ Magento payment provider supports the following payment operations:
 
 ### What's in this chapter
 
-The topics of this chapter are conceptual and describe the components of the Magento payment provider gateway:
+The topics of this chapter are conceptual and describe the 组件 of the Magento支付提供商网关:
  
-* [Payment provider gateway structure]({{ page.baseurl }}/payments-integrations/payment-gateway/payment-gateway-structure.html)
-* [Gateway Command]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-command.html)
-* [Gateway Command Pool]({{ page.baseurl }}/payments-integrations/payment-gateway/command-pool.html)
-* [Request Builder]({{ page.baseurl }}/payments-integrations/payment-gateway/request-builder.html)
-* [Gateway Client]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html)
-* [Response Validator]({{ page.baseurl }}/payments-integrations/payment-gateway/response-validator.html)
-* [Response Handler]({{ page.baseurl }}/payments-integrations/payment-gateway/response-handler.html)
+* [支付提供商网关结构]({{ page.baseurl }}/payments-integrations/payment-gateway/payment-gateway-structure.html)
+* [网关命令]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-command.html)
+* [网关命令池]({{ page.baseurl }}/payments-integrations/payment-gateway/command-pool.html)
+* [请求构造器]({{ page.baseurl }}/payments-integrations/payment-gateway/request-builder.html)
+* [网关客户端]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-client.html)
+* [响应校验器]({{ page.baseurl }}/payments-integrations/payment-gateway/response-validator.html)
+* [响应处理器]({{ page.baseurl }}/payments-integrations/payment-gateway/response-handler.html)
 
 #### Terms used {#terms}
 

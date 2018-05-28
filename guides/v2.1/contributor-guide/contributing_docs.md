@@ -1,6 +1,6 @@
 ---
 group: contributor
-title: DevDocs Contributions
+title: 开发文档贡献
 contributor_name: Staffan Palopää from Vaimo
 contributor_link: http://www.vaimo.com/
 version: 2.1
@@ -18,7 +18,7 @@ If you are not sure where to start contributing, you can review our list of [sug
 
 If you write and contribute a full topic, we will put your name (or company's name) at the top of the page, right under the title, and link it to your blog or website! We will also add your picture and a link to your Github account on the <a href="{{ page.baseurl }}/contributor-guide/quarterly-contributors.html#top-recent-contributors">Top recent contributors</a> page.
 
-## Contribution guidelines
+## 贡献指南
 We use [Markdown](http://daringfireball.net/projects/markdown/){:target="\_blank"} to write our documentation, which is a simple markup language that we convert to HTML using [Kramdown](http://kramdown.gettalong.org/syntax.html){:target="\_blank"}. We have a <a href="{{ page.baseurl }}/contributor-guide/templates/basic_template.html" target="\_blank">template</a> to make getting started easy.
 
 {% include note.html type="info" content="Refer to the [Magento Contributor Agreement](http://www.magento.com/legaldocuments/mca) for detailed information about licensing. All contributors are required to submit a click-through form to agree to the terms." %}
@@ -75,7 +75,7 @@ It is also possible to use the GitHub interface to update your fork. This is ref
 
 1.  Click **Confirm Merge**.
 
-## Create a pull request
+## 创建合并请求
 To create a pull request do the following:
 
 1.  Push your changes to your forked repository on GitHub.
@@ -88,7 +88,7 @@ To create a pull request do the following:
 
 1.  Fill out the form, and click **Create pull request** again to submit the pull request&mdash;that’s it!
 
-## Report an issue
+## 报告问题
 If you find a typo or erroneous information in Magento DevDocs, you can either fix it with a pull request (as described above) or you can report it by creating an issue in the DevDocs Github repository.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">

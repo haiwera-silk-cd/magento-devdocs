@@ -1,19 +1,19 @@
 ---
 group: howdoi
 subgroup:
-title: Add a new input form to checkout
-menu_title: Add a new input form to checkout
+title: 添加一个新的输入表单到结算页
+menu_title: 添加一个新的输入表单到结算页
 menu_order: 8
 version: 2.0
 github_link: howdoi/checkout/checkout_form.md
 functional_areas:
   - Checkout
 ---
-## What's in this topic
+## 这里有什么
 
 This topic describes how to add a custom input form (implemented as a UI component) to the {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} page.
 
-Most of the elements, including the default forms on the Checkout page are implemented as UI components. And we recommend your custom form to be a UI component, extending the default [Magento_Ui/js/form/form]({{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/form/form.js) component.
+Most of the elements, including the default forms on the Checkout page are implemented as UI 组件. And we recommend your custom form to be a UI component, extending the default [Magento_Ui/js/form/form]({{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/form/form.js) component.
 
 ## Overview
 
@@ -120,7 +120,7 @@ Any content added here is rendered before the Shipping Address form on the Shipp
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
+                    <item name="组件" xsi:type="array">
                         <item name="checkout" xsi:type="array">
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">
@@ -258,7 +258,7 @@ Dynamically defined, or dynamic, forms are the forms where the set or type of fi
 For such forms, you must implement a [plugin]({{ page.baseurl }}/extension-dev-guide/plugins.html) for the `\Magento\Checkout\Block\Checkout\LayoutProcessor::process` method.
 A plugin can add custom fields definitions to layout at run-time. The format of the field definition is the same as for fields defined in layout.
 
-For example:
+例如:
 
 {% highlight php startinline=true %}
 $textField = [

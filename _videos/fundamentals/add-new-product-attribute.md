@@ -1,7 +1,7 @@
 ---
 youtube_id: cM_9RkWFqqM
 duration: "7:36"
-group: "Fundamentals of Magento 2 Development"
+group: "Magento开发基础"
 title: "How to Add a New Product Attribute"
 thumbnail: "fundamentals/thumbs/add-attribute.png"
 menu_order: 1
@@ -30,7 +30,7 @@ We will need to take the following steps to add the new attribute:
 
 Let’s go through each step.
 
-## Step 1: Create a new module
+## 步骤1. Create a new module
 
 As Magento is modular based, we start the process by creating a new module called `Learning_ClothingMaterial`.
 
@@ -79,7 +79,7 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
 {% endhighlight %}
 {% endcollapsible %}
 
-## Step 2 Create an InstallData script
+## 步骤2.Create an InstallData script
 
 Next, we need to create the InstallData script.
 Because adding an attribute technically adds records into several tables, such as `eav_attribute` and `catalog_eav_attribute,` this is data manipulation, not a schema change.
@@ -188,7 +188,7 @@ For now, we’ll just quickly go through most important ones:
 * **visible_on_front:** A flag that defines whether an attribute should be shown on the “More Information” tab on the frontend
 * **is_html_allowed_on_front:** Defines whether an attribute value may contain HTML
 
-## Step 3: Add a source model
+## 步骤3. Add a source model
 
 Next, we need to create the source model:
 
@@ -233,7 +233,7 @@ class Material extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
 
 As the name implies, the `getAllOptions` method provides a list of all available options.
 
-## Step 4: Add a backend model
+## 步骤4. Add a backend model
 
 Now we will create a backend model:
 
@@ -283,7 +283,7 @@ Note that we hardcoded `attributeSetId` here for the sake of time.
 In other cases, it could be different.
 Make sure to check the `eav_attribute_set` table for the right ID.
 
-## Step 5: Add a frontend model
+## 步骤5. Add a frontend model
 
 And finally, we create a frontend model to make our value bold:
 
@@ -306,7 +306,7 @@ class Material extends \Magento\Eav\Model\Entity\Attribute\Frontend\AbstractFron
 
 As with the backend model, this is also a very simple class.
 
-## Step 6: Execute the InstallData script and verify that it works
+## 步骤6. Execute the InstallData script and verify that it works
 
 Now we can run our code and check the results:
 

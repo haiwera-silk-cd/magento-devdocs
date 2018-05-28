@@ -1,5 +1,5 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: how tos
 title: Render prices on the frontend
 menu_title: Render prices on the frontend
@@ -8,7 +8,7 @@ version: 2.2
 github_link: ui_comp_guide/howto/price_rendering.md
 ---
 
-This article shows how templates and UI components work together to render the price for any product listing(e.g. category, widget, etc).
+This article shows how templates and UI 组件 work together to render the price for any product listing(e.g. category, widget, etc).
 
 ## About Magento price handling
 
@@ -41,7 +41,7 @@ Example of pricing strategy for bundled products:
 <br/>
 ![]({{ site.magentourl }}/common/images/bundle_prices.png)
 
-## How to render prices with UI Components
+## How to render prices with UI 组件
 
 For pages such as a product page, use a [form component][form-component].
 
@@ -51,7 +51,7 @@ For the purposes of this article, we will use a listing component to render simp
 
 ### XML configuration
 
-The [XML configuration file][ui-component-declaration] for UI components shows the parent-child relationship between different UI components and tells Magento which template files to use when rendering.
+The [XML configuration file][ui-component-declaration] for UI 组件 shows the parent-child relationship between different UI 组件 and tells Magento which template files to use when rendering.
 
 {%highlight xml%}
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
@@ -141,7 +141,7 @@ A good example from the Magento codebase is the Catalog module's [`widget_recent
 
 ### Price box component
 
-In the following code sample, the `price-box` component aggregates and creates the `price` components for a specific product.
+In the following code sample, the `price-box` component aggregates and creates the `price` 组件 for a specific product.
 
 {%highlight javascript%}
 /**
@@ -162,7 +162,7 @@ getPrices: function (row) {
 },
 
 /**
- * Init dynamic price components
+ * Init dynamic price 组件
  *
  * @param {Array} row
  * @returns {void}
@@ -182,7 +182,7 @@ initPrices: function (row) {
         prices.push(priceData);
     }, this);
 
-    layout(prices); //layout is service (abstract factory), which create tree of Ui Components from JSON
+    layout(prices); //layout is service (abstract factory), which create tree of Ui 组件 from JSON
 },
 
 
@@ -321,9 +321,9 @@ The following is sample template code that is rendered for the tax adjustment co
 
 ## Related Topics
 
-* [Form component][form-component]
+* [表单组件][form-component]
 * [Listing component][listing-component]
-* [Declaring UI Components][ui-component-declaration]
+* [Declaring UI 组件][ui-component-declaration]
 
 [form-component]: {{ page.baseurl }}/ui_comp_guide/components/ui-form.html
 [listing-component]: {{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html

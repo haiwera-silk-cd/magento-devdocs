@@ -29,7 +29,7 @@ If new modules are added to Magento you would need to create a new test to check
 
 New test must be stored in the corresponding module `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/<testing_module>`.
 
-Each test consists of four main components: a test object, test data, a test flow, a test assertion.
+Each test consists of four main 组件: a test object, test data, a test flow, a test assertion.
 
 #### Test object {#test-object}
 

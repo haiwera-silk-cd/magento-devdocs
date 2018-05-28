@@ -266,7 +266,7 @@ Developers who contribute to the Open Source codebase can <a href="{{ page.baseu
 
 {% collapsible To upgrade to a Release Candidate using the command line: %}
 
-1.	Log in to your Magento server as, or switch to, the Magento file system owner.
+1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to the directory in which you installed the Magento software.
 
 	For example, `cd /var/www/html/magento2`
@@ -297,4 +297,4 @@ Developers who contribute to the Open Source codebase can <a href="{{ page.baseu
 {% include install/sampledata/sample-data-rc1-cli.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.

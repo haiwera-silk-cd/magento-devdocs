@@ -52,7 +52,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <description value="Add Catalog via Admin"/>
@@ -68,7 +68,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <features value="Catalog"/>
@@ -97,7 +97,7 @@ Attribute|Type|Use|Definition
 ---|---|---|---
 `value`|string|required|A value that is used to group tests. It should be lower case. `skip` is reserved to ignore content of the test and generate an empty test.
 
-#### Example
+#### 示例
 
 ```xml
 <group value="category"/>
@@ -113,7 +113,7 @@ Attribute|Type|Use
 `value`|string|required
 
 
-#### Example
+#### 示例
 
 ```xml
 <return value="void"/>
@@ -127,7 +127,7 @@ Attribute|Type|Use|Acceptable values
 ---|---|---|---
 `value`|string|required|`MINOR`, `AVERAGE`, `MAJOR`, `BLOCKER`, `CRITICAL`
 
-#### Example
+#### 示例
 
 ```xml
 <severity value="CRITICAL"/>
@@ -142,7 +142,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <stories value="Add Catalog"/>
@@ -161,7 +161,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <testCaseId value="#"/>
@@ -175,7 +175,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <title value="Add Catalog"/>
@@ -189,7 +189,7 @@ Attribute|Type|Use
 ---|---|--
 `value`|string|required
 
-#### Example
+#### 示例
 
 ```xml
 <useCaseId value="USECASE-1"/>

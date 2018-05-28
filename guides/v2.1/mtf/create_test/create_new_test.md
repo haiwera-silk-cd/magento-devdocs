@@ -5,7 +5,7 @@ version: 2.1
 github_link: mtf/create_test/create_new_test.md
 ---
 
-To demonstrate the usage of test components from previous sections in the test creation process, we will create a new functional [injectable test][] step-by-step. Before creating automated test, try to pass it manually.
+To demonstrate the usage of test 组件 from previous sections in the test creation process, we will create a new functional [injectable test][] step-by-step. Before creating automated test, try to pass it manually.
 
 To make the documentation more consistent, we created a completely new test specially for this tutorial. We used the [concrete Magento commit][] functionality for this test. You can [install one][] and try to follow this guide.
 
@@ -61,7 +61,7 @@ Create a synonym group (synonyms are a way to expand the scope of eligible match
 
 ### Test creation {#test-creation}
 
-#### Step 1. Check the FTF configuration and environment {#check-mtf}
+#### 步骤1. Check the FTF configuration and environment {#check-mtf}
 
 * Adjust configuration. Learn how to [adjust a configuration][].
 
@@ -69,7 +69,7 @@ Create a synonym group (synonyms are a way to expand the scope of eligible match
 
 * Prepare environment for test run. Learn how to [prepare environment for test run][].
 
-#### Step 2. Create the testing object - a fixture {#create-test-object}
+#### 步骤2. Create the testing object - a fixture {#create-test-object}
 
 This step is applicable if a fixture doesn't exist in a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
@@ -355,7 +355,7 @@ class Synonym extends \Magento\Mtf\Fixture\InjectableFixture
 
 {%endhighlight php%}
 
-#### Step 3. Create the initial test case {#create-init-test-case}
+#### 步骤3. Create the initial test case {#create-init-test-case}
 
 Now we can create a [test case][].
 
@@ -364,7 +364,7 @@ In this example it is named `CreateSynonymEntityTest.php` and stored in `<magent
 
  ![A test case location]({{ site.magentourl }}/common/images/ftf/mtf_tutorial_testcase_location.png)
 
-As a result of [manual testing][] we know that we must work with a Search Synonym Index page and a New Synonym Group page during the test flow. We can code the initialization of these pages in the test using an `__inject()` method of the `Magento\Mtf\TestCase\Injectable` class. The pages will be created in [Step 5][]. Also, we will use the fixture from the [Step 2][].
+As a result of [manual testing][] we know that we must work with a Search Synonym Index page and a New Synonym Group page during the test flow. We can code the initialization of these pages in the test using an `__inject()` method of the `Magento\Mtf\TestCase\Injectable` class. The pages will be created in [步骤5.[]. Also, we will use the fixture from the [步骤2.[].
 
 {% highlight php %}
 
@@ -429,7 +429,7 @@ class CreateSynonymEntityTest extends Injectable
 
 {% endhighlight %}
 
-#### Step 4. Create the data set {#create-data-set}
+#### 步骤4. Create the data set {#create-data-set}
 
 Now we can add a [data set][] with variations that cover cases in the [test description][]: `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Search/Test/TestCase/CreateSynonymEntityTest.xml`
 
@@ -459,7 +459,7 @@ The following code contains a data set, but doesn't have data yet:
 According to a New Synonym Group form we need to enter data in the `synonyms` and `scope_id` fields.
 
 - `synonyms` field. We need to [set data to a fixture field][]. The name of the field should be `<name of a fixture>/data/<name of the field>`. It is `name = "synonym/data/synonyms"`. To make data unique in each variation, we can use the [`%isolation%` placeholder][].
-- `scope_id` field. We need to [set data to a fixture field from a repository][]. The name of the field should be `<name of a fixture>/data/<name of the field>/dataset`. It is `name="synonym/data/scope_id/dataset"`. As you remember from [Step 2][], we use the [data source][] to process this field. The data source loads the Store fixture with the Store repository, and returns the name of the field we need. In a `dataset` value, we should specify a name of the Store repository `dataset name` from `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Store/Test/Repository/Store.xml`.
+- `scope_id` field. We need to [set data to a fixture field from a repository][]. The name of the field should be `<name of a fixture>/data/<name of the field>/dataset`. It is `name="synonym/data/scope_id/dataset"`. As you remember from [步骤2.[], we use the [data source][] to process this field. The data source loads the Store fixture with the Store repository, and returns the name of the field we need. In a `dataset` value, we should specify a name of the Store repository `dataset name` from `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Store/Test/Repository/Store.xml`.
 
 | Variation #  |`synonyms`|`scope_id`
 |---
@@ -492,9 +492,9 @@ Let's see the data set with data.
 
  A bit later we will add assertions to complete our data set.
 
-#### Step 5. Create the pages {#create-pages}
+#### 步骤5. Create the pages {#create-pages}
 
-In [Step 3][], we added two [pages][] to the test case class. Because both pages are in the Admin area, we should create them in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Search/Test/Page/Adminhtml` directory.
+In [步骤3.[], we added two [pages][] to the test case class. Because both pages are in the Admin area, we should create them in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Search/Test/Page/Adminhtml` directory.
 
 **SynonymsIndex.xml**
 
@@ -533,7 +533,7 @@ To generate {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endg
 
 In the next step we will create [blocks][] that implements logic in these pages.
 
-#### Step 6. Create the blocks {#create-blocks}
+#### 步骤6. Create the blocks {#create-blocks}
 
 Let's see in the [test description][] what actions must be performed:
 
@@ -656,7 +656,7 @@ The `SynonymsNew.xml` page must contain this class. The `.page-main-actions` css
 
 {% endhighlight %}
 
-#### Step 7. Add the blocks to pages {#add-blocks-to-pages}
+#### 步骤7. Add the blocks to pages {#add-blocks-to-pages}
 
 In previous step, we created blocks with methods that enable us to perform the required test flow.
 
@@ -701,11 +701,11 @@ To generate PHP classes for these pages, enter the following command from your t
 
     php <magento2_root_dir>/dev/tests/functional/utils/generate.php
 
-Now we can define the test flow in a `test()` method of the test case ([Step 3][]).
+Now we can define the test flow in a `test()` method of the test case ([步骤3.[]).
 
-#### Step 8. Define the `test()` method {#define-test-method}
+#### 步骤8. Define the `test()` method {#define-test-method}
 
-Here we should recall [Step 3][], where the initial test case was created.
+Here we should recall [步骤3.[], where the initial test case was created.
 
 An argument for the `test()` method is a [test object][] (a [fixture][]).
 
@@ -724,7 +724,7 @@ public function test(Synonym $synonym)
 
 ```
 
-Now we can add page classes made in [Step 5][]:
+Now we can add page classes made in [步骤5.[]:
 
 ``` php?start_inline=1
 
@@ -733,7 +733,7 @@ use Magento\Search\Test\Page\Adminhtml\SynonymsNew;
 
 ```
 
-All methods are defined in blocks ([Step 6][]) that are grouped in pages ([Step 5][], [Step 7][]).
+All methods are defined in blocks ([步骤6.[]) that are grouped in pages ([步骤5.[], [步骤7.[]).
 
 Remember our test flow:
 
@@ -808,7 +808,7 @@ public function test(Synonym $synonym)
 
 ```
 
-#### Step 9. Check the test run
+#### 步骤9. Check the test run
 
 The test is now ready to run. It is complete, except for an assertion that we will create in the next step.
 
@@ -890,7 +890,7 @@ You can run the test using your IDE or the CLI. The Selenium Server must be [up 
 
  The test will be performed in a browser. Three synonyms groups are created one by-one that corresponds to three variations in a data set.
 
-#### Step 10. Create the assertion {#create-assertion}
+#### 步骤10. Create the assertion {#create-assertion}
 
 The last item in the test description says that the test must check that a success message is displayed after the test flow completes.
 
@@ -1098,11 +1098,11 @@ That's it!
 [manual testing]: #manual-test
 [test description]: #auto-test
 [test object]: #test-creation
-[Step 2]: #create-test-object
-[Step 3]: #create-init-test-case
-[Step 5]: #create-pages
-[Step 6]: #create-blocks
-[Step 7]: #add-blocks-to-pages
+[步骤2.: #create-test-object
+[步骤3.: #create-init-test-case
+[步骤5.: #create-pages
+[步骤6.: #create-blocks
+[步骤7.: #add-blocks-to-pages
 
 [develop branch]: https://github.com/magento/magento2
 [`\Magento\Backend\Test\Block\GridPageActions`]: {{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Backend/Test/Block/GridPageActions.php

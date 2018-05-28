@@ -81,7 +81,7 @@ mysql:
     disk: 2048
 {% endhighlight %}
 
-To configure the relationships for the environment variable, set a relationship in your `.magento.app.yaml` in the Git branch. For example:
+To configure the relationships for the environment variable, set a relationship in your `.magento.app.yaml` in the Git branch. 例如:
 
 {% highlight yaml %}
 relationships:

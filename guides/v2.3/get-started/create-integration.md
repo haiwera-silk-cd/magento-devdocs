@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: Web APIs
-title: Create an integration
-menu_title: Create an integration
+title: 创建一个集成
+menu_title: 创建一个集成
 menu_order: 1
 version: 2.3
 github_link: get-started/create-integration.md
@@ -17,10 +17,10 @@ Implementing a simple integration requires little knowledge of {% glossarytoolti
 
 * [Magento REST or SOAP Web APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html)
 * [Web API authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication.html)
-* [OAuth-based authentication]( {{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html )
+* [基于OAuth的认证]( {{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html )
 
 
-Before you begin creating a module, make sure that you have a working installation of Magento 2.0, and the [Magento System Requirements]({{ page.baseurl }}/install-gde/system-requirements.html).
+开始之前 creating a module, make sure that you have a working installation of Magento 2.0, and the [Magento 系统要求]({{ page.baseurl }}/install-gde/system-requirements.html).
 
 To create an integration, follow these general steps:
 
@@ -43,7 +43,7 @@ To develop a module, you must:
     mkdir -p vendor/&lt;vendor_name>/module-&lt;module_name>/etc/integration
     mkdir -p vendor/&lt;vendor_name>/module-&lt;module_name>/Setup
    </pre>
-   For more detailed information, see [创建你的组件文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
+   For more detailed information, see [创建你的components文件结构]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
 2. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 
@@ -257,7 +257,7 @@ The  file defines which API resources the integration has access to.
 <tr>
 <td>endpoint_url</td>
 <td><p>Optional. The {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <code>https://</code>.</p>
-<p>See <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">OAuth-based authentication</a> for details.</p></td>
+<p>See <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a> for details.</p></td>
 </tr>
 <tr>
 <td>identity_link_url</td>
@@ -315,7 +315,7 @@ The callback page must be able to perform the following tasks:
 
 ## Related Topics
 - [Web API authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication.html)
-- [OAuth-based authentication]( {{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html )
-- [Magento System Requirements]({{ page.baseurl }}/install-gde/system-requirements.html)
+- [基于OAuth的认证]( {{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html )
+- [Magento 系统要求]({{ page.baseurl }}/install-gde/system-requirements.html)
 - [Create the module file structure]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html)
 - [Create a component]({{ page.baseurl }}/extension-dev-guide/build/create_component.html)

@@ -1,6 +1,6 @@
 ---
 group: integration-testing
-title: Running Integration Tests
+title: 运行集成测试
 version: 2.1
 contributor_name: Vinai Kopp
 contributor_link: http://vinaikopp.com/
@@ -30,11 +30,11 @@ Besides this, you might also want to adjust the PHPUnit configuration, depending
 
 Please refer to [Preparing Integration Test Execution][setup] for further information on setting up the test environment.
 
-### Command Line Interface (CLI)
+### 命令行接口(CLI)
 
 This option can be used for running the tests locally during development or on remote servers during Continuous Integration.
 
-Please refer to [Running Integration Tests in the CLI][cli run] for further information.
+Please refer to [运行集成测试 in the CLI][cli run] for further information.
 
 ### PHPStorm IDE
 
@@ -42,7 +42,7 @@ Running the integration tests inside an IDE like PHPStorm IDE is convenient duri
 
 Other then convenience there is no benefit over running the tests on the console.
 
-Please refer to [Running Integration Tests in PHPStorm][phpstorm run] for further information.
+Please refer to [运行集成测试 in PHPStorm][phpstorm run] for further information.
 
 ## Preparing Integration Test Execution {#setup}
 
@@ -171,7 +171,7 @@ These third party integration tests are not picked up by the default integration
 A testsuite configuration like the following can be added to the `<testsuites>` section of the `phpunit.xml` file so they are included during test execution.
 
 ```xml
-<testsuite name="Third Party Integration Tests">
+<testsuite name="Third Party 集成测试">
     <directory>../../../app/code/*/*/Test/Integration</directory>
     <directory>../../../vendor/*/module-*/Test/Integration</directory>
     <exclude>../../../app/code/Magento</exclude>
@@ -182,10 +182,10 @@ A testsuite configuration like the following can be added to the `<testsuites>` 
 Such a test suite configuration can then be executed using the `--testsuite <name>` command option, for example if you are in the `dev/tests/integration` directory:
 
 ```bash
-php ../../../vendor/bin/phpunit --testsuite "Third Party Integration Tests"
+php ../../../vendor/bin/phpunit --testsuite "Third Party 集成测试"
 ```
 
-## Running Integration Tests in the CLI {#cli-run}
+## 运行集成测试 in the CLI {#cli-run}
 
 Probably the most common way to execute integration tests is using the command line.
 
@@ -293,7 +293,7 @@ exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or di
 
 There are many ways this problem can be resolved, but the easiest is to run the tests in the virtual machine, too.
 
-## Running Integration Tests in PHPStorm {#phpstorm-run}
+## 运行集成测试 in PHPStorm {#phpstorm-run}
 
 When writing new integration tests or during debugging, it is convenient to execute tests from within the the PHPStorm IDE.
 
@@ -303,7 +303,7 @@ Please ensure you have [prepared the integration test environment][setup] before
 
 Setting up a run configuration for integration tests is very similar to creating a run configuration for unit tests.
 
-Please refer to [Running Unit Tests in PHPStorm][phpstorm run] for instructions on how to create a basic run configuration.
+Please refer to [在PHPStorm运行单元测试][phpstorm run] for instructions on how to create a basic run configuration.
 Then configure the integration test configuration file to be used.
 
 #### Using the integration test configuration file

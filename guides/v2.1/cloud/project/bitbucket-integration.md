@@ -16,7 +16,7 @@ For Pro projects **created before October 23, 2017**, this integration works on 
 We _strongly_ recommend using a private Bitbucket repository for your {{site.data.var.ece}} project.
 </div>
 
-## Before you begin
+## 在开始之前
 -   You must have a {{site.data.var.ece}} project and you must be an administrator of the project.
 -   You must have a Bitbucket account and administrative access to the Bitbucket repository you want to integrate.
 -   You must install the [`magento-cloud` CLI]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html#cloud-ssh-cli-cli-install) tool in your local environment.

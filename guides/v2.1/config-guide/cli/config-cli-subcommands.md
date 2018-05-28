@@ -17,12 +17,12 @@ functional_areas:
 {% include install/before-you-begin-cli.html %}
 
 ## 第一步 {#config-cli-before}
-1.  Log in to the Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>.
+1.  Log in to the Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.
 2.  Change to the following directory:
 
         cd <your Magento install dir>/bin
 
-    Examples:
+    例如:
 
       - Ubuntu: `cd /var/www/magento2/bin`
       - CentOS: `cd /var/www/html/magento2/bin`

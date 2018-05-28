@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: Bookmark Component
 menu_title: Bookmark Component
 menu_node:
 menu_order: 9
 version: 2.0
-github_link: ui-components/ui-secondary-bookmark.md
+github_link: ui-组件/ui-secondary-bookmark.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-bookmark.html
 
 ---

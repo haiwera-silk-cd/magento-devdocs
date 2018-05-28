@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Company credit
-menu_title: Company credit
+title: 公司信用帐户
+menu_title: 公司信用帐户
 menu_order: 16
 version: 2.2
 level3_menu_node: level3parent

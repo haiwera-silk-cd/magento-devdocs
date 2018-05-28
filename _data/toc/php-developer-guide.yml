@@ -26,17 +26,17 @@ pages:
         - label: 开发和打包组件指引
           url: /extension-dev-guide/prepare/dev-summary.html
 
-        - label: Extension lifecycle
+        - label: 扩展生命周期
           url: /extension-dev-guide/prepare/lifecycle.html
 
-    - label: Build
+    - label: 构建
       url: /extension-dev-guide/build/build.html
       children:
 
         - label: di.xml文件
           url: /extension-dev-guide/build/di-xml-file.html
 
-        - label: Optimal development environment
+        - label: 最佳开发环境
           versions: ["2.1","2.2", "2.3"]
           url: /extension-dev-guide/build/optimal-dev-environment.html
 
@@ -64,7 +64,7 @@ pages:
         - label: 启用和禁用组件
           url: /extension-dev-guide/build/enable-module.html
 
-    - label: Package
+    - label: 打包
       url: /extension-dev-guide/package/package.html
       children:
 
@@ -74,7 +74,7 @@ pages:
         - label: 上传组件到Magento市场
           url: /extension-dev-guide/package/package_mktpl.html
 
-    - label: Validate
+    - label: 验证
       url: /extension-dev-guide/validate/validate.html
       children:
 
@@ -95,10 +95,10 @@ pages:
       url: /extension-dev-guide/cache/page-caching.html
       children:
 
-        - label: Public content
+        - label: 公开内容
           url: /extension-dev-guide/cache/page-caching/public-content.html
 
-        - label: Private content
+        - label: 隐私内容
           url: /extension-dev-guide/cache/page-caching/private-content.html
 
     - label: 添加命令行命令
@@ -111,7 +111,7 @@ pages:
         - label: 如何添加命令行命令
           url: /extension-dev-guide/cli-cmds/cli-howto.html
 
-    - label: Staging (Magento Commerce only)
+    - label: 预发布 (仅企业版适用)
       versions: ["2.1","2.2", "2.3"]
       url: /extension-dev-guide/staging.html
 
@@ -137,10 +137,10 @@ pages:
         - label: 事件和观查者
           url: /extension-dev-guide/events-and-observers.html
 
-        - label: Factories
+        - label: 工厂
           url: /extension-dev-guide/factories.html
 
-        - label: Proxies
+        - label: 代理
           url: /extension-dev-guide/proxies.html
 
         - label: 代码生成
@@ -152,10 +152,10 @@ pages:
         - label: 插件(拦截器)
           url: /extension-dev-guide/plugins.html
 
-        - label: Routing
+        - label: 路由
           url: /extension-dev-guide/routing.html
 
-        - label: Indexing
+        - label: 索引
           children:
 
             - label: 索引概述
@@ -219,35 +219,35 @@ pages:
         - label: 部署期间清空目录
           url: /howdoi/php/php_clear-dirs.html
 
-        - label: Adapters
+        - label: 适配器
           url: /extension-dev-guide/adapters.html
 
-    - label: Configuration
+    - label: 配置
       versions: ["2.2", "2.3"]
       children:
-        - label: Sensitive Environemnt Settings
+        - label: 敏感环境设置
           url: /extension-dev-guide/configuration/sensitive-and-environment-settings.html
 
-        - label: Configuration Importers
+        - label: 配置导入器
           url: /extension-dev-guide/configuration/importers.html
 
-    - label: Framework
+    - label: 框架
       versions: ["2.2", "2.3"]
       children:
         - label: 序列化库
           url: /extension-dev-guide/framework/serializer.html
 
-    - label: Security
+    - label: 安全
       children:
 
-        - label: XSS Prevention
+        - label: XSS防范
           versions: ["2.2", "2.3"]
           url: /extension-dev-guide/xss-protection.html
 
         - label: 不安全的方法
           url: /extension-dev-guide/security/non-secure-functions.html
 
-    - label: Versioning
+    - label: 版本控制
       url: /extension-dev-guide/versioning/
       children:
 

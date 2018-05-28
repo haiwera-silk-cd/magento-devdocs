@@ -21,7 +21,7 @@ The following links provide more information on crons for {{site.data.var.ee}}. 
 ## Build a cron job {#build}
 A cron job includes the specification for scheduling and timing and the command to run at that time. For example, the general format is: `* * * * * <command>`
 
-You will add the cron job to `.magento.app.yaml` in the `crons` section. The general format is `spec` for scheduling and `cmd` for the script. For example:
+You will add the cron job to `.magento.app.yaml` in the `crons` section. The general format is `spec` for scheduling and `cmd` for the script. 例如:
 
 ```yaml
 crons:
@@ -52,7 +52,7 @@ Magento uses a five value specification for a cron job. The numbers per each `* 
 *   Month (1 - 12)
 *   Day of week (0 - 6) (Sunday to Saturday; 7 is also Sunday on some systems)
 
-For example:
+例如:
 
 *   `00 */3 * * *` runs every 3 hours at the first minute (12:00 am, 3:00 am, 6:00 am, and so on)
 *   `20 */3 * * *` runs every 3 hours at minute 20 (12:20 am, 3:20 am, 6:20 am, and so on)

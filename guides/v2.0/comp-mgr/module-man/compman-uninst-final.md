@@ -23,15 +23,15 @@ If successful, a page similar to the following displays.
 
 Messages similar to the following display in the Console Log:
 
-	[2015-08-15 13:01:02 CDT] Job "setup:component:uninstall {"components":[{"name":"example/module"}],"dataOption":false}" has started
+	[2015-08-15 13:01:02 CDT] Job "setup:component:uninstall {"组件":[{"name":"example/module"}],"dataOption":false}" has started
 	Removing from module registry in database
 	Removing from module list in deployment configuration
 	Cleaning cache
 	Cleaning generated files
 	Cleaning static view files
 
-	[2015-08-15 13:01:02 CDT] Job "setup:component:uninstall {"components":[{"name":"example/module"}],
+	[2015-08-15 13:01:02 CDT] Job "setup:component:uninstall {"组件":[{"name":"example/module"}],
 	"dataOption":false}" has been successfully completed
-	[2015-08-15 13:01:03 CDT] Job "uninstall {"components":[{"name":"example/module"}]}" has been started
+	[2015-08-15 13:01:03 CDT] Job "uninstall {"组件":[{"name":"example/module"}]}" has been started
 	[2015-08-15 13:01:03 CDT] Starting composer remove...
 

@@ -1,6 +1,6 @@
 ---
 group: extension-dev-guide
-title: Staging (Magento Commerce only)
+title: Staging (仅企业版适用)
 version: 2.1
 ee_only: true
 github_link: extension-dev-guide/staging.md

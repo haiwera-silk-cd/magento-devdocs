@@ -20,7 +20,7 @@ We now use <a href="http://getcomposer.org">Composer</a> to resolve dependencies
 {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} is a separate application that manages {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
 
 1.	<a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html">Install the Composer software</a>.
-2.	<a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Create the Magento file system owner</a> so Composer writes files to the web server docroot as the correct user.
+2.	<a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Create the Magento文件系统所有者</a> so Composer writes files to the web server docroot as the correct user.
 2.	Run the <a href="#install-composer-install"><code>composer install</code> command</a> from your Magento root directory (for example, `/var/www/magento2/`).
 
 	The Magento root directory is a subdirectory of your web server's docroot. Need help locating the docroot? Click <a href="{{ page.baseurl }}/install-gde/basics/basics_docroot.html">here</a>.
@@ -35,8 +35,8 @@ For you to be able to run the Magento application, make sure you perform all tas
 <h2 id="install-composer-install">Run <code>composer install</code> to update dependencies</h2>
 更新安装依赖 as follows:
 
-1.	Log in to your Magento server as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %} or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to that user</a>.
-2.	Change to the Magento installation directory and run `composer install`. Examples:
+1.	Log in to your Magento server as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to that user</a>.
+2.	Change to the Magento installation directory and run `composer install`. 例如:
 
 	CentOS:
 
@@ -53,7 +53,7 @@ For you to be able to run the Magento application, make sure you perform all tas
 		[Composer\Downloader\TransportException]
 			The "https://repo.magento.com/archives/magento/composer/magento-composer-1.0.2.0.zip" file could not be downloaded (HTTP/1.1 404 Not Found)
 
-	If so, create <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html#instgde-prereq-compose-clone-auth">`auth.json`</a> in the Magento file system owner's `<home>/.composer` directory and run `composer install` again.
+	If so, create <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html#instgde-prereq-compose-clone-auth">`auth.json`</a> in the Magento文件系统所有者's `<home>/.composer` directory and run `composer install` again.
 
 {% include install/file-system-perms-before.md %}
 

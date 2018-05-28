@@ -207,7 +207,7 @@ type|string|optional|Type attribute of required entity.
 
 ### array
 
-Element that contains a reference to an array of values. For example:
+Element that contains a reference to an array of values. 例如:
 
 ```xml
 <entity name="AddressEntity" type="address">

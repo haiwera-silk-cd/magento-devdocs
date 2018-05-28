@@ -3,7 +3,7 @@ pages:
     - label: 介绍
       url: /architecture/bk-architecture.html
 
-    - label: Architectural basics
+    - label: 架构基础
       url: /architecture/archi_perspectives/ABasics_intro.html
       children:
 
@@ -44,8 +44,8 @@ pages:
         - label: 持久层
           url: /architecture/archi_perspectives/persist_layer.html
 
-    - label: Components
-      url: /architecture/archi_perspectives/components/AComponents.html
+    - label: 组件
+      url: /architecture/archi_perspectives/components/Acomponents.html
       children:
 
         - label: 模块概述

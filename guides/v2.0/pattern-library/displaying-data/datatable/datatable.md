@@ -358,7 +358,7 @@ Users may remove a filter setting by clicking/tapping the remove control next to
 <h3>Quick Filters</h3>
 In some instances, pre-determined "quick filters" may be present in the form of links. These are filter shortcuts of common filtering attributes to assist users who may not readily consider filtering the table for results. Quick Filters are perhaps most useful for extracting ‘reports’ from tables.  These filters are elevated above the ‘advanced filters’.
 
-<strong>Step 1:</strong> Starting state. User click on a quick filter link.
+<strong>步骤1.</strong> Starting state. User click on a quick filter link.
 <br />
 <br />
 <br />
@@ -366,7 +366,7 @@ In some instances, pre-determined "quick filters" may be present in the form of 
 <br />
 <br />
 <br />
-<strong>Step 2:</strong> Quick filter is applied.
+<strong>步骤2.</strong> Quick filter is applied.
 Once user click on the quick filters, that quick filter is shown as a chip. The user can add additional quick filters.
 <br />
 <br />

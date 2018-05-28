@@ -39,7 +39,7 @@ functional_areas:
 
 Backward compatibility can be indicated by the use of `@api`. For more information, see <a href="{{ page.baseurl }}/extension-dev-guide/backward-compatibility.html">Backward compatibility</a>.
 
-<h3 id="related-topics">Related topics</h3>
+<h3 id="related-topics">相关主题</h3>
 <ul>
    <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/design-patterns.html">服务契约设置模式</a></li>
    <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>

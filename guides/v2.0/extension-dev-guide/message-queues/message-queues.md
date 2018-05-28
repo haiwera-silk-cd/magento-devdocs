@@ -74,4 +74,4 @@ The following sample introduces a runtime configuration that allows you to redef
 
 *	<a href="{{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html">消息队列概述</a>
 *	<a href="{{ page.baseurl }}/extension-dev-guide/message-queues/config-mq.html">Configure message queue topology</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">Install RabbitMQ</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html">安装RabbitMQ</a>

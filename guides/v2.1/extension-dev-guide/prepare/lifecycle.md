@@ -1,7 +1,7 @@
 ---
 group: extension-dev-guide
 title: 扩展的生命周期
-menu_title: Extension lifecycle
+menu_title: 扩展生命周期
 version: 2.1
 github_link: extension-dev-guide/prepare/lifecycle.md
 ---

@@ -215,7 +215,7 @@ To resolve the error:
 
         git add -A && git commit -m "fixed deployment failure" && git push origin <branch name>
 
-#### Related topic
+#### 相关主题
 *   [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
 *   [Install optional sample data]({{ page.baseurl }}/cloud/howtos/sample-data.html)
 *   [Merge and delete an environment]({{ page.baseurl }}/cloud/howtos/environment-tutorial-env-merge.html)

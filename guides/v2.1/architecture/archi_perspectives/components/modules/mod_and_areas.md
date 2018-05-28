@@ -59,6 +59,6 @@ Magento processes a URL request by first stripping off the base URL. The first p
 
 After the area name, the URI segment specifies the *full front name*. When an HTTP request arrives, the handle is extracted from the URL. Magento uses the handle to identify which controller (a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class) and action (a PHP method in the class) to execute. A common action to display a HTML page is `index`, which returns an HTML page.
 
-## Related topics {#m2arch-module-related}
+## 相关主题 {#m2arch-module-related}
 
 * <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>

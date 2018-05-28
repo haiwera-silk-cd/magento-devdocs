@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 9. Create a shipment
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤9. 创建物流信息
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 9
 level3_menu_node:

@@ -3,16 +3,16 @@ pages:
     - label: 介绍
       url: /test/testing.html
 
-    - label: Integration Tests
+    - label: 集成测试
       children:
 
-        - label: Running Integration Tests
+        - label: 运行集成测试
           url: /test/integration/integration_test_execution.html
 
-        - label: Using DocBlock annotations
+        - label: 使用文档块注解
           url: /test/integration/annotations.html
 
-    - label: JavaScript Unit Testing
+    - label: js单元测试
       children:
 
         - label: Jasmine
@@ -21,17 +21,17 @@ pages:
         - label: JsTestDriver
           url: /test/js/test_js-unit.html
 
-    - label: PHP Unit Testing
+    - label: PHP单元测试
       children:
 
-        - label: Running Unit Tests
+        - label: 运行单元测试
           url: /test/unit/unit_test_execution.html
 
-        - label: Running Unit Tests in CLI
+        - label: 在命令行运行单元测试
           url: /test/unit/unit_test_execution_cli.html
 
-        - label: Running Unit Tests in PHPStorm
+        - label: 在PHPStorm运行单元测试
           url: /test/unit/unit_test_execution_phpstorm.html
 
-        - label: Writing Testable Code
+        - label: 编写可测试的代码
           url: /test/unit/writing_testable_code.html

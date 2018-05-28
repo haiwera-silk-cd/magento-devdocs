@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 4. Create a quote
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤4. 创建一个报价
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 4
 level3_menu_node:

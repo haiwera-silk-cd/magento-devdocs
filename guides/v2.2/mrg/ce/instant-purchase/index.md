@@ -1,12 +1,12 @@
 ---
 group: mrg
-title: 即时购买模块
+title: 即时购买模块
 github_link: mrg/ce/instant-purchase/index.md
 functional_areas:
   - Checkout
 ---
 
-The [即时购买模块] allows customers to place orders in seconds without going through the full checkout process.
+The [即时购买模块] allows customers to place orders in seconds without going through the full checkout process.
 
 This feature takes the form of a button on product pages.
 When a customer clicks this button, the system places their order using the default shipping, billing address, and stored payment method.
@@ -211,7 +211,7 @@ The default implementation for the availability checker always returns `true`.
 
 Custom availability checkers need to implement the [`AvailabilityCheckerInterface`] and can be applied to a payment method by specifying the class name (or virtual type name) in the `default/payment/<vault payment method code>/instant_purchase/available` configuration option.
 
-### Payment Token Formatter
+### 支付令牌 Formatter
 
 The Magento [Vault module] provides an interface to persist and manage stored payment methods.
 

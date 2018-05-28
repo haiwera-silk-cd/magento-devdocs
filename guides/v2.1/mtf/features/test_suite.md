@@ -205,7 +205,7 @@ const TEST_TYPE = '3rd_party_test_deprecated';
 
 {% endhighlight %}
 
-A test case can contain multiple tag groups, and a group can have multiple values. For example:
+A test case can contain multiple tag groups, and a group can have multiple values. 例如:
 
 ``` php?start_inline=1
 

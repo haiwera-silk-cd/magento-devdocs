@@ -1,8 +1,8 @@
 ---
 group: howdoi
-subgroup: Installation and configuration
-title: Installation and configuration
-menu_title: Installation and configuration
+subgroup: 安装和配置
+title: 安装和配置
+menu_title: 安装和配置
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -13,7 +13,7 @@ functional_areas:
 
 ## Installation
 *	<a href="{{ page.baseurl }}/install-gde/install-quick-ref.html">Installation quick reference</a>
-*	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">Command line installation</a>
+*	<a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">命令行安装</a>
 *	<a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">网页向导安装</a>
 *	<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade (post-installation)</a>
 

@@ -10,7 +10,7 @@ github_link: contributor-guide/contributing_dod.md
 redirect_from: /guides/v1.0/contributor-guide/contributing_dod.html
 ---
 
-### Overview
+### 概述
 
 The "Definition of Done" (DoD) is a collective term for a set of acceptance criteria that is applied to any changes in the product code base.
 The requirements that result from our DoD are applied by default to all user stories and to each task within this user story.
@@ -40,7 +40,7 @@ Contributors are asked to submit the doc as a Pull Request to the [DevDocs Githu
 
 When submitting either code or documentation, a brief summary of the work should be included in the commit message.
 
-Additionally, the code itself should follow our [DocBlock standard][0] and contain high-quality comments and descriptions for all classes and methods.
+Additionally, the code itself should follow our [注释文档块规范][0] and contain high-quality comments and descriptions for all classes and methods.
 
 Any backwards-incompatible changes must also be recorded in the accompanying documentation, using the following format:
 
@@ -76,7 +76,7 @@ In cases where it is impossible to cover, replace with integration tests.
 
 It is not necessary to cover classes created by auto-generation and methods that don't have any business logic.
 
-#### Integration Tests
+#### 集成测试
 
 Code to cover:
 
@@ -87,7 +87,7 @@ Code to cover:
 	*	If it is impossible to cover due to high code coupling
 	*	If code had only minor modification and in order to cover it with unit test it would require refactoring of code, not related to the original modification
 
-See: [Running Integration Tests][3].
+See: [运行集成测试][3].
 
 #### Integrity Tests
 
@@ -97,7 +97,7 @@ Code to cover:
 
 Expected code coverage: must cover all files applicable to this convention.
 
-For example:
+例如:
 
 Scan for all XML-files of certain type and validate them using appropriate XML-schema
 Scan for declarations of templates and invoke "fallback" mechanism to ensure they resolve

@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="apache-support">Apache versions supported</h2>
+<h2 id="apache-support">支持的Apache版本</h2>
 
 Magento requires Apache 2.2.x or 2.4.x.
 
@@ -25,7 +25,7 @@ If you're new to all this and need some help getting started, we suggest the fol
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
 
-<h2 id="apache-help-rewrite">Important: Apache rewrites and .htaccess</h2>
+<h2 id="apache-help-rewrite">重要: Apache rewrites and .htaccess</h2>
 This topic discusses how to enable Apache 2.2 rewrites and specify a setting for the <a href="http://httpd.apache.org/docs/current/howto/htaccess.html" target="_blank">distributed configuration file, <code>.htaccess</code></a>.
 
 Magento uses server rewrites and <code>.htaccess</code> to provide directory-level instructions for Apache. The following instructions are included in all of the other sections in this topic as well.
@@ -43,7 +43,7 @@ Magento uses server rewrites and <code>.htaccess</code> to provide directory-lev
 	<p>Failure to enable these settings typically results in no styles displaying on your storefront or Admin.</p></span>
 </div>
 
-<h2 id="install-prereq-apache-verify">Verify the Apache version</h2>
+<h2 id="install-prereq-apache-verify">验证apache版本</h2>
 To verify the Apache version you're currently running, enter:
 
 	apache2 -v
@@ -61,14 +61,14 @@ The result displays similar to the following:
 <h2 id="install-prereq-apache-ubuntu">Installing or upgrading Apache on Ubuntu</h2>
 The following sections discusses how to install or upgrade Apache:
 
-*	Install Apache
+*	安装Apache
 *	Upgrade to Apache 2.4 on Ubuntu 12 to use PHP 5.6 or PHP 7
 
 <h3 id="install-prereq-apache-ubuntu-install">Installing Apache on Ubuntu 16, 14, or 12</h3>
 {% collapsible Click to show/hide content %}
 To install the default version of Apache (Ubuntu 14, 16&mdash;Apache 2.4, Ubuntu 12&mdash;Apache 2.2):
 
-1.	Install Apache
+1.	安装Apache
 
 		apt-get -y install apache2
 
@@ -185,7 +185,7 @@ If you encounter 403 Forbidden errors when trying to access the Magento site, yo
 <h4 id="install-apache-403_2.4">Solving 403 Forbidden errors for Apache 2.4</h4>
 To enable web site visitors to access your site, use one of the <a href="http://httpd.apache.org/docs/2.4/howto/access.html" target="_blank">Require directives</a>.
 
-For example:
+例如:
 	
 	<Directory /var/www/>
 		Options Indexes FollowSymLinks MultiViews
@@ -203,7 +203,7 @@ For example:
 <h4 id="install-apache-403_2.2">Solving 403 Forbidden errors for Apache 2.2</h4>
 To enable web site visitors to access your site, use the <a href="http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#allow" target="_blank">Allow directive</a>.
 
-For example:
+例如:
 	
 	<Directory /var/www/>
 		Options Indexes FollowSymLinks MultiViews
@@ -224,7 +224,7 @@ For example:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/optional.html">Installing 可选软件</a>
 *	<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Determine your installation or upgrade path</a>
 

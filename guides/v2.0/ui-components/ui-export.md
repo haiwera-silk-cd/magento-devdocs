@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: ExportButton Component
 menu_title: Export Button Component
 menu_node:
 menu_order: 12
 version: 2.0
-github_link: ui-components/ui-export.md
+github_link: ui-组件/ui-export.md
 redirect_from: /guides/v2.0/ui-library/ui-export.html
 
 ---

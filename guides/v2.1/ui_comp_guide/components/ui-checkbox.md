@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Checkbox component
-menu_title: Checkbox component
+group: UI_组件_guide
+subgroup: 组件
+title: 复选框组件
+menu_title: 复选框组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-checkbox.md
+github_link: ui_comp_guide/组件/ui-checkbox.md
 ---
 
 ## Overview
 
-The Checkbox component implements a form field that is an {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="checkbox">` element. It can also be displayed as a "toggle" handler or a radio button element.
+The 复选框组件 implements a form field that is an {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="checkbox">` element. It can also be displayed as a "toggle" handler or a radio button element.
 
 ## Сheckbox configuration
 
@@ -56,7 +56,7 @@ Extends all `abstract` configuration.
 </td>
     <td>Paths to templates for all possible types of input elements. The exact template to be used for rendering is defined by the <code>prefer</code> property.</td>
     <td>Object<ul><li>String</li><li>String</li><li>String</li></ul></td>
-    <td><code>ui/form/components/single/radio<br>ui/form/components/single/checkbox<br>ui/form/components/single/switcher</code></td>
+    <td><code>ui/form/组件/single/radio<br>ui/form/组件/single/checkbox<br>ui/form/组件/single/switcher</code></td>
   </tr>
   <tr>
     <td><code>component</code></td>

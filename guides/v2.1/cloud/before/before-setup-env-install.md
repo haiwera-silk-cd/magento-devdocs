@@ -33,12 +33,12 @@ To be able to customize the Magento software on your local machine, you should i
 ### Get Magento Admin environment variables {#variables}
 You will need the Admin environment variable values for the installation command line.
 
-1. Log in to your local development system, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
-2. Change to a directory to which the Magento file system owner has write access.
+1. Log in to your local development system, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+2. Change to a directory to which the Magento文件系统所有者 has write access.
 3. Enter the following command in a terminal to log in to your project:
 
 		magento-cloud login
-4. Before you begin, list the environment variables.
+4. 开始之前, list the environment variables.
 
 		magento-cloud variable:get -e <environment ID>
 
@@ -66,14 +66,14 @@ To create authentication keys through the Magento Marketplace:
 5. The keys generate a Public and Private key you can click to copy. Save this information or keep the page open when installing {{site.data.var.ee}}.
 
 ## Set the docroot {#docroot}
-Set the docroot to the `/magento` directory until you complete all setup. If you change the docroot to `/magento/pub` prior to completion, you will encounter issues running the Web Setup Wizard.
+Set the docroot to the `/magento` directory until you complete all setup. If you change the docroot to `/magento/pub` prior to completion, you will encounter issues running the 网页安装向导.
 
 For the Production environment, you should set the docroot to `/magento/pub`, which helps restrict access to vulnerable areas of the system. The webserver docroot should be set to `/magento/pub` only after Magento is installed (including any upgrades and patches), configured, and static files have been generated and populated in `/magento/pub`. Alternatively, you could also create a subdomain (for example, `install.domain.com`) and configure your webserver's docroot to the Magento installed root folder.
 
 ## Set file system permissions and ownership {#file-system-permissions}
 After you have installed Magento, you need to set the file system permissions and ownership.
 
-1.  Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.  Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 2.  Enter the following commands in the order shown:
 
 		cd <your Magento install dir>
@@ -90,7 +90,7 @@ Prior to installing, you should [更新安装依赖]({{ page.baseurl }}/install-
 You should be ready to install Magento using one of the following options:
 
 * [Install the Magento software using the command line]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)
-* [Install the Magento software using the Web Setup Wizard]({{ page.baseurl }}/install-gde/install/web/install-web.html)
+* [Install the Magento software using the 网页安装向导]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 
 The following example installs using the command line method:
 
@@ -159,7 +159,7 @@ With these steps completed, you should have:
 * Magento Commerce account and initial project setup and master branch
 * A local workspace configured with installations of required software, Magento Cloud CLI, and Magento
 * SSH keys set up
-* The Magento file system owner configured
+* The Magento文件系统所有者 configured
 * Your initial code branch
 * Magento authentication keys set up and configured in the project and local
 

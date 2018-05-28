@@ -38,7 +38,7 @@ The smallest working module.xml file would look something like this:
 
 Do not use "Ui" for your custom module name because the <code>%Vendor%_Ui</code> notation, required when specifying paths, might cause issues.
 
-## Add the components `composer.json` file {#add-composer-json}
+## Add the 组件 `composer.json` file {#add-composer-json}
 `composer.json` provides a component name and also specifies component dependencies.
 
 In addition, the [Component Manager]({{ page.baseurl }}/comp-mgr/compman-start.html) looks for a `composer.json` in a component's root directory and can perform actions on the component and its dependencies.
@@ -87,8 +87,8 @@ where:
 
 * `name`&mdash;is the name of your component.
 * `description`&mdash;is a concise explanation of your component's purpose.
-* `require`&mdash;lists any components your component depends on.
-* `suggest`&mdash;lists soft dependencies. The component can operate without them, but if the components are active, this component might impact their functionality. `Suggest` does not affect component load order.
+* `require`&mdash;lists any 组件 your component depends on.
+* `suggest`&mdash;lists soft dependencies. The component can operate without them, but if the 组件 are active, this component might impact their functionality. `Suggest` does not affect component load order.
 * `type`&mdash;determines what the {% glossarytooltip 3425e9ae-5edf-4fc6-b645-06023e9e5e5b %}Magento component{% endglossarytooltip %} type. Choose from *magento2-theme*, *magento2-language*, or *magento2-module*.
 * `version`&mdash;lists the version of the component.
 * `license`&mdash;lists applicable licenses that apply to your component.
@@ -105,6 +105,6 @@ where:
 
 
 
-#### Next
+#### 下一步
 
-[组件加载顺序]({{ page.baseurl }}/extension-dev-guide/build/module-load-order.html)
+[components加载顺序]({{ page.baseurl }}/extension-dev-guide/build/module-load-order.html)

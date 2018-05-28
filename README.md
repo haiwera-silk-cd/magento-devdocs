@@ -14,7 +14,7 @@ You can build this site locally in the following ways:
 
 ## Build using Jekyll
 
-For local builds, you need to install Ruby 2.4 or later.
+For local builds, you need to install Ruby 2.4或更新.
 
 To check the Ruby version on your environment, run in your terminal:
 
@@ -37,7 +37,7 @@ $ ruby -v
 
 See the [Ruby site](https://www.ruby-lang.org/en/documentation/installation) for instructions.
 
-### Install Bundler
+### 安装Bundler
 
 Install the [Bundler](http://bundler.io/) gem, which helps with Ruby dependencies:
 
@@ -47,7 +47,7 @@ $ gem install bundler
 
 Once you have completed preparing your environment, you can build locally and review the site in your browser.
 
-### Install devdocs
+### 安装devdocs
 
 Clone or download the repository. The first time you are at the `devdocs` directory, run:
 

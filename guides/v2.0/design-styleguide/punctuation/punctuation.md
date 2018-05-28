@@ -39,7 +39,7 @@ All grammatically correct sentences end in punctuation, usually a period. When i
   <li><strong>Parenthesis.</strong> For details, jump to the <span markdown="1">[Parenthesis]({{ page.baseurl }}/design-styleguide/punctuation/punctuation.html#parenthesis)</span> section.</li>
   <li><strong>Numbers, dates, addresses.</strong> For details, see <span markdown="1">[Number Formats]({{ page.baseurl }}/design-styleguide/number-formats/number-formats.html).</span></li>
   <li><strong>Introductory phrases.</strong> Use commas to set off introductory phrases. ... Commas can be omitted after short phrases as long as the meaning, transitioning between phrase and sentence, is clear. <em>Correct example:</em> "(After <em>-or-</em> Following <em>-or-</em> To follow) this section, read the Associated Press (AP) Stylebook’s commas entry."</li>
-  <li><strong>Non-essential phrases.</strong> A non-essential phrase is a phrase that can be removed from a sentence without adversely affecting its meaning. "Which" is used for non-essential phrases, and "that" is used for essential phrases. <em>See correct examples:</em>
+  <li><strong>Non-essential phrases.</strong> A non-essential phrase is a phrase that can be removed from a sentence without adversely affecting its meaning. "Which" is used for non-essential phrases, and "that" is used for essential phrases. <em>See correct 例如:</em>
   <ul style="list-style-type:none">
     <li>Non-essential – "Promotions, which are set up with cart and catalog rules, are created in the Admin panel."</li>
     <li>Essential – "Promotions that are set up with catalog rules do not display in Cart."</li>
@@ -52,7 +52,7 @@ All grammatically correct sentences end in punctuation, usually a period. When i
 Use to end a sentence before:
 
 <ul>
-  <li>A complex series of items. Don't use a colon with a simple series. Also, consider using a list for a complex series of items. For details, see <span markdown="1">[Lists]({{ page.baseurl }}/design-styleguide/content-formats/content-formats.html#lists)</span> section in Content Formats. <em>See examples:</em>
+  <li>A complex series of items. Don't use a colon with a simple series. Also, consider using a list for a complex series of items. For details, see <span markdown="1">[Lists]({{ page.baseurl }}/design-styleguide/content-formats/content-formats.html#lists)</span> section in Content Formats. <em>See 例如:</em>
     <ul style="list-style-type:none">
       <li><strong>否</strong> – “A shopping cart may include: pants, hats, and scarves."</li>
       <li>Yes – “A shopping cart may include pants, hats, and scarves.”</li>
@@ -67,7 +67,7 @@ Use between a title and a description or subtitle ... *Correct example:* "Magent
 
 **Capitalization after a colon.** When a complete sentence follows a colon, capitalize the first word of the following sentence. When a series or partial sentence follows a colon, do not capitalize.
 
-*Correct examples:*
+*Correct 例如:*
 
 <ul style="list-style-type:none">
   <li>Complete sentence – "The company makes the following promise: This solution will improve your bottom line.”</li>
@@ -96,7 +96,7 @@ Use in:
 
 (-) Use for:
 
-* Compound modifiers, but not common prefixes. ... *Correct examples:* high-value item, hard-to-find item
+* Compound modifiers, but not common prefixes. ... *Correct 例如:* high-value item, hard-to-find item
 
 * Multiple modifiers. ... *Correct example:* "high- and low-value items"
 

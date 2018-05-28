@@ -11,7 +11,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 This article features a step-by-step illustration of how a real-life {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} customization task is performed. Namely, it illustrates how to change the layout of customer account links in a Magento store page header.
 
 <h2>Moving customer account links</h2>
@@ -35,7 +35,7 @@ The markup, that is needed for a drop-down:
 <img src="{{ site.baseurl }}/common/images/layout_code_after.png">
 </div>
 
-<h4>Step 1: Define the blocks</h4>
+<h4>步骤1. Define the blocks</h4>
 
 OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a> they find out that the blocks responsible for displaying the header links are defined in `<Magento_Customer_module_dir>/view/frontend/layout/default.xml`:
 
@@ -57,7 +57,7 @@ OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html"
 ...
 {%endhighlight xml%}
 
-<h4>Step 2: Define the templates</h4>
+<h4>步骤2. Define the templates</h4>
 
 Similar to the way they defined the layout on the previous step, OrangeCo 
 defines the template which is used for rearranging the links:
@@ -86,7 +86,7 @@ defines the template which is used for rearranging the links:
         {
             "*": {
                 "Magento_Ui/js/core/app": {
-                    "components": {
+                    "组件": {
                         "customer": {
                             "component": "Magento_Customer/js/view/customer"
                         }
@@ -104,7 +104,7 @@ defines the template which is used for rearranging the links:
 <?php endif; ?>
 {%endhighlight php%}
 
-<h4>Step 3: Extend the base layout to add a block</h4>
+<h4>步骤3. Extend the base layout to add a block</h4>
 
 OrangeCo needs to create a new block, say, `header.links`, in the `header.panel` container, to move the links there. As the links can be added to this list by different modules, it is better to add this block to the `default.xml` page configuration of the `Magento_Theme` {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
@@ -126,7 +126,7 @@ So the following <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-e
 </page>
 {%endhighlight xml%}
 
-<h4>Step 4: Move links</h4>
+<h4>步骤4. Move links</h4>
 
 To move the links to the `header.links` block, OrangeCo adds an extending layout:
 

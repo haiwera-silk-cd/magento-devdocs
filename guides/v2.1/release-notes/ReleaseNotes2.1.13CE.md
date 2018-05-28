@@ -63,7 +63,7 @@ We are pleased to present Magento Open Source  2.1.13. This release includes bot
 
 <!--- MAGETWO-69701 -->* When two customers check out concurrently for the same product, one of the check outs now succeeds. Previously, when two customers checked out concurrently for the same product, and the total quantity being ordered was greater than the quantity available, the stock  became negative. [GitHub-6363](https://github.com/magento/magento2/issues/6363)
 
-<!--- MAGETWO-64171 -->* Display issues no longer prevent a user from adding a shipping address when checking out when running Internet Explorer 11.x. Previously, a registered user could not add a new shipping address in the  shipping step of the checkout process due to display issues.
+<!--- MAGETWO-64171 -->* Display issues no longer prevent a user from adding a shipping address when checking out when running IE11.x. Previously, a registered user could not add a new shipping address in the  shipping step of the checkout process due to display issues.
 
 <!--- MAGETWO-71229 -->* Magento no longer caches warning messages as often as a customer clicks the **Update Shopping Cart** button while the shopping cart page loads. Previously, Magento cached a warning message each time a customer clicked this button while the page loaded in FireFox or Chrome, and this action resulted in multiple warning messages appearing on the top of the shopping cart page.
 
@@ -146,7 +146,7 @@ did not change after you selected **Disable product**.
 <!--- MAGETWO-57064 -->*  The currency switcher now works for widgets on the home page. Previously, if your website supported multiple currencies, the currency switcher did not update the currencies for widgets on the home page.
 
 
-<!--- MAGETWO-64171 -->*  Customers can now add a new address during the shipping step of the checkout process when accessing the store from Internet Explorer 11.x. Previously, when a customer tried to create a new address from the checkout page,  the **Add address** button  was not visible.
+<!--- MAGETWO-64171 -->*  Customers can now add a new address during the shipping step of the checkout process when accessing the store from IE11.x. Previously, when a customer tried to create a new address from the checkout page,  the **Add address** button  was not visible.
 
 <!--- MAGETWO-58383 -->*  Magento now creates a URL rewrite when you save a newly created CMS page. Previously, when you tried to access a newly created CMS page using information from the **URL Key** field, Magento displayed a 404 error.  [GitHub-5923](https://github.com/magento/magento2/issues/5923)
 
@@ -467,7 +467,7 @@ The following table identifies contributions from our community members. This ta
 
 ## System requirements
 
-Our technology stack is built on PHP and MySQL. For more information, see <a href="http://devdocs.magento.com/guides/v2.1/install-gde/system-requirements2.html" target="_blank">System Requirements</a>.
+Our technology stack is built on PHP and MySQL. For more information, see <a href="http://devdocs.magento.com/guides/v2.1/install-gde/system-requirements2.html" target="_blank">系统要求</a>.
 
 
 ## Installation
@@ -477,11 +477,11 @@ See [如何获取Magento](http://devdocs.magento.com/guides/v2.1/install-gde/bk-
 
 ## Migration toolkits
 
-The Magento [数据迁移工具](http://devdocs.magento.com/guides/v2.1/migration/bk-migration-guide.html) helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  [安装数据迁移工具](http://devdocs.magento.com/guides/v2.1/migration/migration-tool-install.html). Consider exploring or contributing to the [Magento Data Migration repository](https://github.com/magento/data-migration-tool).
+The Magento [数据迁移工具](http://devdocs.magento.com/guides/v2.1/migration/bk-migration-guide.html) helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  [安装数据迁移工具](http://devdocs.magento.com/guides/v2.1/migration/migration-tool-install.html). Consider exploring or contributing to the [Magento 数据迁移 repository](https://github.com/magento/data-migration-tool).
 
 An updated version of this toolkit is typically available several days after the patch release.
 
-The [Code Migration Toolkit](https://github.com/magento/code-migration) helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The [代码迁移 Toolkit](https://github.com/magento/code-migration) helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 
 ## Credits
 Dear community members, thank you for your suggestions,  bug reports and code contributions.

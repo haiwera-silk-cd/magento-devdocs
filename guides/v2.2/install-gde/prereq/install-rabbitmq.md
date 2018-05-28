@@ -14,7 +14,7 @@ functional_areas:
 You must install and configure [RabbitMQ](http://rabbitmq.com){:target="&#95;blank"} _after_ installing {{site.data.var.ce}} or _before_ installing {{site.data.var.ee}}.
 </div>
 
-## RabbitMQ Overview {#overview}
+## RabbitMQ概述 {#overview}
 
 RabbitMQ is an open source message broker that offers a reliable, highly available, scalable and portable messaging system.
 
@@ -31,7 +31,7 @@ The message queue system must be established before you install Magento. The bas
 A basic message queue system can be implemented on EE without using cron instead of RabbitMQ. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for more information.
 </div>
 
-## Install RabbitMQ on Ubuntu {#ubuntu-install}
+## 在Ubuntu上安装RabbitMQ {#ubuntu-install}
 
 To install RabbitMQ on Ubuntu 16 enter the following command:
 ```bash
@@ -47,9 +47,9 @@ If you have an older version of Ubuntu, RabbitMQ recommends installing the packa
 
 Refer to [Installing on Debian/Ubuntu](https://www.rabbitmq.com/install-debian.html){:target="&#95;blank"} for more information.
 
-## Install RabbitMQ on CentOS {#centos-install}
+## 在CentOS上安装RabbitMQ {#centos-install}
 
-### Install Erlang
+### 安装Erlang
 RabbitMQ was written using the Erlang programming language, which must be installed on the same system as RabbitMQ.
 
 See [Manual installation](https://www.erlang-solutions.com/resources/download.html){:target="&#95;blank"} for more information.
@@ -62,7 +62,7 @@ wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
 ```
 
-### Install RabbitMQ
+### 安装RabbitMQ
 The RabbitMQ server is included on CentOS, but the version is often old. RabbitMQ recommends installing the package from their website.
 
 1. Download [rabbitmq-server-3.5.6-1.noarch.rpm](https://www.rabbitmq.com/releases/rabbitmq-server/v3.5.6/rabbitmq-server-3.5.6-1.noarch.rpm){:target="&#95;blank"}.
@@ -123,11 +123,11 @@ where:
 </tr>
 <tr>
 <td>amqp-ssl</td>
-<td><p>Indicates whether to connect to RabbitMQ. The default is <code>false</code>. If you set the value to <code>true</code>, see <a href="#configure-ssl">Configure SSL</a> for more information.</p></td>
+<td><p>Indicates whether to connect to RabbitMQ. The default is <code>false</code>. If you set the value to <code>true</code>, see <a href="#configure-ssl">配置SSL</a> for more information.</p></td>
 </tr>
 </table>
 
-## Configure SSL
+## 配置SSL
 
 To configure support for SSL, edit the `ssl` and `ssl_options` parameters in the `<install_directory>/app/etc/env.php` file so that they are similar to the following:
 
@@ -152,7 +152,7 @@ To configure support for SSL, edit the `ssl` and `ssl_options` parameters in the
   ),
 ```
 
-## Start the message queue consumers
+## 启动消息队列消费进程
 
 After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the message queue consumers. See [配置消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html) for details.
 
@@ -161,7 +161,7 @@ After you have connected {{site.data.var.ee}} and RabbitMQ, you must start the m
 *	[Apache]({{ page.baseurl }}/install-gde/prereq/apache.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
-*	[Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
+*	[配置安全选项]({{ page.baseurl }}/install-gde/prereq/security.html)
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)
-*	[Message queue overview]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
+*	[消息队列概述]({{ page.baseurl }}/config-guide/mq/rabbitmq-overview.html)
 *	[管理消息队列]({{ page.baseurl }}/config-guide/mq/manage-mysql.html)

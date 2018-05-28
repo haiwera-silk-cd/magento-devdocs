@@ -1,4 +1,4 @@
-label: Frontend Developer Guide
+label: 前端工程师手册
 pages:
     - label: 介绍
       url: /frontend-dev-guide/bk-frontend-dev-guide.html
@@ -90,7 +90,7 @@ pages:
         - label: 模板基本概念
           url: /frontend-dev-guide/templates/template-override.html
 
-        - label:自定义模板图解
+        - label: 自定义模板图解
           url: /frontend-dev-guide/templates/template-sample.html
 
         - label: 自定义邮件模板

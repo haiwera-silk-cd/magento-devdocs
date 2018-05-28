@@ -42,7 +42,7 @@ To set up routes in a staging or production environment, you must create a <a hr
 
 To configure routes in an integration environment:
 
-1.	Log in to your local environment as, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.	Log in to your local environment as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 2.	Change to your {{site.data.var.ee}} base directory.
 3.	Open `.magento/routes.yaml` in a text editor.
 4.	Replace its contents with the following:
@@ -70,7 +70,7 @@ Set up in your {{site.data.var.ee}} Admin websites, stores, and store views iden
 #### Get your access information
 To get the access information you need to log in to the Magento Admin:
 
-1.	If you haven't done so already, log in to your local environment as, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+1.	If you haven't done so already, log in to your local environment as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 2.	Change to your {{site.data.var.ee}} base directory.
 3.	Log in to your account:
 

@@ -1,15 +1,15 @@
 ---
 group: contributor
 subgroup: templates
-title: Basic template
-menu_title: Basic template
+title: 基础模板
+menu_title: 基础模板
 menu_order: 1
 version: 2.1
 github_link: contributor-guide/templates/basic_template.md
 redirect_from: contributor-guide/basic_template.html
 ---
 
-### Overview
+### 概述
 Introductory text that gives an overview of the topic you will be writing about.
 
 The purpose of this page is to provide you with a pre-formatted template and useful {% glossarytooltip a5ef9041-976f-4eb3-826e-bf836027d8c3 %}markdown{% endglossarytooltip %} references to help you get started writing docs.

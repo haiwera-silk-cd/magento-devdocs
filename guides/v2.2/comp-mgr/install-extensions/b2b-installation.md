@@ -1,8 +1,8 @@
 ---
 group: compman
-subgroup: 10_Install extensions from the command line
-title: Install the B2B extension
-menu_title: Install the B2B extension
+subgroup: 10_从命令行安装扩展
+title: 安装B2B扩展
+menu_title: 安装B2B扩展
 menu_order: 1
 version: 2.2
 github_link: comp-mgr/install-extensions/b2b-installation.md
@@ -40,7 +40,7 @@ After completing the installation, you must follow the [post-installation steps]
 After installing the {{site.data.var.b2b}} extension, follow these instructions to launch {{site.data.var.b2b}}.
 
 ### Start message consumers
-The {{site.data.var.b2b}} extension uses MySQL for message queue management. If you want to enable the B2B **Shared Catalog** feature, you must start the corresponding message consumers after installation.
+The {{site.data.var.b2b}} extension uses MySQL for message queue management. If you want to enable the B2B **共享类目录** feature, you must start the corresponding message consumers after installation.
 
 1.  List the available message consumers:
 
@@ -61,7 +61,7 @@ The {{site.data.var.b2b}} extension uses MySQL for message queue management. If 
     bin/magento queue:consumers:start <consumer_name>
     ```
 
-    For example:
+    例如:
 
     ```
     bin/magento queue:consumers:start sharedCatalogUpdatePrice
@@ -89,10 +89,10 @@ Depending on your system configuration, to prevent possible issues, you may also
 -   `--batch-size`: allows you to limit the system resources consumed by the consumers (CPU, memory). Using smaller batches reduces resource usage and, thus, leads to slower processing.
 
 ### Enable B2B features in Magento Admin
-After installing the {{site.data.var.b2b}} extension and starting message consumers (if you want to enable the **Shared Catalog** module), you must also enable B2B modules in Magento Admin.
+After installing the {{site.data.var.b2b}} extension and starting message consumers (if you want to enable the **共享类目录** module), you must also enable B2B modules in Magento Admin.
 
 <div class="bs-callout bs-callout-info" markdown="1">
-If you enable the **Shared Catalog** module, you must also enable the **Company** module. The **Quick Order** and **Requisition Lists** modules can be enabled/disabled independently.
+If you enable the **共享类目录** module, you must also enable the **Company** module. The **Quick Order** and **Requisition Lists** modules can be enabled/disabled independently.
 </div>
 
 1.  Access the Magento Admin and click **Stores** > **Configuration** > **General** > **B2B Features**.
@@ -103,4 +103,4 @@ If you enable the **Shared Catalog** module, you must also enable the **Company*
 
 3.  Click **Save Config**.
 
-Looking for more documentation? Checkout the [B2B Developer Guide]({{ page.baseurl }}/b2b/bk-b2b.html) and [User Guide](//docs.magento.com/m2/b2b/user_guide/getting-started.html).
+Looking for more documentation? Checkout the [B2B开发者文档]({{ page.baseurl }}/b2b/bk-b2b.html) and [User Guide](//docs.magento.com/m2/b2b/user_guide/getting-started.html).

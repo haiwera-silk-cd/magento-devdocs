@@ -1,23 +1,23 @@
 Complete the following tasks in the order shown:
 
 *	[About the shared group](#mage-owner-about-group)
-*	[Step 1: Create the Magento file system owner and give the user a strong password](#mage-owner-create-user)
-*	[Step 2: Find the web server group](#install-update-depend-user-findgroup)
-*	[Step 3: Put the Magento file system owner in the web server's group](#install-update-depend-user-add2group)
-*	[Step 4: 获取Magento](#perms-get-software)
-*	[Step 5: Set ownership and permissions for the shared group](#perms-set-two-users)
+*	[步骤1. Create the Magento文件系统所有者 and give the user a strong password](#mage-owner-create-user)
+*	[步骤2. Find the web server group](#install-update-depend-user-findgroup)
+*	[步骤3. Put the Magento文件系统所有者 in the web server's group](#install-update-depend-user-add2group)
+*	[步骤4. 获取Magento](#perms-get-software)
+*	[步骤5. Set ownership and permissions for the shared group](#perms-set-two-users)
 
 ### About the shared group {#mage-owner-about-group}
-To enable the web server to write files and directories in the Magento file system but to also maintain *ownership* by the Magento file system owner, both users must be in the same group. This is necessary so both users can share access to Magento files (including files created using the Magento Admin or other web-based utilities).
+To enable the web server to write files and directories in the Magento file system but to also maintain *ownership* by the Magento文件系统所有者, both users must be in the same group. This is necessary so both users can share access to Magento files (including files created using the Magento Admin or other web-based utilities).
 
-This section discusses how to create a new Magento file system owner and put that user in the web server's group. You can use an existing user account if you wish; we recommend the user have a strong password for security reasons.
+This section discusses how to create a new Magento文件系统所有者 and put that user in the web server's group. You can use an existing user account if you wish; we recommend the user have a strong password for security reasons.
 
 <div class="bs-callout bs-callout-info">
 	Skip to <a href="#install-update-depend-user-findgroup">step 2</a> if you plan on using an existing user account.
 </div>
 
-### Step 1: Create the Magento file system owner and give the user a strong password {#mage-owner-create-user}
-This section discusses how to create the Magento file system owner. (Magento file system owner is another term for the *command-line user*.)
+### 步骤1. Create the Magento文件系统所有者 and give the user a strong password {#mage-owner-create-user}
+This section discusses how to create the Magento文件系统所有者. (Magento文件系统所有者 is another term for the *command-line user*.)
 
 To create a user on CentOS or Ubuntu, enter the following command as a user with `root` privileges:
 
@@ -30,7 +30,7 @@ To give the user a password, enter the following command as a user with `root` p
 Follow the prompts on your screen to create a password for the user.
 
 <div class="bs-callout bs-callout-warning">
-    <p>If you don't have <code>root</code> privileges on your Magento server, you can use another local user account. Make sure the user has a strong password and continue with <a href="#install-update-depend-user-add2group">Put the Magento file system owner in the web server group</a>.</p>
+    <p>If you don't have <code>root</code> privileges on your Magento server, you can use another local user account. Make sure the user has a strong password and continue with <a href="#install-update-depend-user-add2group">Put the Magento文件系统所有者 in the web server group</a>.</p>
 </div>
 
 For example, to create a user named `magento_user` and give the user a password, enter:
@@ -42,7 +42,7 @@ For example, to create a user named `magento_user` and give the user a password,
     <p>Because the point of creating this user is to provide added security, make sure you create a <a href="https://en.wikipedia.org/wiki/Password_strength" target="&#95;blank">strong password</a>.</p>
 </div>
 
-### Step 2: Find the web server user's group {#install-update-depend-user-findgroup}
+### 步骤2. Find the web server user's group {#install-update-depend-user-findgroup}
 To find the web server user's group:
 
 *	CentOS: `egrep -i '^user|^group' /etc/httpd/conf/httpd.conf`
@@ -52,8 +52,8 @@ To find the web server user's group:
 
 	Typically, the user name and the group name are both `www-data`
 
-### Step 3: Put the Magento file system owner in the web server's group {#install-update-depend-user-add2group}
-To put the Magento file system owner in the web server's group (assuming the typical Apache group name for CentOS and Ubuntu), enter the following command as a user with `root` privileges:
+### 步骤3. Put the Magento文件系统所有者 in the web server's group {#install-update-depend-user-add2group}
+To put the Magento文件系统所有者 in the web server's group (assuming the typical Apache group name for CentOS and Ubuntu), enter the following command as a user with `root` privileges:
 
 *	CentOS: `usermod -a -G apache <username>`
 *	Ubuntu: `usermod -a -G www-data <username>`
@@ -83,17 +83,17 @@ To complete the task, restart the web server:
 *	Ubuntu: `service apache2 restart`
 *	CentOS: `service httpd restart`
 
-### Step 4: 获取Magento {#perms-get-software}
+### 步骤4. 获取Magento {#perms-get-software}
 If you haven't done so already, 获取Magento in one of the following ways:
 
 *	[Compressed archive]({{ page.baseurl }}/install-gde/prereq/zip_install.html)
 *	[Composer metapackage]({{ page.baseurl }}/install-gde/prereq/integrator_install.html)
 *	[Clone the repository (contributing developers only)]({{ page.baseurl }}/install-gde/prereq/dev_install.html)
 
-### Step 5: Set ownership and permissions for the shared group {#perms-set-two-users}
+### 步骤5. Set ownership and permissions for the shared group {#perms-set-two-users}
 To set ownership and permissions before you install the Magento software:
 
-1.	Log in to your Magento server as, or switch to, the Magento file system owner.
+1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Enter the following commands in the order shown:
 
 		cd <your Magento install dir>
@@ -104,7 +104,7 @@ To set ownership and permissions before you install the Magento software:
 
 {% include install/file-system-perms-twouser_cmds-only.md %}
 
-### Next step
+### 下一步
 After you have set file system ownership and permissions, continue with any of the following:
 
 *	[Command-line installation]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)

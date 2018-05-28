@@ -18,7 +18,7 @@ functional_areas:
 
 Need some basic info before you get started? New to Magento installation? Here are some helpful resources for you:
 
-*	<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Installation overview</a>
+*	<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">安装概述</a>
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_magento-installed.html">Is the Magento software already installed?</a>
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
 *	<a href="{{ page.baseurl }}/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>

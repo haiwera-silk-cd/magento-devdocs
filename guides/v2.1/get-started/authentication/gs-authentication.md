@@ -137,7 +137,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>Third-party application</p>
       </td>
       <td>
-         <p>Third-party applications use <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">OAuth-based authentication</a> to access the web APIs.</p>
+         <p>Third-party applications use <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a> to access the web APIs.</p>
          <ol>
             <li>
                <p>The third-party Integration registers with Magento.</p>
@@ -168,14 +168,14 @@ Each type of client has a preferred authentication method. To authenticate, use 
    </tr>
 </table>
 
-<h2 id="related">Related topics</h2>
+<h2 id="related">相关主题</h2>
 
 Proceed to the authentication method for your preferred client:
 
-* Mobile application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-token.html">Token-based authentication</a>.
+* Mobile application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-token.html">基于访问令牌的认证</a>.
 
-* Third-party application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">OAuth-based authentication</a>.
+* Third-party application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>.
 
-* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">Session-based authentication</a>.
+* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>.
 
 * <a href="{{ page.baseurl }}/extension-dev-guide/attributes.html">Extension attribute authentication</a>

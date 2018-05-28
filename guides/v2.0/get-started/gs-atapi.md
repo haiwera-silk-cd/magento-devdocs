@@ -1,8 +1,8 @@
 ---
 group: get-started
-subgroup: Step 3. Use cURL to run the request
-title: Step 3. Use cURL to run the request
-menu_title: Step 3. Use cURL to run the request
+subgroup: 步骤3. 使用curl执行这个请求
+title: 步骤3. 使用curl执行这个请求
+menu_title: 步骤3. 使用curl执行这个请求
 menu_order: 1
 menu_node: parent
 version: 2.0

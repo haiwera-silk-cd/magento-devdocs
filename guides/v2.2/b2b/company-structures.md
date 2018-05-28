@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage company structures
-menu_title: Manage company structures
+title: 管理公司结构
+menu_title: 管理公司结构
 menu_order: 15
 version: 2.2
 ee_only: True
@@ -290,7 +290,7 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 
 ## Related information
 
-* [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-* [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-* [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-* [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
+* [集成公司模块]({{ page.baseurl }}/b2b/company.html)
+* [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)
+* [管理公司用户]({{ page.baseurl }}/b2b/company-users.html)
+* [管理公司角色]({{ page.baseurl }}/b2b/roles.html)

@@ -1,8 +1,8 @@
 ---
 group: payments-integrations
 subgroup: B_integration
-title: Payment method configuration
-menu_title: Payment method configuration
+title: 支集方式配置
+menu_title: 支集方式配置
 menu_order: 2
 version: 2.1
 github_link: payments-integrations/base-integration/payment-option-config.md
@@ -69,4 +69,4 @@ Following is the illustration of such configuration (`config.xml` of the Braintr
 ## What's next
 
 - [Payment  method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html)
-- [Payment info rendering in Admin checkout]({{ page.baseurl }}/payments-integrations/base-integration/formblocktype.html)
+- [管理面板的支付信息渲染]({{ page.baseurl }}/payments-integrations/base-integration/formblocktype.html)

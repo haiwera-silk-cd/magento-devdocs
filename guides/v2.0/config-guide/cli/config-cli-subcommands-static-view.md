@@ -36,13 +36,13 @@ You must write static view files to the Magento file system manually using the c
 <div class="bs-callout bs-callout-warning" markdown="1">
 _Developer mode only_: When you install or enable a new module, it might load new JavaScript, CSS, layouts, and so on. To avoid issues with static files, you must clean the old files to make sure you get all the changes for the new {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
-You can clean generated static view files in several ways. Refer to [Clean static files cache topic for details]({{ page.baseurl }}/howdoi/clean_static_cache.html) for more information.
+You can clean generated static view files in several ways. Refer to [清除静态文件缓存 topic for details]({{ page.baseurl }}/howdoi/clean_static_cache.html) for more information.
 </div>
 
 ## 部署静态视图文件 {#config-cli-subcommands-xlate-dict}
 To deploy static view files:
 
-1.  Log in to the Magento server as, or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to</a>, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1.  Log in to the Magento server as, or <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">switch to</a>, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 2.  Delete the contents of `<your Magento install dir>/pub/static`.
 3.  Run the static view files deployment tool `<your Magento install dir>/bin/magento setup:static-content:deploy`.
 <!-- 4.	Set read-only file permissions for the `pub/static` directory, its subdirectories, and files. -->
@@ -119,7 +119,7 @@ Use the following steps:
     -   [命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)
     -   [Setup wizard]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 
-2.  Log in to the Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+2.  Log in to the Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 3.  Delete the contents of `<your Magento install dir>/pub/static` directory.
 4.  <a href="#config-cli-subcommands-xlate-dict">Run the static view files deployment tool</a>.
 <!-- 4.	Set read-only file permissions for the `pub/static` directory, its subdirectories, and files. -->
@@ -136,7 +136,7 @@ One of the options for making it atomic, is writing to files stored in a tempora
 
 Please note, that the default Magento implementation of `\Magento\Framework\Filesystem\Directory\WriteInterface::writeFile` uses non-atomic write to file.
 
-## Related topics
+## 相关主题
 
 -   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
 -   <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>

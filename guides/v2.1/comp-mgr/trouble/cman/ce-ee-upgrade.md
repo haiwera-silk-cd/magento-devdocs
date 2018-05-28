@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-### Problem: 社区版升级到企业版发生错误 {#ce-ee}
+### 问题: 社区版升级到企业版发生错误 {#ce-ee}
 Your upgrade from **Magento Open Source** (formerly Community Edition) to **Magento Commerce** (formerly Enterprise Edition) might fail with the following error:
 
 	[2016-01-19 23:33:24 UTC] An error occurred while executing job 
@@ -21,7 +21,7 @@ Your upgrade from **Magento Open Source** (formerly Community Edition) to **Mage
 
 If this error displays, resolve it as follows:
 
-1.	Log in to your Magento server as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+1.	Log in to your Magento server as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 2.	Enter the following commands in the order shown:
 
 		php <your Magento install dir>/bin/magento setup:upgrade

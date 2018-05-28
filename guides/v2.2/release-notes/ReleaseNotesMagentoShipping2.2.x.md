@@ -36,7 +36,7 @@ Here are the enhancements and  fixes available as of May 2, 2018:
 ### Fixes
 Resolution of the following issues:
 
-* Incompatibility with Internet Explorer 11.x.
+* Incompatibility with IE11.x.
 
 * Magento checkout price not respecting set currency in Portal.
 

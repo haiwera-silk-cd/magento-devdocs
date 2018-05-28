@@ -44,7 +44,7 @@ The following sections discuss how to configure the build machine.
 
 {% include install/composer-clone.md %}
 
-### Install PHP
+### 安装PHP
 To install PHP, see one of the following topics:
 
 *	[CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
@@ -53,7 +53,7 @@ To install PHP, see one of the following topics:
 ### Set up the build system
 To set up the build system:
 
-1.	Log in to the build system as, or switch to, the Magento file system owner.
+1.	Log in to the build system as, or switch to, the Magento文件系统所有者.
 2.	Retrieve the Magento code from source control.
 
 	If you use Git, use the following command:

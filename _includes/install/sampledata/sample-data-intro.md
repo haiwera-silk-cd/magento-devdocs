@@ -14,7 +14,7 @@ You can install optional sample data in any of the following ways:
 <table>
 	<tbody>
 		<tr>
-			<th>Installation method</th>
+			<th>安装方式</th>
 			<th>描述</th>
 			<th>Required skill level</th>
 		</tr>

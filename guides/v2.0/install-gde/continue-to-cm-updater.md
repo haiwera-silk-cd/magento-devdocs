@@ -1,8 +1,8 @@
 ---
 group: install_web
 subgroup: Z_continue
-title: Manage and upgrade components
-menu_title: Manage and upgrade components
+title: Manage and upgrade 组件
+menu_title: Manage and upgrade 组件
 menu_node: parent
 menu_order: 1
 version: 2.0

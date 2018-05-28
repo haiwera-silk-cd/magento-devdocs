@@ -150,7 +150,7 @@ Developers who contribute to the Open Source codebase can <a href="{{ page.baseu
 
 {% collapsible To upgrade to a Release Candidate using the command line: %}
 
-1.	Log in to your Magento server as, or switch to, the Magento file system owner.
+1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to the directory in which you installed the Magento software.
 
 	For example, `cd /var/www/html/magento2`

@@ -11,7 +11,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 | Name | Config path | Encrypted? | System-specific? | Sensitive? | 
 | -------------- | -------------- | -------------- | -------------- | -------------- | 
 | Enable Company | `btob/website_configuration/company_active` | | | |
-| Enable Shared Catalog | `btob/website_configuration/sharedcatalog_active` | | | |
+| Enable 共享类目录 | `btob/website_configuration/sharedcatalog_active` | | | |
 | Enable B2B Quote | `btob/website_configuration/negotiablequote_active` | | | |
 | Enable Quick Order | `btob/website_configuration/quickorder_active` | | | |
 | Enable Requisition List | `btob/website_configuration/requisition_list_active` | | | |

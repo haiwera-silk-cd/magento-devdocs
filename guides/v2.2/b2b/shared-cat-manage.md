@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage shared catalogs
-menu_title: Manage shared catalogs
+title: 管理共享类目录
+menu_title: 管理共享类目录
 menu_order: 22
 version: 2.2
 ee_only: True
@@ -194,6 +194,6 @@ Not applicable
 
 ## Related information
 
-* [Integrate with the SharedCatalog module]({{ page.baseurl }}/b2b/shared-catalog.html)
+* [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
 * [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
 * [Assign companies]({{ page.baseurl }}/b2b/shared-cat-company.html)

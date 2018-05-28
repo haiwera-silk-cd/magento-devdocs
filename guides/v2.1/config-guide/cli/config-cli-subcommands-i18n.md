@@ -35,7 +35,7 @@ You can generate a translation dictionary to use by itself (for example, to tran
 ### Work with translation dictionaries {#config-cli-subcommands-xlate-dict-dict}
 To translate words and phrases, you must:
 
-1.  Run the translation collection command to extract translatable words and phrases from enabled components.
+1.  Run the translation collection command to extract translatable words and phrases from enabled 组件.
 2.  Translate the words and phrases.
 
 After that:
@@ -97,7 +97,7 @@ Use the following guidelines when translating words and phrases:
 -   Change the contents of the second column only. Translate the phrases from English (`US`) to the desired language.
 -   While translating, pay attention to placeholders like `%1`, `%2` and so on.
 
-	They are used by the Magento application to insert context values; they are *not* used for translations. For example:
+	They are used by the Magento application to insert context values; they are *not* used for translations. 例如:
 
     	Product '%1' has been added to shopping cart.
     	->
@@ -146,7 +146,7 @@ The following table explains this command's parameters and values:
 		</tr>
 		<tr>
 			<td><p>&lt;locale></p></td>
-			<td><p><a href="http://www.iso.org/iso/home/standards/language_codes.htm" target="\_blank">ISO 639-1</a> (language) and <a href="http://www.iso.org/iso/country_codes.htm" target="\_blank">ISO 3166</a> (country) identifier of language used as file name for all resulting .csv files. Examples: <code>de_DE</code>, <code>pt_PT</code>, <code>pt_BR</code>. </p>
+			<td><p><a href="http://www.iso.org/iso/home/standards/language_codes.htm" target="\_blank">ISO 639-1</a> (language) and <a href="http://www.iso.org/iso/country_codes.htm" target="\_blank">ISO 3166</a> (country) identifier of language used as file name for all resulting .csv files. 例如: <code>de_DE</code>, <code>pt_PT</code>, <code>pt_BR</code>. </p>
 			</td>
 			<td>
 				<p>是</p>
@@ -225,7 +225,7 @@ Where:
 
 If necessary, you can specify several parent packages. The parent packages are applied on a first listed, first used basis.
 
-#### Example of language inheritance {#m2devgde-xlate-inheritancework}
+#### 示例 of language inheritance {#m2devgde-xlate-inheritancework}
 Suppose a language package descends from two other packages, and that those packages also have parent and "grandparent" packages.
 
 If a language package descends from two packages, its `language.xml` might look like the following:
@@ -268,7 +268,7 @@ The following sections provide end-to-end examples of using the commands discuss
 -   <a href="#config-cli-subcommands-xlate-example1">Example: Create a translation dictionary for a module or theme</a>
 -   <a href="#config-cli-subcommands-xlate-example2">Example: Create a language package</a>
 
-### Example: Create a translation dictionary for a module or theme {#config-cli-subcommands-xlate-example1}
+### 示例: Create a translation dictionary for a module or theme {#config-cli-subcommands-xlate-example1}
 To add a German translation to a module or theme that you want to distribute to other merchants:
 
 1.  Collect phrases from your module:
@@ -281,7 +281,7 @@ To add a German translation to a module or theme that you want to distribute to 
 2.  Translate the words and phrases using <a href="#config-cli-subcommands-xlate-dict-trans">these guidelines</a>.
 3.  If necessary, copy `xx_YY.csv` to `/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n` or to the module's theme directory (depending on whether the translation dictionary is for a module or a theme).
 
-### Example: Create a language package {#config-cli-subcommands-xlate-example2}
+### 示例: Create a language package {#config-cli-subcommands-xlate-example2}
 Similar to the preceding example, generate a .csv file, but instead of specifying a module or theme directory, specify the entire Magento application root directory. The resulting .csv contains any phrases that the command could find in the code.
 
 1.  Collect phrases from your module:

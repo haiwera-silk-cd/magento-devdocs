@@ -70,6 +70,6 @@ You must manually re-create all:
     </p>
 </div>
 
-## Related topics
+## 相关主题
 
 * <a href="{{ page.baseurl }}/migration/migration-migrate-after.html">After migration</a>

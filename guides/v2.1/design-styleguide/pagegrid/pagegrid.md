@@ -24,7 +24,7 @@ In the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理�
 
 A Slide-out panel, similar to a modal window, breaks apart and simplifies a complex subtask that is included within a primary task.
 
-For example:
+例如:
 <ul>
 	<li>On a product details form page, a user clicks "Add Attribute".</li>
 	<li>A panel slides over the parent page and shows "Add Attribute" functionality.</li>

@@ -1,11 +1,11 @@
 ---
-group: UI_Components_guide
-title: The uiLayout service object
+group: UI_组件_guide
+title: 关于uLayout服务类
 version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_uilayout_concept.md
 ---
 
-The `uiLayout` service object is a JavaScript function object used for initializing and configuring UI components.
+The `uiLayout` service object is a JavaScript function object used for initializing and configuring UI 组件.
 This object is defined in the [`layout.js`](https://github.com/magento/magento2/blob/2.3-develop/app/code/Magento/Ui/view/base/web/js/core/renderer/layout.js) file in the UI module.
 
 ## `run()` method
@@ -37,7 +37,7 @@ This object can have the following properties:
 | `parent`       | String  | Full name of the component's parent element.                                                         |
 | `template`     | String  | Path to the component's `.html` template.                                                            |
 | `config`       | Object  | Configuration properties for the UI component.                                                       |
-| `children`     | Object  | Configuration nodes for children components.                                                         |
+| `children`     | Object  | Configuration nodes for children 组件.                                                         |
 | `isTemplate`   | Boolean | Whether to save the configuration as a template.                                                     |
 | `nodeTemplate` | String  | The full name of a saved configuration template.                                                     |
 | `provider`     | String  | The full name of the DataSource UI component. This property is inherited from the parent if skipped. |
@@ -110,7 +110,7 @@ The component instance is created when `myNewComponentConfig` is passed on to th
 
 `layout([this.myNewComponentConfig]);`
 
-This instance is stored in the `uiRegistry` with other components and rendered using the logic for rendering `uiCollection` children templates.
+This instance is stored in the `uiRegistry` with other 组件 and rendered using the logic for rendering `uiCollection` children templates.
 
 
 ### Use a configuration template

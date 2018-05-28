@@ -11,7 +11,7 @@ functional_areas:
   - Upgrade
 ---
 
-The components you're upgrading are displayed. The following figure shows an example.
+The 组件 you're upgrading are displayed. The following figure shows an example.
 
 <img src="{{ site.baseurl }}/common/images/upgr_upgrade.png" width="550px" alt="Click upgrade to complete the task">
 

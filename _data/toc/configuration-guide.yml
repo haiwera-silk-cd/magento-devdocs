@@ -139,7 +139,7 @@ pages:
         - label: 为性能测试生成数据
           url: /config-guide/cli/config-cli-subcommands-perf-data.html
 
-        - label: 运行Magento支持工具 (Magento Commerce only)
+        - label: 运行Magento支持工具 (仅企业版适用)
           url: /config-guide/cli/config-cli-subcommands-spt-util.html
 
     - label: Magento配置文件
@@ -256,10 +256,10 @@ pages:
       url: /config-guide/memcache/memcache.html
       children:
 
-        - label: 在Ubuntu上安装、配置和验证memcached
+        - label: 在Ubuntu上安装、配置和验证memcached
           url: /config-guide/memcache/memcache_ubuntu.html
 
-        - label: 在CentOS上安装、配置和验证memcached
+        - label: 在CentOS上安装、配置和验证memcached
           url: /config-guide/memcache/memcache_centos.html
 
         - label: 配置Magento使用memcached
@@ -291,7 +291,7 @@ pages:
     - label: 配置数据库分析器
       url: /config-guide/db-profiler/db-profiler.html
 
-    - label: 安装和配置Elasticsearch (Magento Commerce only)
+    - label: 安装和配置Elasticsearch (仅企业版适用)
       versions: ["2.1","2.2", "2.3"]
       url: /config-guide/elasticsearch/es-overview.html
       children:
@@ -308,7 +308,7 @@ pages:
         - label: 配置Magento使用Elasticsearch
           url: /config-guide/elasticsearch/configure-magento.html
 
-    - label: 消息队列 (Magento Commerce only)
+    - label: 消息队列 (仅企业版适用)
       url: /config-guide/mq/rabbitmq-overview.html
       children:
 
@@ -316,7 +316,7 @@ pages:
           url: /config-guide/mq/manage-mysql.html
 
 
-    - label: Install and configure Solr (Magento Commerce only)
+    - label: Install and configure Solr (仅企业版适用)
       versions: ["2.0","2.1"]
       url: /config-guide/solr/solr-overview.html
       children:
@@ -343,20 +343,20 @@ pages:
         - label: 设置可选数据库复制
           url: /config-guide/multi-master/multi-master_slavedb.html
 
-    - label: Custom Logging
+    - label: 自定义日志
       url: /config-guide/log/log-intro.html
       children:
 
         - label: Magento日志的更多细节
           url: /config-guide/log/log-magento.html
 
-        - label: Example - logging database activity
+        - label: 示例 - 记录数据库活动日志
           url: /config-guide/log/log-db.html
 
     - label: 如何定位你的session文件
       url: /config-guide/sessions.html
 
-    - label: Deploy Magento to production
+    - label: 部署Magento到生产环境
       url: /config-guide/prod/prod.html
       versions: ["2.0","2.1"]
       children:
@@ -364,7 +364,7 @@ pages:
         - label: Magento ownership and permissions in development and production
           url: /config-guide/prod/prod_file-sys-perms.html
 
-        - label: Deploy to production
+        - label: 部署到生产环境
           url: /config-guide/prod/prod_deploy.html
 
         - label: 单机部署

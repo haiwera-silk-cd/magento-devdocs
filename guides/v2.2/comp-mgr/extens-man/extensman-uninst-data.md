@@ -2,7 +2,7 @@
 group: compman
 subgroup: 06_UseExtMan
 title: 步骤3. 数据选项
-menu_title: Remove or Keep Data
+menu_title: 移除或保持数据
 menu_node:
 menu_order: 50
 level3_menu_node: level3child

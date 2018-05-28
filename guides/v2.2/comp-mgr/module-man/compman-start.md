@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 05_UseCompMan
-title: Start the Module Manager
-menu_title: Start the Module Manager
+title: 启动模块管理器
+menu_title: 启动模块管理器
 menu_node:
 menu_order: 2
 version: 2.2
@@ -11,11 +11,11 @@ functional_areas:
   - Upgrade
 ---
 
-<h2 id="compman-access">Start the Module Manager from the Magento Admin</h2>
+<h2 id="compman-access">启动模块管理器 from the Magento Admin</h2>
 To run the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} Manager:
 
 1.	Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} as an administrator.
-2.	Click **System** > **Web Setup Wizard**.
+2.	Click **System** > **网页安装向导**.
 3.	Click **Module Manager**.
 
 	![]({{ site.magentourl }}/common/images/modman_select.png){:width="550px"}

@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: FiltersChips component
-menu_title: FiltersChips component
+group: UI_组件_guide
+subgroup: 组件
+title: 标签过滤器组件
+menu_title: 标签过滤器组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-filterschips.md
+github_link: ui_comp_guide/组件/ui-filterschips.md
 ---
 
 ## Overview
 
-The FiltersChips component provides UI controls that allows users to remove the previously-applied values of the [Filters]({{ page.baseurl }}/ui_comp_guide/components/ui-filters.html) and [Search]({{ page.baseurl }}/ui_comp_guide/components/ui-search.html) components.
+The 标签过滤器components provides UI controls that allows users to remove the previously-applied values of the [Filters]({{ page.baseurl }}/ui_comp_guide/components/ui-filters.html) and [Search]({{ page.baseurl }}/ui_comp_guide/components/ui-search.html) 组件.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/filters/chips.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/filters/chips.js)
 

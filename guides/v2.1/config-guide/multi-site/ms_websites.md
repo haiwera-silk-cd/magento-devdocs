@@ -31,7 +31,7 @@ For example purposes only, we use a French {% glossarytooltip a3c8f20f-b067-414e
 
 </div>
 
-## Step 1: Create root categories
+## 步骤1. Create root categories
 Creating a root category is optional, but we show how to do it in this tutorial in the {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} you want each website to have a unique root category. You can create additional categories if you choose.
 
 {% collapsible To create a root category: %}
@@ -52,7 +52,7 @@ Creating a root category is optional, but we show how to do it in this tutorial 
 
 {% endcollapsible %}
 
-## Step 2: Create websites
+## 步骤2. Create websites
 
 {% collapsible To create a website: %}
 
@@ -72,7 +72,7 @@ Creating a root category is optional, but we show how to do it in this tutorial 
 
 {% endcollapsible %}
 
-## Step 3: Create stores
+## 步骤3. Create stores
 
 {% collapsible To create a store: %}
 
@@ -92,7 +92,7 @@ Creating a root category is optional, but we show how to do it in this tutorial 
 
 {% endcollapsible %}
 
-## Step 4: Create store views
+## 步骤4. Create store views
 
 {% collapsible To create a store view: %}
 
@@ -111,7 +111,7 @@ Creating a root category is optional, but we show how to do it in this tutorial 
 
 {% endcollapsible %}
 
-## Step 5: Change a website's base URL
+## 步骤5. Change a website's base URL
 To access a website using a unique {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} like `http://french.magento.mg`, you must change the base URL for each site in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
 
 {% collapsible To change the website's base URL: %}
@@ -136,7 +136,7 @@ To access a website using a unique {% glossarytooltip a05c59d3-77b9-47d0-92a1-2c
 
 {% endcollapsible %}
 
-## Step 6: Add the store code to the base URL {#multi-storecode-baseurl}
+## 步骤6. Add the store code to the base URL {#multi-storecode-baseurl}
 Magento gives you the option to add the store code to the site's base URL, which simplifies the process of setting up multiple stores. Using this option, you don't have to create directories on the Magento file system to store `index.php` and `.htaccess`.
 
 This prevents `index.php` and `.htaccess` from getting out of sync with the Magento codebase in future upgrades.
@@ -159,7 +159,7 @@ For more information, see the [Magento User Guide](http://docs.magento.com/m2/ce
 
 {% endcollapsible %}
 
-## Step 7: Change the default store view's base URL
+## 步骤7. Change the default store view's base URL
 You must perform this step last because after it's done, you'll lose access to the Magento Admin; your access returns after you set up virtual hosts as discussed in the web-server-specific topics.
 
 {% collapsible To change the default store view's base URL: %}

@@ -19,7 +19,7 @@ To get the {{site.data.var.ee}} metapackage:
 2.	Make sure you know your support portal user name and password.
 
 	If you don't remember it, contact Magento Support before you continue.
-3.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>.
+3.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.
 4.	Change to the web server docroot directory, or to a directory you've configured as a virtual host docroot.
 5.	Enter the following command:
 
@@ -38,7 +38,7 @@ To get the {{site.data.var.ee}} metapackage:
   		<pre>file_get_contents(app/etc/NonComposerComponentRegistration.php): failed to open stream: No such file or directory</pre>
 	</div>
 
-## Install the B2B extension (optional)
+## 安装B2B扩展 (optional)
 Change to your installation directory and enter the following command to update your `composer.json` file and install the {{site.data.var.b2b}} extension:
 
     composer require magento/extension-b2b

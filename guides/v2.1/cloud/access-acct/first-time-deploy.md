@@ -114,7 +114,7 @@ To set up an SSH agent:
 		Skip the next step and continue with step 4.
 	*	SSH agent not started: `Could not open a connection to your authentication agent.`
 
-		Continue with step 3.
+		Continue with 步骤3.
 
 3.	To start the SSH agent, enter the following command:
 

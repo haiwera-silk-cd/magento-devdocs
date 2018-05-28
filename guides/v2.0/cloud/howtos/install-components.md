@@ -2,7 +2,7 @@
 group: cloud
 title: Install, manage, and upgrade modules
 version: 2.0
-github_link: cloud/howtos/install-components.md
+github_link: cloud/howtos/install-组件.md
 redirect_from:
   - /guides/v2.0/cloud/howtos/update-components.html
 functional_areas:
@@ -36,12 +36,12 @@ We recommend using a branch for adding or updating, configuring, and testing you
 1.  In your local {{site.data.var.ece}} project, [update the Magento `composer.json`](#update) file with the name and version of the module and add the code to Git. The code builds, deploys, and is available through the environment.
 1.  [Verify](#verify) the module installed properly.
 
-### Step 1: Get the module's Composer name and version {#compose}
+### 步骤1. Get the module's Composer name and version {#compose}
 If you already know the module's Composer name and version, skip this step and continue with [Update Magento's `composer.json`](#update).
 
 {% include cloud/composer-name.md %}
 
-### Step 2: Update Magento's `composer.json` {#update}
+### 步骤2. Update Magento's `composer.json` {#update}
 When adding the module to `composer.json`, the file [`app/etc/config.php`]({{ page.baseurl }}/config-guide/config/config-php.html) will also be updated. This file includes a list of installed modules, themes, and language packages, and shared configuration settings.
 
 To update `composer.json`:
@@ -54,7 +54,7 @@ To update `composer.json`:
     composer update
     ```
 
-    For example:
+    例如:
     
     ```bash
     composer require pixlee/magento2:1.0.1 --no-update
@@ -76,7 +76,7 @@ If there are errors, see [module deployment failure]({{ page.baseurl }}/cloud/tr
 When installing and adding the module, you must add the `composer.lock` to your Git branch for deployment. If the module is not in the file, the module won't load in {{site.data.var.ece}}. This ensures when the `composer install` command is used, the module properly loads. This command uses the `composer.lock` file.
 </div>
 
-### Step 3: Verify the module {#verify}
+### 步骤3. Verify the module {#verify}
 To verify the module installed properly, you can check its functionality in the Magento Admin or you can make sure it is enabled as follows:
 
 1.  Open a terminal.
@@ -180,4 +180,4 @@ To update an module:
 
 1.  Wait for the project to deploy and verify in your environment.
 
-If there are errors, see [组件部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).
+If there are errors, see [components部署失败]({{ page.baseurl }}/cloud/trouble/trouble_comp-deploy-fail.html).

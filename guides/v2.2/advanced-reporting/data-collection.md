@@ -1,6 +1,6 @@
 ---
 group: reporting
-title: Data collection for advanced reporting
+title: 高级报表数据集
 version: 2.2
 github_link: advanced-reporting/data-collection.md
 functional_areas:
@@ -200,9 +200,9 @@ It cannot contain any parameters.
 ...
 ```
 
-## Related topics
+## 相关主题
 
-[Modules providing advanced reporting][modules]
+[各模块提供的高级报表][modules]
 
 
 <!-- LINK DEFINITIONS -->

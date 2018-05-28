@@ -1,14 +1,14 @@
 ---
 group: payments-integrations
 subgroup: A_gateway
-title: Gateway Client
-menu_title: Gateway Client
+title: 网关客户端
+menu_title: 网关客户端
 menu_order: 5
 version: 2.0
 github_link: payments-integrations/payment-gateway/gateway-client.md
 ---
 
-Gateway Client is a component of the Magento {% glossarytooltip 5b963536-8f03-45c4-963b-688021f4eea7 %}payment gateway{% endglossarytooltip %} that transfers the payload to the payment provider and gets the response.
+网关客户端 is a component of the Magento {% glossarytooltip 5b963536-8f03-45c4-963b-688021f4eea7 %}payment gateway{% endglossarytooltip %} that transfers the payload to the payment provider and gets the response.
 
 ## Basic interface 
 
@@ -38,7 +38,7 @@ Following is the illustration of how a Zend client can be added in `di.xml`:
 
 ## Transfer Factory {#transfer_factory}
 
-Transfer Factory allows to create transfer object with all data from [request builders]({{ page.baseurl }}/payments-integrations/payment-gateway/request-builder.html). This object is then used by Gateway Client to process requests to payment processor.
+Transfer Factory allows to create transfer object with all data from [request builders]({{ page.baseurl }}/payments-integrations/payment-gateway/request-builder.html). This object is then used by 网关客户端 to process requests to payment processor.
 
 Transfer Factory uses [Transfer Builder]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Http/TransferBuilder.php) to set required request parameters. 
 

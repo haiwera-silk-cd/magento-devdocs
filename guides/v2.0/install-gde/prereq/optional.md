@@ -120,7 +120,7 @@ If a 404 (Not Found) error displays, check the following:
 
 	<a href="http://wiki.centos.org/HowTos/Network/IPTables" target="_blank">Help for CentOS</a>
 
-<h2 id="install-optional-phpmyadmin">Install phpmyadmin</h2>
+<h2 id="install-optional-phpmyadmin">安装phpmyadmin</h2>
 `phpmyadmin` is an easy-to-use, free database administration utility. You can use it to check and manipulate the contents of your database. You must log in to <code>phpmyadmin</code> as the MySQL database administrative user.
 
 For more information about `phpmyadmin`, see the <a href="http://www.phpmyadmin.net/home_page/index.php" target="_blank">phpmyadmin home page</a>.
@@ -200,5 +200,5 @@ To install phpmyadmin on CentOS:
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP 5.5, 5.6, or 7.0&mdash;Ubuntu</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP 5.5, 5.6, or 7.0&mdash;CentOS</a>
 *	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
-*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">Configuring security options</a>
+*	<a href="{{ page.baseurl }}/install-gde/prereq/security.html">配置安全选项</a>
 *	[如何获取Magento]({{ page.baseurl }}/install-gde/bk-install-guide.html)

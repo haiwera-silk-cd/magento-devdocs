@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Date component
-menu_title: Date component
+group: UI_组件_guide
+subgroup: 组件
+title: 数据组件
+menu_title: 数据组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-date.md
+github_link: ui_comp_guide/组件/ui-date.md
 ---
 
 ## Overview
 
-The Date component implements a custom date input field. It uses a date picker implementation provided by the [日历小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_calendar.html).
+The 数据components implements a custom date input field. It uses a date picker implementation provided by the [日历小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_calendar.html).
 
 
 ## Date configuration

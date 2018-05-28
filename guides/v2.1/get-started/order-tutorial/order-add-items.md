@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 5. Add items to the cart
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤5. 添加物品到购物车
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 5
 level3_subgroup: order-tutorial

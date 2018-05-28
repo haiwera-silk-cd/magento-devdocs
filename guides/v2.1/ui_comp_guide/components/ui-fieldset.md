@@ -1,10 +1,10 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Fieldset сomponent
+group: UI_组件_guide
+subgroup: 组件
+title: 输入框集组件
 menu_title: Fieldset component
 version: 2.1
-github_link: ui_comp_guide/components/ui-fieldset.md
+github_link: ui_comp_guide/组件/ui-fieldset.md
 ---
 
 ## Overview
@@ -38,7 +38,7 @@ Fieldset-specific options:
     <td><code>component</code></td>
     <td>The path to the component’s .js file in terms of RequireJS.</td>
     <td>String</td>
-    <td><code>Magento_Ui/js/form/components/fieldset</code></td>
+    <td><code>Magento_Ui/js/form/组件/fieldset</code></td>
   </tr>
   <tr>
     <td><code>disabled</code></td>

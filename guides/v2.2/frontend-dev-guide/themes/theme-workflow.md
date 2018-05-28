@@ -1,8 +1,8 @@
 ---
 group: fedg
 subgroup: A_Themes
-title: Theme development workflow
-menu_title: Theme development workflow
+title: 主题开发 workflow
+menu_title: 主题开发 workflow
 menu_order: 10
 version: 2.2
 github_link: frontend-dev-guide/themes/theme-workflow.md

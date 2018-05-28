@@ -25,10 +25,10 @@ You can also do any of the following:
 ### Install optional sample data
 If you haven't already installed optional sample data, you can [install it now]({{ page.baseurl }}/install-gde/install/sample-data-after-magento.html).
 
-### Manage and upgrade components
+### Manage and upgrade 组件
 *	<a href="{{ page.baseurl }}/comp-mgr/compman-start.html">Component management (install, uninstall, enable, disable, update)</a>
 *	<a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">System upgrade (upgrade the Magento software)</a>
-*	*Contributing developers only*: <a href="{{ page.baseurl }}/install-gde/install/cli/dev_options.html">Contributing developers&mdash;update, reinstall Magento</a>
+*	*仅贡献开发者*: <a href="{{ page.baseurl }}/install-gde/install/cli/dev_options.html">Contributing developers&mdash;update, reinstall Magento</a>
 
 ### Configure
 <a href="{{ page.baseurl }}/install-gde/install/post-install-config.html">配置Magento应用</a>.

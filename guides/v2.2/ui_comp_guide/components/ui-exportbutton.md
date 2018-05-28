@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: ExportButton component
-menu_title: ExportButton component
+group: UI_组件_guide
+subgroup: 组件
+title: 导出按钮组件
+menu_title: 导出按钮组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-exportbutton.md
+github_link: ui_comp_guide/组件/ui-exportbutton.md
 ---
 
 ## Overview
 
-The ExportButton component implements the ability to export grid data to the specified data format (cvs, xml, and so on).
+The 导出按钮组件 implements the ability to export grid data to the specified data format (cvs, xml, and so on).
 
 ## Structure
 

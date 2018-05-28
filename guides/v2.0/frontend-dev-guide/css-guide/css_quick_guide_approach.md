@@ -9,7 +9,7 @@ github_link: frontend-dev-guide/css-guide/css_quick_guide_approach.md
 functional_areas:
   - Frontend
 ---
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 Let's say you created a new {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} inheriting from Magento Blank or Luma, and chose the <a href="{{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_mode.html">LESS compilation mode</a>. What's next? Where to add the style changes? This topic gives quick answers.
 
 

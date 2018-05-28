@@ -46,7 +46,7 @@ pages:
           url: /install-gde/system-requirements2.html
           children:
 
-            - label: Magento technology stack requirements
+            - label: Magento技术栈要求
               url: /install-gde/system-requirements-tech.html
 
             - label: 支持的浏览器
@@ -98,7 +98,7 @@ pages:
                 - label: 安装前设置所有者和权限
                   url: /install-gde/prereq/file-system-perms.html
 
-            - label: RabbitMQ (Magento Commerce only)
+            - label: RabbitMQ (仅企业版适用)
               url: /install-gde/prereq/install-rabbitmq.html
 
             - label: 设置远程Mysql数据库连接

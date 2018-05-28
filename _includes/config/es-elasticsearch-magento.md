@@ -53,7 +53,7 @@ One of the following displays:
 	</tr>
 	<tr>
 		<td><img src="{{ site.baseurl }}/common/images/elastic_test-fail.png"></td>
-		<td><p>Try the following:</p>
+		<td><p>尝试下面的方法:</p>
 			<ul>
 				<li>Make sure the Elasticsearch server is running.</li>
 				<li>If the Elasticsearch server is on a different host from Magento, log in to the Magento server and ping the Elasticsearch host. Resolve network connectivity issues and test the connection again.</li>
@@ -85,7 +85,7 @@ To clean the cache using the command line, use the <a href="{{ page.baseurl }}/c
 
 To reindex using the command line:
 
-1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 2.	Enter any of the following commands:
 
 	Enter the following command to reindex the catalog search index only:

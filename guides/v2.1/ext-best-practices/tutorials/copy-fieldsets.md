@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: Tutorials
-title: Copying fieldsets
-menu_title: Copying fieldsets
+title: 拷贝form输入字段集
+menu_title: 拷贝form输入字段集
 menu_order: 1000
 version: 2.1
 github_link: ext-best-practices/tutorials/copy-fieldsets.md
@@ -13,7 +13,7 @@ functional_areas:
 ## Overview
 In this tutorial, you will learn to copy custom data from a {% glossarytooltip 77e19d0d-e7b1-4d3d-9bad-e92fbb9fb59a %}quote{% endglossarytooltip %} object to an order object using the [Magento/Framework/DataObject/Copy][0]{:target="_blank"} class.
 
-## Step 1: Define your attributes
+## 步骤1. Define your attributes
 {:#step-1}
 
 The following code defines a simple [extension attribute][1] named `demo` for the Cart and Order objects.
@@ -31,7 +31,7 @@ The following code defines a simple [extension attribute][1] named `demo` for th
 </config>
 {% endhighlight %}
 
-## Step 2: Configure the fieldset
+## 步骤2. Configure the fieldset
 {:#step-2}
 
 The following code adds the `demo` field to the `sales_convert_quote` fieldset with the `to_order` aspect.
@@ -51,7 +51,7 @@ The code snippet in the next step uses the name of the fieldset and aspect to sp
 </config>
 {% endhighlight %}
 
-## Step 3: Copy the fieldset
+## 步骤3. Copy the fieldset
 {:#step-3}
 
 The following code snippets highlight the code pieces needed to copy a fieldset using the `\Magento\Framework\DataObject\Copy` class.

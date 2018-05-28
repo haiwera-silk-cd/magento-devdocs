@@ -1,8 +1,8 @@
 ---
 group: ext-best-practices
 subgroup: 02_Extension-Coding
-title: Security, Performance, and Data Handling
-menu_title: Security, performance, and data handling
+title: 安全,性能及数据处理
+menu_title: 安装、性能及数据处理
 menu_order: 3
 version: 2.1
 github_link: ext-best-practices/extension-coding/security-performance-data-bp.md
@@ -13,7 +13,7 @@ functional_areas:
 You should make sure that your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} handles data with care in order to prevent sensitive information from being exposed. Incorrect handling of data requests or class usage can negatively impact your extension and create security vulnerabilities. Consider applying the following best practices to your extension to improve performance and security.
 
 ### Avoid using low-level functionality
-  The Magento application is made up of a variety of components that work together to perform different business functions. We discourage the use of low-level functionality such as the {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} `curl_*` functions and encourage the use of high-level components such as [`\Magento\Framework\HTTP\Adapter\Curl`]({{ site.mage2000url }}lib/internal/Magento/Framework/HTTP/Adapter/Curl.php). The use of low-level functionality can make Magento behave in unexpected ways that effectively disable built-in protection mechanisms, introduce exploitable inconsistencies, or otherwise expose the application to attack.
+  The Magento application is made up of a variety of 组件 that work together to perform different business functions. We discourage the use of low-level functionality such as the {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} `curl_*` functions and encourage the use of high-level 组件 such as [`\Magento\Framework\HTTP\Adapter\Curl`]({{ site.mage2000url }}lib/internal/Magento/Framework/HTTP/Adapter/Curl.php). The use of low-level functionality can make Magento behave in unexpected ways that effectively disable built-in protection mechanisms, introduce exploitable inconsistencies, or otherwise expose the application to attack.
 
   For a list of discouraged low-level functions, we suggest you look at the [list of discouraged functions](https://github.com/magento/marketplace-eqp/blob/master/MEQP1/Sniffs/Security/DiscouragedFunctionSniff.php){:target="_blank"} for [Magento Extension Quality Program Coding Standard](https://github.com/magento/marketplace-eqp){:target="_blank"}.
 

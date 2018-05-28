@@ -89,7 +89,7 @@ To hide these characters from assistive devices, use the "aria-hidden" attribute
 
 Modern versions of assistive technologies will announce CSS generated content, as well as specific Unicode characters. To avoid unintentional and confusing output in screen readers hide them with the aria-hidden="true" attribute.
 
-*Source:* <a href="http://getbootstrap.com/components/">Bootstrap Components</a>
+*Source:* <a href="http://getbootstrap.com/组件/">Bootstrap 组件</a>
 
 **Code sample:**
 

@@ -34,7 +34,7 @@ After you get the Commerce software:
 1.	[Set file system ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).
 2.	Install the software:
 
-	*	[Web Setup Wizard]({{ page.baseurl }}/install-gde/install/web/install-web.html)
+	*	[网页安装向导]({{ page.baseurl }}/install-gde/install/web/install-web.html)
 	*	[命令行]({{ page.baseurl }}/install-gde/install/cli/install-cli.html)
 
 ## Upgrade from an earlier version

@@ -45,7 +45,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
    <li>Management interfaces</li>
    <li>Metadata interfaces</li>
 </ul>
-<p>For file names and coding standards, follow the defined <a href="{{ page.baseurl }}/coding-standards/code-standard-php.html">PHP coding standards</a>.</p>
+<p>For file names and coding standards, follow the defined <a href="{{ page.baseurl }}/coding-standards/code-standard-php.html">PHP编码规范s</a>.</p>
 <p>Place service interfaces in the top-level <b>Api</b> directory for a module.</p>
 <h3 id="repository-interfaces">Repository interfaces</h3>
 <p>Repository interfaces provide access to persistent data entities.</p>
@@ -107,7 +107,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
 </table>
 <p>Each data entity has a corresponding interface. Consequently, the <code>get()</code> function in the corresponding interface, for example, can return the exact type.</p>
 <h3 id="management-interfaces">Management interfaces</h3>
-<p>Management interfaces provide management functions that are not related to repositories. For example:</p>
+<p>Management interfaces provide management functions that are not related to repositories. 例如:</p>
 <table style="width:100%">
    <tr bgcolor="lightgray">
       <th>Interface</th>
@@ -130,7 +130,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
       </td>
    </tr>
 </table>
-<h3 id="related-topics">Related topics</h3>
+<h3 id="related-topics">相关主题</h3>
 <ul>
    <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a></li>
    <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>

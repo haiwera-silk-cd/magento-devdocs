@@ -30,7 +30,7 @@ If you're new to all this and need some help getting started, we suggest the fol
 ## Ubuntu 16
 The following section describes how to install Magento 2.x on Ubuntu 16 using nginx, PHP, and MySQL.
 
-### Install nginx
+### 安装nginx
 
 	apt-get -y install nginx
 
@@ -117,7 +117,7 @@ For this example, we'll download and extract an archive.
     Replace `http://www.magento-dev.com` with your domain name.
 
     <div class="bs-callout bs-callout-info" markdown="1">
-You cannot use the Web Setup Wizard when installing Magento on nginx. You must use the command line.
+You cannot use the 网页安装向导 when installing Magento on nginx. You must use the command line.
     </div>
 
 9. Switch to developer mode:
@@ -174,7 +174,7 @@ Open a web browser and navigate to your site's base URL to [验证你的安装.]
 ## CentOS 7
 The following section describes how to install Magento 2.x on CentOS 7 using nginx, PHP, and MySQL.
 
-### Install nginx
+### 安装nginx
 
 	yum -y install epel-release
 	yum -y install nginx
@@ -309,7 +309,7 @@ For this example, we'll download and extract an archive.
     Replace `http://www.magento-dev.com` with your domain name.
 
     <div class="bs-callout bs-callout-info" markdown="1">
-You cannot use the Web Setup Wizard when installing Magento on nginx. You must use the command line.
+You cannot use the 网页安装向导 when installing Magento on nginx. You must use the command line.
     </div>
 
 8. Switch Magento to developer mode:
@@ -398,6 +398,6 @@ Open a web browser and navigate to your site's base URL to [验证你的安装.]
 *	[PHP 5.5, 5.6, or 7.0&mdash;Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html)
 *	[PHP 5.5, 5.6, or 7.0&mdash;CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html)
 *	[MySQL]({{ page.baseurl }}/install-gde/prereq/mysql.html)
-* [Configuring security options]({{ page.baseurl }}/install-gde/prereq/security.html)
+* [配置安全选项]({{ page.baseurl }}/install-gde/prereq/security.html)
 *	[Installing 可选软件]({{ page.baseurl }}/install-gde/prereq/optional.html)
 *	[Determine your installation or upgrade path]({{ page.baseurl }}/install-gde/bk-install-guide.html)

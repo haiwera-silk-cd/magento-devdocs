@@ -92,7 +92,7 @@ The following table details the branches for Pro:
 <tr>
 <td>(no branch)</td>
 <td>Global Master</td>
-<td>This "branch" captures global project changes including adding user accounts and variables. <b>Important:</b> Do not create branches from or merge to Global Master.
+<td>This "branch" captures global project changes including adding user accounts and variables. <b>重要:</b> Do not create branches from or merge to Global Master.
 </td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@ Click ![edit project]({{ site.magentourl }}/common/images/cloud_edit-project.png
 ![configure project]({{ site.magentourl }}/common/images/cloud_project-config.png)
 
 #### 相关主题
-*	[Configure Magento Commerce]({{ page.baseurl }}/cloud/configure/configuration-overview.html)
+*	[配置Magento Commerce]({{ page.baseurl }}/cloud/configure/configuration-overview.html)
 *	[Manage your environments]({{ page.baseurl }}/cloud/env/environments.html)
 *	[`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html)
 *	[`routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html)

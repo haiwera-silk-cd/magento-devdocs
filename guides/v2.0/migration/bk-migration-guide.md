@@ -16,9 +16,9 @@ functional_areas:
 
 We're pleased you're considering moving from the world's #1 commerce platform --- Magento 1.x --- to the platform for the future, Magento 2. We're also excited to share the details about this process, which we refer to as migration.
 
-## Migration components
+## Migration 组件
 
-Magento 2 migration involves four components: data, extensions and custom code, themes, and customizations.
+Magento 2 migration involves four 组件: data, extensions and custom code, themes, and customizations.
 
 ### Data {#migrate-data}
 We've developed the **Magento 2 数据迁移工具** to help you efficiently move all of your products, customers, and order data, store configurations, promotions and more to Magento 2. This guide provides information on the tool and best practices for using it to migrate your data.
@@ -26,7 +26,7 @@ We've developed the **Magento 2 数据迁移工具** to help you efficiently mov
 ### Extensions and custom code {#migrate-extensions-code}
 We've been working hard with the development community to help you use your Magento 1 extensions in Magento 2. Now we're proud to present the <a href="https://marketplace.magento.com/" target="_blank">Magento Marketplace</a>, where you can download or purchase the latest versions of your favourite extensions.
 
-Also, we have developed the <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a>, which will help to port your extensions and custom code to Magento 2, significantly reducing your efforts.
+Also, we have developed the <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a>, which will help to port your extensions and custom code to Magento 2, significantly reducing your efforts.
 
 More information on developing extensions for Magento 2 is available in the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html" target="_blank">PHP开发文档</a>.
 

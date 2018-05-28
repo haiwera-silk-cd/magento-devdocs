@@ -1,16 +1,16 @@
 ---
 group: howdoi
 subgroup: Migration
-title: Migrate from Magento 1 to Magento 2
-menu_title: Migrate from Magento 1 to Magento 2
+title: 迁移Magento1到Magento2
+menu_title: 迁移Magento1到Magento2
 menu_node: parent
 menu_order: 1
 version: 2.1
 github_link: howdoi/migrate/migrate.md
 ---
 
-## Migrate from Magento 1 to Magento 2
-Migration to Magento 2 involves four components: data, extensions, themes, and customizations. 
+## 迁移Magento1到Magento2
+Migration to Magento 2 involves four 组件: data, extensions, themes, and customizations. 
 
 To have a successful migration, use the following guidelines:
 
@@ -24,9 +24,9 @@ To prepare for the migration, make sure you do all of the following:
 
 <h4>Next steps</h4>
 
-Follow the links below to learn more about each of the four components.
+Follow the links below to learn more about each of the four 组件.
 
 * <a href="{{ page.baseurl }}/howdoi/migrate/migrate-themes.html">Theme Migration</a>
 * <a href="{{ page.baseurl }}/howdoi/migrate/migrate-extensions.html">Extension Migration</a>
 * <a href="{{ page.baseurl }}/howdoi/migrate/migrate-code.html">Customizations Migration</a>
-* <a href="{{ page.baseurl }}/howdoi/migrate/migrate-data.html">Data Migration</a>
+* <a href="{{ page.baseurl }}/howdoi/migrate/migrate-data.html">数据迁移</a>

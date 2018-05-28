@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 20_PHP
-title: Develop B2B extensions
-menu_title: Develop B2B extensions
+title: 开发B2B扩展
+menu_title: 开发B2B扩展
 menu_order: 1
 menu_node: parent
 version: 2.2

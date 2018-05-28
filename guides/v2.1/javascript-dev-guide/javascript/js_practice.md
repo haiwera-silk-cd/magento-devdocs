@@ -26,7 +26,7 @@ The high-level steps for this task are the following:
 
 Let's look at each step in more detail.
 
-<h3 id="define_script1">Step 1: Define how the message is output</h3>
+<h3 id="define_script1">步骤1. Define how the message is output</h3>
 
 OrangeCo needs to define how the message is output. To do this, they take the following steps:
 
@@ -49,7 +49,7 @@ To be able to extend `gallery.js`, OrangeCo needs to know the path to it. To get
 
 <img src="{{ site.baseurl }}/common/images/fdg_pr_2.png" alt="RequireJS config file">
 
-<h3 id="add_code1">Step 2: Add the custom widget extending the 相册小工具</h3>
+<h3 id="add_code1">步骤2. Add the custom widget extending the 相册小工具</h3>
 
 In the `app/design/OrangeCo/orange/web/js` OrangeCo adds `orange-gallery.js` with the following content:
 <pre>
@@ -69,7 +69,7 @@ define([
 });
 </pre>
 
-<h3 id="config1">Step 3: Update the RequireJS configuration</h3>
+<h3 id="config1">步骤3. Update the RequireJS configuration</h3>
 OrangeCo adds the custom `app/design/OrangeCo/orange/requirejs-config.js` with the following content:
 <pre>
 var config = {
@@ -92,10 +92,10 @@ The high level steps for this task are the following:
 3. Update RequireJS configuration to use the custom script instead of the default one.
 
 Let's look at each step in more detail.
-<h3>Step 1: Define what is the default implementation</h3>
+<h3>步骤1. Define what is the default implementation</h3>
 Using the approach described in the previous section, OrangeCo defines that the product images are displayed by `gallery.js`, and the configuration path for it is `mage/gallery`.
 
-<h3>Step 2: Add the custom script to the file system</h3>
+<h3>步骤2. Add the custom script to the file system</h3>
 
 For the jCarousel widget to be able to use the configuration passed to the 相册小工具,
 OrangeCo needs to add a "wrapper" script.
@@ -123,7 +123,7 @@ define([
 </li>
 </ul>
 
-<h3>Step 3: Update RequireJS configuration</h3>
+<h3>步骤3. Update RequireJS configuration</h3>
 In the `app/design/OrangeCo/orange` directory OrangeCo adds `requirejs-config.js` with the following content:
 
 <pre>

@@ -1,7 +1,7 @@
 <div markdown="1">
 
-1.	Log in to your local development system, or switch to, the [Magento file system owner]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
-2.	Change to a directory to which the Magento file system owner has write access.
+1.	Log in to your local development system, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
+2.	Change to a directory to which the Magento文件系统所有者 has write access.
 2.	Enter the following command in a terminal to log in to your project:
 
 		magento-cloud login

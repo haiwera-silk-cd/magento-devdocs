@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: About the uiClass library
-menu_title: About the uiClass library
+title: 关于uiClass库
+menu_title: 关于uiClass库
 menu_order: 60
 version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_uiclass_concept.md
@@ -10,14 +10,14 @@ github_link: ui_comp_guide/concepts/ui_comp_uiclass_concept.md
 
 ## What is `uiClass`?
 
-The `uiClass` is an abstract class from which all components are extended. The `uiClass` is a low-level class and is rarely used as direct parent for UI components' classes.
+The `uiClass` is an abstract class from which all 组件 are extended. The `uiClass` is a low-level class and is rarely used as direct parent for UI 组件' classes.
 
 `uiClass` source code is `<UI_Module_dir>/view/base/web/js/lib/core/class.js`, in the {{site.data.var.ce}} github repository: [app/code/Magento/Ui/view/base/web/js/lib/core/class.js]({{ site.mage2100url }}app/code/Magento/Ui/view/base/web/js/lib/core/class.js)
 
 ## Commonly used uiClass methods
-The uiClass class introduces the architecture of UI components through the following methods:
+The uiClass class introduces the architecture of UI 组件 through the following methods:
 
-*  The `extend()` method implements inheritance of UI components. The `extend()` returns new class. The `extend()` method gets a {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} object as a parameter, and then extends the base object with the properties and methods of the argument's object. The properties of the argument's object have higher priority than base object's properties.
+*  The `extend()` method implements inheritance of UI 组件. The `extend()` returns new class. The `extend()` method gets a {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} object as a parameter, and then extends the base object with the properties and methods of the argument's object. The properties of the argument's object have higher priority than base object's properties.
    As an example:
     %componentName%.extend(%JavaScript_extender_object%);
 
@@ -64,7 +64,7 @@ As an example:
 
 ### Commonly used uiClass properties {#uiclass_properties}
 
-The `defaults` property declares the list of properties of a UI component's instance. Also it declares communications between components if needed.
+The `defaults` property declares the list of properties of a UI component's instance. Also it declares communications between 组件 if needed.
 
 As an example:
 {%highlight js%}

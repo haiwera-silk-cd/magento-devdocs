@@ -209,7 +209,7 @@ To secure your Starter environments and Pro Integration environments:
 3. Click Configure Environment.
 4. On the **Settings** tab, click **ON** for **HTTP access control** to enable secure access. You can choose between credentials or IP addresses to filter for access.
 5. To filter by credentials, click **Add Login**, enter a username and password, and click again **Add Login** to add.
-6. To filter by IP address, enter the IP addresses in a list with `deny`或`allow`. For example:
+6. To filter by IP address, enter the IP addresses in a list with `deny`或`allow`. 例如:
 
         123.456.789.111/29 allow
         123.456.789.112/29 allow

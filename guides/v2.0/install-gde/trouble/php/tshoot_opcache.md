@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-In Magento 2.1 or later, when creating a new product in the Magento Admin, the following error might display:
+In Magento 2.1或更新, when creating a new product in the Magento Admin, the following error might display:
 
 	Warning: Illegal string offset 'is_in_stock' in [...]/vendor/
 	magento/module-catalog-inventory/Ui/DataProvider/Product/Form/
@@ -27,7 +27,7 @@ If you enabled the {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP
 ### Workaround
 To solve the issue, locate your OPcache configuration settings and enable `opcache.save_comments` as follows:
 
-#### Step 1: Locate your OPcache configuration
+#### 步骤1. Locate your OPcache configuration
 {% collapsible To find OPcache configuration settings: %}
 
 PHP OPcache settings are typically located either in `php.ini`或`opcache.ini`. The location might depend on your operating system and PHP version. The OPcache configuration file might have an `[opcache]` section or settings like `opcache.enable`.
@@ -50,7 +50,7 @@ If you have more than one `opcache.ini`, modify all of them.
 
 {% endcollapsible %}
 
-#### Step 2: Enable `opcache.save_comments`
+#### 步骤2. Enable `opcache.save_comments`
 1.	Open your OPcache configuration file in a text editor.
 2.	Locate `opcache.save_comments` and uncomment it if necessary.
 3.	Make sure its value is set to `1`.

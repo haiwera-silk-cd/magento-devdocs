@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 2. Get the admin token
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤2. 获取管理令牌
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 2
 level3_menu_node:
@@ -51,7 +51,7 @@ Most REST calls to Magento require an {% glossarytooltip 34ecb0ab-b8a3-42d9-a728
 
 By default, an admin token is valid for 4 hours. To change this value, log in to Admin and go to **Configuration > Services > OAuth > Access Token Expiration**.
 
-See [Token-based authentication]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html) for more information about authorization tokens.
+See [基于访问令牌的认证]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html) for more information about authorization tokens.
 
 **Endpoint**
 

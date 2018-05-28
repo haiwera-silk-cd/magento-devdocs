@@ -109,7 +109,7 @@ To set file system permissions and ownership on the sample data repository:
 
         chown -R :<your web server group name> .
 
-    Typical examples:
+    Typical 例如:
 
     CentOS: `chown -R :apache .`
 

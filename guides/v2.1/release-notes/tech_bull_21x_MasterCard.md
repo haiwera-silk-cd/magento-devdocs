@@ -123,7 +123,7 @@ To get patches for Magento 1.x Commerce or Open Source
   </tr>
   <tr>
     <td>2.0.0 – 2.0.13</td>
-    <td>Upgrade to 2.0.14 or later.  </td>
+    <td>Upgrade to 2.0.14或更新.  </td>
     
   </tr>
 <tr>
@@ -135,7 +135,7 @@ To get patches for Magento 1.x Commerce or Open Source
 
   <tr>
     <td>2.1.0 – 2.1.2</td>
-    <td>Upgrade to 2.1.3 or later. </td>
+    <td>Upgrade to 2.1.3或更新. </td>
     
   </tr>
  

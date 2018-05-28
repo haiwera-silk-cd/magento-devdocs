@@ -18,7 +18,7 @@ functional_areas:
 ### Details
 This topic applies to you *only* if you [cloned the Magento 2 GitHub repository]({{ page.baseurl }}/install-gde/prereq/dev_install.html).
 
-Errors similar to the following display when you run the Web Setup Wizard:
+Errors similar to the following display when you run the 网页安装向导:
 
 <pre> Magento\Framework\Exception
  Command returned non-zero exit code:
@@ -39,7 +39,7 @@ Errors similar to the following display when you run the Web Setup Wizard:
  
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p>If the Web Setup Wizard stops, informs you that the installation is incomplete, but does not display an error in the console log, the likely cause is you did not run <code>composer install</code> from the <code>&lt;你的Magento的安装目录>/setup</code> directory.</p>
+  <p>If the 网页安装向导 stops, informs you that the installation is incomplete, but does not display an error in the console log, the likely cause is you did not run <code>composer install</code> from the <code>&lt;你的Magento的安装目录>/setup</code> directory.</p>
   <p>The entire message is <code>Installation is incomplete. Check the console log for errors before trying again.</code></p></span>
 </div>
  

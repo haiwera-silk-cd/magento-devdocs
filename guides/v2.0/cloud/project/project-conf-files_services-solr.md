@@ -58,7 +58,7 @@ mysearch:
 
 The `directory` parameter points to the Magento `vendor/magento/module-solr/conf` directory, relative to the `.magento` directory, in the Git repository. This directory contains the Magento schema.
 
-To configure the relationships for the environment variable, set a relationship in your `.magento.app.yaml` in the Git branch. For example:
+To configure the relationships for the environment variable, set a relationship in your `.magento.app.yaml` in the Git branch. 例如:
 
 {% highlight yaml %}
 relationships:

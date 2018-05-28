@@ -22,7 +22,7 @@ To run the Magento application, the following actions are implemented in <a href
 *	Create a Magento application instance (<a href="{{ site.mage2000url }}lib/internal/Magento/Framework/AppInterface.php" target="_blank">\Magento\Framework\AppInterface</a>).
 *	Run Magento
 
-<h2 id="config-boot-logic">Bootstrap run logic</h2>
+<h2 id="config-boot-logic">引导执行逻辑</h2>
 
 <a href="{{ site.mage2000url }}app/bootstrap.php" target="_blank">The bootstrap object</a> uses the following algorithm to run the Magento application:
 

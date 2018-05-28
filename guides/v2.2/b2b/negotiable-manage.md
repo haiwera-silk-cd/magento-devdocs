@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage negotiable quotes
-menu_title: Manage negotiable quotes
+title: 管理协商报价
+menu_title: 管理协商报价
 menu_order: 32
 version: 2.2
 ee_only: True
@@ -136,7 +136,7 @@ When the quote is submitted to the buyer:
 
 ### Update a quote
 
-Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html) for use cases.
+Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html) for use cases.
 
 ### Recalculate prices
 
@@ -338,7 +338,7 @@ Not applicable
 {% endhighlight %}
 ## Related information
 
-* [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-* [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-* [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-* [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+* [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
+* [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)
+* [协商报价结算]({{ page.baseurl }}/b2b/negotiable-checkout.html)
+* [生成协商报价订单]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)

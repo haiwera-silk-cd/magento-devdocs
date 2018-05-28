@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 
 This topic is a step-by-step illustration of creating a default en_US {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %} <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#translate_terms">dictionary</a> for a custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. 
 
@@ -69,7 +69,7 @@ php bin/magento setup:static-content:deploy
 
 When the OrangeCo apply the orange theme, the custom strings are used instead default ones. 
 
-For example:
+例如:
 
 <div style="border: 1px solid #ABABAB">
 <img width="700px" src="{{ site.baseurl }}/common/images/fdg_translations_bag2.png" alt="Product page where the customized Compare string is displayed"> 

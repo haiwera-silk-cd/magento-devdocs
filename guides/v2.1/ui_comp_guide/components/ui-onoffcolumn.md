@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: OnOffColumn component
-menu_title: OnOffColumn component
+group: UI_组件_guide
+subgroup: 组件
+title: 开关列组件
+menu_title: 开关列组件
 version: 2.1
-github_link: ui_comp_guide/components/ui-onoffcolumn.md
+github_link: ui_comp_guide/组件/ui-onoffcolumn.md
 ---
 
 ## Overview
 
-The OnOffColumn component is a decorator for [MultiselectColumn]({{ page.baseurl }}/ui_comp_guide/components/ui-multiselectcolumn.html). It displays toggle switch elements instead of check boxes.
+The 开关列components is a decorator for [MultiselectColumn]({{ page.baseurl }}/ui_comp_guide/components/ui-multiselectcolumn.html). It displays toggle switch elements instead of check boxes.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/columns/onoff.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/columns/onoff.js)
 

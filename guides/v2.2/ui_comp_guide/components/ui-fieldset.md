@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
-title: Fieldset сomponent
+group: UI_组件_guide
+title: 输入框集组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-fieldset.md
+github_link: ui_comp_guide/组件/ui-fieldset.md
 ---
 
 The Fieldset component implements a container for visually-grouped form elements, such as buttons and form fields.
@@ -12,7 +12,7 @@ The Fieldset component implements a container for visually-grouped form elements
 | Type                            | Filename                                                          |
 | ------------------------------- | ----------------------------------------------------------------- |
 | PHP Class                       | [`Magento/Ui/Component/Form/Fieldset.php`]                        |
-| Javascript Module               | [`Magento/Ui/view/base/web/js/form/components/fieldset.js`]      |
+| Javascript Module               | [`Magento/Ui/view/base/web/js/form/组件/fieldset.js`]      |
 | Template                        | [`Magento/Ui/view/base/web/templates/form/fieldset.html`]         |
 | Configuration Schema Definition | [`Magento/Ui/view/base/ui_component/etc/definition/fieldset.xsd`] |
 {:style="table-layout:auto;"}
@@ -41,6 +41,6 @@ Extends all [`uiCollection`]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_u
 {:style="table-layout:auto;"}
 
 [`Magento/Ui/Component/Form/Fieldset.php`]: https://github.com/magento/magento2/blob/{{page.guide_version}}/app/code/Magento/Ui/Component/Form/Fieldset.php
-[`Magento/Ui/view/base/web/js/form/components/fieldset.js`]: https://github.com/magento/magento2/blob/{{page.guide_version}}/app/code/Magento/Ui/view/base/web/js/form/components/fieldset.js
+[`Magento/Ui/view/base/web/js/form/组件/fieldset.js`]: https://github.com/magento/magento2/blob/{{page.guide_version}}/app/code/Magento/Ui/view/base/web/js/form/组件/fieldset.js
 [`Magento/Ui/view/base/web/templates/form/fieldset.html`]: https://github.com/magento/magento2/blob/{{page.guide_version}}/app/code/Magento/Ui/view/base/web/templates/form/fieldset.html 
 [`Magento/Ui/view/base/ui_component/etc/definition/fieldset.xsd`]: https://github.com/magento/magento2/blob/{{page.guide_version}}/app/code/Magento/Ui/view/base/ui_component/etc/definition/fieldset.xsd

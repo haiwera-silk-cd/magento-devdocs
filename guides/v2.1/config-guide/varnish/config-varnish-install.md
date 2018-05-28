@@ -36,5 +36,5 @@ A sample follows:
 
 Make sure the version is at least 3.0.5 or any version of 4.x before continuing.
 
-### Next step
+### 下一步
 <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>

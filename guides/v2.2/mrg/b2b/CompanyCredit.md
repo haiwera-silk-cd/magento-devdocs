@@ -36,7 +36,7 @@ Extension developers can interact with the Magento_CompanyCredit模块. For more
 
 [The Magento dependency injection mechanism]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) enables you to override the functionality of the Magento_CompanyCredit模块.
 
-[Payment method configuration]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html) will allow you additional configuration to extend module functionality.
+[支集方式配置]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html) will allow you additional configuration to extend module functionality.
 
 ### Layouts
 
@@ -44,9 +44,9 @@ You can extend and override layouts in the `Magento\CompanyCredit\view\adminhtml
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directories contain extensible UI components:
+The following directories contain extensible UI 组件:
 
 * `Magento\CompanyCredit\view\adminhtml\ui_component` -  company form, company listing, history listing
 

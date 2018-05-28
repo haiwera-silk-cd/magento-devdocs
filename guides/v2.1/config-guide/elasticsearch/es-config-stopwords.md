@@ -48,7 +48,7 @@ See one of the following topics for more information:
 ### Edit stopwords for an existing locale {#config-edit-stopwords}
 To edit stopwords:
 
-1.	Log in to your Magento server, or switch to the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
+1.	Log in to your Magento server, or switch to the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
 2.	Use a text editor to open a stopword file in the `<your Magento install dir>/vendor/magento/module-elasticsearch/etc/stopwords` directory.
 
 	`.csv` files use the naming convention `stopwords_<locale_code>.csv`. For example, the German stopword file is named `stopwords_de_DE.csv`.
@@ -60,7 +60,7 @@ To edit stopwords:
 
 	*	Magento Admin: **System** > Tools > **Cache Management**. Select the **Configuration** check box and, from the list above it, click **Refresh**. Click **Submit** to complete the action.
 
-	*	Command line: As the Magento file system owner, enter the following command:
+	*	Command line: As the Magento文件系统所有者, enter the following command:
 
 			php <your Magento install dir>/bin/magento magento cache:clean config
 6.	Check the results by searching for terms on your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.x
@@ -68,7 +68,7 @@ To edit stopwords:
 ### Create stopwords for a new locale {#config-create-stopwords}
 To add stopwords for a locale:
 
-1.	Log in to your Magento server, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
+1.	Log in to your Magento server, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
 2.	Use a text editor to create a stopword file named `stopwords_<locale_code>.csv` in the `<your Magento install dir>/vendor/magento/module-elasticsearch/etc/stopwords` directory.
 
 	For example, to create stopwords for the Italian locale, name the file `stopwords_it_IT.csv`.
@@ -88,7 +88,7 @@ To add stopwords for a locale:
 
 	*	Magento Admin: **System** > Tools > **Cache Management**. Select the **Configuration** check box and, from the list above it, click **Refresh**. Click **Submit** to complete the action.
 
-	*	Command line: As the Magento file system owner, enter the following command:
+	*	Command line: As the Magento文件系统所有者, enter the following command:
 
 			php <your Magento install dir>/bin/magento magento cache:clean config
 9.	Check the results by searching for terms on your storefront.
@@ -103,7 +103,7 @@ The location depends on how you installed the Magento software. If you cloned th
 
 To change the directory:
 
-1.	As the Magento file system owner, open the Elasticsearch `di.xml` in a text editor.
+1.	As the Magento文件系统所有者, open the Elasticsearch `di.xml` in a text editor.
 
 	If you cloned the repository, it's located at `app/code/Magento/Elasticsearch/etc/di.xml`
 

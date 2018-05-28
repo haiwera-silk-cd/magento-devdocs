@@ -1,8 +1,8 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 架构的基本概述
-menu_title: Architectural basics
+menu_title: 架构基础
 menu_node: parent
 menu_order: 1
 version: 2.1
@@ -21,7 +21,7 @@ The following discussion focuses on how these topics apply directly to Magento:
 * Event-driven architecture
 * Security
 
-## Related topics
+## 相关主题
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/arch_diagrams.html" target="_blank">架构图</a>
 

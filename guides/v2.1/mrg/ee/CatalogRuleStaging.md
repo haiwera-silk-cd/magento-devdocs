@@ -28,7 +28,7 @@ The Magento_CatalogRuleStaging模块 enables you to stage the following catalog 
 
 These attributes cannot be modified and are a part of the static Magento Catalog Rule form.
 
-### Installation details
+### 安装 details
 
 The Magento_CatalogRuleStaging模块 makes irreversible changes in a database during installation. You cannot uninstall this module.
 

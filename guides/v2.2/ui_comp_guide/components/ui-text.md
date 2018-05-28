@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Text component
-menu_title: Text component
+group: UI_组件_guide
+subgroup: 组件
+title: 文本组件
+menu_title: 文本组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-text.md
+github_link: ui_comp_guide/组件/ui-text.md
 ---
 
 ## Overview
 
-The Text component displays text data in the components like [Form]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) and [DynamicRows]({{ page.baseurl }}/ui_comp_guide/components/ui-dynamicrows.html).
+The 文本components displays text data in the components like [Form]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) and [DynamicRows]({{ page.baseurl }}/ui_comp_guide/components/ui-dynamicrows.html).
 
 ## Text configuration
 

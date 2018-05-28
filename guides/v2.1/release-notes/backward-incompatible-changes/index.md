@@ -59,7 +59,7 @@ A data interfaces has been changed in the GiftcardAccount module.
 
 ## Changes in UI
 
-In release 2.1, Magento introduced a new way to build the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} UI. Old forms have been rewritten using the new UI components. The new UI forms have better flexibility and can be customized using configuration files.
+In release 2.1, Magento introduced a new way to build the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} UI. Old forms have been rewritten using the new UI 组件. The new UI forms have better flexibility and can be customized using configuration files.
 
 The following entities have new forms and design:
 

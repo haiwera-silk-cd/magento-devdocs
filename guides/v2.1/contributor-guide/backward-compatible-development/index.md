@@ -1,8 +1,8 @@
 ---
 group: contributor
 subgroup: contributor
-title: Backward compatible development
-menu_title: Backward compatible development
+title: 向前兼容开发
+menu_title: 向前兼容开发
 menu_order: 1
 version: 2.1
 github_link: contributor-guide/backward-compatible-development/index.md

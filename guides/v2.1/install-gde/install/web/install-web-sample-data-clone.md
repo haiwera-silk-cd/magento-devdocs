@@ -16,4 +16,4 @@ functional_areas:
 {% include install/sampledata/sample-data-clone.md %}
 
 #### 安装Magento
-安装完样本数据之后安装Magento，使用[Web Setup Wizard]({{ page.baseurl }}/install-gde/install/web/install-web.html).
+安装完样本数据之后安装Magento，使用[网页安装向导]({{ page.baseurl }}/install-gde/install/web/install-web.html).

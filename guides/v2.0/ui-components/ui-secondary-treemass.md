@@ -1,12 +1,12 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: TreeMassAction Component
 menu_title: TreeMassAction Component
 menu_node:
 menu_order: 4
 version: 2.0
-github_link: ui-components/ui-secondary-treemass.md
+github_link: ui-组件/ui-secondary-treemass.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-treemass.html
 
 ---
@@ -97,7 +97,7 @@ The following are the component elements:
 * Template: `app\code\Magento\Ui\view\base\web\templates\grid\tree-massactions.html`
 * Template: `app\code\Magento\Ui\view\base\web\templates\grid\submenu.html`
 
-#### Dependencies on Other Components
+#### Dependencies on Other 组件
 
 Dependency on the following component:
 

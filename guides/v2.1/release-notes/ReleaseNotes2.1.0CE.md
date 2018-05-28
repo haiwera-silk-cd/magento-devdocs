@@ -45,7 +45,7 @@ This release includes enhancements to improve the security of your Magento appli
 ### Fixed issues
 
 
-#### Installation and upgrade
+#### 安装 and upgrade
 {:.no_toc}
 
 <!--- 51033 -->* System upgrades now ignore the contents of the Magento `var/session` directory.
@@ -63,7 +63,7 @@ This release includes enhancements to improve the security of your Magento appli
 
 <!--- 51693 -->* Improved performance of installations and upgrades by compressing packages on repo.magento.com
 
-<!--- 52187 -->* A user with limited access to the Magento Admin cannot run the Web Setup Wizard.
+<!--- 52187 -->* A user with limited access to the Magento Admin cannot run the 网页安装向导.
 
 <!--- 52973 -->* Installing optional sample data no longer throws the following exception: `efault: Notice: /Stage[magento_setup]/Magento::Setup::Magento_cli/Exec[Run Magento reindex]/returns: SQLSTATE[23000]: Integrity constraint violation: 1062`.
 
@@ -475,7 +475,7 @@ target="_blank"> (GITHUB-4099)</a>
 
 #### Admin
 {:.no_toc}
-<!--- 50492 -->* You can now access the Web setup wizard from the Admin interface.
+<!--- 50492 -->* You can now access the 网页安装向导 from the Admin interface.
 
 <!--- 50377 -->* Magento now updates {% glossarytooltip 44d60586-b853-40dd-bf82-4a1580450416 %}Attribute set{% endglossarytooltip %} after reloading a form.
 
@@ -727,7 +727,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 <!--- 52919-->*  You can now resend order emails from the Admin interface when using Async mail. <a href="https://github.com/magento/magento2/issues/4507" target="_blank"> (GITHUB-4507)</a>
 
 <!--- 53410-->*  `system.log` behavior has changed to reduce the number of distracting logged broken references. <a href="https://github.com/magento/magento2/issues/3507" target="_blank"> (GITHUB-3507)</a>
-<!--- 42439-->* UI form components now support customer custom attributes of 'file' type.
+<!--- 42439-->* UI form 组件 now support customer custom attributes of 'file' type.
 <!--- 44598-->* Magento now identifies email validation errors after  you finish typing the email address.
 <!--- 45318-->* Fixed issues with the  New Accounts Report.
 <!--- 45723-->* Magento no longer calls plugin methods multiple times when a proxy exists for subject class.
@@ -821,7 +821,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 <!--- 50819-->* Fixed issue with cache file permissions.
 <!--- 50580-->* The Configurable Product page now displays the Create Configurations button.
 
-<!--- 50569-->* Fixed problem using Internet Explorer 11 to access editable fields in a configurable product's Current Variations grid.
+<!--- 50569-->* Fixed problem using IE11 to access editable fields in a configurable product's Current Variations grid.
 
 <!--- 50561-->* You can now save item-level gift messages for guests. <a href="https://github.com/magento/magento2/issues/3804" target="_blank"> (GITHUB-3804)</a>
 
@@ -950,7 +950,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 <!--- 48079-->* Resolved issues with shipping providers for one-page checkout.
 
-<!--- 48094-->* Updated packages on repo.magento.com to remove conflicts between {{site.data.var.ce}} and {{site.data.var.ee}} components.
+<!--- 48094-->* Updated packages on repo.magento.com to remove conflicts between {{site.data.var.ce}} and {{site.data.var.ee}} 组件.
 
 <!--- 48171-->* User notifications work as expected.
 
@@ -1016,7 +1016,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 <!--- 52993-->* The Media Uploader error messages now make clear that we do not support SVG format. <a href="https://github.com/magento/magento2/issues/2958" target="_blank"> (GITHUB-2958)</a>
 
-<!--- 51929-->* The Web Setup Wizard now works when Magento is installed in `/pub`. <a href="https://github.com/magento/magento2/issues/4159" target="_blank"> (GITHUB-4159)</a>
+<!--- 51929-->* The 网页安装向导 now works when Magento is installed in `/pub`. <a href="https://github.com/magento/magento2/issues/4159" target="_blank"> (GITHUB-4159)</a>
 
 <!--- 52766-->* Fixed issue with template minification on the product frontend. <a href="https://github.com/magento/magento2/issues/4365" target="_blank"> (GITHUB-4365)</a>
 
@@ -1047,7 +1047,7 @@ To view this setting in the Magento Admin, click **Stores** > Settings > **Confi
 
 <!--- 46877-->* Fixed issue with selecting a product template for a configurable attribute. <a href="https://github.com/magento/magento2/issues/2567" target="_blank"> (GITHUB-2567)</a>
 
-<!--- 46413-->* The Code Migration tool now recognizes all Magento 1.x resource models and collection classes.
+<!--- 46413-->* The 代码迁移 tool now recognizes all Magento 1.x resource models and collection classes.
 
 <!--- 46328-->* You can now print both shipment and invoice information from My Orders page. <a href="https://github.com/magento/magento2/issues/2500" target="_blank"> (GITHUB-2500)</a>
 
@@ -1099,9 +1099,9 @@ Our technology stack is built on PHP and MySQL. Magento 2.1.0 supports:
 *	nginx 1.8 (or <a href="http://nginx.org/en/linux_packages.html#mainline" target="_blank">latest mainline version</a>)
 
 
-For more information, [System Requirements]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"}.
+For more information, [系统要求]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"}.
 
-### Installation and upgrade instructions
+### 安装 and upgrade instructions
 
 You can install Magento Open Source 2.1.0 (General Availability) release either Github or by using Composer.
 
@@ -1111,9 +1111,9 @@ You can install Magento Open Source 2.1.0 (General Availability) release either 
 
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
 
 <!--- NOT DOCUMENTING THE FOLLOWING
 -- All issues marked as DUPLICATE. WONT FIX, CANNOT REPRODUCE, and NOT A BUG, plus 52239, 50665, 51578, 52667-->

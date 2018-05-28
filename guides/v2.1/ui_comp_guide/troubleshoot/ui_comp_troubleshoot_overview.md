@@ -1,8 +1,8 @@
 ---
-group: UI_Components
+group: UI_组件
 subgroup: troubleshoot
-title: 故障排除 UI components
-menu_title: 故障排除 UI components
+title: 故障排除 UI 组件
+menu_title: 故障排除 UI 组件
 menu_order: 1
 menu_node: parent
 version: 2.1

@@ -8,7 +8,7 @@ functional_areas:
   - Frontend
 ---
 
-## What's in this topic
+## 这里有什么
 
 This topic explains how default templates work in the Magento application. 
 
@@ -38,7 +38,7 @@ The templates directory of `Magento_Catalog` is `app/code/Magento/Catalog/view/f
 
 `<path_to_templates>` indicates zero or more directory levels.
 
-Examples:
+例如:
 
 * `app/code/Magento/Catalog/view/frontend/templates/product/widget/new/content/new_grid.phtml`
 * `app/code/Magento/Checkout/view/frontend/templates/cart.phtml`
@@ -72,7 +72,7 @@ See [布局指令]
 
 The `echo` command in PHP can be written using the short tag in Magento templates.
 
-For example:
+例如:
 ```phtml
 <?= $block->getAdjustmentsHtml() ?>
 ```

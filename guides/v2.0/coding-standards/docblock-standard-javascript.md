@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: JavaScript DocBlock standard
+title: JavaScript 注释文档块规范
 landing-page: Coding standards
-menu_title: JavaScript DocBlock standard
+menu_title: JavaScript 注释文档块规范
 menu_order: 6
 version: 2.0
 github_link: coding-standards/docblock-standard-javascript.md

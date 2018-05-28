@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 10. Issue a partial refund
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤10. 部分退款
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 10
 level3_menu_node:
@@ -80,9 +80,9 @@ Log in to {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endg
 ## Congratulations! You've finished.
 {:.no_toc}
 
-## Related topics
+## 相关主题
 
-* [起步 with Magento Web APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html)
+* [Magento web API起步]({{ page.baseurl }}/get-started/bk-get-started-api.html)
 * [Create a configurable product Tutorial](http://devdocs.magento.com/guides/v2.2/rest/tutorials/configurable-product/config-product-intro.html)
 * [REST API Reference Overview]({{ page.baseurl }}/rest/bk-rest.html)
 * [REST API documentation](http://devdocs.magento.com/swagger/){:target="_blank"}

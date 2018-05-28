@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Select component
-menu_title: Select component
+group: UI_组件_guide
+subgroup: 组件
+title: 单选框组件
+menu_title: 单选框组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-select.md
+github_link: ui_comp_guide/组件/ui-select.md
 ---
 
 ## Overview
 
-The Select component provides the interface for a list or a data set. With this component, the user can select only one item.
+The 单选框组件 provides the interface for a list or a data set. With this component, the user can select only one item.
 
 ## Configuration options
 

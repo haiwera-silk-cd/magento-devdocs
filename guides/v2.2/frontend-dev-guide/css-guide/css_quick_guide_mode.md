@@ -18,7 +18,7 @@ In our examples, we will change the color and font of the primary buttons. The d
 
 ![Admin login page with the default view of the primary buttons]({{ site.magentourl }}/common/images/extend_less_screenshot21.png)
 
-## Before you begin
+## 在开始之前
 
 1. [Create a theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html). In your `theme.xml` file, specify Magento Luma or Magento Blank as the parent theme.
 2. [Apply your theme]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html#theme-apply-apply) in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
@@ -39,7 +39,7 @@ The following is an illustration of how the process of making simple changes loo
     }
     ```
 
-1. [Clean static files cache]({{ page.baseurl }}/howdoi/clean_static_cache.html).
+1. [清除静态文件缓存]({{ page.baseurl }}/howdoi/clean_static_cache.html).
 1. Refresh the page and verify your changes.
 
     ![Less code redefining the color of the primary buttons]({{ site.magentourl }}/common/images/extend_less_screenshot121.png)

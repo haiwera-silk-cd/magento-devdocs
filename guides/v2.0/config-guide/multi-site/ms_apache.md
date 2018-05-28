@@ -37,11 +37,11 @@ Setting up multiple stores consists of the following tasks:
 2.  Create one [Apache virtual host](#ms-apache-vhosts) per Magento website.
 
 
-## Step 1: Create websites, stores, and store views in the Magento Admin
+## 步骤1. Create websites, stores, and store views in the Magento Admin
 
 See [在管理面板设置多站、多店及网店视图]({{ page.baseurl }}/config-guide/multi-site/ms_websites.html).
 
-## Step 2: Create Apache virtual hosts {#ms-apache-vhosts}
+## 步骤2. Create Apache virtual hosts {#ms-apache-vhosts}
 This section discusses how to set values for `MAGE_RUN_TYPE` and `MAGE_RUN_CODE` using the Apache server variable `SetEnvIf` in a virtual host.
 
 For more information about `SetEnvIf`, see:

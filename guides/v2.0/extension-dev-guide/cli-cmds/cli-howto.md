@@ -17,7 +17,7 @@ Magento enables your component to add commands to our Symfony-like command-line 
 {% include install/new-cli-intro.html %}
 
 ### 先决条件
-Before you begin, make sure you understand the following:
+开始之前, make sure you understand the following:
 
 *	All Magento command-line interface (CLI) commands rely on the Magento application and must have access to its context, dependency injections, plug-ins, and so on.
 *	All CLI commands should be implemented in the scope of your {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and should depend on the module's status.
@@ -44,6 +44,6 @@ Following is a summary of the process:
 <h2 id="cli-autoload">添加命令行命令 using the Composer autoloader</h2>
 To be added at a later time.
 
-#### Related topic
+#### 相关主题
 <a href="{{ page.baseurl }}/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">命令命名指南</a>
 

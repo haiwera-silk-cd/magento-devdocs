@@ -204,6 +204,6 @@ The following query returns only the `sku` and `name` parameters for product ite
 {% endhighlight %}
 {% endcollapsible %}
 
-## Related topics
+## 相关主题
 {:.no_toc}
 * [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html)

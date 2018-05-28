@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
 ---
 
-<h2>What's in this topic</h2>
+<h2>这里有什么</h2>
 This article features a step-by-step illustration of how a real-life layout customization task is performed. Namely, it illustrates how to change the layout of customer account links in a Magento store page header.
 
 <h2>Moving customer account links</h2>
@@ -77,7 +77,7 @@ The markup required for the drop-down is the following:
 </div>
 {%endhighlight html%}
 
-### Step 1: Define the layout blocks
+### 步骤1. Define the layout blocks
 
 OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html" target="_blank">applies the Luma theme</a>. Using the approach described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a> they find out that the original block responsible for displaying the header links is defined in 
 
@@ -130,7 +130,7 @@ The links that should be in header, but outside the drop-down menu are added in 
 {%endhighlight xml%}
 
 
-### Step 2: Define the templates
+### 步骤2. Define the templates
 
 Similar to the way they defined the layout on the previous step, OrangeCo 
 defines the template which is used as the drop-down container : `<Magento_Customer_module_dir>/view/frontend/templates/account/customer.phtml`.
@@ -158,7 +158,7 @@ defines the template which is used as the drop-down container : `<Magento_Custom
         {
             "*": {
                 "Magento_Ui/js/core/app": {
-                    "components": {
+                    "组件": {
                         "customer": {
                             "component": "Magento_Customer/js/view/customer"
                         }
@@ -180,7 +180,7 @@ defines the template which is used as the drop-down container : `<Magento_Custom
 
 (See [app/code/Magento/Customer/view/frontend/templates/account/customer.phtml](https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/view/frontend/templates/account/customer.phtml))
 
-### Step 3: Extend the base layout to add a block
+### 步骤3. Extend the base layout to add a block
 
 OrangeCo needs to create a new block, say, `header.links`, in the `header.panel` container, to move the links there. As the links can be added to this list by different modules, it is better to add this block to the `default.xml` page configuration of the `Magento_Theme` module.
 
@@ -205,7 +205,7 @@ So the following <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-e
 {%endhighlight xml%}
 
 
-### Step 4: Move links
+### 步骤4. Move links
 
 To move the links to the `header.links` block, OrangeCo adds an extending layout:
 

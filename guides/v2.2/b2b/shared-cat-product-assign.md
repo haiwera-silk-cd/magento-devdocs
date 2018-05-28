@@ -1,7 +1,7 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Assign categories and products to a shared catalog
+title: 分配分类和产品到类目录
 menu_title: Assign categories and products
 menu_order: 23
 version: 2.2
@@ -251,6 +251,6 @@ Not applicable
 
 ## Related information
 
-* [Integrate with the SharedCatalog module]({{ page.baseurl }}/b2b/shared-catalog.html)
-* [Manage shared catalogs]({{ page.baseurl }}/b2b/shared-cat-manage.html)
+* [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
+* [管理共享类目录]({{ page.baseurl }}/b2b/shared-cat-manage.html)
 * [Assign companies]({{ page.baseurl }}/b2b/shared-cat-company.html)

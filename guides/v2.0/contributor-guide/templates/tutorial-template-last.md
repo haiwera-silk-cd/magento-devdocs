@@ -3,7 +3,7 @@ layout: tutorial
 group: contributor
 subgroup:
 title: Step X. Finish the tutorial
-subtitle: Sample template tutorial
+subtitle: 样例模板教程
 menu_title:
 menu_order: 2
 level3_menu_node:
@@ -20,7 +20,7 @@ Use a Head2 (##) as the highest-leveling heading in this topic.
 ## Congratulations! You've finished.
 {:.no_toc}
 
-## Related topics
+## 相关主题
 
 * [Title of linked topic](http://example.com/index.html)
 * [Link and open new tab](http://example.com/index.html){:target="_blank"}

@@ -1,12 +1,12 @@
-label: Functional Testing Framework Guide
+label: 功能测试框架手册
 pages:
     - label: 介绍
       url: /mtf/mtf_introduction.html
 
-    - label: Installation
+    - label: 安装
       url: /mtf/mtf_installation.html
 
-    - label: Quick Start
+    - label: 快速开始
       url: /mtf/mtf_quickstart.html
       children:
 
@@ -25,83 +25,83 @@ pages:
         - label: See logs for failed tests
           url: /mtf/mtf_quickstart/mtf_quickstart_logs.html
 
-    - label: Create a Test
+    - label: 创建一个测试
       url: /mtf/create_test.html
       children:
 
-        - label: Out-of-the-box test
+        - label: 盒外测试模型
           url: /mtf/create_test/out-of-the-box.html
 
-        - label: New functional test. Theory
+        - label: 新功能测试.理论
           url: /mtf/create_test/new_test.html
 
-        - label: New functional test. Practice
+        - label: 新功能测试.实践
           url: /mtf/create_test/create_new_test.html
 
-    - label: Features
+    - label: 特性
       url: /mtf/features.html
       children:
 
         - label: 隔离管理
           url: /mtf/features/isolation.html
 
-        - label: Modularity
+        - label: 模块化
           url: /mtf/features/modularity.html
 
-        - label: Parallel execution flow
+        - label: 并行执行流程
           url: /mtf/features/parallel_execution.html
 
-        - label: Reporting
+        - label: 报告
           url: /mtf/features/reporting.html
 
-        - label: Test suite
+        - label: 测试集
           url: /mtf/features/test_suite.html
 
-        - label: Web driver replacement
+        - label: 更换Web driver
           url: /mtf/features/webdriver.html
 
-    - label: Entities
+    - label: 实体
       url: /mtf/mtf_entities.html
       children:
 
-        - label: Fixture
+        - label: 固定数据
           url: /mtf/mtf_entities/mtf_fixture.html
 
-        - label: Fixture Repository
+        - label: 固定数据仓库
           url: /mtf/mtf_entities/mtf_fixture-repo.html
 
-        - label: Handler
+        - label: 处理器
           url: /mtf/mtf_entities/mtf_handler.html
 
-        - label: Block
+        - label: 块
           url: /mtf/mtf_entities/mtf_block.html
 
-        - label: Typified element
+        - label: 典型元素
           url: /mtf/mtf_entities/mtf_typified-element.html
 
-        - label: Page
+        - label: 页面
           url: /mtf/mtf_entities/mtf_page.html
 
-        - label: Constraint
+        - label: 约束
           url: /mtf/mtf_entities/mtf_constraint.html
 
-        - label: Data set
+        - label: 数据集
           url: /mtf/mtf_entities/mtf_dataset.html
 
-        - label: Test case
+        - label: 测试用例
           url: /mtf/mtf_entities/mtf_testcase.html
 
-        - label: Scenario test
+        - label: 场景测试
           url: /mtf/mtf_entities/mtf_scenariotest.html
 
-    - label: Configuration
+    - label: 配置
       url: /mtf/configuration.html
 
-    - label: Update
+    - label: 更新
       url: /mtf/mtf_update.html
 
     - label: 故障排除
       url: /mtf/troubleshooting.html
 
-    - label: Changelog
+    - label: 修改日志
       url: /mtf/mtf_changelog.html

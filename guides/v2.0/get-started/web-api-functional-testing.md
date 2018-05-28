@@ -1,8 +1,8 @@
 ---
 group: get-started
 subgroup: 50_Testing
-title: Web API functional testing
-menu_title: Web API functional testing
+title: Web API功能测试
+menu_title: Web API功能测试
 menu_order: 1
 menu_node: parent
 version: 2.0
@@ -10,7 +10,7 @@ github_link: get-started/web-api-functional-testing.md
 redirect_from: /guides/v1.0/get-started/web-api-functional-testing.html
 ---
 
-## Web API functional testing
+## Web API功能测试
 {:.no_toc}
 
 The Web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} testing framework allows you to test Magento {% glossarytooltip 377dc0a3-b8a7-4dfa-808e-2de37e4c0029 %}Web API{% endglossarytooltip %} from the client application point of view. The tests can be used with either REST or SOAP. The REST or SOAP {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} that runs the tests is specified in PHPUnit configuration. See [How to Run the Tests](#howto) for more information.
@@ -18,7 +18,7 @@ The Web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endgloss
 
 <h2 id="details">Implementation Details</h2>
 
-The Web API functional testing framework depends on the integration testing framework and reuses most of classes implemented there.
+The Web API功能测试 framework depends on the integration testing framework and reuses most of classes implemented there.
 
 
 <h3 id="custom">Custom Annotations for Data Fixtures</h3>
@@ -30,7 +30,7 @@ In the Web API functional tests only, the custom annotation  `@magentoApiDataFix
 <p>If data was added to the DB using <code>@magentoApiDataFixture</code>, it will not be automatically cleared after test execution. The data is cleared when <code>@magentoDataFixture</code> is used.</p>
 </div>
 
-Do not define fixtures in `dev/tests/api-functional`. Instead, they must be taken from `dev/tests/integration`. The integration framework defines most necessary fixtures, and they should be reused during Web API functional testing. If the existing set of fixtures is insufficient, add new fixtures under `dev/tests/integration`. The fixtures will then be available for both testing frameworks.
+Do not define fixtures in `dev/tests/api-functional`. Instead, they must be taken from `dev/tests/integration`. The integration framework defines most necessary fixtures, and they should be reused during Web API功能测试. If the existing set of fixtures is insufficient, add new fixtures under `dev/tests/integration`. The fixtures will then be available for both testing frameworks.
 
 To keep your test environment clean, clear all entities created in fixture files or within tests itself from the DB after test execution. This can be done either directly in tearDown or by a corresponding rollback for the fixture file. This file should be named the same as a fixture, but with `_rollback` suffix.
 

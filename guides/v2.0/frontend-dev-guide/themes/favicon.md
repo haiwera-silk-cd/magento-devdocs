@@ -10,7 +10,7 @@ functional_areas:
   - Frontend
   - Theme
 ---
-<h2 id="favicon-intro">What's in this topic</h2>
+<h2 id="favicon-intro">这里有什么</h2>
 
 This topic describes how to add custom favicons.
 

@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Block
+title: 块
 version: 2.1
 github_link: mtf/mtf_entities/mtf_block.md
 ---
@@ -541,9 +541,9 @@ This page relates to the Magento_Catalog模块 and contains `ViewBlock`. This bl
 
 Let's create render for the bundle product.
 
-**Step 1**. Create `Bundle/Test/Page/Product/CatalogProductView.xml` page to merge with the basic page [`Catalog/Test/Page/Product/CatalogProductView.xml`]. [Learn more about page merging]({{ page.baseurl }}/mtf/mtf_entities/mtf_page.html#mtf_page_merge).
+**步骤1.*. Create `Bundle/Test/Page/Product/CatalogProductView.xml` page to merge with the basic page [`Catalog/Test/Page/Product/CatalogProductView.xml`]. [Learn more about page merging]({{ page.baseurl }}/mtf/mtf_entities/mtf_page.html#mtf_page_merge).
 
-**Step 2**. In the `Bundle/Test/Page/Product/CatalogProductView.xml`, copy `page` node from the `Catalog/Test/Page/Product/CatalogProductView.xml` without `module` attribute
+**步骤2.*. In the `Bundle/Test/Page/Product/CatalogProductView.xml`, copy `page` node from the `Catalog/Test/Page/Product/CatalogProductView.xml` without `module` attribute
 
 {%highlight xml%}
 <?xml version="1.0" encoding="utf-8"?>
@@ -560,7 +560,7 @@ Let's create render for the bundle product.
 </config>
 {%endhighlight%}
 
-**Step 3**. Insert `block` with the same name of block and add a render that indicates the type of product and the class that processes this block
+**步骤3.*. Insert `block` with the same name of block and add a render that indicates the type of product and the class that processes this block
 
 {%highlight xml%}
 <?xml version="1.0" encoding="utf-8"?>
@@ -584,7 +584,7 @@ Details:
 * The {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class for the page will be generated in the Magento_Catalog模块, because we did not mention module attribute in the `page` node
 * In the `block`, we indicate `name` attribute only
 
-**Step 4**. Run the page generator
+**步骤4.*. Run the page generator
 
 {%include mtf/page-generator.html%}
 
@@ -656,3 +656,4 @@ There are some rules that should be followed to define a selector:
 <!-- ABBREVIATIONS -->
 
 *[FTF]: Functional Testing Framework
+k

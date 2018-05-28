@@ -33,12 +33,12 @@ This topic assumes:
 
 We've broken the installation process into three main parts: getting started, installing, and post-installation. We hope that what follows helps you; if you'd like to suggest improvements, click **Edit this page on GitHub** at the top of this page and let us know.
 
-## Precondition: How advanced are you?
+## 前提条件：你足够专业吗？
 Do you know what a "terminal" application is? Do you know what operating system your server runs? Do you know what Apache is?
 
-If not, see the <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Installation overview</a>.
+If not, see the <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">安装概述</a>.
 
-## Installation part 1: Getting started
+## 安装第1部分: 起步
 1.	See the [system requirements]({{ site.baseurl }}/magento-system-requirements.html).
 2.	If your system lacks any requirements, see the prerequisites documentation:
 
@@ -46,8 +46,8 @@ If not, see the <a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">I
 	*	<a href="{{ page.baseurl }}/install-gde/prereq/php-ubuntu.html">PHP (Ubuntu)</a>
 	*	<a href="{{ page.baseurl }}/install-gde/prereq/php-centos.html">PHP (CentOS)</a>
 	*	<a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>
-3.	Just as importantly, set up the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a> on the server.
-4.	Switch to the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento file system owner{% endglossarytooltip %}.
+3.	Just as importantly, set up the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a> on the server.
+4.	Switch to the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 
 ### 获取Magento
 When all prerequisites have been met, 获取Magento using {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} as follows:
@@ -63,10 +63,10 @@ You're required to authenticate; see <a href="{{ page.baseurl }}/install-gde/pre
 
 {% include install/file-system-perms-before.md %}
 
-## Installation part 2: Installing the Magento software
+## 安装第2部分: Installing the Magento software
 You can choose to install the Magento software using either a <a href="{{ page.baseurl }}/install-gde/install/web/install-web.html">web-based Setup Wizard</a> or using the <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli.html">command line</a>.
 
-#### Command line installation
+#### 命令行安装
 
 {% collapsible Click to view the command-line installation %}
 
@@ -103,11 +103,11 @@ Optionally switch to <a href="{{ page.baseurl }}/config-guide/cli/config-cli-sub
 
 {% endcollapsible %}
 
-#### Web Setup Wizard
+#### 网页安装向导
 
 {% collapsible Click to view the Web 网页向导安装 %}
 
-The following example shows how to install using the Web Setup Wizard with the following options:
+The following example shows how to install using the 网页安装向导 with the following options:
 
 *	The Magento software is installed in the `magento2` directory relative to the web server docroot, which means your storefront URL is `http://192.0.2.5/magento2/`
 
@@ -124,7 +124,7 @@ The following example shows how to install using the Web Setup Wizard with the f
 *	默认货币是U.S. dollars
 *	默认时区是U.S. Central (America/Chicago)
 
-To run the Web Setup Wizard:
+To run the 网页安装向导:
 
 1.	Enter the following URL in your browser's address or location field:
 
@@ -132,7 +132,7 @@ To run the Web Setup Wizard:
 2.	At the welcome page, click **Agree and Setup Magento**.
 
 	![You must accept the license agreement to install the Magento software]({{ site.magentourl }}/common/images/install_qr_wizard-welcome.png){:width="200px"}
-3.	Step 1: Readiness Check verifies your system is ready to install the Magento software.
+3.	步骤1. Readiness Check verifies your system is ready to install the Magento software.
 
 	Click **Start Readiness Check**
 
@@ -140,25 +140,25 @@ To run the Web Setup Wizard:
 
 	*	If the readiness check passes, click **Next** and continue with the next step.
 	*	If the readiness check fails, see [就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_main.html)
-4.	Step 2: Add a Database enables you to set up your Magento database.
+4.	步骤2. Add a Database enables you to set up your Magento database.
 
 	![Set up your Magento database]({{ site.magentourl }}/common/images/install_qr_database.png){:width="400px"}
-5.	Step 3: Web Configuration enables you to enter the storefront and Magento Admin URLs.
+5.	步骤3. Web Configuration enables you to enter the storefront and Magento Admin URLs.
 
 	![Enter your storefront and Magento Admin URLs]({{ site.magentourl }}/common/images/install_qr_web.png){:width="400px"}
-6.	Step 4: Customize Your Store enables you to enter a default store currency, time zone, and language.
+6.	步骤4. Customize Your Store enables you to enter a default store currency, time zone, and language.
 
 	![Customize the store's language, time zone, currency]({{ site.magentourl }}/common/images/install_qr_store.png){:width="400px"}
-7.	Step 5: Create Admin Account enables you to set up a Magento administrator. This user can perform all actions in the Magento Admin.
+7.	步骤5. Create Admin Account enables you to set up a Magento administrator. This user can perform all actions in the Magento Admin.
 
 	![Create a Magento administrator account]({{ site.magentourl }}/common/images/install_qr_admin.png){:width="400px"}
-8.	Step 6: Install starts the installation when you click **Install Now**.
+8.	步骤6. Install starts the installation when you click **Install Now**.
 
 	You can optionally expand **Console Log** to see installation messages while the installation is in progress.
 
 {% endcollapsible %}
 
 
-## Installation part 3: 安装完成之后
+## 安装第3部分: 安装完成之后
 *	<a href="{{ page.baseurl }}/install-gde/install/verify.html">验证你的安装</a> was successful.
 *	Learn about the <a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">Component Manager and System Upgrade</a> for future updates.

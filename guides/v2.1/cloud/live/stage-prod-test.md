@@ -135,7 +135,7 @@ If you encounter issues, save your reproduction steps, error messages, strange s
 <td>Order management</td>
 <td>
 <ul>
-<li>Create an order for a customer</li>
+<li>创建订单 for a customer</li>
 <li>Search for and view orders</li>
 <li>Modify an order by adding and removing products, changing amounts, modifying shipping and billing information</li>
 <li>Handle a refund</li>
@@ -200,7 +200,7 @@ If you encounter issues, save your reproduction steps, error messages, strange s
 ## Complete load and stress tests {#loadtest}
 Before launching, we highly recommend performing extensive traffic and performance testing on your Staging and Production environments.  You should consider performance testing for your frontend and backend processes.
 
-Before you begin testing, please enter a ticket with support advising the environments you are testing, what tools you are using, and the time frame. Update the ticket with results and information to track performance. When you complete testing, add your updated results and note in the ticket testing is complete with a date and time stamp.
+开始之前 testing, please enter a ticket with support advising the environments you are testing, what tools you are using, and the time frame. Update the ticket with results and information to track performance. When you complete testing, add your updated results and note in the ticket testing is complete with a date and time stamp.
 
 We recommend that you review the [Magento Performance Toolkit](https://github.com/magento/magento2/tree/2.0/setup/performance-toolkit){:target="_blank"} options as part of your pre-launch readiness process.
 

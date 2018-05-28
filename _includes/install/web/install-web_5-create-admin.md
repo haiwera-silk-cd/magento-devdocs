@@ -1,5 +1,5 @@
 
-<h2 id="instgde-install-magento-web-step5">Step 5: Create Admin Account</h2>
+<h2 id="instgde-install-magento-web-step5">步骤5. Create Admin Account</h2>
 
 1.	Enter the following information:
 

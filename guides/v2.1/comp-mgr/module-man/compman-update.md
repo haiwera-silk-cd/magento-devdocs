@@ -14,7 +14,7 @@ functional_areas:
   - Upgrade
 ---
 
-This step displays if you're updating components. The following figure shows an example.
+This step displays if you're updating 组件. The following figure shows an example.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ site.baseurl }}/common/images/cman_update-step.png" width="350px" alt="Click update to complete the task">
 

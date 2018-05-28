@@ -39,5 +39,5 @@ A sample follows:
 
 Make sure the version is 4.x or 5.x before continuing. If you are running version 3.x, you must upgrade to a supported version. Consult the Varnish installation documentation for more information.
 
-### Next step
+### 下一步
 <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>

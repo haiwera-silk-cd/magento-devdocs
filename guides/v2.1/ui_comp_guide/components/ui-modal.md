@@ -1,10 +1,10 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Modal сomponent
+group: UI_组件_guide
+subgroup: 组件
+title: 模态窗组件
 menu_title: Modal component
 version: 2.1
-github_link: ui_comp_guide/components/ui-modal.md
+github_link: ui_comp_guide/组件/ui-modal.md
 redirect_from: guides/v2.0/ui-components/ui-modal.html
 ---
 
@@ -12,7 +12,7 @@ redirect_from: guides/v2.0/ui-components/ui-modal.html
 
 The Modal {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %} implements a secondary window that opens on top of the main window. It uses the [模态弹窗小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html).
 
-Similar to the widget's configuration, the component's configuration allows you to set the window type and the behavior of action buttons (including linking action buttons to methods of the other UI components).
+Similar to the widget's configuration, the component's configuration allows you to set the window type and the behavior of action buttons (including linking action buttons to methods of the other UI 组件).
 
 The Modal component can be used for both {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and storefronts.
 
@@ -158,11 +158,11 @@ The following sample is an example of the configuration for a simple modal windo
 
 ## Public API (JS)
 
-- `actionCancel()`: returns all modal's child components to the state they had on modal open and closes the modal window.
-- `actionDone()`: validates the changes in the modal's child components and, if valid, closes the modal.
+- `actionCancel()`: returns all modal's child 组件 to the state they had on modal open and closes the modal window.
+- `actionDone()`: validates the changes in the modal's child 组件 and, if valid, closes the modal.
 - `closeModal()`: closes the modal window.
 - `openModal()`: opens the modal window.
-- `setPrevValues(elem)`: returns all `elem`'s child components to the state they had on modal open.
+- `setPrevValues(elem)`: returns all `elem`'s child 组件 to the state they had on modal open.
 - `setTitle()`: sets modal title.
 - `setSubTitle()`: sets modal sub title.
 - `toggleModal()`: toggles the modal window state (open/close).

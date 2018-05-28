@@ -16,7 +16,7 @@ A *theme* is a component of Magento application which provides a consistent look
 
 Themes are designed to override or customize view layer resources, provided initially by modules or libraries.
 
-Themes are implemented by different vendors (frontend developers) and intended to be distributed as additional packages for Magento system similar to other components.
+Themes are implemented by different vendors (frontend developers) and intended to be distributed as additional packages for Magento system similar to other 组件.
 
 Out-of-the-box Magento application provides two design themes: Luma, as a demonstration theme, and Blank as a basis for custom {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} creation.
 

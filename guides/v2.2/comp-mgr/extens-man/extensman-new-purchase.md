@@ -1,7 +1,7 @@
 ---
 group: compman
 subgroup: 06_UseExtMan
-title: Step 3. Install
+title: 步骤3. Install
 menu_title: Install
 menu_node:
 menu_order: 25
@@ -13,7 +13,7 @@ functional_areas:
   - Upgrade
 ---
 
-## Step 3. Install
+## 步骤3. Install
 When you're installing new purchases from Magento Marketplace, the page displays similar to the following:
 
 <img src="{{ site.baseurl }}/common/images/extensman_new-purchases-step3install.png" width="500px">
@@ -44,7 +44,7 @@ translate: 1 -> 0
 config_webservice: 1 -> 0
 
 [2016-07-28 15:18:03 UTC] Job "setup:cache:disable []" has been successfully completed
-[2016-07-28 10:19:03 CDT] Job "update {"components":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.3"}" has been started
+[2016-07-28 10:19:03 CDT] Job "update {"组件":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.3"}" has been started
 [2016-07-28 10:19:03 CDT] Starting composer update...
 [2016-07-28 10:19:04 CDT] ./composer.json has been updated
 
@@ -60,7 +60,7 @@ Writing lock file
 Generating autoload files
 
 [2016-07-28 10:21:32 CDT] Composer update completed successfully
-[2016-07-28 10:21:32 CDT] Job "update {"components":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.3"}}}" has successfully completed
+[2016-07-28 10:21:32 CDT] Job "update {"组件":{"addshoppers/magento2-connector":{"name":"addshoppers/magento2-connector","version":"2.0.1"},"addshoppers/purchase-sharing":{"name":"addshoppers/purchase-sharing","version":"2.0.1"},"fooman/printorderpdf-m2":{"name":"fooman/printorderpdf-m2","version":"2.0.3"}}}" has successfully completed
 
 [2016-07-28 15:22:16 UTC] Job "setup:cache:enable ["config layout block_html collections reflection db_ddl eav customer_notification full_page config_integration config_integration_api translate config_webservice"]" has started
 Changed cache status:

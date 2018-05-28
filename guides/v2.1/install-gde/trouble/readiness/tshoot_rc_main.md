@@ -14,7 +14,7 @@ functional_areas:
 ---
 
 *	[定时任务(cron)就绪检查的问题]({{ page.baseurl }}/comp-mgr/trouble/cman/cron.html)
-*	[组件依赖就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_depend.html)
+*	[components依赖就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_depend.html)
 *	[PHP版本就绪检查的问题]({{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_php.html)
 *	[文件权限就绪检查的问题]( {{ page.baseurl }}/install-gde/trouble/readiness/tshoot_rc_perms.html)
 

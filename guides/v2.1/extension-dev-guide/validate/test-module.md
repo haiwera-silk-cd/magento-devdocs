@@ -13,7 +13,7 @@ redirect_from:
   - /guides/v2.2/mktpl-quickstart/dev-test.html
 ---
 
-## Unit and Integration Tests {#test-unit}
+## Unit and 集成测试 {#test-unit}
 
 Run the PHPUnit based Magento unit and integration tests.
 For more information see the <a href="{{ page.baseurl }}/test/testing.html">Magento Testing Overview</a>
@@ -57,6 +57,6 @@ One way to do this follows:
 
 
 ## More information
-For more information on testing in {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and validating Magento components, see the following:
+For more information on testing in {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} and validating Magento组件, see the following:
 
 * [Validating Magento Extensions](http://www.gorillagroup.com/trending/insight/validating-magento-extensions-phpunit/){:target="_blank"}

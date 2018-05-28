@@ -166,7 +166,7 @@ We merged [`vendor/magento/ece-patches`](http://devdocs.magento.com/guides/v2.2/
 #### New features
 -   **Configure a cron consumer with an environment variable**—You can now configure cron consumers using the new `CRON_CONSUMERS_RUNNER` environment variable.
 
--   **Configuration scanning**—We now scan for critical components during the build/deploy process and halt the process if the scan fails, which prevents unnecessary downtime due to the site being in maintenance mode.
+-   **Configuration scanning**—We now scan for critical 组件 during the build/deploy process and halt the process if the scan fails, which prevents unnecessary downtime due to the site being in maintenance mode.
 
 -   **Build/deploy notifications**—We added a new configuration file that you can use to [set up Slack and/or email notifications](http://devdocs.magento.com/guides/v2.2/cloud/env/setup-notifications.html) for build/deploy actions in all your environments.
 

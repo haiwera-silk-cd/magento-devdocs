@@ -1,6 +1,6 @@
 ---
 group: mftf
-title: Getting started with the Magento Functional Testing Framework
+title: 起步 with the Magento Functional Testing Framework
 version: 2.2
 github_link: magento-functional-testing-framework/release-1/getting-started.md
 functional_areas:
@@ -57,7 +57,7 @@ And disable the **Add Secret Key in URLs** setting to open pages using direct UR
 
 Follow these steps to set up the MFTF on your system. 
 
-### Step 1. Clone the magento2 source code repository
+### 步骤1. Clone the magento2 source code repository
 
 ```bash
 git clone https://github.com/magento/magento2.git
@@ -69,7 +69,7 @@ or
 git clone git@github.com:magento/magento2.git
 ```
 
-### Step 2. Install dependencies
+### 步骤2. 安装dependencies
 
 ```bash
 cd magento2/dev/tests/acceptance
@@ -78,7 +78,7 @@ cd magento2/dev/tests/acceptance
 composer install
 ```
 
-### Step 3. Build the project
+### 步骤3. Build the project
 
 In `magento2/dev/tests/acceptance`, run the following command:
 
@@ -91,7 +91,7 @@ To avoid typing `vendor/bin` every time, add to *PATH* your `<absolute path to a
 When added, you should be able to run commands: `robo`, `codecept`, and `phpunit`.
 </div>
 
-### Step 4. Edit environment settings
+### 步骤4. Edit environment settings
 
 In the `magento2/dev/tests/acceptance` directory, edit the `.env` file to match your system.
 
@@ -128,7 +128,7 @@ They come together to form the path to where Selenium Server is running from lik
 http://127.0.0.1:4444/wd/hub
 ```
 
-### Step 5. Generate existing tests
+### 步骤5. Generate existing tests
 
 In the `magento2/dev/tests/acceptance` directory, run the following command to generate tests as PHP classes from XML files:
 
@@ -136,7 +136,7 @@ In the `magento2/dev/tests/acceptance` directory, run the following command to g
 vendor/bin/robo generate:tests
 ```
 
-### Step 6. Run tests
+### 步骤6. Run tests
 
 To run one or more tests, you need running Selenium server and a [`codecept`] or [`robo`] with required parameters. 
 
@@ -162,7 +162,7 @@ vendor/bin/codecept run
 
 See more commands in [`robo`] and [`codecept`].
 
-### Step 7. Generate reports {#allure}
+### 步骤7. Generate reports {#allure}
 
 [Install Allure], a tool that generates testing reports in HTML.
 Testing reports are generated in CLI during testing.

@@ -12,7 +12,7 @@ functional_areas:
   - Theme
 ---
 
-<h2 id="layout_theme_how-to_overview">What's in this topic</h2>
+<h2 id="layout_theme_how-to_overview">这里有什么</h2>
 
 This topic discusses how to create the files that make up a theme, how to add a logo to a theme, and how to size images.
 
@@ -158,7 +158,7 @@ Product image sizes and other properties used on the {% glossarytooltip 1a70d3ac
 
 If the product image sizes of your theme differ from those of the parent theme, or if your theme does not inherit from any theme, add `view.xml` using the following steps:
 
-1.	Log in to your Magento server as a user with permissions to create directories and files in the Magento installation directory. (Typically, this is the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento file system owner</a>.)
+1.	Log in to your Magento server as a user with permissions to create directories and files in the Magento installation directory. (Typically, this is the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.)
 
 1.	Create the `etc` directory in your theme folder
 

@@ -1,8 +1,8 @@
 ---
-group: UI_Components_guide
+group: UI_组件_guide
 subgroup: concepts
-title: About the uiElement class
-menu_title: About the uiElement class
+title: 关于uiElement类
+menu_title: 关于uiElement类
 menu_node:
 menu_order: 70
 version: 2.1
@@ -12,7 +12,7 @@ github_link: ui_comp_guide/concepts/ui_comp_uielement_concept.md
 ## What is the `uiElement` class
 
 The `uiElement` class is a direct successor of the [uiClass library]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_uiclass_concept.html).
-When creating a new component, use the `uiElement` class as a direct parent, if your component will be the last in the components hierarchy chain.
+When creating a new component, use the `uiElement` class as a direct parent, if your component will be the last in the 组件 hierarchy chain.
 
 `uiElement` source code is `<UI_Module_dir>/view/base/web/js/lib/core/element/element.js`, in the {{site.data.var.ce}} github repository: [app/code/Magento/Ui/view/base/web/js/lib/core/element/element.js]({{ site.mage2100url }}app/code/Magento/Ui/view/base/web/js/lib/core/element/element.js).
 
@@ -64,7 +64,7 @@ When creating a new component, use the `uiElement` class as a direct parent, if 
           this.trackable = 2; // setter
           this.trackable;     // getter
 
-- The `initModules()` method initializes external UI components' instances and links them to local variables. This method works with the `modules` section of the configuration, where we define the name of the external instance and the local variable. The `modules` section is an object where each key is the variable's name and each value is the instance's name. A developer does not need to be concerned with the instantiation of the module (external instance), because the `initModules()` method will resolve the variable when the instance is instantiated.
+- The `initModules()` method initializes external UI 组件' instances and links them to local variables. This method works with the `modules` section of the configuration, where we define the name of the external instance and the local variable. The `modules` section is an object where each key is the variable's name and each value is the instance's name. A developer does not need to be concerned with the instantiation of the module (external instance), because the `initModules()` method will resolve the variable when the instance is instantiated.
 
   Example:
 

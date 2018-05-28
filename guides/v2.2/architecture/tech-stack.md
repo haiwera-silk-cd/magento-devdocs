@@ -1,6 +1,6 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 技术栈
 menu_title: 技术栈
 menu_order: 2
@@ -11,7 +11,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/tech-stack.html
 
 ## Overview
 
-This page summarizes the technologies we use. For more detailed information, see the [System Requirements]({{ page.baseurl }}/install-gde/system-requirements-tech.html).
+This page summarizes the technologies we use. For more detailed information, see the [系统要求]({{ page.baseurl }}/install-gde/system-requirements-tech.html).
 
 Magento's highly modular structure includes the following open-source technologies.
 
@@ -53,7 +53,7 @@ Magento's highly modular structure includes the following open-source technologi
 *	第三方库 (Zend Framework 1, Zend Framework 2, Symfony)
 *	Coding standards PSR-0 (autoloading standard), PSR-1 (basic coding standards), and PSR-2 (coding style guide), PSR-3, PSR-4
 
-### Optional stack components
+### Optional stack 组件
 
 *	Varnish (caching)
 *	Redis (used for page caching)
@@ -64,10 +64,10 @@ Magento 2.2 and above only supports PHP7+ and is no longer compatible with HipHo
 
 ### Automated testing
 
-Magento also provides automated testing suites that include unit, integration, functional and performance test scripts, as well as JavaScript tests and tools for static code analysis. Components include PHPUnit for the unit test framework and Selenium for the functional test framework.
+Magento also provides automated testing suites that include unit, integration, functional and performance test scripts, as well as JavaScript tests and tools for static code analysis. 组件 include PHPUnit for the unit test framework and Selenium for the functional test framework.
 
 This framework is located in the `dev/tests` directory. The functional testing framework `mtf` can be found in a [separate repository](https://github.com/magento/mtf){:target="_blank"}.
 For more information, see the [Functional Testing Framework]({{ page.baseurl }}/mtf/mtf_introduction.html) guide.
 
-## Related topics
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">Architectural basics</a>
+## 相关主题
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">架构基础</a>

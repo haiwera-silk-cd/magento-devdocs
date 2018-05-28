@@ -44,7 +44,7 @@ You can enable Xdebug directly to all Starter environments and Pro Integration e
 <!-- You may need to run PHP with a separate config file to enable xdebug on the CLI, such as "php -c /etc/platform/<project_id>/php.ini ... " -->
 
 1. In your local terminal, open `.magento.app.yaml` in a text editor.
-2. In the `runtime` section, under `extensions`, add `xdebug`. For example:
+2. In the `runtime` section, under `extensions`, add `xdebug`. 例如:
 
 		runtime:
 		   extensions:
@@ -133,7 +133,7 @@ To troubleshoot the connection:
 
         dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 
-      To terminate the connection, you enter a kill command with the process ID (PID). For example:
+      To terminate the connection, you enter a kill command with the process ID (PID). 例如:
 
         kill 3664
 
@@ -246,7 +246,7 @@ The following steps help you debug web requests.
 2. Right click and on the options menu set the IDE key to **PHPSTORM**.
 3. Install the Xdebug client on the browser. Configure and enable it.
 
-### Example set up on Chrome {#chrome}
+### 示例 set up on Chrome {#chrome}
 This section discusses how to use Xdebug in Chrome using the Xdebug Helper extension. For information about Xdebug tools for other browsers, consult the browser documentation.
 
 To use Xdebug Helper with Chrome:
@@ -322,6 +322,6 @@ Due to not having access to manually restart the nginx server, you need to locat
 
         dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 
-      To terminate the connection, you enter a kill command with the process ID (PID). For example:
+      To terminate the connection, you enter a kill command with the process ID (PID). 例如:
 
         kill 3664

@@ -1,11 +1,11 @@
 ---
 group: mtf-guide
-title: Typified element
+title: 典型元素
 version: 2.2
 github_link: mtf/mtf_entities/mtf_typified-element.md
 ---
 
-A typified element is an element of the GUI (Select, Multiselect etc). Magento has custom typified elements with a special logic, for example: Customized Select, Suggest Dropdown, {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}Store View{% endglossarytooltip %} Selector. Typified elements are often used as elements of a form or a grid. Functional Testing Framework (FTF) enables you to test any typified element.
+A typified element is an element of the GUI (Select, Multiselect etc). Magento has custom typified elements with a special logic, for example: Customized Select, Suggest Dropdown, {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}Store View{% endglossarytooltip %} Selector. 典型元素s are often used as elements of a form or a grid. Functional Testing Framework (FTF) enables you to test any typified element.
 
 ## Example {#example}
 
@@ -69,9 +69,9 @@ Testing typified elements for Magento custom elements are stored in the `<magent
 
 ### Create {#create}
 
-__Step 1.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class in the `<magento2_root_dir>/dev/tests/functional/lib/Magento/Mtf/Client/Element` directory
+__步骤1.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class in the `<magento2_root_dir>/dev/tests/functional/lib/Magento/Mtf/Client/Element` directory
  
- It must be named according to the following naming convention. Two capital letters in the name: the first letter and a capital `E` in the `Element.php`. For example: `OptgroupselectElement.php`.
+ It must be named according to the following naming convention. Two capital letters in the name: the first letter and a capital `E` in the `Element.php`. 例如: `OptgroupselectElement.php`.
  
 {%highlight php %}
  
@@ -79,7 +79,7 @@ __Step 1.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}P
 
  namespace Magento\Mtf\Client\Element;
  /**
-  * Typified element class for option group selectors.
+  * 典型元素 class for option group selectors.
   */
  class OptgroupselectElement
  {
@@ -87,13 +87,13 @@ __Step 1.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}P
  }
   {%endhighlight %}
  
-__Step 2.__ Extend your class from the [default element](#basic_class) or the [Magento custom element](#magento_class) class
+__步骤2.__ Extend your class from the [default element](#basic_class) or the [Magento custom element](#magento_class) class
 
 ``` php?start_inline=1 
 class OptgroupselectElement extends SelectElement
 ```
 
-__Step 3.__ Redefine methods of the extended class according to your goals
+__步骤3.__ Redefine methods of the extended class according to your goals
 
 ``` php?start_inline=1
 /**
@@ -121,7 +121,7 @@ public function setValue($value)
 
 ### Use {#use}
 
-Typified elements are used in the [FTF blocks].
+典型元素s are used in the [FTF blocks].
 Use a `find()` method to find an element. This method is declared in the [SimpleElement] class:
 
 ``` php?start_inline=1
@@ -159,7 +159,7 @@ public function isCategoryVisible(Category $category)
 
 ### Map {#mapping}
 
-Typified elements can be used in the [form mapping].
+典型元素s can be used in the [form mapping].
 
 ![A typified element mapping example in GUI]
 

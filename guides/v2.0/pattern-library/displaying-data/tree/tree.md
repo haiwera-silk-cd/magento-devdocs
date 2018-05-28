@@ -16,10 +16,10 @@ For solutions not described in this article, please refer to other related patte
 <h3 id="whentouse">When to Use</h3>
 Tree component will be needed anytime it is required to navigate though multiple layers of information and / or places where the information hierarchy needs to be shown to the user.
 
-<h3 id="treecomponents">Components of Tree</h3>
+<h3 id="tree组件">组件 of Tree</h3>
 The tree consists of two main "Anchors" and "Links"
 
-<img src="img/treecomponents.jpg">
+<img src="img/tree组件.jpg">
 
 <h4>1. Anchors</h4>
 Anchors are items that always contain at least one child item and offer "expand" / "collapse" functionality by hiding or revealing its direct children.
@@ -150,10 +150,10 @@ Action icon is used for any action that will be perform to the items in the tree
 
 The action icon is not required for the tree. It only appear as needed.
 
-<strong>Step 1:</strong> User click on the action icon.<br><br>
+<strong>步骤1.</strong> User click on the action icon.<br><br>
 <img src="img/action.jpg">
 <br><br>
-<strong>Step 2:</strong> The list of available actions against this item is shown. <br><br>
+<strong>步骤2.</strong> The list of available actions against this item is shown. <br><br>
 <img src="img/action2.jpg">
 <br><br>
 <strong>Move Up</strong> Once clicked, the item should be moved up within the parent. If the item is the first child, it cannot be moved up and the option will be disabled.
@@ -180,12 +180,12 @@ The "add child" button should always have more importance than the "add parent" 
 
 <h4>Interaction</h4>
 <br>
-<strong>Step 1:</strong> User click on the add button<br><br>
+<strong>步骤1.</strong> User click on the add button<br><br>
 <img src="img/add1.jpg">
 <br><br><br>
-<strong>Step 2:</strong> A <a href="../../containers/slideouts-modals-overlays/slideouts-modals-overalys.html">slide-out panel</a> should opens up to get the details of what to be added/<br><br>
+<strong>步骤2.</strong> A <a href="../../containers/slideouts-modals-overlays/slideouts-modals-overalys.html">slide-out panel</a> should opens up to get the details of what to be added/<br><br>
 
-<strong>Step 3:</strong> The item is added. The placement of the items will be determined as stated above.<br><br>
+<strong>步骤3.</strong> The item is added. The placement of the items will be determined as stated above.<br><br>
 <img src="img/add3.jpg">
 <br>
 

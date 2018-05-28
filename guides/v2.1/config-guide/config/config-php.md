@@ -52,9 +52,9 @@ The following sections discusses the structure and contents of the deployment co
 * <a href="#config-php-contents-env-php">Environmental configuration</a>
 
 ## Manage installed modules {#config-php-contents-config-php}
-`config.php` lists your installed components (modules, themes, and language packages). Magento provides both command-line and web-based utilities to manage components (install, uninstall, enable, disable, or upgrade).
+`config.php` lists your installed 组件 (modules, themes, and language packages). Magento provides both command-line and web-based utilities to manage 组件 (install, uninstall, enable, disable, or upgrade).
 
-Examples:
+例如:
 
 * Uninstall components: <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-uninstall.html">bin/magento setup:uninstall</a>
 * Enable or disable components: <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable">bin/magento module:enable</a>, <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable">bin/magento module:disable</a>.

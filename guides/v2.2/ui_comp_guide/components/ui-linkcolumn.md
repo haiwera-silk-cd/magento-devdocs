@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: LinkColumn component
-menu_title: LinkColumn component
+group: UI_组件_guide
+subgroup: 组件
+title: Link表格列组件
+menu_title: Link表格列组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-linkcolumn.md
+github_link: ui_comp_guide/组件/ui-linkcolumn.md
 ---
 
 ## Overview
 
-The LinkColumn component implements a column that can display the anchor elements instead of plain text.
+The Link表格列组件 implements a column that can display the anchor elements instead of plain text.
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/columns/link.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/columns/link.js)
 

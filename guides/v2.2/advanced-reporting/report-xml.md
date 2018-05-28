@@ -114,7 +114,7 @@ Filters use an attribute `glue` that helps to filter records that are based on m
 |--- |--- |--- |
 |`glue`|Logical operator|`or`, `and`|Optional|
 
-#### Example
+#### 示例
 
 Example of a nested condition in SQL:
 

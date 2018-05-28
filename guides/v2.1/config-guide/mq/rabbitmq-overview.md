@@ -2,7 +2,7 @@
 group: config-guide
 subgroup: 15_RabbitMQ
 title: 消息队列概述
-menu_title: 消息队列 (Magento Commerce only)
+menu_title: 消息队列 (仅企业版适用)
 menu_order: 1
 menu_node: parent
 version: 2.1

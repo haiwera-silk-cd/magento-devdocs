@@ -25,7 +25,7 @@ If possible, use [Elastic Search](http://devdocs.magento.com/guides/v2.1/config-
 The following topics discuss how to configure Solr to work with {{site.data.var.ee}}:
 
 * <a href="#config-solr-copy-config-files">Copy the Magento Solr configuration and start Solr</a>
-* <a href="#config-solr-magento">Configure Magento to work with Solr</a>
+* <a href="#config-solr-magento">配置Magento to work with Solr</a>
 
 <h3 id="config-solr-copy-config-files">Copy the Magento Solr configuration and start Solr</h3>
 Magento comes packaged with a sample Solr configuration you can use and customize. To get started, you'll copy the Magento configuration to Solr, replacing any existing files. After that you can start Solr and begin configuring Magento to work with it.
@@ -86,7 +86,7 @@ Magento comes packaged with a sample Solr configuration you can use and customiz
 			<p>This method for starting Solr is for convenience and testing purposes only. In a production environment, you should start and stop Solr using a script as discussed in <a href="{{ page.baseurl }}/config-guide/solr/solr-script.html#solr-script">Script Solr startup and shutdown</a>.</p>
 	</div>
 
-<h3 id="config-solr-magento">Configure Magento to work with Solr</h3>
+<h3 id="config-solr-magento">配置Magento to work with Solr</h3>
 This section discusses how to configure {{site.data.var.ee}} to use the Solr search engine.
 
 To configure Magento to work with Solr:
@@ -136,7 +136,7 @@ To configure Magento to work with Solr:
 </table>
 
 The following figure shows an example.
-<img src="{{ site.baseurl }}/common/images/solr_config-admin.png" alt="Configure Magento to use Solr">
+<img src="{{ site.baseurl }}/common/images/solr_config-admin.png" alt="配置Magento to use Solr">
 
 Click <strong>Test Connection</strong>.
 
@@ -156,7 +156,7 @@ The button changes as follows.
 </tr>
 <tr>
  <td><img src="{{ site.baseurl }}/common/images/solr_test-fail.png" width="160px" height="16px"></td>
- <td><p>The test connection failed. Try the following:</p>
+ <td><p>The test connection failed. 尝试下面的方法:</p>
 	<ul><li>Examine the command window in which you started Solr for stack traces and exceptions. You must resolve those before you continue.<br />
 	In particular, make sure you started Solr as a user with <code>root</code> privileges.</li>
 	<li>Verify that <a href="http://php.net/manual/en/filesystem.configuration.php" target="_blank"><code>allow_url_fopen = On</code></a> is present in your server's <code>php.ini</code>.<br />
@@ -191,7 +191,7 @@ To clean the cache using the command line, use the <a href="{{ page.baseurl }}/c
 
 To reindex using the command line:
 
-1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento file system owner</a>.
+1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.
 2.	Enter the following command to reindex all indexers:
 
 		php <your Magento install dir>/bin magento indexer:reindex

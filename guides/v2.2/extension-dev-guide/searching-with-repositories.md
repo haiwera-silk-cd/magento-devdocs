@@ -54,7 +54,7 @@ The boolean `OR` statement joins Filters inside a single **Filter Group**.
 
 The boolean `AND` statement joins Filter Groups inside a **Search Criteria**.
 
-For example:
+例如:
 
 {% highlight php startinline=true %}
 $filter1

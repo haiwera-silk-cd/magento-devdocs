@@ -10,7 +10,7 @@ To upgrade to {{site.data.var.ee}} RC1 or RC2 with sample data using the Setup W
 
 {% collapsible Click to expand/collapse content %}
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.	Change to the Magento installation directory.
 3.	Open `composer.lock` in a text editor.
 4.	Change the following:

@@ -8,7 +8,7 @@ version: 2.0
 github_link: release-notes/thirdparty-mccloud.md
 ---
 
-This page contains links to license agreements of the third party components used within {{site.data.var.ece}} (formerly Enterprise Cloud Edition).  Click the **License** links to view the end user license agreement for the corresponding software.
+This page contains links to license agreements of the third party 组件 used within {{site.data.var.ece}} (formerly Enterprise Cloud Edition).  Click the **License** links to view the end user license agreement for the corresponding software.
 
 Name|Version|License Name|Available From|Link to License
 ---|---|---|---|---

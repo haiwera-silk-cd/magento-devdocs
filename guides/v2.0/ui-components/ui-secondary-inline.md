@@ -1,19 +1,19 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: Inline Edit Component
 menu_title: Inline Edit Component
 menu_node:
 menu_order: 8
 version: 2.0
-github_link: ui-components/ui-secondary-inline.md
+github_link: ui-组件/ui-secondary-inline.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-inline.html
 
 ---
 
 The Inline Edit component is used to provide the ability of inline editing. 
 
-#### Related UI Components
+#### Related UI 组件
 
 The Bulk Edit component uses the Inline Edit component.
 The Listing component can use the Inline Edit if it is configured and enabled.
@@ -71,7 +71,7 @@ The configuration of the component can include:
     
   * viewConfig - is responsible for editor UI
     
-  * templates - the templates for child components, example will be provided below and marked as *.
+  * templates - the templates for child 组件, example will be provided below and marked as *.
    
 With configuration above, the Inline Edit will be enabled. But it also must start editing in response to some user action, for example when clicking somewhere on the row.
 
@@ -96,7 +96,7 @@ With configuration above, the Inline Edit will be enabled. But it also must star
 </column>
 {% endhighlight%}
 
-Note that this is not the configuration of the Inline Edit itself, but the configuration of the Column component, to interact with the Inline Edit.
+Note that this is not the configuration of the Inline Edit itself, but the configuration of the 表格列组件, to interact with the Inline Edit.
 
 With the above configuration, the Inline Edit will be enabled, but all row cells will be read-only during the Inline edit. To make specific column editable, next configuration can be used:
 
@@ -139,7 +139,7 @@ The configuration for the specific column editor can include:
 
   * validation rules, required-entry here as just an example of possible rules
 
-Additional examples:
+Additional 例如:
  * - Example of the templates configuration (fieldTmpl for the edited cell, and rowTmpl for the whole edited row)
 {% highlight xml %}
 <columns name="cms_page_columns">
@@ -180,10 +180,10 @@ Component elements:
 * row buttons Template: `app\code\Magento\Ui\view\base\web\templates\grid\editing\row-buttons.html`
 * header buttons Template: `app\code\Magento\Ui\view\base\web\templates\grid\editing\header-buttons.html`
 
-Dependencies on other components:
+Dependencies on other 组件:
 
 * columns collection
 * dataProvider of the listing
 * multiselect component, which provides information on selected rows.
 
-Currently the Inline Edit component is configured on the {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}cms{% endglossarytooltip %} pages as a plugin for the Listing, its configuration is included into Listing and Column components configuration (described in the above examples).
+Currently the Inline Edit component is configured on the {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}cms{% endglossarytooltip %} pages as a plugin for the Listing, its configuration is included into Listing and 表格列组件s configuration (described in the above examples).

@@ -2,8 +2,8 @@
 layout: tutorial
 group: get-started
 subgroup:
-title: Step 3. Create a customer
-subtitle: Order Processing with REST APIs Tutorial
+title: 步骤3. 创建一个客户
+subtitle: 使用REST API的订单处理教程
 menu_title:
 menu_order: 3
 level3_menu_node:
@@ -25,7 +25,7 @@ Customers can make purchases in three ways:
 
 This tutorial creates an order by a logged-in user. Magento provides additional REST endpoints for handling guest users.
 
-### Create a customer account
+### 创建一个客户 account
 
 Creating a customer account requires {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}admin{% endglossarytooltip %} permissions.
 

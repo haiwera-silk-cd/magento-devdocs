@@ -40,7 +40,7 @@ This function accepts a target component(module) as an argument and returns a mo
 
 This allows you to return a new instance of the target component with your modifications attached to it before it is used in the application.
 
-### Example
+### 示例
 
 The following is an example of a mixin module that extends the `target` component with a function that introduces a new `blockVisibility` property to a column element.
 
@@ -76,7 +76,7 @@ This file must be created in the same area specific directory the mixin is defin
 
 The mixins configuration in the `requirejs-config.js` associates a target component with a mixin using their paths.
 
-### Example
+### 示例
 
 The following is an example of a `requirejs-config.js` file that adds the `columns-mixins`, defined in the previous example, to the [grid column component].
 

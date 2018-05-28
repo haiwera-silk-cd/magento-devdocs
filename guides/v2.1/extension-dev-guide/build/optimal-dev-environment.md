@@ -2,7 +2,7 @@
 group: extension-dev-guide
 title: 最佳开发环境
 subgroup: 03_Build
-menu_title: Optimal development environment
+menu_title: 最佳开发环境
 menu_order: 1
 version: 2.1
 github_link: extension-dev-guide/build/optimal-dev-environment.md
@@ -27,7 +27,7 @@ Its configuration should be as close to a production server as possible.
 In your development machine, make sure you are running the Magento application in [开发者模式]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html).
 You can enable this mode with the command `bin/magento deploy:mode:set developer`.
 
-### Installation
+### 安装
 
 The following is a list of the different ways you can install Magento 2 locally:
 

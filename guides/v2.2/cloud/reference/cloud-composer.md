@@ -79,7 +79,7 @@ This package depends on a floating version of `vendor/magento/magento-cloud-conf
 {% include cloud/ece-tools.md %}
 
 ### vendor/magento/product-enterprise-edition {#cloud-composer-prodee}
-This {% glossarytooltip 7490850a-0654-4ce1-83ff-d88c1d7d07fa %}metapackage{% endglossarytooltip %} requires Magento application components, including modules, frameworks, themes, and so on.
+This {% glossarytooltip 7490850a-0654-4ce1-83ff-d88c1d7d07fa %}metapackage{% endglossarytooltip %} requires Magento application 组件, including modules, frameworks, themes, and so on.
 
 ## Base packages and file marshalling
 Magento contains two base packages, `magento/magento2-base` and `magento/magento2-ee-base`. These packages contain interstitial files that cannot be classified as extensions, themes, frameworks, or language packages; for example, sample server configuration files, {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} entry points, and so on.

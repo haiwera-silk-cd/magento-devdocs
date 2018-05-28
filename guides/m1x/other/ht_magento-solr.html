@@ -188,10 +188,10 @@ title: How to Install and Configure the Solr Search Engine With Magento Enterpri
 <h2><a name="prereq"></a>先决条件</h2>
 <p>The tasks discussed in this guide require the following:</p>
 <ul class="level1"><li>Magento EE and Solr versions discussed in <a href="#overview-matrix">Support Matrix for Solr and Magento EE</a>.</li>
-<li>Java version 1.6 or later.<br />
+<li>Java version 1.6或更新.<br />
 To determine if Java is already installed, enter the following command:<br><br>
 <pre>java -version</pre>
-If the message <tt>java: command not found</tt> displays, you must install the Java SDK as discussed in the next section. If Java is installed, make sure it's version 1.6 or later.</li>
+If the message <tt>java: command not found</tt> displays, you must install the Java SDK as discussed in the next section. If Java is installed, make sure it's version 1.6或更新.</li>
 <li>Tomcat or Jetty servlet container. This guide discusses using Jetty, which comes with Solr. Consult another resource, such as the <a href="http://wiki.apache.org/solr/SolrTomcat" target="_blank">Solr Wiki</a>, to use Tomcat with Solr.<br />
 To see if you're currently running Jetty and to check the version, see <a href="https://wiki.eclipse.org/Jetty/FAQ#How_do_I_know_which_version_of_Jetty_I_am_running.3F" target="_blank">How to find out the version of Jetty</a>.</li>
 </li></ul>
@@ -342,7 +342,7 @@ The button changes as follows.<br />
 </tr>
 <tr>
  <td class="confluenceTd"><img src="{{ site.baseurl }}/common/images/m1x/ht_magento-solr_test-connect_fail.png" width="116px" height="16px"></td>
- <td class="confluenceTd">The test connection failed. Try the following:
+ <td class="confluenceTd">The test connection failed. 尝试下面的方法:
   <ul class="level1"><li>Examine the command window in which you started Solr for stack traces and exceptions. You must resolve those before you continue.<br />
   In particular, make sure you started Solr as a user with <tt>root</tt> privileges.</li>
   <li>Verify that <a href="http://php.net/manual/en/filesystem.configuration.php" target="_blank"><tt>allow_url_fopen = On</tt></a> is present in your server's <tt>php.ini</tt>.<br />

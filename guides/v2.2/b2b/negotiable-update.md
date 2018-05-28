@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Update a negotiable quote
-menu_title: Update a negotiable quote
+title: 更新协商报价
+menu_title: 更新协商报价
 menu_order: 33
 version: 2.2
 ee_only: True
@@ -154,7 +154,7 @@ The buyer can add, update, or delete items from the quote under the following co
 
 ## Related information
 
-* [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-* [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-* [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-* [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+* [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
+* [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)
+* [协商报价结算]({{ page.baseurl }}/b2b/negotiable-checkout.html)
+* [生成协商报价订单]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)

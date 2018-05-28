@@ -1,7 +1,7 @@
 ---
 group: mtf-guide
 title: 功能测试框架介绍
-landing-page: Functional Testing Framework Guide
+landing-page: 功能测试框架手册
 version: 2.0
 github_link: mtf/mtf_introduction.md
 ---
@@ -51,7 +51,7 @@ test.
 FTF works with functional tests located in
 `<magento2_root_dir>/dev/tests/functional/`.
 
-Out-of-the-box tests cover basic functionality. Extended functionality
+盒外测试模型s cover basic functionality. Extended functionality
 can be tested using customized tests, created with FTF.
 
 Relative to your software development lifecycle, the FTF can help you:

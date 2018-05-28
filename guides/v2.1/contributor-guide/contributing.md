@@ -1,8 +1,8 @@
 ---
 group: contributor
 subgroup: contributor
-title: Code Contributions
-menu_title: Code Contributions
+title: 代码贡献
+menu_title: 代码贡献
 menu_order: 1
 menu_node: parent
 version: 2.1
@@ -10,30 +10,30 @@ github_link: contributor-guide/contributing.md
 redirect_from: /guides/v1.0/contributor-guide/contributing.html
 ---
 
-The following topics are included in this guide:
+此向导包含以下主题:
 
-* <a href="#contribute">Contribute to Magento 2 code</a>
+* <a href="#contribute">贡献Magento2代码</a>
 
-* <a href="#question">Questions or enhancement requests?</a>
+* <a href="#question">有问题或改善要求?</a>
 
-* <a href="#requirements">Contribution requirements</a>
+* <a href="#requirements">贡献要求</a>
 
-* <a href="#fork">Fork a repository</a>
+* <a href="#fork">fork一个仓库</a>
 
-* <a href="#pull_request">Create a pull request</a>
+* <a href="#pull_request">创建合并请求</a>
 
-* <a href="#report">Report an issue</a>
+* <a href="#report">报告问题</a>
 
-* <a href="#triage">Help triage issues</a>
+* <a href="#triage">帮助分担问题</a>
 
-* <a href="#labels">Labels applied by the Community Engineering Team</a>
+* <a href="#labels">社区工程师团除的标签应用</a>
 
-<h2 id="contribute">Contribute to Magento 2 code</h2>
+<h2 id="contribute">贡献Magento2代码</h2>
 
 Use the <a href="#fork">fork</a>和<a href="#pull_request">pull</a> model to contribute to the Magento 2 codebase.
 This contribution model allows contributors to maintain their own copy of the forked codebase (which can be easily synced with the main copy). The forked repository is then used to submit a request to the base repository to *pull* a set of changes (hence the phrase *pull request*).
 
-Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
+Contributions can take the form of new 组件 or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
 
 The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in two weeks (14 days) time, the issue is closed.
@@ -44,14 +44,14 @@ Often when the Community Engineering Team works on reviewing the suggested chang
 <p>Please refer to <a href="http://www.magento.com/legaldocuments/mca">Magento Contributor Agreement</a> for detailed information about the License Agreement. All contributors are required to submit a click-through form to agree to the terms. </p>
 </div>
 
-<h2 id="question">Questions or enhancement requests?</h2>
+<h2 id="question">有问题或改善要求?</h2>
 
 We use this repository (the Magento 2 GitHub repository) to capture code and documentation issues. We recommend that you post all questions to a question-and-answer site, such as <a href="https://magento.stackexchange.com/" target="_blank">Stack Exchange </a> and the <a href="https://community.magento.com/" target="_blank">Magento Forums</a>, where Magento community members can quickly provide recommendations and advice.
 
 Submit feature requests or enhancement suggestions to the new <a href="https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests" target="_blank">Magento 2 Feature Requests and Improvements forum</a> (see details <a href="https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96" target="_blank">here</a>).
 
 
-<h2 id="requirements">Contribution requirements</h2>
+<h2 id="requirements">贡献要求</h2>
 
 1. Contributions must adhere to <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html" target="_blank">Magento coding standards</a>.
 2. Refer to the Magento development team's <a href="{{ page.baseurl }}/contributor-guide/contributing_dod.html">Definition of Done</a>. We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!
@@ -66,7 +66,7 @@ Submit feature requests or enhancement suggestions to the new <a href="https://c
 
 5. All automated tests must pass successfully (all builds on <a href="https://travis-ci.org/magento/magento2" target="_blank">Travis CI</a> must be green).
 
-<h2 id="fork">Fork a repository</h2>
+<h2 id="fork">fork一个仓库</h2>
 To fork a repository on Github:
 
 1. Create or log in to your account on GitHub.
@@ -95,7 +95,7 @@ Check out this video to see the process in action:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mJDCL0uzIpY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<h2 id="pull_request">Create a pull request</h2>
+<h2 id="pull_request">创建合并请求</h2>
 
 First, check the <a href="https://github.com/magento/magento2/pulls?q=is%3Aopen+is%3Apr" target="_blank">existing PRs</a> and make sure you are not duplicating others’ work.
 
@@ -109,7 +109,7 @@ To create a pull request:
 
 After submitting your PR, you can head over to the Magento 2 repository’s <a href="https://github.com/magento/magento2/pulls?q=is%3Aopen+is%3Apr" target="_blank">Pull Requests panel</a> to see your PR. Your PR undergoes automated testing, and if it passes, the Community Engineering Team considers it for inclusion in the Magento 2 core. If some tests fail, please make the corresponding corrections in your code.
 
-<h2 id="report">Report an issue</h2>
+<h2 id="report">报告问题</h2>
 If you find a bug in Magento 2 code, you can report it by creating an issue in the Magento 2 repository.
 
 Before creating an issue:
@@ -126,7 +126,7 @@ To add an issue:
 3. Fill in the Title and Issue description.
 4. Click **Submit new issue**.
 
-<h2 id="triage">Help triage issues <a href="https://www.codetriage.com/magento/magento2" target="_blank"><img src="https://www.codetriage.com/magento/magento2/badges/users.svg" /></a></h2>
+<h2 id="triage">帮助分担问题 <a href="https://www.codetriage.com/magento/magento2" target="_blank"><img src="https://www.codetriage.com/magento/magento2/badges/users.svg" /></a></h2>
 
 In addition to contributing code, you can help to triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs. If you would like to start triaging issues, one easy way to get started is to <a href="https://www.codetriage.com/magento/magento2" target="_blank">subscribe to Magento on CodeTriage</a>.
 

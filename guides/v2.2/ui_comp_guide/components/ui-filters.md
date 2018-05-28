@@ -1,17 +1,17 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Filters component
-menu_title: Filters component
+group: UI_组件_guide
+subgroup: 组件
+title: 过滤器组件
+menu_title: 过滤器组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-filters.md
+github_link: ui_comp_guide/组件/ui-filters.md
 ---
 
 ## Overview
 
-The Filters component renders UI controls for filtering and applies filtering. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
+The 过滤器components renders UI controls for filtering and applies filtering. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
 
-See the [管理面板用到的设计模式和库 (Filters)]({{ page.baseurl }}/pattern-library/filters/data-table-filters/filtering.html) topic for information about the UI design patterns that can be implemented using Filters component.
+See the [管理面板用到的设计模式和库 (Filters)]({{ page.baseurl }}/pattern-library/filters/data-table-filters/filtering.html) topic for information about the UI design patterns that can be implemented using 过滤器组件.
 
 ## Structure
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/filters/filters.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/filters/filters.js)
@@ -33,7 +33,7 @@ Filters-specific configuration:
     <td><code>chipsConfig</code></td>
     <td>Configuration passed to the <code>FiltersChips</code> component.</td>
     <td>Object</td>
-    <td>Configuration that is passed to the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-filterschips.html">FiltersChips component</a>.</td>
+    <td>Configuration that is passed to the <a href="{{ page.baseurl }}/ui_comp_guide/components/ui-filterschips.html">标签过滤器组件</a>.</td>
   </tr>
   <tr>
     <td><code>statefull</code></td>
@@ -43,7 +43,7 @@ Filters-specific configuration:
   </tr>
   <tr>
     <td><code>stickyTmpl</code></td>
-    <td>Additional <code>.html</code> template that displays filters when the Toolbar component gets a fixed position.</td>
+    <td>Additional <code>.html</code> template that displays filters when the 工具栏组件 gets a fixed position.</td>
     <td>String</td>
     <td><code>ui/grid/sticky/filters</code></td>
   </tr>
@@ -63,7 +63,7 @@ Filters-specific configuration:
 
 ## Examples
 
-### Example 1: Add a new customer attribute and make it filterable
+### 示例 1: Add a new customer attribute and make it filterable
 
 To add a new customer attribute to the customer grid and make it filterable, you need to follow these steps:
 
@@ -72,5 +72,5 @@ To add a new customer attribute to the customer grid and make it filterable, you
 3. Сreate etc/indexer.xml to add the attribute to the customer_grid index and define it as filterable
 4. Set is_used_in_grid to true for the attribute
 
-### Example 2: Add a custom calculated filter
+### 示例 2: Add a custom calculated filter
 ...

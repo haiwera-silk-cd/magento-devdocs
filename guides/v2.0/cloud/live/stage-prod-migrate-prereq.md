@@ -55,7 +55,7 @@ If your project was created before October 23, 2017, you also need to set up [re
 If you haven't done so already, upload any [Fastly VCL snippets]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets) in your Integration environment `master` Magento Admin panel. Fastly is available in Staging and Production.
 
 ### Migrate your `.magento.app.yaml` file {#pro-yaml}
-**Important:** If you have **not modified** the default deployment hooks or configurations, skip this step and continue with [Get your Pro access URLs](#pro-urls). Only migrate the file if you modified the deployment hooks or added configuration updates.
+**重要:** If you have **not modified** the default deployment hooks or configurations, skip this step and continue with [Get your Pro access URLs](#pro-urls). Only migrate the file if you modified the deployment hooks or added configuration updates.
 
 {% include cloud/hooks.md %}
 
@@ -120,7 +120,7 @@ To set up an SSH agent:
 		Skip to step 4.
 	*	The SSH agent has not started: `Could not open a connection to your authentication agent.`
 
-		Continue with step 3.
+		Continue with 步骤3.
 
 3.	To start the SSH agent, enter the following command:
 

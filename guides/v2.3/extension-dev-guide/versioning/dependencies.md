@@ -94,7 +94,7 @@ Use this table to set the appropriate version dependency on a module based on ho
 | **Message queue topics and data types**                     | Consume a topic/message                                                                                 | MINOR              |
 |                                                             | Publish an existing topic                                                                               | MAJOR              |
 | ----------------------------------------------------------- | -------------------------------------------------------------------                                     | ------------------ |
-| **Layout handles declared by modules**                      | Instance blocks added                                                                                   | MAJOR              |
+| **布局处理 declared by modules**                      | Instance blocks added                                                                                   | MAJOR              |
 |                                                             | Blocks and containers moved/removed                                                                     | MAJOR              |
 | ----------------------------------------------------------- | -------------------------------------------------------------------                                     | ------------------ |
 | **Static and dynamic events triggered by a component**      | Subscribing to event                                                                                    | MAJOR              |

@@ -1,15 +1,15 @@
 ---
 group: howdoi
 subgroup:
-title: Add a custom shipping address renderer
-menu_title: Add a custom shipping address renderer
+title: 添加自定义物流地址渲染
+menu_title: 添加自定义物流地址渲染
 menu_order: 10
 version: 2.1
 github_link: howdoi/checkout/checkout_address.md
 functional_areas:
   - Checkout
 ---
-## What's in this topic
+## 这里有什么
 
 Out of the box, Magento {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} consists of two steps:
 
@@ -27,7 +27,7 @@ To implement shipping address rendering in checkout, you need to take the follow
 2. [Create the JS model for the shipping rate processor](#rate_processor).
 3. [Create the JS model for the shipping address saving processor](#save).
 4. [Create the JS component registering the processors](#register).
-4. [Declare the new components in the checkout page layout.](#layout).
+4. [Declare the new 组件 in the checkout page layout.](#layout).
 5. [Add the shipping address renderer to the "Ship-To" block (optional)](#ship_to).
 
 All the steps are described further.
@@ -241,7 +241,7 @@ define(
 );
 {%endhighlight%}
 
-## Declare the new components in the checkout page layout {#layout}
+## Declare the new 组件 in the checkout page layout {#layout}
 
 In your custom module directory, create a new `<your_module_dir>/view/frontend/layout/checkout_index_index.xml` file. In this file, add the following:
 
@@ -251,7 +251,7 @@ In your custom module directory, create a new `<your_module_dir>/view/frontend/l
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
+                    <item name="组件" xsi:type="array">
                         <item name="checkout" xsi:type="array">
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">
@@ -311,7 +311,7 @@ In your `<your_module_dir>/view/frontend/layout/checkout_index_index.xml` file a
             <block class="Magento\Checkout\Block\Onepage" name="checkout.root" template="onepage.phtml" cacheable="false">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
-                        <item name="components" xsi:type="array">
+                        <item name="组件" xsi:type="array">
                             <item name="sidebar" xsi:type="array">
                                 <item name="children" xsi:type="array">
                                     <item name="shipping-information" xsi:type="array">

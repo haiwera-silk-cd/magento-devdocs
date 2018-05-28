@@ -25,7 +25,7 @@ You can also do any of the following:
 ### Install optional sample data
 If you haven't already installed optional sample data, you can <a href="{{ page.baseurl }}/install-gde/install/sample-data.html">install it now</a>.
 
-### Manage and upgrade components
+### Manage and upgrade 组件
 *	<a href="{{ page.baseurl }}/comp-mgr/compman-start.html">Component management (install, uninstall, enable, disable, update)</a>
 *	<a href="{{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html">System upgrade (upgrade the Magento software)</a>
 

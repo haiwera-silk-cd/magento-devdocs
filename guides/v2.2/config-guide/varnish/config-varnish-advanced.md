@@ -79,7 +79,7 @@ Finally, all Magento instances must be in production mode. Before Varnish starts
 
 `bin/magento cache:flush`
 
-### Installation {#saint-install}
+### 安装 {#saint-install}
 
 Saint mode is not part of the main Varnish package. It is a separately-versioned vmod that must be downloaded and installed. As a result, you should re-compile Varnish from source, as described in the following articles:
 

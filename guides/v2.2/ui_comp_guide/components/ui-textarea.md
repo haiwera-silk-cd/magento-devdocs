@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Textarea component
-menu_title: Textarea component
+group: UI_组件_guide
+subgroup: 组件
+title: 文本输入框组件
+menu_title: 文本输入框组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-textarea.md
+github_link: ui_comp_guide/组件/ui-textarea.md
 ---
 
 ## Overview
 
-The Textarea component implements the `<textarea>` form field.
+The 文本输入框组件 implements the `<textarea>` form field.
 
 ## Textarea configuration
 Extends all `abstract` configuration.

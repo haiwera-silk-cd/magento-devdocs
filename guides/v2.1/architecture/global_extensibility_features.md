@@ -1,6 +1,6 @@
 ---
 group: arch-guide
-subgroup: Architectural Basics
+subgroup: 架构基础
 title: 全局可扩展的特性
 menu_title: 全局可扩展的特性
 menu_node:
@@ -11,7 +11,7 @@ github_link: architecture/global_extensibility_features.md
 
 ## Overview
 
-Essential qualities foster extensibility throughout the entire set of Magento components. This discussion focuses on:
+Essential qualities foster extensibility throughout the entire set of Magento组件. This discussion focuses on:
 
 * Modularity
 * Reliance on popular design patterns
@@ -23,9 +23,9 @@ Essential qualities foster extensibility throughout the entire set of Magento co
 
 ### Modularity
 
-The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} development, and modular design of software components (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module's external dependencies.
+The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} development, and modular design of software 组件 (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module's external dependencies.
 
-If a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software components reduces the ripple effects throughout your code base of changing code.
+If a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software 组件 reduces the ripple effects throughout your code base of changing code.
 
  See the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for detailed instructions on how to create modules.
 
@@ -37,9 +37,9 @@ Design patterns are time-tested, widely recognized software architecture constru
 
 ### Coding standards
 
-Magento developers should familiarize themselves with our coding standards, best practices, and conventions, especially standards for PHP file formatting, coding style, and file naming conventions. Magento standards are based on Zend Framework Coding Standards.
+Magento developers should familiarize themselves with our coding standards, best practices, and conventions, especially standards for PHP file formatting, coding style, and file naming conventions. Magento standards are based on Zend Framework 编码规范.
 
-See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">Coding Standards</a> for guidelines and requirements.
+See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a> for guidelines and requirements.
 
 ### Rich product ecosystem
 
@@ -91,7 +91,7 @@ See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html"
 
 Magento or third-party services can be configured as a web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} (REST or SOAP) with some simple {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %}. You can use these services to integrate your Magento installation into third-party applications, such as CRM (Customer Relationship Management), ERP (Enterprise Resource Planning) back office systems, and {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} (Content Management Systems).
 
-See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">起步 with Magento Web APIs</a> for more information.
+See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Magento web API起步</a> for more information.
 
 ### 服务约定, dependency injection, and dependency inversion
 
@@ -111,6 +111,6 @@ Plug-ins are also called <i>interceptors</i>. Applications use the {% glossaryto
 
 See <a href="{{ page.baseurl }}/extension-dev-guide/plugins.html">Plug-ins</a> in <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on declaring and prioritizing plug-ins.
 
-### Related topic {#m2arch-related}
+### 相关主题 {#m2arch-related}
 
 <a href="{{ page.baseurl }}/architecture/extensibility.html">可扩展和模块化</a>

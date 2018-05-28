@@ -102,5 +102,5 @@ In production mode:
 #### 下一步
 To set a mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>.
 
-#### Related topic
+#### 相关主题
 To generate static view files for production mode, see <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>

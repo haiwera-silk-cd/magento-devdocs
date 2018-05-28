@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup: Deploy
-title: Deploy Magento to production
-menu_title: Deploy Magento to production
+title: 部署Magento到生产环境
+menu_title: 部署Magento到生产环境
 menu_node: parent
 menu_order: 1
 version: 2.0

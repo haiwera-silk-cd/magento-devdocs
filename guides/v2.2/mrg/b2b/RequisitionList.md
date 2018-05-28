@@ -42,9 +42,9 @@ You can extend and override layouts in the `Magento\RequisitionList\view\fronten
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directories contain extensible UI components:
+The following directories contain extensible UI 组件:
 
 * `Magento\RequisitionList\view\frontend\ui_component` - requisition list listing
 

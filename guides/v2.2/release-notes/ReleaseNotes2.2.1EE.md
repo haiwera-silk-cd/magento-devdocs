@@ -19,7 +19,7 @@ We are pleased to present Magento Commerce 2.2.1. This release includes numerous
 
 Look for the following highlights in this release:
 
-* Integrated Signifyd Fraud Protection is now available in Magento Open Source. See [Signifyd fraud protection](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html) for more information. 
+* Integrated Signifyd Fraud Protection is now available in Magento Open Source. See [Signifyd欺诈保护](http://devdocs.magento.com/guides/v2.2/payments-integrations/signifyd/signifyd.html) for more information. 
 
 * Ability to implement translations from themes. We’ve also significantly reduced JavaScript-related translation issues. 
 
@@ -45,7 +45,7 @@ See [Magento Security Center](https://magento.com/security/patches/magento-221-2
 
 ## Fixed issues
 
-### Installation, upgrade, deployment
+### 安装, upgrade, deployment
 
 <!--- 80225 -->* We’ve improved the message that Magento displays during upgrade if any schema or data version in the `setup_modules` database is higher than the current module version in the code. *Fix submitted by community member <a href="https://github.com/schmengler" target="_blank">Fabian Schmengler </a> in pull request <a href="https://github.com/magento/magento2/pull/11064" target="_blank">11064</a>.*
 
@@ -190,7 +190,7 @@ See [Magento Security Center](https://magento.com/security/patches/magento-221-2
 
 <!--- 71552 -->* You can now search for attribute values on the store-view level. 
 
-<!--- 72267 -->* Magento now displays grouped products in the Shared Catalog page when Elasticsearch is enabled. 
+<!--- 72267 -->* Magento now displays grouped products in the 共享类目录 page when Elasticsearch is enabled. 
 
 
 ### Sitemap
@@ -415,9 +415,9 @@ Our technology stack is built on PHP and MySQL. For details, see [技术栈 requ
 
 
 
-For more information, [System Requirements]({{ site.baseurl }}/magento-system-requirements.html).
+For more information, [系统要求]({{ site.baseurl }}/magento-system-requirements.html).
 
-### Installation and upgrade instructions
+### 安装 and upgrade instructions
 
 You can install Magento Commerce 2.2 General Availability (GA) using Composer.
 
@@ -425,6 +425,6 @@ You can install Magento Commerce 2.2 General Availability (GA) using Composer.
 {% include install/releasenotes/ee_install_21.md %}
 
 ## Migration toolkits
-The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento Data Migration repository</a>.
+The <a href="{{ page.baseurl }}/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="{{ page.baseurl }}/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.
 
-The <a href="https://github.com/magento/code-migration" target="_blank">Code Migration Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.
+The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.

@@ -7,32 +7,32 @@ pages:
       url: /ext-best-practices/admin/admin-best-practices.html
       children:
 
-        - label: Admin Panel Placement and Design
+        - label: 管理面板的定位和设计
           url: /ext-best-practices/admin/placement-and-design.html
 
-        - label: Admin FAQ
+        - label: 管理面板常见问题
           url: /ext-best-practices/admin/ext-best-practices_admin_FAQ.html
 
-    - label: Extension Coding
+    - label: 扩展编码
       url: /ext-best-practices/extension-coding/coding-best-practices.html
       children:
 
-        - label: Programming best practices
+        - label: 最佳编程实践
           url: /ext-best-practices/extension-coding/common-programming-bp.html
 
-        - label: Working with the Architecture
+        - label: 在构架下工作
           url: /ext-best-practices/extension-coding/working-with-arch-bp.html
 
-        - label: Security, performance, and data handling
+        - label: 安装、性能及数据处理
           url: /ext-best-practices/extension-coding/security-performance-data-bp.html
 
-        - label: Observers best practices
+        - label: 观察者最佳实践
           url: /ext-best-practices/extension-coding/observers-bp.html
 
-        - label: Coding FAQ
+        - label: 编码常见问题
           url: /ext-best-practices/extension-coding/coding-faq.html
 
-        - label: Creating a Magento admin page
+        - label: 新建一个Magento管理面板页面
           url: /ext-best-practices/extension-coding/example-module-adminpage.html
 
     - label: Storefront
@@ -41,15 +41,15 @@ pages:
     - label: Security
       children:
 
-        - label: Writing secure code
+        - label: 编写安全的代码
           url: /ext-best-practices/security/writing-secure-code.html
 
     - label: Tutorials
       children:
 
-        - label: Copying fieldsets
+        - label: 拷贝form输入字段集
           url: /ext-best-practices/tutorials/copy-fieldsets.html
 
-        - label: Serialized to JSON data upgrade
+        - label: 序列化为JSON数据升级
           versions: ["2.2", "2.3"]
           url: /ext-best-practices/tutorials/serialized-to-json-data-upgrade.html

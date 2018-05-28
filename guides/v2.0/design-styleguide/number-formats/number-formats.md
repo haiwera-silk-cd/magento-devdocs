@@ -13,13 +13,13 @@ For more number formats, use the Associated Press (AP) Stylebook on first refere
 ## Basic Standards
 
 <ul>
-  <li>For numbers 10 and higher, use numerals. For numbers lower than 10, spell out numbers. <em>See correct examples:</em>
+  <li>For numbers 10 and higher, use numerals. For numbers lower than 10, spell out numbers. <em>See correct 例如:</em>
     <ul style="list-style-type:none">
       <li>Yes – “We offer this service in nine countries.”</li>
       <li>Yes – “Over 200 companies use this service.”</li>
     </ul>
   </li>
-  <li>In headlines and "pull quotes", where the number is the focus, use numerals. <em>See correct examples:</em>
+  <li>In headlines and "pull quotes", where the number is the focus, use numerals. <em>See correct 例如:</em>
     <ul style="list-style-type:none">
       <li>Yes – “1 in 3 shoppers ...”</li>
       <li>Yes – “We’re #1”</li>
@@ -56,14 +56,14 @@ In regular text, write out “percent”. However, the ”%” sign can be used 
 
 ## Money
 
-Do not add a space between the symbol and the number. ... *Examples:* $781, £490, €2,183
+Do not add a space between the symbol and the number. ... *例如:* $781, £490, €2,183
 
 This is how we write about money:
 
 <table>
   <tbody>
     <tr>
-      <th colspan="4">Examples:</th>
+      <th colspan="4">例如:</th>
     </tr>
     <tr>
       <td><strong>否</strong> – “$2.00"<br>
@@ -154,7 +154,7 @@ This is how we write about money:
 
 **Time Zones**
 
-* Formatting. When a time is not adjusted by the system to reflect the current time zone, append the time zone after the time. ... *Correct examples:* "7:30am CT", "7-10:30am CT"
+* Formatting. When a time is not adjusted by the system to reflect the current time zone, append the time zone after the time. ... *Correct 例如:* "7:30am CT", "7-10:30am CT"
 
 * Do not indicate standard or daylight time. ... *Correct example:* Central Time is written as "CT", not "CST" or "CDT".
 

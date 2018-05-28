@@ -2,7 +2,7 @@
 group: config-guide
 subgroup: 14_Elastic
 title: 安装和配置Elasticsearch
-menu_title: 安装和配置Elasticsearch (Magento Commerce only)
+menu_title: 安装和配置Elasticsearch (仅企业版适用)
 menu_order: 1
 menu_node: parent
 version: 2.2
@@ -204,7 +204,7 @@ Elasticsearch 5.x requires JDK 1.8 or higher. Elasticsearch 2.x requires JDK 1.7
 ## Additional resources {#es-resources}
 For additional information, see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/index.html){:target=_"blank"}
 
-#### Next
+#### 下一步
 
 *	[配置nginx和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-nginx.html)
 *	[配置Apache和Elasticsearch]({{ page.baseurl }}/config-guide/elasticsearch/es-config-apache.html)

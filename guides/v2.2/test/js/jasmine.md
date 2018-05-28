@@ -12,21 +12,21 @@ Magento uses a custom [Grunt] task named `spec` to run Jasmine tests. The task c
 
 ## Prepare environment
 
-**Step 1.** [Install Node.js].
+**步骤1.** [Install Node.js].
 
-**Step 2.** [Install grunt-cli].
+**步骤2.** [Install grunt-cli].
 
-**Step 3.** In `<magento_root_dir>`, create `Gruntfile.js` and copy `Gruntfile.js.sample` into it.
+**步骤3.** In `<magento_root_dir>`, create `Gruntfile.js` and copy `Gruntfile.js.sample` into it.
 
-**Step 4.** In `<magento_root_dir>`, create `package.json` and copy `package.json.sample` into it.
+**步骤4.** In `<magento_root_dir>`, create `package.json` and copy `package.json.sample` into it.
 
-**Step 5.** In `<magento_root_dir>`, install all dependencies:
+**步骤5.** In `<magento_root_dir>`, install all dependencies:
 
 ```bash
 npm install
 ```
 
-**Step 6.** In `<magento_root_dir>`, generate static view files in Magento that are going to be tested
+**步骤6.** In `<magento_root_dir>`, generate static view files in Magento that are going to be tested
 {:#prepare-step6}
 
 ```bash
@@ -80,11 +80,11 @@ which tests a JS module:
 
 [`<magento_root_dir>/app/code/Magento/Ui/view/base/web/js/grid/columns/actions.js`]
 
-in its static representations generated in [Step 6] previously:
+in its static representations generated in [步骤6. previously:
 
 `<magento_root_dir>/pub/static/<area>/<theme>/<localisation>/Magento_Ui/js/columns/actions.js`.
 
-### Step 1. Create a new file with name `<fileName>.test.js` in an appropriate module directory.
+### 步骤1. Create a new file with name `<fileName>.test.js` in an appropriate module directory.
 
 For convenience, we can reflect the directory structure of a file to test.
 
@@ -94,7 +94,7 @@ A path to a test of the module: `app/code/Magento/Ui/base/js/grid/columns/action
 
 In `<magento_root_dir>/dev/tests/js/jasmine/tests` create the test with appropriate path.
 
-### Step 2. Require a file that you want to test.
+### 步骤2. Require a file that you want to test.
 
 For our example we need to cover all static view files ending with `Magento_Ui/js/grid/columns/actions`.
 
@@ -109,7 +109,7 @@ define([
 });
 ```
 
-### Step 3. Write your Jasmine test code.
+### 步骤3. Write your Jasmine test code.
 
 A Jasmine test consists of main two parts:
 
@@ -283,7 +283,7 @@ npm install
 {:target="_blank"}
 
 <!-- Internal -->
-[Step 6]: #prepare-step6
+[步骤6.: #prepare-step6
 
 
 <!-- Abbreviations -->

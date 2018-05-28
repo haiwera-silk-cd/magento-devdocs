@@ -15459,7 +15459,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		// force json dataType
 		s.dataTypes[ 0 ] = "json";
 
-		// Install callback
+		// 安装callback
 		overwritten = window[ callbackName ];
 		window[ callbackName ] = function() {
 			responseContainer = arguments;
@@ -29629,7 +29629,7 @@ function params(str){
  *  - set flags (.ok, .error, etc)
  *  - parse header
  *
- * Examples:
+ * 例如:
  *
  *  Aliasing `superagent` as `request` is nice:
  *
@@ -29929,7 +29929,7 @@ Request.prototype.abort = function(){
 /**
  * Set header `field` to `val`, or multiple fields with one object.
  *
- * Examples:
+ * 例如:
  *
  *      req.get('/')
  *        .set('Accept', 'application/json')
@@ -29993,7 +29993,7 @@ Request.prototype.getHeader = function(field){
 /**
  * Set Content-Type to `type`, mapping values from `request.types`.
  *
- * Examples:
+ * 例如:
  *
  *      superagent.types.xml = 'application/xml';
  *
@@ -30020,7 +30020,7 @@ Request.prototype.type = function(type){
 /**
  * Set Accept to `type`, mapping values from `request.types`.
  *
- * Examples:
+ * 例如:
  *
  *      superagent.types.json = 'application/json';
  *
@@ -30060,7 +30060,7 @@ Request.prototype.auth = function(user, pass){
 /**
 * Add query-string `val`.
 *
-* Examples:
+* 例如:
 *
 *   request.get('/shoes')
 *     .query('size=10')
@@ -30126,7 +30126,7 @@ Request.prototype.attach = function(field, file, filename){
  * Send `data`, defaulting the `.type()` to "json" when
  * an object is given.
  *
- * Examples:
+ * 例如:
  *
  *       // querystring
  *       request.get('/search')
@@ -30363,7 +30363,7 @@ request.Request = Request;
 /**
  * Issue a request:
  *
- * Examples:
+ * 例如:
  *
  *    request('GET', '/users').end(callback)
  *    request('/users').end(callback)

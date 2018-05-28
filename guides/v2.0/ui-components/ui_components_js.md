@@ -1,37 +1,37 @@
 ---
 group:  UI Library
 subgroup: A_Using_UI
-title: Using UI components' client-side
-menu_title: Using UI components' client-side
+title: Using UI 组件' client-side
+menu_title: Using UI 组件' client-side
 menu_node: parent
 version: 2.0
-github_link: ui-components/ui_components_js.md
+github_link: ui-组件/ui_组件_js.md
 redirect_from: /guides/v2.0/javascript-dev-guide/ui_components_js.html
 ---
 
-## What's in this topic
-This topic is aimed for developers, who need to reuse the [Magento UI Components]({{ page.baseurl }}/ui-library/ui-library-component.html). 
+## 这里有什么
+This topic is aimed for developers, who need to reuse the [Magento UI components]({{ page.baseurl }}/ui-library/ui-library-component.html). 
 
 The topic covers the following:
 
-- [UI components' configuration](#config)
+- [UI 组件' configuration](#config)
 - [The most important UI component's properties](#main_properties)
-- [UI components’ properties used for linking](#comp_link)
-- [Description of the additional UI components](#comp_additional)
-- [JS UI components debugging](#comp_debug)
+- [UI 组件’ properties used for linking](#comp_link)
+- [Description of the additional UI 组件](#comp_additional)
+- [JS UI 组件 debugging](#comp_debug)
 
-## UI components' configuration {#config}
+## UI 组件' configuration {#config}
 
 A UI component's behavior, configuration and structure is defined by the following:
 
- - The available configuration options and methods for components of a certain type, defined in the component's .js file.
+ - The available configuration options and methods for 组件 of a certain type, defined in the component's .js file.
 
  - The actual configuration and structure of a particular component, specified in the component's configuration `.xml` file, in the scope of the `<argument></argument>` node. The configuration file also extends properties, specifies the component's template and the path to the component's `.js` file.
 
 All these properties, options, and methods are available in the component template's scope.
 
 
-## Most important UI components' properties {#main_properties}
+## Most important UI 组件' properties {#main_properties}
 The most important client-side properties of a {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %} are the following:
 
  - `component`: the path to the component's `.js` file in terms of RequireJS.
@@ -59,9 +59,9 @@ The `.html` template of the bookmarks component is [Magento/Ui/view/base/web/tem
 </argument>
 {% endhighlight xml%}
 
- - children: is a general name for the nested components of a certain component. Children can be specified in the `.xml` configuration of the parent component (all nodes except `<argument/>` and `<dataSource/>` are considered children) and in the Knockout JS templates: children are the keys of the `elems` property.
+ - children: is a general name for the nested 组件 of a certain component. Children can be specified in the `.xml` configuration of the parent component (all nodes except `<argument/>` and `<dataSource/>` are considered children) and in the Knockout JS templates: children are the keys of the `elems` property.
 
- - `name`: the name of the component specified in the `.xml` configuration file of the parent UI component. In the run-time in a browser this value is transformed to a complex string. This string represents hierarchy of components in the run-time.
+ - `name`: the name of the component specified in the `.xml` configuration file of the parent UI component. In the run-time in a browser this value is transformed to a complex string. This string represents hierarchy of 组件 in the run-time.
 For example, [`app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml:57`]({{ site.mage2000url }}app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml#L57):
 
 {%highlight xml%} 
@@ -76,9 +76,9 @@ This string is constructed from the following values:
  - `listing_top`: the value of the `name` attribute of the parent `<container name="listing_top">` component. 
  - `columns_controls`: the value of the `name` attribute of the component itself.
 
-## UI Components' properties used for linking {#comp_link}
+## UI 组件' properties used for linking {#comp_link}
 
-The following properties are used for linking observable properties and methods of UI components:
+The following properties are used for linking observable properties and methods of UI 组件:
 
 
 - `exports`: used to notify some external entity about property changing. `exports`s value is an object, composed of the following:
@@ -194,8 +194,8 @@ Example of using `listens` in a component's configuration `.xml` file:
 {% endhighlight xml%}
 
 
-## Frequently used additional components {#comp_additional}
-This section is a brief description of the most frequently used additional UI components.
+## Frequently used additional 组件 {#comp_additional}
+This section is a brief description of the most frequently used additional UI 组件.
 
 ### `uiClass`
 Enables OOP pattern implementation.
@@ -218,7 +218,7 @@ Extends `uiElement`. Adds the following:
 ### `uiRegistry`
 In-memory storage. Plain storage of entities by keys. Implements the `get()`, `set()`, and `has()` methods.
 
-All the components described in this section are aliases in terms of RequireJS. So they can be directly requested in the component's `.js` file or used in a component's configuration `.xml` file (except `uiRegistry`, which by its nature is not expected to be used in a configuration file). 
+All the 组件 described in this section are aliases in terms of RequireJS. So they can be directly requested in the component's `.js` file or used in a component's configuration `.xml` file (except `uiRegistry`, which by its nature is not expected to be used in a configuration file). 
 
 Example for the `uiClass` property request:
 
@@ -241,10 +241,10 @@ Example of using the `uiClass` property in a configuration file:
     </container>
 {%endhighlight js%}
 
-## JS UI components debugging {#comp_debug}
-This section describes how to define what UI components are used on a particular page and what data they use.
+## JS UI 组件 debugging {#comp_debug}
+This section describes how to define what UI 组件 are used on a particular page and what data they use.
 
-To define the UI components used on a page, you can use browser built-in developer tools, or install additionally a plugin, for example Knockout JS context debugger for Google Chrome.
+To define the UI 组件 used on a page, you can use browser built-in developer tools, or install additionally a plugin, for example Knockout JS context debugger for Google Chrome.
 
 ### Debug using browser built-in tools
 1. Open the required page in a browser.
@@ -252,7 +252,7 @@ To define the UI components used on a page, you can use browser built-in develop
 3. Search for `data-bind="scope:`. The string after `scope` is the full name of the component.
 5. Open developers tools and in the console tab run `require('uiRegistry').get('<full_component_name>')`. Where `<full_component_name>` is the name you defined on the previous step. The name and the configuration of the UI component instance is displayed once the command is executed.
 
-For illustration, let's find out what UI components are used on the {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}Catalog{% endglossarytooltip %} page in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel:
+For illustration, let's find out what UI 组件 are used on the {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}Catalog{% endglossarytooltip %} page in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel:
 
 <div style="border: 1px solid #ABABAB">
 <img src="{{ site.baseurl }}/common/images/ui_debug1.png" alt="The catalog page"> 
@@ -266,7 +266,7 @@ According to the described procedure, open the page source and search for "`data
 </div>
 
 
-So we find out that the main UI component used on this page is product listing, with `product_listing.product_listing` as a full name. To see its configuration, child components and data source, in the in the **Console** tab we run `require('uiRegistry').get('product_listing.product_listing')`:
+So we find out that the main UI component used on this page is product listing, with `product_listing.product_listing` as a full name. To see its configuration, child 组件 and data source, in the in the **Console** tab we run `require('uiRegistry').get('product_listing.product_listing')`:
 
 <div style="border: 1px solid #ABABAB">
 <img src="{{ site.baseurl }}/common/images/ui_debug3.png" alt="run the command in Console">

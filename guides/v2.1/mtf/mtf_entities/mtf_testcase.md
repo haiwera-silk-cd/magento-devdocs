@@ -1,6 +1,6 @@
 ---
 group: mtf-guide
-title: Test case
+title: 测试用例
 version: 2.1
 github_link: mtf/mtf_entities/mtf_testcase.md
 ---
@@ -8,11 +8,11 @@ github_link: mtf/mtf_entities/mtf_testcase.md
 The Magento Functional Testing Framework supports two types of functional tests:
 
 - Injectable test: the main type of the FTF test that uses {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} [data set][] files as inputs
-- [Scenario test][]: supports a Magento modularity and enables you to inject one step into another test
+- [场景测试][]: supports a Magento modularity and enables you to inject one step into another test
 
 This topic discusses the injectable test only. 
 
-## Test case structure {#structure}
+## 测试用例 structure {#structure}
 
 A test case class extends the [Mtf\TestCase\Injectable][] class. It contains one `test()` method and can optionally include `__prepare()`, `__inject()`, and `tearDown()` methods.
 
@@ -119,34 +119,34 @@ public function tearDown()
 }
 ```
 
-## Test case flow {#flow}
+## 测试用例 flow {#flow}
 
 All data required for the test are stored in variations of a data set. A `__prepare()` method is run first to prepare entities needed for a whole test. Arguments returned by a `__prepare()` method are available during all test including constraints. Further, the `__inject()` method injects data in the test. The `test()` method performs all the test steps using the data from the `variation 1`. Then, constraints listed in the `variation 1` are run in the order they are listed. After that, the `tearDown()` method "cleans up" to be ready for the next test or variation. When a variation fails, the test launches for the next variation in a queue.
 
-![Test case flow diagram]({{ site.magentourl }}/common/images/ftf/mtf_test_case_flow.png)
+![测试用例 flow diagram]({{ site.magentourl }}/common/images/ftf/mtf_test_case_flow.png)
 
 ## How to create a test case {#how-to-create}
 
-__Step 1.__ Create a [data set][]
+__步骤1.__ Create a [data set][]
 
-__Step 2.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/<module>/TestCase` directory
+__步骤2.__ Create a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/<module>/TestCase` directory
 
-__Step 3.__ Give it a name using the following format:
+__步骤3.__ Give it a name using the following format:
 
 <b><span style="color:blue">{action}</span><span style="color:red">{entityName}</span>Entity<span style="color:green">{additional_description_if_needed}</span>Test</b>
 
-For example:
+例如:
    
 - <span style="color:blue">Create</span><span style="color:red">ConfigurableProduct</span>EntityTest
 - <span style="color:blue">Create</span><span style="color:red">CatalogEvent</span>Entity<span style="color:green">FromCategoryPage</span>Test
 
-__Step 4.__ If you have preconditions, prepare the data using a [__prepare()](#prepare-method) method
+__步骤4.__ If you have preconditions, prepare the data using a [__prepare()](#prepare-method) method
 
-__Step 5.__ Inject the initial data for a test using a [__inject()](#inject-method) method
+__步骤5.__ Inject the initial data for a test using a [__inject()](#inject-method) method
 
-__Step 6.__ Declare all the test steps in the [test()](#test-method) method
+__步骤6.__ Declare all the test steps in the [test()](#test-method) method
  
-__Step 7.__ If you want to perform any actions after constraints, use a [tearDown()](#teardown-method) method
+__步骤7.__ If you want to perform any actions after constraints, use a [tearDown()](#teardown-method) method
 
 
 <!-- LINK DEFINITIONS -->
@@ -154,7 +154,7 @@ __Step 7.__ If you want to perform any actions after constraints, use a [tearDow
 [data set]: {{ page.baseurl }}/mtf/mtf_entities/mtf_dataset.html
 [variation]: {{ page.baseurl }}/mtf/mtf_entities/mtf_dataset.html
 [Mtf\TestCase\Injectable]: https://github.com/magento/mtf/blob/develop/Magento/Mtf/TestCase/Injectable.php
-[Scenario test]: {{ page.baseurl }}/mtf/mtf_entities/mtf_scenariotest.html
+[场景测试]: {{ page.baseurl }}/mtf/mtf_entities/mtf_scenariotest.html
 [processAssert()]:{{ page.baseurl }}/mtf/mtf_entities/mtf_constraint.html#mtf_constraint_assert
 [constraints]: {{ page.baseurl }}/mtf/mtf_entities/mtf_constraint.html
 [fixture]: {{ page.baseurl }}/mtf/mtf_entities/mtf_fixture.html

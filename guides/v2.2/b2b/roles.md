@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: Manage company roles
-menu_title: Manage company roles
+title: 管理公司角色
+menu_title: 管理公司角色
 menu_order: 14
 version: 2.2
 ee_only: True
@@ -22,7 +22,7 @@ Within a company, customers may have different job roles, levels of responsibili
 * Negotiable quotes
 * Company profile
 * Company user management
-* Company credit
+* 公司信用帐户
 
 Each of these resources contains a hierarchy of other resources. When a Company Admin grants or blocks access to a resource from the store UI, the action applies to all sub-resources, unless explicitly overridden. However, if you grant or block accesss using web APIs, you must specify each resource individually.
 
@@ -53,10 +53,10 @@ Magento_Company::roles_view | View roles and permissions | 3
 Magento_Company::roles_edit | Manage roles and permissions | 4
 Magento_Company::users_view | View users and teams | 3
 Magento_Company::users_edit | Manage users and teams |  4
-Magento_Company::credit | Company credit | 2
+Magento_Company::credit | 公司信用帐户 | 2
 Magento_Company::credit_history | view | 3
 
-## Manage company roles
+## 管理公司角色
 
 The Company Admin controls the possible actions for each customer within the company by creating common roles with embedded permissions and then assigning them to company users. In most cases, a few roles will be sufficient to cover all the different possible combinations of permissions needed for a company.
 
@@ -1207,7 +1207,7 @@ None
 
 ## Related information
 
-* [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-* [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-* [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-* [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+* [集成公司模块]({{ page.baseurl }}/b2b/company.html)
+* [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)
+* [管理公司用户]({{ page.baseurl }}/b2b/company-users.html)
+* [管理公司结构]({{ page.baseurl }}/b2b/company-structures.html)

@@ -38,9 +38,9 @@ You can extend and override layouts in the `Magento\Company\view\adminhtml\layou
 
 For more information about layouts, see the [Layout documentation]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html).
 
-### UI components
+### UI 组件
 
-The following directories contain extensible UI components:
+The following directories contain extensible UI 组件:
 
 * `Magento\Company\view\adminhtml\ui_component` -  customer listing, invitation form, sales order grid
 

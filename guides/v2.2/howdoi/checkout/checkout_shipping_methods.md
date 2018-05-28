@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup: checkout
-title: Customize the list of shipping methods
-menu_title: Customize the list of shipping methods
+title: 自定义物流方式列表
+menu_title: 自定义物流方式列表
 menu_order: 100
 version: 2.2
 github_link: howdoi/checkout/checkout_shipping_methods.md
@@ -113,7 +113,7 @@ In your custom module directory, create a new file: `<your_module_dir>/view/fron
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
+                    <item name="组件" xsi:type="array">
                         <item name="checkout" xsi:type="array">
                             <item name="children" xsi:type="array">
                                 <item name="steps" xsi:type="array">

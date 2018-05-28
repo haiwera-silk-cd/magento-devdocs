@@ -15,7 +15,7 @@ functional_areas:
 
 贡献开发者通过在`composer.json`中指定组件和组件的版本来更新这个组件 
 
-如果你不是一个贡献开发者，要更新你的组件请参考<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">更新Magento及其组件</a>.
+如果你不是一个贡献开发者，要更新你的components请参考<a href="{{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html">更新Magento及其组件</a>.
 
 你可以在`composer.json`添加一条`require`语句或直接通过执行`composer require`命令来更新，如下
 

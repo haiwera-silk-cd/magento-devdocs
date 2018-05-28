@@ -178,7 +178,7 @@ The following figure shows the technologies used in the Production environment:
 -   [RabbitMQ]({{ page.baseurl }}/cloud/project/project-conf-files_services-rabbit.html)
 -   [Elasticsearch]({{ page.baseurl }}/cloud/project/project-conf-files_services-elastic.html)
 
-For the Staging and Production environments, we recommend installing the Fastly CDN module 1.2.33 or later. See [Fastly in Cloud]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html).
+For the Staging and Production environments, we recommend installing the Fastly CDN module 1.2.33或更新. See [Fastly in Cloud]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html).
 
 Edit the following YAML files to configure specific software versions to use in your implementation.
 

@@ -140,7 +140,7 @@ Attributes|Type|Use|Description
 ---|---|---|---
 name|string|required|Unique page name identifier
 url|string|required|URL path (excluding the base url) for the page. Use parameterized notation (`{{var1}}`) for replaceable parameters, such as the edit page for a persisted entity that is based on an ID or a name.
-module|string|required|The name of the module to which the page belongs. For example: `"Magento_Catalog"`.
+module|string|required|The name of the module to which the page belongs. 例如: `"Magento_Catalog"`.
 parameterized|boolean |optional|Include and set to `"true"` if the `url` for this page has parameters that need to be replaced for proper use.
 remove|boolean|optional|Default value: `"false"`. Set to `"true"` to remove this element during parsing.
 

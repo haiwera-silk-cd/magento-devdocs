@@ -26,4 +26,4 @@ The steps in this section provide an order for setting up your local environment
 On your local, you will add extensions, develop and add any custom code, export configurations, and any additional work to iterate through code changes. Using Git processes with GitHub repos, push changes to your branch, test in the Integration development environment, prior to deployments for staging and production testing. For more information on the develop and deploy process, see the [部署过程]({{ page.baseurl }}/cloud/reference/discover-deploy.html).
 
 #### 下一步
-[Step 1, Get started setting up an environment]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)
+[步骤1. Get started setting up an environment]({{ page.baseurl }}/cloud/before/before-setup-env-2_clone.html)

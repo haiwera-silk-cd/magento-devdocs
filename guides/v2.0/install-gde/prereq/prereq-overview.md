@@ -14,7 +14,7 @@ functional_areas:
   - Setup
 ---
 
-<h2 id="instgde-prereq-overview">Before you begin</h2>
+<h2 id="instgde-prereq-overview">开始之前</h2>
 
 Before you install Magento, you must do all of the following:
 
@@ -47,7 +47,7 @@ Enter the following commands as a user with `root` privileges:
 		yum -y update
 		yum -y upgrade
 
-<h2 id="instgde-prereq-check">Prerequisite check</h2>
+<h2 id="instgde-prereq-check">就绪检查</h2>
 
 To check your system for prerequisites, enter the following commands:
 
@@ -68,7 +68,7 @@ To install or upgrade Apache, see <a href="{{ page.baseurl }}/install-gde/prereq
 
 	php -v
 
-You must run {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} version 5.5 or later as the following result indicates:
+You must run {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} version 5.5或更新 as the following result indicates:
 
 	PHP 5.5.9-1ubuntu4.4 (cli) (built: Sep  4 2014 06:56:34)
 	Copyright (c) 1997-2014 The PHP Group
@@ -84,11 +84,11 @@ To install PHP, see:
 
 	mysql -u <database root user or database owner name> -p
 
-For example:
+例如:
 
 	mysql -u magento -p
 
-You must run MySQL version 5.6 or later as the following result indicates:
+You must run MySQL version 5.6或更新 as the following result indicates:
 
 		Welcome to the MySQL monitor.  Commands end with ; or \g.
 		Your MySQL connection id is 871
@@ -107,7 +107,7 @@ Enter `exit` at the `mysql>` prompt to exit.
 To install or upgrade MySQL, see <a href="{{ page.baseurl }}/install-gde/prereq/mysql.html">MySQL</a>.
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">Choose how to install the Magento software</a>
+<a href="{{ page.baseurl }}/install-gde/bk-install-guide.html">选择如何安装Magento</a>
 
 #### 相关主题
 

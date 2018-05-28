@@ -46,8 +46,8 @@ Migrate Magento 1 extension code to Magento 2.
 
 To find the latest extensions versions, visit [Magento Marketplace](https://marketplace.magento.com/){:target="_blank"} or contact your extension provider.
 
-You can also use the Magento [Code Migration Tool](https://github.com/magento/code-migration/blob/develop/README.md){:target="_blank"}.
+You can also use the Magento [代码迁移 Tool](https://github.com/magento/code-migration/blob/develop/README.md){:target="_blank"}.
 
-## Related topics
+## 相关主题
 
 * [Install the 数据迁移工具]({{ page.baseurl }}/migration/migration-tool-install.html)

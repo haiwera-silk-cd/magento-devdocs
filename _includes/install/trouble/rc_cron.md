@@ -5,7 +5,7 @@ This section discusses how to see if cron is currently running and to verify whe
 
 To verify whether or not your crontab is set up:
 
-1.	Log in to your Magento server as, or switch to, the [Magento file system owner]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
+1.	Log in to your Magento server as, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.	See if the following file exists:
 
 		ls -al <your Magento install dir>/var/.setup_cronjob_status
@@ -15,7 +15,7 @@ To verify whether or not your crontab is set up:
 
 	As a user with `root` privileges, enter the following command:
 
-		crontab -u <Magento file system owner name> -l
+		crontab -u <Magento文件系统所有者 name> -l
 
 	For example, on CentOS
 

@@ -30,7 +30,7 @@ Following is the conventional location of `requirejs-config.js` (RequireJS confi
 
 `requirejs-config.js` is a valid JavaScript file. It should define the `config` variable, which is a configuration variable.
 
-### Example of usages
+### 示例 of usages
 
 Lets look at an example, the Catalog module. In the `<Magento_Catalog_module_dir>/view/base/requirejs-config.js` file we see the configuration variable:
 

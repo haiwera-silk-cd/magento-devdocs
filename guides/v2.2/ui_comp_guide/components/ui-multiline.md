@@ -1,15 +1,15 @@
 ---
-group: UI_Components_guide
-subgroup: components
-title: Multiline component
-menu_title: Multiline component
+group: UI_组件_guide
+subgroup: 组件
+title: 多输入组件
+menu_title: 多输入组件
 version: 2.2
-github_link: ui_comp_guide/components/ui-multiline.md
+github_link: ui_comp_guide/组件/ui-multiline.md
 ---
 
 ## Overview
 
-The Multiline component is a collection of form elements that displays multiple fields of the same type. For example, the **Street Address** fields.
+The 多输入组件 is a collection of form elements that displays multiple fields of the same type. For example, the **Street Address** fields.
 
 ## Multiline configuration
 Extends all [`uiCollection`]({{ page.baseurl }}/ui_comp_guide/concepts/ui_comp_uicollection_concept.html) configuration.
@@ -73,7 +73,7 @@ Multiline-specific options:
       String
     </td>
     <td>
-      <code>Magento_Ui/js/form/components/group</code>
+      <code>Magento_Ui/js/form/组件/group</code>
     </td>
   </tr>
   <tr>
@@ -82,7 +82,7 @@ Multiline-specific options:
     </td>
     <td>
       The path to <code>.html</code> template that will be used for
-      all child components rendered by the multiline component.
+      all child 组件 rendered by the multiline component.
     </td>
     <td>
       String

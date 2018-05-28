@@ -42,7 +42,7 @@ If you have a Magento installation handy, enter the following to display the cur
 ### action
 `action` is an action the command does.
 
-### Examples
+### 示例
 	// general commands: just a group and an action
 	magento setup:install
 	magento module:status
@@ -145,10 +145,10 @@ To avoid naming your command the same as another command, we recommend:
 
 	The vendor name doesn't have to start the command name; it could be in the middle. This way, related commands are grouped together.
 
-	Examples:
+	例如:
 
 		dev:myname:theme:create
 		dev:myname:theme:delete
 
-#### Related topic
+#### 相关主题
 <a href="{{ page.baseurl }}/extension-dev-guide/cli-cmds/cli-howto.html">如何添加命令行命令</a>

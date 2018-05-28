@@ -12,7 +12,7 @@ functional_areas:
   - Deploy
 ---
 
-This topic discusses how to recover from a failed component deployment. Typical examples are components that have dependencies that are not met by your environment; for example, incompatible {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} versions.
+This topic discusses how to recover from a failed component deployment. Typical examples are 组件 that have dependencies that are not met by your environment; for example, incompatible {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} versions.
 
 You can recover from a failed deployment in any of the following ways:
 

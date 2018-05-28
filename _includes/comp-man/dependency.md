@@ -8,7 +8,7 @@ We suggest you try the following solutions in the order shown:
 *	[The Component Dependency Check status never changes](#trouble-depend-state)
 
 ### Conflicting dependencies {#trouble-depend-conflict}
-The message `We found conflicting component dependencies` displays if Composer cannot determine which components to install or update. To resolve component dependency issues, you should be a technical person who thoroughly understands how Composer works.
+The message `We found conflicting component dependencies` displays if Composer cannot determine which 组件 to install or update. To resolve component dependency issues, you should be a technical person who thoroughly understands how Composer works.
 
 Following is a sample failure message:
 
@@ -22,14 +22,14 @@ Following is a sample failure message:
   <p>The message you see will likely be different.</p>
 </div>
 
-Typically, component dependency conflicts result from someone manually editing the Magento 2 `composer.json` file. It can also be caused by third-party modules that depend on earlier Magento components than the ones you have installed.
+Typically, component dependency conflicts result from someone manually editing the Magento 2 `composer.json` file. It can also be caused by third-party modules that depend on earlier Magento组件 than the ones you have installed.
 
 In the preceding example, the installed package `magento/sample-data version 0.74.0-beta15` cannot be upgraded to `1.0.0-beta`. However, 0.74.0-beta15 *can* be upgraded to `0.74.0-beta16` (or others).
 
 Edit `composer.json` to make any of these changes and try the readiness check again.
 
 ### File system permissions issues {#trouble-depend-permission}
-If the Magento file system owner doesn't have permissions to write to directories on the Magento file system, a message similar to the following displays:
+If the Magento文件系统所有者 doesn't have permissions to write to directories on the Magento file system, a message similar to the following displays:
 
 	file_put_contents(/var/www/html/magento2ce/var/composer_home/cache/repo/https---
 	packagist.org/provider-doctrine$instantiator.json): failed to open stream: Permission denied

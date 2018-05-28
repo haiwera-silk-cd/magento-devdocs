@@ -1,9 +1,9 @@
 ---
 group: coding-standards
 subgroup: 01_Coding standards
-title: JavaScript coding standard
+title: js编码规范
 landing-page: Coding standards
-menu_title: JavaScript coding standard
+menu_title: js编码规范
 menu_order: 5
 version: 2.0
 github_link: coding-standards/code-standard-javascript.md
@@ -18,7 +18,7 @@ Developers writing {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}Jav
 Use [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt) to interpret the "must," "must not," "required," "shall," "shall not," "should," "should not," "recommended," "may," and "optional" keywords.
 
 Magento uses the [jQuery library][jquery] including standard and custom [jQuery widgets][jquery-widgets].
-For the jQuery widget coding standard, see [jQuery widget coding standard][jquery-widget-coding-standard].
+For the jq小工具编码规范, see [jq小工具编码规范][jquery-widget-coding-standard].
 
 ## Eslint and JSCS tools
 
@@ -150,7 +150,7 @@ Since there is semicolon to end the first statement, the first function returns 
 When the script tries to call 42 as a function with the second function as a parameter, an error occurs.
 
 {% highlight javascript %}
-// Example 2: Trying to do one thing on Internet Explorer and another on Firefox.
+// Example 2: Trying to do one thing on IEand another on Firefox.
 var x = {
   'i': 1,
   'j': 2
@@ -322,7 +322,7 @@ Single-line array and object initializers are allowed when they fit on a line as
 
 Long identifiers or values present problems for aligned initialization lists, so always prefer non-aligned initialization.
 
-For example:
+例如:
 
 {% highlight javascript %}
 Object.prototype = {

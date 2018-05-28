@@ -32,8 +32,8 @@ However, many terms use lowercase including: merchant, developer, home page, sta
 
 <ul>
   <li><strong>The first letter of the first and last words.</strong></li>
-  <li><strong>The second word of a compound, hyphenated word.</strong> Exception: When the first word in the hyphenation is not a prefix ... <em>Prefix examples:</em> anti-, pre-, post-<br>
-  <em>Examples:</em><br><br>
+  <li><strong>The second word of a compound, hyphenated word.</strong> Exception: When the first word in the hyphenation is not a prefix ... <em>Prefix 例如:</em> anti-, pre-, post-<br>
+  <em>例如:</em><br><br>
     <ul style="list-style-type:none">
       <li><strong>否</strong> – "Best-rated Platform Software"</li>
       <li>Yes – "Best-Rated Platform Software"</li>
@@ -46,7 +46,7 @@ However, many terms use lowercase including: merchant, developer, home page, sta
   <li><strong>All verbs.</strong> 
     <ul>
       <li><em>Capitalize even the little ones.</em></li>
-      <li><em>Correct examples:</em> Is, Am, Are, Was, Were, Be, Being, and Been.</li>
+      <li><em>Correct 例如:</em> Is, Am, Are, Was, Were, Be, Being, and Been.</li>
     </ul>
   </li>
   <li><strong>All parts of verbs.</strong> Includes prepositions, if they are part of phrasal verb ... <em>Correct example:</em> "Turn On"
@@ -54,7 +54,7 @@ However, many terms use lowercase including: merchant, developer, home page, sta
       <li><em>Tip:</em> if you emphasize the word when reading it aloud, then capitalize it."</li>
       <li><em>Infinitives are not verbs:</em> See infinitives guidance, jump to the <span markdown="1">["Do Not capitalize ..."]({{ page.baseurl }}/design-styleguide/capitalization/capitalization.html#do-not-capitalize-)</span> section.</li>
     </ul>
-  <em>Examples:</em><br><br>
+  <em>例如:</em><br><br>
     <ul style="list-style-type:none">
       <li><strong>否</strong> – “Turning Blocks on and off"</li>
       <li>Yes – “Turning Blocks On and Off”</li>
@@ -68,8 +68,8 @@ However, many terms use lowercase including: merchant, developer, home page, sta
 
 <ul>
   <li><strong>Words following prefixes.</strong> For guidance, jump to the <span markdown="1">["Capitalize ... "]({{ page.baseurl }}/design-styleguide/capitalization/capitalization.html#capitalize-)</span>section and find the prefixes and compound, hyphenated words guidance.</li>
-  <li><strong>Articles.</strong> ... <em>Correct examples:</em> a, an, the</li>
-  <li><strong>Conjunctions.</strong> ... <em>Correct examples:</em> and, but, for, or, nor</li>
+  <li><strong>Articles.</strong> ... <em>Correct 例如:</em> a, an, the</li>
+  <li><strong>Conjunctions.</strong> ... <em>Correct 例如:</em> and, but, for, or, nor</li>
   <li><strong>Prepositions of fewer than four letters.</strong> Includes the "to" in infinitives. <em>See example:</em>
     <ul style="list-style-type:none">
       <li><strong>否</strong> – “The Key To Customer Service In An Omnichannel World"</li>
@@ -98,7 +98,7 @@ Use capitalization standards, as specified in the Magento Glossary and Word U
 
 ### Capitalize ...
 
-* **Numbered items.** Capitalize when referring to a numbered object. ... *Correct examples:* Slide 5, Exercise 3, Table 4.2, Figure 9
+* **Numbered items.** Capitalize when referring to a numbered object. ... *Correct 例如:* Slide 5, Exercise 3, Table 4.2, Figure 9
 
 * **Admin panel.** Capitalize the word "Admin" in the term “Admin panel” — but panel remains lowercase.
 
@@ -110,4 +110,4 @@ Use capitalization standards, as specified in the Magento Glossary and Word U
 
 * **Steps.** Lowercase “page” or “step” when referring to pages in a document or steps in a procedure.
 
-* **Global internet terms.** ... *Correct examples:* website, internet, online, email
+* **Global internet terms.** ... *Correct 例如:* website, internet, online, email

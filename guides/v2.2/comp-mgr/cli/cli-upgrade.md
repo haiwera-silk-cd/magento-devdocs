@@ -52,7 +52,7 @@ To prevent access to your store while it's being upgraded, put your store in mai
 
 {% collapsible To enable maintenance mode: %}
 
-1.	Log in to your Magento server as, or switch to, the Magento file system owner.
+1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Enter the following command:
 
 		php <your Magento install dir>/bin/magento maintenance:enable
@@ -65,7 +65,7 @@ To prevent access to your store while it's being upgraded, put your store in mai
 
 {% collapsible To upgrade using the command line: %}
 
-1.	Log in to your Magento server as, or switch to, the Magento file system owner.
+1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to the directory in which you installed the Magento software.
 
 	For example, `cd /var/www/html/magento2`

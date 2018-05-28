@@ -1,19 +1,19 @@
 ---
 group:  UI Library
-subgroup: C_Listing/Grid Secondary Components
+subgroup: C_Listing/Grid Secondary 组件
 title: MassActions Component
 menu_title: MassActions Component
 menu_node:
 menu_order: 3
 version: 2.0
-github_link: ui-components/ui-secondary-massaction.md
+github_link: ui-组件/ui-secondary-massaction.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary-massaction.html
 
 ---
 
 ### MassActions JS component structure
 
-MassActions component adds ability to be selectable (by attaching it's template to each item in Listing) to items in Listing and creates actions to perform with selected items (for example: 'Delete', 'Update attributes' and so on).
+下拉操作组件 adds ability to be selectable (by attaching it's template to each item in Listing) to items in Listing and creates actions to perform with selected items (for example: 'Delete', 'Update attributes' and so on).
 
 "Select all" functionality is improved in Magento 2. Instead of creating a list of all selected items they are now flagged and list is created only for excluded elements.
 
@@ -24,9 +24,9 @@ The following are the component elements:
 * Constructor `app\code\Magento\Ui\view\base\web\js\grid\massactions.js`
 * Template: `app\code\Magento\Ui\view\base\web\templates\grid\actions.html`
 
-#### Dependencies on Other Components
+#### Dependencies on Other 组件
 
-Dependency on the following components:
+Dependency on the following 组件:
 
 * Collapsible: `app\code\Magento\Ui\view\base\web\js\lib\collapsible.js`
 * Modal window with confirmation: `app\code\Magento\Ui\view\base\web\js\modal\confirm.js`
@@ -49,7 +49,7 @@ The following {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% en
 * applyAction - applies specified as identifier action
 * getSelections - returns object with current selections
 
-#### Example of configuration modifications:
+#### 示例 of configuration modifications:
 
 * Redefining the link to the template
 

@@ -1,6 +1,6 @@
 <div markdown="1">
 
-<h2 id="instgde-install-magento-web-step4">Step 4: Customize Your Store</h2>
+<h2 id="instgde-install-magento-web-step4">步骤4. Customize Your Store</h2>
 
 <!-- 1.	To install optional sample data, select the **Use Sample Data** check box.
 
@@ -16,9 +16,9 @@
 
 3.	Expand **Advanced Modules Configuration** to optionally 启用或禁用模块 before you install the Magento software.
 
-	Before you 启用或禁用模块, review the information discussed in <a href="{{ page.baseurl }}/install-gde/install/web/install-web.html#instgde-install-web-enable-mod">Enabling and disabling modules</a>.
+	Before you 启用或禁用模块, review the information discussed in <a href="{{ page.baseurl }}/install-gde/install/web/install-web.html#instgde-install-web-enable-mod">启用和禁用模块</a>.
 
-	See one of the following sections for more information about enabling and disabling modules:
+	See one of the following sections for more information about 启用和禁用模块:
 
 	*	<a href="#instgde-install-magento-web-step4-depend1">General module configuration options</a>
 	*	<a href="#instgde-install-magento-web-step4-depend2">Module dependency errors</a>

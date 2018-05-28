@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-## Logging overview {#config-log-over}
+## 日志概述 {#config-log-over}
 Logs provide visibility into Magento system processes; for example, debugging information that assists you with understanding when an error occurred or what lead to the error.
 
 This topic focuses on file-based logging, although Magento provides the flexibility to store logs in the database as well.
@@ -33,5 +33,5 @@ The [PSR-3 standard](https://zendframework.github.io/zend-log/psr3){:target="_bl
 
 This provides the ability for the implementation to be replaced easily without worry that such replacement may break the application code. It also guarantees a custom component will work even when the Magento log implementation is changed in a future version of the system.
 
-#### Next
+#### 下一步
 [Magento日志的更多细节]({{ page.baseurl }}/config-guide/log/log-magento.html)

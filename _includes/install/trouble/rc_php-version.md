@@ -5,7 +5,7 @@ You might encounter the following issues with the PHP version readiness check:
 
 *	The check fails because you're using an unsupported PHP version.
 
-	To solve this issue, use one of the supported versions listed in our [System Requirements]({{ page.baseurl }}/install-gde/system-requirements.html).
+	To solve this issue, use one of the supported versions listed in our [系统要求]({{ page.baseurl }}/install-gde/system-requirements.html).
 
 *	The check reports the incorrect PHP version.
 
@@ -28,7 +28,7 @@ To resolve the issue, try the following:
 *	Check the `$PATH` environment variable for multiple paths to PHP
 *	Use the `which php` command to locate the first PHP executable in your path; if it's not correct, remove it or create a symlink to the correct PHP version
 *	Use a [`phpinfo.php`]({{ page.baseurl }}/install-gde/prereq/optional.html#install-optional-phpinfo) page to collect more information
-*	Make sure you're running a supported PHP version according to our System Requirements:
+*	Make sure you're running a supported PHP version according to our 系统要求:
 
 	*	[Version 2.0]({{ page.baseurl }}/install-gde/system-requirements.html)
 	*	[Version 2.1]({{ site.gdeurl21 }}install-gde/system-requirements.html)

@@ -111,19 +111,19 @@ For example, on Ubuntu where Apache usually runs as <code>www-data</code>, enter
 <li>You're applying the SUPEE-8788 patch as part of an upgrade from an earlier Magento version.</li></ul>
 
 <p>We recommend the following:</p>
-<ul><li>If you applied SUPEE-8788 version 1, revert that patch, revert SUPEE-1533 (version restrictions apply), apply SUPEE-3941 (version restrictions apply), then <a href="#apply-8788-v1">apply SUPEE-8788 version 2 or later</a>. </li>
+<ul><li>If you applied SUPEE-8788 version 1, revert that patch, revert SUPEE-1533 (version restrictions apply), apply SUPEE-3941 (version restrictions apply), then <a href="#apply-8788-v1">apply SUPEE-8788 version 2或更新</a>. </li>
 	<li>If you haven't applied SUPEE-8788, revert SUPEE-1533 (version restrictions apply), apply SUPEE-3941 (version restrictions apply), then <a href="#apply-8788-new">apply SUPEE-8788</a>.</li></ul>
 
-<h3 id="apply-8788-v1">Replace SUPEE-8788 version 1 with version 2 or later</h3>
-<p>To replace SUPEE-7877 version 1 with version 2 or later:</p>
+<h3 id="apply-8788-v1">Replace SUPEE-8788 version 1 with version 2或更新</h3>
+<p>To replace SUPEE-7877 version 1 with version 2或更新:</p>
 <ol><li>Log in to your Magento server.</li>
 	<li>Open <code>&lt;你的Magento的安装目录>/app/etc/applied.patches.list</code> in a text editor.<br><br>
 		This file lists all currently applied patches.</li>
 	<li>Determine which patches are already applied. Version 1 of SUPEE-8788 includes <code>PATCH_SUPEE-8788_&lt;magento version>_v1</code> in the name.</li>
 	<li>If your Magento version is EE 1.14.1.0 or CE 1.9.1.0, <em>and</em> patch SUPEE-1533 is applied, <a href="#revert">revert</a> SUPEE-1533.</li>
 	<li>If your Magento version is earlier than EE 1.14.1.0 or CE 1.9.1.0, <em>and</em> SUPEE-3941 is not applied, <a href="#apply">apply SUPEE-3941</a>.</li>
-	<li><a href="#get">Get</a> version 2 or later of SUPEE-8788.</li>
-	<li><a href="#apply">Apply</a> version 2 or later of SUPEE-8788.</li>
+	<li><a href="#get">Get</a> version 2或更新 of SUPEE-8788.</li>
+	<li><a href="#apply">Apply</a> version 2或更新 of SUPEE-8788.</li>
 <li><em>Magento EE 1.14.2 only</em>. After applying the SUPEE-8788 patch, remove <code>test_oauth.php</code> from your Magento base directory.</li>
 <li>If you upgraded to Magento CE 1.9.3 or Magento EE 1.14.3 after applying the <a href="https://magento.com/security/patches/supee-8788" target="_blank">SUPEE-8788 patch</a>, make sure the following files have been deleted:<br>
 
@@ -137,11 +137,11 @@ If the files are present, delete them to avoid a potential security exploit. As 
 <p>To apply patch SUPEE-8788:</p>
 <ol><li>Open <code>&lt;你的Magento的安装目录>/app/etc/applied.patches.list</code> in a text editor.<br><br>
 		This file lists all currently applied patches.</li>
-	<li>Verify SUPEE-8788 is <em>not</em> applied. If it is, and it's version 1, see <a href="#apply-8788-v1">Replace SUPEE-8788 version 1 with version 2 or later</a>.</li>
+	<li>Verify SUPEE-8788 is <em>not</em> applied. If it is, and it's version 1, see <a href="#apply-8788-v1">Replace SUPEE-8788 version 1 with version 2或更新</a>.</li>
 	<li>Verify whether or not patch SUPEE-1533 is applied. If it is, <em>and</em> your Magento version is earlier than EE 1.14.1.0 or CE 1.9.1.0, <a href="#revert">revert</a> SUPEE-1533.</li>
 	<li>If your Magento version is earlier than EE 1.14.1.0 or CE 1.9.1.0, <em>and</em> SUPEE-3941 is not applied, <a href="#apply">apply SUPEE-3941</a>.</li>
-	<li><a href="#get">Get</a> version 2 or later of SUPEE-8788.</li>
-	<li><a href="#apply">Apply</a> version 2 or later of SUPEE-8788.</li>
+	<li><a href="#get">Get</a> version 2或更新 of SUPEE-8788.</li>
+	<li><a href="#apply">Apply</a> version 2或更新 of SUPEE-8788.</li>
 <li><em>Magento EE 1.14.2 only</em>. After applying the SUPEE-8788 patch, remove <code>test_oauth.php</code> from your Magento base directory.</li>
 <li>If you upgraded to Magento CE 1.9.3 or Magento EE 1.14.3 after applying the <a href="https://magento.com/security/patches/supee-8788" target="_blank">SUPEE-8788 patch</a>, make sure the following files have been deleted:<br>
 

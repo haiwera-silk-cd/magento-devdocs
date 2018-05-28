@@ -64,7 +64,7 @@ You can depend on and use the `ObjectManager` class in the following scenarios:
 * In a global scope, like in fixtures of integration tests, you can use the object manager.
 * The object manager can be a dependency in classes used for the creation of objects, e.g. factories or proxies.
 
-**Related topics**
+**相关主题**
 
 *	[The `di.xml` file]({{ page.baseurl }}/extension-dev-guide/build/di-xml-file.html)
 * [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)

@@ -1,34 +1,34 @@
-label: Contribution Guide
+label: 贡献指引
 pages:
 
-    - label: Code Contributions
+    - label: 代码贡献
       url: /contributor-guide/contributing.html
 
       children:
-        - label: Backward compatible development
+        - label: 向前兼容开发
           url: /contributor-guide/backward-compatible-development
 
-    - label: DevDocs Contributions
+    - label: 开发文档贡献
       url: /contributor-guide/contributing_docs.html
       children:
         - label: Magento Definition of Done
           url: /contributor-guide/contributing_dod.html
 
-        - label: Suggested topics for contribution
+        - label: 建议的贡献主题
           url: /contributor-guide/contributing_docs_suggested.html
 
-        - label: DevDocs Contributors
+        - label: 开发文档贡献者
           url: /contributor-guide/quarterly-contributors.html
 
-        - label: Community maintainers
+        - label: 社区维护者
           url: /contributor-guide/devdocs-maintainers.html
           versions: ["2.1","2.2","2.3"]
 
     - label: Templates
       children:
-        - label: Basic template
+        - label: 基础模板
           url: /contributor-guide/templates/basic_template.html
 
-        - label: Sample template tutorial
+        - label: 样例模板教程
           class: tutorial
           url: /contributor-guide/templates/tutorial-template-first.html

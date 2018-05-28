@@ -1,8 +1,8 @@
 ---
 group: howdoi
 subgroup: Migration
-title: Data Migration
-menu_title: Data Migration
+title: 数据迁移
+menu_title: 数据迁移
 menu_order: 4
 version: 2.1
 github_link: howdoi/migrate/migrate-data.md
@@ -10,7 +10,7 @@ github_link: howdoi/migrate/migrate-data.md
 
 ## 迁移数据 from Magento 1 to Magento 2
 
-Data Migration allows you to migrate several types of data from your Magento 1 store to Magento 2 store.
+数据迁移 allows you to migrate several types of data from your Magento 1 store to Magento 2 store.
 
 <h4>Start your migration</h4>
 <ol>
