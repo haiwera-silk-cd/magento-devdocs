@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>管理公司对像 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/b2b/company-object.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/b2b/company-object.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/b2b/company-object.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/b2b/company-object.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/b2b/company-object.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">B2B开发者文档</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/b2b/bk-b2b.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用rest集成b2b">
+    
+
+    
+    <a href="/guides/v2.3/b2b/integrations.html">使用REST集成B2B</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="company">
+
+            
+
+            
+            <span>Company</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="集成公司模块">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/company.html">集成公司模块</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3 active " id="管理公司对像">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/company-object.html">管理公司对像</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理公司用户">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/company-users.html">管理公司用户</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理公司角色">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/roles.html">管理公司角色</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理公司结构">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/company-structures.html">管理公司结构</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="公司信用帐户">
+
+            
+
+            
+            <span>公司信用帐户</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="与companycredit模块集成">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/company-credit.html">与CompanyCredit模块集成</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理公司信用帐户">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用帐户</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="共享类目录">
+
+            
+
+            
+            <span>共享类目录</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="与sharecatalog模块集成">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/shared-catalog.html">与ShareCatalog模块集成</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理共享类目录">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/shared-cat-manage.html">管理共享类目录</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="assign-categories-and-products">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="assign-companies">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">Assign companies</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="协商报价">
+
+            
+
+            
+            <span>协商报价</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="与negotiablequote模块集成">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/negotiable-quote.html">与NegotiableQuote模块集成</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="管理协商报价">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/negotiable-manage.html">管理协商报价</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="更新协商报价">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/negotiable-update.html">更新协商报价</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="协商报价结算">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/negotiable-checkout.html">协商报价结算</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="生成协商报价订单">
+                    
+
+                    
+                    <a  href="/guides/v2.3/b2b/negotiable-order-workflow.html">生成协商报价订单</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="开发b2b扩展">
+    
+
+    
+    <a href="/guides/v2.3/b2b/extensions.html">开发B2B扩展</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/b2b/bk-b2b.html">
+            <span property="name">B2B开发者文档</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">管理公司对像</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+		<span class="ee-only">仅企业版适用</span>
+	
+
+	
+
+	<h1 class="page-heading">管理公司对像</h1>
+
+  
+
+
+</section>
+
+			<h2 id="管理公司对像">管理公司对像</h2>
+
+<p>This section describes the REST endpoints used to manage <code class="highlighter-rouge">Company</code> objects.</p>
+
+<p><strong>Service Name</strong></p>
+
+<p><code class="highlighter-rouge">companyCompanyRepositoryV1</code></p>
+
+<p><strong>REST Endpoints</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="w">
+</span><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
+</span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
+</span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
+</span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span></code></pre></figure>
+
+<p><strong>CompanyInterface Parameters</strong></p>
+
+<p>The following table lists the parameters defined in <code class="highlighter-rouge">CompanyInterface</code>.</p>
+
+<table>
+<tr>
+<th>名称</th><th>描述</th><th>Format</th><th>Requirements</th></tr>
+<tr>
+<td><code>id</code></td><td>System-generated company ID </td><td>integer </td><td>Required for updates and deletes. </td></tr>
+<tr>
+<td><code>status</code></td><td>0 - Pending approval<br />1 - Approved<br />2 - Rejected<br />3 - Blocked </td><td>integer </td><td>Optional </td></tr>
+<tr>
+<td><code>company_name </code></td><td>Company name </td><td>string </td><td>Required to create or update a company. </td></tr>
+<tr>
+<td><code>legal_name </code></td><td>Legal name </td><td>string </td><td>Optional </td></tr>
+<tr>
+<td><code>company_email </code></td><td>Official e-mail address of the company. It does not have to be unique. </td><td>string</td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>vat_tax_id </code></td><td>The company's Value Added Tax ID </td><td>string </td><td>Optional </td></tr>
+<tr>
+<td><code>reseller_id </code></td><td>Unique ID of the company reseller </td><td>string </td><td>Optional </td></tr>
+<tr>
+<td><code>comment </code></td><td>Additional details about the company</td><td>string</td><td>Optional </td></tr>
+<tr>
+<td><code>street</code></td><td>Street address where the company is registered. The array can contain one or two lines.</td><td>Array[string]</td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>city</code></td><td>The company's city </td><td>string </td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>country_id</code></td><td>The country where the company is registered.</td><td>string </td><td>Required to create or update a company. </td></tr>
+<tr>
+<td><code>region</code></td><td>State or province</td><td>string</td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>region_id</code></td><td>An ID assigned to a state or province</td><td>string </td><td>Optional</td></tr>
+<tr>
+<td><code>postcode</code></td><td>The company's ZIP or postal code</td><td>string </td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>telephone</code></td><td>The company contact's phone number</td><td>string</td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>customer_group_id </code></td><td>Defines the company's shared catalog. A value of `1` assigns the default shared catalog.</td><td>integer</td><td>Required to create or update a company.</td></tr>
+<tr>
+<td><code>sales_representative_id</code></td><td>User ID of the Sales Representative for the company</td><td>integer</td><td>Optional</td></tr>
+<tr>
+<td><code>reject_reason</code></td><td>Specifies why a company's request to be a B2B customer is rejected</td><td>string</td><td>Optional </td></tr>
+<tr>
+<td><code>rejected_at</code></td><td>A timestamp incdicating when the company was rejected.</td><td>string</td><td>Optional</td></tr>
+<tr>
+<td><code>super_user_id</code></td><td>The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist. </td><td>integer</td><td>Required to create or update a company.</td></tr>
+</table>
+
+<h3 id="create-a-company">Create a company</h3>
+
+<p>The following example creates a company and assigns the default shared catalog (<code class="highlighter-rouge">customer_group_id</code>). The company admin (<code class="highlighter-rouge">super_user_id</code>) must be a previously-defined <code class="highlighter-rouge">customer_id</code>.</p>
+
+<p><strong>Sample Usage</strong></p>
+
+<p><code class="highlighter-rouge">POST /V1/company/</code></p>
+
+<p><strong>Payload</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test company"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"street"</span><span class="p">:[</span><span class="w">
+    </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p><strong>Response</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test company"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sales_representative_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rejected_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"quote_config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"is_quote_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="update-the-company">Update the company</h3>
+
+<p>The following call changes the company status to Rejected (<code class="highlighter-rouge">2</code>) and explains why.</p>
+
+<p><strong>Sample Usage</strong></p>
+
+<p><code class="highlighter-rouge">PUT /V1/company/2</code></p>
+
+<p><strong>Payload</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  	</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  	</span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test company"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:[</span><span class="w">
+    </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Failed background check."</span><span class="w">
+
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p><strong>Response</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test company"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sales_representative_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rejected_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"quote_config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"is_quote_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="return-all-information-about-a-company">Return all information about a company</h3>
+
+<p>This call returns detailed information about the specified company.
+<strong>Sample Usage</strong></p>
+
+<p><code class="highlighter-rouge">GET /V1/company/2</code></p>
+
+<p><strong>Payload</strong></p>
+
+<p>None</p>
+
+<p><strong>Response</strong></p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test company"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sales_representative_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rejected_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"quote_config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"company_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"is_quote_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="delete-a-company">Delete a company</h3>
+
+<p>When you delete a company, Magento assigns the “Inactive” status to all company members. The system also removes company ID from the customer profile of all company members.</p>
+
+<p><strong>Sample Usage</strong></p>
+
+<p><code class="highlighter-rouge">DELETE /V1/company/2</code></p>
+
+<p><strong>Payload</strong></p>
+
+<p>None</p>
+
+<p><strong>Response</strong></p>
+
+<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+
+<h3 id="search-for-companies">Search for companies</h3>
+
+<p>The following call returns all companies that are located in California (<code class="highlighter-rouge">region_id</code> = <code class="highlighter-rouge">12</code>)</p>
+
+<p>See <a href="/guides/v2.3/rest/performing-searches.html">Search using REST APIs</a> for information about constructing a search query.</p>
+
+<p><strong>Sample Usage</strong></p>
+
+<p><code class="highlighter-rouge">GET /V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&amp;searchCriteria[filter_groups][0][filters][0][value]=12&amp;searchCriteria[filter_groups][0][filters][0][condition_type]=eq</code></p>
+
+<p><strong>Payload</strong></p>
+
+<p>None</p>
+
+<p><strong>Response</strong></p>
+
+<div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Company"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"legal_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Company"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newemail@example.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"100 Big Tree Avenue"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4155551212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sales_representative_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rejected_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"applicable_payment_method"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"available_payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banktransfer,cashondelivery,checkmo,payflowpro,payflow_advanced,payflow_link,braintree,cybersource,eway,authorizenet_directpost,free,braintree_paypal,paypal_billing_agreement,payflow_express_bml,paypal_express_bml,paypal_express,payflow_express,hosted_pro,worldpay,companycredit,purchaseorder,braintree_paypal_vault,braintree_cc_vault,payflowpro_cc_vault"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"use_config_settings"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quote_config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"is_quote_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Widgets, Inc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"legal_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Widgets, Inc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"widgetsinc@example.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"8383 Wilshire Blvd"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Ste 1500"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beverly Hills"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"region_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90211"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(310) 555-0000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"customer_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sales_representative_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"reject_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rejected_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"super_user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"applicable_payment_method"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"available_payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banktransfer,cashondelivery,checkmo,payflowpro,payflow_advanced,payflow_link,braintree,cybersource,eway,authorizenet_directpost,free,braintree_paypal,paypal_billing_agreement,payflow_express_bml,paypal_express_bml,paypal_express,payflow_express,hosted_pro,worldpay,companycredit,purchaseorder,braintree_paypal_vault,braintree_cc_vault,payflowpro_cc_vault"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"use_config_settings"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quote_config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"is_quote_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"search_criteria"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"filter_groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"region_id"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"condition_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eq"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+</div></div>
+
+<h2 id="related-information">Related information</h2>
+
+<ul>
+  <li><a href="/guides/v2.3/b2b/company.html">集成公司模块</a></li>
+  <li><a href="/guides/v2.3/b2b/company-users.html">管理公司用户</a></li>
+  <li><a href="/guides/v2.3/b2b/roles.html">管理公司角色</a></li>
+  <li><a href="/guides/v2.3/b2b/company-structures.html">管理公司结构</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/b2b/company-object.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/b2b/company-object.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Define the GraphQL schema for a module | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/graphql/develop/create-graphqls-file.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/graphql/develop/create-graphqls-file.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/graphql/develop/create-graphqls-file.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/graphql/develop/create-graphqls-file.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/graphql/develop/create-graphqls-file.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">GraphQL Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="overview">
+    
+
+    
+    <a href="/guides/v2.3/graphql/index.html">Overview</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="implementation">
+    
+
+    
+    <span>Implementation</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="graphql-request-headers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/send-request.html">GraphQL request headers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searches-and-pagination">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="development">
+    
+
+    
+    <span>Development</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="define-the-graphql-schema-for-a-module">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-graphqls-file.html">Define the GraphQL schema for a module</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="resolvers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/resolvers.html">Resolvers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="create-a-custom-urlresolver-service">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-custom-url-resolver.html">Create a custom urlResolver service</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="exception-handling">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/exceptions.html">Exception handling</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="functional-testing">
+    
+
+    
+    <a href="/guides/v2.3/graphql/functional-testing.html">Functional testing</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="reference">
+    
+
+    
+    <span>Reference</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="products-endpoint">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/reference/products.html">Products endpoint</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="product-interface-implementations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/product-interface-implementations.html">Product interface implementations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customizableoptioninterface">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customizable-option-interface.html">CustomizableOptionInterface</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bundleproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/bundle-product.html">BundleProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="categories-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/categories.html">Categories endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configurableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/configurable-product.html">ConfigurableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="downloadableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/downloadable-product.html">DownloadableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="giftcardproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/gift-card-product.html">GiftCardProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="groupedproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/grouped-product.html">GroupedProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="other-objects">
+
+            
+
+            
+            <span>Other objects</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="customattributemetadata-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/custom-attribute-metadata.html">CustomAttributeMetadata endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customer-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customer.html">Customer endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="urlresolver-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/url-resolver.html">urlResolver endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/graphql/index.html">
+            <span property="name">Overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Define the GraphQL schema for a module</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Define the GraphQL schema for a module</h1>
+
+  
+
+
+</section>
+
+			<p>Each module that adds to or extends from a GraphQL schema can do so by placing a <code class="highlighter-rouge">schema.graphqls</code> file in its <code class="highlighter-rouge">etc</code> directory. Magento Core adds GraphQl modules based on the purpose of the schema being extended/added and the core modules they depend on. For example, the CustomerGraphQl module adds a query to the graphql endpoint to view customer data and relies on the Customer core module.</p>
+
+<p>A GraphQL module’s <code class="highlighter-rouge">schema.graphqls</code> file defines how the attributes defined in the module can be used in a GraphQL query. If your module’s attributes are completely self-contained, then the <code class="highlighter-rouge">schema.graphqls</code> file defines the query, the interfaces used, the data types of all the attributes, and any enumerations that restrict the possible attribute contents. If your module simply extends another module (such as Catalog), then you must define those attributes and ensure that the other module can load your attributes.</p>
+
+<p>The <code class="highlighter-rouge">&lt;module_name&gt;/etc/schema.graphqls</code> file:</p>
+
+<ul>
+  <li>Defines the structure of queries.</li>
+  <li>Determines which attributes to make available for GraphQL queries. You can define separate lists of attributes for queries and results.</li>
+  <li>Points to the resolvers that verify and process the query data and response</li>
+  <li>Serves as the source for displaying the schema in a GraphQL browser</li>
+</ul>
+
+<p>The base <code class="highlighter-rouge">schema.graphqls</code> file, located in the <code class="highlighter-rouge">app/code/GraphQl/etc/</code> directory, provides the necessary structure for all GraphQL queries, including definitions for comparison operators and paging information for search results. The <code class="highlighter-rouge">webonyx/graphql-php</code> library enforces the syntax of all <code class="highlighter-rouge">schema.graphqls</code> files.</p>
+
+<p>To illustrate how to configure the <code class="highlighter-rouge">schema.graphqls</code> file, let’s suppose you have a module named Volumizer that calculates the volume of a product, given its height, width, and depth. We’ll assume this module extends the Catalog module.</p>
+
+<h2 id="define-the-query">Define the query</h2>
+
+<p>A query definition can be one line, or it can be complex. If your module’s query implements <code class="highlighter-rouge">searchCriteria</code>, then you must define arguments that define filters and pagination information, all of which adds complexity. However, if you expect a single result from your query, then its definition can be simple.</p>
+
+<p>The following example shows the <code class="highlighter-rouge">products</code> query. The <code class="highlighter-rouge">type</code> is defined as a <code class="highlighter-rouge">Query</code>.  The <code class="highlighter-rouge">products</code> definitions define the keywords that are used to construct a query, as shown in <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a>. The parameter definitions will be discussed in <a href="#specify-output-attributes">Specify output attributes</a>.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">type</span> <span class="nx">Query</span> <span class="p">{</span>
+    <span class="nx">products</span> <span class="p">(</span>
+        <span class="nx">search</span><span class="o">:</span> <span class="nx">String</span><span class="p">,</span>
+        <span class="nx">filter</span><span class="o">:</span> <span class="nx">ProductFilterInput</span><span class="p">,</span>
+        <span class="nx">pageSize</span><span class="o">:</span> <span class="nx">Int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="nx">currentPage</span><span class="o">:</span> <span class="nx">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nb">sort</span><span class="o">:</span> <span class="nx">ProductSortInput</span><span class="p">)</span>
+     <span class="p">)</span><span class="o">:</span> <span class="nx">Products</span> <span class="o">@</span><span class="nx">resolver</span><span class="p">(</span><span class="k">class</span><span class="err">:</span> <span class="err">"</span><span class="nc">Magento</span><span class="err">\</span><span class="nx">\CatalogGraphQl</span><span class="err">\</span><span class="nx">\Model</span><span class="err">\</span><span class="nx">\Resolver</span><span class="err">\</span><span class="nx">\Products</span><span class="s2">")
+}
+</span></code></pre></div></div>
+
+<p>In contrast, the <code class="highlighter-rouge">customer</code> query returns the <code class="highlighter-rouge">Customer</code> object associated with the current user. There is no need to define pagination information.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">type</span> <span class="nx">Query</span> <span class="p">{</span>
+    <span class="nx">customer</span><span class="o">:</span> <span class="nx">Customer</span> <span class="o">@</span><span class="nx">resolver</span><span class="p">(</span><span class="k">class</span><span class="err">:</span> <span class="err">"</span><span class="nc">Magento</span><span class="err">\</span><span class="nx">\CustomerGraphQl</span><span class="err">\</span><span class="nx">\Model</span><span class="err">\</span><span class="nx">\Resolver</span><span class="err">\</span><span class="nx">\Customer</span><span class="s2">")
+}
+</span></code></pre></div></div>
+
+<p>If all your module’s attributes are extension attributes for existing modules, then no query definition is required. In this case, the attributes point to the other module’s query definition.</p>
+
+<h2 id="declare-input-attributes">Declare input attributes</h2>
+
+<p>You must explicitly define each attribute that can be used as input in a GraphQL query. In the simplest cases, you can create a single <code class="highlighter-rouge">type</code> definition that includes all the input, output, and sorting attributes for an object. This might not be possible if your module performs calculations, or otherwise has attributes that aren’t available at the time of the query.</p>
+
+<p>The theoretical Volumizer module extends <code class="highlighter-rouge">Catalog</code>. In this case, you would reference <code class="highlighter-rouge">ProductFilterInput</code> as the source and make each attribute be of type <code class="highlighter-rouge">FilterTypeInput</code>. (Both of these entities are defined in <code class="highlighter-rouge">CatalogGraphQl</code>’s <code class="highlighter-rouge">schema.graphqls</code> file. In other use cases, you would be required to create your own input type.</p>
+
+<p>The following example defines three Volumizer attributes (<code class="highlighter-rouge">v_height</code>, <code class="highlighter-rouge">v_width</code>, <code class="highlighter-rouge">v_depth</code>) that must be specified as input to a query.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">input</span> <span class="nx">ProductFilterInput</span> <span class="p">{</span>
+  <span class="nx">v_height</span><span class="o">:</span> <span class="nx">FilterTypeInput</span>
+  <span class="nx">v_width</span><span class="o">:</span> <span class="nx">FilterTypeInput</span>
+  <span class="nx">v_depth</span><span class="o">:</span> <span class="nx">FilterTypeInput</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="specify-sorting-attributes">Specify sorting attributes</h2>
+
+<p>You can also define which attributes can be used for sorting the search results. This list does not have to be identical to the list of input or output attributes.</p>
+
+<p>This example allows sorting on the <code class="highlighter-rouge">v_volume</code> attribute only.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">input</span> <span class="nx">ProductSortInput</span> <span class="p">{</span>
+    <span class="nx">v_volume</span><span class="o">:</span> <span class="nx">SortEnum</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">ProductSortInput</code> indicates that the attributes are available to catalog (Product) queries. If you specify a module-specific value such as <code class="highlighter-rouge">VolumizerSortInput</code>, then the attribute will be available only to queries processed by that module.</p>
+
+<p><code class="highlighter-rouge">SortEnum</code> is defined in the base <code class="highlighter-rouge">schema.graphqls</code> file.</p>
+
+<h2 id="specify-output-attributes">Specify output attributes</h2>
+
+<p>You must know the data type of each attribute, whether it is scalar or an object, and whether it can be part of an array. In addition, each attribute within an object must be defined in the same manner.</p>
+
+<p>In a <code class="highlighter-rouge">schema.graphqls</code> file, the output <code class="highlighter-rouge">Interface</code> defines top-level attributes. Each object returned is defined in a <code class="highlighter-rouge">type</code> definition.</p>
+
+<h3 id="define-the-output-interface">Define the output interface</h3>
+
+<p>In many cases, the response contains data that was either not available as input, or was transformed in some manner from the input. For example, when you specify a price in an input filter, Magento evaluates it as a Float value. However, <code class="highlighter-rouge">Price</code> output objects contain a Float value, a currency value, and possibly minimum/maximum values and tax adjustments. You can define a <code class="highlighter-rouge">typeResolver</code> to point to the Resolver object, which interprets the GraphQL query. If your module contains only attributes that extend another module, then this parameter is optional. Otherwise, it is required. See <a href="/guides/v2.3/graphql/resolvers.html">Resolvers</a> for more information.</p>
+
+<p>The following example defines module-specific output attributes for the Volumizer module.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">interface</span> <span class="nx">ProductInterface</span> <span class="o">@</span><span class="nx">typeResolver</span><span class="p">(</span><span class="k">class</span><span class="err">:</span> <span class="err">"\\</span><span class="nc">Path</span><span class="err">\</span><span class="nx">\To</span><span class="err">\</span><span class="nx">\typeResolver</span><span class="err">\</span><span class="nx">\Class</span><span class="s2">"){
+    v_height: Float
+    v_width: Float
+    v_depth: Float
+    v_volume: VolumeWithUnit
+}
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">typeResolver</code> parameter specifies the path to the Resolver object, which interprets the GraphQL query. If your module contains only attributes that extend another module, then this parameter is optional. Otherwise, it is required. See <a href="/guides/v2.3/graphql/resolvers.html">Resolvers</a> for more information.</p>
+
+<p>The <code class="highlighter-rouge">v_volume</code> attribute is defined as a <code class="highlighter-rouge">VolumeWithUnit</code> object. This object might be defined as follows:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">type</span> <span class="nx">VolumeWithUnit</span> <span class="p">{</span>
+    <span class="nx">caclulated_volume</span><span class="o">:</span> <span class="nx">Float</span>
+    <span class="nx">unit</span><span class="o">:</span> <span class="nx">VolumeUnitEnum</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The Volumizer module could return the <code class="highlighter-rouge">calculated_volume</code>, while the <code class="highlighter-rouge">unit</code> is an enumeration, described below.</p>
+
+<h3 id="define-enumerations">Define enumerations</h3>
+
+<p>You can optionally define enumerations to help prevent input errors. Magento capitalizes all enumerated responses. If a value contains a dash (-), the system converts it to an underscore (_). This is done to maintain compliance with the GraphQL specification.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">enum</span> <span class="nx">VolumeUnitEnum</span> <span class="p">{</span>
+  <span class="nx">IN3</span>
+  <span class="nx">FT3</span>
+  <span class="nx">CM3</span>
+  <span class="nx">M3</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="annotations">Annotations</h2>
+
+<p>You can describe any attribute, type definition, or other entity within a <code class="highlighter-rouge">schema.graphqls</code> file by appending the following to the line:</p>
+
+<p><code class="highlighter-rouge">@doc(description: "&lt;Text&gt;")</code></p>
+
+<p>例如:</p>
+
+<p><code class="highlighter-rouge">sku: FilterTypeInput @doc(description: "A number or code assigned to a product to identify the product, options, price, and manufacturer")</code></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/graphql/develop/create-graphqls-file.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/graphql/develop/create-graphqls-file.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

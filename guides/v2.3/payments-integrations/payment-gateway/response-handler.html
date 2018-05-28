@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>响应处理器 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/payments-integrations/payment-gateway/response-handler.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/payments-integrations/payment-gateway/response-handler.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/payments-integrations/payment-gateway/response-handler.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/payments-integrations/payment-gateway/response-handler.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/payments-integrations/payment-gateway/response-handler.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">支付提供商网关</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento支付提供商网关">
+    
+
+    
+    <a href="/guides/v2.3/payments-integrations/payment-gateway/payment-gateway-intro.html">Magento支付提供商网关</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="支付提供商网关结构">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/payment-gateway-structure.html">支付提供商网关结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网关命令">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/gateway-command.html">网关命令</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网关命令池">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/command-pool.html">网关命令池</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="请求构造器">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/request-builder.html">请求构造器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网关客户端">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/gateway-client.html">网关客户端</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="响应校验器">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/response-validator.html">响应校验器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="响应处理器">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/response-handler.html">响应处理器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="错误码映射">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/payment-gateway/error-code-mapper.html">错误码映射</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="添加一个新的支付集成(支付方式)">
+    
+
+    
+    <a href="/guides/v2.3/payments-integrations/base-integration/integration-intro.html">添加一个新的支付集成(支付方式)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="支集模块配置">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/module-configuration.html">支集模块配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="支集方式配置">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/payment-option-config.html">支集方式配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="支集方式外观接口">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/facade-configuration.html">支集方式外观接口</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理面板的支付信息渲染">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/formblocktype.html">管理面板的支付信息渲染</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加支付动作">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/payment-action.html">添加支付动作</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="从前台获取支付信息到后台">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/get-payment-info.html">从前台获取支付信息到后台</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="根据地区配置支付方法">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/base-integration/admin-integration.html">根据地区配置支付方法</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="添加vault集成">
+    
+
+    
+    <a href="/guides/v2.3/payments-integrations/vault/vault-intro.html">添加vault集成</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="添加vault到模块依赖">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/module-configuration.html">添加vault到模块依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vault支付配置">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/vault-payment-configuration.html">vault支付配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vault依赖注入配置">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/vault-di.html">vault依赖注入配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用vault">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/enabler.html">启用vault</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="支付令牌">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/payment-token.html">支付令牌</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="token-ui-component-provider">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/token-ui-component-provider.html">令牌UI组件提供器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="显示存储的信息">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/customer-stored-payments.html">显示存储的信息</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vault管理面板实现">
+
+            
+
+            
+            <a href="/guides/v2.3/payments-integrations/vault/admin-integration.html">vault管理面板实现</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="signifyd欺诈保护">
+    
+
+    
+    <a href="/guides/v2.3/payments-integrations/signifyd/signifyd.html">Signifyd欺诈保护</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">响应处理器</span>
+
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">响应处理器</h1>
+
+  
+
+
+</section>
+
+			<p>响应处理器 is the component of Magento支付提供商网关, that processes payment provider response. Typically, the response requires one of the following actions:</p>
+
+<ul>
+  <li>Modify the <span term-uuid="ab517fb3-c9ff-4da8-b7f9-00337c57b3a5" class="glossary-term" data-toggle="popover">order status</span></li>
+  <li>Save information that was provided in a transaction response</li>
+  <li>Send an email</li>
+</ul>
+
+<p>The response handler only modifies the order state, based on the <span term-uuid="5b963536-8f03-45c4-963b-688021f4eea7" class="glossary-term" data-toggle="popover">payment gateway</span> response. It does not perform any other required actions.</p>
+
+<h2 id="interface">Interface</h2>
+
+<p>Basic interface for a response handler is <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Payment/Gateway/Response/HandlerInterface.php"><code class="highlighter-rouge">Magento\Payment\Gateway\Response\HandlerInterface</code></a></p>
+
+<h3 id="useful-implementations">Useful implementations</h3>
+
+<p><code class="highlighter-rouge">\Magento\Payment\Gateway\Response\HandlerChain</code> might be used as a basic container of response handlers, handling different parts.</p>
+
+<h3 id="示例">示例</h3>
+
+<p>Example of a simple response handler (<a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Braintree/Gateway/Response/PayPalDetailsHandler.php"><code class="highlighter-rouge">app/code/Magento/Braintree/Gateway/Response/PayPalDetailsHandler.php</code></a>):</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PayPalDetailsHandler</span> <span class="k">implements</span> <span class="nx">HandlerInterface</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="no">PAYMENT_ID</span> <span class="o">=</span> <span class="s1">'paymentId'</span><span class="p">;</span>
+
+    <span class="k">const</span> <span class="no">PAYER_EMAIL</span> <span class="o">=</span> <span class="s1">'payerEmail'</span><span class="p">;</span>
+
+    <span class="sd">/**
+     * @var SubjectReader
+     */</span>
+    <span class="k">private</span> <span class="nv">$subjectReader</span><span class="p">;</span>
+
+    <span class="sd">/**
+     * Constructor
+     *
+     * @param SubjectReader $subjectReader
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">SubjectReader</span> <span class="nv">$subjectReader</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">subjectReader</span> <span class="o">=</span> <span class="nv">$subjectReader</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+     * @inheritdoc
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">(</span><span class="k">array</span> <span class="nv">$handlingSubject</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$response</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$paymentDO</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">subjectReader</span><span class="o">-&gt;</span><span class="na">readPayment</span><span class="p">(</span><span class="nv">$handlingSubject</span><span class="p">);</span>
+
+        <span class="sd">/** @var \Braintree\Transaction $transaction */</span>
+        <span class="nv">$transaction</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">subjectReader</span><span class="o">-&gt;</span><span class="na">readTransaction</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+
+        <span class="sd">/** @var OrderPaymentInterface $payment */</span>
+        <span class="nv">$payment</span> <span class="o">=</span> <span class="nv">$paymentDO</span><span class="o">-&gt;</span><span class="na">getPayment</span><span class="p">();</span>
+
+        <span class="nv">$payPal</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">subjectReader</span><span class="o">-&gt;</span><span class="na">readPayPal</span><span class="p">(</span><span class="nv">$transaction</span><span class="p">);</span>
+        <span class="nv">$payment</span><span class="o">-&gt;</span><span class="na">setAdditionalInformation</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">PAYMENT_ID</span><span class="p">,</span> <span class="nv">$payPal</span><span class="p">[</span><span class="nx">self</span><span class="o">::</span><span class="na">PAYMENT_ID</span><span class="p">]);</span>
+        <span class="nv">$payment</span><span class="o">-&gt;</span><span class="na">setAdditionalInformation</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="na">PAYER_EMAIL</span><span class="p">,</span> <span class="nv">$payPal</span><span class="p">[</span><span class="nx">self</span><span class="o">::</span><span class="na">PAYER_EMAIL</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>(the code sample is from Magento Open Source v2.1. Although the payment provider gateway was added in v2.0, the particular default implementation using the gateway were added in v2.1)</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/payments-integrations/payment-gateway/response-handler.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/payments-integrations/payment-gateway/response-handler.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

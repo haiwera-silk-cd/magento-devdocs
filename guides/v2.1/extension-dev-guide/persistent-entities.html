@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Persistent entities | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/extension-dev-guide/persistent-entities.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/extension-dev-guide/persistent-entities.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/extension-dev-guide/persistent-entities.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/extension-dev-guide/persistent-entities.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/extension-dev-guide/persistent-entities.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Persistent entities</h1>
+
+  
+
+
+</section>
+
+			<h3 id="概述">概述</h3>
+
+<p>In Magento, an <em>entity</em> is a unique object that contains different attributes or parameters. Magento modules use entities in their business logic to represent something that is either concrete or abstract. Examples of Magento entities include product, order, customer, sale, and so on. Models with class attributes represent these entities in memory, and the underlying database provide and store the data for them.</p>
+
+<p>Starting in Magento 2.1, we no longer recommend using the deprecated save, load, and delete methods in the <a href="#models">model</a> classes. This document provides the recommended approach you should use to save, load, and delete entities.</p>
+
+<h3 id="entity-representations">Entity Representations</h3>
+
+<p>In Magento, data interfaces, data models, and models all represent entities.</p>
+
+<h4 id="data-interfaces">Data Interfaces</h4>
+<p>A data interface is the interface for an <span term-uuid="a9027f5d-efab-4662-96aa-c2999b5ab259" class="glossary-term" data-toggle="popover">entity</span> that reveals the data it contains to clients. For example, the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Api/Data/CustomerInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Customer\Api\Data\CustomerInterface</code></a> class contains get and set functions for customer entity-related data such as names and email.</p>
+
+<p>To allow the addition of <a href="/guides/v2.1/extension-dev-guide/attributes.html">custom EAV attributes</a> on your entity, your data interface must extend the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Api/CustomAttributesDataInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Framework\Api\CustomAttributesDataInterface</code></a> class.</p>
+
+<p>To allow the use of <a href="/guides/v2.1/extension-dev-guide/attributes.html">extension attributes</a> on your entity, your data interface must extend the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Api/ExtensibleDataInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Framework\Api\ExtensibleDataInterface</code></a> class. We recommend using this approach when you define the data interface for your entity.</p>
+
+<h4 id="data-models">Data Models</h4>
+<p>A data model is a class that implements a data interface and contains data that is accessible using setter and getter methods. <a href="#repositories">Repositories</a> use data models and resource models for entity persistence. We recommend you put data model classes in the <code class="highlighter-rouge">Model/Data</code> directory inside your module’s root directory.</p>
+
+<p>An example of a data model is the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Model/Data/Customer.php" target="_blank"><code class="highlighter-rouge">\Magento\Customer\Model\Data\Customer</code></a> class.</p>
+
+<h4 id="models">Models</h4>
+
+<p>Magento models extend the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Model/AbstractModel.php" target="_blank"><code class="highlighter-rouge">Magento\Framework\Model\AbstractModel</code></a> class because it provides useful general functions. Models contain logic for validation, events, and caching. A model class might have a data interface implementation. To set or access data, they use <code class="highlighter-rouge">getData</code>, <code class="highlighter-rouge">setData</code> and magic methods. A model is not statically typed if it does not have a data interface implementation.</p>
+
+<p>Model classes should posses logic that relates to those classes and should not contain logic that reveal anything about data storage in the underlying data layer.</p>
+
+<p>We recommend putting model classes in the <code class="highlighter-rouge">Model</code> directory inside your module’s root directory.</p>
+
+<div class="bs-callout bs-callout-warning">
+  <p>Do not use the inherited <code class="highlighter-rouge">load</code>,<code class="highlighter-rouge">save</code>, <code class="highlighter-rouge">delete</code> methods from <code class="highlighter-rouge">AbstractModel</code> because these deprecated methods will not be available in the future. Instead, Magento recommends using data interfaces and repositories for persisting entities.</p>
+</div>
+
+<p>An example of a model is the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Model/Customer.php" target="_blank"><code class="highlighter-rouge">\Magento\Customer\Model\Customer</code></a> class.</p>
+
+<h3 id="repositories">Repositories</h3>
+
+<p>Modules interact with other modules through their public <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span>. For working with persistent entities, Magento recommends and uses repositories. These classes adopt the <a href="http://martinfowler.com/eaaCatalog/repository.html" target="_blank">repository pattern</a> and act as a layer between your module’s business logic layer and the data mapping layer. We recommend placing the class files for repositories under the <code class="highlighter-rouge">Model</code>或<code class="highlighter-rouge">Model/ResourceModel</code> directory inside your module’s root directory.</p>
+
+<p>An example of a repository is the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/CatalogRule/Model/CatalogRuleRepository.php" target="_blank"><code class="highlighter-rouge">Magento\CatalogRule\Model\CatalogRuleRepository</code></a> class.</p>
+
+<p>Different parts of the application can use your repository to load entities. To prevent loading of the same data from the database more than once, use a registry inside the repository. For an example of this strategy, take a look at the  <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Model/ResourceModel/CustomerRepository.php" target="_blank"><code class="highlighter-rouge">Magento\Customer\Model\ResourceModel\CustomerRepository</code></a> class.</p>
+
+<h4 id="resource-models">Resource Models</h4>
+
+<p>Resource models contain logic that allow entities to be persistent. They help decouple the model layer from the data layer by acting as an intermediate mapping layer between the two. These classes provide the interface to manipulate data to the model layer while implementing code that is specific to the data layer. We recommend you put resource models under the <code class="highlighter-rouge">Model/ResourceModel</code> directory inside your module’s root directory.</p>
+
+<h4 id="persisting-with-resource-models">Persisting with resource models</h4>
+
+<p>Repository functions should operate on data interfaces. In your repository functions, you can extract a <a href="#data-models">data model</a> from the interface using the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Api/ExtensibleDataObjectConverter.php" target="_blank"><code class="highlighter-rouge">\Magento\Framework\Api\ExtensibleDataObjectConverter</code></a> class to create and populate a resource model using a <a href="/guides/v2.1/extension-dev-guide/factories.html">factory</a>. This resource model can then save, load, or delete an entity.</p>
+
+<p>Example:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$customerModel</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">customerFactory</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">([</span><span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="nv">$customerData</span><span class="p">]);</span>
+
+<span class="sd">/** @var $customerResource \Magento\Customer\Model\ResourceModel\Customer */</span>
+<span class="nv">$customerResource</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$customerModel</span><span class="p">);</span>
+
+<span class="nv">$customerResource</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="nv">$customerModel</span><span class="p">,</span> <span class="nv">$entityId</span><span class="p">);</span>
+
+<span class="nv">$customerResource</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$customerModel</span><span class="p">);</span></code></pre></figure>
+
+<h4 class="no_toc" id="相关主题">相关主题</h4>
+
+<ul>
+  <li><a href="/guides/v2.1/extension-dev-guide/attributes.html">实体属性值(EAV)和扩展属性</a></li>
+  <li><a href="/guides/v2.1/extension-dev-guide/factories.html">Instantiating objects with factories</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/extension-dev-guide/persistent-entities.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/extension-dev-guide/persistent-entities.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

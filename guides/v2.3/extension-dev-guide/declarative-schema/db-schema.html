@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Configure declarative schema | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/extension-dev-guide/declarative-schema/db-schema.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/extension-dev-guide/declarative-schema/db-schema.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/extension-dev-guide/declarative-schema/db-schema.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">PHP开发文档</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">介绍</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="开发者指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/developers_roadmap.html">开发者指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer介绍">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer.html">Composer介绍</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="常用术语表">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer-gloss.html">常用术语表</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="准备(快速开始开发)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/prepare/prepare.html">准备(快速开始开发)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="组件类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-modtypes.html">组件类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于组件的文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/prepare_file-str.html">关于组件的文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发和打包组件指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-summary.html">开发和打包组件指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="extension-lifecycle">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/lifecycle.html">扩展生命周期</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="build">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/build/build.html">Build</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="di.xml文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/di-xml-file.html">di.xml文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="最佳开发环境">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/optimal-dev-environment.html">最佳开发环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer.json文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/composer-integration.html">composer.json文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定义你的配置文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/required-configuration-files.html">定义你的配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建你的组件文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-file-structure.html">创建你的组件文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="注册你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/component-registration.html">注册你的组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)验证">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/XSD-XML-validation.html">统一资源名称(URN)验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="你组件的名称">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/create_component.html">你组件的名称</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="组件加载顺序">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-load-order.html">组件加载顺序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用和禁用组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/enable-module.html">启用和禁用组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="package">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/package/package.html">Package</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="打包组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_module.html">打包组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="上传组件到magento市场">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_mktpl.html">上传组件到Magento市场</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="validate">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/validate/validate.html">Validate</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="测试你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/validate/test-module.html">测试你的组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部份缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching.html">部份缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="创建自定义缓存引擎">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/database-caching.html">创建自定义缓存引擎</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建缓存类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/create-cache-type.html">创建缓存类型</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="页面缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/page-caching.html">页面缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="public-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/public-content.html">公开内容</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="private-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/private-content.html">隐私内容</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="添加命令行命令">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-add.html">添加命令行命令</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令命名指南">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">命令命名指南</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="如何添加命令行命令">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-howto.html">如何添加命令行命令</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="staging-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/staging.html">Staging (仅企业版适用)</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件开发">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/module-development.html">组件开发</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="服务约定">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="public-interfaces-&amp;-apis">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/api-concepts.html">Public interfaces &amp; APIs</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="服务契约设置模式">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/design-patterns.html">服务契约设置模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖注入">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/depend-inj.html">依赖注入</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="objectmanager">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/object-manager.html">ObjectManager</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="事件和观查者">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/events-and-observers.html">事件和观查者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="factories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/factories.html">Factories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="proxies">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/proxies.html">Proxies</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码生成">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/code-generation.html">代码生成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="实体属性值(eav)和扩展属性">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/attributes.html">实体属性值(EAV)和扩展属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="插件(拦截器)">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/plugins.html">插件(拦截器)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="routing">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/routing.html">Routing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="indexing">
+
+            
+
+            
+            <span>Indexing</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="索引概述">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing.html">索引概述</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="索引优化">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexer-batch.html">索引优化</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="添加自定义索引">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing-custom.html">添加自定义索引</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="declarative-schema">
+
+            
+
+            
+            <span>Declarative schema</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="delcarative-schema-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/">Delcarative schema overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="migrate-install/upgrade-scripts-to-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html">Migrate install/upgrade scripts to declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3 active " id="configure-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">Configure declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="develop-data-and-schema-patches">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html">Develop data and schema patches</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="消息队列-(magento-commerce-edition-only)">
+
+            
+
+            
+            <span>消息队列 (Magento Commerce Edition Only)</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="消息队列-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/message-queues.html">消息队列 overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configure-message-queues">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/config-mq.html">Configure message Queues</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="迁移消息队列配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bulk-operations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/bulk-operations.html">Bulk operations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="批量操作实现示例">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/implement-bulk.html">批量操作实现示例</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加扩展属性到实体">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html">添加扩展属性到实体</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searching-with-repositories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/searching-with-repositories.html">Searching with repositories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="将服务配置成web-api">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署期间清空目录">
+
+            
+
+            
+            <a href="/guides/v2.3/howdoi/php/php_clear-dirs.html">部署期间清空目录</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="adapters">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/adapters.html">Adapters</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <span>Configuration</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="sensitive-environemnt-settings">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/sensitive-and-environment-settings.html">敏感环境设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="configuration-importers">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/importers.html">配置导入器</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="framework">
+    
+
+    
+    <span>Framework</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="序列化库">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/framework/serializer.html">序列化库</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="security">
+    
+
+    
+    <span>Security</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="xss-prevention">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/xss-protection.html">XSS防范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="不安全的方法">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/security/non-secure-functions.html">不安全的方法</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="versioning">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/versioning/">Versioning</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模块版本依赖">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/dependencies.html">模块版本依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基础代码修改">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/codebase-changes.html">基础代码修改</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">
+            <span property="name">PHP开发文档</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Configure declarative schema</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Configure declarative schema</h1>
+
+  
+
+
+</section>
+
+			<p>Before Magento 2.3, extension developers were required to write code (PHP scripts) to change the database schema. The following types of scripts existed before Magento 2.3:</p>
+
+<ul>
+  <li>InstallData and InstallSchema scripts, which are executed on a clean (empty) database</li>
+  <li>UpgradeData and UpgradeSchema incremental scripts, which supplement an existing Magento database</li>
+  <li>Recurring scripts, which are executed each time you install or upgrade Magento</li>
+</ul>
+
+<p>Each script iteratively adds changes. During the installation process, Magento applies only those changes that have not been applied yet. For example, if you have Magento 2.1.8 installed and the latest version is 2.1.11, then the upgrade scripts for
+2.1.9, 2.1.10, and 2.1.11 will be applied, in order, when you upgrade to 2.1.11. That procedure is called <em>migration setup</em> or <em>migration scripts</em>.</p>
+
+<p>The main disadvantage of this approach is that Magento applies changes blindly. For example, in one version a new database column might be introduced, only to be removed in the next. <em>Declarative setup</em> eliminates this type of unnecessary work.</p>
+
+<p>Declarative setup is based on database structure declarations, and is used in projects such as <a href="http://www.doctrine-project.org/">Doctrine</a>. Schema files declare what the database structure should be,
+and Magento determines the differences between the current table structure and what it should be. These differences can be represented with atomic SQL operations.</p>
+
+<p>The following example, extracted from the <code class="highlighter-rouge">Catalog/etc/db_schema.xml</code> file, defines the <code class="highlighter-rouge">catalog_product_entity_datetime</code> table:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">name=</span><span class="s">"catalog_product_entity_datetime"</span> <span class="na">resource=</span><span class="s">"default"</span> <span class="na">engine=</span><span class="s">"innodb"</span>
+           <span class="na">comment=</span><span class="s">"Catalog Product Datetime Attribute Backend Table"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"int"</span> <span class="na">name=</span><span class="s">"value_id"</span> <span class="na">padding=</span><span class="s">"11"</span> <span class="na">unsigned=</span><span class="s">"false"</span> <span class="na">nullable=</span><span class="s">"false"</span> <span class="na">identity=</span><span class="s">"true"</span> <span class="na">comment=</span><span class="s">"Value ID"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"smallint"</span> <span class="na">name=</span><span class="s">"attribute_id"</span> <span class="na">padding=</span><span class="s">"5"</span> <span class="na">unsigned=</span><span class="s">"true"</span> <span class="na">nullable=</span><span class="s">"false"</span> <span class="na">identity=</span><span class="s">"false"</span><span class="na">default=</span><span class="s">"0"</span> <span class="na">comment=</span><span class="s">"Attribute ID"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"smallint"</span> <span class="na">name=</span><span class="s">"store_id"</span> <span class="na">padding=</span><span class="s">"5"</span> <span class="na">unsigned=</span><span class="s">"true"</span> <span class="na">nullable=</span><span class="s">"false"</span> <span class="na">identity=</span><span class="s">"false"</span> <span class="na">default=</span><span class="s">"0"</span> <span class="na">comment=</span><span class="s">"Store ID"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"int"</span> <span class="na">name=</span><span class="s">"entity_id"</span> <span class="na">padding=</span><span class="s">"10"</span> <span class="na">unsigned=</span><span class="s">"true"</span> <span class="na">nullable=</span><span class="s">"false"</span> <span class="na">identity=</span><span class="s">"false"</span> <span class="na">default=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"datetime"</span> <span class="na">name=</span><span class="s">"value"</span> <span class="na">on_update=</span><span class="s">"false"</span> <span class="na">nullable=</span><span class="s">"true"</span> <span class="na">comment=</span><span class="s">"Value"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;constraint</span> <span class="na">xsi:type=</span><span class="s">"primary"</span> <span class="na">name=</span><span class="s">"PRIMARY"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"value_id"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/constraint&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div></div>
+
+<h2 id="db_schema-structure"><code class="highlighter-rouge">db_schema</code> structure</h2>
+
+<p>The <code class="highlighter-rouge">&lt;Module_Vendor&gt;/&lt;Module_Name&gt;/etc/db_schema.xml</code> file declares a module’s database structure.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>If you have enabled <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-urn.html">URN highlighting</a>, you can use the PHPStorm autocomplete feature after choosing a node’s <code class="highlighter-rouge">xsi:type</code>. This will also allow you to view which attributes are available on each line of your <code class="highlighter-rouge">db_schema.xml</code> file</p>
+</div>
+
+<h3 id="top-level-node">Top-level node</h3>
+
+<p>The <code class="highlighter-rouge">schema</code> node defines the location of the <code class="highlighter-rouge">schema.xsd</code>  file.</p>
+
+<p><code class="highlighter-rouge">&lt;schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="urn:magento:setup:Model/Declaration/Schema/etc/schema.xsd"&gt;</code></p>
+
+<h3 id="table-node"><code class="highlighter-rouge">table</code> node</h3>
+
+<p>Each <code class="highlighter-rouge">db_schema.xml</code> file should contain one or more <code class="highlighter-rouge">table</code> nodes. Each table node represents a table in the database.
+A table node can contain the following attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>The name of the table.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">engine</code></td>
+      <td>SQL engine. This value must be <code class="highlighter-rouge">innodb</code>或<code class="highlighter-rouge">memory</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">resource</code></td>
+      <td>The database shard on which to install the table. This value must be <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">quote</code>, or <code class="highlighter-rouge">sales</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">comment</code></td>
+      <td>Table comment.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A <code class="highlighter-rouge">table</code> node can contain three types of subnodes:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">column</code></li>
+  <li><code class="highlighter-rouge">constraint</code></li>
+  <li><code class="highlighter-rouge">index</code></li>
+</ul>
+
+<h4 id="column-subnode"><code class="highlighter-rouge">column</code> subnode</h4>
+
+<p>The <code class="highlighter-rouge">column</code> subnode defines a column in a table. Each column requires its own declaration.</p>
+
+<p>A column can have the following attributes:</p>
+
+<table>
+<tr><th>Attribute</th><th>描述</th></tr>
+<tr>
+<td><code>xsi:type</code></td>
+<td><p>Specifies the column type. Must be one of the following:</p>
+<ul>
+<li><code>blob</code>  (includes blob, mediumblob, longblob)</li>
+<li><code>boolean</code></li>
+<li><code>date</code></li>
+<li><code>datetime</code></li>
+<li><code>int</code> (includes smallint, bigint, tinyint)</li>
+<li><code>real</code> (includes decimal, float, double, real)</li>
+<li><code>text</code> (includes text, mediumtext, longtext)</li>
+<li><code>timestamp</code></li>
+<li><code>varbinary</code></li>
+<li><code>varchar</code></li>
+</ul></td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>Initializes the column with the specified default value. The default value should have the same datatype defined in <code>xsi:type</code>.
+</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables or deletes the declared table, column, constraint, or index.
+</td>
+</tr>
+<tr>
+<td><code>identity</code></td>
+<td>Indicates whether a column is auto incremented.
+</td>
+</tr>
+<tr>
+<td><code>length</code></td>
+<td>In text and binary types (including varchar and varbinary), specifies the length of a column.</td>
+</tr>
+<tr>
+<td><code>nullable</code></td>
+<td>Indicates whether column can be nullable.</td>
+</tr>
+<tr>
+<td><code>onCreate</code></td>
+<td>This is a DDL trigger that allows you to move data from an existing column to a newly created column. This trigger works only when a column is created.</td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+<td>The size of an integer column.</td>
+</tr>
+<tr>
+<td><code>precision</code></td>
+<td>The number of allowed digits in a real data type.</td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td>The number of digits after the decimal in a real data type.</td>
+</tr>
+<tr>
+<td><code>unsigned</code></td>
+<td>For numeric data types, specifies whether the column can contain positive and negative values or only positive values.</td>
+</tr>
+</table>
+
+<p>For more information about each type, refer to the annotations in the corresponding XSD file. The XSD files are located in the <code class="highlighter-rouge">&lt;Magento_root_directory/setup/src/Magento/Setup/Model/Declaration/Schema/etc</code> directory.</p>
+
+<p>Example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;column</span> <span class="na">xsi:type=</span><span class="s">"int"</span> <span class="na">name=</span><span class="s">"entity_id"</span> <span class="na">padding=</span><span class="s">"10"</span> <span class="na">unsigned=</span><span class="s">"true"</span> <span class="na">nullable=</span><span class="s">"false"</span> <span class="na">identity=</span><span class="s">"true"</span> <span class="na">comment=</span><span class="s">"Credit ID"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h4 id="constraint-subnode"><code class="highlighter-rouge">constraint</code> subnode</h4>
+
+<p>The <code class="highlighter-rouge">constraint</code> subnode is represented by 3 different types:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">primary</code></li>
+  <li><code class="highlighter-rouge">unique</code></li>
+  <li><code class="highlighter-rouge">foreign</code></li>
+</ul>
+
+<p>The <code class="highlighter-rouge">primary</code> and <code class="highlighter-rouge">unique</code> constraints are called “internal” constraints, because they can be applied only to the scope of the table where they are created. Internal constraints define the <code class="highlighter-rouge">name</code> attribute and contain one or more <code class="highlighter-rouge">column</code> subnodes. Each subnode defines a constrained column.</p>
+
+<p>The following example shows the format of an internal constraint.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;constraint</span> <span class="na">xsi:type=</span><span class="s">"primary"</span> <span class="na">name=</span><span class="s">"PRIMARY"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;column</span> <span class="na">name=</span><span class="s">"entity_id"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/constraint&gt;</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">foreign</code> constraint is similar to foreign keys in SQL. This type of constraint connects two tables with each other. The following attributes define a foreign constraint:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">column</code></td>
+      <td>A column in the current table that refers to a specific column in another table.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">referenceTable</code></td>
+      <td>The table being referenced.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">referenceColumn</code></td>
+      <td>A column in the <code class="highlighter-rouge">referenceTable</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">onDelete</code></td>
+      <td>Foreign key trigger. The value must be <code class="highlighter-rouge">CASCADE</code>, <code class="highlighter-rouge">SET NULL</code>, or <code class="highlighter-rouge">NO ACTION</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;constraint</span> <span class="na">xsi:type=</span><span class="s">"foreign"</span> <span class="na">name=</span><span class="s">"COMPANY_CREDIT_COMPANY_ID_DIRECTORY_COUNTRY_COUNTRY_ID"</span> <span class="na">table=</span><span class="s">"company_credit"</span> <span class="na">column=</span><span class="s">"company_id"</span> <span class="na">referenceTable=</span><span class="s">"company"</span> <span class="na">referenceColumn=</span><span class="s">"entity_id"</span> <span class="na">onDelete=</span><span class="s">"CASCADE"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+<h4 id="index-subnode"><code class="highlighter-rouge">index</code> subnode</h4>
+
+<p>The <code class="highlighter-rouge">index</code> subnode has the same structure as internal constraints but contains different logic. While constraints are used for defining limitations, indexes are used for speeding up DQL operations.</p>
+
+<h2 id="perform-common-database-operations">Perform common database operations</h2>
+
+<p>This section shows how to perform common database operations using declarative schema. The screen captures use <code class="highlighter-rouge">git diff</code> to illustrate how to perform these tasks.</p>
+
+<h3 id="create-a-table">Create a table</h3>
+
+<p>The following example creates the <code class="highlighter-rouge">table_name</code> table with five columns. The <code class="highlighter-rouge">id</code> column is the primary key.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/declaration-create-table.png" alt="Create Table" /></p>
+
+<h3 id="drop-a-table">Drop a table</h3>
+
+<p>In the following example, the <code class="highlighter-rouge">table_name</code> table was completely removed from the <code class="highlighter-rouge">db-schema.xml</code> file. To drop a table declared in another module, redeclare it with the <code class="highlighter-rouge">disabled</code> attribute set to <code class="highlighter-rouge">true</code>.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/drop-declarative-table.png" alt="Drop Table" /></p>
+
+<h3 id="rename-a-table">Rename a table</h3>
+
+<p>Table renaming is not supported. However, you can remove an unneeded table declaration and add a new one. Data will be persisted in a CSV dump, but the data will not be added to the new table automatically. You can add the data manually by using data/recurring patches.</p>
+
+<h3 id="create-a-foreign-key">Create a foreign key</h3>
+
+<p>In the following example, the selected <code class="highlighter-rouge">constraint</code> node defines the characteristics of the <code class="highlighter-rouge">FL_ALLOWED_SEVERITIES</code> foreign key.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/create-fk.png" alt="Create Foreign Key" /></p>
+
+<h3 id="drop-a-foreign-key">Drop a foreign key</h3>
+
+<p>The following example removes the  <code class="highlighter-rouge">FL_ALLOWED_SEVERITIES</code> foreign key by deleting its <code class="highlighter-rouge">constraint</code> node. To drop a constraint declared in another module, redeclare it with the <code class="highlighter-rouge">disabled</code> attribute set to <code class="highlighter-rouge">true</code>.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/drop-fk.png" alt="Drop Foreign Key" /></p>
+
+<h3 id="add-a-column-to-table">Add a column to table</h3>
+
+<p>The following example adds the <code class="highlighter-rouge">date_closed</code> column.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/add-column.png" alt="Add column to table" /></p>
+
+<h3 id="drop-a-column-from-a-table">Drop a column from a table</h3>
+
+<p>The following example removes the  <code class="highlighter-rouge">date_closed</code> column by deleting its <code class="highlighter-rouge">column</code> node. To drop a column declared in another module, redeclare it with the <code class="highlighter-rouge">disabled</code> attribute set to <code class="highlighter-rouge">true</code>.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/remove-column.png" alt="Drop column from table" /></p>
+
+<h3 id="change-the-column-type">Change the column type</h3>
+
+<p>The following example changes the <code class="highlighter-rouge">type</code> of the <code class="highlighter-rouge">title</code> column from <code class="highlighter-rouge">varchar</code> to  <code class="highlighter-rouge">tinytext</code>.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/change-column-type.png" alt="Change column type" /></p>
+
+<h3 id="rename-a-column">Rename a column</h3>
+
+<p>To rename a column, delete the original column declaration and create a new one. In the new declaration, use the <code class="highlighter-rouge">onCreate</code> attribute to specify which column to migrate data from. Use the following construction to migrate data from the same table.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>onCreate="migrateDataFrom(entity_id)"
+</code></pre></div></div>
+
+<p>To migrate data from another table, specify a value similar to the following:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>onCreate="migrateDataFromAnotherTable(catalog_category_entity,entity_id)"
+</code></pre></div></div>
+
+<h3 id="add-an-index">Add an index</h3>
+
+<p>The following example adds the <code class="highlighter-rouge">INDEX_SEVERITY</code> index to the <code class="highlighter-rouge">table_name</code> table.</p>
+
+<p><img src="/guides/v2.3/extension-dev-guide/declarative-schema/images/add-index.png" alt="Add index" /></p>
+
+<h2 id="other-tasks">Other tasks</h2>
+
+<h3 id="disable-a-module">Disable a module</h3>
+
+<p>When a module is disabled from the Admin console, its database schema configuration is no longer read on upgrade or install. As a result, subsequent system upgrades rebuild the database schema without the module’s tables, columns, or other elements.</p>
+
+<!--
+### Truncate a table
+
+**Developer question:** This section is empty
+
+-->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

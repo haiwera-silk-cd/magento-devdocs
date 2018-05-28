@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>添加一个结算步骤 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/howdoi/checkout/checkout_new_step.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/howdoi/checkout/checkout_new_step.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/howdoi/checkout/checkout_new_step.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/howdoi/checkout/checkout_new_step.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/howdoi/checkout/checkout_new_step.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">How to</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="how-to">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/bk-how-do-i.html">How To</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="contributor-sign-up-sheet">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/howdoi_contribute.html">贡献者注册表单</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置magento">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/config/configure.html">配置Magento</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署magento到生产环境">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/deploy/deploy-to-prod.html">部署Magento到生产环境</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装和配置">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/install/install-topics.html">安装和配置</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento模式切换">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/install/mode-switch.html">Magento模式切换</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="js开发">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/frontend/front-js.html">js开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="布局开发">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/frontend/front-layout.html">布局开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="迁移magento1到magento2">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/migrate/migrate.html">迁移Magento1到Magento2</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="迁移主题">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/migrate/migrate-themes.html">迁移主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="迁移扩展">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/migrate/migrate-extensions.html">迁移扩展</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码迁移">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/migrate/migrate-code.html">代码迁移</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据迁移">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/migrate/migrate-data.html">数据迁移</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="php开发">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/php/php_devs.html">PHP开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="主题开发">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/frontend/front-theme.html">主题开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento故障排除">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/troubleshoot/troubleshoot.html">Magento故障排除</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="重置为默认主题">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/troubleshoot/reset_theme.html">重置为默认主题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义结算页">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">自定义结算页</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="添加一个结算步骤">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_new_step.html">添加一个结算步骤</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义结算页某步骤的视图">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_customize.html">自定义结算页某步骤的视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为结算添加自定义的支付方式">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_payment.html">为结算添加自定义的支付方式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加提交前自定义数据校验">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_order.html">添加提交前自定义数据校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义物流校验">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_carrier.html">添加自定义物流校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为邮编添加自定义掩码">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_zip.html">为邮编添加自定义掩码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在结算页为表单输入添加自定义模板">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_edit_form.html">在结算页为表单输入添加自定义模板</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加一个新的输入表单到结算页">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_form.html">添加一个新的输入表单到结算页</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加一个新的输入项到地址表单">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_new_field.html">添加一个新的输入项到地址表单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义物流地址渲染">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_address.html">添加自定义物流地址渲染</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义影响其它输入的输入项">
+
+            
+
+            
+            <a href="/guides/v2.0/howdoi/checkout/checkout_custom_checkbox.html">添加自定义影响其它输入的输入项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="清除静态文件缓存">
+    
+
+    
+    <a href="/guides/v2.0/howdoi/clean_static_cache.html">清除静态文件缓存</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/howdoi/bk-how-do-i.html">
+            <span property="name">How To</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">添加一个结算步骤</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">添加一个结算步骤</h1>
+
+  
+
+
+</section>
+
+			<h2 id="这里有什么">这里有什么</h2>
+<p>The default Magento <span term-uuid="278c3ce0-cd4c-4ffc-a098-695d94d73bde" class="glossary-term" data-toggle="popover">Checkout</span> consists of two steps:</p>
+
+<ul>
+  <li>Shipping Information</li>
+  <li>Review and Payments Information</li>
+</ul>
+
+<p>You can add a custom checkout step, it should be implemented as a <span term-uuid="9bcc648c-bd08-4feb-906d-1e24c4f2f422" class="glossary-term" data-toggle="popover">UI component</span>. For the sake of compatibility, upgradability and easy maintenance, do not edit the default Magento code, add your customizations in a separate <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>.</p>
+
+<p>This topic describes how to create the <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> part of the component, implementing a checkout step, and how to add it to the checkout flow.</p>
+
+<h2 id="create-the-view-part-of-the-checkout-step-component">Create the view part of the checkout step component</h2>
+
+<p>To create the view part of the new checkout step:</p>
+
+<ol>
+  <li>Add a module directory (not covered in this topic). See <a href="/guides/v2.0/extension-dev-guide/build/build.html">Build your module</a> for details). All custom files must be stored there. For your checkout customization to be applied correctly, your custom module should depend on the <code class="highlighter-rouge">Magento_Checkout</code> module. Do not use <code class="highlighter-rouge">Ui</code> for your custom module name, because <code class="highlighter-rouge">%Vendor%_Ui</code> notation, required when specifying paths, might cause issues.</li>
+  <li>Create the <code class="highlighter-rouge">.js</code> file implementing the view model.</li>
+  <li>Create an <code class="highlighter-rouge">.html</code> template for the component.</li>
+</ol>
+
+<p>Each step is described in details in the following paragraphs.</p>
+
+<h3 id="component">Add the JavaScript file implementing the new step</h3>
+
+<p>A new checkout step must be implemented as UI component. That is, its <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> implementation must be a JavaScript module.</p>
+
+<p>The file must be stored under the <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/web/js/view</code> directory.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+<p><code>&lt;your_module_dir&gt;</code> notation stands for the path to your module directory from the root directory. Usually it will be one of the following: <code>app/code/&lt;YourVendor&gt;/&lt;YourModule&gt;</code>或<code>vendor/&lt;yourvendor&gt;/module-&lt;module&gt;-&lt;name&gt;</code>. For more details see <a href="/guides/v2.0/frontend-dev-guide/conventions.html">Conventional notations for paths to modules and themes</a></p>
+</div>
+
+<p>A sample <code class="highlighter-rouge">my-step-view.js</code> with comments follows:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="s1">'ko'</span><span class="p">,</span>
+        <span class="s1">'uiComponent'</span><span class="p">,</span>
+        <span class="s1">'underscore'</span><span class="p">,</span>
+        <span class="s1">'Magento_Checkout/js/model/step-navigator'</span>
+    <span class="p">],</span>
+    <span class="kd">function</span> <span class="p">(</span>
+        <span class="nx">ko</span><span class="p">,</span>
+        <span class="nx">Component</span><span class="p">,</span>
+        <span class="nx">_</span><span class="p">,</span>
+        <span class="nx">stepNavigator</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="s1">'use strict'</span><span class="p">;</span>
+        <span class="cm">/**
+        *
+        * mystep - is the name of the component's .html template,
+        * &lt;Vendor&gt;_&lt;Module&gt;  - is the name of the your module directory.
+        *
+        */</span>
+        <span class="k">return</span> <span class="nx">Component</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+            <span class="na">defaults</span><span class="p">:</span> <span class="p">{</span>
+                <span class="na">template</span><span class="p">:</span> <span class="s1">'&lt;Vendor&gt;_&lt;Module&gt;/mystep'</span>
+            <span class="p">},</span>
+
+            <span class="c1">//add here your logic to display step,</span>
+            <span class="na">isVisible</span><span class="p">:</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">true</span><span class="p">),</span>
+
+            <span class="cm">/**
+			*
+			* @returns {*}
+			*/</span>
+            <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">();</span>
+                <span class="c1">// register your step</span>
+                <span class="nx">stepNavigator</span><span class="p">.</span><span class="nx">registerStep</span><span class="p">(</span>
+                    <span class="c1">//step code will be used as step content id in the component template</span>
+                    <span class="s1">'step_code'</span><span class="p">,</span>
+                    <span class="c1">//step alias</span>
+                    <span class="kc">null</span><span class="p">,</span>
+                    <span class="c1">//step title value</span>
+                    <span class="s1">'Step Title'</span><span class="p">,</span>
+                    <span class="c1">//observable property with logic when display step or hide step</span>
+                    <span class="k">this</span><span class="p">.</span><span class="nx">isVisible</span><span class="p">,</span>
+
+                    <span class="nx">_</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">navigate</span><span class="p">,</span> <span class="k">this</span><span class="p">),</span>
+
+                    <span class="cm">/**
+					* sort order value
+					* 'sort order value' &lt; 10: step displays before shipping step;
+					* 10 &lt; 'sort order value' &lt; 20 : step displays between shipping and payment step
+					* 'sort order value' &gt; 20 : step displays after payment step
+					*/</span>
+                    <span class="mi">15</span>
+                <span class="p">);</span>
+
+                <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+            <span class="p">},</span>
+
+            <span class="cm">/**
+			* The navigate() method is responsible for navigation between checkout step
+			* during checkout. You can add custom logic, for example some conditions
+			* for switching to your custom step
+			*/</span>
+            <span class="na">navigate</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+            <span class="p">},</span>
+
+            <span class="cm">/**
+			* @returns void
+			*/</span>
+            <span class="na">navigateToNextStep</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="nx">stepNavigator</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">);</span></code></pre></figure>
+
+<h3 id="add-the-html-template">Add the .html template</h3>
+
+<p>In the module directory, add the <code class="highlighter-rouge">.html</code> template for the component. It must be located under the <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/web/template</code> directory.</p>
+
+<p>A sample <code class="highlighter-rouge">mystep.html</code> follows:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!--The 'step_code' value from the .js file should be used--&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"step_code"</span> <span class="na">data-bind=</span><span class="s">"fadeVisible: isVisible"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step-title"</span> <span class="na">data-bind=</span><span class="s">"i18n: 'Step Title'"</span> <span class="na">data-role=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"checkout-step-title"</span>
+         <span class="na">class=</span><span class="s">"step-content"</span>
+         <span class="na">data-role=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;form</span> <span class="na">data-bind=</span><span class="s">"submit: navigateToNextStep"</span> <span class="na">novalidate=</span><span class="s">"novalidate"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"actions-toolbar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;button</span> <span class="na">data-role=</span><span class="s">"opc-continue"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"button action continue primary"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span&gt;</span><span class="c">&lt;!-- ko i18n: 'Next'--&gt;&lt;!-- /ko --&gt;</span><span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/li&gt;</span></code></pre></figure>
+
+<h2 id="add-your-step-to-the-checkout-page-layout">Add your step to the Checkout page layout</h2>
+
+<p>For the new step to be displayed on the page, you need to declare it in the Checkout page layout, which is defined in <code class="highlighter-rouge">checkout_index_index.xml</code>.</p>
+
+<p>So you need to add an <a href="/guides/v2.0/frontend-dev-guide/layouts/layout-extend.html">extending</a> <code class="highlighter-rouge">checkout_index_index.xml</code> layout file in the following location: <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code></p>
+
+<p>A sample <code class="highlighter-rouge">checkout_index_index.xml</code> follows:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">layout=</span><span class="s">"1column"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"checkout.root"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;arguments&gt;</span>
+                    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"组件"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"checkout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"steps"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                            <span class="c">&lt;!-- The new step you add --&gt;</span>
+                                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"my-new-step"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"component"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>%Vendor%_%Module%/js/view/my-step-view<span class="nt">&lt;/item&gt;</span>
+                                                    <span class="c">&lt;!--To display step content before shipping step "sortOrder" value should be &lt; 1--&gt;</span>
+                                                    <span class="c">&lt;!--To display step content between shipping step and payment step  1 &lt; "sortOrder" &lt; 2 --&gt;</span>
+                                                    <span class="c">&lt;!--To display step content after payment step "sortOrder" &gt; 2 --&gt;</span>
+                                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"sortOrder"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/item&gt;</span>
+                                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                    <span class="c">&lt;!--add here child component declaration for your step--&gt;</span>
+                                                <span class="nt">&lt;/item&gt;</span>
+                                            <span class="nt">&lt;/item&gt;</span>
+                                        <span class="nt">&lt;/item&gt;</span>
+                                    <span class="nt">&lt;/item&gt;</span>
+                                <span class="nt">&lt;/item&gt;</span>
+                            <span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/argument&gt;</span>
+                <span class="nt">&lt;/arguments&gt;</span>
+        <span class="nt">&lt;/referenceBlock&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<h2 id="create-mixins-for-payment-and-shipping-steps-optional">Create mixins for payment and shipping steps (optional)</h2>
+
+<p>If your new step is the first step, you have to create mixins for the payment and shipping steps. Otherwise two steps will be activated on loading of the checkout.</p>
+
+<p>Create a mixin as follows:</p>
+
+<ol>
+  <li>Create a <code class="highlighter-rouge">Vendor/Module/view/base/requirejs-config.js</code> file with these contents;</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">'config'</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">'mixins'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'Magento_Checkout/js/view/shipping'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'Vendor_Module/js/view/shipping-payment-mixin'</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="s1">'Magento_Checkout/js/view/payment'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'Vendor_Module/js/view/shipping-payment-mixin'</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<ol>
+  <li>Create the mixin. We’ll use the same mixin for both payment and shipping:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="s1">'ko'</span>
+    <span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ko</span><span class="p">)</span> <span class="p">{</span>
+        <span class="s1">'use strict'</span><span class="p">;</span>
+
+        <span class="kd">var</span> <span class="nx">mixin</span> <span class="o">=</span> <span class="p">{</span>
+
+            <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">visible</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span> <span class="c1">// set visible to be initially false to have your step show first</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">();</span>
+
+                <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">target</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">mixin</span><span class="p">);</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">);</span></code></pre></figure>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>For your changes to be applied, you might need to <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-cache.html">clean layout cache</a> and <a href="/guides/v2.0/howdoi/clean_static_cache.html">static view file cache</a>. For more info on mixins go to <a href="http://devdocs.magento.com/guides/v2.1/javascript-dev-guide/javascript/js_mixins.html">JS Mixins</a>.</p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/howdoi/checkout/checkout_new_step.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/howdoi/checkout/checkout_new_step.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

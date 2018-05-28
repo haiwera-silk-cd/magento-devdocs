@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>全局可扩展的特性 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/architecture/global_extensibility_features.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/architecture/global_extensibility_features.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/architecture/global_extensibility_features.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/architecture/global_extensibility_features.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/architecture/global_extensibility_features.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">架构指引</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.0/architecture/bk-architecture.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="architectural-basics">
+    
+
+    
+    <a href="/guides/v2.0/architecture/archi_perspectives/ABasics_intro.html">架构基础</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="可扩展和模块化">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/extensibility.html">可扩展和模块化</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="容易的前端定制">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/frontend_custom_strategies.html">容易的前端定制</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="全局可扩展的特性">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/global_extensibility_features.html">全局可扩展的特性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="security">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/security_intro.html">Security</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网店前台自定义策略">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/storefront_customization.html">网店前台自定义策略</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="架构图">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="技术栈">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/tech-stack.html">技术栈</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="架构的分层">
+    
+
+    
+    <a href="/guides/v2.0/architecture/archi_perspectives/ALayers_intro.html">架构的分层</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="presentation-layer">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/present_layer.html">Presentation layer</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="服务层">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/service_layer.html">服务层</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="领域层">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/domain_layer.html">领域层</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="持久层">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/persist_layer.html">持久层</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件">
+    
+
+    
+    <a href="/guides/v2.0/architecture/archi_perspectives/components/Acomponents.html">组件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模块概述">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块和地区">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_and_areas.html">模块和地区</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块规范">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_conventions.html">模块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块关系">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_relationships.html">模块关系</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块依赖">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend.html">模块依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块依赖类型">
+
+            
+
+            
+            <a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend_types.html">模块依赖类型</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento框架">
+    
+
+    
+    <a href="/guides/v2.0/architecture/archi_perspectives/framework.html">Magento框架</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="第三方库">
+    
+
+    
+    <a href="/guides/v2.0/architecture/archi_perspectives/third-party-libs.html">第三方库</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/architecture/bk-architecture.html">
+            <span property="name">架构指引</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">全局可扩展的特性</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">全局可扩展的特性</h1>
+
+  
+
+
+</section>
+
+			<h2 id="overview">Overview</h2>
+
+<p>Essential qualities foster extensibility throughout the entire set of Magento组件. This discussion focuses on:</p>
+
+<ul>
+  <li>Modularity</li>
+  <li>Reliance on popular design patterns</li>
+  <li>Coding standards</li>
+  <li>Flexible attribute types</li>
+  <li>Web APIs</li>
+  <li>服务约定 and <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">dependency injection</span></li>
+  <li>Plug-ins</li>
+</ul>
+
+<h3 id="modularity">Modularity</h3>
+
+<p>The concept of the <i>module</i> is the heart of Magento <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> development, and modular design of software 组件 (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module’s external dependencies.</p>
+
+<p>If a <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software 组件 reduces the ripple effects throughout your code base of changing code.</p>
+
+<p>See the <a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for detailed instructions on how to create modules.</p>
+
+<h3 id="reliance-on-popular-design-patterns">Reliance on popular design patterns</h3>
+
+<p>Reliance on known architectural and programming structures helps <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> developers orient themselves to the specific development issues that affect coding in a particular product ecosystem. This can reduce the learning curve for new Magento developers.</p>
+
+<p>Design patterns are time-tested, widely recognized software architecture constructs. Magento product architecture incorporates many well known patterns, but Model-View-Controller (MVC) holds particular interest for extension developers.</p>
+
+<h3 id="coding-standards">Coding standards</h3>
+
+<p>Magento developers should familiarize themselves with our coding standards, best practices, and conventions, especially standards for PHP file formatting, coding style, and file naming conventions. Magento standards are based on Zend Framework 编码规范.</p>
+
+<p>See <a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a> for guidelines and requirements.</p>
+
+<h3 id="rich-product-ecosystem">Rich product ecosystem</h3>
+
+<p>The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit <a href="https://marketplace.magento.com/">Magento Marketplace</a> for an overview of the many modules and themes available for download and to buy modules and <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> packages, which offer more possibilities for extending your <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span>.</p>
+
+<h3 id="flexible-attribute-types">Flexible attribute types</h3>
+
+<p>You can enhance your storefront by adding unique attributes to the default product attributes. For example, you might need to add a new attribute to describe a product, such as texture or an industry-specific rating. You can add these attributes from the Magento Admin, and the storefront  displays them.</p>
+
+<table>
+   <tbody>
+      <tr style="background-color: lightgray">
+         <th>Attribute type</th>
+         <th>Displayed by storefront?</th>
+
+      </tr>
+<tr>
+         <td>EAV
+         </td>
+         <td>否</td>
+         </tr>
+
+         <tr>
+         <td>Custom
+         </td>
+         <td>yes</td>
+         </tr>
+         <tr>
+         <td>Extension
+         </td>
+         <td>否</td>
+         </tr>
+
+
+</tbody>
+</table>
+
+<p>Attribute types fall into three general categories:</p>
+
+<ul>
+  <li>
+    <p><b>EAV (Entity-Attribute-Value) attributes</b> are site-specific attributes that you can define for a local site using the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span>.</p>
+  </li>
+  <li>
+    <p><b>Custom attributes</b> are a subset of EAV attributes. Objects that use EAV attributes typically store values in several MySQL tables. The Customer and <span term-uuid="8d40d668-4996-4856-9f81-b1386cf4b14f" class="glossary-term" data-toggle="popover">Catalog</span> modules use EAV attributes.</p>
+  </li>
+  <li>
+    <p><b>Extension attributes</b> often use more <span term-uuid="fd9ae55f-ccf5-480b-a7f3-bd2c80f0b2a4" class="glossary-term" data-toggle="popover">complex data</span> types than custom attributes. These attributes do not appear in the storefront. Extension attributes are introduced by modules.</p>
+  </li>
+</ul>
+
+<p>See <a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information about using attributes.</p>
+
+<h3 id="web-apis">Web APIs</h3>
+
+<p>Magento or third-party services can be configured as a web <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> (REST or SOAP) with some simple <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span>. You can use these services to integrate your Magento installation into third-party applications, such as CRM (Customer Relationship Management), ERP (Enterprise Resource Planning) back office systems, and <span term-uuid="f3944faf-127e-4097-9918-a2e9c647d44f" class="glossary-term" data-toggle="popover">CMS</span> (Content Management Systems).</p>
+
+<p>See <a href="/guides/v2.0/get-started/bk-get-started-api.html">Magento web API起步</a> for more information.</p>
+
+<h3 id="服务约定-dependency-injection-and-dependency-inversion">服务约定, dependency injection, and dependency inversion</h3>
+
+<p><i>服务约定</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务约定 define the endpoints that function as a module’s public API. Defining these endpoints is an essential part of adding a module.</p>
+
+<p>服务约定 are discussed throughout the Magento documentation set. See <a href="/guides/v2.0/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.</p>
+
+<p>Magento implements <i>dependency injection</i> along with service contracts. 依赖注入 provides a mechanism for changing a module’s behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept <em>dependency inversion</em> support Magento’s fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.</p>
+
+<p>See <a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on both dependency injection and service contracts.</p>
+
+<h3 id="plug-ins">Plug-ins</h3>
+
+<p>Plug-ins, like modules, are a mechanism for adding features to the core Magento product. Plug-ins enable you to make changes to the behavior of any public method in a Magento class. You can consider it a form of extension that uses the <code class="highlighter-rouge">Plugin</code> class.</p>
+
+<p>Plug-ins are also called <i>interceptors</i>. Applications use the <span term-uuid="9fceecbe-31be-4e49-aac7-11d155a85382" class="glossary-term" data-toggle="popover">plug-in</span> pattern to change method behavior without modifying the actual class. Plug-ins can typically intercept method processing before or after the method runs, or only when the method throws an <span term-uuid="53da11f1-d0b8-4a7e-b078-1e099462b409" class="glossary-term" data-toggle="popover">exception</span>.</p>
+
+<p>See <a href="/guides/v2.0/extension-dev-guide/plugins.html">Plug-ins</a> in <a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on declaring and prioritizing plug-ins.</p>
+
+<h3 id="m2arch-related">相关主题</h3>
+
+<p><a href="/guides/v2.0/architecture/extensibility.html">可扩展和模块化</a></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/architecture/global_extensibility_features.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/architecture/global_extensibility_features.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

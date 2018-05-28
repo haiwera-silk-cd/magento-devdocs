@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>更新和升级前检查 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/comp-mgr/prereq/prereq_compman-checklist.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/comp-mgr/prereq/prereq_compman-checklist.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/comp-mgr/prereq/prereq_compman-checklist.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">软件升级手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="upgrade-the-magento-application-and-modules">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">升级Magento及其模块</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="先决条件">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/prereq/prereq_compman.html">先决条件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在管理面板输入你的认证密钥">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/prereq/prereq_auth-token.html">在管理面板输入你的认证密钥</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为web服务器设置资源使用限制(ulimit)">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/prereq/prereq_compman-ulimit.html">为web服务器设置资源使用限制(ulimit)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为升级和更新设置定时任务(cron)">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/prereq/prereq_cron.html">为升级和更新设置定时任务(cron)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="更新和升级前检查">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.html">更新和升级前检查</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento市场(marketplace)使用示例">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/marketplace/marketplace.html">Magento市场(marketplace)使用示例</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="运行组件管理器">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/module-man/compman-checklist.html">运行组件管理器</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="启动组件管理">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/module-man/compman-start.html">启动组件管理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理你的组件">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/module-man/compman-main-pg.html">管理你的组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤1.准备就绪检查">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/module-man/compman-readiness.html">步骤1.准备就绪检查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤2.-备份文件系统和数据库">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/module-man/compman-backup.html">步骤2. 备份文件系统和数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="step-3">
+
+            
+
+            
+            <span>步骤3</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="component-install">
+                    
+
+                    
+                    <a  href="/guides/v2.1/comp-mgr/module-man/compman-new-purchase.html">Component Install</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="component-update">
+                    
+
+                    
+                    <a  href="/guides/v2.1/comp-mgr/module-man/compman-update.html">Component Update</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="启用/禁用">
+                    
+
+                    
+                    <a  href="/guides/v2.1/comp-mgr/module-man/compman-enable-disable.html">启用/禁用</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="data-option">
+                    
+
+                    
+                    <a  href="/guides/v2.1/comp-mgr/module-man/compman-uninst-data.html">Data Option</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤4.-卸载">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/module-man/compman-uninst-final.html">步骤4. 卸载</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="upgrade-from-magento-open-source-to-magento-commerce">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/upgrader/ce-ee-upgrade-start.html">从Magento开源版升级到Magento企业版</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行升级">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/cli/cli-upgrade.html">命令行升级</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令行升级有样本数据的系统到magento-2.1">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/cli/cli-rc1-samp.html">命令行升级有样本数据的系统到Magento 2.1</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="运行系统升级">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/upgrader/upgrade-checklist.html">运行系统升级</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="开始系统升级">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/upgrader/upgrade-start.html">开始系统升级</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤-1.-选择要升级的版本">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/upgrader/upgrade-main-pg.html">步骤 1. 选择要升级的版本</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤-2.-就绪检查">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/upgrader/upgrade-readiness.html">步骤 2. 就绪检查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤-3.-备份文件系统和数据库">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/upgrader/upgrade-backup.html">步骤 3. 备份文件系统和数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="步骤-4.-升级">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/upgrader/upgrade.html">步骤 4. 升级</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="更新更新器程序">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/updater/update-updater.html">更新更新器程序</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="更新器程序">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/updater/updater.html">更新器程序</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除-suggestions">
+    
+
+    
+    <a href="/guides/v2.1/comp-mgr/trouble/tshoot.html">故障排除建议</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="对不起，我们现在还不能做这个动作">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/were-sorry.html">对不起，我们现在还不能做这个动作</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="内存溢出错误">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/out-of-memory.html">内存溢出错误</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="缺少.gitignore文件">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/gitignore.html">缺少.gitignore文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决升级问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/upgrade_51431.html">解决升级问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除定时任务的问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/cron.html">排除定时任务的问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除更新器程序的问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/updater.html">排除更新器程序的问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php版本就绪检查的问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/php-version.html">PHP版本就绪检查的问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件权限就绪检查的问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/rc_perms.html">文件权限就绪检查的问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="更新失败回滚">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/update-fail.html">更新失败回滚</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="resolve-组件依赖就绪检查的问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/component-depend.html">Resolve 组件依赖就绪检查的问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="维护模式下的升级选项">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/maint-mode.html">维护模式下的升级选项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解答备份问题">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/tshoot_backup.html">解答备份问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="error-upgrading-from-magento-open-source-to-magento-commerce">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/ce-ee-upgrade.html">升级Magento开源版升级到Magento企业版发生错误</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento/theme-doc-blank-failure">
+
+            
+
+            
+            <a href="/guides/v2.1/comp-mgr/trouble/cman/doc.html">magento/theme-doc-blank failure</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">
+            <span property="name">升级Magento及其模块</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">更新和升级前检查</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">更新和升级前检查</h1>
+
+  
+
+
+</section>
+
+			<h2 id="checklist">Checklist</h2>
+<div>
+
+  <p>Before you continue, to avoid errors during your installation or update, make sure you verify <em>all</em> of the following:</p>
+
+  <ul>
+    <li>You set up a <a href="#magento-owner-group">Magento文件系统所有者</a> and shared that owner’s group with the web server user group</li>
+    <li>Your <a href="#magento-cron">cron jobs</a> are set up and running</li>
+    <li><a href="#perms">File system permissions</a> are set properly</li>
+  </ul>
+
+  <div class="bs-callout bs-callout-warning">
+    <p>Do not continue without performing these checks. Failure to do so could result in errors.</p>
+</div>
+
+  <h3 id="magento-owner-group">Magento文件系统所有者 and group</h3>
+  <p>The <a href="/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a> group must have write access to Magento directories and files.</p>
+
+  <h3 id="magento-cron">Cron jobs are running</h3>
+  <p>Magento requires three cron jobs, all running as the <a href="/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.</p>
+
+  <p>To verify your cron jobs are set up properly, enter the following command as a user with <code class="highlighter-rouge">root</code> privileges:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -u &lt;magento file system owner&gt; -l
+</code></pre></div>  </div>
+
+  <p>For example, if your Magento文件系统所有者 is named <code class="highlighter-rouge">magento_user</code>, enter:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -u magento_user -l
+</code></pre></div>  </div>
+
+  <p>Results similar to the following should display:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * /usr/bin/php /var/www/magento2/bin/magento cron:run | grep -v "Ran jobs by schedule" &gt;&gt; /var/www/magento2/var/log/magento.cron.log
+* * * * * /usr/bin/php /var/www/magento2/update/cron.php &gt;&gt; /var/www/magento2/var/log/update.cron.log
+* * * * * /usr/bin/php /var/www/magento2/bin/magento setup:cron:run &gt;&gt; /var/www/magento2/var/log/setup.cron.log
+</code></pre></div>  </div>
+
+  <p>Another symptom of cron not running is the following error in the Magento Admin:</p>
+
+  <p><img src="http://devdocs.magento.com/common/images/compman-cron-not-running.png" alt="cron isn't running" width="500px" /></p>
+
+  <p>To see the error, you might need to click <strong>System Messages</strong> at the top of the window as follows:</p>
+
+  <p><img src="http://devdocs.magento.com/common/images/compman_sys-messages.png" alt="System Messages" /></p>
+
+  <p>For details, see <a href="/guides/v2.1/install-gde/install/post-install-config.html#post-install-cron">Set up cron</a>.</p>
+
+  <h3 id="perms">File system permissions</h3>
+  <p>For security reasons, Magento requires certain permissions on the file system. Permissions are different from <a href="#magento-owner-group"><em>ownership</em></a>. Ownership determines <em>who</em> can perform actions on the file system; permissions determine <em>what</em> the user can do.</p>
+
+  <p>Directories in the Magento file system must be writable by the <a href="/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者’s</a> group.</p>
+
+  <p>To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider’s file manager application.</p>
+
+  <p>For example, enter the following commands on a Linux system if the Magento application is installed in <code class="highlighter-rouge">/var/www/html/magento2</code>:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -al /var/www/html/magento2
+</code></pre></div>  </div>
+
+  <p>A sample result follows:</p>
+
+  <figure class="highlight"><pre><code class="language-xml" data-lang="xml">total 1028
+drwxrwx---. 12 magento_user apache   4096 Jun  7 07:55 .
+drwxr-xr-x.  3 root         root     4096 May 11 14:29 ..
+drwxrwx---.  4 magento_user apache   4096 Jun  7 07:53 app
+drwxrwx---.  2 magento_user apache   4096 Jun  7 07:53 bin
+-rw-rw----.  1 magento_user apache 439792 Apr 27 21:23 CHANGELOG.md
+-rw-rw----.  1 magento_user apache   3422 Apr 27 21:23 composer.json
+-rw-rw----.  1 magento_user apache 425214 Apr 27 21:27 composer.lock
+-rw-rw----.  1 magento_user apache   3425 Apr 27 21:23 CONTRIBUTING.md
+-rw-rw----.  1 magento_user apache  10011 Apr 27 21:23 CONTRIBUTOR_LICENSE_AGREEMENT.html
+-rw-rw----.  1 magento_user apache    631 Apr 27 21:23 COPYING.txt
+drwxrwx---.  4 magento_user apache   4096 Jun  7 07:53 dev
+-rw-rw----.  1 magento_user apache   2926 Apr 27 21:23 Gruntfile.js
+-rw-rw----.  1 magento_user apache   7592 Apr 27 21:23 .htaccess
+-rw-rw----.  1 magento_user apache   6419 Apr 27 21:23 .htaccess.sample
+-rw-rw----.  1 magento_user apache   1358 Apr 27 21:23 index.php
+drwxrwx---.  4 magento_user apache   4096 Jun  7 07:53 lib
+-rw-rw----.  1 magento_user apache  10376 Apr 27 21:23 LICENSE_AFL.txt
+-rw-rw----.  1 magento_user apache  30634 Apr 27 21:23 LICENSE_EE.txt
+-rw-rw----.  1 magento_user apache  10364 Apr 27 21:23 LICENSE.txt
+-rw-rw----.  1 magento_user apache   4108 Apr 27 21:23 nginx.conf.sample
+-rw-rw----.  1 magento_user apache   1427 Apr 27 21:23 package.json
+-rw-rw----.  1 magento_user apache   1659 Apr 27 21:23 .php_cs
+-rw-rw----.  1 magento_user apache    804 Apr 27 21:23 php.ini.sample
+drwxrwx---.  2 magento_user apache   4096 Jun  7 07:53 phpserver
+drwxrwx---.  6 magento_user apache   4096 Jun  7 07:53 pub
+-rw-rw----.  1 magento_user apache   2207 Apr 27 21:23 README_EE.md
+drwxrwx---.  7 magento_user apache   4096 Jun  7 07:53 setup
+-rw-rw----.  1 magento_user apache   3731 Apr 27 21:23 .travis.yml
+drwxrwx---.  7 magento_user apache   4096 Jun  7 07:53 update
+drwxrws---. 11 magento_user apache   4096 Jun 13 16:05 var
+drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor</code></pre></figure>
+
+  <p>In the preceding example, the Magento文件系统所有者 is <code class="highlighter-rouge">magento_user</code>. Directories in the Magento file system have <code class="highlighter-rouge">drwxrwx---</code> permissions (775) and files have <code class="highlighter-rouge">-rw-rw-rw-</code> permissions (664).</p>
+
+  <p>To get more detailed information, you can optionally enter the following command:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -al /var/www/html/magento2/pub
+</code></pre></div>  </div>
+
+  <p>Because Magento deploys static file assets to subdirectories of <code class="highlighter-rouge">pub</code>, it’s a good idea to verify permissions and ownership there as well.</p>
+
+  <p>For more information, see <a href="/guides/v2.1/install-gde/prereq/file-sys-perms-over.html">File system permissions and ownership</a>.</p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/comp-mgr/prereq/prereq_compman-checklist.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

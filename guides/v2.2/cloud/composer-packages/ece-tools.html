@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Patch Cloud工具 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/composer-packages/ece-tools.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/cloud/composer-packages/ece-tools.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/cloud/composer-packages/ece-tools.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/cloud/composer-packages/ece-tools.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/cloud/composer-packages/ece-tools.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="欢迎使用magento企业版(云支持版)">
+    
+
+    
+    <a href="/guides/v2.2/cloud/bk-cloud.html">欢迎使用Magento企业版(云支持版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="订阅和计划">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/basic-information/cloud-plans.html">订阅和计划</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="新手上路任务">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/onboarding/onboarding-tasks.html">新手上路任务</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="architecture">
+    
+
+    
+    <a href="/guides/v2.2/cloud/architecture/cloud-architecture.html">Architecture</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="架构起步">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/basic-information/starter-architecture.html">架构起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发和部署工作流起步">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/basic-information/starter-develop-deploy-workflow.html">开发和部署工作流起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-architecture">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/architecture/pro-architecture.html">Pro architecture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-develop-and-deploy-workflow">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-architecture-(legacy)">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="add-staging-and-production-to-pro-projects-ui">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="技术和要求">
+    
+
+    
+    <a href="/guides/v2.2/cloud/requirements/cloud-requirements.html">技术和要求</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="composer">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/reference/cloud-composer.html">Composer</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-cloud-cli">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="git">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/reference/git-integration.html">Git</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="bitbucket集成">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/bitbucket-integration.html">Bitbucket集成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="github集成">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-integrate-github.html">Github集成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="ssh和sftp">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/env/environments-ssh.html">SSH和sFTP</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-relic-apm">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/new-relic.html">New Relic APM</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="blackfire.io">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-integrate-blackfire.html">Blackfire.io</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="sendgrid">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/sendgrid.html">SendGrid</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本地环境设置">
+    
+
+    
+    <a href="/guides/v2.2/cloud/access-acct/first-time-setup.html">本地环境设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="本地环境设置准备">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-workspace.html">本地环境设置准备</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装magento所需的必要软件">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-workspace-magento-prereqs.html">安装Magento所需的必要软件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用ssh密钥登录">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento文件系统所有者">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-workspace-file-sys-owner.html">设置Magento文件系统所有者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="克隆并开发项目分支">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-setup-env-2_clone.html">克隆并开发项目分支</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装magento">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/before/before-setup-env-install.html">安装Magento</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="首次部署">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/access-acct/first-time-deploy.html">首次部署</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选---安装样本数据">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/howtos/sample-data.html">可选 - 安装样本数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选---配置xdebug">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/howtos/debug.html">可选 - 配置Xdebug</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="导入现存的代码到项目">
+    
+
+    
+    <a href="/guides/v2.2/cloud/access-acct/first-time-setup_import-first-steps.html">导入现存的代码到项目</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="prepare-your-existing-magento-commerce-system">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/access-acct/first-time-setup_import-prepare.html">Prepare your existing Magento Commerce system</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="import-magento-commerce-into-magento企业版(云支持版)">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/access-acct/first-time-setup_import-import.html">Import Magento Commerce into Magento企业版(云支持版)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置你的网店">
+    
+
+    
+    <a href="/guides/v2.2/cloud/configure/configuration-overview.html">配置你的网店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="网店配置最佳实践">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/configure-best-practices.html">网店配置最佳实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="set-up-paypal">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/paypal-onboarding.html">Set up PayPal</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento-b2b">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/setup-b2b.html">设置Magento B2B</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置定时任务">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/setup-cron-jobs.html">设置定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="set-up-multiple-cloud-websites-or-stores">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装一个主题">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/howtos/custom-theme.html">安装一个主题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="快速配置">
+    
+
+    
+    <a href="/guides/v2.2/cloud/basic-information/cloud-fastly.html">快速配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="快速设置">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/access-acct/fastly.html">快速设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速定制vcl片段">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/cloud-vcl-custom-snippets.html">快速定制VCL片段</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制vcl白名单">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/fastly-vcl-whitelist.html">定制VCL白名单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制vcl黑名单">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/fastly-vcl-blacklist.html">定制VCL黑名单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义延长管理员超时">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/fastly-vcl-extend-timeout.html">VCL自定义延长管理员超时</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义自重向到wordpress">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/fastly-vcl-wordpress.html">VCL自定义自重向到WordPress</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义块坏引用">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/configure/fastly-vcl-badreferer.html">VCL自定义块坏引用</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速故障排查">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble_fastly.html">快速故障排查</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置环境">
+    
+
+    
+    <a href="/guides/v2.2/cloud/env/environments.html">配置环境</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="application">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-conf-files_magento-app.html">Application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="构建和部署">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/magento-env-yaml.html">构建和部署</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="设置通知">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/setup-notifications.html">设置通知</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="日志处理">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/log-handlers.html">日志处理</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="小向导">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/smart-wizards.html">小向导</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="环境变量">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/env/variables-intro.html">环境变量</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="应用程序变量">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/environment-vars_magento.html">应用程序变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="构建变量">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/variables-build.html">构建变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="云变量">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/variables-cloud.html">云变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="deploy-variables">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/variables-deploy.html">Deploy variables</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="部署后变量">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/variables-post-deploy.html">部署后变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="在变量下工作">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/env/working-with-variables.html">在变量下工作</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="routes">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-conf-files_routes.html">Routes</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="caching">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-routes-more-cache.html">Caching</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="redirects">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-routes-more-redir.html">Redirects</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="服务端引入">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-routes-more-ssi.html">服务端引入</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="services">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-conf-files_services.html">Services</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="设置mysql服务">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-conf-files_services-mysql.html">设置MySQL服务</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置redis服务">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-conf-files_services-redis.html">设置Redis服务</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置elasticsearch服务">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-conf-files_services-elastic.html">设置Elasticsearch服务</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置rabbitmq服务">
+                    
+
+                    
+                    <a  href="/guides/v2.2/cloud/project/project-conf-files_services-rabbit.html">设置RabbitMQ服务</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="网店设置的配置管理">
+    
+
+    
+    <a href="/guides/v2.2/cloud/live/sens-data-over.html">网店设置的配置管理</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="管理系统特定配置的示例">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/sens-data-initial.html">管理系统特定配置的示例</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="管理你的项目">
+    
+
+    
+    <a href="/guides/v2.2/cloud/project/projects.html">管理你的项目</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="配置你的项目">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-webint-basic.html">配置你的项目</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="项目结构">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-start.html">项目结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建和管理用户">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/user-admin.html">创建和管理用户</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="manage-branches-with-the-interface">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-webint-branch.html">Manage branches with the Interface</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用命令行管理分支">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/env/environments-start.html">使用命令行管理分支</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快照和备份管理">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-webint-snap.html">快照和备份管理</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署你的网店">
+    
+
+    
+    <a href="/guides/v2.2/cloud/live/stage-prod-live.html">部署你的网店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="部署过程">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/reference/discover-deploy.html">部署过程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="continuous-deployment">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/deploy/continuous-deployment.html">Continuous deployment</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="保护块">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/live-prot.html">保护块</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在本地构建和部署">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/live-sanity-check.html">在本地构建和部署</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="准备部署准生产和生产环境">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/stage-prod-migrate-prereq.html">准备部署准生产和生产环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署代码并迁移静态文件和数据">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/stage-prod-migrate.html">部署代码并迁移静态文件和数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="测试部署">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/stage-prod-test.html">测试部署</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="上线和发布">
+    
+
+    
+    <a href="/guides/v2.2/cloud/live/live.html">上线和发布</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="上线检查">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/go-live-checklist.html">上线检查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="发布步骤">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/live/launch-steps.html">发布步骤</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.2/cloud/trouble/trouble.html">故障排除</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="部署故障排查">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/access-acct/trouble.html">部署故障排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="查看日志排查故障">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/environments-logs.html">查看日志排查故障</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="证书不正确">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble_ce-creds.html">证书不正确</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="新项目的问题解决">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble_proj-startover.html">新项目的问题解决</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="组件部署失败">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble_comp-deploy-fail.html">组件部署失败</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="redis问题排查">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/redis-troubleshooting.html">Redis问题排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="重置定时任务">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/reset-cron-jobs.html">重置定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决加密密钥问题">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble-crypt-key-variable.html">解决加密密钥问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决html最小化问题">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble-error-html-minification.html">解决HTML最小化问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决部署期间的google分析问题">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/trouble-google-analytics-deploy.html">解决部署期间的google分析问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="恢复配置文件">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/restore-configuration-files.html">恢复配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="站点可用性">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/site-availability.html">站点可用性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加站点地图和搜索引擎的robots文件">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/robots-sitemap.html">添加站点地图和搜索引擎的robots文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="主题问题排查">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/theme-troubleshooting.html">主题问题排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="消息队列">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/trouble/message-queues.html">消息队列</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="升级和补丁">
+    
+
+    
+    <a href="/guides/v2.2/cloud/project/project-upgrade-parent.html">升级和补丁</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="patch-cloud工具">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/composer-packages/ece-tools.html">Patch Cloud工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)补丁">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-patch.html">Magento企业版(云支持版)补丁</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)升级">
+
+            
+
+            
+            <a href="/guides/v2.2/cloud/project/project-upgrade.html">Magento企业版(云支持版)升级</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/cloud/bk-cloud.html">
+            <span property="name">欢迎使用Magento企业版(云支持版)</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Patch Cloud工具</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Patch Cloud工具</h1>
+
+  
+
+
+</section>
+
+			<div>
+  <p>The ece-tools package contains the following scripts and Magento企业版(云支持版) commands that automatically perform build and deploy actions of the codebase in your environments:</p>
+
+  <ul>
+    <li><code class="highlighter-rouge">php ./vendor/bin/m2-ece-build</code></li>
+    <li><code class="highlighter-rouge">php ./vendor/bin/m2-ece-deploy</code></li>
+  </ul>
+
+  <p>Versions are specified as <code class="highlighter-rouge">200&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code>.</p>
+
+  <p>These updates strictly contain improvements for tools, including build and deploy hooks. These tools are updated as needed through patching and product upgrades; managed by the <code class="highlighter-rouge">magento-cloud-metapackage</code>.</p>
+
+  <h2 id="v2002011">v2002.0.11</h2>
+
+  <!-- Available note types: "info", "warning", "tip" -->
+
+  <div class="bs-callout bs-callout-info" id="info">
+    <p>The Cloud tools version 2002.0.11 is required for 2.2.4 compatibility.</p>
+  </div>
+
+  <h4 id="new-features">New features</h4>
+
+  <ul>
+    <li><strong>Configuring read-only connections to non-master nodes</strong>—This release adds the ability to configure a read-only connection to a non-master node to receive read-only traffic (for <!--MAGECLOUD-143 --><a href="/guides/v2.2/cloud/env/variables-deploy.html#redisuseslaveconnection">Redis</a> and for <!--MAGECLOUD-143 --> <a href="/guides/v2.2/cloud/env/variables-deploy.html#mysqluseslaveconnection">MariaDB</a>).</li>
+    <li>
+      <!--MAGECLOUD-1910 -->
+      <p><strong>Configuration Wizard</strong>—Added a new wizard to help verify your configuration for static content deployment. See <a href="/guides/v2.2/cloud/env/smart-wizards.html">小向导</a>.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1966 -->
+      <p><strong>Symfony Console support</strong>—Added support for Symfony Console 4 with Magento 2.3.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1607 -->
+      <p><strong>Cron scheduling optimizations</strong>—Improved the queue management and enhanced logging to help with debugging cron-related issues.</p>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues">Fixed issues</h4>
+
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1221 -->
+      <p>Deployment validation fails if an <code class="highlighter-rouge">ADMIN_EMAIL</code>或<code class="highlighter-rouge">ADMIN_USERNAME</code> value is the same as an existing Magento administrator account.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1282 -->
+      <p>Removed SOLR support for 2.2.x versions. 2.1.x versions retain the ability to enable SOLR.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1489 -->
+      <p>The first installation of the Staging &amp; Production environments of a PRO project now includes different index prefixes for ElasticSearch to prevent possible conflicts while identifying records belonging to each environment.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-2021 -->
+      <p>Fixed an issue that interrupted the build phase for legacy architecture during static content deployment.</p>
+    </li>
+    <li><strong>Cron-specific Improvements</strong>—<!-- MAGECLOUD-1607 -->Re-worked the cron implementation:
+      <ul>
+        <li>Fixed an issue that caused the cron queue to fill quickly. Now it clears the outdated cron jobs in a more reliable way.</li>
+        <li>Re-organized the sequence of cron jobs so that all jobs in separate threads launch prior to the general group.</li>
+        <li>Improved logging to better assist in debugging cron issues.</li>
+        <li><strong>NOTE</strong>—This release addresses many cron-related issues. If you currently use some cron-related patches in <em>m2-hotfixes</em>, remove them.</li>
+      </ul>
+    </li>
+    <li><strong>SCD-specific improvements</strong>
+      <ul>
+        <li>
+          <!-- MAGECLOUD-1819 -->
+          <p>You can now use the <code class="highlighter-rouge">VERBOSE_COMMANDS</code> and the <code class="highlighter-rouge">SCD_COMPRESSION_LEVEL</code> environment variables during both <em>build</em> and <em>deploy</em> phases.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-2043 -->
+          <p>Fixed an issue that caused deployment to fail with a random error when encountering an unexpected value for the <code class="highlighter-rouge">SCD_COMPRESSION_LEVEL</code> environment variable. Improved the configuration validation to provide meaningful notifications. See <a href="/guides/v2.2/cloud/env/variables-build.html#scdcompressionlevel"><code class="highlighter-rouge">SCD_COMPRESSION_LEVEL</code></a> for acceptable values.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-2044 -->
+          <p>Fixed the behavior of the <code class="highlighter-rouge">SCD_COMPRESSION_LEVEL</code> environment variable configuration flow so the overrides work as expected.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-2046 -->
+          <p>Fixed an issue that prevented the configuration of the <code class="highlighter-rouge">SCD_THREADS</code> environment variable in the <code class="highlighter-rouge">.magento.env.yaml</code> file <em>deploy</em> stage.</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="v2002010">v2002.0.10</h2>
+
+  <h4 id="new-features-1">New features</h4>
+
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1285 -->
+      <p><strong>Static Content Deployment (SCD)</strong>—There is a new, alternative deployment process to generate static content when requested (on-demand). This decreases downtime and improves cache handling by generating the most critical assets.</p>
+      <ul>
+        <li>
+          <!-- MAGECLOUD-1738 -->
+          <p><strong>New environment variable</strong>—Added the new <code class="highlighter-rouge">SCD_ON_DEMAND</code> global environment variable to generate static content when requested.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-1788 -->
+          <p><strong>Post-deploy hook</strong>—Added a new <code class="highlighter-rouge">post_deploy</code> hook for the <code class="highlighter-rouge">.magento.app.yaml</code> file that clears the cache and pre-loads (warms) the cache <em>after</em> the container begins accepting connections. It is available only for Pro projects that contain <a href="/guides/v2.2/cloud/trouble/pro-env-management.html">Staging and Production environments in the Project Web UI</a> and for Starter projects. Although not required, this works in tandem with the <code class="highlighter-rouge">SCD_ON_DEMAND</code> environment variable.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1842 -->
+      <p><strong>Optimization</strong>—Optimized moving or copying files during deployment to improve deployment speed and decrease loads on the file system.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1751 -->
+      <p><strong>Deployment Logging</strong>—Added the ability to enable Syslog and Graylog Extended Log Format (GELF) handlers for outputting logs during the deployment process. See <a href="/guides/v2.2/cloud/env/log-handlers.html">日志处理</a>.</p>
+    </li>
+    <li>Added the following new <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/variables-intro.html"><strong>环境变量</strong></a>:
+      <ul>
+        <li>
+          <!-- MAGECLOUD-1556 -->
+          <p><code class="highlighter-rouge">CRYPT_KEY</code>—Provide a cryptographic key to another environment when moving a database.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-1621 and MAGECLOUD-1736-->
+          <p><code class="highlighter-rouge">SKIP_HTML_MINIFICATION</code>—<em>Global</em> environment variable that skips copying the static view files in the <code class="highlighter-rouge">var/view_preprocessed</code> directory and generates minified HTML when requested.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-1738 -->
+          <p><code class="highlighter-rouge">SCD_ON_DEMAND</code>—<em>Global</em> environment variable to generate static content when requested.</p>
+        </li>
+        <li><code class="highlighter-rouge">WARM_UP_PAGES</code>—You can list the pages to use to pre-load the cache. Available in the new <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/variables-post-deploy.html">部署后变量</a>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues-1">Fixed issues</h4>
+
+  <ul>
+    <li>
+      <!-- MAGECLOUD-982 -->
+      <p>We fixed an issue that involved a locally applied patch breaking the deployment on an instance. Now, ece-tools can detect that a patch has been applied.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1735 -->
+      <p>Fixed a conflict between JavaScript bundling and GZIP functionality. Now these features work correctly together.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1744 -->
+      <p>Fixed an issue that caused ece-tools CLI commands to fail when using earlier PHP 7.0.x versions.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1822 -->
+      <p>Fixed an issue that prevented static content deployment with the compact strategy in multiple threads.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1853 -->
+      <p>Fixed a Redis session locking issue that caused an Admin login delay. Also, the fix is available for 2.1.x.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200209">v2002.0.9</h2>
+
+  <div class="bs-callout bs-callout-info" id="info">
+    <p>You must <a href="http://devdocs.magento.com/guides/v2.2/cloud/project/project-upgrade-parent.html">upgrade the Magento企业版(云支持版) metapackage</a> to get this and all future updates.</p>
+  </div>
+
+  <h4 id="new-features-2">New features</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1086 -->
+      <p><strong>ece-tools</strong>—The <code class="highlighter-rouge">ece-tools</code> package now supports Magento 2.1.x.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1552 -->
+      <p><strong>Redis configuration</strong>—You can now <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/working-with-variables.html#redis">configure Redis</a> page and default cache and Redis session storage using an environment variable.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1437 -->
+      <p><strong>Search, AMQP, and Redis service improvements</strong>—We unified the service configuration flow so that it now behaves the same way for all services. Manually editing the <code class="highlighter-rouge">env.php</code> file to configure services is no longer supported. You must use environment variables or the <code class="highlighter-rouge">.magento.env.yaml</code> file instead.</p>
+    </li>
+    <li>
+      <p><strong>环境变量</strong></p>
+
+      <ul>
+        <li>
+          <!-- MAGECLOUD-1507 -->
+          <p>The use of <code class="highlighter-rouge">env:STATIC_CONTENT_THREADS</code> was deprecated and will be removed in a future release. Use the <code class="highlighter-rouge">STATIC_CONTENT_THREADS</code> environment variable instead.</p>
+        </li>
+        <li>
+          <!-- MAGECLOUD-1640 -->
+          <p>The <code class="highlighter-rouge">STATIC_CONTENT_EXCLUDE_THEMES</code> environment variable was deprecated. You must use the <code class="highlighter-rouge">SCD_EXCLUDE_THEMES</code> environment variable instead.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1674 -->
+      <p><strong>Logging</strong>—We simplified logging around built-in patching operations.</p>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues-2">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1615 -->
+      <p>We removed <code class="highlighter-rouge">developer</code> mode support and the <code class="highlighter-rouge">APPLICATION_MODE</code> environment variable because they were causing unexpected behavior.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1630 -->
+      <p>We fixed an issue that was causing static content deployment failures related to Redis. Now, multi-threaded static content deployment runs as designed.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1175 -->
+      <p>We fixed an issue that was preventing users from saving modifications to configuration fields in the Admin, which are marked as sensitive after running the <code class="highlighter-rouge">app:config:dump</code> command.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1674 -->
+      <p>We added support for an earlier version of <code class="highlighter-rouge">symfony/yaml</code> to fix conflicts with some packages, which are not yet compatible with the latest version.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200208">v2002.0.8</h2>
+  <div class="bs-callout bs-callout-info">
+    <p>We merged <a href="http://devdocs.magento.com/guides/v2.2/cloud/composer-packages/ece-patches.html"><code class="highlighter-rouge">vendor/magento/ece-patches</code></a> with <code class="highlighter-rouge">vendor/magento/ece-tools</code> in this release. You no longer need to update the <code class="highlighter-rouge">vendor/magento/ece-patches</code> package separately.</p>
+  </div>
+
+  <h4 id="new-features-3">New features</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1253 -MAGECLOUD-1495-->
+      <p><strong>Improved logging</strong></p>
+      <ul>
+        <li>We improved log messaging to provide better explanations when the build or deploy process overrides an environment variable.</li>
+        <li>
+          <p>You can now view installation and upgrade progress in real time. Tail the <code class="highlighter-rouge">install_update.log</code> file to view progress. For example,</p>
+
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tail -f var/log/install_upgrade.log
+</code></pre></div>          </div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1367 -->
+      <p><strong>New cron command</strong>—You can now unlock specific stuck cron jobs instead of stopping and re-launching all of them with the <a href="http://devdocs.magento.com/guides/v2.2/cloud/trouble/reset-cron-jobs.html"><code class="highlighter-rouge">cron:unlock</code></a> command. Not available in 2.1.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1369 -->
+      <p><strong>Unified configuration file</strong>—You can now configure build and deploy stages using a <a href="http://devdocs.magento.com/guides/v2.2/cloud/project/magento-env-yaml.html"><code class="highlighter-rouge">.magento.env.yaml</code></a> file.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1372 -->
+      <p><strong>Backup configuration files</strong>—The deployment process now automatically creates a backup of the <code class="highlighter-rouge">app/etc/env.php</code> and <code class="highlighter-rouge">app/etc/config.php</code> configuration files after deployment. We also added a <a href="http://devdocs.magento.com/guides/v2.2/cloud/trouble/restore-configuration-files.html">new CLI command</a> to restore these configuration files from a backup.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1491 -->
+      <p><strong>故障排除 validation errors</strong>—We changed the command you must use to resolve validation errors when <code class="highlighter-rouge">config.php</code> does not contain enough data for static content deployment. Previously, the error message instructed you to run <code class="highlighter-rouge">bin/magento app:config:dump</code>. Now, you must run <code class="highlighter-rouge">php ./vendor/bin/ece-tools config:dump</code>.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1410 -->
+      <p><strong>New environment variables</strong>—You can now use environment variables to connect custom <a href="http://devdocs.magento.com/guides/v2.1/cloud/env/working-with-variables.html#search">search</a> and <a href="http://devdocs.magento.com/guides/v2.1/cloud/env/working-with-variables.html#queue">AMQP-based</a> services to your site.</p>
+    </li>
+    <li>
+      <!--MAGECLOUD-1090-->
+      <p>We implemented smart patching. Now the package applies patches based not on Magento企业版(云支持版) version, but on patched package version.</p>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues-3">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1162 -->
+      <p>We fixed a logging issue that was causing build errors.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1389 -->
+      <p>We fixed an issue that was causing timeout exceptions when running deployments in interactive mode.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1446 MAGECLOUD-1485-->
+      <p>We fixed an issue that was causing errors when using the compact strategy for static content generation. Not available in 2.1.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1493 -->
+      <p>We fixed an issue that was preventing the deployment script from properly identifying staging and production environments.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1520 -->
+      <p>We fixed an issue that was causing network issues to disrupt database connections and cause failures during the installation and upgrade process.</p>
+    </li>
+    <li>
+      <!--  MAGECLOUD-1567  -->
+      <p>We fixed an issue preventing you from exporting the configuration files using <code class="highlighter-rouge">app:config:dump</code> more than once. Not available in 2.1.</p>
+    </li>
+    <li>
+      <!--  MAGECLOUD-1582  -->
+      <p>We fixed a Redis session <em>locking</em> issue that caused an <em>Admin</em> login delay. Not available in 2.1.</p>
+    </li>
+    <li>
+      <!--MAGECLOUD-1450-->
+      <p>We fixed an implementation issue related to versioning that was causing a conflict with other Composer-based patching modules.</p>
+    </li>
+    <li>
+      <!--MAGECLOUD-1310-->
+      <p>We fixed an issue that was causing PHP memory issues during import.</p>
+    </li>
+    <li>
+      <!--MAGECLOUD-1033-->
+      <p>Removed patch; fixing bug in <code class="highlighter-rouge">colinmollenhour/credis</code> v1.6 to enable support for Magento企业版(云支持版) 2.2.1. Not available in 2.1.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200207">v2002.0.7</h2>
+
+  <h4 id="fixed-issues-4">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1454-->
+      <p>We removed <code class="highlighter-rouge">var/view_preprocessed</code> symlinking to fix an issue that was causing JavaScript minification conflicts.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200206">v2002.0.6</h2>
+
+  <h4 id="fixed-issues-5">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1413 -->
+      <p>We fixed an issue that was causing <code class="highlighter-rouge">gzip</code> errors when a file or directory name contains spaces.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1424 -->
+      <p>We fixed an issue that was preventing deployment scripts from properly recognizing and enabling module dependencies.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200205">v2002.0.5</h2>
+
+  <h4 id="new-features-4">New features</h4>
+  <ul>
+    <li>
+      <p><strong>Configure a cron consumer with an environment variable</strong>—You can now configure cron consumers using the new <code class="highlighter-rouge">CRON_CONSUMERS_RUNNER</code> environment variable.</p>
+    </li>
+    <li>
+      <p><strong>Configuration scanning</strong>—We now scan for critical components during the build/deploy process and halt the process if the scan fails, which prevents unnecessary downtime due to the site being in maintenance mode.</p>
+    </li>
+    <li>
+      <p><strong>Build/deploy notifications</strong>—We added a new configuration file that you can use to <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/setup-notifications.html">set up Slack and/or email notifications</a> for build/deploy actions in all your environments.</p>
+    </li>
+    <li>
+      <p><strong>Static content compression</strong>—We now compress static content using <a href="https://www.gnu.org/software/gzip/" target="\_blank">gzip</a> during the build and deploy phases. This compression, coupled with Fastly compression, helps reduce the size of your store and increase deployment speed. If necessary, you can disable compression using a <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#build">build option</a> or <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#deploy">deploy variable</a>. See the following topics for more information:</p>
+
+      <ul>
+        <li><a href="http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html">Magento application environment variables</a></li>
+        <li><a href="http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html#cloud-confman-scd-over">Static content deployment performance</a></li>
+        <li><a href="http://devdocs.magento.com/guides/v2.2/cloud/reference/discover-deploy.html">部署过程</a></li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>配置管理</strong>—We now auto-generate an <code class="highlighter-rouge">app/etc/config.php</code> file in your git repository during the build phase if it doesn’t already exist. The auto-generated file includes only a list of modules and extensions. If the file already exists, the build phase continues as normal. If you follow <a href="http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html">Configuration Management</a> at a later time, the commands update the file without requiring additional steps. Refer to <a href="http://devdocs.magento.com/guides/v2.2/cloud/reference/discover-deploy.html">部署过程</a> for more information.</p>
+    </li>
+    <li>
+      <p><strong>Database dumps</strong>—We added a new <code class="highlighter-rouge">magento/ece-tools</code> CLI command for creating database dumps in all environments. For Pro plan Production environments, this command only dumps from one of three high-availability nodes, so production data written to a different node during the dump may not be copied. We recommend putting the application in maintenance mode before doing a database dump in Production environments. See <a href="http://devdocs.magento.com/guides/v2.2/cloud/project/project-webint-snap.html#db-dump">快照和备份管理</a> for more information.</p>
+    </li>
+    <li>
+      <p><strong>Cron interval limitations lifted</strong>—The default cron interval for all environments provisioned in the us-3, eu-3, and ap-3 regions is 1 minute. The default cron interval in all other regions is 5 minutes for Pro Integration environments and 1 minute for Pro Staging and Production environments. To modify your existing cron jobs, edit your settings in <code class="highlighter-rouge">.magento.app.yaml</code> or create a support ticket for Production/Staging environments. Refer to <a href="http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html">设置定时任务</a> for more information.</p>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues-6">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1327 -->
+      <p>We fixed an issue that was causing long deploy times due to the deploy process invoking the <code class="highlighter-rouge">cache-clean</code> operation before static content deployment.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1322 -->
+      <p>We fixed an issue causing errors during the static content generation step of deployment on Production environments.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1264 -->
+      <p>We fixed an issue preventing some <code class="highlighter-rouge">magento/ece-tools</code> commands from logging output to <code class="highlighter-rouge">stderr</code>.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1242 -->
+      <p>We fixed an issue preventing base URL values in <code class="highlighter-rouge">env.php</code> from being updated in forked branches.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1171 -->
+      <p>We fixed an issue causing the <code class="highlighter-rouge">magento setup:install</code> command to add an unsecure prefix (<code class="highlighter-rouge">http://</code>) to secure base URLs.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1170 -->
+      <p>We fixed an issue preventing patch errors from causing deployment failures.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1152 -->
+      <p>We fixed an issue preventing <code class="highlighter-rouge">ece-tools</code> from halting execution and throwing an exception if no patches can be applied.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1138 -->
+      <p>We fixed an issue causing errors when loading the storefront after enabling HTML minification in the Magento Admin.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200204">v2002.0.4</h2>
+
+  <h4 id="fixed-issues-7">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-1355 -->
+      <p>You can now <a href="http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html#reset-cron-jobs">manually reset stuck Magento cron jobs</a> using a CLI command in all environments via SSH access. The deployment process automatically resets cron jobs. Not available in 2.1.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200203">v2002.0.3</h2>
+
+  <h4 id="fixed-issues-8">Fixed issues</h4>
+  <ul>
+    <li>
+      <!--MAGECLOUD-1311-->
+      <p>We fixed an issue that was causing pages to time out because Redis was taking too long to read/write. You can now use the <code class="highlighter-rouge">disable_locking</code> parameter in Redis configurations to prevent this issue.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200202">v2002.0.2</h2>
+
+  <h4 id="fixed-issues-9">Fixed issues</h4>
+  <ul>
+    <li>
+      <!--MAGECLOUD-1246-->
+      <p>The RabbitMQ configuration process now obtains all required parameters automatically.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200201">v2002.0.1</h2>
+
+  <h4 id="new-features-5">New features</h4>
+  <ul>
+    <li>
+      <!--- MAGECLOUD-1057 -->
+      <p>Magento企业版(云支持版) now supports scopes and <a href="http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html">static content deployment strategies</a>. We have added the <code class="highlighter-rouge">–s</code> parameter with a default setting of <code class="highlighter-rouge">quick</code> for the static content deployment strategy. You can use the environment variable <a href="http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html">SCD_STRATEGY</a> to customize and use these strategies with your build and deploy actions. This variable supports the options <code class="highlighter-rouge">standard</code>, <code class="highlighter-rouge">quick</code>, or <code class="highlighter-rouge">compact</code>. If you select <code class="highlighter-rouge">compact</code>, we override the <code class="highlighter-rouge">STATIC_CONTENT_THREADS</code> value with <code class="highlighter-rouge">1</code>, which can slow deployment, especially in production environments. Not available in 2.1.</p>
+    </li>
+    <li>
+      <!--- MAGECLOUD-1014 & MAGECLOUD-1023 -->
+      <p>We have created a new log file on environments to capture and compile build and deploy actions. The file is located in the <code class="highlighter-rouge">var/log/cloud.log</code> file inside the Magento root application directory.</p>
+    </li>
+  </ul>
+
+  <h4 id="fixed-issues-10">Fixed issues</h4>
+  <ul>
+    <li>
+      <!-- MAGECLOUD-919 & MAGECLOUD-1030-->
+      <p>Refactored the <code class="highlighter-rouge">ece-tools</code> package to make it compatible with Magento企业版(云支持版) 2.2.0 and higher.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1186-->
+      <p>We fixed an issue that was preventing <code class="highlighter-rouge">ece-tools</code> from halting execution and throwing an exception if no patches can be applied.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1047 & MAGECLOUD-1049-->
+      <p>We fixed an issue that was causing exceptions to be thrown when  dependency injection (di) compilation is skipped during builds.</p>
+    </li>
+    <li>
+      <!-- MAGECLOUD-1019-->
+      <p>We fixed an issue that was causing the deploy process to overwrite custom Redis configurations in the <code class="highlighter-rouge">env.php</code> file.</p>
+    </li>
+    <li>
+      <!--MAGECLOUD-1020-->
+      <p>We fixed an issue that was causing redirect loops due to disabled by default secure admin.</p>
+    </li>
+  </ul>
+
+  <h2 id="v200200">v2002.0.0</h2>
+  <div class="bs-callout bs-callout-warning">
+    <p>This package is no longer compatible with other versions of Magento企业版(云支持版) and <strong>should not</strong> be used.</p>
+  </div>
+
+  <h3 id="initial-release">Initial release</h3>
+  <p>Initial release of <code class="highlighter-rouge">ece-tools</code> for Magento企业版(云支持版) 2.2.0.</p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/cloud/composer-packages/ece-tools.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/cloud/composer-packages/ece-tools.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

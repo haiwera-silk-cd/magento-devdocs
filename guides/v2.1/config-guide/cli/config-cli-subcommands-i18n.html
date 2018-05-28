@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>翻译字典和语言包 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/config-guide/cli/config-cli-subcommands-i18n.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/config-guide/cli/config-cli-subcommands-i18n.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/config-guide/cli/config-cli-subcommands-i18n.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/config-guide/cli/config-cli-subcommands-i18n.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">配置手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/bk-config-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安全设置">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/secy/secy.html">安全设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="确保cron.php文件在浏览器上的安全">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/secy/secy-cron.html">确保cron.php文件在浏览器上的安全</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="x-frame-options头">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/secy/secy-xframe.html">X-Frame-Options头</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="防止缓存中毒">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/secy/secy-headers.html">防止缓存中毒</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento初始化和引导">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/bootstrap/magento-bootstrap.html">Magento初始化和引导</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="设置引导参数">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/bootstrap/magento-how-to-set.html">设置引导参数</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/bootstrap/magento-modes.html">关于Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义基础目录路径(mage_dirs)">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开启扼要记录(mage_profiler)">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/bootstrap/mage-profiler.html">开启扼要记录(MAGE_PROFILER)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行配置">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/cli/config-cli.html">命令行配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令行配置起步">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理缓存">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理索引">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置和执行定时任务">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码编译器">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)高亮">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖报告">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2 active " id="翻译字典和语言包">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态视图文件部署">
+
+            
+
+            
+            <span>静态视图文件部署</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="部署静态视图文件">
+                    
+
+                    
+                    <a  href="/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建软链接到less文件">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行单元测试">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="转换布局的xml文件">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为性能测试生成数据">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行magento支持工具-(magento-commerce-only)">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-spt-util.html">运行Magento支持工具 (仅企业版适用)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento配置文件">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/config/config-magento.html">Magento配置文件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento的部署配置">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/config/config-php.html">Magento的部署配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块配置文件">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/config/config-files.html">模块配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建或扩展配置类型">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/config/config-create.html">创建或扩展配置类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置参考">
+
+            
+
+            
+            <span>配置参考</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="敏感的和系统特定的">
+                    
+
+                    
+                    <a  href="/guides/v2.1/config-guide/prod/config-reference-sens.html">敏感的和系统特定的</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="支付配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.1/config-guide/prod/config-reference-payment.html">支付配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="其它配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.1/config-guide/prod/config-reference-most.html">其它配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用环境变量覆盖配置设置">
+                    
+
+                    
+                    <a  href="/guides/v2.1/config-guide/prod/config-reference-var-name.html">使用环境变量覆盖配置设置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置缓存">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/cache.html">配置缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="将缓存前端与缓存类型关联">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cache/cache-types.html">将缓存前端与缓存类型关联</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="底层缓存选项">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cache/cache-options.html">底层缓存选项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置redis">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/redis/config-redis.html">配置Redis</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为magento页面缓存和默认缓存">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为session存储">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/redis/redis-session.html">使用Redis作为Session存储</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置和使用varnish">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="安装varnish">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/config-varnish-install.html">安装Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置varnish和你的web服务器">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用varnish">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="最终校验">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/config-varnish-final.html">最终校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在varnish下magento的缓存清除是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish缓存是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/use-varnish-cache-how.html">Varnish缓存是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除503错误">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/varnish/tshoot-varnish-503.html">排除503错误</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用memcached做为session存储">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/memcache/memcache.html">使用memcached做为session存储</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在ubuntu上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/memcache/memcache_ubuntu.html">在Ubuntu上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在centos上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/memcache/memcache_centos.html">在CentOS上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用memcached">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="多站和多店">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/multi-site/ms_over.html">多站和多店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在管理面板设置多站、多店及网店视图">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-site/ms_websites.html">在管理面板设置多站、多店及网店视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在nginx下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-site/ms_nginx.html">教程-在nginx下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在apache下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-site/ms_apache.html">教程-在Apache下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="设置自定义的定时任务和任务组(cron)">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/cron/custom-cron.html">设置自定义的定时任务和任务组(cron)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义的定时任务和任务组(cron)参考">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cron/custom-cron-ref.html">自定义的定时任务和任务组(cron)参考</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置自定义的定时任务和任务组(cron)(教程)">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/cron/custom-cron-tut.html">配置自定义的定时任务和任务组(cron)(教程)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置数据库分析器">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/db-profiler/db-profiler.html">配置数据库分析器</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装和配置elasticsearch-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/elasticsearch/es-overview.html">安装和配置Elasticsearch (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="配置nginx和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/elasticsearch/es-config-nginx.html">配置nginx和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置apache和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/elasticsearch/es-config-apache.html">配置Apache和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置elasticsearch停用词">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/elasticsearch/configure-magento.html">配置Magento使用Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="消息队列-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/mq/rabbitmq-overview.html">消息队列 (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="管理消息队列">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/mq/manage-mysql.html">管理消息队列</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="install-and-configure-solr-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/solr/solr-overview.html">Install and configure Solr (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="configure-solr-and-magento">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/solr/solr-magento.html">Configure Solr and Magento</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-solr-for-production">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/solr/solr-script.html">Prepare Solr for production</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="数据库分库执行方案(仅企业版)">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/multi-master/multi-master.html">数据库分库执行方案(仅企业版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-master/multi-master_masterdb.html">自动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="手动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-master/multi-master_manual.html">手动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据库分库验证">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置可选数据库复制">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/multi-master/multi-master_slavedb.html">设置可选数据库复制</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义日志">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/log/log-intro.html">自定义日志</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento日志的更多细节">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/log/log-magento.html">Magento日志的更多细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="示例---记录数据库活动日志">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/log/log-db.html">示例 - 记录数据库活动日志</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何定位你的session文件">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/sessions.html">如何定位你的session文件</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署magento到生产环境">
+    
+
+    
+    <a href="/guides/v2.1/config-guide/prod/prod.html">部署Magento到生产环境</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-ownership-and-permissions-in-development-and-production">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/prod/prod_file-sys-perms.html">Magento ownership and permissions in development and production</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署到生产环境">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/prod/prod_deploy.html">部署到生产环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单机部署">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/prod/single-machine-deployment.html">单机部署</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="optimization">
+    
+
+    
+    <span>Optimization</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-optimization-guide">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/prod/prod_perf-optimize.html">Magento Optimization Guide</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发环境推荐">
+
+            
+
+            
+            <a href="/guides/v2.1/config-guide/prod/development-environment.html">开发环境推荐</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/config-guide/bk-config-guide.html">
+            <span property="name">配置手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">翻译字典和语言包</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">翻译字典和语言包</h1>
+
+  
+
+
+</section>
+
+			<div>
+
+  <p>In addition to the command arguments described in this topic, see <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands.html#config-cli-subcommands-common">命令参数</a>.</p>
+
+  <div class="bs-callout bs-callout-warning">
+    <p>Run all Magento CLI commands as the <a href="/guides/v2.1/config-guide/cli/config-cli.html#config-install-cli-first">Magento文件系统所有者</a>.</p>
+  </div>
+
+  <h2 id="overview-of-translations">Overview of translations</h2>
+  <p>Magento translations enable you to customize and localize your store for multiple regions and markets. We improved the localization and customization of Magento instances by making translation dictionaries easier to update and maintain and reduced the amount of code coupling and duplication.</p>
+
+  <p>This topic discusses how to generate:</p>
+
+  <ul>
+    <li>Translation dictionaries, which are a convenient way to translate <em>some</em> words and phrases, such as those for a custom <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> or <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span>.</li>
+    <li>Language packages, which enable you to translate <em>any or all</em> words and phrases in the Magento application.</li>
+  </ul>
+
+  <p>For more information, see <a href="/guides/v2.1/frontend-dev-guide/translations/xlate.html">Translation</a>.</p>
+
+  <h2 id="config-cli-subcommands-xlate-dict">Generate a translation dictionary</h2>
+  <p>You can generate a translation dictionary to use by itself (for example, to translate words and phrases in a custom module) or for use by a <span term-uuid="9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f" class="glossary-term" data-toggle="popover">language package</span>. See one of the following sections:</p>
+
+  <ul>
+    <li><a href="/guides/v2.1/frontend-dev-guide/translations/xlate.html#m2devgde-xlate-dictionaries">About translation dictionaries</a></li>
+    <li><a href="#config-cli-subcommands-xlate-dict-dict">Work with translation dictionaries</a></li>
+  </ul>
+
+  <h3 id="config-cli-subcommands-xlate-dict-dict">Work with translation dictionaries</h3>
+  <p>To translate words and phrases, you must:</p>
+
+  <ol>
+    <li>Run the translation collection command to extract translatable words and phrases from enabled 组件.</li>
+    <li>Translate the words and phrases.</li>
+  </ol>
+
+  <p>After that:</p>
+
+  <ol>
+    <li>You can package the translation dictionaries into a language package and provide the package to the Magento store administrator.</li>
+    <li>In the Magento Admin, the store administrator <a href="http://docs.magento.com/m2/ce/user_guide/stores/store-language-add.html?Highlight=translation" target="\_blank">configures the translations</a>.</li>
+  </ol>
+
+  <p>命令参数：</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento i18n:collect-phrases [-o|--output="&lt;csv file path and name&gt;"] [-m|--magento] &lt;path to directory to translate&gt;
+</code></pre></div>  </div>
+
+  <p>The following table explains this command’s parameters and values:</p>
+
+  <table>
+	<col width="25%" />
+	<col width="65%" />
+	<col width="10%" />
+	<tbody>
+		<tr>
+			<th>参数</th>
+			<th>值</th>
+			<th>是否必需?</th>
+		</tr>
+
+	<tr>
+		<td><p>&lt;path to directory to translate&gt;</p></td>
+		<td><p>Path to a directory that has translatable code; in other words, PHP, PHTML, or XML files that have phrases to translate.</p>
+		<p>The tool starts searching at the path you enter and searches all files and subdirectories it contains. </p>
+	<p>Do not use this parameter if you use <code>-m|--magento</code>.</p></td>
+
+		<td><p>Yes (dictionaries), no (packages).</p></td>
+	</tr>
+	<tr>
+		<td><p>-m|--magento</p></td>
+		<td><p><em>Required to create a language package from this translation dictionary</em>. If used, searches the directories that contain <code>bin/magento</code>. This option adds themes or modules to each line in the dictionary. </p>
+			<p>A sample follows:</p>
+			<p><pre>"No Items Found","No Items Found",module,Magento_Wishlist</pre></p></td>
+			<td><p>否</p></td>
+</tr>
+<tr>
+		<td><p>-o|--output="&lt;path&gt;"</p></td>
+		<td><p>Specifies the absolute file system path and file name of the translation dictionary .csv file to create. <em>The value you enter is case-sensitive</em>. The name of the .csv file must <em>exactly match</em> the locale name, including the characters' case.</p>
+			<p>If you omit this parameter, the output is directed to stdout.</p>
+		</td>
+		<td>
+			<p>否</p>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+  <div class="bs-callout bs-callout-info" id="info">
+    <p>To create a language pack from a translation dictionary, you <em>must</em> use the <code class="highlighter-rouge">-m|--magento</code> option.</p>
+  </div>
+
+  <h3 id="config-cli-subcommands-xlate-dict-trans">Translation guidelines</h3>
+  <p>Use the following guidelines when translating words and phrases:</p>
+
+  <ul>
+    <li>Change the contents of the second column only. Translate the phrases from English (<code class="highlighter-rouge">US</code>) to the desired language.</li>
+    <li>
+      <p>While translating, pay attention to placeholders like <code class="highlighter-rouge">%1</code>, <code class="highlighter-rouge">%2</code> and so on.</p>
+
+      <p>They are used by the Magento application to insert context values; they are <em>not</em> used for translations. 例如:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Product '%1' has been added to shopping cart.
+-&gt;
+Product 'Multimeter-2000' has been added to shopping cart.
+</code></pre></div>      </div>
+
+      <p>The resulting phrase must contain at least one of each placeholder. For example, suppose there are placeholders from <code class="highlighter-rouge">%1</code> to <code class="highlighter-rouge">%3</code> in the original phrase. The translation can have as many of these placeholders in any order, but there must be at least one occurrence of <code class="highlighter-rouge">%1</code>, <code class="highlighter-rouge">%2</code>, or <code class="highlighter-rouge">%3</code>. The translation cannot contain placeholder values not present in the original value (for example, <code class="highlighter-rouge">%4</code>, <code class="highlighter-rouge">%5</code>, and so on).</p>
+
+      <p>An example of translating a phrase:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Buy %1 for %2 (%3 incl. tax) each","Compre %1 por %2 (%3 incl. imposto) cada"
+</code></pre></div>      </div>
+    </li>
+  </ul>
+
+  <h2 id="config-cli-subcommands-xlate-pack">Create a language package</h2>
+  <p>As opposed to a translation dictionary, you can translate any or all words and phrases in the Magento application using a language package. (You can translate a particular component—like a module or a theme—using a translation dictionary.) <a href="/guides/v2.1/frontend-dev-guide/translations/xlate.html#m2devgde-xlate-languagepack">Learn more about language packages</a>.</p>
+
+  <p>This section discusses how to create a language package, which writes <code class="highlighter-rouge">.csv</code> files to modules and themes. To create a language package, you must perform the tasks discussed in the following sections:</p>
+
+  <ol>
+    <li>
+      <p><a href="#config-cli-subcommands-xlate-dict">Collect and translate words and phrases</a>.</p>
+
+      <p>(The <code class="highlighter-rouge">--magento</code> parameter is required.)</p>
+    </li>
+    <li><a href="#config-cli-subcommands-xlate-pack-cmd">Run the language package command</a>.</li>
+    <li><a href="#m2devgde-xlate-files">Create directories and files</a>.</li>
+    <li>(Optional.) <a href="#m2devgde-xlate-severalpacks">Configure multiple packages for a language</a>.</li>
+  </ol>
+
+  <h3 id="config-cli-subcommands-xlate-pack-cmd">Run the language package command</h3>
+  <p>命令用法：</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] &lt;source&gt; &lt;locale&gt;
+</code></pre></div>  </div>
+
+  <p>The following table explains this command’s parameters and values:</p>
+
+  <table>
+	<col width="25%" />
+	<col width="65%" />
+	<col width="10%" />
+	<tbody>
+		<tr>
+			<th>参数</th>
+			<th>值</th>
+			<th>是否必需?</th>
+		</tr>
+		<tr>
+			<td><p>&lt;source&gt;</p></td>
+			<td><p>Absolute file system path and file name of a .csv file that contains the combined translation dictionary and meta-information necessary for breakdown into a language package.</p>
+			<p>Use <a href="#config-cli-subcommands-xlate-dict-dict">bin/magento i18n:collect-phrases</a> to create the .csv file then create the language package as discussed in <a href="#m2devgde-xlate-files">Create directories and files</a>. </p></td>
+			<td><p>是</p></td>
+		</tr>
+		<tr>
+			<td><p>&lt;locale&gt;</p></td>
+			<td><p><a href="http://www.iso.org/iso/home/standards/language_codes.htm" target="\_blank">ISO 639-1</a> (language) and <a href="http://www.iso.org/iso/country_codes.htm" target="\_blank">ISO 3166</a> (country) identifier of language used as file name for all resulting .csv files. Examples: <code>de_DE</code>, <code>pt_PT</code>, <code>pt_BR</code>. </p>
+			</td>
+			<td>
+				<p>是</p>
+			</td>
+		</tr>
+		<tr>
+			<td><p>-m|--mode</p></td>
+			<td><p>If a target file already exists, specifies whether to replace the existing language package or merge with the new language pack. Merging overrides any phrases that existed and adds new ones. </p>
+				<p>Values: <code>merge</code>或<code>replace</code> (the default).</p>
+			</td>
+			<td>
+				<p>否</p>
+			</td>
+		</tr>
+		<tr>
+			<td><p>-d|--allow-duplicates</p></td>
+			<td><p>Include this option to allow duplicates in the language pack. Otherwise, the command fails with an error if it encounters the same phrase is translated in different ways in different lines.</p>
+			</td>
+			<td>
+				<p>否</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3 id="m2devgde-xlate-files">Create directories and files</h3>
+  <p>A language package is a directory under <code class="highlighter-rouge">app/i18n/&lt;VendorName&gt;</code> in the Magento file system with the following contents:</p>
+
+  <ul>
+    <li>Required license files</li>
+    <li><code class="highlighter-rouge">composer.json</code></li>
+    <li><code class="highlighter-rouge">registration.php</code> that <a href="/guides/v2.1/extension-dev-guide/build/component-registration.html">registers</a> the language package</li>
+    <li><a href="#config-cli-subcommands-xlate-pack-meta-xml"><code class="highlighter-rouge">language.xml</code></a> meta-information file</li>
+  </ul>
+
+  <div class="bs-callout bs-callout-info" id="info">
+    <p>The entire path must be all lowercase.</p>
+  </div>
+
+  <p>For an example, see the <a href="https://github.com/magento/magento2/blob/2.0/app/i18n/magento/de_de/registration.php" target="\_blank"><code>de_de</code> language package</a>.</p>
+
+  <p>To create these files:</p>
+
+  <ol>
+    <li>
+      <p>Create a directory under <code class="highlighter-rouge">app/i18n</code>.</p>
+
+      <p>For example, Magento language packages are located in <code class="highlighter-rouge">app/i18n/magento</code></p>
+    </li>
+    <li>Add any license files you require.</li>
+    <li>Add <a href="/guides/v2.1/extension-dev-guide/build/composer-integration.html"><code class="highlighter-rouge">composer.json</code></a> that specifies dependencies for your language package.</li>
+    <li>Register the language package with <a href="/guides/v2.1/extension-dev-guide/build/component-registration.html"><code class="highlighter-rouge">registration.php</code></a></li>
+    <li>Add <code class="highlighter-rouge">language.xml</code> meta-information file as discussed in the next section.</li>
+  </ol>
+
+  <h4 id="config-cli-subcommands-xlate-pack-meta-xml">Language package language.xml</h4>
+  <p>When declaring a language package in the <code class="highlighter-rouge">language.xml</code> configuration file, you must specify the sequence of the language inheritance for this package.</p>
+
+  <p>Language inheritance enables you to create a new translation based on an existing one (the existing translation is referred to as the <em>parent</em>). The child translations override the parent. However, if the child translation fails to upload or display, the parent is used instead. If a child translation lacks a phrase or a word, this phrase or word is taken from the parent <span term-uuid="05099dbb-d491-4e33-a065-16035cb2d4d9" class="glossary-term" data-toggle="popover">locale</span>. <a href="#m2devgde-xlate-inheritancework">Examples of language package inheritance</a>.</p>
+
+  <p>To declare a package, specify the following information:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;language</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:App/Language/package.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>en_GB<span class="nt">&lt;/code&gt;</span>
+    <span class="nt">&lt;vendor&gt;</span>magento<span class="nt">&lt;/vendor&gt;</span>
+    <span class="nt">&lt;package&gt;</span>en_gb<span class="nt">&lt;/package&gt;</span>
+    <span class="nt">&lt;sort_order&gt;</span>100<span class="nt">&lt;/sort_order&gt;</span>
+    <span class="nt">&lt;use</span> <span class="na">vendor=</span><span class="s">"oxford-university"</span> <span class="na">package=</span><span class="s">"en_us"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/language&gt;</span>
+</code></pre></div>  </div>
+
+  <p>Where:</p>
+
+  <ul>
+    <li><strong><code class="highlighter-rouge">&lt;code&gt;</code>:</strong> Language package locale (required)</li>
+    <li><strong><code class="highlighter-rouge">&lt;vendor&gt;</code>:</strong> Module’s vendor name (required)</li>
+    <li><strong><code class="highlighter-rouge">&lt;package&gt;</code>:</strong> Language package name (required)</li>
+    <li><strong><code class="highlighter-rouge">&lt;sort_order&gt;</code>:</strong> Priority of uploading a package when there are several language packages available for a store</li>
+    <li><strong><code class="highlighter-rouge">&lt;use&gt;</code>:</strong> Parent language package locale from which to inherit dictionaries</li>
+  </ul>
+
+  <p>If necessary, you can specify several parent packages. The parent packages are applied on a first listed, first used basis.</p>
+
+  <h4 id="m2devgde-xlate-inheritancework">示例 of language inheritance</h4>
+  <p>Suppose a language package descends from two other packages, and that those packages also have parent and “grandparent” packages.</p>
+
+  <p>If a language package descends from two packages, its <code class="highlighter-rouge">language.xml</code> might look like the following:</p>
+
+  <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;language</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:App/Language/package.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>en_GB<span class="nt">&lt;/code&gt;</span>
+    <span class="nt">&lt;vendor&gt;</span>magento<span class="nt">&lt;/vendor&gt;</span>
+    <span class="nt">&lt;package&gt;</span>language_pack<span class="nt">&lt;/package&gt;</span>
+    <span class="nt">&lt;sort_order&gt;</span>100<span class="nt">&lt;/sort_order&gt;</span>
+    <span class="nt">&lt;use</span> <span class="na">vendor=</span><span class="s">"parent-package-one"</span> <span class="na">package=</span><span class="s">"language_package_one"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;use</span> <span class="na">vendor=</span> <span class="s">"parent-package-two"</span> <span class="na">package=</span><span class="s">"language_package_two"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/language&gt;</span>
+</code></pre></div>  </div>
+
+  <p>In the preceding example:</p>
+
+  <ul>
+    <li><code class="highlighter-rouge">language_package_one</code> descends from <code class="highlighter-rouge">en_au_package</code> and <code class="highlighter-rouge">en_au_package</code> descends from <code class="highlighter-rouge">en_ie_package</code></li>
+    <li><code class="highlighter-rouge">language_package_two</code> descends from <code class="highlighter-rouge">en_ca_package</code> and <code class="highlighter-rouge">en_ca_package</code> descends from <code class="highlighter-rouge">en_us_package</code></li>
+  </ul>
+
+  <p>If the Magento application cannot find word or phrase in the <code class="highlighter-rouge">en_GB</code> package, it looks in other packages in following sequence:</p>
+
+  <ol>
+    <li><code class="highlighter-rouge">parent-package-one/language_package_one</code></li>
+    <li><code class="highlighter-rouge">&lt;vendorname&gt;/en_au_package</code></li>
+    <li><code class="highlighter-rouge">&lt;vendorname&gt;/en_ie_package</code></li>
+    <li><code class="highlighter-rouge">parent-package-two/language_package_two</code></li>
+    <li><code class="highlighter-rouge">&lt;vendorname&gt;/en_ca_package</code></li>
+    <li><code class="highlighter-rouge">&lt;vendorname&gt;/en_us_package</code></li>
+  </ol>
+
+  <p>Specifying all inheritances between the language packages might result in creating circular inheritance chains. Use <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/static/testsuite/Magento/Test/Integrity/App/Language/CircularDependencyTest.php" target="\_blank">Magento\Test\Integrity\App\Language\CircularDependencyTest</a> test to locate and fix such chains.</p>
+
+  <h3 id="m2devgde-xlate-severalpacks">Configure multiple packages for a language</h3>
+  <p>To help you to make your store more flexible, you can upload several language packages for the same language in your store. Thus, you can use different custom packages for different parts of your store because the system compiles a single package from all packages that are available for a language.</p>
+
+  <p>To enable an additional package for an existing language, name the new package any name except for an existing language code name (to avoid confusion). Specify configurations of a package in the language package’s <code class="highlighter-rouge">language.xml</code> meta-information file as discussed in the the next section.</p>
+
+  <h2 id="examples-of-using-translation-commands">Examples of using translation commands</h2>
+  <p>The following sections provide end-to-end examples of using the commands discussed in this topic to create translation dictionaries and translation packages:</p>
+
+  <ul>
+    <li><a href="#config-cli-subcommands-xlate-example1">Example: Create a translation dictionary for a module or theme</a></li>
+    <li><a href="#config-cli-subcommands-xlate-example2">Example: Create a language package</a></li>
+  </ul>
+
+  <h3 id="config-cli-subcommands-xlate-example1">示例: Create a translation dictionary for a module or theme</h3>
+  <p>To add a German translation to a module or theme that you want to distribute to other merchants:</p>
+
+  <ol>
+    <li>
+      <p>Collect phrases from your module:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento i18n:collect-phrases -o "/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n/xx_YY.csv" /var/www/html/magento2/app/code/ExampleCorp/SampleModule
+</code></pre></div>      </div>
+
+      <div class="bs-callout bs-callout-info" id="info">
+        <p>The .csv file name must <em>exactly match</em> the locale, including the characters’ case.</p>
+      </div>
+    </li>
+    <li>Translate the words and phrases using <a href="#config-cli-subcommands-xlate-dict-trans">these guidelines</a>.</li>
+    <li>If necessary, copy <code class="highlighter-rouge">xx_YY.csv</code> to <code class="highlighter-rouge">/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n</code> or to the module’s theme directory (depending on whether the translation dictionary is for a module or a theme).</li>
+  </ol>
+
+  <h3 id="config-cli-subcommands-xlate-example2">示例: Create a language package</h3>
+  <p>Similar to the preceding example, generate a .csv file, but instead of specifying a module or theme directory, specify the entire Magento application root directory. The resulting .csv contains any phrases that the command could find in the code.</p>
+
+  <ol>
+    <li>
+      <p>Collect phrases from your module:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento i18n:collect-phrases -o "/var/www/html/magento2/xx_YY.csv" -m
+</code></pre></div>      </div>
+
+      <div class="bs-callout bs-callout-info" id="info">
+        <p>The .csv file name must <em>exactly match</em> the locale, including the characters’ case.</p>
+      </div>
+    </li>
+    <li>Translate the words and phrases using <a href="#config-cli-subcommands-xlate-dict-trans">these guidelines</a>.</li>
+    <li>
+      <p>Create the language package.</p>
+
+      <p>bin/magento i18n:pack /var/www/html/magento2/xx_YY.csv -d xx_YY</p>
+    </li>
+    <li>
+      <p>Create a directory for the language package.</p>
+
+      <p>For example, <code class="highlighter-rouge">/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy</code></p>
+    </li>
+    <li>
+      <p>In that directory, add all of the following:</p>
+
+      <ul>
+        <li>A license, if required</li>
+        <li><code class="highlighter-rouge">composer.json</code> (sample following)</li>
+        <li><code class="highlighter-rouge">registration.php</code> (sample following)</li>
+        <li><code class="highlighter-rouge">language.xml</code> (sample following)</li>
+      </ul>
+
+      <p><strong>Sample <code class="highlighter-rouge">composer.json</code>:</strong></p>
+
+      <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examplecorp/language-xx_yy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sample language"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"OSL-3.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"AFL-3.0"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"require"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"magento/framework"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0.*"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"magento2-language"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"registration.php"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>      </div>
+
+      <p><strong>Sample <code class="highlighter-rouge">registration.php</code>:</strong></p>
+
+      <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+<span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">register</span><span class="p">(</span>
+    <span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">LANGUAGE</span><span class="p">,</span>
+    <span class="s1">'magento_xx_yy'</span><span class="p">,</span>
+    <span class="nx">__DIR__</span>
+<span class="p">);</span>
+</code></pre></div>      </div>
+
+      <p><strong>Sample <code class="highlighter-rouge">language.xml</code>:</strong></p>
+
+      <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;language</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:App/Language/package.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>xx_YY<span class="nt">&lt;/code&gt;</span>
+    <span class="nt">&lt;vendor&gt;</span>examplecorp<span class="nt">&lt;/vendor&gt;</span>
+    <span class="nt">&lt;package&gt;</span>xx_yy<span class="nt">&lt;/package&gt;</span>
+<span class="nt">&lt;/language&gt;</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h4 id="section">相关主题</h4>
+
+  <ul>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-index.html">管理索引</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a></li>
+    <li><a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a></li>
+  </ul>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/config-guide/cli/config-cli-subcommands-i18n.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/config-guide/cli/config-cli-subcommands-i18n.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

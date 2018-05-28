@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>部署静态视图文件 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/config-guide/cli/config-cli-subcommands-static-view.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">配置手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/bk-config-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安全设置">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/secy/secy.html">安全设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="确保cron.php文件在浏览器上的安全">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/secy/secy-cron.html">确保cron.php文件在浏览器上的安全</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="x-frame-options头">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/secy/secy-xframe.html">X-Frame-Options头</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="防止缓存中毒">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/secy/secy-headers.html">防止缓存中毒</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento初始化和引导">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/bootstrap/magento-bootstrap.html">Magento初始化和引导</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="设置引导参数">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/bootstrap/magento-how-to-set.html">设置引导参数</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/bootstrap/magento-modes.html">关于Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义基础目录路径(mage_dirs)">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开启扼要记录(mage_profiler)">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/bootstrap/mage-profiler.html">开启扼要记录(MAGE_PROFILER)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="管道部署">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/deployment/">管道部署</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="overview">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/deployment/pipeline/">Overview</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="技术细节">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/deployment/pipeline/technical-details.html">技术细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发系统设置">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/deployment/pipeline/development-system.html">开发系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="构建系统设置">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/deployment/pipeline/build-system.html">构建系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="生产系统设置">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/deployment/pipeline/production-system.html">生产系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件系统访问权限">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/prod/prod_file-sys-perms.html">文件系统访问权限</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="examples">
+
+            
+
+            
+            <span>Examples</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="共享配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/deployment/pipeline/example/shared-configuration.html">共享配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用命令行命令">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/deployment/pipeline/example/cli.html">使用命令行命令</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用环境变量">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/deployment/pipeline/example/environment-variables.html">使用环境变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用rsync同步命令">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/deployment/pipeline/example/rsync.html">使用rsync同步命令</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="单机部署">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/deployment/single-machine.html">单机部署</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行配置">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/cli/config-cli.html">命令行配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令行配置起步">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理缓存">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理索引">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置和执行定时任务">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码编译器">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)高亮">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖报告">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置管理">
+
+            
+
+            
+            <span>配置管理</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="导出配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-export.html">导出配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置配置值">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-set.html">设置配置值</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="从配置文件导入数据">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-import.html">从配置文件导入数据</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="翻译字典和语言包">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态视图文件部署">
+
+            
+
+            
+            <span>静态视图文件部署</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="静态文件部署策略">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html">静态文件部署策略</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3 active " id="部署静态视图文件">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建软链接到less文件">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行单元测试">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="转换布局的xml文件">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为性能测试生成数据">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行magento支持工具-(magento-commerce-only)">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-spt-util.html">运行Magento支持工具 (仅企业版适用)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento配置文件">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/config/config-magento.html">Magento配置文件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento的部署配置">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/config/config-php.html">Magento的部署配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块配置文件">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/config/config-files.html">模块配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建或扩展配置类型">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/config/config-create.html">创建或扩展配置类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="禁用模块输出">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/config/disable-module-output.html">禁用模块输出</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置参考">
+
+            
+
+            
+            <span>配置参考</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="敏感的和系统特定的">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-sens.html">敏感的和系统特定的</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="支付配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-payment.html">支付配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="其它配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-most.html">其它配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-for-b2b-extension-configuration-paths-reference">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-b2b.html">Magento Commerce for B2B Extension configuration paths reference</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id=".gitignore参考">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-gitignore.html">.gitignore参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用环境变量覆盖配置设置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-var-name.html">使用环境变量覆盖配置设置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="config.php参考">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-configphp.html">config.php参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="env.php参考">
+                    
+
+                    
+                    <a  href="/guides/v2.3/config-guide/prod/config-reference-envphp.html">env.php参考</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置缓存">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/cache.html">配置缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="将缓存前端与缓存类型关联">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cache/cache-types.html">将缓存前端与缓存类型关联</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="底层缓存选项">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cache/cache-options.html">底层缓存选项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态内容签名">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cache/static-content-signing.html">静态内容签名</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置redis">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/redis/config-redis.html">配置Redis</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为magento页面缓存和默认缓存">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为session存储">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/redis/redis-session.html">使用Redis作为Session存储</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置和使用varnish">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="安装varnish">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/config-varnish-install.html">安装Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置varnish和你的web服务器">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用varnish">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish高级配置">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/config-varnish-advanced.html">Varnish高级配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="how-magento-cache-clearing-works-with-multiple-varnish-instances">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/use-multiple-varnish-cache.html">How Magento cache clearing works with multiple Varnish instances</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="最终校验">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/config-varnish-final.html">最终校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在varnish下magento的缓存清除是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish缓存是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/use-varnish-cache-how.html">Varnish缓存是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除503错误">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/varnish/tshoot-varnish-503.html">排除503错误</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用memcached做为session存储">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/memcache/memcache.html">使用memcached做为session存储</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在ubuntu上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/memcache/memcache_ubuntu.html">在Ubuntu上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在centos上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/memcache/memcache_centos.html">在CentOS上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用memcached">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="多站和多店">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/multi-site/ms_over.html">多站和多店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在管理面板设置多站、多店及网店视图">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-site/ms_websites.html">在管理面板设置多站、多店及网店视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在nginx下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-site/ms_nginx.html">教程-在nginx下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在apache下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-site/ms_apache.html">教程-在Apache下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="设置自定义的定时任务和任务组(cron)">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/cron/custom-cron.html">设置自定义的定时任务和任务组(cron)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义的定时任务和任务组(cron)参考">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cron/custom-cron-ref.html">自定义的定时任务和任务组(cron)参考</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置自定义的定时任务和任务组(cron)(教程)">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/cron/custom-cron-tut.html">配置自定义的定时任务和任务组(cron)(教程)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置数据库分析器">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/db-profiler/db-profiler.html">配置数据库分析器</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装和配置elasticsearch-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/elasticsearch/es-overview.html">安装和配置Elasticsearch (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="配置nginx和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html">配置nginx和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置apache和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/elasticsearch/es-config-apache.html">配置Apache和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置elasticsearch停用词">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/elasticsearch/configure-magento.html">配置Magento使用Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="消息队列-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/mq/rabbitmq-overview.html">消息队列 (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="管理消息队列">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/mq/manage-mysql.html">管理消息队列</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="数据库分库执行方案(仅企业版)">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/multi-master/multi-master.html">数据库分库执行方案(仅企业版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-master/multi-master_masterdb.html">自动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="手动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-master/multi-master_manual.html">手动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据库分库验证">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置可选数据库复制">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/multi-master/multi-master_slavedb.html">设置可选数据库复制</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义日志">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/log/log-intro.html">自定义日志</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento日志的更多细节">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/log/log-magento.html">Magento日志的更多细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="示例---记录数据库活动日志">
+
+            
+
+            
+            <a href="/guides/v2.3/config-guide/log/log-db.html">示例 - 记录数据库活动日志</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何定位你的session文件">
+    
+
+    
+    <a href="/guides/v2.3/config-guide/sessions.html">如何定位你的session文件</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/config-guide/bk-config-guide.html">
+            <span property="name">配置手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">部署静态视图文件</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">部署静态视图文件</h1>
+
+  
+
+
+</section>
+
+			<div>
+
+  <p>In addition to the command arguments described in this topic, see <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands.html#config-cli-subcommands-common">命令参数</a>.</p>
+
+  <div class="bs-callout bs-callout-warning">
+    <p>Run all Magento CLI commands as the <a href="/guides/v2.3/config-guide/cli/config-cli.html#config-install-cli-first">Magento文件系统所有者</a>.</p>
+  </div>
+
+  <h2 id="config-cli-static-overview">Overview of static view files deployment</h2>
+  <p>The static view files deployment command enables you to write <span term-uuid="363662cb-73f1-4347-a15e-2d2adabeb0c2" class="glossary-term" data-toggle="popover">static files</span> to the Magento file system when the Magento software is set for <a href="/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode">production mode</a>.</p>
+
+  <p>The term <em>static view file</em> refers to the following:</p>
+
+  <ul>
+    <li>“Static” means it can be cached for a site (that is, the file is not dynamically generated). Examples include images and <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> generated from LESS.</li>
+    <li>“View” refers to presentation layer (from MVC).</li>
+  </ul>
+
+  <p>Static view files are located in the <code class="highlighter-rouge">&lt;your Magento install dir&gt;/pub/static</code> directory, and some are cached in the <code class="highlighter-rouge">&lt;your Magento install dir&gt;/var/view_preprocessed</code> directory as well.</p>
+
+  <p>静态视图文件部署 is affected by Magento modes as follows:</p>
+
+  <ul>
+    <li><strong><a href="/guides/v2.3/config-guide/bootstrap/magento-modes.html#default-mode">Default</a></strong> and <strong><a href="/guides/v2.3/config-guide/bootstrap/magento-modes.html#developer-mode">developer</a></strong> modes: Magento generates them on demand, but the rest are cached in a file for speed of access.</li>
+    <li><strong><a href="/guides/v2.3/config-guide/bootstrap/magento-modes.html#production-mode">Production</a></strong> mode: Static files are <em>not</em> generated or cached.</li>
+  </ul>
+
+  <p>You must write static view files to the Magento file system manually using the command discussed in this topic; after that, you can restrict permissions to limit your vulnerabilities and to prevent accidental or malicious overwriting of files.</p>
+
+  <div class="bs-callout bs-callout-warning">
+    <p><em>Developer mode only</em>: When you install or enable a new module, it might load new JavaScript, CSS, layouts, and so on. To avoid issues with static files, you must clean the old files to make sure you get all the changes for the new <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>.</p>
+
+    <p>You can clean generated static view files in several ways. Refer to <a href="/guides/v2.3/howdoi/clean_static_cache.html">清除静态文件缓存 topic for details</a> for more information.</p>
+  </div>
+
+  <h2 id="config-cli-subcommands-staticview">部署静态视图文件</h2>
+  <p>To deploy static view files:</p>
+
+  <ol>
+    <li>Log in to the Magento server as, or <a href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">switch to</a>, the <span term-uuid="5e7de323-626b-4d1b-a7e5-c8d13a92c5d3" class="glossary-term" data-toggle="popover">Magento文件系统所有者</span>.</li>
+    <li>Delete the contents of <code class="highlighter-rouge">&lt;your Magento install dir&gt;/pub/static</code>, except for the <code class="highlighter-rouge">.htaccess</code> file. Do not delete this file.</li>
+    <li>
+      <p>Run the static view files deployment tool <code class="highlighter-rouge">&lt;your Magento install dir&gt;/bin/magento setup:static-content:deploy</code>.
+<!-- 4.	Set read-only file permissions for the `pub/static` directory, its subdirectories, and files. --></p>
+
+      <div class="bs-callout bs-callout-info" id="info">
+        <p>If you enable static view file merging in the Magento Admin, the <code class="highlighter-rouge">pub/static</code> directory system must be writable.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p>命令参数：</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento setup:static-content:deploy [&lt;languages&gt;] [-t|--theme[="&lt;theme&gt;"]] [--exclude-theme[="&lt;theme&gt;"]] [-l|--language[="&lt;language&gt;"]] [--exclude-language[="&lt;language&gt;"]] [-a|--area[="&lt;area&gt;"]] [--exclude-area[="&lt;area&gt;"]] [-j|--jobs[="&lt;number&gt;"]]  [--no-javascript] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [-d|--dry-run] [-f|--force]
+</code></pre></div>  </div>
+
+  <p>The following table explains this command’s parameters and values.</p>
+
+  <table>
+  <col width="25%" />
+  <col width="65%" />
+  <col width="15%" />
+  <tbody>
+    <tr>
+      <th>
+        Option
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Required?
+      </th>
+    </tr>
+    <tr>
+      <td>
+        &lt;languages&gt;
+      </td>
+      <td>
+        <p>
+          Space-separated list of <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">ISO-639</a> language codes for which to
+          output static view files. (Default is
+          <code>en_US</code>.)
+        </p>
+        <p>
+          You can find the list by running <code>bin/magento
+          info:language:list</code>.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --language (-l)
+      </td>
+      <td>
+        <p>
+          Generate files only for the specified languages. The
+          default, with no option specified, is to generate files
+          for all <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="\_blank">ISO-636</a> language codes. You can
+          specify the name of one language code at a time.
+        </p>
+        <p>
+          For example, <code>--language en_US --language
+          es_ES</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --exclude-language
+      </td>
+      <td>
+        <p>
+          Generate files for the specified language codes. The
+          default, with no option specified, is to exclude nothing.
+          You can specify the name of one language code or a
+          comma-separated list of language codes.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --theme &lt;theme&gt;
+      </td>
+      <td>
+        <p>
+          Themes for which to deploy static content.
+        </p>
+        <p>
+          For example, <code>--theme Magento/blank --theme
+          Magento/luma</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --exclude-theme &lt;theme&gt;
+      </td>
+      <td>
+        <p>
+          Themes to exclude when deploying static content.
+        </p>
+        <p>
+          For example, <code>--exclude-theme Magento/blank</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --area (-a)
+      </td>
+      <td>
+        <p>
+          Generate files only for the specified areas. The default,
+          with no option specified, is to generate files for all
+          areas. Valid values are <code>adminhtml</code> and
+          <code>frontend</code>.
+        </p>
+        <p>
+          For example, <code>--area adminthml</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --exclude-area
+      </td>
+      <td>
+        <p>
+          Do not generate files for the specified areas. The
+          default, with no option specified, is to exclude nothing.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --jobs (-j)
+      </td>
+      <td>
+        <p>
+          Enable parallel processing using the specified number of
+          jobs. The default is 0 (do not run in parallel processes).
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-javascript
+      </td>
+      <td>
+        <p>
+          Do not deploy JavaScript files
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-css
+      </td>
+      <td>
+        <p>
+          Do not deploy CSS files.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-less
+      </td>
+      <td>
+        <p>
+          Do not deploy LESS files.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-images
+      </td>
+      <td>
+        Do not deploy images.
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-fonts
+      </td>
+      <td>
+        <p>
+          Do not deploy font files.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          --no-html
+        </p>
+      </td>
+      <td>
+        <p>
+          Do not deploy HTML files.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-misc
+      </td>
+      <td>
+        <p>
+          Do not deploy other types of files (that is
+          <code>.md</code>, <code>.jbf</code>, <code>.csv</code>,
+          <code>.json</code>, <code>.txt</code>, <code>.htc</code>,
+          or <code>.swf</code> files).
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --no-html-minify
+      </td>
+      <td>
+        <p>
+          Do not minify HTML files.
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        -s
+        <ul>
+          <li>-s quick
+          </li>
+          <li>-s standard
+          </li>
+          <li>-s compact
+          </li>
+        </ul>
+      </td>
+      <td>
+        Define the deployment strategy. Use these options only if you have more than one locale.
+				<ul>
+					<li>
+						Use the <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html#static-file-standard">standard strategy</a> to deploy all static view files for all packages.
+					</li>
+					<li>
+	          Use the <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html#static-file-quick">quick strategy</a> to minimize deployment time. This is the default command option if not specified.
+					</li>
+					<li>
+						Use the <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html#static-file-compact">compact strategy</a> to conserve disk space on the server.
+					</li>
+				</ul>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        --force (-f)
+      </td>
+      <td>
+        <p>
+          Deploy files in any mode. (by default, the static content
+          content deployment tool can be run only in production
+          mode. Use this option to run it in default or developer
+          mode).
+        </p>
+      </td>
+      <td>
+        <p>
+          No
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <div class="bs-callout bs-callout-info" id="info">
+    <p>If you specify values for both <code class="highlighter-rouge">&lt;languages&gt;</code> and <code class="highlighter-rouge">--language</code>, <code class="highlighter-rouge">&lt;languages&gt;</code> takes precedence.</p>
+  </div>
+
+  <h3 id="section">示例</h3>
+  <p>Following are some example commands.</p>
+
+  <h4 id="excluding-a-theme-and-html-minification">Excluding a theme and HTML minification</h4>
+  <p>The following command deploys <span term-uuid="a3e37235-4e8b-464f-a19d-4a120560206a" class="glossary-term" data-toggle="popover">static content</span> for the US English (<code class="highlighter-rouge">en_US</code>) language, excludes the Luma <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> provided with Magento, and does not minify <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> files.</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
+</code></pre></div>  </div>
+
+  <p>Sample output:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Requested languages: en_US
+Requested areas: frontend, adminhtml
+Requested themes: Magento/blank, Magento/backend
+=== frontend -&gt; Magento/blank -&gt; en_US ===
+=== adminhtml -&gt; Magento/backend -&gt; en_US ===
+...........................................................
+... more ...
+Successful: 2055 files; errors: 0
+---
+
+New version of deployed files: 1466710645
+............
+Successful: 1993 files; errors: 0
+---
+</code></pre></div>  </div>
+
+  <h4 id="generating-static-view-files-for-one-theme-and-one-area">Generating static view files for one theme and one area</h4>
+  <p>The following command generates static view files for all languages, the <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> area only, the Magento Luma theme only, without generating fonts:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
+</code></pre></div>  </div>
+
+  <p>Sample output:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Requested languages: en_US
+Requested areas: frontend
+Requested themes: Magento/luma
+=== frontend -&gt; Magento/luma -&gt; en_US ===
+...........................................................
+... more ...
+........................................................................
+Successful: 2092 files; errors: 0
+---
+
+New version of deployed files: 1466711110
+</code></pre></div>  </div>
+
+  <h3 id="deploy_without_db">部署静态视图文件 without installing Magento</h3>
+  <p>You might want to run the deployment process in a separate, non-production, environment, to avoid any build processes on sensitive production machines.</p>
+
+  <p>To do this, take the following steps:</p>
+
+  <ol>
+    <li>Run <a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-config-mgmt-export.html"><code class="highlighter-rouge">bin/magento app:config:dump</code></a> to export the configuration from your production system.</li>
+    <li>Copy the exported files to the non-production code base.</li>
+    <li>Run <a href="#config-cli-subcommands-staticview"><code class="highlighter-rouge">bin/magento setup:static-content:deploy</code></a>.</li>
+  </ol>
+
+  <h2 id="view-file-trouble">故障排除 the static view files deployment tool</h2>
+  <p><a href="/guides/v2.3/install-gde/bk-install-guide.html">Install the Magento software first</a>; otherwise, you cannot run the static view files deployment tool.</p>
+
+  <p><strong>Symptom</strong>: The following error is displayed when you run the static view files deployment tool:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR: You need to install the Magento application before running this utility.
+</code></pre></div>  </div>
+
+  <p><strong>Solution</strong>:</p>
+
+  <p>Use the following steps:</p>
+
+  <ol>
+    <li>
+      <p>Install the Magento software in any of the following ways:</p>
+
+      <ul>
+        <li><a href="/guides/v2.3/install-gde/install/cli/install-cli.html">命令行</a></li>
+        <li><a href="/guides/v2.3/install-gde/install/web/install-web.html">Setup wizard</a></li>
+      </ul>
+    </li>
+    <li>Log in to the Magento server as, or <a href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">switch to</a>, the Magento文件系统所有者.</li>
+    <li>Delete the contents of <code class="highlighter-rouge">&lt;your Magento install dir&gt;/pub/static</code> directory, except for the <code class="highlighter-rouge">.htaccess</code> file. Do not delete this file.</li>
+    <li>
+      <p><a href="#config-cli-subcommands-staticview">Run the static view files deployment tool</a>.
+<!-- 4.	Set read-only file permissions for the `pub/static` directory, its subdirectories, and files. --></p>
+
+      <!-- <div class="bs-callout bs-callout-info" id="info">
+    <span class="glyphicon-class">
+  		<p>If you enable static view file merging in the Magento Admin, the <code>pub/static</code> directory system must be writable.</p></span>
+</div> -->
+    </li>
+  </ol>
+
+  <h2 id="tip-for-developers-customizing-the-static-content-deployment-tool">Tip for developers customizing the static content deployment tool</h2>
+  <p>When creating a custom implementation of the static content deployment tool, use only <a href="https://en.wikipedia.org/wiki/Linearizability" target="\_blank">atomic</a> file writing for files that should be available on the client. If you use non-atomic file writing, those files might be loaded on the client with partial content.</p>
+
+  <p>One of the options for making it atomic is to write to files stored in a temporary directory and copying or moving them to the destination directory (from where they are loaded to client) after writing is over. For details about writing to files, see <a href="http://php.net/manual/en/function.fwrite.php" target="\_blank">http://php.net/manual/en/function.fwrite.php</a>.</p>
+
+  <!-- The default Magento implementation of [`Magento\Framework\Filesystem\Directory\WriteInterface::writeFile`](https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Filesystem/Directory/WriteInterface.php#L118){:target="_blank"} uses non-atomic file writing.
+ -->
+
+  <h2 id="section-1">相关主题</h2>
+
+  <ul>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-index.html">管理索引</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a></li>
+    <li><a href="/guides/v2.3/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a></li>
+  </ul>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/config-guide/cli/config-cli-subcommands-static-view.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

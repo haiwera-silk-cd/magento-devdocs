@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>代码贡献 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/contributor-guide/contributing.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/contributor-guide/contributing.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/contributor-guide/contributing.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/contributor-guide/contributing.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/contributor-guide/contributing.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">贡献指引</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1 active " id="code-contributions">
+    
+
+    
+    <a href="/guides/v2.0/contributor-guide/contributing.html">代码贡献</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="backward-compatible-development">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/backward-compatible-development">向前兼容开发</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="devdocs-contributions">
+    
+
+    
+    <a href="/guides/v2.0/contributor-guide/contributing_docs.html">开发文档贡献</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-definition-of-done">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/contributing_dod.html">Magento Definition of Done</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="suggested-topics-for-contribution">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/contributing_docs_suggested.html">建议的贡献主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="devdocs-contributors">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/quarterly-contributors.html">开发文档贡献者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="templates">
+    
+
+    
+    <span>Templates</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="basic-template">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/templates/basic_template.html">基础模板</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  tutorial" id="sample-template-tutorial">
+
+            
+
+            
+            <a href="/guides/v2.0/contributor-guide/templates/tutorial-template-first.html">样例模板教程</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">代码贡献</span>
+
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">代码贡献</h1>
+
+  
+
+
+</section>
+
+			<p>此向导包含以下主题:</p>
+
+<ul>
+  <li>
+    <p><a href="#contribute">贡献Magento2代码</a></p>
+  </li>
+  <li>
+    <p><a href="#question">有问题或改善要求?</a></p>
+  </li>
+  <li>
+    <p><a href="#requirements">贡献要求</a></p>
+  </li>
+  <li>
+    <p><a href="#fork">fork一个仓库</a></p>
+  </li>
+  <li>
+    <p><a href="#pull_request">创建合并请求</a></p>
+  </li>
+  <li>
+    <p><a href="#report">报告问题</a></p>
+  </li>
+  <li>
+    <p><a href="#triage">帮助分担问题</a></p>
+  </li>
+  <li>
+    <p><a href="#labels">社区工程师团除的标签应用</a></p>
+  </li>
+</ul>
+
+<h2 id="contribute">贡献Magento2代码</h2>
+
+<p>Use the <a href="#fork">fork</a>和<a href="#pull_request">pull</a> model to contribute to the Magento 2 codebase.
+This contribution model allows contributors to maintain their own copy of the forked codebase (which can be easily synced with the main copy). The forked repository is then used to submit a request to the base repository to <em>pull</em> a set of changes (hence the phrase <em>pull request</em>).</p>
+
+<p>Contributions can take the form of new 组件 or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.</p>
+
+<p>The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in two weeks (14 days) time, the issue is closed.</p>
+
+<p>Often when the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. If you’re ever curious what the different labels mean, see the <a href="#labels">table</a> below for an explanation of each one.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+<p>Please refer to <a href="http://www.magento.com/legaldocuments/mca">Magento Contributor Agreement</a> for detailed information about the License Agreement. All contributors are required to submit a click-through form to agree to the terms. </p>
+</div>
+
+<h2 id="question">有问题或改善要求?</h2>
+
+<p>We use this repository (the Magento 2 GitHub repository) to capture code and documentation issues. We recommend that you post all questions to a question-and-answer site, such as <a href="https://magento.stackexchange.com/" target="_blank">Stack Exchange </a> and the <a href="https://community.magento.com/" target="_blank">Magento Forums</a>, where Magento community members can quickly provide recommendations and advice.</p>
+
+<p>Submit feature requests or enhancement suggestions to the new <a href="https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests" target="_blank">Magento 2 Feature Requests and Improvements forum</a> (see details <a href="https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96" target="_blank">here</a>).</p>
+
+<h2 id="requirements">贡献要求</h2>
+
+<ol>
+  <li>Contributions must adhere to <a href="/guides/v2.0/coding-standards/bk-coding-standards.html" target="_blank">Magento coding standards</a>.</li>
+  <li>Refer to the Magento development team’s <a href="/guides/v2.0/contributor-guide/contributing_dod.html">Definition of Done</a>. We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!</li>
+  <li>Pull requests (PRs) must be accompanied by a meaningful description of their purpose. Comprehensive descriptions increase the chances that a pull request is merged quickly and without additional clarification requests.</li>
+  <li>Commits must be accompanied by meaningful commit messages.</li>
+  <li>PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.</li>
+  <li>PRs that include new logic or new features must be submitted along with:
+    <ul>
+      <li>Unit/integration test coverage (we will be releasing more information about writing test coverage in the near future).</li>
+      <li>Proposed <a href="/guides/v2.0/contributor-guide/contributing_docs.html" target="_blank">documentation</a> updates. <a href="/" target="_blank">Documentation</a> contributions can be submitted <a href="https://github.com/magento/devdocs" target="_blank">here</a>.</li>
+    </ul>
+  </li>
+  <li>For large features or changes, please <a href="https://github.com/magento/magento2/issues" target="_blank">open an issue</a> and discuss it with us first. This may prevent duplicate or unnecessary effort, and it may gain you some additional contributors.</li>
+  <li>
+    <p>To report a bug, please <a href="https://github.com/magento/magento2/issues" target="_blank">open an issue</a>, and follow these <a href="https://github.com/magento/magento2/wiki/Issue-reporting-guidelines">guidelines about bugfix issues</a>.</p>
+  </li>
+  <li>All automated tests must pass successfully (all builds on <a href="https://travis-ci.org/magento/magento2" target="_blank">Travis CI</a> must be green).</li>
+</ol>
+
+<h2 id="fork">fork一个仓库</h2>
+<p>To fork a repository on Github:</p>
+
+<ol>
+  <li>Create or log in to your account on GitHub.</li>
+  <li>Navigate to the <a href="https://github.com/magento/magento2" target="_blank">Magento 2 repository</a>.</li>
+  <li>
+    <p>Click <strong>Fork</strong> at the top right: <br /><img src="/common/images/fork.png" alt="fork a repository" /></p>
+  </li>
+  <li>Clone the repo into your development environment and start playing.</li>
+</ol>
+
+<h3 id="sync">Update the fork with the latest changes</h3>
+<p>As community and Magento writers’ changes are merged to the repository, your fork becames outdated and pull requests might result in conflicts. To see if your fork is outdated, open the fork page in GitHub and if a <code class="highlighter-rouge">This branch is NUMBER commits behind magento:2.2-develop.</code> message is displayed at the top of the page. If so, your fork must be updated.</p>
+
+<p>There are two ways to update your fork. The typical way is discussed in <a href="https://help.github.com/articles/syncing-a-fork" target="_blank">GitHub documentation</a>. Make sure to update from the correct branch!</p>
+
+<p>You can also use the GitHub interface to update forks, referred to as a <em>reverse pull request</em>. Though this method does have a downside: it inserts unnecessary information into your fork commit history.</p>
+
+<ol>
+  <li>
+    <p>On your fork GitHub page, click <strong>New pull request</strong>. You should see the following message:</p>
+
+    <p><code class="highlighter-rouge">There isn’t anything to compare.
+magento:2.2-develop is up to date with all commits from &lt;your fork&gt;:2.2-develop. Try switching the base for your comparison.</code></p>
+  </li>
+  <li>Click the base link and then click <strong>Create pull request</strong>.</li>
+  <li>Provide a descriptive name for your pull request in the provided field.</li>
+  <li>Scroll to the bottom of the page and click <strong>Merge pull request</strong>, then click <strong>Confirm Merge</strong>.</li>
+</ol>
+
+<p>Check out this video to see the process in action:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mJDCL0uzIpY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="pull_request">创建合并请求</h2>
+
+<p>First, check the <a href="https://github.com/magento/magento2/pulls?q=is%3Aopen+is%3Apr" target="_blank">existing PRs</a> and make sure you are not duplicating others’ work.</p>
+
+<p>To create a pull request:</p>
+
+<ol>
+  <li>Create a feature branch for your changes and push those changes to the copy of your repository on GitHub. This is the best way to organize and even update your PR.</li>
+  <li>In your repository, click <strong>Pull requests</strong> on the right, and then click <strong>New pull request</strong>. <br /><img src="/common/images/pr.png" target="_blank" /></li>
+  <li>Ensure that you are creating a PR to the one of following  branches: <code class="highlighter-rouge">magento:2.3-develop</code>, <code class="highlighter-rouge">magento:2.2-develop</code>或<code class="highlighter-rouge">magento:2.1-develop</code> branch. We accept PRs to these branches only.</li>
+  <li>Review the changes, then click <strong>Create pull request</strong>. Fill out the form, and click <strong>Create pull request</strong> again to submit the PR—that’s it!</li>
+</ol>
+
+<p>After submitting your PR, you can head over to the Magento 2 repository’s <a href="https://github.com/magento/magento2/pulls?q=is%3Aopen+is%3Apr" target="_blank">Pull Requests panel</a> to see your PR. Your PR undergoes automated testing, and if it passes, the Community Engineering Team considers it for inclusion in the Magento 2 core. If some tests fail, please make the corresponding corrections in your code.</p>
+
+<h2 id="report">报告问题</h2>
+<p>If you find a bug in Magento 2 code, you can report it by creating an issue in the Magento 2 repository.</p>
+
+<p>Before creating an issue:</p>
+
+<ol>
+  <li>Read the <a href="https://github.com/magento/magento2/wiki/Issue-reporting-guidelines">issue reporting guidelines</a> to learn how to create an issue that can be processed in a timely manner.</li>
+  <li>Check the <a href="/">documentation</a> to make sure the behavior you are reporting is really a bug, not a feature.</li>
+  <li>Check the <a href="https://github.com/magento/magento2/issues" target="_blank"> existing issues</a> to make sure you are not duplicating somebody’s work.</li>
+</ol>
+
+<p>To add an issue:</p>
+
+<ol>
+  <li>In the Magento 2 public repository, click the <strong>Issues</strong> link on the right. <br /><img src="/common/images/issues.png" alt="the Issues link at the right" /></li>
+  <li>Click <strong>New issue</strong>.<br /><img src="/common/images/new_issue.png" alt="the New Issue button" /></li>
+  <li>Fill in the Title and Issue description.</li>
+  <li>Click <strong>Submit new issue</strong>.</li>
+</ol>
+
+<h2 id="triage">帮助分担问题 <a href="https://www.codetriage.com/magento/magento2" target="_blank"><img src="https://www.codetriage.com/magento/magento2/badges/users.svg" /></a></h2>
+
+<p>In addition to contributing code, you can help to triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs. If you would like to start triaging issues, one easy way to get started is to <a href="https://www.codetriage.com/magento/magento2" target="_blank">subscribe to Magento on CodeTriage</a>.</p>
+
+<h2 id="labels">Labels applied by the Magento team</h2>
+
+<p>Refer to the following table for a description of each label. These labels are applied by the Magento development team to community contributed issues and pull requests, to communicate status, impact, or which team is working on it.</p>
+
+<table style="width:100%">
+   <colgroup>
+      <col width="30%" />
+      <col width="70%" />
+   </colgroup>
+   <thead>
+      <tr style="background-color:lightgray">
+         <th>Label image</th>
+         <th>描述</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+        <th colspan="2">Pull Request Resolution Status</th>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_accept.png" alt="the Accept button" /></td>
+         <td>The pull request has been accepted and will be merged into mainline code.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_rejected.png" alt="the Reject button" /></td>
+         <td>The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_needs_update.png" alt="the needs update button" /></td>
+         <td>The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request.</td>
+      </tr>
+      <tr>
+        <th colspan="2">Issue Resolution Status</th>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_G1_Passed.png" alt="G1 Passed" /></td>
+         <td>Automatic verification of the issue description successfully passed. Minimum required information is provided (先决条件, Steps to Reproduce, Actual Result, Expected Result).</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_G1_Failed.png" alt="G1 Failed" /></td>
+         <td>Automatic verification of the issue description failed. Minimum required information is not provided (先决条件, Steps to Reproduce, Actual Result, Expected Result).</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_G2_Passed.png" alt="G2 Passed" /></td>
+         <td>The Community Engineering Team has confirmed that this issue contains the minimum required information to reproduce.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_G3_Passed.png" alt="G3 Passed" /></td>
+         <td>The Community Engineering Team has validated and confirmed the issue.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Reproduced_on_20x.png" alt="Reproduced on 2.0.x" /></td>
+         <td>The Community Engineering Team reproduced the issue on latest 2.0.x release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Reproduced_on_21x.png" alt="Reproduced on 2.1.x" /></td>
+         <td>The Community Engineering Team reproduced the issue on latest 2.1.x release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Reproduced_on_22x.png" alt="Reproduced on 2.2.x" /></td>
+         <td>The Community Engineering Team reproduced the issue on latest 2.2.x release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Reproduced_on_23x.png" alt="Reproduced on 2.3.x" /></td>
+         <td>The Community Engineering Team reproduced the issue on latest 2.3.x release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Fixed_in_20x.png" alt="Fixed in 2.0.x" /></td>
+         <td>The issues has been fixed in one of the 2.0.x releases or in 2.0-develop branch and will be available with upcoming patch release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Fixed_in_21x.png" alt="Fixed in 2.1.x" /></td>
+         <td>The issues has been fixed in one of the 2.1.x releases or in 2.1-develop branch and will be available with upcoming patch release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Fixed_in_22x.png" alt="Fixed in 2.2.x" /></td>
+         <td>The issues has been fixed in one of the 2.2.x releases or in 2.2-develop branch and will be available with upcoming patch release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Fixed_in_23x.png" alt="Fixed in 2.3.x" /></td>
+         <td>The issues has been fixed in one of the 2.3.x releases or in 2.3-develop branch and will be available with upcoming patch release.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/gitHub_acknowledged.png" alt="the acknowledged button" /></td>
+         <td>The Community Engineering Team has created internal ticket.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_needs_update.png" alt="the needs update button" /></td>
+         <td>The Community Engineering Team needs additional information from the reporter to properly prioritize and process the issue.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_Cannot_Reproduce.png" alt="Can Not Reproduce" /></td>
+         <td>The Community Engineering Team can not reproduced the issue following steps to reproduce.</td>
+      </tr>
+      <tr>
+         <td><img src="/common/images/github_non-issue.png" alt="Non Issue" /></td>
+         <td>A described behavior in the issue description is valid and shouldn't be changed in Magento code base.</td>
+      </tr>
+   </tbody>
+</table>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/contributor-guide/contributing.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/contributor-guide/contributing.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

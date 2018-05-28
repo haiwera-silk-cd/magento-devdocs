@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>基于访问令牌的认证 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/get-started/authentication/gs-authentication-token.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/get-started/authentication/gs-authentication-token.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/get-started/authentication/gs-authentication-token.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/get-started/authentication/gs-authentication-token.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/get-started/authentication/gs-authentication-token.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">起步 with Web APIs</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/get-started/bk-get-started-api.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用rest-api">
+    
+
+    
+    <a href="/guides/v2.1/get-started/rest_front.html">使用REST API</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="构造一个请求">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-web-api-request.html">构造一个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用curl执行这个请求">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-curl.html">使用curl执行这个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="响应和状态码">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-web-api-response.html">响应和状态码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  tutorial" id="使用rest-api的订单处理教程">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用REST API的订单处理教程</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用soap服务">
+    
+
+    
+    <a href="/guides/v2.1/get-started/soap/soap-web-api-calls.html">使用SOAP服务</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="authentication">
+    
+
+    
+    <a href="/guides/v2.1/get-started/authentication/gs-authentication.html">Authentication</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="基于访问令牌的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-token.html">基于访问令牌的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于oauth的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="oauth错误码">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/oauth-errors.html">OAuth错误码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于session的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="创建一个集成">
+    
+
+    
+    <a href="/guides/v2.1/get-started/create-integration.html">创建一个集成</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="web-api功能测试">
+    
+
+    
+    <a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/get-started/bk-get-started-api.html">
+            <span property="name">Magento web API起步</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">基于访问令牌的认证</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">基于访问令牌的认证</h1>
+
+  
+
+
+</section>
+
+			<p>To make a web <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> call from a client such as a mobile application, you must supply an <em>access token</em> on the call. The token acts like an electronic key that lets you access the API.</p>
+
+<p>Magento issues the following types of access tokens:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Token type</th>
+      <th>Description</th>
+      <th>Default lifetime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Integration</td>
+      <td>The merchant determines which Magento resources the integration has access to.</td>
+      <td>Indefinite. It lasts until it is manually revoked.</td>
+    </tr>
+    <tr>
+      <td>Admin</td>
+      <td>The merchant determines which Magento resources an admin user has access to.</td>
+      <td>4 hours</td>
+    </tr>
+    <tr>
+      <td>Customer</td>
+      <td>Magento grants access to resources with the <code class="highlighter-rouge">anonymous</code>或<code class="highlighter-rouge">self</code> permission. Merchants cannot edit these settings.</td>
+      <td>1 hour</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="integration-tokens">Integration tokens</h2>
+
+<p>When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for <a href="/guides/v2.1/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>, but token-based authentication requires only the access token.</p>
+
+<p>Use the following steps to generate an access token:</p>
+
+<ol>
+  <li>Log in to Admin and click <strong>System &gt; Integrations</strong> to display the Integrations page.</li>
+  <li>Click <strong>Add New Integration</strong> to display the New Integration page.</li>
+  <li>Enter a unique name for the integration in the <strong>Name</strong> field. Then enter your admin password in the <strong>Your Password</strong> field. Leave all other fields blank.</li>
+  <li>Click the API tab. Select the Magento resources the integration can access. You can select all resources, or select a custom list.</li>
+  <li>Click <strong>Save</strong> to save your changes and return to the Integrations page.</li>
+  <li>Click the <strong>Activate</strong> link in the grid that corresponds to the newly-created integration.</li>
+  <li>Click <strong>Allow</strong> . A dialog similar to the following displays:
+<img src="/guides/v2.1/get-started/authentication/images/integration-tokens.png" alt="REST client" /></li>
+</ol>
+
+<p>The access token can be used in all calls made on behalf of the integration.</p>
+
+<h2 id="admin-and-customer-access-tokens">Admin and customer access tokens</h2>
+
+<p>Magento provides a separate token service for administrators and customers. When you request a token from one of these services, the service returns a unique access token in exchange for the user name and password for a Magento account.</p>
+
+<p>The Magento web API framework allows <em>guest users</em> to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. <a href="/guides/v2.1/rest/anonymous-api-security.html">Restricting access to anonymous web APIs</a> contains a list of APIs that do not require a token.</p>
+
+<p>Use the following calls to get an authentication token:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>REST</th>
+      <th>SOAP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Get an admin token</td>
+      <td><code class="highlighter-rouge">POST /V1/integration/admin/token</code></td>
+      <td><code class="highlighter-rouge">integrationAdminTokenServiceV1</code></td>
+    </tr>
+    <tr>
+      <td>Get a customer token</td>
+      <td><code class="highlighter-rouge">POST /V1/integration/customer/token</code></td>
+      <td><code class="highlighter-rouge">integrationCustomerTokenServiceV1</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For most <span term-uuid="377dc0a3-b8a7-4dfa-808e-2de37e4c0029" class="glossary-term" data-toggle="popover">web API</span> calls, you supply this token in the <code class="highlighter-rouge">Authorization</code> request header with the <code class="highlighter-rouge">Bearer</code> HTTP <span term-uuid="34ecb0ab-b8a3-42d9-a728-0b893e8c0417" class="glossary-term" data-toggle="popover">authorization</span> scheme to prove your identity. By default, an admin token is valid for 4 hours, while a customer token is valid for 1 hour. You can change these values from Admin by selecting <strong>Configuration &gt; Services &gt; OAuth &gt; Access Token Expiration</strong>.</p>
+
+<p>A cron job that runs hourly removes all expired tokens.</p>
+
+<h2 id="request-token">Request a token</h2>
+
+<p>A access token request contains three basic elements:</p>
+
+<table style="width:100%">
+   <tr bgcolor="lightgray">
+      <th>Component</th>
+      <th>Specifies</th>
+   </tr>
+   <tr>
+      <td>Endpoint</td>
+      <td>
+         <p>A combination of the <i>server</i> that fulfills the request, the web service, and the <i>resource</i> against which the request is being made.</p>
+         <p>For example, in the <code>POST https://magento.host/index.php/rest/V1/integration/customer/token</code> endpoint:</p>
+         <p>The server is <code>magento.host/index.php/</code></p>
+         <p>the web service is <code>rest</code></p>
+          the resource is <code>/V1/integration/customer/token</code>.&lt;/p&gt;
+      </td>
+   </tr>
+   <tr>
+      <td>Content&nbsp;type</td>
+      <td>
+         <p>The content type of the request body. Set this value to either <code>"Content-Type:application/json"</code>或<code>"Content-Type:application/xml"</code>.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Credentials</td>
+      <td>
+         <p>The user name and password for a Magento account.</p>
+         <p>To specify these credentials in a JSON request body, include <code>'{"username":"&lt;USER-NAME&gt;", "password":"&lt;PASSWORD&gt;"}'</code> in the call.</p>
+         <p> To specify these credentials in XML, include <code>&lt;login&gt;&lt;username&gt;customer1@example.com&lt;/username&gt;&lt;password&gt;customer1pw&lt;/password&gt;&lt;/login&gt;</code> in the call.</p>
+      </td>
+   </tr>
+</table>
+
+<h4 id="token-example">示例</h4>
+
+<p>The following image shows a token request for the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">admin</span> account using a REST client:</p>
+
+<p><img src="/guides/v2.1/get-started/authentication/images/gs_auth_token1.png" alt="REST client" /></p>
+
+<p>The following example uses the <code class="highlighter-rouge">curl</code> command to request a token for a customer account:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X POST "https://magento.host/index.php/rest/V1/integration/customer/token" \
+     -H "Content-Type:application/json" \
+     -d "{"username":"customer1@example.com", "password":"customer1pw"}"
+</code></pre></div></div>
+
+<p>The following example makes the same request with <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> for a customer account token:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X POST "http://magento.vg/index.php/rest/V1/integration/customer/token" \
+     -H "Content-Type:application/xml"  \
+     -d "&lt;login&gt;&lt;username&gt;customer1@example.com&lt;/username&gt;&lt;password&gt;customer1pw&lt;/password&gt;&lt;/login&gt;"
+</code></pre></div></div>
+
+<p>For more information about the <code class="highlighter-rouge">curl</code> command, see <a href="/guides/v2.1/get-started/gs-curl.html">使用curl执行这个请求</a></p>
+
+<h2 id="auth-response">Authentication token response</h2>
+
+<p>A successful request returns a response body with the token, as follows:</p>
+
+<p><code class="highlighter-rouge">asdf3hjklp5iuytre</code></p>
+
+<h2 id="web-api-access">Use the token in a Web API request</h2>
+
+<p>Any web API call that accesses a resource that requires a permission level higher than anonymous must contain the authentication token in the header To do this, specify a HTTP header in the following format:</p>
+
+<p><code class="highlighter-rouge">Authorization: Bearer &lt;authentication token&gt;</code></p>
+
+<h3 id="admin-access">Admin access</h3>
+<p>Admins can access any resources for which they are authorized.</p>
+
+<p>For example, to make a web API call with an admin token:</p>
+
+<p><code class="highlighter-rouge">curl -X GET "http://magento.ll/index.php/rest/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"</code></p>
+
+<h3 id="customer-access">Customer access</h3>
+<p>Customers can access only resources with <code class="highlighter-rouge">self</code> permissions.</p>
+
+<p>For example, to make a web API call with a customer token:
+<code class="highlighter-rouge">curl -X GET "http://magento.ll/index.php/rest/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"</code></p>
+
+<h2>相关主题</h2>
+<p><a href="/guides/v2.1/get-started/gs-web-api-request.html">构造一个请求</a></p>
+
+<p><a href="/guides/v2.1/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a></p>
+
+<p><a href="/guides/v2.1/rest/anonymous-api-security.html">Restricting access to anonymous web APIs</a></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/get-started/authentication/gs-authentication-token.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/get-started/authentication/gs-authentication-token.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

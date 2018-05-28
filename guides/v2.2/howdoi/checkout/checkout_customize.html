@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>自定义结算页某步骤的视图 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/howdoi/checkout/checkout_customize.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/howdoi/checkout/checkout_customize.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/howdoi/checkout/checkout_customize.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/howdoi/checkout/checkout_customize.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/howdoi/checkout/checkout_customize.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">How to</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="how-to">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/bk-how-do-i.html">How To</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="contributor-sign-up-sheet">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/howdoi_contribute.html">贡献者注册表单</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置magento">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/config/configure.html">配置Magento</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义设计配置">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/design_config.html">自定义设计配置</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署magento到生产环境">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/deploy/deploy-to-prod.html">部署Magento到生产环境</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装和配置">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/install/install-topics.html">安装和配置</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento模式切换">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/install/mode-switch.html">Magento模式切换</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="js开发">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/frontend/front-js.html">js开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="布局开发">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/frontend/front-layout.html">布局开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="迁移magento1到magento2">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/migrate/migrate.html">迁移Magento1到Magento2</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="迁移主题">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/migrate/migrate-themes.html">迁移主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="迁移扩展">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/migrate/migrate-extensions.html">迁移扩展</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码迁移">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/migrate/migrate-code.html">代码迁移</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据迁移">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/migrate/migrate-data.html">数据迁移</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="php开发">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/php/php_devs.html">PHP开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="主题开发">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/frontend/front-theme.html">主题开发</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento故障排除">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/troubleshoot/troubleshoot.html">Magento故障排除</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="重置为默认主题">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/troubleshoot/reset_theme.html">重置为默认主题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义结算页">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">自定义结算页</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="添加一个结算步骤">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_new_step.html">添加一个结算步骤</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="自定义结算页某步骤的视图">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_customize.html">自定义结算页某步骤的视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为结算添加自定义的支付方式">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_payment.html">为结算添加自定义的支付方式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加提交前自定义数据校验">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_order.html">添加提交前自定义数据校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义物流校验">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_carrier.html">添加自定义物流校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为邮编添加自定义掩码">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_zip.html">为邮编添加自定义掩码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在结算页为表单输入添加自定义模板">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_edit_form.html">在结算页为表单输入添加自定义模板</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加一个新的输入表单到结算页">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_form.html">添加一个新的输入表单到结算页</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加一个新的输入项到地址表单">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_new_field.html">添加一个新的输入项到地址表单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义物流地址渲染">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_address.html">添加自定义物流地址渲染</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义影响其它输入的输入项">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_custom_checkbox.html">添加自定义影响其它输入的输入项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义物流方式列表">
+
+            
+
+            
+            <a href="/guides/v2.2/howdoi/checkout/checkout_shipping_methods.html">自定义物流方式列表</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="清除静态文件缓存">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/clean_static_cache.html">清除静态文件缓存</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义产品创建表单">
+    
+
+    
+    <a href="/guides/v2.2/howdoi/customize_product.html">自定义产品创建表单</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/howdoi/bk-how-do-i.html">
+            <span property="name">How To</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">自定义结算页某步骤的视图</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">自定义结算页某步骤的视图</h1>
+
+  
+
+
+</section>
+
+			<h2> 这里有什么</h2>
+
+<p>This topic contains the basic information about how to customize the view of an existing <span term-uuid="278c3ce0-cd4c-4ffc-a098-695d94d73bde" class="glossary-term" data-toggle="popover">checkout</span> step. In the Magento application, checkout is implemented using UI components. You can customize each step by changing the <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> implementation or template for a component, adding, removing or disabling a component.</p>
+
+<h2 id="change-the-components-js-implementation-and-template">Change the component’s .js implementation and template</h2>
+
+<p>To change the <code class="highlighter-rouge">.js</code> implementation and template used for components rendering, you need to declare the new files in the checkout page <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span>. To do this, take the following steps:</p>
+
+<ol>
+  <li>In your custom module directory, create the following new file: <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code>. (For your checkout customization to be applied correctly, your custom <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> should depend on the Magento_Checkout模块.)</li>
+  <li>In this file, add the following:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">layout=</span><span class="s">"1column"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"checkout.root"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;arguments&gt;</span>
+                    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="c">&lt;!-- Your customization will be here --&gt;</span>
+                        ...
+                    <span class="nt">&lt;/argument&gt;</span>
+                <span class="nt">&lt;/arguments&gt;</span>
+        <span class="nt">&lt;/referenceBlock&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<ol>
+  <li>
+    <p>In the <code class="highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code> file, find the component that you need to customize. Copy the corresponding node and all parent nodes up to <code class="highlighter-rouge">&lt;argument&gt;</code>. There is no need to leave all the attributes and values of parente nodes, as you are not going to change them.</p>
+  </li>
+  <li>
+    <p>Change the path to the component’s <code class="highlighter-rouge">.js</code> file, template or any other property.</p>
+  </li>
+</ol>
+
+<p>Example:</p>
+
+<p>The Magento_Shipping模块 adds a component rendered as a link to the Shipping Policy info to the Shipping step:</p>
+
+<p><code class="highlighter-rouge">&lt;Magento_Shipping_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code> looks like following:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">layout=</span><span class="s">"1column"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"checkout.root"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;arguments&gt;</span>
+                <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"components"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"checkout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"steps"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"shipping-step"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"shippingAddress"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"before-shipping-method-form"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"shipping_policy"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                                                                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"component"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Magento_Shipping/js/view/checkout/shipping/shipping-policy<span class="nt">&lt;/item&gt;</span>
+                                                                <span class="nt">&lt;/item&gt;</span>
+                                                            <span class="nt">&lt;/item&gt;</span>
+                                                        <span class="nt">&lt;/item&gt;</span>
+                                                    <span class="nt">&lt;/item&gt;</span>
+                                                <span class="nt">&lt;/item&gt;</span>
+                                            <span class="nt">&lt;/item&gt;</span>
+                                        <span class="nt">&lt;/item&gt;</span>
+                                    <span class="nt">&lt;/item&gt;</span>
+                                <span class="nt">&lt;/item&gt;</span>
+                            <span class="nt">&lt;/item&gt;</span>
+                        <span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;/arguments&gt;</span>
+        <span class="nt">&lt;/referenceBlock&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<h2 id="add-the-new-component-to-the-checkout-page-layout">Add the new component to the checkout page layout</h2>
+
+<p>Any <span term-uuid="9bcc648c-bd08-4feb-906d-1e24c4f2f422" class="glossary-term" data-toggle="popover">UI component</span> is added in the <code class="highlighter-rouge">checkout_index_index.xml</code> similar to the way a <a href="/guides/v2.2/howdoi/checkout/checkout_new_step.html#add-your-step-to-the-checkout-page-layout">checkout step component is added</a>.</p>
+
+<p>Make sure that you declare a component so that it is rendered correctly by the parent component. If a parent component is a general UI component (referenced by the <code class="highlighter-rouge">uiComponent</code> alias), its child components are rendered without any conditions. But if a parent component is a an extension of a general UI components, then children rendering might be restricted in certain way. For example a component can render only children from a certain <code class="highlighter-rouge">displayArea</code>.</p>
+
+<h2 id="disable-a-component">Disable a component</h2>
+<p>To disable the component in your <code class="highlighter-rouge">checkout_index_index.xml</code> use the following instructions:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"%the_component_to_be_disabled%"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"componentDisabled"</span> <span class="na">xsi:type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/item&gt;</span></code></pre></figure>
+
+<h2 id="remove-a-component">Remove a component</h2>
+
+<p>To remove a component from layout rendering, you need to create a <a href="/guides/v2.2/extension-dev-guide/plugins.html">plugin</a> for the <code class="highlighter-rouge">\Magento\Checkout\Block\Checkout\LayoutProcessor::process</code> method. In your plugin, implement the around method removing the corresponding layout nodes at run-time.</p>
+
+<p>The following sample is an example of the around method removing a component:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nb">unset</span><span class="p">(</span><span class="nv">$jsLayout</span><span class="p">[</span><span class="s1">'components'</span><span class="p">][</span><span class="s1">'checkout'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'steps'</span><span class="p">][</span><span class="o">%</span><span class="nx">path_to_target_node</span><span class="o">%</span><span class="p">]);</span> <span class="c1">//%path_to_target_node% is the path to the component's node in checkout_index_index.xml
+</span><span class="k">return</span> <span class="nv">$jsLayout</span><span class="p">;</span></code></pre></figure>
+
+<p>(If you want to use this sample in your code, replace the <code class="highlighter-rouge">%path_to_target_node%</code> placeholder with real value.)</p>
+
+<div class="bs-callout bs-callout-info">
+  <p>Disable vs remove a component </p>
+<p>If you disable a component, it is loaded but not rendered. If you remove a component, it is not loaded.</p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/howdoi/checkout/checkout_customize.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/howdoi/checkout/checkout_customize.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

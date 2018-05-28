@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Create a New Module | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/videos/fundamentals/create-a-new-module/">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-video">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container video-page">
+
+	<aside class="sidebar">
+		<a href="#" class="toc-toggler">Table of Contents</a>
+		<div class="sidebar-wrapper">
+
+			<ul>
+				<li class="level-0"><a href="/videos/">&larr; 所有视频</a></li>
+
+				
+				
+
+				
+				
+					<li class="playlist-name">
+						<a href="/videos/fundamentals/">Magento开发基础</a>
+					</li>
+				
+
+				
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/add-a-new-table-to-database/">
+          
+              How to Add a New Table to a Database
+              <span class="video-duration">6:11 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/add-a-javascript-module/">
+          
+              How to Add a JavaScript Module
+              <span class="video-duration">4:20 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/add-new-product-attribute/">
+          
+              How to Add a New Product Attribute
+              <span class="video-duration">7:36 </span>
+            </a>
+          </li>
+				
+          <li class="active">
+          
+            <a href="/videos/fundamentals/create-a-new-module/">
+          
+              Create a New Module
+              <span class="video-duration">5:18 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/create-a-new-page/">
+          
+              Create a New Page
+              <span class="video-duration">4:02 </span>
+            </a>
+          </li>
+				
+			</ul>
+
+		</div>
+	</aside>
+
+	<section class="content">
+		<div class="content-wrap">
+
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Create a New Module</h1>
+
+  
+
+
+</section>
+
+
+			<div id="video-player" class="video-player-wrap">
+				<div class="video-player">
+					<div class="embed-responsive embed-responsive-16by9">
+		      	<iframe class="embed-responsive-item" src='https://www.youtube.com/embed/682p52tFcmY?autoplay=1'
+		      		        itemprop='embedUrl'
+		      		        frameborder='0'
+		      	          allowfullscreen>
+		      	</iframe>
+					</div>
+				</div>
+			</div>
+
+			<p>Module is a structural element of Magento 2 – the whole system is built upon modules. Typically, the first step in creating a customization is building a module.</p>
+
+<p>To create a module, you need to complete the following high-level steps:</p>
+
+<ol>
+  <li>Create the module folder.</li>
+  <li>Create the <code class="highlighter-rouge">etc/module.xml</code> file.</li>
+  <li>Create the <code class="highlighter-rouge">registration.php</code> file.</li>
+  <li>Run the <code class="highlighter-rouge">bin/magento setup:upgrade</code> script to install the new module.</li>
+  <li>Check that the module is working.</li>
+</ol>
+
+<p>Let’s go through each of these steps in detail.</p>
+
+<h2 id="create-the-module-folder">Create the module folder</h2>
+
+<h4 id="there-are-two-possible-locations-for-modules-in-magento-2-the-appcode-folder-and-the-vendor-folder">There are two possible locations for modules in Magento 2: the app/code folder and the vendor folder</h4>
+
+<p>Depending on how Magento 2 has been installed, core modules can either be located in the <code class="highlighter-rouge">vendor/magento/magento-*</code>folders (for composer installation) or in the <code class="highlighter-rouge">app/code/Magento/</code> folder (for cloning github).</p>
+
+<h4 id="which-of-these-locations-should-you-choose-for-your-new-module">Which of these locations should you choose for your new module?</h4>
+
+<p>If you build a module for a specific project, it is best to choose the app/code folder and commit to the project’s repository.</p>
+
+<p>If you build an extension to be reused, it is better to use composer to create it, and put your module in the <code class="highlighter-rouge">vendor/&lt;YOUR_VENDOR&gt;/module-something</code> folder.</p>
+
+<p>Each module name in Magento 2 consists of two parts – the vendor and the module itself. In other words, modules are grouped into vendors, so you need to define the vendor and module names. For this example, let’s name the vendor “Learning” and the module “FirstUnit”.</p>
+
+<p>Let’s create the folder app/code/Learning and inside this folder place another folder: FirstUnit. If you’re using the command line, the code would be:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">cd</code> to the root folder</li>
+  <li><code class="highlighter-rouge">mkdir app/code/Learning</code></li>
+  <li><code class="highlighter-rouge">mkdirapp/code/Learning/FirstUnit</code></li>
+</ol>
+
+<h2 id="make-sure-you-have-permission-to-create-files-and-folders-in-your-installation">Make sure you have permission to create files and folders in your installation</h2>
+
+<p>Next, you need to create an <code class="highlighter-rouge">etc/module.xml</code> file. This file is required for the module to exist.</p>
+
+<p>This file contains the following information:</p>
+
+<ul>
+  <li>Module name</li>
+  <li>Module version</li>
+  <li>Dependencies</li>
+</ul>
+
+<p>Module name is defined by the folders we just created, because in Magento 2, class names must follow the folder structure. Because we created the folders <code class="highlighter-rouge">Learning/FirstUnit</code>, our module name will be <code class="highlighter-rouge">Learning_FirstUnit</code> and all classes that belong to this module will begin with <code class="highlighter-rouge">Learning\FirstUnit</code> – for example: <code class="highlighter-rouge">Learning\FirstUnit\Observer\Test</code>.</p>
+
+<p>Module version indicates the current version of the database schema and data, and is used in upgrading. For example, assume you decide to modify a table’s schema in your module. How can you be sure that this change will happen on all instances where the code is deployed? Altering the database by direct SQL queries won’t work. Instead, Magento 2 has install and upgrade scripts in every module (optionally). These scripts contain commands to modify the database schema or data. To track whether to execute a script or not, Magento 2 uses module versions. Every time you implement a new database change, you implement a new version of a module and change the corresponding <code class="highlighter-rouge">module.xml</code>. Magento saves the current module’s version in a database, and if the database value and the one in the <code class="highlighter-rouge">module.xml</code> do not match, it will execute the upgrade code.</p>
+
+<p>Dependencies. If one module depends on another, the <code class="highlighter-rouge">module.xml</code> file will have a special declaration that defines a list of modules that the current module depends on. For this example, we will make our module dependent on Magento_Catalog.</p>
+
+<p>Using the following command-line code, create the folder <code class="highlighter-rouge">app/code/Learning/FirstUnit/etc</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir app/code/Learning/FirstUnit/etc
+</code></pre></div></div>
+
+<p>Then put the following code into it:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:Module/etc/module.xsd"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Learning_FirstUnit"</span> <span class="na">setup_version=</span><span class="s">"0.0.1"</span><span class="nt">&gt;</span> <span class="nt">&lt;sequence&gt;</span>
+<span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Magento_Catalog"</span><span class="nt">/&gt;</span> <span class="nt">&lt;/sequence&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<p>Note that in the XML file we specified:</p>
+
+<ul>
+  <li>Module name: <code class="highlighter-rouge">Learning_FirstUnit</code> (based on the folders we created)</li>
+  <li>Version: 0.0.1 (initial version of our module)</li>
+  <li>Dependency: Magento_Catalog. We could have multiple dependencies. In this case, we would put <code class="highlighter-rouge">&lt;module name=”..” /&gt;</code> nodes under the sequence node.</li>
+</ul>
+
+<h2 id="create-the-registrationphp-file">Create the registration.php file</h2>
+
+<p>Each module must have this file, which tells Magento how to locate the module. Continuing our example, create the file
+<code class="highlighter-rouge">app/code/Learning/FirstUnit/registration.php</code>. Then put the following content into it:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">register</span><span class="p">(</span>
+<span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">MODULE</span><span class="p">,</span> <span class="s1">'Learning_FirstUnit'</span><span class="p">,</span>
+<span class="nx">__DIR__</span>
+<span class="p">);</span></code></pre></figure>
+
+<p>The <code class="highlighter-rouge">registration.php</code> is a standardized file that follows the same pattern for all modules.</p>
+
+<p>The only thing that varies is the module name, which in our case is <code class="highlighter-rouge">Learning_FirstUnit</code>.</p>
+
+<h2 id="run-the-setupupgrade-command">Run the “setup:upgrade” command</h2>
+
+<p>Running this command makes your new module active, notifying Magento of its presence.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php bin/magento setup:upgrade
+</code></pre></div></div>
+
+<p>It should echo a large amount of output, one line of which should be <code class="highlighter-rouge">Learning_FirstUnit</code>. Verify that this line of code is there.</p>
+
+<h2 id="check-that-the-new-module-is-active">Check that the new module is active</h2>
+<p>So far, we haven’t added any useful code to our module – it is still empty (and therefore invisible). In order to verify that it has been recognized, check the file <code class="highlighter-rouge">app/etc/config.php</code>. It has a list of auto-generated modules that are active.</p>
+
+<p>Never change this list manually!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat app/etc/env.php | grep Learning_FirstUnit
+</code></pre></div></div>
+
+<p>Employing these steps, you can successfully create a new module in Magento 2.</p>
+
+
+			<div class="adjaced-pages">
+				<div class="playlist-name">Magento开发基础</div>
+			
+			
+				<div class="previous-page">
+                    
+                    <a href="/videos/fundamentals/add-new-product-attribute/">
+                    
+						<span class="arrow">&larr; Previous</span>
+						<span class="title">How to Add a New Product Attribute</span>
+					</a>
+				</div>
+			
+
+			
+			
+				<div class="next-page">
+                    
+                    <a href="/videos/fundamentals/create-a-new-page/">
+                    
+						<span class="arrow">Next &rarr;</span>
+						<span class="title">Create a New Page</span>
+					</a>
+				</div>
+			
+			</div>
+
+
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/_videos/fundamentals/create-a-new-module.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /videos/fundamentals/create-a-new-module/" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

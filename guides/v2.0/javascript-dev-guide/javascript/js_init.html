@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>调用和初始化js组件 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/javascript-dev-guide/javascript/js_init.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/javascript-dev-guide/javascript/js_init.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/javascript-dev-guide/javascript/js_init.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/javascript-dev-guide/javascript/js_init.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/javascript-dev-guide/javascript/js_init.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">js开发者手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.0/javascript-dev-guide/conventions_js.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="javascript">
+    
+
+    
+    <a href="/guides/v2.0/javascript-dev-guide/javascript/js_overview.html">JavaScript</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-js资源">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/js-resources.html">Magento js资源</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="about-amd-modules-and-requirejs">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/requirejs_concept.html">About AMD modules and RequireJS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="调用和初始化js组件">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/js_init.html">调用和初始化js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制脚本">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/custom_js.html">使用定制脚本</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定位js组件">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/js_debug.html">定位js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="图解如何定制js组件">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/js_practice.html">图解如何定制js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="using-js混入">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/javascript/js_mixins.html">Using js混入</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento-jq小工具">
+    
+
+    
+    <a href="/guides/v2.0/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jq小工具</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="手风琴菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_accordion.html">手风琴菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提示弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_alert.html">提示弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="日历小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_calendar.html">日历小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可折叠窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_collapsible.html">可折叠窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="确认弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_confirm.html">确认弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_dialog.html">下拉弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="相册小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_gallery.html">相册小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_list.html">列表小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="放大镜小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_gallery_mg.html">放大镜小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="加载小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_loader.html">加载小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_menu.html">菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模态弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_modal.html">模态弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_navigation.html">导航栏小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="问询弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_prompt.html">问询弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速搜索小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_quickSearch.html">快速搜索小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页小工具">
+
+            
+
+            
+            <a href="/guides/v2.0/javascript-dev-guide/widgets/widget_tabs.html">标签页小工具</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">
+            <span property="name">js开发者手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">调用和初始化js组件</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">调用和初始化js组件</h1>
+
+  
+
+
+</section>
+
+			<h2 id="js_init_overview">概述</h2>
+
+<p>This topic talks about how to insert a <a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html#js_terms">JavaScript component</a> in <code class="highlighter-rouge">.phtml</code> page templates and <code class="highlighter-rouge">.js</code> files in Magento 2.</p>
+
+<p>It covers declarative notation, used when initialization is required, and imperative notation, used in other cases.</p>
+
+<p>We strongly recommend that you use the described approaches and do not add inline <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span>.</p>
+
+<h2 id="init_phtml">Insert a JS component in a PHTML template</h2>
+<p>Depending on your task, you might want to use declarative or imperative notation. Both ways are described in the following sections.</p>
+
+<h3 id="declarative-notation">Declarative notation</h3>
+
+<p>Using the declarative notation to insert a JS component allows preparing all the configuration on the <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">backend</span> side and outputting it to the page source using standard tools. You should use declarative notation if your JavaScript component requires initialization.</p>
+
+<p>In Magento 2 there are two ways of declarative notation:</p>
+
+<ul>
+  <li>using the <code class="highlighter-rouge">data-mage-init</code> attribute</li>
+  <li>using the <code class="highlighter-rouge">&lt;script type="text/x-magento-init" /&gt;</code> tag</li>
+</ul>
+
+<p>Both ways are described further.</p>
+
+<h4 id="data_mage_init">Declarative notation using the <code class="highlighter-rouge">data-mage-init</code> attribute</h4>
+
+<p>Use the <code>data-mage-init</code> attribute to insert a JS component in a certain <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> element. The following code sample is an illustration. Here a JS component is inserted in the <code class="highlighter-rouge">&lt;nav/&gt;</code> element:</p>
+<pre>
+&lt;nav data-mage-init='{ &quot;&lt;component_name&gt;&quot;: {...} }'&gt;&lt;/nav&gt;
+</pre>
+
+<p>When inserted in a certain element, the script is called only for this particular element. It is not automatically called for other elements of this type on the page.</p>
+
+<h5 id="init_process">How <code class="highlighter-rouge">data-mage-init</code> is processed</h5>
+
+<p>On DOM ready, the <code class="highlighter-rouge">data-mage-init</code> attribute is parsed to extract 组件’ names and configuration to be applied to the element.
+Depending on the type of the inserted JS component, processing is performed as follows:</p>
+<ul>
+
+<li>If an object is returned, the initializer tries to find the <code>&lt;component_name&gt;</code> key. If the corresponding value is a function, the initializer passes the <code>config</code>和<code>element</code> values to this function.
+
+例如:
+<pre>
+return {
+    '&lt;component_name&gt;': function(config, element) { ... }
+};
+</pre>
+</li>
+<li>If a function is returned, the initializer passes the <code>config</code>和<code>element</code> values to this function.
+
+例如:
+
+<pre>
+return function(config, element) { ... };
+</pre>
+
+</li>
+<li>If neither a function nor an object with the <code>"&lt;component_name&gt;"</code> key are returned, then the initializer tries to search for <code>"&lt;component_name&gt;"</code> in the <span term-uuid="5bfa8a8e-6f3e-4fed-a43e-62339916f02e" class="glossary-term" data-toggle="popover">jQuery</span> prototype. If found, the initializer applies it as <code>$(element).&lt;component_name&gt;(config)</code>.
+
+例如:
+<pre>
+$.fn.&lt;component_name&gt; = function() { ... };
+return;
+</pre>
+</li>
+
+<li>If none of the previous cases is true, the component is executed with no further processing.
+Such a component does not require either <code>config</code>或<code>element</code>. The recommended way to declare such 组件 is <a href="#init_script">using the &lt;script&gt; tag</a>.</li>
+</ul>
+
+<h4 id="declarative-notation-using-the-script-typetextx-magento-init--tag">Declarative notation using the <code class="highlighter-rouge">&lt;script type="text/x-magento-init" /&gt;</code> tag</h4>
+
+<p>To call a JS component on a HTML element without direct access to the element or with no relation to a certain element, use the <code class="highlighter-rouge">&lt;script type="text/x-magento-init"&gt;</code> tag and attribute. The syntax is following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-magento-init"</span><span class="nt">&gt;</span>
+<span class="p">{</span>
+    <span class="c1">// 组件 initialized on the element defined by selector</span>
+	<span class="s2">"&lt;element_selector&gt;"</span><span class="p">:</span> <span class="p">{</span>
+		<span class="s2">"&lt;js_component1&gt;"</span><span class="p">:</span> <span class="p">...,</span>
+		<span class="s2">"&lt;js_component2&gt;"</span><span class="p">:</span> <span class="p">...</span>
+    <span class="p">},</span>
+    <span class="c1">// 组件 initialized without binding to an element</span>
+    <span class="s2">"*"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"&lt;js_component3&gt;"</span><span class="p">:</span> <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>Where:</p>
+<ul>
+<li><code>&lt;element_selector&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">selector</a> (in terms of querySelectorAll) for the element on which the following JS 组件 are called.</li>
+<li><code>&lt;js_component1&gt;</code>和<code>&lt;js_component2&gt;</code> are the JS 组件 being initialized on the element with the selector specified as <code>&lt;element_selector&gt;</code>.</li>
+<li><code>&lt;js_component3&gt;</code> is the JS component called with no binding to an element.</li>
+</ul>
+
+<p>The following is a working code sample of a widget call using <code class="highlighter-rouge">&lt;script&gt;</code>. Here the <code class="highlighter-rouge">accordion</code> and <code class="highlighter-rouge">navigation</code> widgets are added to the element with the <code class="highlighter-rouge">#main-container</code> selector, and the <code class="highlighter-rouge">pageCache</code> script is inserted with no binding to any element.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-magento-init"</span><span class="nt">&gt;</span>
+<span class="p">{</span>
+    <span class="s2">"#main-container"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"navigation"</span><span class="p">:</span> <span class="o">&lt;</span><span class="p">?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$block</span><span class="o">-&gt;</span><span class="nx">getNavigationConfig</span><span class="p">();</span> <span class="p">?</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">"accordion"</span><span class="p">:</span> <span class="o">&lt;</span><span class="p">?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$block</span><span class="o">-&gt;</span><span class="nx">getNavigationAccordionConfig</span><span class="p">();</span> <span class="p">?</span><span class="o">&gt;</span>
+    <span class="p">},</span>
+    <span class="s2">"*"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"pageCache"</span><span class="p">:</span> <span class="o">&lt;</span><span class="p">?</span><span class="nx">php</span> <span class="nx">echo</span> <span class="nx">$block</span><span class="o">-&gt;</span><span class="nx">getPageCacheConfig</span><span class="p">();</span> <span class="p">?</span><span class="o">&gt;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<h3 id="init_script">Imperative notation</h3>
+
+<p>Imperative notation allows using raw JavaScript code on the pages and executing particular business logic. The notation using the <code class="highlighter-rouge">&lt;script&gt;</code> tag, without the <code class="highlighter-rouge">type="text/x-magento-init"</code> attribute, is the imperative notation. The syntax is following:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">require</span><span class="p">([</span>
+    <span class="s1">'jquery'</span><span class="p">,</span>
+    <span class="s1">'accordion'</span>  <span class="c1">// the alias for "mage/accordion"</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// to ensure that code evaluates on page load</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-role=example]'</span><span class="p">)</span>  <span class="c1">// we expect that page contains the </span><span class="o">&lt;</span><span class="nx">tag</span> <span class="nx">data</span><span class="o">-</span><span class="nx">role</span><span class="o">=</span><span class="s2">"example"</span><span class="o">&gt;</span><span class="p">..</span><span class="o">&lt;</span><span class="sr">/tag&gt; marku</span><span class="err">p
+</span>            <span class="p">.</span><span class="nx">accordion</span><span class="p">({</span> <span class="c1">// now we can use "accordion" as jQuery plugin</span>
+                <span class="na">header</span><span class="p">:</span>  <span class="s1">'[data-role=header]'</span><span class="p">,</span>
+                <span class="na">content</span><span class="p">:</span> <span class="s1">'[data-role=content]'</span><span class="p">,</span>
+                <span class="na">trigger</span><span class="p">:</span> <span class="s1">'[data-role=trigger]'</span><span class="p">,</span>
+                <span class="na">ajaxUrlElement</span><span class="p">:</span> <span class="s2">"a"</span>
+            <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<h2 id="js_widget_init">Calling JS 组件 requiring initialization in JS files</h2>
+
+<p>To call a widget in JS code, use a notation similar to the following (<a href="/guides/v2.0/frontend-dev-guide/javascript/widget_accordion.html">accordion</a> widget is initialized on the <code class="highlighter-rouge">[data-role=example]</code> element as illustration):</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'[data-role=example]'</span><span class="p">).</span><span class="nx">accordion</span><span class="p">();</span></code></pre></figure>
+
+<p>To initialize a <span term-uuid="f0dcf847-ce21-4b88-8b45-83e1cbf08100" class="glossary-term" data-toggle="popover">小工具</span> with options, use notation similar to the following:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// to ensure that code evaluates on page load</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-role=example]'</span><span class="p">)</span>  <span class="c1">// we expect that page contains markup &lt;tag data-role="example"&gt;..&lt;/tag&gt;</span>
+        <span class="p">.</span><span class="nx">accordion</span><span class="p">({</span> <span class="c1">// now we can use "accordion" as jQuery plugin</span>
+            <span class="na">header</span><span class="p">:</span>  <span class="s1">'[data-role=header]'</span><span class="p">,</span>
+	    <span class="na">content</span><span class="p">:</span> <span class="s1">'[data-role=content]'</span><span class="p">,</span>
+	    <span class="na">trigger</span><span class="p">:</span> <span class="s1">'[data-role=trigger]'</span><span class="p">,</span>
+            <span class="na">ajaxUrlElement</span><span class="p">:</span> <span class="s1">'a'</span>
+        <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>In a similar way, you can initialize any JS component that a returns callback function accepting a <code class="highlighter-rouge">config</code> object and <code class="highlighter-rouge">element</code> (a DOM node).</p>
+
+<p>例如:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span> <span class="p">([</span>
+    <span class="s1">'jquery'</span><span class="p">,</span>
+    <span class="s1">'mage/gallery/gallery'</span>
+<span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">Gallery</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// to ensure that code evaluates on page load</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-role=example]'</span><span class="p">)</span>  <span class="c1">// we expect that page contains markup &lt;tag data-role="example"&gt;..&lt;/tag&gt;</span>
+            <span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">Gallery</span><span class="p">({</span>
+                    <span class="na">options</span><span class="p">:</span>  <span class="p">{},</span>
+                    <span class="na">data</span><span class="p">:</span> <span class="p">[{</span>
+                        <span class="na">img</span><span class="p">:</span> <span class="s1">'https://c2.staticflickr.com/8/7077/27935031965_facd03b4cb_b_d.jpg'</span>
+                    <span class="p">}],</span>
+                    <span class="na">fullscreen</span><span class="p">:</span> <span class="p">{}</span>
+                <span class="p">},</span> <span class="nx">element</span><span class="p">);</span>  <span class="c1">// 'element' is single DOM node.</span>
+            <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/javascript-dev-guide/javascript/js_init.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/javascript-dev-guide/javascript/js_init.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

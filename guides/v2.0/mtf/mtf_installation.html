@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>功能测试框架中的实体安装 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/mtf/mtf_installation.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/mtf/mtf_installation.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/mtf/mtf_installation.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/mtf/mtf_installation.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/mtf/mtf_installation.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">功能测试框架手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_introduction.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1 active " id="installation">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_installation.html">Installation</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="quick-start">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_quickstart.html">快速开始</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="adjust-configuration">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust configuration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-magento-application">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_magento.html">Prepare Magento application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-environment-for-test-run">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_environment.html">Prepare environment for test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-run">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_runtest.html">Test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="see-logs-for-failed-tests">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_logs.html">See logs for failed tests</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="create-a-test">
+    
+
+    
+    <a href="/guides/v2.0/mtf/create_test.html">创建一个测试</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="out-of-the-box-test">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/create_test/out-of-the-box.html">盒外测试模型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-theory">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/create_test/new_test.html">新功能测试.理论</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-practice">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/create_test/create_new_test.html">新功能测试.实践</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="features">
+    
+
+    
+    <a href="/guides/v2.0/mtf/features.html">Features</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="隔离管理">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/isolation.html">隔离管理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modularity">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/modularity.html">Modularity</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="parallel-execution-flow">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/parallel_execution.html">并行执行流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="reporting">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/reporting.html">Reporting</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-suite">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/test_suite.html">Test suite</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="web-driver-replacement">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/features/webdriver.html">更换Web driver</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="entities">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_entities.html">Entities</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="fixture">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_fixture.html">Fixture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fixture-repository">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_fixture-repo.html">固定数据仓库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="handler">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_handler.html">Handler</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="block">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_block.html">Block</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="typified-element">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_typified-element.html">典型元素</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="page">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_page.html">Page</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="constraint">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_constraint.html">Constraint</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="data-set">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_dataset.html">Data set</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-case">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_testcase.html">测试用例</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="scenario-test">
+
+            
+
+            
+            <a href="/guides/v2.0/mtf/mtf_entities/mtf_scenariotest.html">场景测试</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <a href="/guides/v2.0/mtf/configuration.html">Configuration</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="update">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_update.html">Update</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.0/mtf/troubleshooting.html">故障排除</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="changelog">
+    
+
+    
+    <a href="/guides/v2.0/mtf/mtf_changelog.html">Changelog</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/mtf/mtf_introduction.html">
+            <span property="name">功能测试框架介绍</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">功能测试框架中的实体安装</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">功能测试框架中的实体安装</h1>
+
+  
+
+
+</section>
+
+			<p>Well, you are on the way to install the Functional Testing Framework!</p>
+
+<p>Follow the next three steps:</p>
+
+<ul>
+  <li>
+    <p><a href="#mtf_install_pre">Check pre-installation conditions</a></p>
+  </li>
+  <li>
+    <p><a href="#mtf_install_perform">Perform the installation</a></p>
+  </li>
+  <li>
+    <p><a href="#mtf_install_check">Check the installation</a></p>
+  </li>
+</ul>
+
+<h2 id="mtf_install_pre">Check pre-installation conditions</h2>
+
+<h3 id="mtf_install_pre_inst-magento">Install the Magento application</h3>
+<p>To install the Magento application, see <a href="/guides/v2.0/install-gde/bk-install-guide.html">Magento 安装向导</a>.</p>
+
+<h3 id="mtf_install_pre_tools">Check if all required software installed and configured</h3>
+
+<h4 id="mtf_install_pre_tools_php">PHP</h4>
+
+<p>For more details about PHP verification, installation and configuration (<a href="/guides/v2.0/install-gde/prereq/php-ubuntu.html">Ubuntu</a>, <a href="/guides/v2.0/install-gde/prereq/php-centos.html">CentOS</a>).</p>
+
+<div class="bs-callout bs-callout-warning">
+    <p>In <code>php.ini</code> file, make sure <code>extension=php_openssl.dll</code> is not commented out.</p>
+</div>
+
+<h4 id="mtf_install_pre_mtf-check">Check if the Functional Testing Framework has been already installed</h4>
+
+<ol>
+  <li>Find directory <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/</code>.</li>
+  <li>Find the <code class="highlighter-rouge">vendor</code> directory. If the directory exists, you already have the Functional Testing Framework installed in <code class="highlighter-rouge">vendor/magento/mtf</code>.</li>
+</ol>
+
+<h2 id="mtf_install_perform">Perform the installation</h2>
+
+<p>The Functional Testing Framework requires Composer, which downloads libraries defined in <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/composer.json</code>.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>If you're not sure that Composer is installed, see <a href="/guides/v2.0/install-gde/prereq/dev_install.html#instgde-prereq-compose-install">安装Composer</a>.</p>
+</div>
+
+<ol>
+  <li><a href="/guides/v2.0/install-gde/basics/basics_login.html">Open a command prompt</a>.</li>
+  <li>Log in to your Magento server as a user with permissions to modify the Magento file system. (This is typically <a href="/guides/v2.0/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.)</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;magento2_root_dir&gt;/dev/tests/functional/
+composer install
+</code></pre></div></div>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>If command failed, maybe <a href="https://getcomposer.org">Composer</a> hasn't been installed globally.<br />
+  Copy <code>composer.phar</code> to <code>/usr/local/bin/composer</code>.<br />
+  To run it locally put <code>composer.phar</code> into directory, where <code>composer.json</code> file is located (that is, <code>&lt;magento2&gt;/dev/tests/functional/</code>).<br />
+And run from this directory <code>php <span term-uuid="d85e2d0a-221f-4d03-aa43-0cda9f50809e" class="glossary-term" data-toggle="popover">composer</span>.phar install</code>.</p>
+</div>
+
+<h2 id="mtf_install_check">Check the installation</h2>
+
+<h3 id="mtf_install_check_dir">Find the Functional Testing Framework directory</h3>
+
+<p>Check whether the <code class="highlighter-rouge">vendor</code> directory exists in <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;magento2_root_dir&gt;/dev/tests/functional/
+ls
+</code></pre></div></div>
+
+<p>Find the <code class="highlighter-rouge">mtf</code> directory.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd vendor/magento
+ls
+</code></pre></div></div>
+
+<h3 id="mtf_install_check_verify">Verify the Functional Testing Framework version</h3>
+
+<p>Open <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/vendor/magento/mtf/CHANGELOG.md</code>. The latest version in <code class="highlighter-rouge">CHANGELOG.md</code> is version of the FTF you installed.</p>
+
+<h2 id="mtf_install_next">Next Steps</h2>
+<p><a href="/guides/v2.0/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust FTF configuration </a></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/mtf/mtf_installation.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/mtf/mtf_installation.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

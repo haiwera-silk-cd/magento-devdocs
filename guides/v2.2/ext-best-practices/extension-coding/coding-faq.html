@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>编码常见问题 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/ext-best-practices/extension-coding/coding-faq.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/ext-best-practices/extension-coding/coding-faq.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/ext-best-practices/extension-coding/coding-faq.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/ext-best-practices/extension-coding/coding-faq.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/ext-best-practices/extension-coding/coding-faq.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Extension Best Practices</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="admin">
+    
+
+    
+    <a href="/guides/v2.2/ext-best-practices/admin/admin-best-practices.html">Admin</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="admin-panel-placement-and-design">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/admin/placement-and-design.html">管理面板的定位和设计</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="admin-faq">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/admin/ext-best-practices_admin_FAQ.html">管理面板常见问题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="extension-coding">
+    
+
+    
+    <a href="/guides/v2.2/ext-best-practices/extension-coding/coding-best-practices.html">扩展编码</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="programming-best-practices">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/common-programming-bp.html">最佳编程实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="working-with-the-architecture">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/working-with-arch-bp.html">在构架下工作</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="security,-performance,-and-data-handling">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/security-performance-data-bp.html">安装、性能及数据处理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="observers-best-practices">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/observers-bp.html">观察者最佳实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="coding-faq">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/coding-faq.html">编码常见问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="creating-a-magento-admin-page">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/extension-coding/example-module-adminpage.html">新建一个Magento管理面板页面</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="storefront">
+    
+
+    
+    <a href="/guides/v2.2/ext-best-practices/storefront/storefront-best-practices.html">Storefront</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="security">
+    
+
+    
+    <span>Security</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="writing-secure-code">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/security/writing-secure-code.html">编写安全的代码</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="tutorials">
+    
+
+    
+    <span>Tutorials</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="copying-fieldsets">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/tutorials/copy-fieldsets.html">拷贝form输入字段集</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="serialized-to-json-data-upgrade">
+
+            
+
+            
+            <a href="/guides/v2.2/ext-best-practices/tutorials/serialized-to-json-data-upgrade.html">序列化为JSON数据升级</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">
+            <span property="name">扩展开发者最佳实践</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">编码常见问题</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">编码常见问题</h1>
+
+  
+
+
+</section>
+
+			<p>This page is a compilation of frequently asked coding questions by the Magento Community.</p>
+
+<h3 id="what-do-i-need-to-know-to-work-with-the-framework">What do I need to know to work with the framework?</h3>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)" target="_blank">SOLID principles</a> - The essential principles needed to create maintainable and extendible code.</li>
+  <li><a href="http://php.net/" target="_blank">PHP</a> - This is the programming language used for developing Magento 2 code.</li>
+  <li><a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a>, and <a href="https://www.javascript.com/" target="_blank">JavaScript</a> - Languages used for <a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">frontend development</a>.</li>
+  <li><a href="/guides/v2.2/architecture/archi_perspectives/ABasics_intro.html">Architecture basics overview</a> - Developers should be familiar with the architectural concepts used in Magento such as the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">Model-View-Controller</a> pattern and the <a href="http://martinfowler.com/bliki/CQRS.html" target="_blank">Command Query Responsibility Segregation</a> principle.</li>
+  <li><a href="/guides/v2.2/extension-dev-guide/depend-inj.html">Dependency Injection</a> - An important <span term-uuid="53755359-9916-4677-bff2-f7d26025095a" class="glossary-term" data-toggle="popover">design pattern</span> used in Magento to handle dependencies across classes and modules.</li>
+</ul>
+
+<h3 id="in-magento-2-how-can-my-extension-distinguish-between-the-community-edition-and-the-enterprise-edition">In Magento 2, how can my extension distinguish between the Community Edition and the Enterprise Edition?</h3>
+
+<p>The correct edition can be obtained through <code class="highlighter-rouge">\Magento\Framework\App\ProductMetadataInterface::getEdition</code>.</p>
+
+<p>In Magento Open Source that interface maps to the concrete implementation <code class="highlighter-rouge">Magento\Framework\AppInterface\ProductMetadata</code>.
+However, in Magento Commerce, the Commerce <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> will override that mapping and the interface will be implemented by <code class="highlighter-rouge">\Magento\Enterprise\Model\ProductMetadata</code>.</p>
+
+<p>Just relying on the interface through <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">dependency injection</span> will get you the right class, and calling “getEdition” will return the right answer.</p>
+
+<h3 id="how-do-i-configure-my-module-so-that-it-appears-in-a-specific-place-on-the-admin">How do I configure my module so that it appears in a specific place on the Admin?</h3>
+
+<p>Use the <code class="highlighter-rouge">&lt;Module Directory&gt;/etc/adminhtml/menu.xml</code> file to configure from where on the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> your <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> is accessible.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/ext-best-practices/extension-coding/coding-faq.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/ext-best-practices/extension-coding/coding-faq.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Web API功能测试 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/get-started/web-api-functional-testing.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/get-started/web-api-functional-testing.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/get-started/web-api-functional-testing.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/get-started/web-api-functional-testing.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/get-started/web-api-functional-testing.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">起步 with Web APIs</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/get-started/bk-get-started-api.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用rest-api">
+    
+
+    
+    <a href="/guides/v2.1/get-started/rest_front.html">使用REST API</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="构造一个请求">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-web-api-request.html">构造一个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用curl执行这个请求">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-curl.html">使用curl执行这个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="响应和状态码">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/gs-web-api-response.html">响应和状态码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  tutorial" id="使用rest-api的订单处理教程">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用REST API的订单处理教程</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用soap服务">
+    
+
+    
+    <a href="/guides/v2.1/get-started/soap/soap-web-api-calls.html">使用SOAP服务</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="authentication">
+    
+
+    
+    <a href="/guides/v2.1/get-started/authentication/gs-authentication.html">Authentication</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="基于访问令牌的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-token.html">基于访问令牌的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于oauth的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="oauth错误码">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/oauth-errors.html">OAuth错误码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于session的认证">
+
+            
+
+            
+            <a href="/guides/v2.1/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="创建一个集成">
+    
+
+    
+    <a href="/guides/v2.1/get-started/create-integration.html">创建一个集成</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1 active " id="web-api功能测试">
+    
+
+    
+    <a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/get-started/bk-get-started-api.html">
+            <span property="name">Magento web API起步</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Web API功能测试</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Web API功能测试</h1>
+
+  
+
+
+</section>
+
+			<h2 class="no_toc" id="web-api功能测试">Web API功能测试</h2>
+
+<p>The Web <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> testing framework allows you to test Magento <span term-uuid="377dc0a3-b8a7-4dfa-808e-2de37e4c0029" class="glossary-term" data-toggle="popover">Web API</span> from the client application point of view. The tests can be used with either REST or SOAP. The REST or SOAP <span term-uuid="edb42858-1ff8-41f9-80a6-edf0d86d7e10" class="glossary-term" data-toggle="popover">adapter</span> that runs the tests is specified in PHPUnit configuration. See <a href="#howto">How to Run the Tests</a> for more information.</p>
+
+<h2 id="details">Implementation Details</h2>
+
+<p>The Web API功能测试 framework depends on the integration testing framework and reuses most of classes implemented there.</p>
+
+<h3 id="custom">Custom Annotations for Data Fixtures</h3>
+
+<p>In the Web API functional tests only, the custom annotation  <code class="highlighter-rouge">@magentoApiDataFixture</code> is available for declaring fixtures. The difference of this annotation from <code class="highlighter-rouge">@magentoDataFixture</code> is that the fixture will be committed and accessible during HTTP requests made within the test body. The usage rules of <code class="highlighter-rouge">@magentoApiDataFixture</code> are the same as <code class="highlighter-rouge">@magentoDataFixture</code> usage rules.</p>
+
+<div class="a" id="info">
+
+<p>If data was added to the DB using <code>@magentoApiDataFixture</code>, it will not be automatically cleared after test execution. The data is cleared when <code>@magentoDataFixture</code> is used.</p>
+</div>
+
+<p>Do not define fixtures in <code class="highlighter-rouge">dev/tests/api-functional</code>. Instead, they must be taken from <code class="highlighter-rouge">dev/tests/integration</code>. The integration framework defines most necessary fixtures, and they should be reused during Web API功能测试. If the existing set of fixtures is insufficient, add new fixtures under <code class="highlighter-rouge">dev/tests/integration</code>. The fixtures will then be available for both testing frameworks.</p>
+
+<p>To keep your test environment clean, clear all entities created in fixture files or within tests itself from the DB after test execution. This can be done either directly in tearDown or by a corresponding rollback for the fixture file. This file should be named the same as a fixture, but with <code class="highlighter-rouge">_rollback</code> suffix.</p>
+
+<h2 id="create">How to Create a New Test</h2>
+
+<p>All Web API functional tests should inherit from the generic test case <code class="highlighter-rouge">Magento\TestFramework\TestCase\WebapiAbstract</code>. It defines the <code class="highlighter-rouge">_webApiCall()</code> method, which should be used to perform Web API calls from tests. Clients of <code class="highlighter-rouge">_webApiCall()</code> are unaware of which adapter will be used to perform the remote call.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">namespace</span> <span class="nx">Magento\Webapi\Routing</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">CoreRoutingTest</span> <span class="k">extends</span> <span class="nx">\Magento\TestFramework\TestCase\WebapiAbstract</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">testBasicRoutingExplicitPath</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$itemId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nv">$serviceInfo</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">'rest'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">'resourcePath'</span> <span class="o">=&gt;</span> <span class="s1">'/V1/testmodule1/'</span> <span class="o">.</span> <span class="nv">$itemId</span><span class="p">,</span>
+                <span class="s1">'httpMethod'</span> <span class="o">=&gt;</span> <span class="nx">\Magento\Framework\Webapi\Rest\Request</span><span class="o">::</span><span class="na">HTTP_METHOD_GET</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s1">'soap'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">'service'</span> <span class="o">=&gt;</span> <span class="s1">'testModule1AllSoapAndRestV1'</span><span class="p">,</span>
+                <span class="s1">'operation'</span> <span class="o">=&gt;</span> <span class="s1">'testModule1AllSoapAndRestV1Item'</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">];</span>
+        <span class="nv">$requestData</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'itemId'</span> <span class="o">=&gt;</span> <span class="nv">$itemId</span><span class="p">];</span>
+        <span class="nv">$item</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_webApiCall</span><span class="p">(</span><span class="nv">$serviceInfo</span><span class="p">,</span> <span class="nv">$requestData</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">assertEquals</span><span class="p">(</span><span class="s1">'testProduct1'</span><span class="p">,</span> <span class="nv">$item</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span> <span class="s2">"Item was retrieved unsuccessfully"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The test above should be able to test SOAP and REST, depending on what adapter is currently used by the testing framework. The format of <code class="highlighter-rouge">$serviceInfo</code> is defined by the Web API client adapter interface:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">namespace</span> <span class="nx">Magento\TestFramework\TestCase\Webapi</span><span class="p">;</span>
+
+<span class="k">interface</span> <span class="nx">AdapterInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * Perform call to the specified service method.
+     *
+     * @param array $serviceInfo &lt;pre&gt;
+     * array(
+     *     'rest' =&gt; array(
+     *         'resourcePath' =&gt; $resourcePath, // e.g. /products/:id
+     *         'httpMethod' =&gt; $httpMethod,     // e.g. GET
+     *         'token' =&gt; '21hasbtlaqy8t3mj73kjh71cxxkqj4aq'    // optional : for token based Authentication. Will
+     *                                                             override default Oauth based authentication provided
+     *                                                             by test framework
+     *     ),
+     *     'soap' =&gt; array(
+     *         'service' =&gt; $soapService,    // soap service name with Version suffix e.g. catalogProductV1, customerV2
+     *         'operation' =&gt; $operation     // soap operation name e.g. catalogProductCreate
+     *     )
+     * );
+     * &lt;/pre&gt;
+     * @param array $arguments
+     * @param string|null $storeCode if store code not provided, default store code will be used
+     * @param \Magento\Integration\Model\Integration|null $integration
+     * @return array|string|int|float|bool
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">call</span><span class="p">(</span><span class="nv">$serviceInfo</span><span class="p">,</span> <span class="nv">$arguments</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">$storeCode</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nv">$integration</span> <span class="o">=</span> <span class="kc">null</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="howto">How to Run the Tests</h2>
+<h3 id="prereq">先决条件</h3>
+<ol>
+  <li>
+    <p>Install the <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> Soap <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span>.</p>
+
+    <p>Copy <code class="highlighter-rouge">php_soap.dll</code>或<code class="highlighter-rouge">php_soap.so</code> to your PHP extensions directory. Edit your <code class="highlighter-rouge">php.ini</code> file and enable the PHP Soap extension. Usually this means deleting the leading semi-colon in front of the extension. Then restart Apache.</p>
+
+    <p><code class="highlighter-rouge">extension=php_soap.dll</code></p>
+  </li>
+  <li>
+    <p>Before running the functional tests you need to clear your <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span>.
+Now you are ready to run the tests.</p>
+  </li>
+</ol>
+
+<h3 id="running">Running the Tests</h3>
+<ol>
+  <li>
+    <p>Copy <code class="highlighter-rouge">/dev/tests/api-functional/phpunit.xml.dist</code> to <code class="highlighter-rouge">/dev/tests/api-functional/phpunit.xml</code>.</p>
+
+    <p>a. Specify your Magento instance URL as a value of <code class="highlighter-rouge">TESTS_BASE_URL</code> in <code class="highlighter-rouge">phpunit.xml</code>.</p>
+
+    <p>b. Choose the required Web API adapter, <code class="highlighter-rouge">rest</code>或<code class="highlighter-rouge">soap</code>, to be used and specify it in <code class="highlighter-rouge">TESTS_WEB_API_ADAPTER</code>.</p>
+  </li>
+  <li>
+    <p>Copy <code class="highlighter-rouge">/dev/tests/api-functional/config/install-config-mysql.php.dist</code> to <code class="highlighter-rouge">/dev/tests/api-functional/config/install-config-mysql.php</code>.</p>
+  </li>
+  <li>
+    <p>Configure your DB connection and install settings in <code class="highlighter-rouge">/dev/tests/api-functional/config/install-config-mysql.php</code>.  Specify the Magento database. The base URL to access this Magento instance must be specified in <code class="highlighter-rouge">phpunit.xml</code>.</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">phpunit</code> using the <code class="highlighter-rouge">/dev/tests/api-functional/phpunit.xml </code> configuration file.</p>
+  </li>
+</ol>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/get-started/web-api-functional-testing.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/get-started/web-api-functional-testing.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

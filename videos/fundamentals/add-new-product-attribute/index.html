@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>How to Add a New Product Attribute | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/videos/fundamentals/add-new-product-attribute/">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-video">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container video-page">
+
+	<aside class="sidebar">
+		<a href="#" class="toc-toggler">Table of Contents</a>
+		<div class="sidebar-wrapper">
+
+			<ul>
+				<li class="level-0"><a href="/videos/">&larr; 所有视频</a></li>
+
+				
+				
+
+				
+				
+					<li class="playlist-name">
+						<a href="/videos/fundamentals/">Magento开发基础</a>
+					</li>
+				
+
+				
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/add-a-new-table-to-database/">
+          
+              How to Add a New Table to a Database
+              <span class="video-duration">6:11 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/add-a-javascript-module/">
+          
+              How to Add a JavaScript Module
+              <span class="video-duration">4:20 </span>
+            </a>
+          </li>
+				
+          <li class="active">
+          
+            <a href="/videos/fundamentals/add-new-product-attribute/">
+          
+              How to Add a New Product Attribute
+              <span class="video-duration">7:36 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/create-a-new-module/">
+          
+              Create a New Module
+              <span class="video-duration">5:18 </span>
+            </a>
+          </li>
+				
+          <li class="">
+          
+            <a href="/videos/fundamentals/create-a-new-page/">
+          
+              Create a New Page
+              <span class="video-duration">4:02 </span>
+            </a>
+          </li>
+				
+			</ul>
+
+		</div>
+	</aside>
+
+	<section class="content">
+		<div class="content-wrap">
+
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">How to Add a New Product Attribute</h1>
+
+  
+
+
+</section>
+
+
+			<div id="video-player" class="video-player-wrap">
+				<div class="video-player">
+					<div class="embed-responsive embed-responsive-16by9">
+		      	<iframe class="embed-responsive-item" src='https://www.youtube.com/embed/cM_9RkWFqqM?autoplay=1'
+		      		        itemprop='embedUrl'
+		      		        frameborder='0'
+		      	          allowfullscreen>
+		      	</iframe>
+					</div>
+				</div>
+			</div>
+
+			<p>Adding a product attribute is one of the most popular operations in both Magento 1 and Magento 2.
+Attributes are a powerful way to solve many practical tasks related to a product.</p>
+
+<p>This is quite a broad topic, but in this video we will discuss the simple process of adding a dropdown-type attribute to a product.</p>
+
+<p>For this exercise, assume that the sample data set is installed.</p>
+
+<ul>
+  <li>We will add an attribute called clothing_material with the possible values: Cotton, Leather, Silk, Denim, Fur, and Wool.</li>
+  <li>We will make this attribute visible on the product view page, in bold text.</li>
+  <li>We will assign it to the Default attribute set and add a restriction that any “bottom” clothing, like slacks, cannot be the material Fur.</li>
+</ul>
+
+<p>We will need to take the following steps to add the new attribute:</p>
+
+<ol>
+  <li>Create a new module.</li>
+  <li>Add an InstallData script.</li>
+  <li>Add a source model.</li>
+  <li>Add a backend model.</li>
+  <li>Add a frontend model.</li>
+  <li>Execute the InstallData script and verify that it works.</li>
+</ol>
+
+<p>Let’s go through each step.</p>
+
+<h2 id="步骤1-create-a-new-module">步骤1. Create a new module</h2>
+
+<p>As Magento is modular based, we start the process by creating a new module called <code class="highlighter-rouge">Learning_ClothingMaterial</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd &lt;magento2_root&gt;/app/code
+$ mkdir Learning
+$ mkdir Learning/ClothingMaterial
+</code></pre></div></div>
+
+<p>Now, create two files:</p>
+
+<p><code class="highlighter-rouge">etc/module.xml</code></p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:Module/etc/module.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">"Learning_ClothingMaterial"</span> <span class="na">setup_version=</span><span class="s">"0.0.1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+</div></div>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">registration.php</code></p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="sd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+<span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">register</span><span class="p">(</span>
+    <span class="nx">\Magento\Framework\Component\ComponentRegistrar</span><span class="o">::</span><span class="na">MODULE</span><span class="p">,</span>
+    <span class="s1">'Learning_ClothingMaterial'</span><span class="p">,</span>
+    <span class="nx">__DIR__</span>
+<span class="p">);</span></code></pre></figure>
+</div></div>
+
+<h2 id="步骤2create-an-installdata-script">步骤2.Create an InstallData script</h2>
+
+<p>Next, we need to create the InstallData script.
+Because adding an attribute technically adds records into several tables, such as <code class="highlighter-rouge">eav_attribute</code> and <code class="highlighter-rouge">catalog_eav_attribute,</code> this is data manipulation, not a schema change.
+Therefore we use InstallData instead of InstallSchema.</p>
+
+<p>Create the file <code class="highlighter-rouge">app/code/Learning/ClothingMaterial/Setup/InstallData.php</code>:</p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="sd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="k">namespace</span> <span class="nx">Learning\ClothingMaterial\Setup</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\InstallDataInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\ModuleContextInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\ModuleDataSetupInterface</span><span class="p">;</span>
+
+<span class="sd">/**
+* @codeCoverageIgnore
+*/</span>
+<span class="k">class</span> <span class="nc">InstallData</span> <span class="k">implements</span> <span class="nx">InstallDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * Eav setup factory
+     * @var EavSetupFactory
+     */</span>
+    <span class="k">private</span> <span class="nv">$eavSetupFactory</span><span class="p">;</span>
+
+    <span class="sd">/**
+     * Init
+     * @param CategorySetupFactory $categorySetupFactory
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">\Magento\Eav\Setup\EavSetupFactory</span> <span class="nv">$eavSetupFactory</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eavSetupFactory</span> <span class="o">=</span> <span class="nv">$eavSetupFactory</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+     * {@inheritdoc}
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$eavSetup</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eavSetupFactory</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+        <span class="nv">$eavSetup</span><span class="o">-&gt;</span><span class="na">addAttribute</span><span class="p">(</span>
+            <span class="nx">\Magento\Catalog\Model\Product</span><span class="o">::</span><span class="na">ENTITY</span><span class="p">,</span>
+            <span class="s1">'clothing_material'</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s1">'group'</span> <span class="o">=&gt;</span> <span class="s1">'General'</span><span class="p">,</span>
+                <span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'varchar'</span><span class="p">,</span>
+                <span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="s1">'Clothing Material'</span><span class="p">,</span>
+                <span class="s1">'input'</span> <span class="o">=&gt;</span> <span class="s1">'select'</span><span class="p">,</span>
+                <span class="s1">'source'</span> <span class="o">=&gt;</span> <span class="s1">'Learning\ClothingMaterial\Model\Attribute\Source\Material'</span><span class="p">,</span>
+                <span class="s1">'frontend'</span> <span class="o">=&gt;</span> <span class="s1">'Learning\ClothingMaterial\Model\Attribute\Frontend\Material'</span><span class="p">,</span>
+                <span class="s1">'backend'</span> <span class="o">=&gt;</span> <span class="s1">'Learning\ClothingMaterial\Model\Attribute\Backend\Material'</span><span class="p">,</span>
+                <span class="s1">'required'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s1">'sort_order'</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">,</span>
+                <span class="s1">'global'</span> <span class="o">=&gt;</span> <span class="nx">\Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface</span><span class="o">::</span><span class="na">SCOPE_GLOBAL</span><span class="p">,</span>
+                <span class="s1">'is_used_in_grid'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s1">'is_visible_in_grid'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s1">'is_filterable_in_grid'</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="s1">'visible'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s1">'is_html_allowed_on_front'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="s1">'visible_on_front'</span> <span class="o">=&gt;</span> <span class="kc">true</span>
+            <span class="p">]</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+</div></div>
+
+<p><br /></p>
+
+<p>Let’s take a minute to look at the code.</p>
+
+<p>First of all, we need to use a special setup object, not the one that comes as a parameter.
+This is because Catalog is an EAV entity, so to add an attribute, we have to use eavSetup rather than standard one.
+This holds true for any EAV entity in Magento 2 (category, product, customer, and so on).</p>
+
+<p>This is why we added eavSetupFactory in a constructor.</p>
+
+<p>For the <code class="highlighter-rouge">install()</code> method, all we have to do is call the <code class="highlighter-rouge">addAttribute()</code> method with 3 parameters: entity type, attribute code, and properties.</p>
+
+<p>Those properties define how an attribute behaves.
+A full list of properties can be seen in the <code class="highlighter-rouge">catalog_eav_attribute</code> and <code class="highlighter-rouge">eav_attribute</code> tables.
+Note that there is a mapping between the fields in those tables and the properties in the <code class="highlighter-rouge">addAttribute()</code> method.</p>
+
+<p>To see all the mappings, you should look at the <code class="highlighter-rouge">\Magento\Catalog\Model\ResourceModel\Setup\PropertyMapper</code> class.</p>
+
+<p>For now, we’ll just quickly go through most important ones:</p>
+
+<ul>
+  <li><strong>group:</strong> Means that we add an attribute to the attribute group “General”, which is present in all attribute sets.</li>
+  <li><strong>type:</strong> varchar means that the values will be stored in the catalog_eav_varchar table.</li>
+  <li><strong>label:</strong> A label of the attribute (that is, how it will be rendered in the backend and on the frontend).</li>
+  <li><strong>source/frontend/backend:</strong> Special classes associated with the attribute:
+    <ul>
+      <li><strong>source model:</strong> provides a list of options</li>
+      <li><strong>frontend:</strong> defines how it should be rendered on the frontend</li>
+      <li><strong>backend:</strong> allows you to perform certain actions when an attribute is loaded or saved. In our example, it will be validation.</li>
+    </ul>
+  </li>
+  <li><strong>Global:</strong> defines the scope of its values (global, website, or store)</li>
+  <li><strong>visible_on_front:</strong> A flag that defines whether an attribute should be shown on the “More Information” tab on the frontend</li>
+  <li><strong>is_html_allowed_on_front:</strong> Defines whether an attribute value may contain HTML</li>
+</ul>
+
+<h2 id="步骤3-add-a-source-model">步骤3. Add a source model</h2>
+
+<p>Next, we need to create the source model:</p>
+
+<p><code class="highlighter-rouge">app/code/Learning/ClothingMaterial/Model/Attribute/Source/Material.php</code></p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="sd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="k">namespace</span> <span class="nx">Learning\ClothingMaterial\Model\Attribute\Source</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Material</span> <span class="k">extends</span> <span class="nx">\Magento\Eav\Model\Entity\Attribute\Source\AbstractSource</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * Get all options
+     * @return array
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getAllOptions</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_options</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_options</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Cotton'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'cotton'</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Leather'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'leather'</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Silk'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'silk'</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Denim'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'denim'</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Fur'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'fur'</span><span class="p">],</span>
+                <span class="p">[</span><span class="s1">'label'</span> <span class="o">=&gt;</span> <span class="nx">__</span><span class="p">(</span><span class="s1">'Wool'</span><span class="p">),</span> <span class="s1">'value'</span> <span class="o">=&gt;</span> <span class="s1">'wool'</span><span class="p">],</span>
+            <span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_options</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+</div></div>
+
+<p><br /></p>
+
+<p>As the name implies, the <code class="highlighter-rouge">getAllOptions</code> method provides a list of all available options.</p>
+
+<h2 id="步骤4-add-a-backend-model">步骤4. Add a backend model</h2>
+
+<p>Now we will create a backend model:</p>
+
+<p><code class="highlighter-rouge">app/code/Learning/ClothingMaterial/Model/Attribute/Backend/Material.php</code></p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="sd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="k">namespace</span> <span class="nx">Learning\ClothingMaterial\Model\Attribute\Backend</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Material</span> <span class="k">extends</span> <span class="nx">\Magento\Eav\Model\Entity\Attribute\Backend\AbstractBackend</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * Validate
+     * @param \Magento\Catalog\Model\Product $object
+     * @throws \Magento\Framework\Exception\LocalizedException
+     * @return bool
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">$object</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$value</span> <span class="o">=</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getAttributeCode</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nv">$object</span><span class="o">-&gt;</span><span class="na">getAttributeSetId</span><span class="p">()</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nv">$value</span> <span class="o">==</span> <span class="s1">'wool'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nx">\Magento\Framework\Exception\LocalizedException</span><span class="p">(</span>
+                <span class="nx">__</span><span class="p">(</span><span class="s1">'Bottom can not be wool.'</span><span class="p">)</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+</div></div>
+
+<p><br /></p>
+
+<p>In our example, we implement only the <code class="highlighter-rouge">validate()</code> method.</p>
+
+<p>The backend model may have <code class="highlighter-rouge">beforeSave</code>, <code class="highlighter-rouge">afterSave</code>, and <code class="highlighter-rouge">afterLoad</code> methods that allow the execution of some code at the moment an attribute is saved or loaded.
+The backend model is what makes attribute management a really powerful method of customization.</p>
+
+<p>Note that we hardcoded <code class="highlighter-rouge">attributeSetId</code> here for the sake of time.
+In other cases, it could be different.
+Make sure to check the <code class="highlighter-rouge">eav_attribute_set</code> table for the right ID.</p>
+
+<h2 id="步骤5-add-a-frontend-model">步骤5. Add a frontend model</h2>
+
+<p>And finally, we create a frontend model to make our value bold:</p>
+
+<div class="collapsible"><b class="collapsible-title">Show code </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">namespace</span> <span class="nx">Learning\ClothingMaterial\Model\Attribute\Frontend</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Material</span> <span class="k">extends</span> <span class="nx">\Magento\Eav\Model\Entity\Attribute\Frontend\AbstractFrontend</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getValue</span><span class="p">(</span><span class="nx">\Magento\Framework\DataObject</span> <span class="nv">$object</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$value</span> <span class="o">=</span> <span class="nv">$object</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getAttributeCode</span><span class="p">());</span>
+        <span class="k">return</span> <span class="s2">"&lt;b&gt;</span><span class="nv">$value</span><span class="s2">&lt;/b&gt;"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+</div></div>
+
+<p><br /></p>
+
+<p>As with the backend model, this is also a very simple class.</p>
+
+<h2 id="步骤6-execute-the-installdata-script-and-verify-that-it-works">步骤6. Execute the InstallData script and verify that it works</h2>
+
+<p>Now we can run our code and check the results:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd &lt;magento2_root&gt;
+$ php bin/magento setup:upgrade
+</code></pre></div></div>
+
+<p>After you run this, the new attribute should have been added to the database.
+You can check the <code class="highlighter-rouge">eav_attribute</code> and <code class="highlighter-rouge">catalog_eav_attribute</code> tables to verify that the attribute and its properties are there.
+We see ClothingMaterial down here, with the primary key of 155, and its corresponding entry in <code class="highlighter-rouge">catalog_eav_attribute,</code> with the primary key being 155.</p>
+
+<p>Now, let’s go to the backend, open any configurable product, and we should see that clothing material dropdown.
+We’ll set our filters to be a configurable product with the attribute set of “bottom”.</p>
+
+<p>We’ll select the first item. First, we’ll set the clothing material to Fur and attempt to save our attribute. We see that our
+backend model has executed successfully, so now we’ll set it to Wool and save it.</p>
+
+<p>Having saved the product, we’ll now move to the frontend.
+It should be visible and in bold text.</p>
+
+
+			<div class="adjaced-pages">
+				<div class="playlist-name">Magento开发基础</div>
+			
+			
+				<div class="previous-page">
+                    
+                    <a href="/videos/fundamentals/add-a-javascript-module/">
+                    
+						<span class="arrow">&larr; Previous</span>
+						<span class="title">How to Add a JavaScript Module</span>
+					</a>
+				</div>
+			
+
+			
+			
+				<div class="next-page">
+                    
+                    <a href="/videos/fundamentals/create-a-new-module/">
+                    
+						<span class="arrow">Next &rarr;</span>
+						<span class="title">Create a New Module</span>
+					</a>
+				</div>
+			
+			</div>
+
+
+
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/_videos/fundamentals/add-new-product-attribute.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /videos/fundamentals/add-new-product-attribute/" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

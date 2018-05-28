@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>常见的布局定制任务 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/frontend-dev-guide/layouts/xml-manage.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/frontend-dev-guide/layouts/xml-manage.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/frontend-dev-guide/layouts/xml-manage.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">前端工程师手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/conventions.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento缓存概述">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/cache_for_frontdevs.html">Magento缓存概述</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="主题开发最佳实践">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/theme-best-practice.html">主题开发最佳实践</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="themes">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/themes/theme-general.html">Themes</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="主题概述">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-overview.html">主题概述</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装第三方前台主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-install.html">安装第三方前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="卸载前台主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-uninstall.html">卸载前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建一个管理面板主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/admin_theme_create.html">创建一个管理面板主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="应用一个管理面板主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/admin_theme_apply.html">应用一个管理面板主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建一个新的前台主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-create.html">创建一个新的前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="应用和配置前台主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-apply.html">应用和配置前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定痊模板，布局和样式">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/debug-theme.html">定痊模板，布局和样式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento主题的结构">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-structure.html">Magento主题的结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="主题的继承关系">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html">主题的继承关系</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为网站添加一个favicons图标">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/favicon.html">为网站添加一个favicons图标</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为主题配置图片属性">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/theme-images.html">为主题配置图片属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置产品视频">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/product-video.html">配置产品视频</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="js打包">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/themes/js-bundling.html">js打包</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="layout">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-overview.html">Layout</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="布局指令">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html">布局指令</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="布局文件类型">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-types.html">布局文件类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="扩展一个布局">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-extend.html">扩展一个布局</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="覆盖一个布局">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-override.html">覆盖一个布局</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="常见的布局定制任务">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-manage.html">常见的布局定制任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制布局图示">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-practice.html">定制布局图示</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="templates">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/templates/template-overview.html">Templates</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模板定制化演练">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/templates/template-walkthrough.html">模板定制化演练</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板基本概念">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/templates/template-override.html">模板基本概念</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义模板图解">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/templates/template-sample.html">自定义模板图解</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义邮件模板">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/templates/template-email.html">自定义邮件模板</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板的xss安全">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/templates/template-security.html">模板的XSS安全</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="层叠样式表(css)">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/css-topics/css-overview.html">层叠样式表(CSS)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="引入css">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/css-themes.html">引入CSS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="css-and-less-preprocessing">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html">CSS and LESS preprocessing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="compile-less-using-grunt">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/css_debug.html">Compile LESS using Grunt</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-ui库">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用jq-ui样式">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/css-jquery.html">使用jq UI样式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制样式图示">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/css-practice.html">定制样式图示</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制字体">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-topics/using-fonts.html">使用定制字体</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用自定义css预处理器">
+
+            
+
+            
+            <span>使用自定义css预处理器</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="添加定制css预处理器">
+                    
+
+                    
+                    <a  href="/guides/v2.2/frontend-dev-guide/css-topics/custom_preprocess.html">添加定制css预处理器</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用sass预处理器和gulp工具">
+                    
+
+                    
+                    <a  href="/guides/v2.2/frontend-dev-guide/css-topics/gulp-sass.html">使用Sass预处理器和gulp工具</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="快速样式指引">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_overview.html">快速样式指引</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义主题样式的简单方法">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="客户端less样式编译与服务器简单修改">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何使用的主题响应式及兼容移动端">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_overview.html">如何使用的主题响应式及兼容移动端</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="响应式设计中的css">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_css.html">响应式设计中的CSS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento响应式设计中的js">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_js.html">Magento响应式设计中的js</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于默认主题创建一个响应式的移动端主题">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_mobile.html">基于默认主题创建一个响应式的移动端主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="customizing-rwd-illustration">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_practice.html">Customizing RWD illustration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义断点">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd-breakpoints.html">添加自定义断点</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="translations">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/translations/xlate.html">Translations</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="为自定义的字符使用翻译字典">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/translations/theme_dictionary.html">为自定义的字符使用翻译字典</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="翻译主题的字符串">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/translations/translate_theory.html">翻译主题的字符串</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为主题创建一个翻译字典,-illustration">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典, illustration</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="tools">
+    
+
+    
+    <a href="/guides/v2.2/frontend-dev-guide/tools/tools_overview.html">Tools</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="using-grunt-for-magento-tasks">
+
+            
+
+            
+            <a href="/guides/v2.2/frontend-dev-guide/tools/using_grunt.html">Using Grunt for Magento tasks</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">
+            <span property="name">前端工程师手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">常见的布局定制任务</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">常见的布局定制任务</h1>
+
+  
+
+
+</section>
+
+			<h2>这里有什么</h2>
+
+<p>This article describes the following typical <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span> customization tasks:</p>
+
+<ul>
+  <li><a href="#layout_markup_columns">Set the page layout</a></li>
+  <li><a href="#layout_markup_css">Include static resources (JavaScript, CSS, fonts) in &lt;head&gt;</a></li>
+  <li><a href="#layout_markup_css_remove">Remove static resources (JavaScript, CSS, fonts) in &lt;head&gt;</a></li>
+  <li><a href="#create_cont">Create a container</a></li>
+  <li><a href="#ref_container">Reference a container</a></li>
+  <li><a href="#xml-manage-block">Create a block</a></li>
+  <li><a href="#set_template">Set the template used by a block</a></li>
+  <li><a href="#layout_markup_modify-block">Modify block arguments</a></li>
+  <li><a href="#xml-manage-ref-block">Reference a block</a></li>
+  <li><a href="#layout_markup_block-properties">Use block object methods to set block properties</a></li>
+  <li><a href="#layout_markup_rearrange">Rearrange elements</a></li>
+  <li><a href="#layout_markup_remove_elements">Remove elements</a></li>
+  <li><a href="#layout_markup_replace_elements">Replace elements</a></li>
+</ul>
+
+<div class="bs-callout bs-callout-info" id="info">
+<span class="glyphicon-class">
+  <p>To ensure stability and secure your customizations from being deleted during upgrade, do not change out-of-the-box Magento <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> and <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> layouts. To customize layout, create extending and overriding layout files in your custom theme.</p></span>
+</div>
+
+<h2 id="layout_markup_columns">Set the page layout</h2>
+
+<p>The type of page layout to be used for a certain page is defined in the page configuration file, in the <code class="highlighter-rouge">layout</code> attribute of the root <code>&lt;page&gt;</code> node.</p>
+
+<p>Example:
+Change the layout of Advanced Search page from default “1-column” to “2-column with left bar”. To do this, extend <code class="highlighter-rouge">catalogsearch_advanced_index.xml</code> in your theme by adding the following layout:</p>
+
+<p><b><code>app/design/frontend/&lt;Vendor&gt;/&lt;theme&gt;/Magento_CatalogSearch/layout/catalogsearch_advanced_index.xml</code></b></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">layout=</span><span class="s">"2columns-left"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+...
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<h2 id="layout_markup_css">Include static resources (JavaScript, CSS, fonts)</h2>
+
+<p>JavaScript, <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> and other static assets are added in the <code class="highlighter-rouge">&lt;head&gt;</code> section of a <a href="/guides/v2.2/frontend-dev-guide/layouts/layout-types.html#layout-types-conf" target="_blank">page configuration</a> file. The default look of a Magento store page <code class="highlighter-rouge">&lt;head&gt;</code> is defined by <code class="highlighter-rouge">app/code/Magento/Theme/view/frontend/layout/default_head_blocks.xml</code>. The recommended way to add CSS and <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> is to extend this file in your custom theme, and add the assets there.
+The following file is a sample of a file you must add:</p>
+
+<p><code>&lt;theme_dir&gt;/Magento_Theme/layout/default_head_blocks.xml</code></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="c">&lt;!-- Add local resources --&gt;</span>
+    	<span class="nt">&lt;css</span> <span class="na">src=</span><span class="s">"css/my-styles.css"</span><span class="nt">/&gt;</span>
+    
+        <span class="c">&lt;!-- The following two ways to add local JavaScript files are equal --&gt;</span>
+        <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"Magento_Catalog::js/sample1.js"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">src=</span><span class="s">"js/sample.js"</span><span class="nt">/&gt;</span>
+		
+    	<span class="c">&lt;!-- Add external resources --&gt;</span>
+	<span class="nt">&lt;css</span> <span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"</span> <span class="na">src_type=</span><span class="s">"url"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"</span> <span class="na">src_type=</span><span class="s">"url"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">src=</span><span class="s">"http://fonts.googleapis.com/css?family=Montserrat"</span> <span class="na">src_type=</span><span class="s">"url"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>When adding external resources, specifying the <code>src_type="url"</code> argument value is a must.</p>
+
+<p>You can use either <code class="highlighter-rouge">&lt;link src="js/sample.js"/&gt;</code>或<code class="highlighter-rouge">&lt;script src="js/sample.js"/&gt;</code> instruction to add a locally stored JavaScript file to your theme.</p>
+
+<p>The path to assets is specified relatively to one the following locations:</p>
+<ul>
+<li><code>&lt;theme_dir&gt;/web</code></li>
+<li><code>&lt;theme_dir&gt;/&lt;Namespace&gt;_&lt;Module&gt;/web</code></li>
+
+</ul>
+
+<h3>Adding conditional comments</h3>
+<p><a href="http://en.wikipedia.org/wiki/Conditional_comment" target="_blank">Conditional comments</a> are meant to give special instructions for Internet Explorer. 
+In the terms of adding assets, you can add CSS files to be included for a specific version of Internet Explorer. 
+A sample follows:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;css</span> <span class="na">src=</span><span class="s">"css/ie-9.css"</span> <span class="na">ie_condition=</span><span class="s">"IE 9"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>This adds an IE conditional comment in the generated HTML, like in the following example:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!--[if IE 9]&gt;
+&lt;link rel="stylesheet" type="text/css" media="all" href="&lt;your_store_web_address&gt;/pub/static/frontend/OrangeCo/orange/en_US/css/ie-9.css" /&gt;
+&lt;![endif]--&gt;</span></code></pre></figure>
+
+<p>In this example, <code>orange</code> is a custom theme created by the OrangeCo vendor.</p>
+
+<h2 id="layout_markup_css_remove">Remove static resources (JavaScript, CSS, fonts)</h2>
+
+<p>To remove the static resources, linked in a page <code class="highlighter-rouge">&lt;head&gt;</code>, make a change similar to the following in a theme extending file:</p>
+
+<p><code class="highlighter-rouge">app/design/frontend/&lt;Vendor&gt;/&lt;theme&gt;/Magento_Theme/layout/default_head_blocks.xml</code></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+        <span class="c">&lt;!-- Remove local resources --&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"css/styles-m.css"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"my-js.js"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"Magento_Catalog::js/compare.js"</span> <span class="nt">/&gt;</span>
+								
+	<span class="c">&lt;!-- Remove external resources --&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"http://fonts.googleapis.com/css?family=Montserrat"</span> <span class="nt">/&gt;</span> 
+   <span class="nt">&lt;/head&gt;</span></code></pre></figure>
+
+<p>Note, that if a static asset is added with a module path (for example <code class="highlighter-rouge">Magento_Catalog::js/sample.js</code>) in the initial layout, you need to specify the module path as well when removing the asset.</p>
+
+<h2 id="create_cont">Create a container</h2>
+
+<p>Use the following sample to create (declare) a container:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;container</span> <span class="na">name=</span><span class="s">"some.container"</span> <span class="na">as=</span><span class="s">"someContainer"</span> <span class="na">label=</span><span class="s">"Some Container"</span> <span class="na">htmlTag=</span><span class="s">"div"</span> <span class="na">htmlClass=</span><span class="s">"some-container"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<h2 id="ref_container">Reference a container</h2>
+
+<p>To update a container use the <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_ref" target="_blank"><code class="highlighter-rouge">&lt;referenceContainer&gt;</code></a> instruction.</p>
+
+<p>Example: add links to the page header panel.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;referenceContainer</span> <span class="na">name=</span><span class="s">"header.panel"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Framework\View\Element\Html\Links"</span> <span class="na">name=</span><span class="s">"header.links"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;arguments&gt;</span>
+                <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"css_class"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>header links<span class="nt">&lt;/argument&gt;</span>
+            <span class="nt">&lt;/arguments&gt;</span>
+        <span class="nt">&lt;/block&gt;</span>
+<span class="nt">&lt;/referenceContainer&gt;</span></code></pre></figure>
+
+<h2 id="xml-manage-block">Create a block</h2>
+
+<p>Blocks are created (declared) using the <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_block" target="_blank"><code class="highlighter-rouge">&lt;block&gt;</code></a> instruction.</p>
+
+<p>Example: add a block with a product <span term-uuid="fd4bed67-7130-4415-8a6f-ad8d8ef8f25e" class="glossary-term" data-toggle="popover">SKU</span> information.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Catalog\Block\Product\View\Description"</span> <span class="na">name=</span><span class="s">"product.info.sku"</span> <span class="na">template=</span><span class="s">"product/view/attribute.phtml"</span> <span class="na">after=</span><span class="s">"product.info.type"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;arguments&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"at_call"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>getSku<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"at_code"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sku<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"css_class"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sku<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;/arguments&gt;</span>
+<span class="nt">&lt;/block&gt;</span></code></pre></figure>
+
+<h2 id="xml-manage-ref-block">Reference a block</h2>
+
+<p>To update a block use the <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_ref" target="_blank"><code class="highlighter-rouge">&lt;referenceBlock&gt;</code></a> instruction.</p>
+
+<p>Example: pass the image to the <code class="highlighter-rouge">logo</code> block.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"logo_file"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>images/logo.png<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+<span class="nt">&lt;/referenceBlock&gt;</span></code></pre></figure>
+
+<h2 id="set_template">Set the template used by a block</h2>
+
+<p>There are two ways to set the template for a block:</p>
+
+<ul>
+  <li>using the <code class="highlighter-rouge">template</code> attribute</li>
+  <li>using the <code class="highlighter-rouge">&lt;argument&gt;</code> instruction</li>
+</ul>
+
+<p>Both approaches are demonstrated in the following examples of changing the template of the page title block.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"page.main.title"</span> <span class="na">template=</span><span class="s">"%Namespace_Module::new_template.phtml%"</span><span class="nt">/&gt;</span></code></pre></figure>
+
+<p><strong>Example 2:</strong></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"page.main.title"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"template"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>%Namespace_Module::new_template.phtml%<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+ <span class="nt">&lt;/referenceBlock&gt;</span></code></pre></figure>
+
+<p>In both example, the template is specified according to the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">Namespace_Module:</code> defines the module the template belongs to. For example, <code class="highlighter-rouge">Magento_Catalog</code>.</li>
+  <li><code class="highlighter-rouge">new_template.phtml</code>: the path to the template relatively to the <code class="highlighter-rouge">templates</code> directory. It might be <code class="highlighter-rouge">&lt;module_dir&gt;/view/&lt;area&gt;/templates</code>或<code class="highlighter-rouge">&lt;theme_dir&gt;/&lt;Namespace_Module&gt;/templates</code>.</li>
+</ul>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>Template values specified as attributes have higher priority during layout generation, than the ones specified using <code>&lt;argument&gt;</code>. It means, that if for a certain block, a template is set as attribute, it will override the value you specify in <code>&lt;argument&gt;</code> for the same block.</p>
+</div>
+
+<h2 id="layout_markup_modify-block">Modify block arguments</h2>
+
+<p>To modify block arguments, use the <code class="highlighter-rouge">&lt;referenceBlock&gt;</code> instruction.</p>
+
+<p>Example: change the value of the existing block argument and add a new argument.</p>
+
+<p>Initial block declaration:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">...
+<span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Namespace_Module_Block_Type"</span> <span class="na">name=</span><span class="s">"block.example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;arguments&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Block Label<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;/arguments&gt;</span>
+<span class="nt">&lt;/block&gt;</span>
+...</code></pre></figure>
+
+<p>Extending layout:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">...
+<span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"block.example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;arguments&gt;</span>
+        <span class="c">&lt;!-- Modified block argument --&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>New Block Label<span class="nt">&lt;/argument&gt;</span>
+        <span class="cp">&lt;!- Newly added block argument --&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"custom_label"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Custom Block Label<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;/arguments&gt;</span>
+<span class="nt">&lt;/referenceBlock&gt;</span> 
+...</code></pre></figure>
+
+<h2 id="layout_markup_block-properties">Use block object methods to set block properties</h2>
+
+<p>There are two ways to access block object methods:</p>
+
+<ul>
+  <li>using the <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#argument"><code>&lt;argument&gt;</code></a> instruction for <code class="highlighter-rouge">&lt;block&gt;</code>或<code class="highlighter-rouge">&lt;referenceBlock&gt;</code></li>
+  <li>using the <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_act"><code>&lt;action&gt;</code></a> instruction. This way is not recommended, but can be used for calling those methods, which are not refactored yet to be accessed through <code class="highlighter-rouge">&lt;argument&gt;</code>.</li>
+</ul>
+
+<p>Example 1: Set a CSS class and add an attribute for the product page using <code class="highlighter-rouge">&lt;argument&gt;</code>.</p>
+
+<p>Extending layout:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">	<span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"page.main.title"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;arguments&gt;</span>
+		    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"css_class"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>product<span class="nt">&lt;/argument&gt;</span>
+		    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"add_base_attribute"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>itemprop="name"<span class="nt">&lt;/argument&gt;</span>
+		<span class="nt">&lt;/arguments&gt;</span>
+	<span class="nt">&lt;/referenceBlock&gt;</span></code></pre></figure>
+
+<p>Example 2: Set a page title using <code class="highlighter-rouge">&lt;action&gt;</code>.</p>
+
+<div class="bs-callout bs-callout-warning" id="info">
+<span class="glyphicon-class">
+ <p>Do not use <code>&lt;action&gt;</code>, if the method implementation allows calling it using <code>&lt;argument&gt;</code>&lt;/a&gt; for <code>&lt;block&gt;</code>或<code>&lt;referenceBlock&gt;</code>.</p></span>
+</div>
+
+<p>Extending layout:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">	...
+	<span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"page.main.title"</span><span class="nt">&gt;</span>
+	    <span class="nt">&lt;action</span> <span class="na">method=</span><span class="s">"setPageTitle"</span><span class="nt">&gt;</span>
+	        <span class="nt">&lt;argument</span> <span class="na">translate=</span><span class="s">"true"</span> <span class="na">name=</span><span class="s">"title"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Catalog Advanced Search<span class="nt">&lt;/argument&gt;</span>
+	    <span class="nt">&lt;/action&gt;</span>
+	<span class="nt">&lt;/referenceBlock&gt;</span>
+	...</code></pre></figure>
+
+<h2 id="layout_markup_rearrange">Rearrange elements</h2>
+
+<p>In layout files you can change the elements order on a page. This can be done using one of the following:</p>
+
+<ul>
+  <li><a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_mv" target="_blank"><code class="highlighter-rouge">&lt;move&gt;</code> instruction</a>: allows changing elements’ order and parent.</li>
+  <li><a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_xml-instrux_before-after" target="_blank"><code class="highlighter-rouge">before</code> and <code class="highlighter-rouge">after</code> attributes of <code class="highlighter-rouge">&lt;block&gt;</code></a>: allows changing elements’ order within one parent.</li>
+</ul>
+
+<p></p>
+<p>Example of <code class="highlighter-rouge">&lt;move&gt;</code> usage:
+put the stock availability and SKU blocks next to the product price on a product page.</p>
+
+<p>In the Magento Blank theme these elements are located as follows:</p>
+
+<p><img src="/common/images/layout_image1.png" /></p>
+
+<p>Let’s place the stock availability and SKU blocks after product price block on a product page, and move the review block out of the product-info-price container.
+To do this, add the extending <code class="highlighter-rouge">catalog_product_view.xml</code> in the <code class="highlighter-rouge">app/design/frontend/OrangeCo/orange/Magento_Catalog/layout/</code> directory:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">layout=</span><span class="s">"1column"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;move</span> <span class="na">element=</span><span class="s">"product.info.stock.sku"</span> <span class="na">destination=</span><span class="s">"product.info.price"</span> <span class="na">after=</span><span class="s">"product.price.final"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;move</span> <span class="na">element=</span><span class="s">"product.info.review"</span> <span class="na">destination=</span><span class="s">"product.info.main"</span> <span class="na">before=</span><span class="s">"product.info.price"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>This would make the product page look like following:</p>
+
+<p><img src="/common/images/layout_image2.png" /></p>
+
+<div class="bs-callout bs-callout-info" id="info">
+<span class="glyphicon-class">
+  <p>To learn how to locate the layout file you need to customize, see <a href="/guides/v2.2/frontend-dev-guide/themes/debug-theme.html" target="_blank">定痊模板，布局和样式</a>.</p></span>
+</div>
+
+<h2 id="layout_markup_remove_elements">Remove elements</h2>
+
+<p>Elements are removed using the <code class="highlighter-rouge">remove</code> attribute for the <code class="highlighter-rouge">&lt;referenceBlock&gt;</code> and <code class="highlighter-rouge">&lt;referenceContainer&gt;</code>.</p>
+
+<p><strong>Example</strong>: remove the Compare Products <span term-uuid="31751771-8163-434b-88bc-c5f94d859fc3" class="glossary-term" data-toggle="popover">sidebar</span> block from all store pages.</p>
+
+<p>This block is declared in <code class="highlighter-rouge">app/code/Magento/Catalog/view/frontend/layout/default.xml</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+...
+        <span class="nt">&lt;referenceContainer</span> <span class="na">name=</span><span class="s">"sidebar.additional"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Catalog\Block\Product\Compare\Sidebar"</span> <span class="na">name=</span><span class="s">"catalog.compare.sidebar"</span> <span class="na">template=</span><span class="s">"product/compare/sidebar.phtml"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/referenceContainer&gt;</span>
+...
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>To remove the block, add the extending <code class="highlighter-rouge">default.xml</code> in your theme:
+<code class="highlighter-rouge">&lt;theme_dir&gt;/Magento_Catalog/layout/default.xml</code></p>
+
+<p>In this file, reference the element having added the <code class="highlighter-rouge">remove</code> attribute:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+...
+        <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"catalog.compare.sidebar"</span> <span class="na">remove=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+...
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<h2 id="layout_markup_replace_elements">Replace elements</h2>
+
+<p>To replace an element, <a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_rem" target="_blank">remove it</a> and add a new one.</p>
+
+<h4 id="相关主题">相关主题:</h4>
+
+<ul>
+  <li><a href="/guides/v2.2/frontend-dev-guide/layouts/xml-instructions.html" target="_blank">布局指令</a></li>
+  <li><a href="/guides/v2.2/frontend-dev-guide/layouts/layout-extend.html" target="_blank">扩展一个布局</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/frontend-dev-guide/layouts/xml-manage.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/frontend-dev-guide/layouts/xml-manage.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

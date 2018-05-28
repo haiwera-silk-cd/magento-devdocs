@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>使用前端的产品仓库(Product repository) | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">js开发者手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.2/javascript-dev-guide/conventions_js.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="javascript">
+    
+
+    
+    <a href="/guides/v2.2/javascript-dev-guide/javascript/js_overview.html">JavaScript</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-js资源">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/js-resources.html">Magento js资源</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="调用和初始化js组件">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/js_init.html">调用和初始化js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="frontend-product-repository">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html">Frontend product repository</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制脚本">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/custom_js.html">使用定制脚本</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定位js组件">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/js_debug.html">定位js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="图解如何定制js组件">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/js_practice.html">图解如何定制js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="using-js混入">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/javascript/js_mixins.html">Using js混入</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento-jq小工具">
+    
+
+    
+    <a href="/guides/v2.2/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jq小工具</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="手风琴菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_accordion.html">手风琴菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提示弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_alert.html">提示弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="日历小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_calendar.html">日历小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可折叠窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_collapsible.html">可折叠窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="确认弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_confirm.html">确认弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_dialog.html">下拉弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="相册小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_gallery.html">相册小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_list.html">列表小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="放大镜小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_gallery_mg.html">放大镜小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="加载小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_loader.html">加载小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_menu.html">菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模态弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_modal.html">模态弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_navigation.html">导航栏小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="问询弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_prompt.html">问询弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速搜索小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_quickSearch.html">快速搜索小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页小工具">
+
+            
+
+            
+            <a href="/guides/v2.2/javascript-dev-guide/widgets/widget_tabs.html">标签页小工具</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">
+            <span property="name">js开发者手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">使用前端的产品仓库(Product repository)</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">使用前端的产品仓库(Product repository)</h1>
+
+  
+
+
+</section>
+
+			<p>The frontend product repository is a storage service that uses the local cache to get product information without making additional requests to the server.
+The product information it provides is useful for optimal mini-cart, widgets, and checkout customizations.</p>
+
+<p>This article contains code samples for common tasks when working with the frontend product repository.</p>
+
+<h2 id="the-product-data-storage">The product data storage</h2>
+
+<p>The frontend product repository uses the <code class="highlighter-rouge">product_data_storage</code> section of the data storage cache as its data source.
+This section is responsible for holding all product data that come from the server when a customer visits a product page.</p>
+
+<h2 id="instantiate-the-repository">Instantiate the repository</h2>
+
+<p>The following code snippet uses the <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/view/frontend/web/js/product/storage/storage-service.js" target="_blank"><code class="highlighter-rouge">Magento_Catalog/js/product/storage/storage-service</code></a> to initialize the repository when the data storage cache itself initializes:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">([</span>
+    <span class="s1">'Magento_Catalog/js/product/storage/storage-service'</span>
+<span class="p">]),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">storage</span><span class="p">){</span>
+    <span class="s1">'use strict'</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+
+        <span class="p">...</span>
+
+        <span class="na">identifiersConfig</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">namespace</span><span class="p">:</span> <span class="s1">'product_data_storage'</span>
+        <span class="p">},</span>
+
+        <span class="na">productStorageConfig</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">namespace</span><span class="p">:</span> <span class="s1">'product_data_storage'</span><span class="p">,</span>
+            <span class="na">customerDataProvider</span><span class="p">:</span> <span class="s1">'product_data_storage'</span><span class="p">,</span>
+            <span class="na">className</span><span class="p">:</span> <span class="s1">'DataStorage'</span>
+        <span class="p">},</span>
+
+        <span class="na">initIdsStorage</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">storage</span><span class="p">.</span><span class="nx">onStorageInit</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">identifiersConfig</span><span class="p">.</span><span class="nx">namespace</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">idsStorageHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+        <span class="p">},</span>
+
+        <span class="na">idsStorageHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">idsStorage</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nx">createStorage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">productStorageConfig</span><span class="p">);</span>
+        <span class="p">},</span>
+
+        <span class="p">...</span>
+    
+    <span class="p">}</span>
+
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="use-the-repository">Use the repository</h2>
+
+<p>Subscribe a callback function to the product repository data to work with the cached data from recent server requests.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">...</span>
+
+<span class="nx">idsStorageHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">idsStorage</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nx">createStorage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">productStorageConfig</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataCollectionHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<span class="p">},</span>
+
+<span class="nx">dataCollectionHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="c1">//Code to handle the data</span>
+<span class="p">},</span>
+
+<span class="p">...</span></code></pre></figure>
+
+<h2 id="get-data-from-the-server">Get data from the server</h2>
+
+<p>Use the <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/view/frontend/web/js/product/storage/data-storage.js#L213" target="_blank"><code class="highlighter-rouge">loadDataFromServer</code></a> method from the <code class="highlighter-rouge">data-storage</code> class to get product data from a list of IDs.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">...</span>
+
+<span class="nx">idsStorageHandler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">idsStorage</span><span class="p">,</span> <span class="nx">currency</span><span class="p">,</span> <span class="nx">storeId</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nx">createStorage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">productStorageConfig</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataCollectionHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">productStorage</span><span class="p">.</span><span class="nx">loadDataFromServer</span><span class="p">(</span><span class="nx">currency</span><span class="p">,</span> <span class="nx">storeId</span><span class="p">,</span> <span class="nx">idsStorage</span><span class="p">.</span><span class="kd">get</span><span class="p">());</span>
+<span class="p">},</span>
+
+<span class="p">...</span></code></pre></figure>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">currency</code></td>
+      <td>The currency data to get for the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">store</code></td>
+      <td>The ID of the store associated with the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ids</code></td>
+      <td>An object that contains the list of IDs as keys</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In the preceding example the data is handled by the subscribed function <code class="highlighter-rouge">dataCollectionHandler</code>.</p>
+
+<h3 id="specify-rest-resource">Specify REST resource</h3>
+
+<p>Use the following REST endpoint to get product information:</p>
+
+<p><code class="highlighter-rouge">/V1/products-render-info</code></p>
+
+<p>For UI Components, add this information in the <a href="/guides/v2.2/ui_comp_guide/concepts/ui_comp_data_source.html"><code class="highlighter-rouge">dataProvider</code></a> entry inside your <code class="highlighter-rouge">etc/view/frontend/ui_component/&lt;ui-component-name&gt;.xml</code> file.</p>
+
+<p>The following example is from the <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/view/frontend/ui_component/widget_recently_viewed.xml" target="_blank">recently-viewed widget</a>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"dataProvider"</span> <span class="na">xsi:type=</span><span class="s">"configurableObject"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"productStorageConfig"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"namespace"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>product_data_storage<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"className"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>DataStorage<span class="nt">&lt;/item&gt;</span>
+                <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"updateRequestConfig"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">xsi:type=</span><span class="s">"serviceUrl"</span> <span class="na">path=</span><span class="s">"/products-render-info"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"identifiersConfig"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"namespace"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>recently_viewed_product<span class="nt">&lt;/item&gt;</span>
+            <span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/argument&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<p>This sets the appropriate information inside the <code class="highlighter-rouge">updateRequestConfig</code> object in the product storage configuration(<code class="highlighter-rouge">productStorageConfig</code> in the example code).</p>
+
+<p>The object structure for this REST response is represented by <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/Api/Data/ProductRenderInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Catalog\Api\Data\ProductRenderInterface</code></a>:</p>
+
+<div class="collapsible"><b class="collapsible-title">Show Object Structure </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">[</span>
+   <span class="nx">item_id</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1">//@see: \Magento\Catalog\Api\Data\ProductRender\ButtonInterface</span>
+        <span class="s1">'add_to_*_button'</span><span class="p">:</span> <span class="p">{</span> <span class="c1">//Any product button will be represented by this interface </span>
+            <span class="nl">post_data</span><span class="p">:</span> <span class="p">{...},</span>
+            <span class="nx">required_options</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">,</span>
+            <span class="nx">url</span><span class="p">:</span> <span class="nx">string</span>
+        <span class="p">},</span>
+        <span class="c1">//\Magento\Catalog\Api\Data\ProductRenderExtensionInterface</span>
+        <span class="s1">'extension_attributes'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'review_html'</span><span class="p">:</span> <span class="s1">'...'</span>
+        <span class="p">},</span>
+        <span class="c1">//@see: \Magento\Catalog\Api\Data\ProductRender\ImageInterface[]</span>
+        <span class="s1">'images'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s1">'url'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+                <span class="s1">'code'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+                <span class="s1">'height'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="s1">'width'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="s1">'resized_height'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="p">...</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s1">'is_salable'</span><span class="p">:</span> <span class="kr">boolean</span><span class="p">,</span>
+        <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+        <span class="c1">//@see: \Magento\Catalog\Api\Data\ProductRender\PriceInfoInterface</span>
+        <span class="s1">'price_info'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c1">//@see \Magento\Catalog\Api\Data\ProductRender\FormattedPriceInfoInterface</span>
+            <span class="c1">//All prices are kind of html with currency symbol and rounding rules</span>
+            <span class="s1">'formatted_prices'</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">'final_price'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="s1">'max_price'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="s1">'max_regular_price'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="s1">'minimal_regular_price'</span><span class="p">:</span> <span class="p">...,</span>
+                <span class="p">...</span>
+            <span class="p">},</span>
+            <span class="s1">'final_price'</span><span class="p">:</span> <span class="p">...,</span>
+            <span class="s1">'max_price'</span><span class="p">:</span> <span class="p">...,</span>
+            <span class="s1">'max_regular_price'</span><span class="p">:</span> <span class="p">...,</span>
+            <span class="s1">'minimal_regular_price'</span><span class="p">:</span> <span class="p">...,</span>
+            <span class="p">...</span>
+        <span class="p">},</span>
+        <span class="s1">'url'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+        <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span> <span class="c1">//enum: configurable, simple, virtual, etc</span>
+        <span class="s1">'currency_code'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span> <span class="c1">//e.g. USD</span>
+        <span class="s1">'store_id'</span><span class="p">:</span> <span class="p">...</span> <span class="c1">//integer</span>
+   <span class="p">}</span>  
+<span class="p">]</span></code></pre></figure>
+</div></div>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/javascript-dev-guide/javascript/product-frontend-storage.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

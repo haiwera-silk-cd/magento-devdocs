@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Create a custom GraphQL urlResolver service | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/graphql/develop/create-custom-url-resolver.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/graphql/develop/create-custom-url-resolver.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/graphql/develop/create-custom-url-resolver.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/graphql/develop/create-custom-url-resolver.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/graphql/develop/create-custom-url-resolver.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">GraphQL Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="overview">
+    
+
+    
+    <a href="/guides/v2.3/graphql/index.html">Overview</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="implementation">
+    
+
+    
+    <span>Implementation</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="graphql-request-headers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/send-request.html">GraphQL request headers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searches-and-pagination">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="development">
+    
+
+    
+    <span>Development</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="define-the-graphql-schema-for-a-module">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-graphqls-file.html">Define the GraphQL schema for a module</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="resolvers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/resolvers.html">Resolvers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="create-a-custom-urlresolver-service">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-custom-url-resolver.html">Create a custom urlResolver service</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="exception-handling">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/exceptions.html">Exception handling</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="functional-testing">
+    
+
+    
+    <a href="/guides/v2.3/graphql/functional-testing.html">Functional testing</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="reference">
+    
+
+    
+    <span>Reference</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="products-endpoint">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/reference/products.html">Products endpoint</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="product-interface-implementations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/product-interface-implementations.html">Product interface implementations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customizableoptioninterface">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customizable-option-interface.html">CustomizableOptionInterface</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bundleproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/bundle-product.html">BundleProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="categories-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/categories.html">Categories endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configurableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/configurable-product.html">ConfigurableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="downloadableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/downloadable-product.html">DownloadableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="giftcardproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/gift-card-product.html">GiftCardProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="groupedproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/grouped-product.html">GroupedProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="other-objects">
+
+            
+
+            
+            <span>Other objects</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="customattributemetadata-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/custom-attribute-metadata.html">CustomAttributeMetadata endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customer-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customer.html">Customer endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="urlresolver-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/url-resolver.html">urlResolver endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/graphql/index.html">
+            <span property="name">Overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Create a custom GraphQL urlResolver service</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Create a custom GraphQL urlResolver service</h1>
+
+  
+
+
+</section>
+
+			<p>The <code class="highlighter-rouge">Magento\UrlRewrite</code> module converts URL rewrite requests to canonical URLs. As a result, your custom <code class="highlighter-rouge">urlResolver</code> module does not require its own class for performing these actions, but it must be able to save and delete entries in the <code class="highlighter-rouge">url_rewrite</code> table.</p>
+
+<h2 id="create-observers">Create observers</h2>
+
+<p>You can use the <code class="highlighter-rouge">Magento\CmsUrlRewrite\Observer\ProcessUrlRewriteSavingObserver</code> class as the basis for saving URL rewrites. For deleting entries, create a <code class="highlighter-rouge">ProcessUrlRewriteDeleteObserver</code> class similar to the following:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+    * Generate urls for UrlRewrite and save it in storage
+    *
+    * @param \Magento\Framework\Event\Observer $observer
+    * @return void
+    */</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">execute</span><span class="p">(</span><span class="nx">EventObserver</span> <span class="nv">$observer</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="sd">/** @var \Magento\MyModule\Model\Page $myEntityPage  */</span>
+       <span class="nv">$page</span> <span class="o">=</span> <span class="nv">$observer</span><span class="o">-&gt;</span><span class="na">getEvent</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getObject</span><span class="p">();</span>
+
+       <span class="k">if</span> <span class="p">(</span><span class="nv">$page</span><span class="o">-&gt;</span><span class="na">isDeleted</span><span class="p">())</span> <span class="p">{</span>
+           <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">urlPersist</span><span class="o">-&gt;</span><span class="na">deleteByData</span><span class="p">(</span>
+               <span class="p">[</span>
+                   <span class="nx">UrlRewrite</span><span class="o">::</span><span class="na">ENTITY_ID</span> <span class="o">=&gt;</span> <span class="nv">$page</span><span class="o">-&gt;</span><span class="na">getId</span><span class="p">(),</span>
+                   <span class="nx">UrlRewrite</span><span class="o">::</span><span class="na">ENTITY_TYPE</span> <span class="o">=&gt;</span> <span class="nx">MyEntityPageUrlRewriteGenerator</span><span class="o">::</span><span class="na">ENTITY_TYPE</span><span class="p">,</span>
+               <span class="p">]</span>
+           <span class="p">);</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+</code></pre></div></div>
+<p>See <a href="/guides/v2.3/extension-dev-guide/events-and-observers.html">事件和观查者</a> for more information about creating an observer.</p>
+
+<h2 id="configure-the-custom-module">Configure the custom module</h2>
+
+<p>Update the <code class="highlighter-rouge">graphql.xml</code> and <code class="highlighter-rouge">events.xml</code> file in your module’s <code class="highlighter-rouge">etc</code> directory to configure your custom GraphQL <code class="highlighter-rouge">urlResolver</code> service:</p>
+
+<ul>
+  <li>Add lines similar to the following in your module’s <code class="highlighter-rouge">graphql.xml</code> file to define the enumeration. The <code class="highlighter-rouge">UrlRewriteGraphQl</code> module defines <code class="highlighter-rouge">UrlRewriteEntityTypeEnum</code>.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:module:Magento_GraphQl:etc/graphql.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;type</span> <span class="na">xsi:type=</span><span class="s">"Enum"</span> <span class="na">name=</span><span class="s">"UrlRewriteEntityTypeEnum"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"my_entity"</span><span class="nt">&gt;</span>MY_ENTITY<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/type&gt;</span>
+  <span class="nt">&lt;/config&gt;</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Define two events similar to the following in your module’s <code class="highlighter-rouge">events.xml</code> file.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml">  <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">"mymodule_page_save_after"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">name=</span><span class="s">"process_url_rewrite_saving"</span> <span class="na">instance=</span><span class="s">"Magento\MyModuleRewrite\Observer\ProcessUrlRewriteSavingObserver"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/event&gt;</span>
+  <span class="nt">&lt;event</span> <span class="na">name=</span><span class="s">"mymodule_page_delete_after"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">name=</span><span class="s">"process_url_rewrite_delete"</span> <span class="na">instance=</span><span class="s">"Magento\MyModuleRewrite\Observer\ProcessUrlRewriteDeleteObserver"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/event&gt;</span>
+  </code></pre></figure>
+
+<h2 id="related-topics">Related Topics</h2>
+
+<ul>
+  <li><a href="/guides/v2.3/extension-dev-guide/events-and-observers.html">事件和观查者</a></li>
+  <li><a href="/guides/v2.3/graphql/url-resolver.html">urlResolver endpoint</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/graphql/develop/create-custom-url-resolver.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/graphql/develop/create-custom-url-resolver.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

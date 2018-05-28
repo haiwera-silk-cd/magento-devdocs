@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento自定义Knockout.js绑定 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/ui_comp_guide/concepts/knockout-bindings.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/ui_comp_guide/concepts/knockout-bindings.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/ui_comp_guide/concepts/knockout-bindings.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">UI 组件 Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="ui组件概述">
+    
+
+    
+    <a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件概述</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件">
+    
+
+    
+    <span>组件</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="操作列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-actionscolumn.html">操作列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="书签组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-bookmarks.html">书签组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="按钮组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-button.html">按钮组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="复选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-checkbox.html">复选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单/复选框组组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-checkboxset.html">单/复选框组组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-column.html">表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-columns.html">多表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可控多表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-columnscontrols.html">可控多表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-date.html">数据组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-datecolumn.html">数据列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可拖曳组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-draganddrop.html">可拖曳组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="动态行组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-dynamicrows.html">动态行组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="邮件组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-email.html">邮件组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导出按钮组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-exportbutton.html">导出按钮组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fieldset-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-fieldset.html">Fieldset component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-file.html">文件组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件上传组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-fileuploader.html">文件上传组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="过滤器组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-filters.html">过滤器组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签过滤器组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-filterschips.html">标签过滤器组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表单组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-form.html">表单组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="隐藏域组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-hidden.html">隐藏域组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="html内容组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-htmlcontent.html">Html内容组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="输入框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-input.html">输入框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可插入表单组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-insertform.html">可插入表单组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可插入列表组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-insertlisting.html">可插入列表组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表(网格)组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-listing-grid.html">列表(网格)组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉操作组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-massactions.html">下拉操作组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modal-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-modal.html">Modal component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多输入组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiline.html">多输入组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiselect.html">多选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多选框列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiselectcolumn.html">多选框列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-nav.html">导航栏组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开关列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-onoffcolumn.html">开关列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="分页组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-paging.html">分页组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选组组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-radioset.html">单选组组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="范围筛选组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-range.html">范围筛选组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="搜索组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-search.html">搜索组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-select.html">单选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-selectcolumn.html">单选列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表格显示数量控制组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-sizes.html">表格显示数量控制组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-tab.html">标签页组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文本组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-text.html">文本组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文本输入框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-textarea.html">文本输入框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="缩略图列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-thumbnailcolumn.html">缩略图列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="工具栏组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-toolbar.html">工具栏组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="树形下拉操作组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-treemassactions.html">树形下拉操作组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="wysiwyg-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-wysiwyg.html">WYSIWYG component</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="concepts">
+    
+
+    
+    <span>Concepts</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="ui组件配置流程">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_config_flow_concept.html">UI组件配置流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ui组件的xml配置">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html">关于UI组件的XML配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提供数据到ui组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_data_source.html">提供数据到UI组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ui组件的php修改">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_modifier_concept.html">关于UI组件的PHP修改</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板常量">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_template_literals.html">模板常量</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="magento自定义knockout.js绑定">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html">Magento自定义Knockout.js绑定</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uiclass库">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiclass_concept.html">关于uiClass库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uielement类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uielement_concept.html">关于uiElement类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uicollection类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uicollection_concept.html">关于uiCollection类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ulayout服务类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uilayout_concept.html">关于uLayout服务类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="ui组件连接属性">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_linking_concept.html">UI组件连接属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="uiregistry">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.html">uiRegistry</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何">
+    
+
+    
+    <span>如何</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="creating-and-displaying-a-category-attribute-with-ui-组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/howto/add_category_attribute.html">Creating and displaying a category attribute with UI 组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="troubleshoot">
+    
+
+    
+    <span>Troubleshoot</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="js调试ui组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.html">js调试UI组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">
+            <span property="name">UI组件概述</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Magento自定义Knockout.js绑定</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Magento自定义Knockout.js绑定</h1>
+
+  
+
+
+</section>
+
+			<p>This topic lists the custom <a href="http://knockoutjs.com/">Knockout.js</a> bindings used in the core Magento files. These bindings can also be used by third-party developers.</p>
+
+<h2 id="general-concepts">General concepts</h2>
+
+<h3 id="aliases">Aliases</h3>
+
+<p>The standard way to reference a knockout.js binding is using the <code class="highlighter-rouge">data-bind</code> attribute: <code class="highlighter-rouge">[data-bind="%binding_name%: %value%"]</code>. In Magento implementation, you can also use aliases to declare bindings. Some bindings may be defined as attributes (<code class="highlighter-rouge">[%binding_alias%="%value%"]</code>) or nodes (<code class="highlighter-rouge">%binding_alias% args="%value%"&gt;</code>).</p>
+
+<h3 id="binding-values">Binding values</h3>
+
+<p>Apart from the value type specified for each binding, every value may be wrapped in Knockout’s observable.</p>
+
+<h2 id="custom-magento-bindings">Custom Magento bindings</h2>
+
+<h3 id="afterrender"><code class="highlighter-rouge">afterRender</code></h3>
+
+<p>The <code class="highlighter-rouge">afterRender</code> binding notifies its subscriber when an associated element is inserted into the DOM.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/after-render.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/after-render.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: <code class="highlighter-rouge">(element: Element, viewModel: Object) =&gt; void</code>.
+Function that is invoked after the element is rendered.</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[afterRender]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">afterRender</span><span class="o">=</span><span class="s2">"function (target, viewModel) {
+    console.log('Rendered element:', target);
+    console.log('Associated view model:' viewModel);
+    console.log(this === viewModel);
+}"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="autoselect"><code class="highlighter-rouge">autoselect</code></h3>
+<p>The <code class="highlighter-rouge">autoselect</code> binding automatically highlights the text in an input element, when it gets focus.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/autoselect.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/autoselect.js">See on Github</a>.
+<strong>Value type</strong>: Boolean</p>
+
+<p>Defines whether the binding is enabled (<code class="highlighter-rouge">true</code>) or disabled (<code class="highlighter-rouge">false</code>).</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[autoselect]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c">&lt;!--</span> <span class="k">as</span> <span class="nx">an</span> <span class="nx">attribute</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">autoselect</span><span class="o">/&gt;</span>
+
+<span class="c">&lt;!--</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">standard</span> <span class="nx">KO</span> <span class="nx">form</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"autoselect: true"</span><span class="o">/&gt;</span></code></pre></figure>
+
+<h3 id="bindhtml"><code class="highlighter-rouge">bindHtml</code></h3>
+<p>The <code class="highlighter-rouge">bindHtml</code> binding renders the provided string, as a collection of HTML elements, inside of the associated node.</p>
+
+<p>It also instantiates all bindings defined for the rendered elements in the scope of the current <a href="http://knockoutjs.com/documentation/observables.html">view model</a>.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/bind-html.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/bind-html.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: String</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[bindHtml]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">bindHtml</span><span class="o">=</span><span class="s2">"
+    &lt;div data-bind='text: </span><span class="err">\</span><span class="s2">'String from the text binding</span><span class="err">\</span><span class="s2">''&gt;&lt;/div&gt;
+"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="collapsible"><code class="highlighter-rouge">collapsible</code></h3>
+<p>The <code class="highlighter-rouge">collapsible</code> binding provides methods and properties required for implementing collapsible panels. It can automatically collapse panel when clicking outside of the associated node, toggle optional CSS class when node changes its visibility. It has additional helper bindings: <code class="highlighter-rouge">toggleCollapsible</code>, <code class="highlighter-rouge">openCollapsible</code> and <code class="highlighter-rouge">closeCollapsible</code>.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/collapsible.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/collapsible.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: Object</p>
+
+<p>Binding’s configuration that may include the following properties:</p>
+
+<table>
+  <tr>
+    <th>
+      Property
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      Type
+    </th>
+    <th>
+      Default value
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <code>as</code>
+    </td>
+    <td>
+      A key for accessing the binding in the current scope.
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      <code>$collapsible</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>closeOnOuter</code>
+    </td>
+    <td>
+      Whether the panel needs to be closed on outside boundaries
+      click.
+    </td>
+    <td>
+      Boolean
+    </td>
+    <td>
+      <code>true</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>onTarget</code>
+    </td>
+    <td>
+      Toggles panel's visibility on the target node click.
+    </td>
+    <td>
+      Boolean
+    </td>
+    <td>
+      <code>false</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>openClass</code>
+    </td>
+    <td>
+      CSS class that is added to or removed from the target node,
+      when the panel changes visibility. If the option values is
+      left empty, then the binding does not modify the element's
+      classes.
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      <code>_active</code>
+    </td>
+  </tr>
+</table>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[collapsible]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">collapsible</span><span class="o">=</span><span class="s2">"openClass: false, closeOnOuter: false"</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="datepicker"><code class="highlighter-rouge">datepicker</code></h3>
+
+<p>The <code class="highlighter-rouge">datepicker</code> binding is an adapter for the <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_calendar.html">mage/calendar.js</a> widget.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/datepicker.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/datepicker.js">See on Github</a></p>
+
+<p><strong>Value type</strong>: String|Object</p>
+
+<p><strong>Aliases</strong>: -</p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"datepicker: value"</span><span class="o">/&gt;</span></code></pre></figure>
+
+<h3 id="fadevisible"><code class="highlighter-rouge">fadeVisible</code></h3>
+<p>The <code class="highlighter-rouge">fadeVisible</code> binding performs the gradual change of the element’s visibility  (with an animation effect).</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/fadeVisible.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/fadeVisible.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: Boolean</p>
+
+<p>Defines whether the element is visible (<code class="highlighter-rouge">true</code>) or hidden (<code class="highlighter-rouge">false</code>).</p>
+
+<p><strong>Aliases</strong>: -</p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"fadeVisible: isVisible"</span><span class="o">&gt;</span><span class="nx">Foo</span> <span class="nx">Bar</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">click</span><span class="o">=</span><span class="s2">"function () { isVisible(!isVisible()); }"</span><span class="o">&gt;</span><span class="nx">Toggle</span><span class="o">&lt;</span><span class="sr">/button&gt;</span></code></pre></figure>
+
+<h3 id="i18n"><code class="highlighter-rouge">i18n</code></h3>
+
+<p>The <code class="highlighter-rouge">i18n</code> binding is used to translate a string according to the currently enabled locale. Additionally, it creates the necessary elements for the TranslateInline jQuery widget, if it’s enabled on the page.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/i18n.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/i18n.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: <code class="highlighter-rouge">string</code></p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[translate]</code>, <code class="highlighter-rouge">&lt;translate&gt;</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"i18n: 'Translate as a standard knockout binding'"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">translate</span><span class="o">=</span><span class="s2">"'Translate using the attribute'"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">translate</span> <span class="nx">args</span><span class="o">=</span><span class="s2">"'Translate using the tag'"</span><span class="o">&gt;&lt;</span><span class="sr">/translate&gt;</span></code></pre></figure>
+
+<h3 id="keyboard">keyboard</h3>
+
+<p>The keyboard binding allows setting up listeners for the <code class="highlighter-rouge">keypress</code> event of a specific key.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/keyboard.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/keyboard.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>:<code class="highlighter-rouge"> [name: number]: (e: KeyboardEvent) =&gt; void</code></p>
+
+<p>A collection in which keys represent keyboard keys codes and values are callback functions invoked when the associated key is pressed.</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[keyboard]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">keyboard</span><span class="o">=</span><span class="s2">"{
+    13: function (e) {
+        console.log('Enter key has been pressed!');
+    }
+}"</span><span class="o">/&gt;</span></code></pre></figure>
+
+<h3 id="mageinit">mageInit</h3>
+<p>The <code class="highlighter-rouge">mageInit</code> binding is an adapter for the <code class="highlighter-rouge">[data-mage-init]</code> attribute that is used to initialize jQuery widgets on the associated element.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/mage-init.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/mage-init.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: <code class="highlighter-rouge">[path: string]:</code> Object</p>
+
+<p><strong>Aliases</strong>: -</p>
+
+<p><strong>Usage example</strong>: creating modal window</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">mageInit</span><span class="o">=</span><span class="s2">"{
+    'Magento_Ui/js/modal/modal': {
+        autoOpen: true,
+        buttons: false,
+        modalClass: 'modal-system-messages',
+        title: 'Hello world!'
+    }
+}"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="optgroup">optgroup</h3>
+<p>The <code class="highlighter-rouge">optgroup</code> binding is a decorator for the standard Knockout’s options binding which adds the support of nested options, and renders them as the <code class="highlighter-rouge">&lt;optgroup&gt;</code> element.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/optgroup.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/optgroup.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: <code class="highlighter-rouge">Array&lt;string&gt;</code> | <code class="highlighter-rouge">Array&lt;Object&gt;</code></p>
+
+<p><strong>Aliases</strong>: -</p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">select</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"
+    optionsValue: 'value',
+    optionsText: 'label',
+    optgroup: [{
+        label: 'Swedish Cars',
+        value: [{
+            label: 'Volvo',
+            value: 'volvo'
+        }, {
+            label: 'Saab',
+            value: 'saab'      
+        }]
+    }, {
+        label: 'German Cars',
+        value: [{
+            label: 'Mercedes',
+            value: 'mercedes'
+        }]
+    }]"</span><span class="o">&gt;&lt;</span><span class="sr">/select&gt;</span></code></pre></figure>
+
+<h3 id="outerclick">outerClick</h3>
+<p>The <code class="highlighter-rouge">outerClick</code> binding allows to subscribe for the “click” event that happens outside of the boundaries of the associated element.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/outer_click.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/outer_click.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: Function.</p>
+
+<p>Callback that is invoked when user clicks outside of the element.</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[outerClick]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"target"</span> <span class="nx">outerClick</span><span class="o">=</span><span class="s2">"function () {
+    console.log('Clicked outside of the "</span><span class="nx">target</span><span class="s2">" node.');
+}"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="range">range</h3>
+<p>The <code class="highlighter-rouge">range</code> binding is an adapter for the <a href="https://jqueryui.com/slider/">jQuery UI Slider widget</a>. It also implements necessary handlers to work with mobile devices.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/range.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/range.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: Object.</p>
+
+<p>Configuration that is passed to the Slider widget.</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[range]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span>
+    <span class="kd">class</span><span class="o">=</span><span class="s2">"data-slider"</span>
+    <span class="nx">range</span><span class="o">=</span><span class="s2">"{
+        value: scale,
+        min: 1,
+        max: 200,
+        step: 1
+}"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="resizable">resizable</h3>
+
+<p>The <code class="highlighter-rouge">resizable</code> binding is an adapter for the <a href="http://api.jqueryui.com/resizable/">jQuery UI Resizable</a> widget.</p>
+
+<p><strong>Source:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/resizable.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/resizable.js">See on Github</a>.</p>
+
+<p><strong>Value type:</strong> Object.</p>
+
+<p>Configuration for the Resizable widget.</p>
+
+<p><strong>Aliases:</strong> <code class="highlighter-rouge">[resizable]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"resizable: {maxHeight: 200}"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="scope"><code class="highlighter-rouge">scope</code></h3>
+<p>A binding that allows evaluating descendant nodes in the scope of an object found in the UiRegistry by provided string.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/scope.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/scope.js">See on Github</a>.</p>
+
+<p><strong>Value type</strong>: String.</p>
+
+<p>Component’s name by which to perform a lookup in the registry.</p>
+
+<p><strong>Aliases</strong>: <code class="highlighter-rouge">[ko-scope]</code>, <code class="highlighter-rouge">&lt;scope&gt;</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c">&lt;!--</span> <span class="k">as</span> <span class="nx">an</span> <span class="nx">attribute</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">ko</span><span class="o">-</span><span class="nx">scope</span><span class="o">=</span><span class="s2">"'name.of.component'"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="c">&lt;!--</span> <span class="k">in</span> <span class="nx">a</span> <span class="nx">standard</span> <span class="nx">KO</span> <span class="nx">form</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"scope: 'name.of.component'"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="c">&lt;!--</span> <span class="nx">without</span> <span class="nx">an</span> <span class="nx">extra</span> <span class="nx">container</span> <span class="nx">node</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">scope</span> <span class="nx">args</span><span class="o">=</span><span class="s2">"'name.of.component'"</span><span class="o">&gt;&lt;</span><span class="sr">/scope&gt;</span></code></pre></figure>
+
+<h3 id="staticchecked">staticChecked</h3>
+
+<p>The <code class="highlighter-rouge">staticChecked</code> binding implements the behavior similar to the standard <a href="http://knockoutjs.com/documentation/checked-binding.html"><code class="highlighter-rouge">checked</code></a> binding. The difference is that <code class="highlighter-rouge">staticChecked</code> doesn’t change the array of the already selected elements if the value of the associated DOM element changes.</p>
+
+<p><strong>Source</strong>: <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/staticChecked.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/staticChecked.js">See on Github</a>.</p>
+
+<p><strong>Value type:</strong> Boolean | String | Number | Array&lt;String|Number|Number&gt;</p>
+
+<p><strong>Aliases:</strong> <code class="highlighter-rouge">[staticChecked]</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"checkbox"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"staticChecked: observable"</span><span class="o">/&gt;</span></code></pre></figure>
+
+<h3 id="template">template</h3>
+<p>Magento <code class="highlighter-rouge">template</code> binding is a customization of the existing Knockout <a href="http://knockoutjs.com/documentation/template-binding.html"><code class="highlighter-rouge">template</code> binding</a>. It is used to render a template inside of the associated element. The original Knockout’s  implementation was overridden to support asynchronous loading of templates by the provided path, instead of searching for them on the page.</p>
+
+<p><strong>Source:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/template/engine.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/template/engine.js">See on Github</a>.</p>
+
+<p><strong>Value type:</strong> String | Object</p>
+
+<p>Сonfiguration for the <code class="highlighter-rouge">template</code> binding. If the provided value is a string, it is processed as a path to <code class="highlighter-rouge">.html</code> file.</p>
+
+<p><strong>Aliases:</strong> <code class="highlighter-rouge">[render]</code>, <code class="highlighter-rouge">&lt;render&gt;</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"template: 'path/to/the/template'"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span></code></pre></figure>
+
+<h3 id="tooltip">tooltip</h3>
+
+<p>Magento custom knockout binding for displaying a tooltip.</p>
+
+<p><strong>Source:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/knockout/bindings/tooltip.js</code>. <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Ui/view/base/web/js/lib/knockout/bindings/tooltip.js">See on Github</a>.</p>
+
+<p><strong>Value type:</strong> Object</p>
+
+<p>Binding’s configuration that may include the following options:</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>描述</th>
+    <th>Type</th>
+    <th>Default value</th>
+  </tr>
+  <tr>
+    <td><code>action</code></td>
+    <td>An action that triggers displaying a tooltip.</td>
+    <td>String ('click'|'hover')</td>
+    <td>'click'</td>
+  </tr>
+  <tr>
+    <td><code>center</code></td>
+    <td>Center the tooltip relatively to the element it is bound to.</td>
+    <td>Boolean</td>
+    <td><code>false</code></td>
+  </tr>
+  <tr>
+    <td><code>closeButton</code></td>
+    <td>Whether the tooltip has a Close button.</td>
+    <td>Boolean</td>
+    <td><code>false</code></td>
+  </tr>
+  <tr>
+    <td><code>delay</code></td>
+    <td>A delay before displaying the tooltip, in seconds.</td>
+    <td>Number</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><code>position</code></td>
+    <td>The priority position for the tooltip.</td>
+    <td>String (<code>'top'/'right'/'left'/'bottom'</code>)</td>
+    <td><code>'top'</code></td>
+  </tr>
+  <tr>
+    <td><code>track</code></td>
+    <td>Whether the tooltip moves together with the pointer</td>
+    <td>Boolean</td>
+    <td><code>false</code></td>
+  </tr>
+  <tr>
+    <td><code>trigger</code></td>
+    <td>The selector's action that triggers displaying a tooltip.</td>
+    <td>String</td>
+    <td>''</td>
+  </tr>
+</table>
+
+<p><strong>Aliases:</strong> <code class="highlighter-rouge">[tooltip]</code></p>
+
+<p><strong>Usage example</strong>:</p>
+
+<p>Adding the tooltip binding as an attribute:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">tooltip</span><span class="o">=</span><span class="s2">"
+     trigger: '[data-tooltip-trigger=trigger]',
+     action: 'click',
+     delay: 300,
+     track: true,
+     position: 'top'
+ "</span><span class="o">&gt;</span> <span class="nx">Tooltip</span> <span class="nx">data</span> <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">tooltip</span><span class="o">-</span><span class="nx">trigger</span><span class="o">=</span><span class="s2">"trigger"</span><span class="o">/&gt;</span></code></pre></figure>
+
+<p>Adding the tooltip binding as a node:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">bind</span><span class="o">=</span><span class="s2">"
+    tooltip: {
+        trigger: '[data-tooltip-trigger=trigger]',
+        action: 'click',
+        delay: 300,
+        track: true,
+        position: 'top'
+    }  
+"</span><span class="o">&gt;</span> <span class="nx">Tooltip</span> <span class="nx">data</span> <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">tooltip</span><span class="o">-</span><span class="nx">trigger</span><span class="o">=</span><span class="s2">"trigger"</span><span class="o">/&gt;</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

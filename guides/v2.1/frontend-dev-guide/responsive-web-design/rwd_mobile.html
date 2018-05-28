@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>基于默认主题创建一个响应式的移动端主题 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_mobile.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/frontend-dev-guide/responsive-web-design/rwd_mobile.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">前端工程师手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/conventions.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento缓存概述">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/cache_for_frontdevs.html">Magento缓存概述</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="主题开发最佳实践">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/theme-best-practice.html">主题开发最佳实践</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="themes">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/themes/theme-general.html">Themes</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="主题概述">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-overview.html">主题概述</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装第三方前台主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-install.html">安装第三方前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="卸载前台主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-uninstall.html">卸载前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建一个管理面板主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/admin_theme_create.html">创建一个管理面板主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="应用一个管理面板主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/admin_theme_apply.html">应用一个管理面板主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建一个新的前台主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-create.html">创建一个新的前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="应用和配置前台主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-apply.html">应用和配置前台主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定痊模板，布局和样式">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/debug-theme.html">定痊模板，布局和样式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento主题的结构">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-structure.html">Magento主题的结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="主题的继承关系">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-inherit.html">主题的继承关系</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为网站添加一个favicons图标">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/favicon.html">为网站添加一个favicons图标</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为主题配置图片属性">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/theme-images.html">为主题配置图片属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置产品视频">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/product-video.html">配置产品视频</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="js打包">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/themes/js-bundling.html">js打包</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="layout">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/layouts/layout-overview.html">Layout</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="布局指令">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/xml-instructions.html">布局指令</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="布局文件类型">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/layout-types.html">布局文件类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="扩展一个布局">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/layout-extend.html">扩展一个布局</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="覆盖一个布局">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/layout-override.html">覆盖一个布局</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="常见的布局定制任务">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/xml-manage.html">常见的布局定制任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制布局图示">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/layouts/layout-practice.html">定制布局图示</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="templates">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/templates/template-overview.html">Templates</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模板定制化演练">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/templates/template-walkthrough.html">模板定制化演练</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板基本概念">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/templates/template-override.html">模板基本概念</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义模板图解">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/templates/template-sample.html">自定义模板图解</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义邮件模板">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/templates/template-email.html">自定义邮件模板</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板的xss安全">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/templates/template-security.html">模板的XSS安全</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="层叠样式表(css)">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-overview.html">层叠样式表(CSS)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="引入css">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-themes.html">引入CSS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="css-and-less-preprocessing">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-preprocess.html">CSS and LESS preprocessing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="compile-less-using-grunt">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/css_debug.html">Compile LESS using Grunt</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-ui库">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用jq-ui样式">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-jquery.html">使用jq UI样式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制样式图示">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-practice.html">定制样式图示</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制字体">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-topics/using-fonts.html">使用定制字体</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用自定义css预处理器">
+
+            
+
+            
+            <span>使用自定义css预处理器</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="添加定制css预处理器">
+                    
+
+                    
+                    <a  href="/guides/v2.1/frontend-dev-guide/css-topics/custom_preprocess.html">添加定制css预处理器</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用sass预处理器和gulp工具">
+                    
+
+                    
+                    <a  href="/guides/v2.1/frontend-dev-guide/css-topics/gulp-sass.html">使用Sass预处理器和gulp工具</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="快速样式指引">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/css-guide/css_quick_guide_overview.html">快速样式指引</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义主题样式的简单方法">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-guide/css_quick_guide_approach.html">自定义主题样式的简单方法</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="客户端less样式编译与服务器简单修改">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/css-guide/css_quick_guide_mode.html">客户端LESS样式编译与服务器简单修改</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何使用的主题响应式及兼容移动端">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_overview.html">如何使用的主题响应式及兼容移动端</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="响应式设计中的css">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_css.html">响应式设计中的CSS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento响应式设计中的js">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_js.html">Magento响应式设计中的js</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="基于默认主题创建一个响应式的移动端主题">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_mobile.html">基于默认主题创建一个响应式的移动端主题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="customizing-rwd-illustration">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_practice.html">Customizing RWD illustration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加自定义断点">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd-breakpoints.html">添加自定义断点</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="translations">
+    
+
+    
+    <a href="/guides/v2.1/frontend-dev-guide/translations/xlate.html">Translations</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="为自定义的字符使用翻译字典">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/translations/theme_dictionary.html">为自定义的字符使用翻译字典</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="翻译主题的字符串">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/translations/translate_theory.html">翻译主题的字符串</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为主题创建一个翻译字典,-illustration">
+
+            
+
+            
+            <a href="/guides/v2.1/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典, illustration</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">
+            <span property="name">前端工程师手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">基于默认主题创建一个响应式的移动端主题</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">基于默认主题创建一个响应式的移动端主题</h1>
+
+  
+
+
+</section>
+
+			<h2>这里有什么</h2>
+<p>The topic describes how to create a responsive mobile-specific <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> using the default Magento approaches.</p>
+
+<h2>Creating a mobile-specific theme</h2>
+
+<p>To use all the responsive approaches implemented in the Magento out-of-the-box Blank and Luma themes, your theme should declare one of them as a <a href="/guides/v2.1/frontend-dev-guide/themes/theme-inherit.html" target="_blank">parent</a>.</p>
+
+<p>To create a mobile-specific theme:</p>
+
+<ol>
+  <li>Create a theme as described in <a href="/guides/v2.1/frontend-dev-guide/themes/theme-create.html" target="_blank">Create a theme</a>, having specified Blank or Luma as a parent theme.</li>
+  <li>Add a <code>&lt;theme_dir&gt;/Magento_Theme/layout/default_head_blocks.xml</code> <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span> file with the following content:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;page</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework:View/Layout/etc/page_configuration.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;remove</span> <span class="na">src=</span><span class="s">"css/styles-l.css"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/page&gt;</span></code></pre></figure>
+
+<p>This will remove the desktop-specific files from your theme.</p>
+
+<h2>Recommended reading</h2>
+<ul>
+<li><a href="/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_css.html" target="_blank">CSS in Magento responsive design</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_mobile.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/frontend-dev-guide/responsive-web-design/rwd_mobile.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

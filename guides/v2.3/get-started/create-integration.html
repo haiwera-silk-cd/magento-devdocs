@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>创建一个集成 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/get-started/create-integration.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/get-started/create-integration.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/get-started/create-integration.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/get-started/create-integration.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/get-started/create-integration.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">起步 with Web APIs</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/get-started/bk-get-started-api.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用rest-api">
+    
+
+    
+    <a href="/guides/v2.3/get-started/rest_front.html">使用REST API</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="构造一个请求">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/gs-web-api-request.html">构造一个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用curl执行这个请求">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/gs-curl.html">使用curl执行这个请求</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="响应和状态码">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/gs-web-api-response.html">响应和状态码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  tutorial" id="使用rest-api的订单处理教程">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用REST API的订单处理教程</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用soap服务">
+    
+
+    
+    <a href="/guides/v2.3/get-started/soap/soap-web-api-calls.html">使用SOAP服务</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="authentication">
+    
+
+    
+    <a href="/guides/v2.3/get-started/authentication/gs-authentication.html">Authentication</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="基于访问令牌的认证">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/authentication/gs-authentication-token.html">基于访问令牌的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于oauth的认证">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="oauth错误码">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/authentication/oauth-errors.html">OAuth错误码</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基于session的认证">
+
+            
+
+            
+            <a href="/guides/v2.3/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1 active " id="创建一个集成">
+    
+
+    
+    <a href="/guides/v2.3/get-started/create-integration.html">创建一个集成</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="web-api功能测试">
+    
+
+    
+    <a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/get-started/bk-get-started-api.html">
+            <span property="name">Magento web API起步</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">创建一个集成</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">创建一个集成</h1>
+
+  
+
+
+</section>
+
+			<p>An <strong>integration</strong> enables third-party services to call the Magento web APIs. The Magento APIs currently supports Accounting, Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Product Information Management (PIM), and marketing automation systems out of the box.</p>
+
+<p>Implementing a simple integration requires little knowledge of <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> or Magento internal processes. However, you will need a working knowledge of</p>
+
+<ul>
+  <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Magento REST or SOAP Web APIs</a></li>
+  <li><a href="/guides/v2.3/get-started/authentication/gs-authentication.html">Web API authentication</a></li>
+  <li><a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a></li>
+</ul>
+
+<p>开始之前 creating a module, make sure that you have a working installation of Magento 2.0, and the <a href="/guides/v2.3/install-gde/system-requirements.html">Magento 系统要求</a>.</p>
+
+<p>To create an integration, follow these general steps:</p>
+
+<ol>
+  <li><a href="#skeletal">Create a module with the minimal structure and configuration.</a></li>
+  <li><a href="#files">Add files specific to the integration.</a></li>
+  <li><a href="#install">Install the module.</a></li>
+  <li><a href="#check">Check the integration.</a></li>
+  <li><a href="#integrate">Integrate with your application.</a></li>
+</ol>
+
+<h2 id="skeletal">Create a skeletal module</h2>
+
+<p>To develop a module, you must:</p>
+
+<ol>
+  <li>
+    <p><strong>Create the module file structure.</strong> The module for an integration can be placed anywhere under the Magento root directory, but the recommended location is <code class="highlighter-rouge">&lt;magento_base_dir&gt;/vendor/&lt;vendor_name&gt;/module-&lt;module_name&gt;</code>.</p>
+
+    <p>Also create  <code class="highlighter-rouge">etc</code>, <code class="highlighter-rouge">etc/integration</code>, and <code class="highlighter-rouge">Setup</code> subdirectories under <code class="highlighter-rouge">module-&lt;module_name&gt;</code>, as shown in the following example:</p>
+
+    <pre>
+ cd &lt;magento_base_dir&gt;
+ mkdir -p vendor/&lt;vendor_name&gt;/module-&lt;module_name&gt;/etc/integration
+ mkdir -p vendor/&lt;vendor_name&gt;/module-&lt;module_name&gt;/Setup
+</pre>
+    <p>For more detailed information, see <a href="/guides/v2.3/extension-dev-guide/build/module-file-structure.html">创建你的组件文件结构</a>.</p>
+  </li>
+  <li>
+    <p><strong>Define your module configuration file.</strong> The <code class="highlighter-rouge">etc/module.xml</code> file provides basic information about the module. Change directories to the <code class="highlighter-rouge">etc</code> directory and create the <code class="highlighter-rouge">module.xml</code> file. You must specify values for the following attributes:</p>
+
+    <table>
+<tr>
+<th>Attribute</th><th>描述</th>
+</tr>
+<tr>
+<td>name</td>
+<td>A string that uniquely identifies the <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>.</td>
+</tr>
+<tr>
+<td>setup_version</td>
+<td>The version of Magento the component uses</td>
+</tr>
+</table>
+    <p>The following example shows an example <code class="highlighter-rouge">etc/module.xml</code> file.</p>
+
+    <pre>
+&lt;?xml version="1.0"?&gt;
+&lt;!--
+   /**
+   * Copyright © 2015 Magento. All rights reserved.
+   * See COPYING.txt for license details.
+   &#42;&#47;
+   --&gt;
+   &lt;config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd"&gt;
+       &lt;module name="Vendor1_Module1" setup_version="2.0.0"&gt;
+            &lt;sequence&gt;
+                &lt;module name="Magento_Integration"/&gt;
+            &lt;/sequence&gt;
+       &lt;/module&gt;
+     &lt;/config&gt;
+</pre>
+
+    <p>Module <code class="highlighter-rouge">Magento_Integration</code> is added to “sequence” to be loaded first. It helps to avoid the issue, when a module with integration config loaded, that leads to a malfunction.</p>
+  </li>
+  <li>
+    <p><strong>Add your module’s <code class="highlighter-rouge">composer.json</code> file.</strong> Composer is a dependency manager for PHP. You must create a <code class="highlighter-rouge">composer.json</code> file for your module so that Composer can install and update the libraries your module relies on. Place the <code class="highlighter-rouge">composer.json</code> file in the <code class="highlighter-rouge">module-&lt;module_name&gt;</code> directory.</p>
+
+    <p>The following example demonstrates a minimal <code class="highlighter-rouge">composer.json</code> file.</p>
+
+    <pre>
+   {
+      "name": "Vendor1_Module1",
+      "description": "create integration from config",
+      "require": {
+         "php": "~5.5.0|~5.6.0|~7.0.0",
+         "magento/framework": "2.0.0",
+         "magento/module-integration": "2.0.0"
+      },
+      "type": "magento2-module",
+      "version": "1.0",
+      "autoload": {
+         "files": [ "registration.php" ],
+         "psr-4": {
+            "Vendor1\\Module1\\": ""
+         }
+      }
+   }
+ </pre>
+
+    <p>For more information, see <a href="/guides/v2.3/extension-dev-guide/build/create_component.html">Create a component</a>.</p>
+  </li>
+  <li>
+    <p><strong>Create a <code class="highlighter-rouge">registration.php</code> file</strong> The <code class="highlighter-rouge">registration.php</code> registers the module with the Magento system. It must be placed in the module’s root directory.</p>
+
+    <pre>
+   &lt;?php
+     /**
+     * Copyright © 2015 Magento. All rights reserved.
+     * See COPYING.txt for license details.
+     &#42;&#47;
+
+     \Magento\Framework\Component\ComponentRegistrar::register(
+     \Magento\Framework\Component\ComponentRegistrar::MODULE,
+     'Vendor1_Module1',
+     __DIR__
+     );
+   </pre>
+  </li>
+  <li>
+    <p><strong>Create an install class.</strong>
+Change directories to your <code class="highlighter-rouge">Setup</code> directory. Create a <code class="highlighter-rouge">InstallData.php</code> file that installs the integration configuration data into the Magento integration table.</p>
+
+    <p>The following sample is boilerplate and requires minor changes to make your integration work.</p>
+
+    <pre>
+ &lt;?php
+ namespace Vendor1\Module1\Setup;
+
+ use Magento\Framework\Setup\ModuleContextInterface;
+ use Magento\Framework\Setup\ModuleDataSetupInterface;
+ use Magento\Integration\Model\ConfigBasedIntegrationManager;
+ use Magento\Framework\Setup\InstallDataInterface;
+
+ class InstallData implements InstallDataInterface
+ {
+     /**
+      &#42; @var ConfigBasedIntegrationManager
+      &#42;&#47;
+
+
+     private $integrationManager;
+
+     /**
+      &#42; @param ConfigBasedIntegrationManager $integrationManager
+      &#42;&#47;
+
+     public function &#95;&#95;construct(ConfigBasedIntegrationManager $integrationManager)
+     {
+         $this-&gt;integrationManager = $integrationManager;
+     }
+
+     /**
+      &#42; {@inheritdoc}
+      &#42;&#47;
+
+     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+     {
+         $this-&gt;integrationManager-&gt;processIntegrationConfig(['testIntegration']);
+     }
+ }
+ </pre>
+
+    <p>In the following line</p>
+
+    <p><code class="highlighter-rouge">$this-&gt;integrationManager-&gt;processIntegrationConfig(['testIntegration']);</code></p>
+
+    <p><code class="highlighter-rouge">testIntegration</code> must refer to your <code class="highlighter-rouge">etc/integrations/config.xml</code> file, and the integration name value must be the same.</p>
+
+    <p>Also, be sure to change the path after <code class="highlighter-rouge">namespace</code> for your vendor and module names.</p>
+  </li>
+</ol>
+
+<h2 id="files">Create integration files</h2>
+<p>Magento provides the Integration module, which simplifies the process of defining your integration. This module automatically performs functions such as:</p>
+
+<ul>
+  <li>Managing the third-party account that connects to Magento.</li>
+  <li>Maintaining OAuth authorizations and user data.</li>
+  <li>Managing security tokens and requests.</li>
+</ul>
+
+<p>To customize your module, you must create multiple <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> files and read through others files to determine what resources existing Magento modules have access to.</p>
+
+<p>The process for customizing your module includes</p>
+
+<ul>
+  <li><a href="#resources">Define the required resources</a></li>
+  <li><a href="#preconfig">Pre-configure the integration</a></li>
+</ul>
+
+<h3 id="resources">Define the required resources</h3>
+<p>The <code class="highlighter-rouge">etc/integration/api.xml</code> file defines which <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> resources the integration has access to.</p>
+
+<p>To determine which resources an integration needs access to, review the permissions defined in each module’s <code class="highlighter-rouge">etc/acl.xml</code> file.</p>
+
+<p>In the following example, the test integration requires access to the following resources in the Sales module:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;integrations&gt;</span>
+    <span class="nt">&lt;integration</span> <span class="na">name=</span><span class="s">"testIntegration"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;resources&gt;</span>
+            <span class="c">&lt;!-- To grant permission to Magento_Log::online, its parent Magento_Customer::customer needs to be declared as well--&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Customer::customer"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Log::online"</span> <span class="nt">/&gt;</span>
+            <span class="c">&lt;!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared--&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Sales::sales"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Sales::sales_operation"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Sales::sales_order"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Sales::actions"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;resource</span> <span class="na">name=</span><span class="s">"Magento_Sales::reorder"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/resources&gt;</span>
+    <span class="nt">&lt;/integration&gt;</span>
+<span class="nt">&lt;/integrations&gt;</span></code></pre></figure>
+
+<h3 id="preconfig">Pre-configure the integration</h3>
+
+<p>Your module can optionally provide a configuration file <code class="highlighter-rouge">config.xml</code> so that the integration can be automatically pre-configured with default values. To enable this feature, create the <code class="highlighter-rouge">config.xml</code> file in the <code class="highlighter-rouge">etc/integration</code> directory.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>If you pre-configure the integration, the values cannot be edited from the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">admin</span> panel.</p>
+</div>
+
+<p>The  file defines which API resources the integration has access to.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;integrations&gt;</span>
+   <span class="nt">&lt;integration</span> <span class="na">name=</span><span class="s">"TestIntegration"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;email&gt;&lt;/email&gt;</span>
+       <span class="nt">&lt;endpoint_url&gt;&lt;/endpoint_url&gt;</span>
+       <span class="nt">&lt;identity_link_url&gt;&lt;/identity_link_url&gt;</span>
+   <span class="nt">&lt;/integration&gt;</span>
+<span class="nt">&lt;/integrations&gt;</span></code></pre></figure>
+
+<table>
+<tr>
+<th>Element</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>integrations</td>
+<td>Contains one or more integration definitions.</td>
+</tr>
+<tr>
+<td>integration name=""</td>
+<td>Defines an integration. The <code>name</code> must be specified.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>An email to associate with this integration.</td>
+</tr>
+<tr>
+<td>endpoint_url</td>
+<td><p>Optional. The <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <code>https://</code>.</p>
+<p>See <a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a> for details.</p></td>
+</tr>
+<tr>
+<td>identity_link_url</td>
+<td>Optional. The URL that redirects the user to link their 3rd party account with the Magento integration.</td>
+</tr>
+</table>
+<h2 id="install">Install your module</h2>
+<p>Use the following steps to install your module:</p>
+
+<ol>
+  <li>
+    <p>Run the following command to update the Magento <span term-uuid="66b924b4-8097-4aea-93d9-05a81e6cc00c" class="glossary-term" data-toggle="popover">数据库表结构</span> and data.</p>
+
+    <p><code>bin/magento setup:upgrade</code></p>
+  </li>
+  <li>
+    <p>Run the following command to generate the new code.</p>
+
+    <p><code>bin/magento setup:di:compile</code></p>
+  </li>
+</ol>
+
+<h2 id="check">Check your integration</h2>
+<p>Log in to Magento and navigate to <strong>Settings &gt; Extensions &gt; Integrations</strong>. The integration should be displayed in the grid.</p>
+
+<h2 id="integrate">Integrate with your application</h2>
+
+<p>Before you can activate your integration in Magento, you must create two pages on your application to handle OAuth communications.</p>
+
+<ul>
+  <li>
+    <p>The location specified in the <code class="highlighter-rouge">identity_link_url</code> parameter must point to a page that can handle login requests.</p>
+  </li>
+  <li>
+    <p>The location specified in the <code class="highlighter-rouge">endpoint_url</code> parameter (<strong>Callback URL</strong> in Admin) must be able to process OAuth token exchanges.</p>
+  </li>
+</ul>
+
+<h3 id="login">Login page</h3>
+
+<p>When a merchant clicks the <strong>Activate</strong> button in Admin, a pop-up login page for the third-party application displays. Magento sends values for <code class="highlighter-rouge">oauth_consumer_key</code> and <code class="highlighter-rouge">success_call_back</code> parameters. The application must store the value for<code class="highlighter-rouge">oauth_consumer_key</code> tie it to the login ID. Use the <code class="highlighter-rouge">success_call_back</code> parameter to return control back to Magento.</p>
+
+<h3 id="callback">Callback page</h3>
+<p>The callback page must be able to perform the following tasks:</p>
+
+<ul>
+  <li>
+    <p>Receive an initial HTTPS POST that Magento sends when the merchant activates integration. This post contains the Magento store URL, an <code class="highlighter-rouge">oauth_verifier</code>, the OAuth consumer key, and the OAuth consumer secret. The consumer key and secret are generated when the integration is created.</p>
+  </li>
+  <li>
+    <p>Ask for a request token. A request token is a temporary token that the user exchanges for an access token. Use the following API to get a request token from Magento:</p>
+
+    <p><code class="highlighter-rouge">POST /oauth/token/request</code></p>
+
+    <p>See <a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html#pre-auth-token">Get a request token</a> for more details about this call.</p>
+  </li>
+  <li>
+    <p>Parse the request token response. The response contains an <code class="highlighter-rouge">oauth_token</code> and <code class="highlighter-rouge">oauth_token_secret</code>.</p>
+  </li>
+  <li>
+    <p>Ask for a access token. The request token must be exchanged for an access token. Use the following API to get a request token from Magento:</p>
+
+    <p><code class="highlighter-rouge">POST /oauth/token/access</code></p>
+
+    <p>See <a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html#get-access-token">Get an access token</a> for more details about this call.</p>
+  </li>
+  <li>
+    <p>Parse the access token response. The response contains an <code class="highlighter-rouge">oauth_token</code> and <code class="highlighter-rouge">oauth_token_secret</code>. These values will be different than those provided in the request token response.</p>
+  </li>
+  <li>
+    <p>Save the access token and other OAuth parameters. The access token and OAuth parameters must be specified in the <code class="highlighter-rouge">Authorization</code> header in each call to Magento.</p>
+  </li>
+</ul>
+
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+  <li><a href="/guides/v2.3/get-started/authentication/gs-authentication.html">Web API authentication</a></li>
+  <li><a href="/guides/v2.3/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a></li>
+  <li><a href="/guides/v2.3/install-gde/system-requirements.html">Magento 系统要求</a></li>
+  <li><a href="/guides/v2.3/extension-dev-guide/build/module-file-structure.html">Create the module file structure</a></li>
+  <li><a href="/guides/v2.3/extension-dev-guide/build/create_component.html">Create a component</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/get-started/create-integration.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/get-started/create-integration.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

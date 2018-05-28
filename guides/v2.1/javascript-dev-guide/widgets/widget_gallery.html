@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>相册小工具 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/javascript-dev-guide/widgets/widget_gallery.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/javascript-dev-guide/widgets/widget_gallery.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/javascript-dev-guide/widgets/widget_gallery.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/javascript-dev-guide/widgets/widget_gallery.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/javascript-dev-guide/widgets/widget_gallery.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">js开发者手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.1/javascript-dev-guide/conventions_js.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="javascript">
+    
+
+    
+    <a href="/guides/v2.1/javascript-dev-guide/javascript/js_overview.html">JavaScript</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-js资源">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/js-resources.html">Magento js资源</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="about-amd-modules-and-requirejs">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/requirejs_concept.html">About AMD modules and RequireJS</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="调用和初始化js组件">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/js_init.html">调用和初始化js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制脚本">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/custom_js.html">使用定制脚本</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定位js组件">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/js_debug.html">定位js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="图解如何定制js组件">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/js_practice.html">图解如何定制js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="using-js混入">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/javascript/js_mixins.html">Using js混入</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento-jq小工具">
+    
+
+    
+    <a href="/guides/v2.1/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jq小工具</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="手风琴菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_accordion.html">手风琴菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提示弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_alert.html">提示弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="日历小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_calendar.html">日历小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可折叠窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_collapsible.html">可折叠窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="确认弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_confirm.html">确认弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_dialog.html">下拉弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="相册小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_gallery.html">相册小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_list.html">列表小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="放大镜小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_gallery_mg.html">放大镜小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="加载小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_loader.html">加载小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_menu.html">菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模态弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_modal.html">模态弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_navigation.html">导航栏小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="问询弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_prompt.html">问询弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速搜索小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_quickSearch.html">快速搜索小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页小工具">
+
+            
+
+            
+            <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_tabs.html">标签页小工具</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">
+            <span property="name">js开发者手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">相册小工具</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">相册小工具</h1>
+
+  
+
+
+</section>
+
+			<h2>概述</h2>
+
+<p>The gallery <span term-uuid="5bfa8a8e-6f3e-4fed-a43e-62339916f02e" class="glossary-term" data-toggle="popover">jQuery</span> <span term-uuid="f0dcf847-ce21-4b88-8b45-83e1cbf08100" class="glossary-term" data-toggle="popover">小工具</span> implements a content area with images organized into preview and thumbnails blocks.</p>
+
+<p>The following picture is an illustration of image displaying on the product page using the 相册小工具:</p>
+
+<p><img src="/common/images/gallery_scr.png" width="650px" alt="A product page with preview and thumbnails" /></p>
+
+<p>In addition, the <a href="/guides/v2.1/javascript-dev-guide/widgets/widget_gallery_mg.html">放大镜小工具</a> can be used to demonstrate images in 100% scaled size in separate dedicated layer, and the gallery fullscreen mode can be used to navigate the entire full sized photo.</p>
+
+<p>Gallery is displayed consistently across all supported browsers and is responsive — it sizes correctly on mobile devices and desktops.</p>
+
+<p>The 相册小工具 uses the <a href="http://fotorama.io/">Fotorama widget</a>.</p>
+
+<p>The important feature of the 相册小工具 implementation is the possibility to configure the widget options in the <code class="highlighter-rouge">view.xml</code> configuration file of a <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span>.</p>
+
+<p>The 相册小工具 source code is <a href="https://github.com/magento/magento2/blob/2.0/lib/web/mage/gallery/gallery.js">lib/web/mage/gallery/gallery.js</a></p>
+
+<p>The gallery magnifier source is <a href="https://github.com/magento/magento2/blob/2.0/lib/web/magnifier/magnify.js"> lib/web/magnifier/magnify.js</a>.</p>
+
+<h3>Contents</h3>
+
+<h2 id="gallery_init">Initialize the 相册小工具</h2>
+
+<p>The 相册小工具 is initialized as described in <a href="/guides/v2.1/javascript-dev-guide/javascript/js_init.html#init_phtml">JavaScript initialization</a>.</p>
+
+<p>Example of declarative initialization:</p>
+
+<p><code class="highlighter-rouge">&lt;Magento_Catalog_module_dir&gt;/view/frontend/templates/product/view/gallery.phtml</code></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/x-magento-init"</span><span class="o">&gt;</span>
+    <span class="p">{</span>
+         <span class="p">{</span>
+        <span class="s2">"&lt;element_selector&gt;"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"mage/gallery/gallery"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"data"</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">"thumb"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+                    <span class="s2">"img"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+                    <span class="s2">"full"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+                    <span class="s2">"caption"</span><span class="p">:</span> <span class="s2">"&lt;message&gt;"</span><span class="p">,</span>
+                    <span class="s2">"position"</span><span class="p">:</span> <span class="s2">"&lt;number&gt;"</span><span class="p">,</span>
+                    <span class="s2">"isMain"</span><span class="p">:</span> <span class="s2">"&lt;true/false&gt;"</span>
+                <span class="p">}],</span>
+                <span class="s2">"options"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"nav"</span><span class="p">:</span> <span class="s2">"&lt;false/thumbs/dots&gt;"</span><span class="p">,</span>
+                    <span class="s2">"loop"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"keyboard"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"arrows"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"allowfullscreen"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"showCaption"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"width"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"thumbwidth"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"thumbheight"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"height"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"transitionduration"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"transition"</span><span class="p">:</span> <span class="s2">"&lt;slide/crossfade/dissolve&gt;"</span><span class="p">,</span>
+                    <span class="s2">"navarrows"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"navtype"</span><span class="p">:</span> <span class="s2">"&lt;slides/thumbs&gt;"</span><span class="p">,</span>
+                    <span class="s2">"navdir"</span><span class="p">:</span> <span class="s2">"&lt;horizontal/vertical&gt;"</span>
+                <span class="p">},</span>
+                <span class="s2">"fullscreen"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"nav"</span><span class="p">:</span> <span class="s2">"&lt;false/thumbs/dots&gt;"</span><span class="p">,</span>
+                    <span class="s2">"loop"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"navdir"</span><span class="p">:</span> <span class="s2">"&lt;horizontal/vertical&gt;"</span><span class="p">,</span>
+                    <span class="s2">"arrows"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"showCaption"</span><span class="p">:</span> <span class="o">&lt;</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"transitionduration"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="s2">"transition"</span><span class="p">:</span> <span class="s2">"&lt;slide/crossfade/dissolve&gt;"</span>
+                <span class="p">},</span>
+                <span class="s2">"breakpoints"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"&lt;breakpoint_name&gt;"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"conditions"</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">"max-width"</span><span class="p">:</span> <span class="s2">"767px"</span>
+                        <span class="p">}</span>
+                        <span class="s2">"options"</span><span class="p">:</span> <span class="p">{}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script&gt;</span></code></pre></figure>
+
+<h2 id="gallery_options">Options</h2>
+
+<p>The following option groups are available for the 相册小工具:</p>
+
+<ul>
+  <li><a href="#data"><code class="highlighter-rouge">data</code></a></li>
+  <li><a href="#options"><code class="highlighter-rouge">options</code></a></li>
+  <li><a href="#fullscreen"><code class="highlighter-rouge">fullscreen</code></a></li>
+  <li><a href="#breakpoints"><code class="highlighter-rouge">breakpoints</code></a></li>
+</ul>
+
+<p>All options for each group are described further.</p>
+
+<h3 id="data"><code class="highlighter-rouge">data</code></h3>
+
+<p>Array of images to display.</p>
+
+<p>Where <code class="highlighter-rouge">image</code> is an object with keys:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+    <span class="s2">"thumb"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+    <span class="s2">"img"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+    <span class="s2">"full"</span><span class="p">:</span> <span class="s2">"&lt;small_image_url&gt;"</span><span class="p">,</span>
+    <span class="s2">"caption"</span><span class="p">:</span> <span class="s2">"&lt;message&gt;"</span><span class="p">,</span>
+    <span class="s2">"isMain"</span><span class="p">:</span> <span class="s2">"&lt;true/false&gt;"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The <code class="highlighter-rouge">thumb</code>, <code class="highlighter-rouge">img</code>, and <code class="highlighter-rouge">full</code> are full paths to proper image files.</p>
+
+<h4 id="data_caption"><code class="highlighter-rouge">data/caption</code></h4>
+
+<p>Set the caption for a specific image in the <code class="highlighter-rouge">data</code> field.
+Example of the runtime initialization with the <code class="highlighter-rouge">caption</code> option specified:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">galleryInstance</span><span class="p">({</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="na">img</span><span class="p">:</span> <span class="s1">'preview_number_one.jpg'</span><span class="p">,</span>
+            <span class="na">thumb</span><span class="p">:</span> <span class="s1">'preview_number_one.jpg'</span><span class="p">,</span>
+            <span class="na">caption</span><span class="p">:</span> <span class="s1">'T-Shirt Women side'</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">});</span></code></pre></figure>
+
+<h3 id="options"><code class="highlighter-rouge">options</code></h3>
+<p>Set of options available for the Preview region.</p>
+
+<h4 id="gallery_allowfullscreen"><code class="highlighter-rouge">options/allowfullscreen</code></h4>
+<p>Show the button that toggles full screen view of the gallery.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="gallery_arrows"><code class="highlighter-rouge">options/arrows</code></h4>
+
+<p>Display navigation arrows on the thumbnails sides.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="gallery_height"><code class="highlighter-rouge">options/height</code></h4>
+
+<p>Height of the preview block in pixels or percent.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: null</p>
+
+<h4 id="gallery_keyboard"><code class="highlighter-rouge">options/keyboard</code></h4>
+
+<p>Switch on/off the keyboard navigation.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">false</code></p>
+
+<h4 id="gallery_loop"><code class="highlighter-rouge">options/loop</code></h4>
+
+<p>Define whether images are displayed in a loop.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">false</code></p>
+
+<h4 id="gallery_maxheight"><code class="highlighter-rouge">options/maxheight</code></h4>
+
+<p>Maximum height of the preview block in pixels or percent.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">null</code></p>
+
+<h4 id="gallery_maxwidth"><code class="highlighter-rouge">options/maxwidth</code></h4>
+
+<p>Maximum width of the preview block in pixels or percent.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: 100%</p>
+
+<h4 id="gallery_minheight"><code class="highlighter-rouge">options/minheight</code></h4>
+
+<p>Minimal height of the preview block in pixels or percent.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">null</code></p>
+
+<h4 id="gallery_minwidth"><code class="highlighter-rouge">options/minwidth</code></h4>
+
+<p>Minimal width of the preview block in pixels or percent.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">null</code></p>
+
+<h4 id="gallery_nav"><code class="highlighter-rouge">options/nav</code></h4>
+
+<p>Variation of thumbnails in navigation.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">dots</code>: iPhone-style dots</li>
+  <li><code class="highlighter-rouge">thumbs</code>: thumbnails</li>
+  <li><code class="highlighter-rouge">false</code>: nothing</li>
+</ul>
+
+<p><strong>Default</strong>: <code class="highlighter-rouge">dots</code></p>
+
+<h4 id="gallery_navdir"><code class="highlighter-rouge">options/navdir</code></h4>
+
+<p>Sliding direction of thumbnails.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">vertical</code></li>
+  <li><code class="highlighter-rouge">horizontal</code></li>
+</ul>
+
+<h4 id="gallery_navarrows"><code class="highlighter-rouge">options/navarrows</code></h4>
+
+<p>Display navigation arrows for thumbnails.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="gallery_navtype"><code class="highlighter-rouge">options/navtype</code></h4>
+
+<p>Sliding type of thumbnails.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">slides</code>: on the arrow button click the thumbs ribbon shifts over several thumbs</li>
+  <li><code class="highlighter-rouge">thumb</code>: on the arrow button click the thumbs ribbon shifts over one thumb</li>
+</ul>
+
+<h4 id="gallery_ratio"><code class="highlighter-rouge">options/ratio</code></h4>
+
+<p>Width divided by height. Recommended if you set width in percents.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: calculated from <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code>.</p>
+
+<h4 id="gallery_showcaption"><code class="highlighter-rouge">options/showCaption</code></h4>
+
+<p>Enable view of caption in preview. Can be for initialized for specific image. Can work globally.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="gallery_startindex"><code class="highlighter-rouge">options/startindex</code></h4>
+
+<p>The index number of the image that is displayed once the gallery is initialized.</p>
+
+<p><strong>Type</strong>: Number</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">0</code></p>
+
+<h4 id="gallery_swipe"><code class="highlighter-rouge">options/swipe</code></h4>
+
+<p>Moving between preview images by swiping in left and right.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">true</code></p>
+
+<h4 id="gallery_thumbwidth"><code class="highlighter-rouge">options/thumbwidth</code></h4>
+
+<p>Width of thumbnails.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<h4 id="gallery_thumbwidth"><code class="highlighter-rouge">options/thumbheight</code></h4>
+
+<p>Height of thumbnails.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<h4 id="gallery_transitioneffect"><code class="highlighter-rouge">options/transition</code></h4>
+
+<p>Sets the transition effect for slides changing.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">slide</code></li>
+  <li><code class="highlighter-rouge">crossfade</code></li>
+  <li><code class="highlighter-rouge">dissolve</code></li>
+</ul>
+
+<h4 id="gallery_transitionduration"><code class="highlighter-rouge">options/transitionduration</code></h4>
+<p>Sets transition duration in milliseconds.</p>
+
+<p><strong>Type</strong>: Number</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="gallery_width"><code class="highlighter-rouge">options/width</code></h4>
+
+<p>Width of the preview in gallery in pixels or percents.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">null</code></p>
+
+<h3 id="fullscreen"><code class="highlighter-rouge">fullscreen</code></h3>
+
+<p>Set of options available for the fullscreen view.</p>
+
+<h4 id="full_arrows"><code class="highlighter-rouge">fullscreen/arrows</code></h4>
+
+<p>Display navigation arrows on the sides of previews in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="full_caption"><code class="highlighter-rouge">fullscreen/caption</code></h4>
+<p>Display <span term-uuid="9122e7d4-7db9-48b2-ad27-1af26bad1215" class="glossary-term" data-toggle="popover">alt text</span> as image title in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="fullscreen_keyboard"><code class="highlighter-rouge">fullscreen/keyboard</code></h4>
+
+<p>Switch on/off the keyboard navigation in the fullscreen mode.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="full_loop"><code class="highlighter-rouge">fullscreen/loop</code></h4>
+
+<p>Define whether images are displayed in a loop.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<p><strong>Default value</strong>: <code class="highlighter-rouge">false</code></p>
+
+<h4 id="full_nav"><code class="highlighter-rouge">fullscreen/nav</code></h4>
+
+<p>Variation of thumbnails in navigation in the fullscreen view.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">dots</code>: iPhone-style dots</li>
+  <li><code class="highlighter-rouge">thumbs</code>: thumbnails</li>
+  <li><code class="highlighter-rouge">false</code>: nothing</li>
+</ul>
+
+<h4 id="full_navdir"><code class="highlighter-rouge">fullscreen/navdir</code></h4>
+
+<p>Sliding direction of thumbnails in the fullscreen view.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">vertical</code></li>
+  <li><code class="highlighter-rouge">horizontal</code></li>
+</ul>
+
+<h4 id="full_carousel"><code class="highlighter-rouge">fullscreen/navigation_carousel</code></h4>
+
+<p>Display navigation thumbnails as carousel in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="full_showcaption"><code class="highlighter-rouge">fullscreen/showCaption</code></h4>
+
+<p>Enable view of caption in the fullscreen mode. Can be for initialized for specific image. Can work globally.</p>
+
+<p><strong>Type</strong>: Boolean</p>
+
+<h4 id="full_thumbwidth"><code class="highlighter-rouge">fullscreen/thumbwidth</code></h4>
+
+<p>Width of thumbnails in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<h4 id="full_thumbheight"><code class="highlighter-rouge">fullscreen/thumbheight</code></h4>
+
+<p>Height of thumbnails in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Number, String</p>
+
+<h4 id="fullscreen_transitioneffect"><code class="highlighter-rouge">fullscreen/transition</code></h4>
+
+<p>Sets the transition effect for slides changing in the fullscreen view.</p>
+
+<p><strong>Possible values</strong>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">slide</code></li>
+  <li><code class="highlighter-rouge">crossfade</code></li>
+  <li><code class="highlighter-rouge">dissolve</code></li>
+</ul>
+
+<h4 id="fullscreen_transitionduration"><code class="highlighter-rouge">fullscreen/transitionduration</code></h4>
+<p>Sets transition duration in milliseconds in the fullscreen view.</p>
+
+<p><strong>Type</strong>: Number</p>
+
+<h3 id="breakpoints"><code class="highlighter-rouge">breakpoints</code></h3>
+<p>Set of options that could be dynamically set while page is resizing.</p>
+
+<p>Set as follows:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"breakpoints"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"%breakpoint_name%"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"conditions"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+        <span class="s2">"options"</span><span class="p">:</span> <span class="p">{...}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Where the options are as follows:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">conditions</code>: compiled in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media query</a> through and operand. 例如: <code class="highlighter-rouge">"max-width": "767px"</code></li>
+  <li><code class="highlighter-rouge">options</code> - object of options that are applied</li>
+</ul>
+
+<h2 id="configure-gallery-options-in-viewxml">Configure gallery options in <code class="highlighter-rouge">view.xml</code></h2>
+
+<p>Gallery and magnifier options can be set in the <code class="highlighter-rouge">view.xml</code> configuration file of a theme. The file is conventionally located in <code class="highlighter-rouge">&lt;theme_dir&gt;/etc</code>.</p>
+
+<p>The general gallery options are set as follows:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"gallery"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%option1%"</span><span class="nt">&gt;</span>%option1_value%<span class="nt">&lt;/var&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%option2%"</span><span class="nt">&gt;</span>%option2_value%<span class="nt">&lt;/var&gt;</span>
+...
+<span class="nt">&lt;/var&gt;</span></code></pre></figure>
+
+<p>The fullscreen and breakpoints options are set in a similar way:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"fullscreen"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%fullscreen_option1%"</span><span class="nt">&gt;</span>%option1_value%<span class="nt">&lt;/var&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%fullscreen_option2%"</span><span class="nt">&gt;</span>%option2_value%<span class="nt">&lt;/var&gt;</span>
+...
+<span class="nt">&lt;/var&gt;</span>
+<span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"breakpoints"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%breakpoints_option1%"</span><span class="nt">&gt;</span>%option1_value%<span class="nt">&lt;/var&gt;</span>
+    <span class="nt">&lt;var</span> <span class="na">name=</span><span class="s">"%breakpoints_option2%"</span><span class="nt">&gt;</span>%option2_value%<span class="nt">&lt;/var&gt;</span>
+...
+<span class="nt">&lt;/var&gt;</span></code></pre></figure>
+
+<p>For illustration of setting gallery option in <code class="highlighter-rouge">view.xml</code>, you can reference to the <a href="https://github.com/magento/magento2/blob/2.0/app/design/frontend/Magento/blank/etc/view.xml#L184">view.xml of the Blank theme</a>.</p>
+
+<h2 id="gallery_api">Gallery API</h2>
+
+<p>Gallery methods are placed in data storage of the <code class="highlighter-rouge">gallery</code> object. To initialize the API, on the gallery object, call the <code class="highlighter-rouge">data</code> method with <code class="highlighter-rouge">gallery</code> as argument. The illustration follows:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="o">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">'gallery'</span><span class="p">);</span>
+
+<span class="c1">//or
+</span>
+<span class="k">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="s1">'[data-gallery-role="gallery"]'</span><span class="p">)</span><span class="o">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">'gallery'</span><span class="p">);</span></code></pre></figure>
+
+<p>This method returns JS object that contains <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> functions.</p>
+
+<p>To ensure that the gallery is fully formed, wrap your code with <span term-uuid="c57aef7c-97b4-4b2b-a999-8001accef1fe" class="glossary-term" data-toggle="popover">event</span> handler function and add it to the <code class="highlighter-rouge">gallery:loaded</code> event:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php">    <span class="err">$</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="o">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'gallery:loaded'</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="o">.</span><span class="nx">data</span><span class="p">(</span><span class="s1">'gallery'</span><span class="p">);</span>
+        <span class="cm">/* api methods calls */</span>
+    <span class="p">});</span></code></pre></figure>
+
+<p>Then to call a method, use the following notation:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php">    <span class="nx">api</span><span class="o">.%</span><span class="nx">method_name</span><span class="o">%</span><span class="p">();</span></code></pre></figure>
+
+<p>All available methods are listed in the following paragraph.</p>
+
+<h3 id="gallery_methods">Methods</h3>
+
+<ul>
+  <li><a href="#gallery_first">first</a></li>
+  <li><a href="#gallery_last">last</a></li>
+  <li><a href="#gallery_next">next</a></li>
+  <li><a href="#gallery_prev">prev</a></li>
+  <li><a href="#gallery_seek">seek</a></li>
+  <li><a href="#gallery_updateData">updateData</a></li>
+  <li><a href="#gallery_updateData">updateOptions</a></li>
+</ul>
+
+<h4 id="gallery_first"><code class="highlighter-rouge">first()</code></h4>
+
+<p>Displays the first preview image.</p>
+
+<h4 id="gallery_last"><code class="highlighter-rouge">last()</code></h4>
+
+<p>Displays the last preview image.</p>
+
+<h4 id="gallery_next"><code class="highlighter-rouge">next()</code></h4>
+
+<p>Image ID is passed as an argument. Displays the next preview image.</p>
+
+<p>If the last image ID is passed, the behavior depends on whether <a href="#gallery_loop">loop</a> is enabled:</p>
+
+<ul>
+  <li>if loop is enabled, the first image is displayed.</li>
+  <li>if loop is disabled, does not change the displayed image.</li>
+</ul>
+
+<h4 id="gallery_prev"><code class="highlighter-rouge">prev()</code></h4>
+
+<p>Displays the previous preview image.</p>
+
+<p>If the first image ID is passed, the behavior depends on whether <a href="#gallery_loop">loop</a> is enabled:</p>
+
+<ul>
+  <li>if loop is enbled, the last image is displayed.</li>
+  <li>if loop is disabled, does not change the displayed image.</li>
+</ul>
+
+<h4 id="gallery_seek"><code class="highlighter-rouge">seek()</code></h4>
+
+<p>Displays the image with the specified <code class="highlighter-rouge">index</code>.</p>
+
+<p>Doesn’t update preview if the argument is not valid.</p>
+
+<p>Behavior:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">seek(0)</code> does not display any preview</li>
+  <li><code class="highlighter-rouge">seek(1)</code> displays the first image.</li>
+  <li><code class="highlighter-rouge">seek(-1)</code> displays the last image.</li>
+  <li>If the argument is a number bigger than the number of items, or less than “-(number of items)” the gallery shows the modulus of the following division: total images number divided by the argument number.</li>
+</ul>
+
+<h4 id="gallery_updateData"><code class="highlighter-rouge">updateData()</code></h4>
+
+<p>Add new items to the gallery.</p>
+
+<p>Example:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">api</span><span class="o">.</span><span class="nx">updateData</span><span class="p">([{</span>
+    <span class="nx">img</span><span class="o">:</span> <span class="s1">'image1.jpg'</span><span class="p">,</span>
+    <span class="nx">thumb</span><span class="o">:</span> <span class="s1">'thumb1.jpg'</span><span class="p">,</span>
+    <span class="nx">caption</span><span class="o">:</span> <span class="s1">'caption'</span>
+<span class="p">}]);</span></code></pre></figure>
+
+<h4 id="gallery_updateOptions"><code class="highlighter-rouge">updateOptions()</code></h4>
+<p>Updates options of active breakpoint or default gallery options, if there is no active breakpoint.</p>
+
+<p>Example:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nx">api</span><span class="o">.</span><span class="nx">updateOptions</span><span class="p">([{</span>
+    <span class="nx">nav</span><span class="o">:</span> <span class="s1">'dots'</span>
+<span class="p">}]);</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/javascript-dev-guide/widgets/widget_gallery.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/javascript-dev-guide/widgets/widget_gallery.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

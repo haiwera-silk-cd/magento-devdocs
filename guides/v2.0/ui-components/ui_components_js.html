@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Using UI 组件' client-side | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/ui-components/ui_components_js.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/ui-components/ui_components_js.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/ui-components/ui_components_js.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/ui-components/ui_components_js.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/ui-components/ui_components_js.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">UI 组件</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="overview">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui-component.html">Overview</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1 active " id="using-ui-组件'-client-side">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui_components_js.html">Using UI 组件' client-side</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="listing/grid-component">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui-listing-grid.html">Listing/Grid Component</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="grid-search-indexing">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-listing-grid-search.html">Grid search indexing</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="listing/grid-secondary-组件">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui-secondary.html">Listing/Grid Secondary 组件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="filter-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-filter.html">Filter Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pagination-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-pagination.html">Pagination Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="massactions-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-massaction.html">MassActions Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="treemassaction-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-treemass.html">TreeMassAction Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="column-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-column.html">Column Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="ui-select-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-uiselect.html">UI-select Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="multiselect-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-multi.html">Multiselect Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="inline-edit-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-inline.html">Inline Edit Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="bookmark-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-bookmark.html">Bookmark Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="resize-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-resize.html">Resize Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="sticky-header-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-header.html">Sticky Header Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="export-button-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-export.html">Export Button Component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="file-uploader-component">
+
+            
+
+            
+            <a href="/guides/v2.0/ui-components/ui-secondary-uploader.html">File Uploader Component</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="form-component">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui-form.html">Form Component</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="definition.xml">
+    
+
+    
+    <a href="/guides/v2.0/ui-components/ui-definition.html">definition.xml</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/ui-components/ui-component.html">
+            <span property="name">Overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Using UI 组件' client-side</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Using UI 组件' client-side</h1>
+
+  
+
+
+</section>
+
+			<h2 id="这里有什么">这里有什么</h2>
+<p>This topic is aimed for developers, who need to reuse the <a href="/guides/v2.0/ui-library/ui-library-component.html">Magento UI 组件</a>.</p>
+
+<p>The topic covers the following:</p>
+
+<ul>
+  <li><a href="#config">UI 组件’ configuration</a></li>
+  <li><a href="#main_properties">The most important UI component’s properties</a></li>
+  <li><a href="#comp_link">UI 组件’ properties used for linking</a></li>
+  <li><a href="#comp_additional">Description of the additional UI 组件</a></li>
+  <li><a href="#comp_debug">JS UI 组件 debugging</a></li>
+</ul>
+
+<h2 id="config">UI 组件’ configuration</h2>
+
+<p>A UI component’s behavior, configuration and structure is defined by the following:</p>
+
+<ul>
+  <li>
+    <p>The available configuration options and methods for 组件 of a certain type, defined in the component’s .js file.</p>
+  </li>
+  <li>
+    <p>The actual configuration and structure of a particular component, specified in the component’s configuration <code class="highlighter-rouge">.xml</code> file, in the scope of the <code class="highlighter-rouge">&lt;argument&gt;&lt;/argument&gt;</code> node. The configuration file also extends properties, specifies the component’s template and the path to the component’s <code class="highlighter-rouge">.js</code> file.</p>
+  </li>
+</ul>
+
+<p>All these properties, options, and methods are available in the component template’s scope.</p>
+
+<h2 id="main_properties">Most important UI 组件’ properties</h2>
+<p>The most important client-side properties of a <span term-uuid="9bcc648c-bd08-4feb-906d-1e24c4f2f422" class="glossary-term" data-toggle="popover">UI component</span> are the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">component</code>: the path to the component’s <code class="highlighter-rouge">.js</code> file in terms of RequireJS.</li>
+</ul>
+
+<p>Example:
+The <code class="highlighter-rouge">.js</code> file of the bookmark component is <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Ui/view/base/web/js/grid/controls/bookmarks/bookmarks.js">Magento/Ui/view/base/web/js/grid/controls/bookmarks/bookmarks.js</a></p>
+
+<p>So the <code class="highlighter-rouge">component</code> property is set in the <code class="highlighter-rouge">.xml</code> configuration file like following:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"component"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>Magento_Ui/js/grid/controls/bookmarks/bookmarks<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">template</code>: path to the component’s <code class="highlighter-rouge">.html</code> template.</li>
+</ul>
+
+<p>Example:</p>
+
+<p>The <code class="highlighter-rouge">.html</code> template of the bookmarks component is <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Ui/view/base/web/templates/grid/controls/bookmarks/bookmarks.html">Magento/Ui/view/base/web/templates/grid/controls/bookmarks/bookmarks.html</a>.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"template"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>ui/grid/controls/bookmarks/bookmarks<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p>children: is a general name for the nested 组件 of a certain component. Children can be specified in the <code class="highlighter-rouge">.xml</code> configuration of the parent component (all nodes except <code class="highlighter-rouge">&lt;argument/&gt;</code> and <code class="highlighter-rouge">&lt;dataSource/&gt;</code> are considered children) and in the Knockout JS templates: children are the keys of the <code class="highlighter-rouge">elems</code> property.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">name</code>: the name of the component specified in the <code class="highlighter-rouge">.xml</code> configuration file of the parent UI component. In the run-time in a browser this value is transformed to a complex string. This string represents hierarchy of 组件 in the run-time.
+For example, <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml#L57"><code class="highlighter-rouge">app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml:57</code></a>:</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"> 
+<span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"columns_controls"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>In the run-time <code class="highlighter-rouge">columns_controls</code> is transformed to the following string: <code class="highlighter-rouge">cms_block_listing.cms_block_listing.listing_top.columns_controls</code>.</p>
+
+<p>This string is constructed from the following values:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">cms_block_listing.cms_block_listing</code>: the full name of the root component.</li>
+  <li><code class="highlighter-rouge">listing_top</code>: the value of the <code class="highlighter-rouge">name</code> attribute of the parent <code class="highlighter-rouge">&lt;container name="listing_top"&gt;</code> component.</li>
+  <li><code class="highlighter-rouge">columns_controls</code>: the value of the <code class="highlighter-rouge">name</code> attribute of the component itself.</li>
+</ul>
+
+<h2 id="comp_link">UI 组件’ properties used for linking</h2>
+
+<p>The following properties are used for linking observable properties and methods of UI 组件:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">exports</code>: used to notify some external entity about property changing. <code class="highlighter-rouge">exports</code>s value is an object, composed of the following:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">key</code>: name of the internal property or method which is tracked for changes.</li>
+      <li><code class="highlighter-rouge">value</code>: name of the property or method which receives the notification. Can use string templates.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example of setting <code class="highlighter-rouge">exports</code> in a component’s <code class="highlighter-rouge">.js</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="s1">'exports'</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s1">'visible'</span><span class="p">:</span> <span class="s1">'${ $.provider }.visibility'</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here <code class="highlighter-rouge">visible</code> is the <code class="highlighter-rouge">key</code>, <code class="highlighter-rouge">${ $.provider }.visibility</code> is the <code class="highlighter-rouge">value</code>.</p>
+
+<p>Example of setting <code class="highlighter-rouge">exports</code> in a component’s configuration <code class="highlighter-rouge">.xml</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"exports"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"visible"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sample_config.sample_provider.visibility<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+       <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<p>In this example, <code class="highlighter-rouge">visible</code> is the <code class="highlighter-rouge">key</code>, <code class="highlighter-rouge">sample_config.sample_provider.visibility</code> is the <code class="highlighter-rouge">value</code>.</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">imports</code>: used for tracking changes of an external entity property. <code class="highlighter-rouge">imports</code>’s value is an object, composed of the following:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">key</code>: name of the internal property or method which receives the notifications.</li>
+      <li><code class="highlighter-rouge">value</code>: name of the property or method which is tracked for changes. Can use string templates.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example of using <code class="highlighter-rouge">imports</code> in a component’s <code class="highlighter-rouge">.js</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="s1">'imports'</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s1">'visible'</span><span class="p">:</span> <span class="s1">'${ $.provider }.visibility'</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Example of using <code class="highlighter-rouge">imports</code> in a component’s configuration <code class="highlighter-rouge">.xml</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"imports"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"visible"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sample_config.sample_provider.visibility<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+       <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">links</code>: used for mutual tracking property changes. <code class="highlighter-rouge">links</code>’s value is an object, composed of the following:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">key</code>: name of the internal property or method which sends and receives the notifications.</li>
+      <li><code class="highlighter-rouge">value</code> - name of the property or method which sends and receives the notifications. Can use string templates.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example of using <code class="highlighter-rouge">links</code> in a component’s <code class="highlighter-rouge">.js</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="s1">'links'</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s1">'visible'</span><span class="p">:</span> <span class="s1">'${ $.provider }.visibility'</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Example of using <code class="highlighter-rouge">links</code> in a component’s configuration <code class="highlighter-rouge">.xml</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"links"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"visible"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sample_config.sample_provider.visibility<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+       <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">listens</code>: used to track the changes of a component’s property.
+    <ul>
+      <li><code class="highlighter-rouge">key</code> - name of the internal property which listens to the changes.</li>
+      <li><code class="highlighter-rouge">value</code> - name of the property or method which is tracked for changes. Can use string templates.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example of using <code class="highlighter-rouge">listens</code> in a component’s <code class="highlighter-rouge">.js</code> file :</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="s1">'listens'</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s1">'visible'</span><span class="p">:</span> <span class="s1">'${ $.provider }.visibility'</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Example of using <code class="highlighter-rouge">listens</code> in a component’s configuration <code class="highlighter-rouge">.xml</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"data"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"config"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"listens"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"visible"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>sample_config.sample_provider.visibility<span class="nt">&lt;/item&gt;</span>
+                    <span class="nt">&lt;/item&gt;</span>
+       <span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/argument&gt;</span></code></pre></figure>
+
+<h2 id="comp_additional">Frequently used additional 组件</h2>
+<p>This section is a brief description of the most frequently used additional UI 组件.</p>
+
+<h3 id="uiclass"><code class="highlighter-rouge">uiClass</code></h3>
+<p>Enables OOP pattern implementation.</p>
+
+<h3 id="uielement"><code class="highlighter-rouge">uiElement</code></h3>
+<p>Extends <code class="highlighter-rouge">uiClass</code>. Adds the following:</p>
+
+<ul>
+  <li>the <code class="highlighter-rouge">defaults</code> property</li>
+  <li>events handling</li>
+  <li>handling properties linking (the <code class="highlighter-rouge">imports</code>, <code class="highlighter-rouge">exports</code>, <code class="highlighter-rouge">links</code> and <code class="highlighter-rouge">listens</code> properties)</li>
+  <li>ability to add itself to the UI registry</li>
+</ul>
+
+<h3 id="uicollection"><code class="highlighter-rouge">uiCollection</code></h3>
+
+<p>Extends <code class="highlighter-rouge">uiElement</code>. Adds the following:</p>
+
+<ul>
+  <li>managing child elements (the <code class="highlighter-rouge">elems</code> property)</li>
+  <li>by default uses the <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Ui/view/base/web/templates/collection.html">app/code/Magento/Ui/view/base/web/templates/collection.html</a> template</li>
+</ul>
+
+<h3 id="uiregistry"><code class="highlighter-rouge">uiRegistry</code></h3>
+<p>In-memory storage. Plain storage of entities by keys. Implements the <code class="highlighter-rouge">get()</code>, <code class="highlighter-rouge">set()</code>, and <code class="highlighter-rouge">has()</code> methods.</p>
+
+<p>All the 组件 described in this section are aliases in terms of RequireJS. So they can be directly requested in the component’s <code class="highlighter-rouge">.js</code> file or used in a component’s configuration <code class="highlighter-rouge">.xml</code> file (except <code class="highlighter-rouge">uiRegistry</code>, which by its nature is not expected to be used in a configuration file).</p>
+
+<p>Example for the <code class="highlighter-rouge">uiClass</code> property request:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">define</span><span class="p">(</span> <span class="p">[</span><span class="s1">'uiClass'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">abstractClass</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">abstractClass</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span> 
+      <span class="p">...</span> <span class="c1">// needed methods here</span>
+   <span class="p">};</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Example of using the <code class="highlighter-rouge">uiClass</code> property in a configuration file:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="o">&lt;</span><span class="nx">container</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"some_custom_component"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">argument</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"data"</span> <span class="nx">xsi</span><span class="p">:</span><span class="nx">type</span><span class="o">=</span><span class="s2">"array"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">item</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"config"</span> <span class="nx">xsi</span><span class="p">:</span><span class="nx">type</span><span class="o">=</span><span class="s2">"array"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">item</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"component"</span> <span class="nx">xsi</span><span class="p">:</span><span class="nx">type</span><span class="o">=</span><span class="s2">"string"</span><span class="o">&gt;</span><span class="nx">uiClass</span><span class="o">&lt;</span><span class="sr">/item</span><span class="err">&gt;
+</span>            <span class="o">&lt;</span><span class="sr">/item</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/argument</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/container&gt;</span></code></pre></figure>
+
+<h2 id="comp_debug">JS UI 组件 debugging</h2>
+<p>This section describes how to define what UI 组件 are used on a particular page and what data they use.</p>
+
+<p>To define the UI 组件 used on a page, you can use browser built-in developer tools, or install additionally a plugin, for example Knockout JS context debugger for Google Chrome.</p>
+
+<h3 id="debug-using-browser-built-in-tools">Debug using browser built-in tools</h3>
+<ol>
+  <li>Open the required page in a browser.</li>
+  <li>Select to view the page source.</li>
+  <li>Search for <code class="highlighter-rouge">data-bind="scope:</code>. The string after <code class="highlighter-rouge">scope</code> is the full name of the component.</li>
+  <li>Open developers tools and in the console tab run <code class="highlighter-rouge">require('uiRegistry').get('&lt;full_component_name&gt;')</code>. Where <code class="highlighter-rouge">&lt;full_component_name&gt;</code> is the name you defined on the previous step. The name and the configuration of the UI component instance is displayed once the command is executed.</li>
+</ol>
+
+<p>For illustration, let’s find out what UI 组件 are used on the <span term-uuid="8d40d668-4996-4856-9f81-b1386cf4b14f" class="glossary-term" data-toggle="popover">Catalog</span> page in the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> panel:</p>
+
+<div style="border: 1px solid #ABABAB">
+<img src="/common/images/ui_debug1.png" alt="The catalog page" /> 
+</div>
+
+<p>According to the described procedure, open the page source and search for “<code class="highlighter-rouge">data-bind="scope:</code>”</p>
+
+<div style="border: 1px solid #ABABAB">
+<img src="/common/images/ui_debug2.png" alt="searching for data-bind=scope:" />
+</div>
+
+<p>So we find out that the main UI component used on this page is product listing, with <code class="highlighter-rouge">product_listing.product_listing</code> as a full name. To see its configuration, child 组件 and data source, in the in the <strong>Console</strong> tab we run <code class="highlighter-rouge">require('uiRegistry').get('product_listing.product_listing')</code>:</p>
+
+<div style="border: 1px solid #ABABAB">
+<img src="/common/images/ui_debug3.png" alt="run the command in Console" />
+</div>
+
+<p>And we get the component’s configuration:</p>
+
+<div style="border: 1px solid #ABABAB">
+<img src="/common/images/ui_debug4.png" alt="view the configuration" />
+</div>
+
+<h3 id="debug-using-a-google-chrome-plug-in">Debug using a Google Chrome plug-in</h3>
+
+<ol>
+  <li>Install the Knockout JS context debugger for Google Chrome.</li>
+  <li>Open the required page in Chrome.</li>
+  <li>Point to the required element on the page, right-click and select <strong>Inspect Element</strong>. The developer tools panel opens.</li>
+  <li>In the right column of the panel, click the <strong>Knockout context</strong> tab. The tab displays the name and the configuration of the UI component instance.</li>
+</ol>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/ui-组件/ui_组件_js.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/ui-components/ui_components_js.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

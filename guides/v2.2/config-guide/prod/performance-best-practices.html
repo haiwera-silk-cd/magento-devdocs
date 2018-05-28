@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Performance Configuration Best Practices | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/prod/performance-best-practices.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/config-guide/prod/perfance-best-practices.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/config-guide/prod/perfance-best-practices.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/config-guide/prod/perfance-best-practices.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/config-guide/prod/perfance-best-practices.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">配置手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/bk-config-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安全设置">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/secy/secy.html">安全设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="确保cron.php文件在浏览器上的安全">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/secy/secy-cron.html">确保cron.php文件在浏览器上的安全</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="x-frame-options头">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/secy/secy-xframe.html">X-Frame-Options头</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="防止缓存中毒">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/secy/secy-headers.html">防止缓存中毒</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento初始化和引导">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/bootstrap/magento-bootstrap.html">Magento初始化和引导</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="设置引导参数">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/bootstrap/magento-how-to-set.html">设置引导参数</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/bootstrap/magento-modes.html">关于Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义基础目录路径(mage_dirs)">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开启扼要记录(mage_profiler)">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/bootstrap/mage-profiler.html">开启扼要记录(MAGE_PROFILER)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="管道部署">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/deployment/">管道部署</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="overview">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/deployment/pipeline/">Overview</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="技术细节">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/deployment/pipeline/technical-details.html">技术细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发系统设置">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/deployment/pipeline/development-system.html">开发系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="构建系统设置">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/deployment/pipeline/build-system.html">构建系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="生产系统设置">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/deployment/pipeline/production-system.html">生产系统设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件系统访问权限">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/prod/prod_file-sys-perms.html">文件系统访问权限</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="examples">
+
+            
+
+            
+            <span>Examples</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="共享配置">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/deployment/pipeline/example/shared-configuration.html">共享配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用命令行命令">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/deployment/pipeline/example/cli.html">使用命令行命令</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用环境变量">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/deployment/pipeline/example/environment-variables.html">使用环境变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用rsync同步命令">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/deployment/pipeline/example/rsync.html">使用rsync同步命令</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="单机部署">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/deployment/single-machine.html">单机部署</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行配置">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/cli/config-cli.html">命令行配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令行配置起步">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理缓存">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理索引">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置和执行定时任务">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码编译器">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)高亮">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖报告">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置管理">
+
+            
+
+            
+            <span>配置管理</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="导出配置">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-export.html">导出配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置配置值">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-set.html">设置配置值</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="从配置文件导入数据">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/cli/config-cli-subcommands-config-mgmt-import.html">从配置文件导入数据</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="翻译字典和语言包">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态视图文件部署">
+
+            
+
+            
+            <span>静态视图文件部署</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="静态文件部署策略">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html">静态文件部署策略</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="部署静态视图文件">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建软链接到less文件">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行单元测试">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="转换布局的xml文件">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为性能测试生成数据">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行magento支持工具-(magento-commerce-only)">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-spt-util.html">运行Magento支持工具 (仅企业版适用)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento配置文件">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/config/config-magento.html">Magento配置文件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento的部署配置">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/config/config-php.html">Magento的部署配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块配置文件">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/config/config-files.html">模块配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建或扩展配置类型">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/config/config-create.html">创建或扩展配置类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="禁用模块输出">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/config/disable-module-output.html">禁用模块输出</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置参考">
+
+            
+
+            
+            <span>配置参考</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="敏感的和系统特定的">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-sens.html">敏感的和系统特定的</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="支付配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-payment.html">支付配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="其它配置路径参考">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-most.html">其它配置路径参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-for-b2b-extension-configuration-paths-reference">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-b2b.html">Magento Commerce for B2B Extension configuration paths reference</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id=".gitignore参考">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-gitignore.html">.gitignore参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用环境变量覆盖配置设置">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-var-name.html">使用环境变量覆盖配置设置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="config.php参考">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-configphp.html">config.php参考</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="env.php参考">
+                    
+
+                    
+                    <a  href="/guides/v2.2/config-guide/prod/config-reference-envphp.html">env.php参考</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置缓存">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/cache.html">配置缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="将缓存前端与缓存类型关联">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cache/cache-types.html">将缓存前端与缓存类型关联</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="底层缓存选项">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cache/cache-options.html">底层缓存选项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态内容签名">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cache/static-content-signing.html">静态内容签名</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置redis">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/redis/config-redis.html">配置Redis</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为magento页面缓存和默认缓存">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为session存储">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/redis/redis-session.html">使用Redis作为Session存储</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置和使用varnish">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="安装varnish">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/config-varnish-install.html">安装Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置varnish和你的web服务器">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用varnish">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish高级配置">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/config-varnish-advanced.html">Varnish高级配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="how-magento-cache-clearing-works-with-multiple-varnish-instances">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/use-multiple-varnish-cache.html">How Magento cache clearing works with multiple Varnish instances</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="最终校验">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/config-varnish-final.html">最终校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在varnish下magento的缓存清除是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish缓存是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/use-varnish-cache-how.html">Varnish缓存是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除503错误">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/varnish/tshoot-varnish-503.html">排除503错误</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用memcached做为session存储">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/memcache/memcache.html">使用memcached做为session存储</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在ubuntu上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/memcache/memcache_ubuntu.html">在Ubuntu上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在centos上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/memcache/memcache_centos.html">在CentOS上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用memcached">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="多站和多店">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/multi-site/ms_over.html">多站和多店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在管理面板设置多站、多店及网店视图">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-site/ms_websites.html">在管理面板设置多站、多店及网店视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在nginx下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-site/ms_nginx.html">教程-在nginx下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在apache下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-site/ms_apache.html">教程-在Apache下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="设置自定义的定时任务和任务组(cron)">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/cron/custom-cron.html">设置自定义的定时任务和任务组(cron)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义的定时任务和任务组(cron)参考">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cron/custom-cron-ref.html">自定义的定时任务和任务组(cron)参考</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置自定义的定时任务和任务组(cron)(教程)">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/cron/custom-cron-tut.html">配置自定义的定时任务和任务组(cron)(教程)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置数据库分析器">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/db-profiler/db-profiler.html">配置数据库分析器</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装和配置elasticsearch-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/elasticsearch/es-overview.html">安装和配置Elasticsearch (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="配置nginx和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/elasticsearch/es-config-nginx.html">配置nginx和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置apache和elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/elasticsearch/es-config-apache.html">配置Apache和Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置elasticsearch停用词">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/elasticsearch/es-config-stopwords.html">配置Elasticsearch停用词</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用elasticsearch">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/elasticsearch/configure-magento.html">配置Magento使用Elasticsearch</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="消息队列-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/mq/rabbitmq-overview.html">消息队列 (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="管理消息队列">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/mq/manage-mysql.html">管理消息队列</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="数据库分库执行方案(仅企业版)">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/multi-master/multi-master.html">数据库分库执行方案(仅企业版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-master/multi-master_masterdb.html">自动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="手动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-master/multi-master_manual.html">手动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据库分库验证">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置可选数据库复制">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/multi-master/multi-master_slavedb.html">设置可选数据库复制</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="custom-logging">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/log/log-intro.html">Custom Logging</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento日志的更多细节">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/log/log-magento.html">Magento日志的更多细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="example---logging-database-activity">
+
+            
+
+            
+            <a href="/guides/v2.2/config-guide/log/log-db.html">Example - logging database activity</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何定位你的session文件">
+    
+
+    
+    <a href="/guides/v2.2/config-guide/sessions.html">如何定位你的session文件</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/config-guide/bk-config-guide.html">
+            <span property="name">配置手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Performance Configuration Best Practices</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Performance Configuration Best Practices</h1>
+
+  
+
+
+</section>
+
+			<h2 id="hardware">Hardware</h2>
+
+<h3 id="cpu">CPU</h3>
+
+<p>Magento web nodes serve all requests that were not cached or can’t be cached through the complete launch of the application. One CPU core can serve around 2 (sometimes up to 4) Magento requests effectively. This leads us to necessity of putting sufficient number of web nodes/cores for processing all incoming requests without putting them into queue:</p>
+
+<p><strong>Questions to reviewer:</strong></p>
+
+<ol>
+  <li>I don’t understand the “N”s in the following equation. Can they deleted? If no, please provide more information about what they represent.</li>
+</ol>
+
+<p><code class="highlighter-rouge">N(Cores) = N(Expected Requests) / 2 + N (Expected Cron Processes)</code></p>
+
+<ol>
+  <li>Is right side of the equation</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Expected requests
+________________
+2 + Expected Cron Processes
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Expected requests
+________________  +  Expected Cron Processes
+      2
+</code></pre></div></div>
+
+<p>If a store expects changing load, the number of web nodes/cores can be increased manually for an active sales period. Alternatively, an auto-scaling model can be used for automatically extending web tiers.</p>
+
+<h3 id="memory">Memory</h3>
+
+<p>The Magento 2 database (as well as any other database) is sensitive to amount of the memory available for storing data and indexes. To allow effective leveraging of MySQL data indexation, the amount of memory should be at least close to half size of data stored in the database.</p>
+
+<h3 id="network-bandwith">Network bandwith</h3>
+
+<p>Sufficient network bandwith is one of the key requirements for data exchange between web nodes, database(s), caching/session servers, and other services. Because Magento 2 effectively leverages caching for high performance, your system can actively exchange data with caching servers like Redis. If Redis is located on a remote server, it is necessary to provide a sufficient network channel between web nodes and the caching server so that there is no bottleneck on read/write operations.</p>
+
+<h2 id="software">Software</h2>
+
+<h3 id="operating-system">Operating system</h3>
+
+<p>Configurations and optimizations at the operating system level for Magento 2 is much the same as any web application that can be under high load. As the number of concurrent connections handled by the server increases, the number of available sockets can become fully allocated. The Linux kernel supports a mechanism to “reuse” and “recycle” TCP connections. Be aware that more aggressive recycling than re-use may cause issues on the load balancers. To enable these kernel settings, set the following values should in <code class="highlighter-rouge">/etc/sysctl.conf</code>: </p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net.ipv4.tcp_tw_recycle = 1
+net.ipv4.tcp_tw_reuse = 1
+</code></pre></div></div>
+
+<p>The kernel parameter <code class="highlighter-rouge">net.core.somaxconn</code> controls the maximum number of open sockets waiting for connections. This value can be safely increased to 1024, but it should be correlated with ability of server to handle this amount. To enable this kernel parameter, set the following value in <code class="highlighter-rouge">/etc/sysctl.conf</code>: </p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net.core.somaxconn = 1024
+</code></pre></div></div>
+
+<h3 id="web-server">Web server</h3>
+
+<p>Magento 2 fully supports the Nginx and Apache web servers. Sample recommended configuration files for Nginx (<code class="highlighter-rouge">nginx.conf.sample</code>) and Apache (<code class="highlighter-rouge">.htaccess.sample</code>) can be found in root directory of the project. The Nginx sample contains settings for better performance and is more ready for production usage. Some of the main configuration best practices defined in the sample file include:</p>
+
+<ul>
+  <li>Settings for caching static content in a browser</li>
+  <li>Memory and execution time settings for PHP</li>
+  <li>Content compression settings</li>
+</ul>
+
+<p><strong>Question to reviewer:</strong> We need more information here. I googled <code class="highlighter-rouge">max_children_count</code> and <code class="highlighter-rouge">nginx</code>, and the only hit I got was Oleh’s slide deck that mentioned the attribute, but gave no details. I found a few results searching on <code class="highlighter-rouge">MaxClients</code> and <code class="highlighter-rouge">Magento</code>, but most of the hits appear to be from M1.  These settings not present in the sample config files, so I don’t know where these attributes should be set.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: The <code class="highlighter-rouge">MaxClients</code> (Apache) / <code class="highlighter-rouge">max_children_count</code> (Nginx) attribute defines the number of threads for input requests processing. It should be configured separately from the sample Configuration files. The value should be calculated based on expected load per web-node and set to web server configuration file.</p>
+</blockquote>
+
+<h3 id="php">PHP</h3>
+
+<p>Magento 2 fully supports and engages everyone to use latest version of PHP, which is now PHP 7.1. There are several factors to account for when configuring PHP to get maximum speed and efficiency on requests processing.</p>
+
+<h4 id="php-extensions">PHP extensions</h4>
+
+<p>We recommend limiting the list of active extensions to those that are required for Magento functionality:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">php-bcmath</code></li>
+  <li><code class="highlighter-rouge">php-cli</code></li>
+  <li><code class="highlighter-rouge">php-common</code></li>
+  <li><code class="highlighter-rouge">php-gd</code></li>
+  <li><code class="highlighter-rouge">php-intl</code></li>
+  <li><code class="highlighter-rouge">php-mbstring</code></li>
+  <li><code class="highlighter-rouge">php-mcrypt</code></li>
+  <li><code class="highlighter-rouge">php-opcache</code></li>
+  <li><code class="highlighter-rouge">php-pdo</code></li>
+  <li><code class="highlighter-rouge">php-soap</code></li>
+  <li><code class="highlighter-rouge">php-xml</code></li>
+</ul>
+
+<p>Adding more extensions will lead to additional load times for their libraries.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: Please pay attention that presence of any profiling and debugging extensions can negatively impact the response time of your pages. As an example, an active xDebug module without any debug session can increase the page response time by up to 30%.</p>
+</blockquote>
+
+<h4 id="php-settings">PHP Settings</h4>
+
+<p>To guarantee successful execution of all Magento scenarios without dumping data or code to disk, it is recommended to set next memory limit:</p>
+
+<p><code class="highlighter-rouge">memory_limit=768MB</code></p>
+
+<h5 id="bytecode">ByteCode</h5>
+
+<p>To get maximum speed out of Magento 2 on PHP7, you must activate the OpCache module and properly configure it. These settings are recommended for the module:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  opcache.memory_consumption=512MB
+  opcache.max_accelerated_files=60000
+  opcache.consistency_checks=0
+  opcache.validate_timestamps=0
+</code></pre></div></div>
+
+<h3 id="mysql-database">MySQL database</h3>
+
+<p>This document does not attempt to provide in-depth MySQL tuning, as it highly depends on the store context and its specificity. We can make some general recommendations that can be applied.</p>
+
+<h4 id="mysql-server-configuration">MySQL server configuration</h4>
+
+<p>There have been many improvements to MySQL as a product with the 5.6 and 5.7 releases. Those achievements allow us to say that MySQL is distributed with good default settings. The most critical settings are:</p>
+<ul>
+  <li><code class="highlighter-rouge">innodb_buffer_pool_instances</code>: default value is set to 8 to avoid issues with multiple threads attempting to access the same instance.</li>
+  <li><code class="highlighter-rouge">innodb_buffer_pool_size</code>: defaults to 128MB. Combined with the multiple pool instances described above, this means a default memory allocation of 1024MB. The total size is divided among all the buffer pools. For best efficiency, specify a combination of <code class="highlighter-rouge">innodb_buffer_pool_instances</code> and <code class="highlighter-rouge">innodb_buffer_pool_size</code> so that each buffer pool instance is at least 1 gigabyte.</li>
+  <li><code class="highlighter-rouge">max_connections</code>: default value is 150. The value of the <code class="highlighter-rouge">max_connections</code> parameter should correlate with the total number of PHP threads configured in the application server. A general recommendation would be 300 for a small and 1,000 for a medium environment.</li>
+  <li><code class="highlighter-rouge">innodb-thread-concurrency</code>: default value is 0. The correct value for this configuration should be calculated by the formula: <code class="highlighter-rouge">innodb-thread-concurrency = 2 * (NumCPUs + NumDisks)</code></li>
+</ul>
+
+<h3 id="varnish-as-recommended-page-cache-solution">Varnish as recommended Page Cache solution</h3>
+
+<p><strong>Question to reviewer:</strong> Does FPC module mean PageCache module?</p>
+
+<p>The Magento 2 team highly recommends using Varnish as the full page cache server for your store. Now it is fully available in all versions of Magento. The FPC module is still present in Magento 2, but it should be used for development purposes only. It should not be used together with or instead of Varnish.</p>
+
+<p>Varnish should be installed as a separate server in front of the web tier. It should accept all incoming requests and provide cached page copies. To allow Varnish to work effectively with secured pages, an SSL termination proxy can be placed in front of Varnish. Nginx can be used for this purpose.</p>
+
+<p>Magento distributes a sample configuration file for Varnish (versions 4 and 5) that contains all recommended settings for performance. Among them the most critical in terms of performance are:</p>
+
+<p>grace_mode: allows you to instruct Varnish to keep an object in cache beyond its TTL and serve this stale content if your backend is not healthy or if fresh content hasn’t been fetched yet.</p>
+
+<p>backend health check validation: configuration of regular Varnish backend checks for maintaining list of valid and working nodes</p>
+
+<blockquote>
+  <p><strong>Note</strong>: Another setting that is not covered in default distributed configuration, but deserves your attention it saintmode (please check official Varnish documentation for more details).</p>
+</blockquote>
+
+<p><strong>Question to reviewer</strong> This article discusses installing and configuring saint mode. Does something need to be added for performance best practices?  http://devdocs.magento.com/guides/v2.2/config-guide/varnish/config-varnish-advanced.html</p>
+
+<h3 id="caching-and-session-server">Caching and Session Server</h3>
+
+<p>Magento provides number of options to store your cache and session data, including Redis, Memcache, filesystem and database. Let’s consider what is the best selection for each specific case.</p>
+
+<h4 id="single-web-node-setup">Single web node setup</h4>
+
+<p>If you plan to serve all your traffic with just one web node, it does not make sense to put your cache on a remote Redis server. Instead, either use the filesystem or on a local Redis server. If you want to use the filesystem, put your cache folders on a volume mounted on a RAM filesystem. If you want to use a local Redis server, we highly recommend configuring Redis so it uses sockets for direct connections, rather than exchange data through HTTP.</p>
+
+<h4 id="multiple-web-nodes-setup">Multiple web nodes setup</h4>
+
+<p>For a multiple web nodes setup, Redis is the best option. Because Magento actively caches lots of data for better performance, pay attention to your network channel between the web nodes and the Redis server. You don’t want the channel to become a bottleneck for requests processing.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: If you need to serve hundreds and thousands of simultaneous requests, you may need a channel of up to 1GBit (or even wider)  to your Redis server.</p>
+</blockquote>
+
+<h2 id="magento-configuration">Magento Configuration</h2>
+
+<p>Magento 2 provides many settings and tools that can be used and activated that improve response time on the pages as well as provide higher throughput.</p>
+
+<h3 id="cron-jobs">Cron Jobs</h3>
+
+<p>All asynchronous operations in Magento 2 Open Source are performed using of Linux cron. See <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a> to configure it correctly.</p>
+
+<h3 id="indexers">Indexers</h3>
+
+<p>An indexer can run in either <strong>Update on Save</strong> or <strong>Update on Schedule</strong> mode. Save mode immediately indexes whenever your catalog or other data changes. This mode assumes a low intensity of update and browsing operations in your store, and it can lead to significant delays and data unavailability during high loads. Schedule mode is recommended mode for production usage, because it stores info about data updates and performs indexation by portions in background through specific cron job. You can change the mode of each Magento indexer separately on configuration page: <strong>System &gt;Index Management</strong></p>
+
+<h3 id="caches">Caches</h3>
+
+<p>When your store is launched in production, all the caches should be activated. This can be easily done by turning them on <strong>System &gt; Cache Managemen</strong>t page. We highly recommend  using Varnish, as it is the most efficient production page cache solution.</p>
+
+<h3 id="asynchronous-email-notifications">Asynchronous email notifications</h3>
+
+<p>The “Asynchronous email notifications” setting causes Magento to move processes that handle  email notifications related to the checkout process and order processing to the background. To enable this feature, go to <strong>Stores &gt; Configuration &gt; Sales &gt; Sales Emails &gt; General Settings &gt; Asynchronous Sending</strong>.</p>
+
+<h3 id="asynchronous-order-data-processing">Asynchronous order data processing</h3>
+
+<p>There is a frequent case when intensive sales on a storefront are combined with intensive order processing in the backend office. Magento can be configured to distinguish these two traffic patterns on the database level to avoid conflicts between read and write operations in corresponding tables. With this goal, we provide an option to store and index orders data asynchronously of their placement on frontend. Thus orders will be noted in temporary storage and moved in bulk to the Order Management grid without any collisions. This option can be activated from <strong>Stores &gt; Configuration &gt; Advanced &gt; Developer &gt; Grid Settings &gt; Asynchronous indexing</strong>.</p>
+
+<h3 id="deferred-stock-update">Deferred stock update</h3>
+
+<p>In times of intensive sales, to minimize the number of operations and speed up the order placement process, Magento 2 can defer stock updates related to orders. This option is risky and can only be used together when Backorders are activated in the store, because it  can lead to negative stock quantities. However, this option can bring significant performance improvement on Checkout flows for those stores who can easily re-fill their stock on demand. To activate deferred stock updates, go to <strong>Stores &gt; Configuration &gt; Catalog &gt; Inventory &gt; Product Stock Options &gt; Use Deferred Stock Update</strong>.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: This options will be available only after Backorder with any mode is activated.</p>
+</blockquote>
+
+<h3 id="client-side-optimization-settings">Client side optimization settings</h3>
+
+<p>Magento 2 provides a variety of configurations for client side optimization, including:</p>
+
+<ul>
+  <li><em>Minification of all resources</em>
+    <ul>
+      <li><em>JS minification</em>: <code class="highlighter-rouge">Stores &gt; Configuration &gt; Advanced &gt; Developer &gt; JS Settings &gt; Minify JS Files</code>
+        <ul>
+          <li><em>CSS minification</em>: <code class="highlighter-rouge">Stores &gt; Configuration &gt; Advanced &gt; Developer &gt; CSS Settings &gt; Minify CSS Files</code></li>
+          <li><em>HTML minification</em>: `Stores &gt; Configuration &gt; Advanced &gt; Developer &gt; Template Settings &gt; Minify HTML</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><em>JS resources bundling</em>: <code class="highlighter-rouge">Stores &gt; Configuration &gt; Advanced &gt; Developer &gt; JS Settings &gt; Enable Javascript Bundling</code>
+By activating this option, you allow Magento to merge all JS resources into one or a set of bunches that will be loaded to storefront pages. This way you get all JS content to your storefront with few requests to the server. It also helps the browser cache JS resources on the first call and re-use it for all further browsing. This option also brings lazy evaluation, as all JS is loaded as text. It initiates analysis and evaluation of code only after specific actions are triggered on the page. However, this setting is not recommended for that stores where the first page load time is extremely critical, because all loading of JS content will happen exactly on first call.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Note</strong>: It is recommended to use third-party tools for minification and bundling (like r.js). Magento built-in mechanisms are not optimal and are shipped as fallback alternative.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Note</strong>: Activating the HTTP2 protocol can be a good alternative to using JS bundling. The protocol provides pretty much the same benefits.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Note</strong>: Magento does not recommend using deprecated settings like merging JS and CSS files, as they were designed only for synchronously-loaded JS in the HEAD section of the page. Using this technique and can cause bundling and requireJS logic to work incorrectly.</p>
+</blockquote>
+
+<h2 id="magento-production-deployment-flow">Magento Production Deployment Flow</h2>
+
+<p>Magento Production Deployment Flow is focused on getting a store to reach maximum performance. It requires 3 mandatory steps:</p>
+
+<h3 id="deploying-static-content">Deploying static content</h3>
+
+<p>Run the following command:</p>
+
+<p><code class="highlighter-rouge">bin/magento setup:static-content:deploy</code></p>
+
+<p>The command causes Magento 2 to</p>
+
+<ul>
+  <li>Analyze all static resources</li>
+  <li>Perform merge, minimization and bundling of content</li>
+  <li>Read and process themes data</li>
+  <li>Analyze themes fallback</li>
+  <li>Store all processed and materialized content to specific folder for further usage.</li>
+</ul>
+
+<p>If your static content is not deployed, Magento performs all listed operation on the fly, leading to a significant increase in response time.</p>
+
+<p>Deployment operations are provided with a variety of options for different stores size and fulfillment. The most common is the compact deploy strategy. Please read official documentation for getting more info on all the strategies and options available for your store.</p>
+
+<h3 id="di-instructions-preprocessing--composer-autoload-configuration">DI instructions preprocessing / Composer autoload configuration</h3>
+
+<p>Run the following command:</p>
+
+<p><code class="highlighter-rouge">bin/magento setup:di:compile</code></p>
+
+<p>Through preprocessing/compilation of DI instructions, Magento</p>
+
+<ul>
+  <li>Reads and process all present configuration</li>
+  <li>Analyzes dependencies between classes</li>
+  <li>Creates autogenerated files (including proxies, factories, etc.)</li>
+  <li>Stores compiled data and configuration in a cache that allows to save up to 25% of time on requests processing.</li>
+</ul>
+
+<p>After compilation completes, we recommend running the following command:</p>
+
+<p><code class="highlighter-rouge">composer dump-autoload -o</code></p>
+
+<p>This command allows composer to rebuild the mapping to project files so that they load faster.</p>
+
+<h3 id="setting-production-mode">Setting Production mode</h3>
+
+<p>Finally, you need to place your store in Production mode. Production mode is specifically optimized for maximum performance of your store. It also de-activates all developer-specific features. This can be done in your <code class="highlighter-rouge">.htaccess</code>或<code class="highlighter-rouge">nginx.conf</code> file:</p>
+
+<p><code class="highlighter-rouge">SetEnv MAGE_MODE production</code></p>
+
+<p>Same setting can be done through corresponding CLI command.</p>
+
+<p><strong>Question to reviewer:</strong> Should <code class="highlighter-rouge">magento deploy:mode:set production</code> be mentioned here?</p>
+
+<blockquote>
+  <p><strong>Note</strong>: Static content deploy, compilation and mode selection can be also performed together in one CLI command (<code class="highlighter-rouge">bin/magento set:mode production</code>). The command runs in the background and does not allow you to set additional options on each specific step.</p>
+</blockquote>
+
+<h2 id="pre-launch-actions">Pre-launch actions</h2>
+
+<p>There are also some recommended but not mandatory steps that can be performed directly before launching your store your store in production mode. The list includes:</p>
+
+<ul>
+  <li>Re-indexing data: to avoid the presence of any inconsistent data in your indexes</li>
+  <li>Flushing the cache: to be sure no old or incorrect data are left in cache</li>
+  <li>Warm up the cache: calling out most popular or critical store pages in advance, so the cache for them is generated and stored. This operation can be performed with any intellectual crawler or manually (in case of small stores).</li>
+</ul>
+
+<h2 id="advanced-setup">Advanced Setup</h2>
+
+<p>Magento 2 is a highly flexible and scalable product containing solutions for merchants of all sizes. This section covers best practices and recommendations on configuring Magento to work with big amounts of data, extreme load, and other enterprise cases.</p>
+
+<h3 id="search">Search</h3>
+
+<p>By default, Magento uses MySQL for all search operations. Magento Commerce version fully supports and provides you an alternative search engine, ElasticSearch, as a more optimized search solution. With ElasticSearch, the time on query processing will not change with the growth of search results (the way it does with MySQL). ElasticSearch can provide scaling opportunities when you experience increased loads on your store.</p>
+
+<p>To run Magento with ElasticSearch, you don’t need any specific configuration–just install the server and select the ElasticSearch search engine option in Magento admin.</p>
+
+<h3 id="indexers-fine-tuning">Indexers fine tuning</h3>
+
+<p>When dealing with large amounts of data in your store, how all this information will be re-indexed becomes a concern. The Magento team selected the most loaded indexes and enabled batch indexing that allows you to set a portion of data to be processed on each iteration. This way, the user can tune batch size based on the type and size of data in database.</p>
+
+<p>To manage this setting, you need to edit <code class="highlighter-rouge">batchRowsCount</code> parameter in the <code class="highlighter-rouge">di.xml</code> file of the corresponding module. These indexes support this feature:</p>
+
+<ul>
+  <li>Category Product Index (Catalog Module)</li>
+  <li>Price Index (Catalog Module)</li>
+  <li>EAV Index (Catalog Module)</li>
+  <li>Stock Index (CatalogInventory Module)</li>
+</ul>
+
+<h3 id="redis">Redis</h3>
+
+<p>Sometimes one Redis instance is not enough to serve incoming requests. There are many solutions that we can recommend to address this situation.</p>
+
+<p>First, Magento 2 allows you to configure separate cache storage for each cache type. This allows you to install as many separate Redis instances as the number of types of cache that are registered in Magento. Realistically, you might want Redis instances for the most actively used caches, such those as configuration, layout, and blocks.</p>
+
+<p>Another solution can be to place the configuration cache on the filesystem and moving the other caches to the Redis server. With this solution, you will need a separate tool for centralized invalidation of configuration cache on all your web nodes.</p>
+
+<p>You could also use a Redis cluster that allows to perform parallel read/write operations with an automatically-increasing number of nodes. Magento does not provide configuration for this case, but it can be launched with minor customizations.</p>
+
+<h3 id="job-server-rabbitmq">Job Server (RabbitMQ)</h3>
+
+<p>Magento Commerce supports message queue implemented through RabbitMQ. Magento uses this service for executing numerous asynchronous operations, including B2B catalog operations and asynchronous stock updates. All interfaces for adding more jobs to the job server are distributed with the product and available for custom asynchronous logic implementation in scope of 3rd party extensions. As with any other integration, Magento 2 provides a sample configuration file for RabbitMQ that contains all recommended settings and is fully ready for production usage.</p>
+
+<h3 id="database-split">Database split</h3>
+
+<p>Magento Commerce 2 also allows you to scale in terms of your database storage to let you easily serve the growing needs of your business. With this purpose, Magento provides the opportunity to setup up to 3 separate Master databases that serve specific domain areas:</p>
+
+<ul>
+  <li>Main (Catalog) Database</li>
+  <li>Checkout Database</li>
+  <li>Order Management System (OMS) Database</li>
+</ul>
+
+<p>To configure additional databases, you must</p>
+
+<ul>
+  <li>Create an empty database</li>
+  <li>Run one of the following commands:</li>
+</ul>
+
+<p><code class="highlighter-rouge">bin/magento setup:db-schema:split-quote</code> (for Checkout Master DB)
+<code class="highlighter-rouge">bin/magento setup:db-schema:split-sales</code> (for OMS Master DB)</p>
+
+<p>These commands migratte specific domain tables from the main database to domain database and change the Magento configuration to allow corresponding connectivity and constraints processing.</p>
+
+<p>By having separate databases for checkout and Order Management, you can distribute the load between your database servers. You can serve more checkouts and process more orders per second without affecting the availability of your сatalog and other operations. We recommend splitting databases for periods of flash or active sales, or using them permanently for naturally high load projects. Migration of present data between databases should be executed under control of your system administrator.  Do not split databases while in production mode.</p>
+
+<p>In addition to master databases, Magento 2 allows you to configure a number of slave databases (1 for each data resource declared in the system). You can add slave database by running the following command:</p>
+
+<p><code class="highlighter-rouge">bin/magento setup:db-schema:add-slave</code></p>
+
+<p>A slave database serves as a full replica of your main database, or one of your domain master databases. It isused for read operations on a specific resource.  Note that this command performs configuration changes but does not configure replication itself. That should be done manually.</p>
+
+<p>After splitting your master database and setting slave databases, Magento automatically regulates connections to a specific DB, making decisions based on the type of request (POST, PUT, GET, etc) and data resource. If Magento or its extensions performs write operations on a GET request, the system automatically switches the connection from slave to master database. It works the same way with master databases: as soon as you work with a checkout-related table, the system redirects all the queries to a specific DB. Meanwhile, all catalog-related queries will go to main database.</p>
+
+<p>For more details on configuration and benefits of multi master/slave configuration, see
+<a href="/guides/v2.2/config-guide/multi-master/multi-master.html">Split database performance solution</a>.</p>
+
+<h3 id="serving-media-content">Serving media content</h3>
+
+<p>Magento does not provide any specific integration to serve and deliver media content. All common approaches can be used together in Magento.</p>
+
+<p>The easiest way of serving media content is delivering and caching it on a Varnish server. This approach assumes either a shared file system for storing media content or a dedicated server pointing to Varnish.</p>
+
+<p>For medium and high load environments, we recommend to use Content Delivery Network (CDN) services like Fastly, Akamai, and others. When working with these services, Magento uses the classic pull approach for content updates. You must configure Magento URLs to work with the corresponding CDN service. By moving media content to a CDN, you will significantly lessen the load on your instances.</p>
+
+<h3 id="log-storage">Log storage</h3>
+
+<p>The storage of logs and their influence on other disk operations affects the availability of your web nodes, especially in high load situations. We recommend that you minimize logging if you don’t need it. You can also configure logging write logs go on separate storage with high access speed. Note that any bottleneck on accessing logs storage can directly affect processing incoming requests that have logs write or read operations in their flow.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/config-guide/prod/performance-best-practices.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/config-guide/prod/performance-best-practices.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

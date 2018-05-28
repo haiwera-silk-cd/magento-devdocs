@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>功能测试框架的测试报告 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/mtf/features/reporting.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/mtf/features/reporting.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/mtf/features/reporting.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/mtf/features/reporting.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/mtf/features/reporting.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">功能测试框架手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_introduction.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="installation">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_installation.html">Installation</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="quick-start">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_quickstart.html">快速开始</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="adjust-configuration">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust configuration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-magento-application">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_magento.html">Prepare Magento application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-environment-for-test-run">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_environment.html">Prepare environment for test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-run">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_runtest.html">Test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="see-logs-for-failed-tests">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_quickstart/mtf_quickstart_logs.html">See logs for failed tests</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="create-a-test">
+    
+
+    
+    <a href="/guides/v2.2/mtf/create_test.html">创建一个测试</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="out-of-the-box-test">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/create_test/out-of-the-box.html">盒外测试模型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-theory">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/create_test/new_test.html">新功能测试.理论</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-practice">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/create_test/create_new_test.html">新功能测试.实践</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="features">
+    
+
+    
+    <a href="/guides/v2.2/mtf/features.html">Features</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="隔离管理">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/isolation.html">隔离管理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modularity">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/modularity.html">Modularity</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="parallel-execution-flow">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/parallel_execution.html">并行执行流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="reporting">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/reporting.html">Reporting</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-suite">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/test_suite.html">Test suite</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="web-driver-replacement">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/features/webdriver.html">更换Web driver</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="entities">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_entities.html">Entities</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="fixture">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_fixture.html">Fixture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fixture-repository">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_fixture-repo.html">固定数据仓库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="handler">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_handler.html">Handler</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="block">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_block.html">Block</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="typified-element">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_typified-element.html">典型元素</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="page">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_page.html">Page</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="constraint">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_constraint.html">Constraint</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="data-set">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_dataset.html">Data set</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-case">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_testcase.html">测试用例</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="scenario-test">
+
+            
+
+            
+            <a href="/guides/v2.2/mtf/mtf_entities/mtf_scenariotest.html">场景测试</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <a href="/guides/v2.2/mtf/configuration.html">Configuration</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="update">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_update.html">Update</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.2/mtf/troubleshooting.html">故障排除</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="changelog">
+    
+
+    
+    <a href="/guides/v2.2/mtf/mtf_changelog.html">Changelog</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/mtf/mtf_introduction.html">
+            <span property="name">功能测试框架介绍</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">功能测试框架的测试报告</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">功能测试框架的测试报告</h1>
+
+  
+
+
+</section>
+
+			<p>The Functional Testing Framework (<abbr title="Functional Testing Framework">FTF</abbr>) provides a reporting tool, which logs failures or any other information for you during test run.</p>
+
+<p>The following image demonstrates example of a general flow.</p>
+
+<p><a href="/common/images/ftf/ftf-reporting-diagram.png" alt="Reporting mechanism diagram" target="_blank"><img src="/common/images/ftf/ftf-reporting-diagram.png" /></a></p>
+
+<p>The <span term-uuid="c57aef7c-97b4-4b2b-a999-8001accef1fe" class="glossary-term" data-toggle="popover">event</span> manager is a core component which:</p>
+
+<ul>
+  <li>dispatches events</li>
+  <li>gets a list of observers</li>
+  <li>notifies observers depending on read <a href="#configuration">configuration</a> and <a href="#event-presets">preset</a></li>
+</ul>
+
+<h3 id="event-manger">Event manager</h3>
+
+<p>The event manager is defined in the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Event/EventManager.php"><code class="highlighter-rouge">\Magento\Mtf\System\Event\EventManager</code></a> class that:</p>
+
+<ul>
+  <li>is an entry point to the event management system</li>
+  <li>fetches configuration and observers</li>
+  <li>handles events and passes them to observers</li>
+  <li>notifies selected observers according to an event tags array and configuration</li>
+</ul>
+
+<h2 id="configuration"><code class="highlighter-rouge">phpunit.xml</code> configuration</h2>
+
+<p>In <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/phpunit.xml</code>, you can set a preset to use and a directory to store reports.</p>
+
+<h3 id="set-preset">Set a preset</h3>
+
+<p>Set a preset, which is a list of dispatched <a href="/guides/v2.2/extension-dev-guide/events-and-observers.html#events">events</a> and an <a href="#observers">observers</a> to handle them:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;php&gt;</span>
+    <span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">"events_preset"</span> <span class="na">value=</span><span class="s">"&lt;preset_name&gt;"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/php&gt;</span></code></pre></figure>
+
+<p>Replace <code class="highlighter-rouge">&lt;preset_name&gt;</code> with a name of preset that you want to use.</p>
+
+<h3 id="report-directory">Set a reporting directory</h3>
+
+<p>Set the value of <code class="highlighter-rouge">&lt;env name="log_directory"&gt;</code> to the directory in which to store your reports.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;php&gt;</span>
+    <span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">"log_directory"</span> <span class="na">value=</span><span class="s">"&lt;your_directory_path&gt;"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/php&gt;</span></code></pre></figure>
+
+<p>The default path is <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/var/log</code>.</p>
+
+<h2 id="event-presets"><code class="highlighter-rouge">events.xml</code> configuration</h2>
+
+<p>An event preset specifies observers and dispatched events handled by them. <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/etc/events.xml</code> contains a list of event presets.</p>
+
+<p><strong>Format of a preset</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preset</span> <span class="na">name=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\..."</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"..."</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"..."</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"other\observer\class\path\..."</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"..."</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;/preset&gt;</span></code></pre></figure>
+
+<p><strong>Example</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preset</span> <span class="na">name=</span><span class="s">"custom"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\SourceCode"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\Screenshot"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\CurlResponse"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"curl_failed"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;/preset&gt;</span></code></pre></figure>
+
+<p><strong>Explanation of the example</strong>:</p>
+
+<p>Each time the <code class="highlighter-rouge">"exception"</code> and <code class="highlighter-rouge">"failure"</code> events are <a href="#dispatch-event">dispatched</a>, HTML code and screen capture of the current web page are logged (see <a href="#observers">Observers</a> section for details). If the <code class="highlighter-rouge">"curl_failed"</code> event is dispatched, a corresponding cURL response is saved in an HTML file in the <code class="highlighter-rouge">magento/&lt;module&gt;/&lt;test_case&gt;/&lt;variation&gt;/curl-response</code> directory inside the <a href="#report-directory">report directory</a>.</p>
+
+<p>Initially, event presets are defined in the <abbr title="Functional Testing Framework">FTF</abbr> in <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/vendor/magento/mtf/etc/events.xml</code> (<a href="https://github.com/magento/mtf/blob/develop/etc/events.xml">open the <code class="highlighter-rouge">events.xml</code> on GitHub repository</a>). It is not recommended to edit this file. You can extend the initial list or add new presets in <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/etc/events.xml</code>. All changes are merged automatically.</p>
+
+<h3 id="observers">Observers</h3>
+
+<p>An observer is a <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> class which defines actions under Magento instance, browser, test run, and so on.</p>
+
+<p>The list of ready-to-use observers is the following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Observer full class name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/ClientError.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\ClientError</code></a></td>
+      <td>Collects information about JavaScript errors on a web page under test. Uses an instance of the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/BrowserInterface.php"><code class="highlighter-rouge">BrowserInterface</code></a> to collect exceptions from a web page. Saves collected errors to <code class="highlighter-rouge">&lt;reporting_directory&gt;/magento/client-error.log</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/CurlResponse.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\CurlResponse</code></a></td>
+      <td>Saves response into HTML file in <code class="highlighter-rouge">&lt;reporting_directory&gt;/magento/&lt;module&gt;/&lt;test_case&gt;/&lt;variation&gt;/curl-response</code> directory.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/Log.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\Log</code></a></td>
+      <td>Saves event message to the <code class="highlighter-rouge">&lt;reporting_directory&gt;/magento/logger.log</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/PageUrl.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\PageUrl</code></a></td>
+      <td>Sets a page URL parameter to the instance of the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Event/State.php"><code class="highlighter-rouge">EventState</code></a> class.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/Screenshot.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\Screenshot</code></a></td>
+      <td>Captures a screenshot of a web page. Saves a PNG image to the <code class="highlighter-rouge">&lt;reporting_directory&gt;/magento/&lt;module&gt;/&lt;test_case&gt;/&lt;variation&gt;/screenshots</code> directory.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/SourceCode.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\SourceCode</code></a></td>
+      <td>Collects HTML code of a web page. Saves HTML code to the <code class="highlighter-rouge">&lt;reporting_directory&gt;/magento/&lt;module&gt;/&lt;test_case&gt;/&lt;variation&gt;/page-source</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tags">Tags</h3>
+
+<p>A tag contains name of an event. When you want to process any event by a particular <a href="#observers">observer</a>, you need to:</p>
+
+<ol>
+  <li><a href="#dispatch-event">Dispatch</a> the event.</li>
+  <li>Add a tag with name of the event to required observer in corresponding <a href="#event-presets">event preset</a>.</li>
+</ol>
+
+<p>In terms of XML, it is represented as an element <code class="highlighter-rouge">&lt;tag /&gt;</code> in <code class="highlighter-rouge">events.xml</code>. <code class="highlighter-rouge">&lt;tag /&gt;</code> is a child element of an <code class="highlighter-rouge">&lt;observer&gt;</code> element. See the following example:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\ClientError"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"page_changed"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\Log"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\SourceCode"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\Screenshot"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"exception"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\CurlResponse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"curl_failed"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/observer&gt;</span></code></pre></figure>
+
+<p>As you can see, a tag contains one required attribute <code class="highlighter-rouge">name</code>, where a name of event must be assigned.</p>
+
+<h2 id="dispatch-event">Event dispatching</h2>
+
+<p>A method that is used to dispatch events is defined in <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Event/EventManagerInterface.php"><code class="highlighter-rouge">\Magento\Mtf\System\Event\EventManagerInterface</code></a>. The <abbr title="Functional Testing Framework">FTF</abbr> uses its default implementation <code class="highlighter-rouge">\Magento\Mtf\System\Event\EventManager::dispatchEvent()</code>.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eventManager</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">([</span><span class="s1">'your_event_tag'</span><span class="p">],</span> <span class="p">[</span><span class="nv">$your_input_parameters</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>It has two arguments:</p>
+
+<ul>
+  <li>Array of event tags. Event tags specify the name of event that is dispatched. It is used as a <a href="#tags">tag</a> in <a href="#event-presets">event preset</a>.</li>
+  <li>Input parameters. The parameters used by observers as input parameters. For example, a cURL response.</li>
+</ul>
+
+<p>Example of use:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="s1">'data-ui-id="messages-message-success"'</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_eventManager</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">([</span><span class="s1">'curl_failed'</span><span class="p">],</span> <span class="p">[</span><span class="nv">$response</span><span class="p">]);</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">'Product creation by curl handler was not successful!'</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="examples">Examples</h2>
+
+<p>The following examples explain how to use the reporting tool on practice.</p>
+
+<ul>
+  <li><a href="#create-preset">Create a preset</a></li>
+  <li><a href="#edit-preset">Edit a preset</a></li>
+  <li><a href="#add-custom-observer">Create and apply a custom observer</a></li>
+</ul>
+
+<h3 id="create-preset">Create a preset</h3>
+
+<p>The following example shows how to add a <code class="highlighter-rouge">custom</code> preset.</p>
+
+<p><strong>Task</strong>: Create a preset that logs only a web page <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> code and its screenshot when a test run is failed.</p>
+
+<p><strong>Reports</strong>:</p>
+
+<ul>
+  <li>HTML code</li>
+  <li>screenshots</li>
+</ul>
+
+<p><strong>What is needed</strong>:</p>
+
+<ul>
+  <li><a href="#observers">observers</a>:
+    <ul>
+      <li><code class="highlighter-rouge">\Magento\Mtf\System\Observer\SourceCode</code></li>
+      <li><code class="highlighter-rouge">\Magento\Mtf\System\Observer\Screenshot</code></li>
+    </ul>
+  </li>
+  <li><a href="/guides/v2.2/extension-dev-guide/events-and-observers.html#events">events</a>:
+    <ul>
+      <li><code class="highlighter-rouge">failure</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Solution</strong>:</p>
+
+<p>步骤1. <a href="#dispatch-event">Dispatch</a> the <code class="highlighter-rouge">failure</code> event in the test case. This event already exists and is added to the code where the <abbr title="Functional Testing Framework">FTF</abbr> processes the test failure.</p>
+
+<p>步骤2. Open <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/etc/events.xml</code>.</p>
+
+<p>步骤3. Add a preset with required observers and tags.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preset</span> <span class="na">name=</span><span class="s">"custom"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\SourceCode"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\Screenshot"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"failure"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+<span class="nt">&lt;/preset&gt;</span></code></pre></figure>
+
+<h3 id="edit-preset">Edit a preset</h3>
+
+<p>The following example shows how to edit the <code class="highlighter-rouge">base</code> preset.</p>
+
+<p><strong>Task</strong>: Take a screenshot before click, after click, and when a value is set.</p>
+
+<p><strong>Reports</strong>:</p>
+
+<ul>
+  <li>screenshots</li>
+</ul>
+
+<p><strong>What is needed</strong>:</p>
+
+<ul>
+  <li><a href="#event-presets">preset</a>:
+    <ul>
+      <li><code class="highlighter-rouge">base</code></li>
+    </ul>
+  </li>
+  <li><a href="#observers">observers</a>:
+    <ul>
+      <li><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Observer/Screenshot.php"><code class="highlighter-rouge">\Magento\Mtf\System\Observer\Screenshot</code></a></li>
+    </ul>
+  </li>
+  <li><a href="/guides/v2.2/extension-dev-guide/events-and-observers.html#events">events</a>:
+    <ul>
+      <li><code class="highlighter-rouge">click_before</code></li>
+      <li><code class="highlighter-rouge">click_after</code></li>
+      <li><code class="highlighter-rouge">set_value</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="bs-callout bs-callout-warning">
+    <p>The <code>base</code> preset is stored in the <abbr title="Functional Testing Framework">FTF</abbr> <code>&lt;magento2&gt;/dev/tests/functional/vendor/magento/mtf/etc/events.xml</code>. To add or change any setting, edit <code>&lt;magento2&gt;/dev/tests/functional/etc/events.xml</code>, which is merged with the one in the <abbr title="Functional Testing Framework">FTF</abbr>.
+</p>
+</div>
+
+<p><strong>Solution</strong>:</p>
+
+<p>步骤1. <a href="#dispatch-event">Dispatch</a> the events <code class="highlighter-rouge">click_before</code>, <code class="highlighter-rouge">click_after</code> and <code class="highlighter-rouge">set_value</code> in your code where applicable.</p>
+
+<p>步骤2. In the <code class="highlighter-rouge">base</code> preset, add required observer and event tags.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preset</span> <span class="na">name=</span><span class="s">"base"</span><span class="nt">&gt;</span>
+    ...
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\Screenshot"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"click_before"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"click_after"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"set_value"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+    ...
+<span class="nt">&lt;/preset&gt;</span></code></pre></figure>
+
+<h3 id="add-custom-observer">Create and apply a custom observer</h3>
+
+<p>You can create your own observer using existing examples.</p>
+
+<p>General implementation rules:</p>
+
+<ul>
+  <li>An observer must implement <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/System/Event/ObserverInterface.php"><code class="highlighter-rouge">ObserverInterface</code></a>.</li>
+  <li>Put the class in <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/lib/Magento/Mtf/System/Observer</code>.</li>
+</ul>
+
+<p>The following example shows how to use a custom observer in the example with the <code class="highlighter-rouge">\Magento\Mtf\System\Observer\WebapiResponse</code> observer.</p>
+
+<p><strong>Task</strong>: Create observer that logs WebAPI responses containing exceptions. Use the observer when a fixture is saved.</p>
+
+<p><strong>Reports</strong>:</p>
+
+<ul>
+  <li>Log in JSON</li>
+</ul>
+
+<p><strong>What is needed</strong>:</p>
+
+<ul>
+  <li><a href="#event-presets">preset</a>:
+    <ul>
+      <li><code class="highlighter-rouge">base</code></li>
+    </ul>
+  </li>
+  <li><a href="#observers">observer</a>:
+    <ul>
+      <li><code class="highlighter-rouge">\Magento\Mtf\System\Observer\WebapiResponse</code></li>
+    </ul>
+  </li>
+  <li><a href="/guides/v2.2/extension-dev-guide/events-and-observers.html#events">event</a>:
+    <ul>
+      <li><code class="highlighter-rouge">webapi_failed</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Solution</strong>:</p>
+
+<p>步骤1. Create an observer class <code class="highlighter-rouge">\Magento\Mtf\System\Observer\WebapiResponse</code> that stores incoming events in JSON files.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="sd">/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */</span>
+
+<span class="k">namespace</span> <span class="nx">Magento\Mtf\System\Observer</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Mtf\System\Event\Event</span><span class="p">;</span>
+
+<span class="sd">/**
+ * Observer for obtaining response of web api handler.
+ */</span>
+<span class="k">class</span> <span class="nc">WebapiResponse</span> <span class="k">extends</span> <span class="nx">AbstractObserver</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * File name of response source.
+     */</span>
+    <span class="k">const</span> <span class="no">FILE_NAME</span> <span class="o">=</span> <span class="s1">'webapi_response.log'</span><span class="p">;</span>
+
+    <span class="sd">/**
+     * Collect response source artifact to storage.
+     *
+     * @param Event $event
+     * @return void
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">process</span><span class="p">(</span><span class="nx">Event</span> <span class="nv">$event</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$directory</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createDestinationDirectory</span><span class="p">(</span><span class="s1">'webapi-response'</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">logger</span><span class="o">-&gt;</span><span class="na">log</span><span class="p">(</span>
+            <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getSubjects</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>
+            <span class="nv">$directory</span> <span class="o">.</span> <span class="s1">'/'</span> <span class="o">.</span> <span class="nv">$event</span><span class="o">-&gt;</span><span class="na">getFileIdentifier</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'.json'</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>步骤2. <a href="#dispatch-event">Dispatch</a> an event <code class="highlighter-rouge">webapi_failed</code> in the <code class="highlighter-rouge">\Magento\Tax\Test\Handler\TaxRule\WebApi::persist()</code> <a href="/guides/v2.2/mtf/mtf_entities/mtf_handler.html">handler</a> for failed responses.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">persist</span><span class="p">(</span><span class="nx">FixtureInterface</span> <span class="nv">$fixture</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Implementation of the method
+</span>    <span class="c1">// ...    
+</span>    <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$response</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eventManager</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">([</span><span class="s1">'webapi_failed'</span><span class="p">],</span> <span class="p">[</span><span class="nv">$response</span><span class="p">]);</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">'Tax rule creation by Web API handler was not successful!'</span><span class="p">);</span>     
+     <span class="p">}</span>
+     
+    <span class="k">return</span> <span class="p">[</span><span class="s1">'id'</span> <span class="o">=&gt;</span> <span class="nv">$response</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>步骤3. Add the observer and the tag to the <code class="highlighter-rouge">base</code> preset in <code class="highlighter-rouge">events.xml</code>.</p>
+
+<p>In <code class="highlighter-rouge">&lt;magento_2_root_dir&gt;/dev/tests/functional/etc/events.xml</code>, add to a preset <code class="highlighter-rouge">&lt;preset name="base"&gt;</code> an observer <code class="highlighter-rouge">&lt;observer class="Magento\Mtf\System\Observer\WebapiResponse"&gt;</code> with a tag <code class="highlighter-rouge">&lt;tag name="webapi_failed" /&gt;</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;preset</span> <span class="na">name=</span><span class="s">"base"</span><span class="nt">&gt;</span>
+...
+    <span class="nt">&lt;observer</span> <span class="na">class=</span><span class="s">"Magento\Mtf\System\Observer\WebapiResponse"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">name=</span><span class="s">"webapi_failed"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/observer&gt;</span>
+...
+<span class="nt">&lt;preset</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<!-- LINK DEFINITIONS -->
+
+<!-- Github links -->
+
+<!-- Devdocs links -->
+
+<!-- ABBREVIOTIONS -->
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/mtf/features/reporting.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/mtf/features/reporting.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

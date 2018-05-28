@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Configure Solr and Magento | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/config-guide/solr/solr-magento.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/config-guide/solr/solr-magento.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/config-guide/solr/solr-magento.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/config-guide/solr/solr-magento.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/config-guide/solr/solr-magento.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">配置手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/bk-config-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安全设置">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/secy/secy.html">安全设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="确保cron.php文件在浏览器上的安全">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/secy/secy-cron.html">确保cron.php文件在浏览器上的安全</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="x-frame-options头">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/secy/secy-xframe.html">X-Frame-Options头</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="防止缓存中毒">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/secy/secy-headers.html">防止缓存中毒</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento初始化和引导">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/bootstrap/magento-bootstrap.html">Magento初始化和引导</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="设置引导参数">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/bootstrap/magento-how-to-set.html">设置引导参数</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/bootstrap/magento-modes.html">关于Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="自定义基础目录路径(mage_dirs)">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/bootstrap/mage-dirs.html">自定义基础目录路径(MAGE_DIRS)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开启扼要记录(mage_profiler)">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/bootstrap/mage-profiler.html">开启扼要记录(MAGE_PROFILER)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行配置">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/cli/config-cli.html">命令行配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令行配置起步">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands.html">命令行配置起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理缓存">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-cache.html">管理缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="管理索引">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-index.html">管理索引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置和执行定时任务">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-cron.html">配置和执行定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码编译器">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-compiler.html">代码编译器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento的模式">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-mode.html">设置Magento的模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)高亮">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-urn.html">统一资源名称(URN)高亮</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖报告">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-depen.html">依赖报告</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="翻译字典和语言包">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-i18n.html">翻译字典和语言包</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="静态视图文件部署">
+
+            
+
+            
+            <span>静态视图文件部署</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="部署静态视图文件">
+                    
+
+                    
+                    <a  href="/guides/v2.0/config-guide/cli/config-cli-subcommands-static-view.html">部署静态视图文件</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建软链接到less文件">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-less-sass.html">创建软链接到LESS文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行单元测试">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-test.html">运行单元测试</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="转换布局的xml文件">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-layout-xml.html">转换布局的XML文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="为性能测试生成数据">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-perf-data.html">为性能测试生成数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="运行magento支持工具-(magento-commerce-only)">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-spt-util.html">运行Magento支持工具 (仅企业版适用)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento配置文件">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/config/config-magento.html">Magento配置文件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento的部署配置">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/config/config-php.html">Magento的部署配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块配置文件">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/config/config-files.html">模块配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建或扩展配置类型">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/config/config-create.html">创建或扩展配置类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置缓存">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/cache.html">配置缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="将缓存前端与缓存类型关联">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cache/cache-types.html">将缓存前端与缓存类型关联</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="底层缓存选项">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cache/cache-options.html">底层缓存选项</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置redis">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/redis/config-redis.html">配置Redis</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为magento页面缓存和默认缓存">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/redis/redis-pg-cache.html">使用Redis作为Magento页面缓存和默认缓存</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用redis作为session存储">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/redis/redis-session.html">使用Redis作为Session存储</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置和使用varnish">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/varnish/config-varnish.html">配置和使用Varnish</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="安装varnish">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/config-varnish-install.html">安装Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置varnish和你的web服务器">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/config-varnish-configure.html">配置Varnish和你的web服务器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用varnish">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/config-varnish-magento.html">配置Magento使用Varnish</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="最终校验">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/config-varnish-final.html">最终校验</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在varnish下magento的缓存清除是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/use-varnish-cache.html">在Varnish下Magento的缓存清除是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="varnish缓存是如何工作的">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/use-varnish-cache-how.html">Varnish缓存是如何工作的</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="排除503错误">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/varnish/tshoot-varnish-503.html">排除503错误</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="使用memcached做为session存储">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/memcache/memcache.html">使用memcached做为session存储</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在ubuntu上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/memcache/memcache_ubuntu.html">在Ubuntu上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在centos上安装、配置和验证memcached">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/memcache/memcache_centos.html">在CentOS上安装、配置和验证memcached</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento使用memcached">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/memcache/memcache_magento.html">配置Magento使用memcached</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="多站和多店">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/multi-site/ms_over.html">多站和多店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="在管理面板设置多站、多店及网店视图">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-site/ms_websites.html">在管理面板设置多站、多店及网店视图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在nginx下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-site/ms_nginx.html">教程-在nginx下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="教程-在apache下设置多站或多店">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-site/ms_apache.html">教程-在Apache下设置多站或多店</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="设置自定义的定时任务和任务组(cron)">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/cron/custom-cron.html">设置自定义的定时任务和任务组(cron)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自定义的定时任务和任务组(cron)参考">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cron/custom-cron-ref.html">自定义的定时任务和任务组(cron)参考</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置自定义的定时任务和任务组(cron)(教程)">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/cron/custom-cron-tut.html">配置自定义的定时任务和任务组(cron)(教程)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置数据库分析器">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/db-profiler/db-profiler.html">配置数据库分析器</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="消息队列-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/mq/rabbitmq-overview.html">消息队列 (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="管理消息队列">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/mq/manage-mysql.html">管理消息队列</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="install-and-configure-solr-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/solr/solr-overview.html">Install and configure Solr (仅企业版适用)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="configure-solr-and-magento">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/solr/solr-magento.html">Configure Solr and Magento</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-solr-for-production">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/solr/solr-script.html">Prepare Solr for production</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="数据库分库执行方案(仅企业版)">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/multi-master/multi-master.html">数据库分库执行方案(仅企业版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="自动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-master/multi-master_masterdb.html">自动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="手动配置主数据库">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-master/multi-master_manual.html">手动配置主数据库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据库分库验证">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-master/multi-master_verify.html">数据库分库验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置可选数据库复制">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/multi-master/multi-master_slavedb.html">设置可选数据库复制</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="自定义日志">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/log/log-intro.html">自定义日志</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento日志的更多细节">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/log/log-magento.html">Magento日志的更多细节</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="示例---记录数据库活动日志">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/log/log-db.html">示例 - 记录数据库活动日志</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何定位你的session文件">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/sessions.html">如何定位你的session文件</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署magento到生产环境">
+    
+
+    
+    <a href="/guides/v2.0/config-guide/prod/prod.html">部署Magento到生产环境</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-ownership-and-permissions-in-development-and-production">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/prod/prod_file-sys-perms.html">Magento ownership and permissions in development and production</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署到生产环境">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/prod/prod_deploy.html">部署到生产环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单机部署">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/prod/single-machine-deployment.html">单机部署</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="optimization">
+    
+
+    
+    <span>Optimization</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-optimization-guide">
+
+            
+
+            
+            <a href="/guides/v2.0/config-guide/prod/prod_perf-optimize.html">Magento Optimization Guide</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/config-guide/bk-config-guide.html">
+            <span property="name">配置手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Configure Solr and Magento</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+		<span class="ee-only">仅企业版适用</span>
+	
+
+	
+
+	<h1 class="page-heading">Configure Solr and Magento</h1>
+
+  
+
+
+</section>
+
+			<div class="bs-callout bs-callout-warning">
+  <p>Solr is deprecated in Magento 2.1 and will not be supported in 2.2.
+In a future release, Solr compatibility will be removed.</p>
+
+  <p>If possible, use <a href="http://devdocs.magento.com/guides/v2.1/config-guide/elasticsearch/es-overview.html">Elastic Search</a> as an alternative catalog search engine.</p>
+</div>
+
+<p>The following topics discuss how to configure Solr to work with Magento Commerce:</p>
+
+<ul>
+  <li><a href="#config-solr-copy-config-files">Copy the Magento Solr configuration and start Solr</a></li>
+  <li><a href="#config-solr-magento">配置Magento to work with Solr</a></li>
+</ul>
+
+<h3 id="config-solr-copy-config-files">Copy the Magento Solr configuration and start Solr</h3>
+<p>Magento comes packaged with a sample Solr configuration you can use and customize. To get started, you’ll copy the Magento configuration to Solr, replacing any existing files. After that you can start Solr and begin configuring Magento to work with it.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+	<p>The example Solr configuration is <em>not</em> intended to be used in a production site. It's for testing and development only. It's simple to use which makes it a great way for you to learn more about Solr.</p>
+</div>
+
+<ol>
+  <li>
+    <p>As a user with <code>root</code> privileges, enter the following commands in the order shown to copy over the Solr configuration with the one packaged with Magento Commerce:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;your Solr install dir&gt;/example/solr
+cp -R collection1 magento2
+cd magento2
+cp -R &lt;your Magento Commerce install dir&gt;/vendor/magento/module-solr/conf/* ./conf/
+</code></pre></div>    </div>
+
+    <p>For example, if Solr is installed in <code>/opt/solr/solr-4.10.4</code> and Magento Commerce is installed in <code>/var/www/magento/html/magento2ee</code>, enter:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /opt/solr/solr/solr-4.10.4/example/solr
+cp -R collection1 magento2
+cd magento2
+cp -R /var/www/html/magento2ee/vendor/magento/module-solr/conf/* ./conf/
+</code></pre></div>    </div>
+
+    <div class="bs-callout bs-callout-info" id="info">
+ <p>If you're prompted to overwrite files, try the command <code>\cp -R &lt;your Magento Commerce install dir&gt;/vendor/magento/module-solr/conf/* .</code></p>
+</div>
+  </li>
+  <li>
+    <p>After copying files, open the <code class="highlighter-rouge">&lt;your Solr install dir&gt;/example/solr/magento2/core.properties</code> file in a text editor and change:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name=collection1
+</code></pre></div>    </div>
+
+    <p>to</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name=magento2
+</code></pre></div>    </div>
+
+    <p><a href="https://wiki.apache.org/solr/Core%20Discovery%20%284.4%20and%20beyond%29?action=show&amp;redirect=Core+Discovery+%284.3+and+beyond%29" target="_blank">More information about core.properties</a></p>
+  </li>
+  <li>
+    <p>Save your changes to <code class="highlighter-rouge">core.properties</code> and exit the text editor.</p>
+  </li>
+  <li>
+    <p><em>Task for Tomcat 6 with CentOS only</em></p>
+
+    <p>If you’re using Tomcat 6 on CentOS, you must modify <code class="highlighter-rouge">&lt;your Solr install dir&gt;/example/solr/conf/solrconfig.xml</code></p>
+
+    <p>Locate the following line:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dataDir&gt;${solr.data.dir:./solr/data}&lt;/dataDir&gt;
+</code></pre></div>    </div>
+
+    <p>Change it to:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dataDir&gt;${solr.data.dir:}&lt;/dataDir&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Start Solr.</p>
+
+    <p>As a user with <code>root</code> privileges, enter the following command to start Solr:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;your Solr install dir&gt;/example
+java -jar start.jar
+</code></pre></div>    </div>
+
+    <div class="bs-callout bs-callout-warning">
+        <p>This method for starting Solr is for convenience and testing purposes only. In a production environment, you should start and stop Solr using a script as discussed in <a href="/guides/v2.0/config-guide/solr/solr-script.html#solr-script">Script Solr startup and shutdown</a>.</p>
+</div>
+  </li>
+</ol>
+
+<h3 id="config-solr-magento">配置Magento to work with Solr</h3>
+<p>This section discusses how to configure Magento Commerce to use the Solr search engine.</p>
+
+<p>To configure Magento to work with Solr:</p>
+
+<ol>
+  <li>Log in to the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> as an administrator.</li>
+  <li>Click <strong>STORES</strong> &gt; <strong>Configuration</strong> &gt; <span term-uuid="8d40d668-4996-4856-9f81-b1386cf4b14f" class="glossary-term" data-toggle="popover">CATALOG</span> &gt; <strong>Catalog</strong> &gt; <strong>Catalog Search</strong>.</li>
+  <li>In the right pane, expand <strong>Catalog Search</strong>.</li>
+  <li>The following table shows the minimum amount of information to enter to test the connection to your Solr search engine. Leave all other values at their defaults.<br /></li>
+</ol>
+<table>
+<col width="30%" />
+<col width="70%" />
+<tbody>
+	<tr><th>Option</th>
+	<th>描述</th>
+</tr>
+<tr>
+	<td>Search Engine</td>
+	<td>Click <strong>Solr</strong></td>
+</tr>
+<tr>
+	<td>Solr Server Hostname</td>
+	<td>Enter the fully qualified host name or IP address of the machine running Solr. (If Solr is running on the same host as Magento, you can optionally use <code>localhost</code>.)</td>
+</tr>
+<tr>
+	<td>Solr Server Port</td>
+	<td>Enter Solr's listen port. (The example Jetty servlet container uses 8983. The default for Tomcat is usually 8080.)</td>
+</tr>
+<tr>
+	<td>Solr Server Username</td>
+	<td><em>Optional.</em> Enter a user name for <a href="http://wiki.apache.org/solr/SolrSecurity" target="_blank">Solr authentication</a>, if desired.</td>
+</tr>
+<tr>
+	<td>Solr Server Password</td>
+	<td><em>Optional.</em> Enter the user's password, if required.</td>
+</tr>
+<tr>
+	<td>Solr Server Timeout</td>
+	<td>Enter a connection timeout value, in seconds.</td>
+</tr>
+<tr>
+	<td>Solr Server Path</td>
+	<td><p>Specifies the path and name of the Solr web application. The path used by the example Solr configuration is <code>solr/magento2</code>.</p>
+	<p>If you customized Solr, the value you enter in this field must exactly match the value of <code>webapp_name=&lt;value&gt;</code> in <code>&lt;your Solr install dir&gt;/example/solr/magento2/conf/conf/scripts.conf</code></p>.
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>The following figure shows an example.
+<img src="/common/images/solr_config-admin.png" alt="配置Magento to use Solr" /></p>
+
+<p>Click <strong>Test Connection</strong>.</p>
+
+<p>The button changes as follows.</p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tbody>
+<tr>
+	<th>Button state</th>
+	<th>Meaning</th>
+</tr>
+<tr>
+	<td><img src="/common/images/solr_test-success.png" width="140px" height="17px" /></td>
+	<td>The test connection succeeded. Click <strong>Save Config</strong> and continue with the next section.</td>
+</tr>
+<tr>
+ <td><img src="/common/images/solr_test-fail.png" width="160px" height="16px" /></td>
+ <td><p>The test connection failed. 尝试下面的方法:</p>
+	<ul><li>Examine the command window in which you started Solr for stack traces and exceptions. You must resolve those before you continue.<br />
+	In particular, make sure you started Solr as a user with <code>root</code> privileges.</li>
+	<li>Verify that <a href="http://php.net/manual/en/filesystem.configuration.php" target="_blank"><code>allow_url_fopen = On</code></a> is present in your server's <code>php.ini</code>.<br />
+	If you are not sure where <code>php.ini</code> is located, you can <a href="http://kb.mediatemple.net/questions/764/How+can+I+create+a+phpinfo.php+page%3F#gs" target="_blank">create a <code>phpinfo.php</code> page</a> to locate it.</li>
+	<li>Make sure that <a href="/guides/v2.0/config-guide/solr/solr-overview.html#prereq-secy">UNIX firewall and SELinux</a> are both disabled, or set up rules to enable Solr and Magento to communicate with each other.</li>
+	<li>Verify the value of the <strong>Solr Server Hostname</strong> field. Make sure the server is available. You can try the server's IP address instead.</li>
+	<li>Use the command <code>netstat -an | grep <em>listen-port</em></code> command to verify that the port specified in the <strong>Solr Server Port</strong> field is not being used by another process.<br />
+	For example, to see if Solr is running on its default port, use the following command:
+	<pre>netstat -an | grep 8983</pre>
+	If Solr is running on port 8983, it displays similar to the following:
+	<pre>tcp        0      0 :::8983            :::*          LISTEN</pre></li>
+	<li>If Solr is installed on a remote machine, use the <code>ping</code> command to verify that machine is reachable from your Magento server.</li></ul>
+	</td>
+</tr>
+</tbody>
+</table>
+
+<p>Only after the test connection succeeds, click <strong>Save Config</strong> and continue with the next section.</p>
+
+<h2 id="solr-reindex">Reindexing catalog search and refreshing the full page cache</h2>
+<p>After you change Magento’s Solr configuration, you must reindex the catalog search index and refresh the full page using the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> or command line.</p>
+
+<p>To refresh the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> using the Admin:</p>
+
+<ol>
+  <li>In the Admin, click <strong>System</strong> &gt; <strong>Cache Management</strong>.</li>
+  <li>Select the check box next to <strong>Page Cache</strong>.</li>
+  <li>From the <strong>Actions</strong> list in the upper right, click <strong>Refresh</strong>.<br />
+    The following figure shows an example.<br />
+    <img src="/common/images/solr_refresh-cache.png" width="600px" /></li>
+</ol>
+
+<p>To clean the cache using the command line, use the <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean"><code class="highlighter-rouge">magento cache:clean</code></a> command.</p>
+
+<p>To reindex using the command line:</p>
+
+<ol>
+  <li>Log in to your Magento server as, or switch to, the <a href="/guides/v2.0/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.</li>
+  <li>
+    <p>Enter the following command to reindex all indexers:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php &lt;your Magento install dir&gt;/bin magento indexer:reindex
+</code></pre></div>    </div>
+
+    <p>Enter the following command to reindex the catalog search index only:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php &lt;your Magento install dir&gt;/bin magento indexer:reindex catalogsearch_fulltext
+</code></pre></div>    </div>
+  </li>
+  <li>Wait while the indexers are reindexed.</li>
+</ol>
+
+<div class="bs-callout bs-callout-info" id="info">
+	<p>Unlike the cache, indexers are updated by a cron job. Make sure <a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-cron.html">cron is enabled</a> before you start using Solr.</p>
+</div>
+
+<h2 id="solr-verify">Verify Solr is working</h2>
+<p>To verify Solr works, go to the <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span> and search for any term (including one that won’t return results) and look for the search in the Solr command window.</p>
+
+<p>The following figure shows an example of a storefront search.</p>
+
+<p><img src="/common/images/solr_verify.png" width="750px" alt="Verify Solr works by searching the storefront" /></p>
+
+<p>The following excerpt from the Solr command window shows the same search:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>497008 [qtp2032251042-13] INFO  org.apache.solr.core.SolrCore  – [magento2] webapp=/solr path=/select params={facet.field={!key%3Dcategory_bucket}category_ids&amp;json.nl=flat&amp;fl=id,score&amp;start=0&amp;fq=store_id:1&amp;rows=10000&amp;q=sku:((hello*+hello))+OR+fulltext_en:((hello*+hello))+OR+attr_color_en:((hello*+hello))+OR+attr_description_en:((hello*+hello))+OR+attr_manufacturer_en:((hello*+hello))+OR+attr_name_en:((hello*+hello))+OR+attr_short_description_en:((hello*+hello))+OR+attr_status_en:((hello*+hello))+OR+attr_tax_class_id_en:((hello*+hello))&amp;f.category_ids.facet.mincount=1&amp;omitHeader=true&amp;stats=true&amp;wt=json&amp;facet=true&amp;stats.field=price_0_1} hits=0 status=0 QTime=58
+</code></pre></div></div>
+
+<h4 id="下一步">下一步</h4>
+<p><a href="/guides/v2.0/config-guide/solr/solr-script.html">Prepare Solr for production</a></p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/config-guide/solr/solr-magento.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/config-guide/solr/solr-magento.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

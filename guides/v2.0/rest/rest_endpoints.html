@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>List of service names per module | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/rest/rest_endpoints.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/rest/rest_endpoints.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/rest/rest_endpoints.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/rest/rest_endpoints.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/rest/rest_endpoints.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">REST API Reference</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="overview">
+    
+
+    
+    <a href="/guides/v2.0/rest/bk-rest.html">Overview</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="rest-apis-(swagger)">
+
+            
+
+            
+            <a href="http://devdocs.magento.com/swagger/index_20.html">REST APIs (Swagger)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="list-of-rest-endpoints-by-module">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/list.html">List of REST endpoints by module</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="list-of-service-names-per-module">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/rest_endpoints.html">List of service names per module</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="generate-a-local-api-reference">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/generate-local.html">Generate a local API reference</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="search-using-rest">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/performing-searches.html">Search using REST</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="retrieve-filtered-search-responses">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/retrieve-filtered-responses.html">Retrieve filtered search responses</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="restricting-access-to-anonymous-web-apis">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/anonymous-api-security.html">Restricting access to anonymous web APIs</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="rest-usage-notes">
+
+            
+
+            
+            <a href="/guides/v2.0/rest/notes.html">REST usage notes</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="modules">
+    
+
+    
+    <span>Modules</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="catalog">
+
+            
+
+            
+            <span>Catalog</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="general-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.0/rest/modules/catalog.html">General notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/rest/bk-rest.html">
+            <span property="name">Overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">List of service names per module</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">List of service names per module</h1>
+
+  
+
+
+</section>
+
+			<h2 id="rest-schema-endpoint-format">REST Schema Endpoint Format</h2>
+<p>To specify one or more services:</p>
+
+<p><code class="highlighter-rouge">http://&lt;magento_host&gt;/rest/&lt;store_code&gt;/schema&amp;services=&lt;serviceName1,serviceName2,..&gt;</code></p>
+
+<p>To specify all services:</p>
+
+<p><code class="highlighter-rouge">http://&lt;magento_host&gt;/rest/&lt;store_code&gt;/schema</code></p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>The value of `store_code` can be one of the following:</p>
+  <ul>
+  <li><code>default</code></li>
+  <li>The assigned store code</li>
+  <li><code>all</code>. This value only applies to the <span term-uuid="f3944faf-127e-4097-9918-a2e9c647d44f" class="glossary-term" data-toggle="popover">CMS</span> and Product modules. If this value is specified, the <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> call affects all the merchant's stores. <code>GET</code>operations cannot be performed when you specify <code>all</code>.</li>
+  </ul>
+</div>
+
+<h2 id="eelist">Magento Commerce REST API Services per module</h2>
+
+<p>The REST APIs for Magento Commerce are available on Commerce installations only. Commerce installations automatically have access to all Magento Open Source REST APIs.</p>
+
+<h3 id="customer-balance">Customer balance</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>customerBalanceBalanceManagementV1
+</code></pre></div></div>
+
+<h3 id="gift-cards">Gift cards</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>giftCardAccountGiftCardAccountManagementV1
+giftCardAccountGuestGiftCardAccountManagementV1
+giftRegistryGuestCartShippingMethodManagementV1
+giftRegistryShippingMethodManagementV1
+</code></pre></div></div>
+
+<h3 id="gift-wrapping">Gift wrapping</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>giftWrappingWrappingRepositoryV1
+</code></pre></div></div>
+
+<h3 id="reward">Reward</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rewardRewardManagementV1
+</code></pre></div></div>
+
+<h3 id="rma">RMA</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rmaCommentManagementV1
+rmaRmaAttributesManagementV1
+rmaRmaManagementV1
+rmaRmaRepositoryV1
+rmaTrackManagementV1
+</code></pre></div></div>
+
+<h3 id="worldpay">Worldpay</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worldpayGuestPaymentInformationManagementProxyV1
+</code></pre></div></div>
+
+<h2 id="celist">Magento Open Source REST APIs Services per Module</h2>
+
+<p>The Magento Open Source REST APIs are available on all installations.</p>
+
+<h3 id="backend">Backend</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>backendModuleServiceV1
+</code></pre></div></div>
+
+<h3 id="bundle-product">Bundle product</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundleProductLinkManagementV1
+bundleProductOptionManagementV1
+bundleProductOptionRepositoryV1
+bundleProductOptionTypeListV1
+</code></pre></div></div>
+
+<h3 id="catalog">Catalog</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>catalogAttributeSetManagementV1
+catalogAttributeSetRepositoryV1
+catalogCategoryAttributeOptionManagementV1
+catalogCategoryAttributeRepositoryV1
+catalogCategoryLinkManagementV1
+catalogCategoryLinkRepositoryV1
+catalogCategoryManagementV1
+catalogCategoryRepositoryV1
+catalogProductAttributeGroupRepositoryV1
+catalogProductAttributeManagementV1
+catalogProductAttributeMediaGalleryManagementV1
+catalogProductAttributeOptionManagementV1
+catalogProductAttributeRepositoryV1
+catalogProductAttributeTypesListV1
+catalogProductCustomOptionRepositoryV1
+catalogProductCustomOptionTypeListV1
+catalogProductLinkManagementV1
+catalogProductLinkRepositoryV1
+catalogProductLinkTypeListV1
+catalogProductMediaAttributeManagementV1
+catalogProductRepositoryV1
+catalogProductTierPriceManagementV1
+catalogProductTypeListV1
+catalogProductWebsiteLinkRepositoryV1
+</code></pre></div></div>
+
+<h3 id="catalog-inventory">Catalog inventory</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>catalogInventoryStockRegistryV1
+</code></pre></div></div>
+
+<h3 id="checkout">Checkout</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkoutGuestPaymentInformationManagementV1
+checkoutGuestShippingInformationManagementV1
+checkoutGuestTotalsInformationManagementV1
+checkoutPaymentInformationManagementV1
+checkoutShippingInformationManagementV1
+checkoutTotalsInformationManagementV1
+</code></pre></div></div>
+
+<h3 id="checkout-agreements">Checkout agreements</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkoutAgreementsCheckoutAgreementsRepositoryV1
+</code></pre></div></div>
+
+<h3 id="cms">CMS</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmsBlockRepositoryV1
+cmsPageRepositoryV1
+</code></pre></div></div>
+
+<h3 id="configurable-product">Configurable product</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>configurableProductConfigurableProductManagementV1
+configurableProductLinkManagementV1
+configurableProductOptionRepositoryV1
+</code></pre></div></div>
+
+<h3 id="customer">Customer</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>customerAccountManagementV1
+customerAddressMetadataV1
+customerAddressRepositoryV1
+customerCustomerMetadataV1
+customerCustomerRepositoryV1
+customerGroupManagementV1
+customerGroupRepositoryV1
+</code></pre></div></div>
+
+<h3 id="directory">Directory</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>directoryCountryInformationAcquirerV1
+directoryCurrencyInformationAcquirerV1
+</code></pre></div></div>
+
+<h3 id="downloadable">Downloadable</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>downloadableLinkRepositoryV1
+downloadableSampleRepositoryV1
+</code></pre></div></div>
+
+<h3 id="eav">EAV</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eavAttributeSetManagementV1
+eavAttributeSetRepositoryV1
+</code></pre></div></div>
+
+<h3 id="gift-message">Gift message</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>giftMessageCartRepositoryV1
+giftMessageGuestCartRepositoryV1
+giftMessageGuestItemRepositoryV1
+giftMessageItemRepositoryV1
+</code></pre></div></div>
+
+<h3 id="integration">Integration</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>integrationAdminTokenServiceV1
+integrationCustomerTokenServiceV1
+</code></pre></div></div>
+
+<h3 id="quote">Quote</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>quoteBillingAddressManagementV1
+quoteCartItemRepositoryV1
+quoteCartManagementV1
+quoteCartRepositoryV1
+quoteCartTotalManagementV1
+quoteCartTotalRepositoryV1
+quoteCouponManagementV1
+quoteGuestBillingAddressManagementV1
+quoteGuestCartItemRepositoryV1
+quoteGuestCartManagementV1
+quoteGuestCartRepositoryV1
+quoteGuestCartTotalManagementV1
+quoteGuestCartTotalRepositoryV1
+quoteGuestCouponManagementV1
+quoteGuestPaymentMethodManagementV1
+quoteGuestShipmentEstimationV1
+quoteGuestShippingMethodManagementV1
+quotePaymentMethodManagementV1
+quoteShipmentEstimationV1
+quoteShippingMethodManagementV1
+</code></pre></div></div>
+
+<h3 id="sales">Sales</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>salesCreditmemoCommentRepositoryV1
+salesCreditmemoManagementV1
+salesCreditmemoRepositoryV1
+salesInvoiceCommentRepositoryV1
+salesInvoiceManagementV1
+salesInvoiceOrderV1
+salesInvoiceRepositoryV1
+salesOrderAddressRepositoryV1
+salesOrderItemRepositoryV1
+salesOrderManagementV1
+salesOrderRepositoryV1
+salesShipmentCommentRepositoryV1
+salesShipmentManagementV1
+salesShipmentRepositoryV1
+salesShipmentTrackRepositoryV1
+salesShipOrderV1
+salesTransactionRepositoryV1
+</code></pre></div></div>
+
+<h3 id="sales-rule">Sales rule</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>salesRuleCouponManagementV1
+salesRuleCouponRepositoryV1
+salesRuleRuleRepositoryV1
+</code></pre></div></div>
+
+<h3 id="search">Search</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>searchV1
+</code></pre></div></div>
+
+<h3 id="store">Store</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>storeGroupRepositoryV1
+storeStoreConfigManagerV1
+storeStoreRepositoryV1
+storeWebsiteRepositoryV1
+</code></pre></div></div>
+
+<h3 id="tax">Tax</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>taxTaxClassRepositoryV1
+taxTaxRateRepositoryV1
+taxTaxRuleRepositoryV1
+</code></pre></div></div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/rest/rest_endpoints.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/rest/rest_endpoints.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

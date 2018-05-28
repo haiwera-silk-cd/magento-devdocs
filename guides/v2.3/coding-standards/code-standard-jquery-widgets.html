@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>jq小工具编码规范 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/coding-standards/code-standard-jquery-widgets.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/coding-standards/code-standard-jquery-widgets.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/coding-standards/code-standard-jquery-widgets.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/coding-standards/code-standard-jquery-widgets.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/coding-standards/code-standard-jquery-widgets.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">编码规范</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="coding-standards">
+    
+
+    
+    <a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="code-demarcation-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-demarcation.html">代码界定标准</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-php.html">PHP编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-code-sniffers">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-sniffers.html">PHP代码嗅探程序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/docblock-standard-general.html">注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="javascript-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-javascript.html">js编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="javascript-docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/docblock-standard-javascript.html">JavaScript 注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="jquery-widget-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-jquery-widgets.html">jq小工具编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="less-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-less.html">LESS编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="html-style-guide">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-html.html">HTML编码风格向导</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-guidelines">
+    
+
+    
+    <a href="/guides/v2.3/coding-standards/technical-guidelines.html">技术指南</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-vision">
+    
+
+    
+    <span>技术视角</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="web-api">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/technical-vision/webapi.html">Web Api</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/coding-standards/bk-coding-standards.html">
+            <span property="name">编码规范</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">jq小工具编码规范</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">jq小工具编码规范</h1>
+
+  
+
+
+</section>
+
+			<p>In the Magento system, all jQuery UI widgets and interactions are built on a simple, reusable base—the <a href="http://jqueryui.com/widget/" target="_blank">jQuery UI Widget Factory</a>.</p>
+
+<p>The factory provides a flexible base for building complex, stateful plug-ins with a consistent <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span>.
+It is designed not only for plug-ins that are part of <span term-uuid="5bfa8a8e-6f3e-4fed-a43e-62339916f02e" class="glossary-term" data-toggle="popover">jQuery</span> UI, but for general usage by developers who want to create object-oriented 组件 without reinventing common infrastructure.</p>
+
+<p>For more information, see the <a href="http://api.jqueryui.com/jQuery.widget/" target="_blank">jQuery Widget API documentation</a>.</p>
+
+<p>This standard is mandatory for Magento core developers and recommended for third-party <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> developers.
+Some parts of Magento code might not comply with the standard, but we are working to gradually improve this.</p>
+
+<p>Use <a href="http://www.ietf.org/rfc/rfc2119.txt" target="_blank">RFC 2119</a> to interpret the “must,” “must not,” “required,” “shall,” “shall not,” “should,” “should not,” “recommended,” “may,” and “optional” keywords.</p>
+
+<h2 id="naming-conventions">Naming conventions</h2>
+
+<ul>
+  <li><span term-uuid="f0dcf847-ce21-4b88-8b45-83e1cbf08100" class="glossary-term" data-toggle="popover">小工具</span> names must consist of one or more non-abbreviated English word and in camelcase format.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.accordion'</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">accordion</span><span class="p">,</span> <span class="p">{</span>
+        <span class="c1">// ... My custom code ...</span>
+    <span class="p">});</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Widget names should be verbose enough to fully describe their purpose and behavior.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Declaration of the frontend.advancedEventTrigger widget</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="s2">"use strict"</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.advancedEventTrigger'</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">button</span><span class="p">,</span> <span class="p">{</span>
+        <span class="c1">// ... My custom code ...</span>
+    <span class="p">});</span>
+<span class="p">})</span> <span class="p">(</span><span class="nx">jQuery</span><span class="p">);</span>
+  </code></pre></figure>
+
+<h2 id="instantiation-and-resources">Instantiation and resources</h2>
+
+<ul>
+  <li>Additional <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> files used as a resources must be dynamically loaded using the <code class="highlighter-rouge">$.mage.组件()</code> method and must not be included in the <code class="highlighter-rouge">&lt;head&gt;</code> block.</li>
+  <li>Use the <code class="highlighter-rouge">$.mage.组件()</code> method to load additional JavaScript resource files not included in the <code class="highlighter-rouge">&lt;head&gt;</code> block.</li>
+  <li>You must use <code class="highlighter-rouge">$.mage.extend()</code> to extend an existing set of widget resources.</li>
+  <li>
+    <p>You must instantiate widgets using the <code class="highlighter-rouge">data-mage-init</code> attribute.
+You can use the <code class="highlighter-rouge">.mage()</code> <span term-uuid="9fceecbe-31be-4e49-aac7-11d155a85382" class="glossary-term" data-toggle="popover">plug-in</span> to instantiate widgets that use callback methods.</p>
+
+    <p>Benefits:</p>
+
+    <ul>
+      <li>You leverage the benefits of <code class="highlighter-rouge">$.mage.extend()</code> and <code class="highlighter-rouge">$.mage.组件()</code>.</li>
+      <li>Using <code class="highlighter-rouge">data-mage-init</code> minimizes the inline JavaScript code footprint.</li>
+      <li>You can modify widget initialization parameters.</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Widget initialization using the data-mage-init attribute</span>
+<span class="o">&lt;</span><span class="nx">form</span> <span class="nx">data</span><span class="o">-</span><span class="nx">mage</span><span class="o">-</span><span class="nx">init</span><span class="o">=</span><span class="s2">"{form:[], validation:{ignore:':hidden'}}"</span><span class="o">&gt;&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>
+<span class="c1">// Widget initialization using the mage plug-in</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">).</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">close</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+  </code></pre></figure>
+
+<ul>
+  <li>You can declare callback methods inline JavaScript but not methods and widgets.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Widget initialization and configuration</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">).</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">close</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Widget initialization and binding event handlers</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">).</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'dialogclose'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Extension for widget in a JavaScript file</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.dialog'</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">dialog</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">close</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Extension of widget resources</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">mage</span>
+        <span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">,</span> <span class="s1">'dialog'</span><span class="p">,</span>
+            <span class="s1">'&lt;?php echo $this-&gt;getViewFileUrl('</span><span class="nx">Enterprise_</span><span class="err">\</span><span class="o">*</span><span class="nx">Module</span><span class="err">\</span><span class="o">*</span><span class="p">::</span><span class="nx">page</span><span class="o">/</span><span class="nx">js</span><span class="o">/</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">js</span><span class="s1">') ?&gt;'</span><span class="p">)</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+  </code></pre></figure>
+
+<h2 id="development-standards">Development standards</h2>
+
+<ul>
+  <li>
+    <p>Widgets should comply with the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank">single responsibility principle</a>.</p>
+
+    <p>Widgets should not have responsibilities not related to the <span term-uuid="a9027f5d-efab-4662-96aa-c2999b5ab259" class="glossary-term" data-toggle="popover">entity</span> described by the widget.</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Widget "dialog" that is responsible</span>
+<span class="c1">// only for opening content in an interactive overlay.</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.dialog'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">// Code logic</span>
+<span class="p">});</span>
+
+<span class="c1">// Widget "validation" that is responsible</span>
+<span class="c1">// only for validating the form fields.</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.validation'</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">sortable</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">// Code logic</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'form'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'validation'</span><span class="p">);</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Widget properties that modify the widget’s behavior must be located in the widget’s options to make them configurable and reusable.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//Declaration of the backend.dialog widget</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.dialog'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">modal</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="c1">// Additional widget options</span>
+    <span class="p">},</span>
+    <span class="c1">// Additional widget properties</span>
+<span class="p">});</span>
+
+<span class="c1">// Initializing</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">).</span><span class="nx">mage</span><span class="p">(</span><span class="s1">'dialog'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">modal</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">autoOpen</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Widget communications must be handled by jQuery events</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body&gt;</span>
+  ...
+  <span class="nt">&lt;button</span> <span class="na">data-mage-init=</span><span class="s">"{button: {event: 'save', target:'[data-role=edit-form]'}}"</span> <span class="nt">/&gt;</span>
+  ...
+  <span class="nt">&lt;form</span> <span class="na">data-role=</span><span class="s">"edit-form"</span><span class="nt">&gt;</span>
+        ...
+  <span class="nt">&lt;/form&gt;</span>
+  ...
+<span class="nt">&lt;/body&gt;</span>
+
+  </code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Declaration of the mage.form widget</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s2">"mage.form,"</span> <span class="p">{</span>
+    <span class="nl">_create</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_bind</span><span class="p">();</span>
+    <span class="p">},</span>
+    <span class="nx">_bind</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_on</span><span class="p">({</span>
+            <span class="na">save</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">_submit</span>
+        <span class="p">})</span>
+    <span class="p">},</span>
+    <span class="nx">_submit</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_rollback</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">false</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">_beforeSubmit</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'submit'</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+  </code></pre></figure>
+
+<ul>
+  <li>
+    <p>You must use <a href="http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing" target="_blank">DOM event bubbling</a> to perform one-way communication between a child widget and its parent widget.</p>
+  </li>
+  <li>
+    <p>Widgets must comply with the <a href="http://en.wikipedia.org/wiki/Law_of_Demeter" target="_blank">Law of Demeter</a> principle.
+Do not instantiate a widget or call a widget’s methods inside another widget.</p>
+  </li>
+  <li>
+    <p>Make widgets abstract enough so that they can be used anywhere in Magento.</p>
+
+    <p>For example, the <code class="highlighter-rouge">mage.dropdown</code> widget is applicable in many other scenarios, unlike <code class="highlighter-rouge">mage.topShoppingCart</code>.</p>
+  </li>
+  <li>
+    <p>Place abstract, share-able widgets under the <code class="highlighter-rouge">&lt;install dir&gt;/pub/lib/&lt;your company&gt;</code> directory so non-Magento applications can access them.</p>
+
+    <p>例如:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/pub
+/lib
+/magento
+  dropdown.js
+  validation.js
+  dialog.js 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Place Magento-specific widgets under the <code class="highlighter-rouge">&lt;install dir&gt;/app/code/&lt;namespace&gt;/&lt;module-name&gt;/view/&lt;area-name&gt;/js</code> directory.</p>
+
+    <p>例如:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/app
+/code
+  /Mage
+    /DesignEditor
+      /view
+        /frontend
+          /js
+            vde-block.js
+            vde-container.js
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="architecture">Architecture</h2>
+
+<ul>
+  <li>
+    <p>Use an underscore prefix to declare private widget methods.</p>
+
+    <p>Properties without an underscore prefix are accessible using the jQuery Widget factory public API.</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Declaration of the backend.手风琴菜单小工具</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">widget</span><span class="p">(</span><span class="s1">'mage.accordion'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">_create</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">header</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">header</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">icon</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">icon</span><span class="p">).</span><span class="nx">prependTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">header</span><span class="p">);</span>
+      <span class="p">}</span>
+<span class="p">});</span>
+    </code></pre></figure>
+
+<ul>
+  <li>Start a widget’s element selection with <code class="highlighter-rouge">this.element</code></li>
+  <li>
+    <p>Widgets must not interact with DOM elements selected using <code class="highlighter-rouge">this.element.parent()</code>, <code class="highlighter-rouge">this.element('selector')</code>, or <code class="highlighter-rouge">this.element.closest('selector')</code>.</p>
+
+    <p>This reduces the number of widget conflicts because widgets interact only with their child elements.</p>
+  </li>
+  <li>Widget options should have default values.
+Use a <code class="highlighter-rouge">null</code> value if there is no default value for an option.</li>
+  <li>Pass as widget options all DOM selectors used by that widget.</li>
+  <li>Use the <code class="highlighter-rouge">_setOption</code> method to process required, immediate state changes.</li>
+  <li>Use the public widget API to call widget methods to allow chaining widget methods.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Call the 'open' method on the 菜单小工具 using the public widgets API</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">menu</span><span class="p">(</span><span class="s1">'open'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'ui-state-active'</span><span class="p">);</span>
+  </code></pre></figure>
+
+<ul>
+  <li>
+    <p>Handle widget initialization if there is a logical action to perform on successive calls to the widget with no arguments.</p>
+
+    <p>The widget factory automatically fires the <code class="highlighter-rouge">_create()</code> and <code class="highlighter-rouge">_init()</code> methods during initialization, in that order and prevents multiple instantiations of the same element.</p>
+
+    <p>The <code class="highlighter-rouge">_create()</code> method is called only once for each widget instance and <code class="highlighter-rouge">_init()</code> is called each time the widget is called without arguments.</p>
+  </li>
+  <li>
+    <p>When a widget is destroyed, the attached element should be left exactly like it was before attachment.</p>
+
+    <p>Common tasks for this include:</p>
+
+    <ul>
+      <li>Removing or adding any <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> classes the widget added/removed to the element.</li>
+      <li>Detaching any elements the widget added to the DOM.</li>
+      <li>Destroying any widgets that the widget applied to other elements.</li>
+    </ul>
+  </li>
+  <li>Bind <span term-uuid="c57aef7c-97b4-4b2b-a999-8001accef1fe" class="glossary-term" data-toggle="popover">event</span> handlers using the <code class="highlighter-rouge">_bind()</code> method to make it easy to find what events the widget reacts on.</li>
+  <li>
+    <p>Bind events using the <code class="highlighter-rouge">on()</code> method.</p>
+
+    <p>Benefits:</p>
+
+    <ul>
+      <li>Delegation is supported using selectors in the event names.
+例如: <code class="highlighter-rouge">click.foo</code>.</li>
+      <li>Maintains proper <code class="highlighter-rouge">this</code> context inside the handlers, so it is not necessary to use the <code class="highlighter-rouge">$.proxy()</code> method.</li>
+      <li>Event handlers are automatically namespaced and cleaned up on destruction.</li>
+    </ul>
+  </li>
+</ul>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/coding-standards/code-standard-jquery-widgets.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/coding-standards/code-standard-jquery-widgets.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

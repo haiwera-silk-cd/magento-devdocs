@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>管理面板的定位和设计 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/ext-best-practices/admin/placement-and-design.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/ext-best-practices/admin/placement-and-design.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/ext-best-practices/admin/placement-and-design.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/ext-best-practices/admin/placement-and-design.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/ext-best-practices/admin/placement-and-design.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Extension Best Practices</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="admin">
+    
+
+    
+    <a href="/guides/v2.1/ext-best-practices/admin/admin-best-practices.html">Admin</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="admin-panel-placement-and-design">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/admin/placement-and-design.html">管理面板的定位和设计</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="admin-faq">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/admin/ext-best-practices_admin_FAQ.html">管理面板常见问题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="extension-coding">
+    
+
+    
+    <a href="/guides/v2.1/ext-best-practices/extension-coding/coding-best-practices.html">扩展编码</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="programming-best-practices">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/common-programming-bp.html">最佳编程实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="working-with-the-architecture">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/working-with-arch-bp.html">在构架下工作</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="security,-performance,-and-data-handling">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/security-performance-data-bp.html">安装、性能及数据处理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="observers-best-practices">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/observers-bp.html">观察者最佳实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="coding-faq">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/coding-faq.html">编码常见问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="creating-a-magento-admin-page">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/extension-coding/example-module-adminpage.html">新建一个Magento管理面板页面</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="storefront">
+    
+
+    
+    <a href="/guides/v2.1/ext-best-practices/storefront/storefront-best-practices.html">Storefront</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="security">
+    
+
+    
+    <span>Security</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="writing-secure-code">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/security/writing-secure-code.html">编写安全的代码</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="tutorials">
+    
+
+    
+    <span>Tutorials</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="copying-fieldsets">
+
+            
+
+            
+            <a href="/guides/v2.1/ext-best-practices/tutorials/copy-fieldsets.html">拷贝form输入字段集</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">
+            <span property="name">扩展开发者最佳实践</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">管理面板的定位和设计</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">管理面板的定位和设计</h1>
+
+  
+
+
+</section>
+
+			<h2 id="overview">Overview</h2>
+
+<p>Magento’s flexible platform lets you place an <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> anywhere in the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> panel. However, it can be difficult finding the right place for your extension and how it should look, so we’ve prepared the following guidelines to help.</p>
+
+<h2 id="things-to-avoid">Things to Avoid</h2>
+
+<p>We discourage practices that diminish the user experience in the Admin. The following design decisions that have been seen in some extensions create a negative user experience and should be avoided.</p>
+
+<h3 id="icons-in-the-primary-navigation">Icons in the Primary Navigation</h3>
+<p>Icons should not be added to the primary navigation panel in the Admin. If every extension added its own icon to the primary navigation panel, the interface will quickly become cluttered and unusable.</p>
+
+<p>Icons should not be used in any of the navigation submenu panels to bring attention to your extension. Your navigation listing should conform to the look and feel of its surroundings and not look out of place.</p>
+
+<p>Your extension’s settings and configuration area is an appropriate place to use icons.</p>
+
+<p>For more information about icon design and Magento’s icon library, see the article about  <a href="/guides/v2.1/design-styleguide/iconography/iconography.html">Iconography</a> in the Admin Style Guide book.</p>
+
+<h3 id="advertising-in-navigation">Advertising in Navigation</h3>
+<p>It is not appropriate to use the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> navigation for marketing or to <span term-uuid="9eb0e3fa-cb69-4e21-9ad0-cabeb98afcda" class="glossary-term" data-toggle="popover">cross-sell</span> extensions after your extensions has been installed in Magento. A <a href="#feature-extensions">new section</a> is under proposal that will possibly be more suitable for marketing and advertising content.</p>
+
+<p>Do not use the name of your company or marketing jargon as part of an extension name or the extension name itself in the Admin. You should create a unique feature name that users will understand because people usually search for extensions by feature or function keywords, not by a company or brand name.</p>
+
+<h2 id="placement-guidelines-for-extension-types">Placement guidelines for extension types</h2>
+<p>From the list of extension types below, determine the type of extension you have and read the guidance for placement and style.</p>
+
+<p><em>The names for the types of extensions listed below are for reference purposes only.</em></p>
+
+<h3 id="standard-connector">Standard Connector</h3>
+<p>These extensions provide additional <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> over Magento’s existing API and is responsible for providing settings between Magento and another system.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>All required settings for this connector type should appear in the <strong>Stores &gt; Settings &gt; Configuration</strong> section. The actual listings for these extension settings should appear after all of Magento’s listed settings. All the setting details and configurations should appear in the section to the right.</p>
+
+<p><img src="http://devdocs.magento.com/common/images/ext-best-practices/connector-settings-placement.png" alt="Connector settings placement" /></p>
+
+<p><strong>Style</strong></p>
+
+<ul>
+  <li>The style of the listing for your settings should match the look of Magento’s listed settings.</li>
+  <li>Icons or images should not be used in the navigation listing for your settings.</li>
+</ul>
+
+<hr />
+
+<h3 id="store-feature-connector">Store Feature Connector</h3>
+<p>These extensions are responsible for integrating with different systems and need additional
+settings displayed under specific entries in the <strong>Store &gt; Settings &gt; Configuration</strong> section.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>The settings for these extensions should be displayed under its respective parent section under the <strong>Store &gt; Settings &gt; Configuration</strong> section.</p>
+
+<p>For example, if the extension is for Shipping, then you can place it under <strong>Store &gt; Settings &gt; Configuration &gt; Sales &gt; Shipping Settings</strong>.</p>
+
+<p><img src="http://devdocs.magento.com/common/images/ext-best-practices/store-feature-connector-placement.png" alt="Store Feature Connector placement" /></p>
+
+<hr />
+
+<h3 id="connector-with-additional-features">Connector with additional features</h3>
+<p>These extensions are responsible for integrating with different systems and need additional settings and configurations for synchronizing with these systems.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>If all the settings for an extension can be consolidated into one section, then the extension can be added to one of the primary navigation’s submenu as links under the appropriate parent item. Avoid placing extension settings in multiple sections, such as the Configuration section and another related section.</p>
+
+<p>For example, if your extension is related to the “Reports” functionality then its settings should appear as a link under the Report Section in the Primary navigation.</p>
+
+<p><img src="http://devdocs.magento.com/common/images/ext-best-practices/additional-feature-placement.png" alt="Connector with additional features placement" /></p>
+
+<p><strong>Style</strong></p>
+
+<ul>
+  <li>The styles of the links in the admin should follow the same styles of the default Magento Navigation Links.</li>
+  <li>Do not introduce custom icons in the navigation submenus.</li>
+</ul>
+
+<hr />
+
+<h3 id="feature-extensions">Feature Extensions</h3>
+
+<p>These are extensions which provide additional functionality to Magento that do not already exist as a feature. These extensions usually demand an additional primary navigation item.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>There will be a new, dedicated section designed for such exclusive extensions. When feature-level extensions are installed, those extensions will live under this section. The exact final name of this new section has not been decided (we welcome your feedback), but in the image below it is named Extensions.</p>
+
+<p><img src="http://devdocs.magento.com/common/images/ext-best-practices/feature-placement.png" alt="Feature Placement" height="190px" width="350px" /></p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>The name and icon for this section is still TBD.</p>
+  <p>This new section is a future proposal, and we welcome feedback about if and how advertisements should be displayed here.</p>
+</div>
+
+<p>Since this section is not yet available, you should place your extension in one of the previously mentioned areas where it would be the most appropriate.</p>
+
+<hr />
+
+<h3 id="integrated-extensions">Integrated Extensions</h3>
+
+<p>These are add-ons to existing Magento feature and might appear as a nested feature.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>As these are integrated features no direct/indirect accessible links are available from the admin.</p>
+
+<hr />
+
+<h3 id="codebase-extensions">Codebase Extensions</h3>
+
+<p>These extensions are created as a code and do not need to have a representation in the admin panel.</p>
+
+<p><strong>Placement</strong></p>
+
+<p>As these extensions do not have additional settings no direct/indirect accessible links are available from the admin.</p>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/ext-best-practices/admin/placement-and-design.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/ext-best-practices/admin/placement-and-design.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

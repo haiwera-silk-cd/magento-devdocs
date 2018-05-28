@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>uiRegistry | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/ui_comp_guide/concepts/ui_comp_uiregistry.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/ui_comp_guide/concepts/ui_comp_uiregistry.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/ui_comp_guide/concepts/ui_comp_uiregistry.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">UI 组件 Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="ui组件概述">
+    
+
+    
+    <a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件概述</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件">
+    
+
+    
+    <span>组件</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="操作列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-actionscolumn.html">操作列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="书签组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-bookmarks.html">书签组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="按钮组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-button.html">按钮组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="复选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-checkbox.html">复选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单/复选框组组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-checkboxset.html">单/复选框组组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-column.html">表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-columns.html">多表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可控多表格列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-columnscontrols.html">可控多表格列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-date.html">数据组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-datecolumn.html">数据列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可拖曳组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-draganddrop.html">可拖曳组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="动态行组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-dynamicrows.html">动态行组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="邮件组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-email.html">邮件组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导出按钮组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-exportbutton.html">导出按钮组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fieldset-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-fieldset.html">Fieldset component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-file.html">文件组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文件上传组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-fileuploader.html">文件上传组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="过滤器组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-filters.html">过滤器组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签过滤器组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-filterschips.html">标签过滤器组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表单组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-form.html">表单组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="隐藏域组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-hidden.html">隐藏域组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="html内容组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-htmlcontent.html">Html内容组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="输入框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-input.html">输入框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可插入表单组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-insertform.html">可插入表单组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可插入列表组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-insertlisting.html">可插入列表组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表(网格)组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-listing-grid.html">列表(网格)组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉操作组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-massactions.html">下拉操作组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modal-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-modal.html">Modal component</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多输入组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiline.html">多输入组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiselect.html">多选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="多选框列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-multiselectcolumn.html">多选框列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-nav.html">导航栏组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开关列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-onoffcolumn.html">开关列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="分页组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-paging.html">分页组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选组组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-radioset.html">单选组组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="范围筛选组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-range.html">范围筛选组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="搜索组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-search.html">搜索组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-select.html">单选框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="单选列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-selectcolumn.html">单选列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="表格显示数量控制组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-sizes.html">表格显示数量控制组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-tab.html">标签页组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文本组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-text.html">文本组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="文本输入框组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-textarea.html">文本输入框组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="缩略图列组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-thumbnailcolumn.html">缩略图列组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="工具栏组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-toolbar.html">工具栏组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="树形下拉操作组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-treemassactions.html">树形下拉操作组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="wysiwyg-component">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/components/ui-wysiwyg.html">WYSIWYG component</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="concepts">
+    
+
+    
+    <span>Concepts</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="ui组件配置流程">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_config_flow_concept.html">UI组件配置流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ui组件的xml配置">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html">关于UI组件的XML配置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提供数据到ui组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_data_source.html">提供数据到UI组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ui组件的php修改">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_modifier_concept.html">关于UI组件的PHP修改</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模板常量">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_template_literals.html">模板常量</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento自定义knockout.js绑定">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/knockout-bindings.html">Magento自定义Knockout.js绑定</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uiclass库">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiclass_concept.html">关于uiClass库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uielement类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uielement_concept.html">关于uiElement类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于uicollection类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uicollection_concept.html">关于uiCollection类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于ulayout服务类">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uilayout_concept.html">关于uLayout服务类</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="ui组件连接属性">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_linking_concept.html">UI组件连接属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="uiregistry">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.html">uiRegistry</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何">
+    
+
+    
+    <span>如何</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="creating-and-displaying-a-category-attribute-with-ui-组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/howto/add_category_attribute.html">Creating and displaying a category attribute with UI 组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="troubleshoot">
+    
+
+    
+    <span>Troubleshoot</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="js调试ui组件">
+
+            
+
+            
+            <a href="/guides/v2.1/ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.html">js调试UI组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">
+            <span property="name">UI组件概述</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">uiRegistry</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">uiRegistry</h1>
+
+  
+
+
+</section>
+
+			<p><code class="highlighter-rouge">uiRegistry</code> is a in-memory storage, plain storage of entities by keys. Implements the <code class="highlighter-rouge">get()</code>, <code class="highlighter-rouge">set()</code>, and <code class="highlighter-rouge">has()</code> methods.</p>
+
+<h2 id="debug_uiregistry">JS debugging using uiRegistry</h2>
+
+<p>To debug the UI component JS, we first need to get a <code class="highlighter-rouge">uiRegistry</code> instance from the browser console. To do so, use the <a href="/guides/v2.1/javascript-dev-guide/javascript/requirejs_concept.html">RequireJs ID</a> <code class="highlighter-rouge">uiRegistry</code>.</p>
+
+<p>In the browser console enter the following:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">registry</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'uiRegistry'</span><span class="p">);</span></code></pre></figure>
+
+<p>Now we have <code class="highlighter-rouge">uiRegistry</code> instance in the <code class="highlighter-rouge">registry</code> variable. We can use it to get an instance of any component.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">component</span> <span class="o">=</span> <span class="nx">registry</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'%componentName%'</span><span class="p">);</span></code></pre></figure>
+
+<p>例如:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Admin &gt; Products &gt; Catalog &gt; Add Product</span>
+<span class="kd">var</span> <span class="nx">fieldName</span> <span class="o">=</span> <span class="nx">registry</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'product_form.product_form.product-details.container_name.name'</span><span class="p">);</span></code></pre></figure>
+
+<p>Lets look what we have in component variable. It keeps component context with all properties, we can see component file, component name and so on.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fieldName</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// product_form.product_form.product-details.container_name.name</span>
+
+<span class="nx">fieldName</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'validate'</span><span class="p">);</span> <span class="c1">// will invoke validation</span>
+<span class="nx">fieldName</span><span class="p">.</span><span class="nx">visible</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span> <span class="c1">// will hide field from page</span>
+<span class="nx">fieldName</span><span class="p">.</span><span class="nx">visible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>  <span class="c1">// will show field again</span>
+<span class="nx">fieldName</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span> <span class="c1">// will show current field value</span>
+<span class="nx">fieldName</span><span class="p">.</span><span class="nx">value</span><span class="p">(</span><span class="s1">'New string value'</span><span class="p">);</span> <span class="c1">// will change field value to string 'New string value'</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/ui_comp_guide/concepts/ui_comp_uiregistry.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

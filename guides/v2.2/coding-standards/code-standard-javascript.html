@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>js编码规范 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/coding-standards/code-standard-javascript.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/coding-standards/code-standard-javascript.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/coding-standards/code-standard-javascript.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/coding-standards/code-standard-javascript.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/coding-standards/code-standard-javascript.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">编码规范</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="coding-standards">
+    
+
+    
+    <a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="code-demarcation-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-demarcation.html">代码界定标准</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-php.html">PHP编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-code-sniffers">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-sniffers.html">PHP代码嗅探程序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/docblock-standard-general.html">注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="javascript-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-javascript.html">js编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="javascript-docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/docblock-standard-javascript.html">JavaScript 注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="jquery-widget-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-jquery-widgets.html">jq小工具编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="less-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-less.html">LESS编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="html-style-guide">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/code-standard-html.html">HTML编码风格向导</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-guidelines">
+    
+
+    
+    <a href="/guides/v2.2/coding-standards/technical-guidelines.html">技术指南</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-vision">
+    
+
+    
+    <span>技术视角</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="web-api">
+
+            
+
+            
+            <a href="/guides/v2.2/coding-standards/technical-vision/webapi.html">Web Api</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.2/coding-standards/bk-coding-standards.html">
+            <span property="name">编码规范</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">js编码规范</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">js编码规范</h1>
+
+  
+
+
+</section>
+
+			<p>Use Magento’s <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/static/testsuite/Magento/Test/Js/_files/eslint/.eslintrc-magento">ESLint Rules</a> to make sure your code adheres to Magento’s coding standards.
+Developers writing <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> and <span term-uuid="5bfa8a8e-6f3e-4fed-a43e-62339916f02e" class="glossary-term" data-toggle="popover">jQuery</span> code for Magento must adhere to these guidelines and follow the standards listed in this document.</p>
+
+<p>Use <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> to interpret the “must,” “must not,” “required,” “shall,” “shall not,” “should,” “should not,” “recommended,” “may,” and “optional” keywords.</p>
+
+<p>Magento uses the <a href="https://jquery.com/">jQuery library</a> including standard and custom <a href="http://api.jqueryui.com/category/widgets">jQuery widgets</a>.
+For the jq小工具编码规范, see <a href="/guides/v2.2/coding-standards/code-standard-jquery-widgets.html">jq小工具编码规范</a>.</p>
+
+<h2 id="eslint-and-jscs-tools">Eslint and JSCS tools</h2>
+
+<p>Use <a href="http://eslint.org/">ESLint</a> and <a href="http://jscs.info/">JSCS</a> to ensure the quality of your JavaScript code.</p>
+
+<p>ESLint is a community-driven tool that detects errors and potential problems in JavaScript code.
+It can use custom rules to enforce specific coding standards.</p>
+
+<ul>
+  <li><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/static/testsuite/Magento/Test/Js/_files/eslint/.eslintrc-magento">Magento ESLint Rules</a></li>
+  <li><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/static/testsuite/Magento/Test/Js/_files/jscs/.jscsrc">Magento JSCS Rules</a></li>
+</ul>
+
+<h2 id="additional-formatting-standards">Additional formatting standards</h2>
+
+<h3 id="anonymous-function-calls">Anonymous function calls</h3>
+
+<p>When you declare an anonymous function as an argument in a function call, indent the body of the function by <em>four</em> spaces from the left edge of the statement or function <span term-uuid="caa46cea-25d7-4e4f-bce1-11430ada59dc" class="glossary-term" data-toggle="popover">keyword</span> to increase readability.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myObject</span><span class="p">.</span><span class="nx">myFunction</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//Function logic</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">});</span></code></pre></figure>
+
+<h3 id="end-of-file">End of file</h3>
+
+<p>The last line in a file must end with a single linefeed(LF) character(i.e. an empty line).</p>
+
+<p>This reduces the quantity of the changed lines in a diff and makes code safer in file concatenation processes.</p>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Indentation in Magento code uses two spaces.</p>
+
+<p>Tabs are not allowed as indentation.</p>
+
+<h4 id="wrapped-lines">Wrapped lines</h4>
+
+<p>Indent wrapped lines two spaces or left-aligned to the expression above.</p>
+
+<h3 id="max-line-length">Max line length</h3>
+
+<p>The recommended max line length is 80 characters.</p>
+
+<p>Source code lines must not exceed 120 characters.</p>
+
+<p>Comment lines that contain an example command or a literal <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> longer than 120 characters may exceed the 120 character limit for ease of cutting and pasting.</p>
+
+<p>Do not be concerned about header guards that exceed 120 characters.</p>
+
+<h3 id="line-termination">Line termination</h3>
+
+<p>Line termination follows the UNIX text file convention.</p>
+
+<p>Lines must end with a single linefeed(LF) character represented as ordinal 10 or hexadecimal (<code class="highlighter-rouge">0x0A</code>).</p>
+
+<p><em>Do not</em> use carriage the Mac OS convention of carriage returns(CR or <code class="highlighter-rouge">0x0D</code>) or the carriage return-linefeed combination(CRLF or <code class="highlighter-rouge">0x0D</code> and <code class="highlighter-rouge">0x0A</code>) standard for Windows OS.</p>
+
+<h3 id="multi-line-string-literals">Multi-line string literals</h3>
+
+<p>Use string concatenation for multi-line string literals:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myString</span> <span class="o">=</span> <span class="s1">'JavaScript was originally developed in Netscape, by Brendan Eich. '</span> <span class="o">+</span>
+    <span class="s1">'Battling with Microsoft over the Internet, Netscape considered their client-server solution '</span> <span class="o">+</span>
+    <span class="s1">'as a distributed OS, running a portable version of Sun Microsystem&amp;#8217;s Java. '</span> <span class="o">+</span>
+    <span class="s1">'Because Java was a competitor of C++ and aimed at professional programmers, '</span> <span class="o">+</span>
+    <span class="s1">'Netscape also wanted a lightweight interpreted language that would complement Java '</span> <span class="o">+</span>
+    <span class="s1">'by appealing to nonprofessional programmers, like Microsoft&amp;#8217;s VB.[9] (see JavaScript and Java)'</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="parentheses">Parentheses</h3>
+
+<p>Use sparingly and in general where required by the syntax and semantics.</p>
+
+<p>Never use parentheses for:</p>
+
+<ul>
+  <li>Unary operators (e.g. <code class="highlighter-rouge">delete</code>, <code class="highlighter-rouge">typeof</code>, and <code class="highlighter-rouge">void</code>)</li>
+  <li>After keywords such as <code class="highlighter-rouge">return</code>, <code class="highlighter-rouge">throw</code></li>
+  <li>For <code class="highlighter-rouge">case</code>, <code class="highlighter-rouge">in</code>, or <code class="highlighter-rouge">new</code>, and others keywords like them</li>
+</ul>
+
+<h3 id="blocks">Blocks</h3>
+
+<p>Use braces with all multiline blocks. May only omit braces if entire block can be written in one line and improves readability.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Wrong</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+  <span class="nx">blah</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// Correct</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">blah</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="semicolons">Semicolons</h3>
+<p>Always put semicolons as statement terminators.</p>
+
+<p>The following code examples show the dangers of missing semicolons:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Example 1: JavaScript Error</span>
+<span class="nx">MyClass</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">myMethod</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+<span class="p">}</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Some initialization code wrapped in a function to create a scope for locals.</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>Since there is semicolon to end the first statement, the first function returns 42 and the script interprets 42 as a function.
+When the script tries to call 42 as a function with the second function as a parameter, an error occurs.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Example 2: Trying to do one thing on IEand another on Firefox.</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'i'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">'j'</span><span class="p">:</span> <span class="mi">2</span>
+ <span class="p">}</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="p">[</span><span class="nx">normalVersion</span><span class="p">,</span> <span class="nx">ffVersion</span><span class="p">][</span><span class="nx">isIE</span><span class="p">]();</span></code></pre></figure>
+
+<p>A ‘no such property in undefined’ error appears during runtime when the script tries to call <code class="highlighter-rouge">x[ffVersion][isIE]()</code>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Example 3: Conditional execution a la bash</span>
+<span class="kd">var</span> <span class="nx">THINGS_TO_EAT</span> <span class="o">=</span> <span class="p">[</span><span class="nx">apples</span><span class="p">,</span> <span class="nx">oysters</span><span class="p">,</span> <span class="nx">sprayOnCheese</span><span class="p">]</span>  <span class="c1">// &lt;-- Missing semicolon</span>
+
+<span class="o">-</span><span class="mi">1</span> <span class="o">==</span> <span class="nx">resultOfOperation</span><span class="p">()</span> <span class="o">||</span> <span class="nx">die</span><span class="p">();</span></code></pre></figure>
+
+<p>The script calls <code class="highlighter-rouge">die</code> unless <code class="highlighter-rouge">resultOfOperation)_</code> is <code class="highlighter-rouge">NaN</code> and assigns <code class="highlighter-rouge">THING_TO_EAT</code> the result of <code class="highlighter-rouge">die()</code>.</p>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>JavaScript requires statements to end with a semicolon, except when it thinks it can safely infer their existence.</p>
+
+<p>In each of the examples above, a function declaration, or an object, or an array literal is used inside a statement.</p>
+
+<p>The closing brackets are not enough to indicate the end of the statement.
+JavaScript never ends a statement if the next token is an infix or bracket operator.</p>
+
+<h3 id="strings">Strings</h3>
+
+<p>Use single quotes instead of double quotes for consistency.</p>
+
+<p>This is helpful when creating strings that include HTML:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s1">'&amp;lt;span class="text"&gt;Hello World!&amp;lt;/div&gt;'</span><span class="p">;</span></code></pre></figure>
+
+<h2 id="additional-naming-convention-standards">Additional naming convention standards</h2>
+
+<h3 id="general-naming-conventions">General naming conventions</h3>
+
+<ul>
+  <li>Avoid underscores and numbers in names.</li>
+  <li>Variables or methods should have names that accurately describe their purpose or behavior.</li>
+  <li>Object methods or variables that are declared <code class="highlighter-rouge">private</code>或<code class="highlighter-rouge">protected</code> should start with an underscore(<code class="highlighter-rouge">_</code>).</li>
+</ul>
+
+<h3 id="functions-and-methods">Functions and methods</h3>
+
+<ul>
+  <li>Class method names should start with an English verb in its infinitive form that describes the method.</li>
+  <li>Names for accessors for instance or static variables should always have the <code class="highlighter-rouge">get</code>或<code class="highlighter-rouge">set</code> prefix.</li>
+  <li>In <span term-uuid="53755359-9916-4677-bff2-f7d26025095a" class="glossary-term" data-toggle="popover">design pattern</span> classes, implementation method names should contain the pattern name where practical to provide better behavior description.</li>
+  <li>Methods that return status flags or Boolean values should have the <code class="highlighter-rouge">has</code>或<code class="highlighter-rouge">is</code> prefix.</li>
+</ul>
+
+<h3 id="variables-and-properties">Variables and properties</h3>
+
+<ul>
+  <li>Do not use short variable names such as <code class="highlighter-rouge">i</code>或<code class="highlighter-rouge">n</code> except in small loop contexts</li>
+  <li>If a loop contains more than 20 lines of code, the index variables should have more descriptive names.</li>
+</ul>
+
+<h2 id="additional-coding-construct-standards">Additional coding construct standards</h2>
+
+<h3 id="binary-and-ternary-operators">Binary and ternary operators</h3>
+
+<p>Always put the operator on the preceding line to avoid implicit semi-colon insertion issues.</p>
+
+<h3 id="custom-tostring-method">Custom <code class="highlighter-rouge">toString()</code> method</h3>
+
+<p>This method must always succeed without side effects.</p>
+
+<h3 id="function-declarations-within-blocks">Function declarations within blocks</h3>
+
+<p>Use a variable initialized with a function expression to define a function within a block.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Wrong</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="c1">// Correct</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="exceptions-and-custom-exceptions">Exceptions and custom exceptions</h3>
+
+<p>You cannot avoid exceptions if you are doing something non-trivial (using an application development framework, and so on).</p>
+
+<p>Without custom exceptions, returning error information from a function that also returns a value can be tricky, not to mention inelegant.
+Bad solutions include passing in a reference type to hold error information or always returning Objects with a potential error member.</p>
+
+<p>These basically amount to a primitive <span term-uuid="53da11f1-d0b8-4a7e-b078-1e099462b409" class="glossary-term" data-toggle="popover">exception</span> handling hack.
+Feel free to use custom exceptions when appropriate.</p>
+
+<h3 id="standard-features">Standard features</h3>
+
+<p>For maximum portability and compatibility, use standard features whenever possible.</p>
+
+<p>For example, <code class="highlighter-rouge">string.charAt(3)</code> instead of <code class="highlighter-rouge">string[3]</code>, and element access with DOM functions instead of using an application-specific shorthand.</p>
+
+<h3 id="method-definitions">Method definitions</h3>
+
+<p>There are several ways to attach methods and properties to a constructor, but the preferred style is:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">bar</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>Do not use:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">bar</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">},</span>
+    <span class="na">circle</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>Assignment operations to constructor prototypes creating temporal coupling and sometimes other unwanted side effects.</p>
+
+<h3 id="closures">Closures</h3>
+
+<p>A closure keeps a pointer to its enclosing scope, so attaching a closure to a DOM element can create a circular reference and thus, a memory leak.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Wrong</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// uses a and b</span>
+  <span class="p">};</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The function closure keeps references to elements “a” and “b” even if it never uses them.</p>
+
+<p>Because elements also keep references to the closure, it is a cycle that will not be cleaned up by garbage collection.
+In these situations, the code can be structured as follows:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Correct</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">bar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// uses a and b</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="additional-general-standards">Additional general standards</h2>
+
+<h3 id="array-and-object-initializers">Array and object initializers</h3>
+
+<p>Single-line array and object initializers are allowed when they fit on a line as follows:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>  <span class="c1">// No space after [ or before ].</span>
+    <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">c</span><span class="p">:</span> <span class="mi">3</span><span class="p">};</span>  <span class="c1">// No space after { or before }.  </span></code></pre></figure>
+
+<p>Long identifiers or values present problems for aligned initialization lists, so always prefer non-aligned initialization.</p>
+
+<p>例如:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">a</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="na">b</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">lengthyName</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="associative-arrays">Associative arrays</h3>
+
+<p>Use <code class="highlighter-rouge">Object</code> instead of <code class="highlighter-rouge">Array</code> for associative arrays.</p>
+
+<h3 id="deferred-initialization">Deferred initialization</h3>
+
+<p>Use deferred initialization when it is not possible to initialize variables at the point of declaration.</p>
+
+<h3 id="explicit-scope">Explicit scope</h3>
+
+<p>Use explicit scope to increase code portability and clarity.</p>
+
+<h3 id="built-in-objects">Built-in objects</h3>
+
+<p>Modifying built-in like <code class="highlighter-rouge">Object.prototype</code> and <code class="highlighter-rouge">Array.prototype</code> is strictly forbidden.</p>
+
+<p>Modifying other built-ins like <code class="highlighter-rouge">Function.prototype</code> is less dangerous but leads to debugging issue in production.</p>
+
+<h3 id="variable-declarations">Variable declarations</h3>
+
+<p>Declare a variable with <code class="highlighter-rouge">var</code> wherever possible to avoid overwriting existing global values.</p>
+
+<p>Using only one var per scope promotes readability.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">,</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/coding-standards/code-standard-javascript.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/coding-standards/code-standard-javascript.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

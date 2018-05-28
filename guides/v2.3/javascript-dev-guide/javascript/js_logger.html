@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>js的Logger类 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/javascript-dev-guide/javascript/js_logger.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/javascript-dev-guide/javascript/js_logger.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/javascript-dev-guide/javascript/js_logger.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/javascript-dev-guide/javascript/js_logger.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/javascript-dev-guide/javascript/js_logger.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">js开发者手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本手册中使用的常规符号">
+    
+
+    
+    <a href="/guides/v2.3/javascript-dev-guide/conventions_js.html">本手册中使用的常规符号</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="javascript">
+    
+
+    
+    <a href="/guides/v2.3/javascript-dev-guide/javascript/js_overview.html">JavaScript</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-js资源">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/js-resources.html">Magento js资源</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="调用和初始化js组件">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/js_init.html">调用和初始化js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="frontend-product-repository">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/product-frontend-storage.html">Frontend product repository</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用定制脚本">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/custom_js.html">使用定制脚本</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定位js组件">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/js_debug.html">定位js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="图解如何定制js组件">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/js_practice.html">图解如何定制js组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="using-js混入">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/javascript/js_mixins.html">Using js混入</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento-jq小工具">
+    
+
+    
+    <a href="/guides/v2.3/javascript-dev-guide/widgets/jquery-widgets-about.html">Magento jq小工具</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="手风琴菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_accordion.html">手风琴菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="提示弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_alert.html">提示弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="日历小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_calendar.html">日历小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可折叠窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_collapsible.html">可折叠窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="确认弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_confirm.html">确认弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="下拉弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_dialog.html">下拉弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="相册小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_gallery.html">相册小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="列表小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_list.html">列表小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="放大镜小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_gallery_mg.html">放大镜小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="加载小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_loader.html">加载小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="菜单小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_menu.html">菜单小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模态弹窗小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_modal.html">模态弹窗小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="导航栏小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_navigation.html">导航栏小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="问询弹框小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_prompt.html">问询弹框小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速搜索小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_quickSearch.html">快速搜索小工具</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="标签页小工具">
+
+            
+
+            
+            <a href="/guides/v2.3/javascript-dev-guide/widgets/widget_tabs.html">标签页小工具</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">
+            <span property="name">js开发者手册</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">js的Logger类</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">js的Logger类</h1>
+
+  
+
+
+</section>
+
+			<h2 id="logger-overview">Logger overview</h2>
+
+<p>The <code class="highlighter-rouge">Logger</code> class provides logging functionality for an application. It can be used to  display errors, warnings and debug messages.</p>
+
+<p><strong>Constructor:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/logger.js</code>. <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/logger.js">See on GitHub</a></p>
+
+<h2 id="logger-api">Logger API</h2>
+
+<h3 id="new-loggeroutputhandler-entryfactory"><code class="highlighter-rouge">new Logger(outputHandler, entryFactory)</code></h3>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">outputHandler: LogOutputHandler</code>: An instance of <code class="highlighter-rouge">LogOutputHandler</code> used to display log entries.</li>
+  <li><code class="highlighter-rouge">entryFactory: LogEntryFactory</code>: A factory of the <code class="highlighter-rouge">LogEntry</code> instances.</li>
+</ul>
+
+<h3 id="setdisplaylevellevel"><code class="highlighter-rouge">setDisplayLevel(level)</code></h3>
+<p>Sets the boundary entry level. The entries whose level is lower, than the specified one, are not passed to the output.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">level: number</code>: Minimum display level for an entry.</p>
+
+<h3 id="adddisplaycriteriacriteria"><code class="highlighter-rouge">addDisplayCriteria(criteria)</code></h3>
+<p>Adds a function that is used to define whether newly created entries should be passed to the output.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">criteria: Function</code>: A function that accepts instance of the <code class="highlighter-rouge">LogEntry</code> and returns a Boolean value.</p>
+
+<h3 id="removedisplaycriteriacriteria">removeDisplayCriteria(criteria)</h3>
+<p>Removes the previously added display criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">criteria: Function</code>: The display criteria to be removed.</p>
+
+<h3 id="errormessage-messagedata"><code class="highlighter-rouge">error(message, [messageData])</code></h3>
+<p>Creates a <code class="highlighter-rouge">LogEntry</code> with the <code class="highlighter-rouge">ERROR</code> level and passes it to the output, if it matches all current display criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">message: string</code>: Entry’s message.</p>
+
+<p><code class="highlighter-rouge">messageData?: Object</code>: Optional data associated with the message.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">LogEntry</code></p>
+
+<h3 id="warnmessage-messagedata"><code class="highlighter-rouge">warn(message, [messageData])</code></h3>
+<p>Creates a <code class="highlighter-rouge">LogEntry</code> with the <code class="highlighter-rouge">WARN</code> level and passes it to the output, if it matches all current display criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">message: string</code>: Entry’s message.</p>
+
+<p><code class="highlighter-rouge">messageData?: Object</code>: Optional data associated with the message.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">LogEntry</code></p>
+
+<h3 id="infomessage-messagedata"><code class="highlighter-rouge">info(message, [messageData])</code></h3>
+<p>Creates a <code class="highlighter-rouge">LogEntry</code> with the <code class="highlighter-rouge">INFO</code> level and passes it to the output if it matches all current display criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">message: string</code>: Entry’s message.</p>
+
+<p><code class="highlighter-rouge">messageData?: Object</code>: Optional data associated with the message.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">LogEntry</code></p>
+
+<h3 id="debugmessage-messagedata"><code class="highlighter-rouge">debug(message, [messageData])</code></h3>
+<p>Creates a <code class="highlighter-rouge">LogEntry</code> with the <code class="highlighter-rouge">DEBUG</code> level and passes it to the output, if it matches all current display criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">message: string</code>: Entry’s message.</p>
+
+<p><code class="highlighter-rouge">messageData?: Object</code>: Optional data associated with the message.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">LogEntry</code></p>
+
+<h3 id="getentriescriteria"><code class="highlighter-rouge">getEntries([criteria])</code></h3>
+<p>Returns all available log entries. It can additionally filter out the entries that don’t match the provided criteria.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">criteria?: Function</code>: Optional function that accepts an instance of <code class="highlighter-rouge">LogEntry</code> and implements the filter criteria by which the entries are added to the resulting array.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">Array&lt;LogEntry&gt;</code>: An array of <code class="highlighter-rouge">LogEntry</code>.</p>
+
+<h3 id="dumpcriteria"><code class="highlighter-rouge">dump(criteria)</code></h3>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">criteria?: Function</code>: Optional function that accepts an instance of <code class="highlighter-rouge">LogEntry</code> and implements the filter criteria by which entries are passed to the output handler.</p>
+
+<h2 id="logentry"><code class="highlighter-rouge">LogEntry</code></h2>
+<p><code class="highlighter-rouge">LogEntry</code> is a class that holds the data of log operations, like <code class="highlighter-rouge">error</code>, <code class="highlighter-rouge">warn</code>,  <code class="highlighter-rouge">info</code> and so on.</p>
+
+<p><strong>Constructor:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/entry.js</code>. <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/entry.js">See on Github</a></p>
+
+<h3 id="new-logentrymessage-level-data">new LogEntry(message, level, [data])</h3>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">message: string</code>: Entry’s message.</li>
+  <li><code class="highlighter-rouge">level: number</code>: Entry’s level.</li>
+  <li><code class="highlighter-rouge">data?: Object</code>: Additional data associated with the entry.</li>
+</ul>
+
+<p><strong>Properties</strong></p>
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">message: string</code>: Entry’s message.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">timestamp: number</code>: The time of entry creation.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">level: number</code>: Entry’s level.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">levelName: string</code>: Name of the entry’s level.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">data?: Object</code>: Additional data associated with the entry.</p>
+  </li>
+</ul>
+
+<h2 id="logoutputhandler"><code class="highlighter-rouge">LogOutputHandler</code></h2>
+
+<p>The <code class="highlighter-rouge">LogOutputHandler</code> class responsible for the output of entries passed by <code class="highlighter-rouge">Logger</code>. Default implementation uses browser’s <code class="highlighter-rouge">console</code> object and invokes methods that correspond to the <code class="highlighter-rouge">level</code> of an entry. For instance, entry with the <code class="highlighter-rouge">INFO</code> level will be displayed using the console’s <code class="highlighter-rouge">info</code> method.</p>
+
+<p><strong>Constructor:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/console-output-handler.js</code> (<a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/entry.js">See on Github</a>)</p>
+
+<h3 id="new-logoutputhandlerformatter">new LogOutputHandler(formatter)</h3>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">formatter: LogFormatter</code>: An instance of <code class="highlighter-rouge">LogFormatter</code> that will be used to create a display message for the  provided entries.</p>
+
+<h3 id="showentry">show(entry)</h3>
+<p>Displays the provided entry.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">entry: LogEntry</code>: The entry to be displayed.</p>
+
+<h3 id="dumpentries">dump(entries)</h3>
+<p>Displays multiple entries at once.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">entries: Array&lt;LogEntry&gt;</code>: An array of the <code class="highlighter-rouge">LogEntry</code> instances to be displayed.</p>
+
+<h2 id="logformatter">LogFormatter</h2>
+<p>The <code class="highlighter-rouge">LogFormatter</code> class is responsible for processing the message of the provided entry and for preparing its string representation that will be displayed by <code class="highlighter-rouge">LogOutputHandler</code>. It also verifies if the entry’s message is set in the template:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="p">{</span>
+     <span class="nl">message</span><span class="p">:</span> <span class="s2">"Foo ${ $.property }"</span><span class="p">,</span>
+     <span class="nx">data</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nl">property</span><span class="p">:</span> <span class="s2">"Bar"</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="c1">// =&gt; "Foo Bar"</span></code></pre></figure>
+
+<p><strong>Constructor:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/formatter.js</code> (<a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/formatter.js">See on Github</a>)</p>
+
+<h3 id="new-logformatterdateformat-template">new LogFormatter([dateFormat], [template])</h3>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">dateFormat = "YYYY-MM-DD hh:mm:ss"</code>: Date format that is applied to display the entry creation time.</li>
+  <li><code class="highlighter-rouge">template = "[${ $.date }] [${ $.entry.levelName }] ${ $.message }</code>: Template used to create the resulting message of an entry.</li>
+</ul>
+
+<h3 id="processentry"><code class="highlighter-rouge">process(entry)</code></h3>
+<p>Creates a text representation of the provided entry. If default settings are used, the resulting string looks like following: <code class="highlighter-rouge">[2017-04-07 01:36:24] [DEBUG] Log message</code>.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">entry: LogEntry</code>: An instance of <code class="highlighter-rouge">LogEntry</code> to be processed.</p>
+
+<p><strong>Returns:</strong> String</p>
+
+<h2 id="levelspool"><code class="highlighter-rouge">levelsPool</code></h2>
+<p><code class="highlighter-rouge">levelsPool</code> is a module that provides log levels and utility methods to work with them.</p>
+
+<p>The following log levels are available (sorted by priority in the descending order):</p>
+
+<ul>
+  <li><code class="highlighter-rouge">NONE</code> (used to block all log entries from being passed to the output)</li>
+  <li><code class="highlighter-rouge">ERROR</code></li>
+  <li><code class="highlighter-rouge">WARN</code></li>
+  <li><code class="highlighter-rouge">INFO</code></li>
+  <li><code class="highlighter-rouge">DEBUG</code></li>
+  <li><code class="highlighter-rouge">ALL</code> (allows to display all log entries, unless any other display criteria is present)</li>
+</ul>
+
+<p><strong>Path:</strong> <code class="highlighter-rouge">Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/levels-pool.js</code> (<a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/levels-pool.js">See on Github</a>)</p>
+
+<h3 id="getlevels"><code class="highlighter-rouge">getLevels()</code></h3>
+<p>Returns a list of available log levels.</p>
+
+<p><strong>Returns:</strong> <code class="highlighter-rouge">{[name: string]: number}</code></p>
+
+<h3 id="getnamebycodecode"><code class="highlighter-rouge">getNameByCode(code)</code></h3>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">code: string</code>: Level’s identifier.</p>
+
+<p><strong>Returns:</strong> Number</p>
+
+<h2 id="messagepool"><code class="highlighter-rouge">messagePool</code></h2>
+
+<p>Implements a collection of predefined messages used by <code class="highlighter-rouge">consoleLogger</code>.</p>
+
+<p><strong>Path:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/message-pool.js</code> (<a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/message-pool.js">See on Github</a>)</p>
+
+<h3 id="getmessagecode"><code class="highlighter-rouge">getMessage(code)</code></h3>
+<p>Returns message that matches the provided code.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">code: string</code>: Message’s identifier.</p>
+
+<p><strong>Returns:</strong> String</p>
+
+<h3 id="addmessagecode-message"><code class="highlighter-rouge">addMessage(code, message)</code></h3>
+<p>Adds a new message to the pool.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">code: string</code>: Message’s identifier.</p>
+
+<p><code class="highlighter-rouge">message: string</code>: Text of the message.</p>
+
+<h3 id="hasmessagecode"><code class="highlighter-rouge">hasMessage(code)</code></h3>
+<p>Checks whether a message with the provided code exists in the pool.</p>
+
+<p><strong>Parameters</strong>
+<code class="highlighter-rouge">code: string</code>: Message’s identifier.</p>
+
+<p><strong>Returns:</strong> Boolean</p>
+
+<h2 id="consolelogger"><code class="highlighter-rouge">consoleLogger</code></h2>
+<p>An instance of the <code class="highlighter-rouge">Logger</code> class that is configured to display messages in the browser’s console with the default format. It also stores the last provided display level in <code class="highlighter-rouge">localStorage</code> and allows to work with a list of predefined messages instead of passing their text directly:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">consoleLogger</span><span class="p">.</span><span class="nx">setDisplayLevel</span><span class="p">(</span><span class="nx">consoleLogger</span><span class="p">.</span><span class="nx">levels</span><span class="p">.</span><span class="nx">ALL</span><span class="p">);</span>
+    <span class="nx">consoleLogger</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">addMessage</span><span class="p">(</span><span class="s1">'VIRAL_MESSAGE'</span><span class="p">,</span> <span class="s1">'Hello World!'</span><span class="p">);</span>
+    <span class="nx">consoleLogger</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'VIRAL_MESSAGE'</span><span class="p">);</span>
+    <span class="c1">// console =&gt; [2017-04-07 01:36:24] [INFO] Hello World!</span></code></pre></figure>
+
+<p><strong>Path:</strong> <code class="highlighter-rouge">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/lib/logger/console-logger.js</code> (<a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Ui/view/base/web/js/lib/logger/console-logger.js">See on Github</a>)</p>
+
+<h3 id="properties">Properties</h3>
+<ul>
+  <li><code class="highlighter-rouge">levels: {[name: string]: number}</code>: Reference to the available log levels.</li>
+  <li><code class="highlighter-rouge">messages: messagePool</code>: Reference to <code class="highlighter-rouge">messagePool</code> that allows working with a list of predefined messages.</li>
+</ul>
+
+<h3 id="usages-in-magento">Usages in Magento</h3>
+<p>By default, Magento uses <code class="highlighter-rouge">consoleLogger</code> to display logs in browser console.</p>
+
+<p>Example:</p>
+
+<p><img src="http://devdocs.magento.com/common/images/js/logger_error.png" alt="node declaration autocomplete" /></p>
+
+<p>The default level of logs that Magento displays in the console starts from the <code class="highlighter-rouge">WARN</code> level.</p>
+
+<h3 id="types-of-logged-information">Types of logged information</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">Templates loading:</code>
+    <ul>
+      <li>Logging when a template’s loading starts.</li>
+      <li>Logging when a template is loaded. (from cache or from server)</li>
+      <li>Logging error if a template’s loading failed.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">UI Components loading:</code>
+    <ul>
+      <li>Logging when a component’s loading starts.</li>
+      <li>Logging when a component is loaded.</li>
+      <li>Logging error if a component loading failed.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">Requests for UI Components dependencies:</code>
+    <ul>
+      <li>Logging when a component sends request for dependencies.</li>
+      <li>Logging when a component’s dependencies are successfully received.</li>
+      <li>Logging when a component’s receiving is failed.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">Requests for UI Components by scope binding:</code>
+    <ul>
+      <li>Logging when a component sends request for dependencies.</li>
+      <li>Logging when dependencies are successfully received.</li>
+      <li>Logging when dependencies receiving failed.</li>
+    </ul>
+  </li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/javascript-dev-guide/javascript/js_logger.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/javascript-dev-guide/javascript/js_logger.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

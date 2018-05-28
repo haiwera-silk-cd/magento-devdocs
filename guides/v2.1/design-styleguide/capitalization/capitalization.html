@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Admin Capitalization | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/design-styleguide/capitalization/capitalization.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/design-styleguide/capitalization/capitalization.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/design-styleguide/capitalization/capitalization.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/design-styleguide/capitalization/capitalization.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/design-styleguide/capitalization/capitalization.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Admin Style Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="admin-style-guide">
+    
+
+    
+    <span>Admin Style Guide</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="介绍">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/bk-styleguide.html">介绍</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="design">
+    
+
+    
+    <span>Design</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="color">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/color/color.html">Color</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="iconography">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/iconography/iconography.html">Iconography</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="page-grids">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/pagegrid/pagegrid.html">Page Grids</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="typography">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/typography/typography.html">Typography</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="writing-and-content">
+    
+
+    
+    <span>Writing and Content</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="voice-and-tone">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/content-voice-tone/content-voice-tone.html">Voice and Tone</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="errors-and-messages-writing">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/errors-and-messages/errors-and-messages.html">Errors and Messages Writing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="按钮-and-links-usage">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/buttons-and-links-usage/buttons-and-links-usage.html">按钮 and Links Usage</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="capitalization">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/capitalization/capitalization.html">Capitalization</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="headings-and-organization">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/headings-and-organization/headings-and-organization.html">Headings and Organization</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="content-formats">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/content-formats/content-formats.html">Content Formats</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="number-formats">
+
+            
+
+            
+            <a href="/guides/v2.1/design-styleguide/number-formats/number-formats.html">Number Formats</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/design-styleguide/bk-styleguide.html">
+            <span property="name">Admin Style Guide</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Admin Capitalization</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Admin Capitalization</h1>
+
+  
+
+
+</section>
+
+			<p>Magento uses three different cases for content – sentence case, title case, and all-caps.</p>
+
+<p>Use the following standards for usage and keep in mind a few key terms’ capitalization rules.</p>
+
+<h2 id="sentence-case">Sentence Case</h2>
+
+<p>Use as default content style, where a grammatically correct sentence starts with an initially capitalized word and ends with a punctuation mark. For exceptions, see Title-Case and All-Caps standards that follow.</p>
+
+<p>Pay attention to common Magento terms – some may be mistaken for proper nouns.</p>
+
+<p>However, many terms use lowercase including: merchant, developer, home page, static blocks, invoice, order, and panel.</p>
+
+<h2 id="title-case">Title Case</h2>
+
+<h3 id="use-for-">Use For …</h3>
+
+<ul>
+  <li>
+    <p><strong>Headings.</strong> See more Headings guidance.</p>
+  </li>
+  <li>
+    <p><strong>Button labels and links.</strong> ONLY use title case when a link are used as a call to action. See more 按钮 and Links Usage guidance.</p>
+  </li>
+</ul>
+
+<h3 id="capitalize-">Capitalize …</h3>
+
+<ul>
+  <li><strong>The first letter of the first and last words.</strong></li>
+  <li><strong>The second word of a compound, hyphenated word.</strong> Exception: When the first word in the hyphenation is not a prefix ... <em>Prefix examples:</em> anti-, pre-, post-<br />
+  <em>Examples:</em><br /><br />
+    <ul style="list-style-type:none">
+      <li><strong>否</strong> – "Best-rated Platform Software"</li>
+      <li>Yes – "Best-Rated Platform Software"</li>
+    </ul>  
+    <ul style="list-style-type:none">
+      <li><strong>否</strong> – "Post-Launch Instructions"</li>
+      <li>Yes – "Post-launch Instructions"</li>
+    </ul>  
+  </li>
+  <li><strong>All verbs.</strong> 
+    <ul>
+      <li><em>Capitalize even the little ones.</em></li>
+      <li><em>Correct examples:</em> Is, Am, Are, Was, Were, Be, Being, and Been.</li>
+    </ul>
+  </li>
+  <li><strong>All parts of verbs.</strong> Includes prepositions, if they are part of phrasal verb ... <em>Correct example:</em> "Turn On"
+    <ul>
+      <li><em>Tip:</em> if you emphasize the word when reading it aloud, then capitalize it."</li>
+      <li><em>Infinitives are not verbs:</em> See infinitives guidance, jump to the <span><a href="/guides/v2.1/design-styleguide/capitalization/capitalization.html#do-not-capitalize-">“Do Not capitalize …”</a></span> section.</li>
+    </ul>
+  <em>Examples:</em><br /><br />
+    <ul style="list-style-type:none">
+      <li><strong>否</strong> – “Turning Blocks on and off"</li>
+      <li>Yes – “Turning Blocks On and Off”</li>
+      <li>Yes – “Setting Up a Catalog”</li>
+      <li>Yes – “Turning On the Service”</li>
+    </ul>
+    </li>
+</ul>
+
+<h3 id="do-not-capitalize-">Do Not Capitalize …</h3>
+
+<ul>
+  <li><strong>Words following prefixes.</strong> For guidance, jump to the <span><a href="/guides/v2.1/design-styleguide/capitalization/capitalization.html#capitalize-">“Capitalize … “</a></span>section and find the prefixes and compound, hyphenated words guidance.</li>
+  <li><strong>Articles.</strong> ... <em>Correct examples:</em> a, an, the</li>
+  <li><strong>Conjunctions.</strong> ... <em>Correct examples:</em> and, but, for, or, nor</li>
+  <li><strong>Prepositions of fewer than four letters.</strong> Includes the "to" in infinitives. <em>See example:</em>
+    <ul style="list-style-type:none">
+      <li><strong>否</strong> – “The Key To Customer Service In An Omnichannel World"</li>
+      <li>Yes – “The Key to Customer Service in an Omnichannel World”</li>
+    </ul>  
+    </li>
+  <li><strong>Brand or company names that use a lowercase initial letter.</strong> ... <em>Tip:</em> Rephrase a heading or sentence to avoid starting with a lowercase letter. <em>See example:</em>
+    <ul style="list-style-type:none">
+      <li><strong>否</strong> – “EBay, IPod, IPhone"</li>
+      <li>Yes – “eBay, iPod, iPhone”</li>
+    </ul>  
+  </li>
+</ul>
+
+<h2 id="all-caps">All Caps</h2>
+
+<p>Use only in and acronyms and address formats. For more details, see:</p>
+
+<ul>
+  <li>
+    <p>The <a href="/guides/v2.1/design-styleguide/content-formats/content-formats.html#acronyms">Acronyms</a> section in Content Formats.</p>
+  </li>
+  <li>
+    <p>The <a href="/guides/v2.1/design-styleguide/content-formats/content-formats.html#addresses">Address</a> section in Number Formats.</p>
+  </li>
+</ul>
+
+<h2 id="terms-to-remember">Terms to Remember</h2>
+
+<p>Use capitalization standards, as specified in the Magento Glossary and Word Usage Bank, and focus on the following rules.</p>
+
+<h3 id="capitalize--1">Capitalize …</h3>
+
+<ul>
+  <li>
+    <p><strong>Numbered items.</strong> Capitalize when referring to a numbered object. … <em>Correct examples:</em> Slide 5, Exercise 3, Table 4.2, Figure 9</p>
+  </li>
+  <li>
+    <p><strong>Admin panel.</strong> Capitalize the word “Admin” in the term “Admin panel” — but panel remains lowercase.</p>
+  </li>
+  <li>
+    <p><strong>UI names.</strong> Use initial caps, where the Magento Glossary and Word Usage Bank specify.</p>
+  </li>
+  <li>
+    <p><strong>Lists’ first word, initial capped.</strong> See more “Lists” guidance in Content Formats.</p>
+  </li>
+</ul>
+
+<h3 id="do-not-capitalize--1">Do Not Capitalize …</h3>
+
+<ul>
+  <li>
+    <p><strong>Steps.</strong> Lowercase “page” or “step” when referring to pages in a document or steps in a procedure.</p>
+  </li>
+  <li>
+    <p><strong>Global internet terms.</strong> … <em>Correct examples:</em> website, internet, online, email</p>
+  </li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/design-styleguide/capitalization/capitalization.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/design-styleguide/capitalization/capitalization.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

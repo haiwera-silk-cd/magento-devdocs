@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>使用命令行管理分支 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/env/environments-start.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.0/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.0">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.0
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/cloud/env/environments-start.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/cloud/env/environments-start.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/cloud/env/environments-start.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/cloud/env/environments-start.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.0/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.0/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.0/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.0/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.0/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.0/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.0/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.0/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.0/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.0/ui-components/ui-component.html">UI组件</a></li>
+          
+          <li><a href="/guides/v2.0/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.0/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.0/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.0/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.0/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.0/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.0/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.0/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.0/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.0/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.0/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.0/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.0/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.0/howdoi/bk-how-do-i.html">如何</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.0/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="欢迎使用magento企业版(云支持版)">
+    
+
+    
+    <a href="/guides/v2.0/cloud/bk-cloud.html">欢迎使用Magento企业版(云支持版)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="订阅和计划">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/basic-information/cloud-plans.html">订阅和计划</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="architecture">
+    
+
+    
+    <a href="/guides/v2.0/cloud/architecture/cloud-architecture.html">Architecture</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="架构起步">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/basic-information/starter-architecture.html">架构起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发和部署工作流起步">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/basic-information/starter-develop-deploy-workflow.html">开发和部署工作流起步</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-architecture">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/architecture/pro-architecture.html">Pro architecture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-develop-and-deploy-workflow">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/architecture/pro-develop-deploy-workflow.html">Pro develop and deploy workflow</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="pro-architecture-(legacy)">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/architecture/pro-architecture-legacy.html">Pro architecture (legacy)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="add-staging-and-production-to-pro-projects-ui">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/pro-env-management.html">Add Staging and Production to Pro projects UI</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="技术和要求">
+    
+
+    
+    <a href="/guides/v2.0/cloud/requirements/cloud-requirements.html">技术和要求</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="composer">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/reference/cloud-composer.html">Composer</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-cloud-cli">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/reference/cli-ref-topic.html">Magento Cloud CLI</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="git">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/reference/git-integration.html">Git</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="bitbucket集成">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/bitbucket-integration.html">Bitbucket集成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="github集成">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-integrate-github.html">Github集成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="ssh和sftp">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/env/environments-ssh.html">SSH和sFTP</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-relic-apm">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/new-relic.html">New Relic APM</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="blackfire.io">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-integrate-blackfire.html">Blackfire.io</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="本地环境设置">
+    
+
+    
+    <a href="/guides/v2.0/cloud/access-acct/first-time-setup.html">本地环境设置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="本地环境设置准备">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-workspace.html">本地环境设置准备</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装magento所需的必要软件">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-workspace-magento-prereqs.html">安装Magento所需的必要软件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用ssh密钥登录">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置magento文件系统所有者">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-workspace-file-sys-owner.html">设置Magento文件系统所有者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="克隆并开发项目分支">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-setup-env-2_clone.html">克隆并开发项目分支</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装magento">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/before/before-setup-env-install.html">安装Magento</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="首次部署">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/access-acct/first-time-deploy.html">首次部署</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选---安装样本数据">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/howtos/sample-data.html">可选 - 安装样本数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选---配置xdebug">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/howtos/debug.html">可选 - 配置Xdebug</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="导入现存的代码到项目">
+    
+
+    
+    <a href="/guides/v2.0/cloud/access-acct/first-time-setup_import-first-steps.html">导入现存的代码到项目</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="prepare-your-existing-magento-commerce-system">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/access-acct/first-time-setup_import-prepare.html">Prepare your existing Magento Commerce system</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="import-magento-commerce-into-magento企业版(云支持版)">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/access-acct/first-time-setup_import-import.html">Import Magento Commerce into Magento企业版(云支持版)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置你的网店">
+    
+
+    
+    <a href="/guides/v2.0/cloud/configure/configuration-overview.html">配置你的网店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="网店配置最佳实践">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/configure-best-practices.html">网店配置最佳实践</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="设置定时任务">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/setup-cron-jobs.html">设置定时任务</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="set-up-multiple-cloud-websites-or-stores">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-multi-sites.html">Set up multiple Cloud websites or stores</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装一个主题">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/howtos/custom-theme.html">安装一个主题</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="快速配置">
+    
+
+    
+    <a href="/guides/v2.0/cloud/basic-information/cloud-fastly.html">快速配置</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="快速设置">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/access-acct/fastly.html">快速设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速定制vcl片段">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/cloud-vcl-custom-snippets.html">快速定制VCL片段</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制vcl白名单">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/fastly-vcl-whitelist.html">定制VCL白名单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定制vcl黑名单">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/fastly-vcl-blacklist.html">定制VCL黑名单</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义延长管理员超时">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/fastly-vcl-extend-timeout.html">VCL自定义延长管理员超时</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义自重向到wordpress">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/fastly-vcl-wordpress.html">VCL自定义自重向到WordPress</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="vcl自定义块坏引用">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/configure/fastly-vcl-badreferer.html">VCL自定义块坏引用</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快速故障排查">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble_fastly.html">快速故障排查</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="配置环境">
+    
+
+    
+    <a href="/guides/v2.0/cloud/env/environments.html">配置环境</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="application">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-conf-files_magento-app.html">Application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="环境变量">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/env/variables-intro.html">环境变量</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="应用程序变量">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/env/environment-vars_magento.html">应用程序变量</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                
+
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="routes">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-conf-files_routes.html">Routes</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="caching">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-routes-more-cache.html">Caching</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="redirects">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-routes-more-redir.html">Redirects</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="服务端引入">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-routes-more-ssi.html">服务端引入</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="services">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-conf-files_services.html">Services</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="设置mysql服务">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-conf-files_services-mysql.html">设置MySQL服务</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置redis服务">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-conf-files_services-redis.html">设置Redis服务</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="set-up-solr-service">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-conf-files_services-solr.html">Set up Solr service</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置rabbitmq服务">
+                    
+
+                    
+                    <a  href="/guides/v2.0/cloud/project/project-conf-files_services-rabbit.html">设置RabbitMQ服务</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="管理你的项目">
+    
+
+    
+    <a href="/guides/v2.0/cloud/project/projects.html">管理你的项目</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="配置你的项目">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-webint-basic.html">配置你的项目</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="项目结构">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-start.html">项目结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建和管理用户">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/user-admin.html">创建和管理用户</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="manage-branches-with-the-interface">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-webint-branch.html">Manage branches with the Interface</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="使用命令行管理分支">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/env/environments-start.html">使用命令行管理分支</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="快照和备份管理">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-webint-snap.html">快照和备份管理</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部署你的网店">
+    
+
+    
+    <a href="/guides/v2.0/cloud/live/stage-prod-live.html">部署你的网店</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="部署过程">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/reference/discover-deploy.html">部署过程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="continuous-deployment">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/deploy/continuous-deployment.html">Continuous deployment</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="保护块">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/live-prot.html">保护块</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="在本地构建和部署">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/live-sanity-check.html">在本地构建和部署</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="准备部署准生产和生产环境">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/stage-prod-migrate-prereq.html">准备部署准生产和生产环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署代码并迁移静态文件和数据">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/stage-prod-migrate.html">部署代码并迁移静态文件和数据</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="测试部署">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/stage-prod-test.html">测试部署</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="上线和发布">
+    
+
+    
+    <a href="/guides/v2.0/cloud/live/live.html">上线和发布</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="上线检查">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/go-live-checklist.html">上线检查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="发布步骤">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/live/launch-steps.html">发布步骤</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.0/cloud/trouble/trouble.html">故障排除</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="部署故障排查">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/access-acct/trouble.html">部署故障排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="查看日志排查故障">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/environments-logs.html">查看日志排查故障</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="证书不正确">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble_ce-creds.html">证书不正确</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="新项目的问题解决">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble_proj-startover.html">新项目的问题解决</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="组件部署失败">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble_comp-deploy-fail.html">组件部署失败</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="redis问题排查">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/redis-troubleshooting.html">Redis问题排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决加密密钥问题">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble-crypt-key-variable.html">解决加密密钥问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决html最小化问题">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble-error-html-minification.html">解决HTML最小化问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="解决部署期间的google分析问题">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/trouble-google-analytics-deploy.html">解决部署期间的google分析问题</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="站点可用性">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/site-availability.html">站点可用性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加站点地图和搜索引擎的robots文件">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/robots-sitemap.html">添加站点地图和搜索引擎的robots文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="主题问题排查">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/trouble/theme-troubleshooting.html">主题问题排查</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="升级和补丁">
+    
+
+    
+    <a href="/guides/v2.0/cloud/project/project-upgrade-parent.html">升级和补丁</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)补丁">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-patch.html">Magento企业版(云支持版)补丁</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)升级">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/project/project-upgrade.html">Magento企业版(云支持版)升级</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="upgrade-from-2.0.4-(cloud)">
+
+            
+
+            
+            <a href="/guides/v2.0/cloud/upgrade/upgrade-from-2-0-4.html">Upgrade from 2.0.4 (Cloud)</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.0/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.0/cloud/bk-cloud.html">
+            <span property="name">欢迎使用Magento企业版(云支持版)</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">使用命令行管理分支</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">使用命令行管理分支</h1>
+
+  
+
+
+</section>
+
+			<p>When managing with your environment, you will tend to use the Magento CLI and SSH into the system. You should have the Magento CLI installed and SSH keys set up. For detailed information on the environment architecture, see <a href="/guides/v2.0/cloud/basic-information/starter-architecture.html">Starter</a> or <a href="/guides/v2.0/cloud/architecture/pro-architecture.html">Pro</a> architecture information.</p>
+
+<p>To manage the branches and environments with the Project Web Interface, see <a href="/guides/v2.0/cloud/project/project-webint-branch.html">使用项目的web接口管理分支</a>.</p>
+
+<h2 id="env-start-comm">Common Magento CLI commands</h2>
+<p>The following Magento CLI commands can be run from any directory and run best from a project directory. When run from a project directory, you can omit the <code class="highlighter-rouge">-p &lt;project ID&gt;</code> parameter. These commands are meant to be used to manage integration environments. You may notice these commands are similar to Git commands. The <code class="highlighter-rouge">magento-cloud</code> versions directly connect with Magento Git, the Magento ECE project, and provide Git features.</p>
+
+<p>All commands are shown with required options only. Get help for any <code class="highlighter-rouge">magento-cloud</code> command by appending <code class="highlighter-rouge">--help</code>.</p>
+
+<dl>
+  <dt><code class="highlighter-rouge">git commit --allow-empty -m "redeploy" &amp;&amp; git push &lt;branch name&gt;</code></dt>
+  <dd>Push an empty commit to force a redeployment. Some actions, like adding a user for example, don’t result in deployment.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud login</code></dt>
+  <dd>Log in to the project.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud project:get &lt;project ID&gt; &lt;directory&gt; -e &lt;environment ID&gt;</code></dt>
+  <dd>Clone a project to a directory. To clone the <code class="highlighter-rouge">master</code> environment, omit <code class="highlighter-rouge">-e &lt;environment ID&gt;</code>.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud environment:list -p &lt;project ID&gt;</code></dt>
+  <dd>List the environments in the current project (that is, the project that corresponds to the directory in which you run the command).</dd>
+  <dt><code class="highlighter-rouge">magento-cloud environment:branch &lt;name&gt; &lt;parent branch&gt;</code></dt>
+  <dd>Create a new branch with a name and an ID. This information corresponds to the environment.</dd>
+</dl>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>The environment <em>name</em> is different from the environment <em>ID</em> only if you use spaces or capital letters in the environment name. An environment ID consists of all lowercase letters, numbers, and allowed symbols. Capital letters in an environment name are converted to lowercase in the ID; spaces in an environment name are converted to dashes.</p>
+
+  <p>An environment name <em>cannot</em> include characters reserved for your Linux shell or for regular expressions. Forbidden characters include curly braces (<code class="highlighter-rouge">{ }</code>), parentheses, asterisk (<code class="highlighter-rouge">*</code>), angle brackets (<code class="highlighter-rouge">&lt; &gt;</code>), ampersand (<code class="highlighter-rouge">&amp;</code>), percent (<code class="highlighter-rouge">%</code>), and other characters.</p>
+</div>
+
+<dl>
+  <dt><code class="highlighter-rouge">magento-cloud environment:checkout &lt;environment ID&gt;</code></dt>
+  <dd>Check out an existing environment.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud environment:merge -p &lt;project ID&gt; -e &lt;environment ID&gt;</code></dt>
+  <dd>Merge changes in this environment with its parent.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud environment:synchronize -p &lt;project ID&gt; -e &lt;environment ID&gt; {code|data}</code></dt>
+  <dd>Synchronize (that is, <code class="highlighter-rouge">git pull</code>) code and/or data from the parent to this environment.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud variable:list</code></dt>
+  <dd>List variables in this environment.</dd>
+  <dt><code class="highlighter-rouge">magento-cloud variable:set &lt;name&gt; &lt;value&gt;</code></dt>
+  <dd>Set a value for an environment variable in this environment.</dd>
+</dl>
+
+<p>For a full list of Magento cloud CLI commands, see the Magento cloud <a href="/guides/v2.0/cloud/reference/cli-ref-topic.html">Magento Cloud CLI reference</a></p>
+
+<h2 id="getstarted">Get started creating branches</h2>
+<p>To begin, you’ll need a branch to work in.</p>
+
+<div>
+
+  <ol>
+    <li>Log in to your local development system, or switch to, the <a href="/guides/v2.0/cloud/before/before-workspace-file-sys-owner.html">Magento文件系统所有者</a>.</li>
+    <li>Change to a directory to which the Magento文件系统所有者 has write access.</li>
+    <li>
+      <p>Enter the following command in a terminal to log in to your project:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud login
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>List your projects. With the project ID, you can complete additional commands.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud project:list
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>If necessary, clone the project to your local. You should have cloned when setting up your local development workspace.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud project:get &lt;project ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>Change to a project directory. For example, <code class="highlighter-rouge">cd /var/www/html/magento2</code></li>
+    <li>
+      <p>List environments in the project. Every environment includes an active Git branch of your code, database, environment variables, configurations, and services.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:list
+</code></pre></div>      </div>
+
+      <div class="bs-callout bs-callout-info" id="info">
+  		<p><code>magento-cloud environment:list</code> displays environment hierarchies whereas <code>git branch</code> displays does not. If you have any nested environments, use <code>magento-cloud environment:list</code> to see the full list.</p>
+</div>
+    </li>
+    <li>
+      <p>Fetch origin branches to get the latest code:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Check out, or switch to, a specific branch and environment. Git commands only checkout the Git branch. The Magento Cloud command also switches to the active environment.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:checkout &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>To create a new environment, use <code class="highlighter-rouge">magento-cloud environment:branch &lt;environment name&gt; &lt;parent environment ID&gt;</code></p>
+    </li>
+    <li>
+      <p>Pull any updated code to your local for the environment ID (which is the Git branch):</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Create a <a href="/guides/v2.0/cloud/project/project-webint-snap.html">snapshot</a> of the environment as a backup:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud snapshot:create -e &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h2 id="merge">Merge a branch</h2>
+  <p>After completing development, you can merge this branch to the parent. The following instructions provide an example.</p>
+
+  <ol>
+    <li>Complete code in your local branch.</li>
+    <li>
+      <p>Add, commit, and push your change to the environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add -A
+git commit -m "&lt;commit message&gt;"
+git push origin &lt;branch name&gt;
+</code></pre></div>      </div>
+
+      <p>Where <code class="highlighter-rouge">&lt;branch name&gt;</code> is the Git name of the environment (that is, the environment ID).</p>
+    </li>
+    <li>
+      <p>Merge with the parent environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:merge &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>For example,</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:merge master
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h2 id="env-delete">Optionally delete the environment</h2>
+  <p>Before you delete an environment, make sure you don’t need it anymore. You cannot recover a deleted environment later.</p>
+
+  <div class="bs-callout bs-callout-info" id="info">
+  <p>You cannot delete the <code>master</code> environment of any project.</p>
+</div>
+
+  <p>You must be a <a href="/guides/v2.0/cloud/project/user-admin.html#cloud-role-project">project administrator</a>, <a href="/guides/v2.0/cloud/project/user-admin.html#cloud-role-env">environment administrator</a>, or <a href="/guides/v2.0/cloud/project/user-admin.html#cloud-role-acct-owner">Project Owner</a> to perform this task.</p>
+
+  <p>This section discusses how to optionally delete an environment in the following ways:</p>
+
+  <ul>
+    <li>Make the environment <em>inactive</em> but let it remain in the project</li>
+    <li>Delete the environment entirely and remove it from the project</li>
+  </ul>
+
+  <p>To delete a environment:</p>
+
+  <ol>
+    <li>Log in to your project if you haven’t already done so.</li>
+    <li>
+      <p>Fetch branches from the origin server.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>To delete the branch entirely (removing it from the project), check out the branch.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:checkout &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Delete the environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>For example, to delete the <code class="highlighter-rouge">deleteme</code> environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete deleteme
+</code></pre></div>      </div>
+
+      <p>To delete more than one environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete &lt;environment ID&gt; &lt;environmentID&gt;
+</code></pre></div>      </div>
+
+      <p>For additional options, see the command-line help:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete --help
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Answer the prompt:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Are you sure you want to delete the remote Git branch deleteme? [Y/n]
+</code></pre></div>      </div>
+
+      <p>A <code class="highlighter-rouge">Y</code> answer makes the branch inactive but leaves it in the project.</p>
+    </li>
+    <li>
+      <p>Answer the prompt:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Delete the remote Git branch too? [Y/n]
+</code></pre></div>      </div>
+
+      <p>A <code class="highlighter-rouge">Y</code> answer completely removes the branch from the project.</p>
+    </li>
+  </ol>
+
+  <p>Wait for the environment to delete.</p>
+
+  <div class="bs-callout bs-callout-info" id="info">
+  <p>To activate the environment later, use the <code>magento-cloud environment:activate</code> command.</p>
+</div>
+
+  <h2 id="ipaddress">Integration environment IP addresses</h2>
+  <p>The following table lists incoming and outgoing IP addresses used by Magento企业版(云支持版) <a href="/guides/v2.0/cloud/architecture/pro-architecture.html#cloud-arch-int">Integration environments</a>.These IP addresses are stable, but might change in the future. Prior to any future change, all affected customers will receive ample warning.</p>
+
+  <p>If you have a corporate firewall that blocks outgoing SSH connections, you can add the inbound IP addresses to your whitelist.</p>
+
+  <table>
+<tr>
+<th colspan="2"><b>Outbound IP addresses</b></th>
+<th colspan="2"><b>Inbound IP addresses</b></th>
+</tr>
+<tr>
+<td>US Region</td>
+<td>EU Region</td>
+<td>US Region</td>
+<td>EU Region</td>
+</tr>
+<tr>
+<td>
+<p>52.200.155.111</p>
+<p>52.200.149.44</p>
+<p>50.17.163.75</p>
+</td>
+<td>
+<p>52.51.163.159</p>
+<p>52.209.44.60</p>
+<p>52.208.156.247</p>
+</td>
+<td>
+<p>52.200.159.23</p>
+<p>52.200.159.125</p>
+<p>52.200.160.5</p>
+</td>
+<td>
+<p>52.209.44.44</p>
+<p>52.209.23.96</p>
+<p>52.51.117.101</p>
+</td>
+</tr>
+</table>
+
+  <h2 id="commands">Interact with environments via CLI</h2>
+  <p>After setting up your <a href="/guides/v2.0/cloud/env/environments-ssh.html">set up SSH</a>, you can interact with services and modify settings through your local to a remote environment.</p>
+
+  <p>The following steps provide an example of accessing a database:</p>
+
+  <div>
+
+    <ol>
+      <li>
+        <p>SSH to the integration environment.</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud ssh
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Find the database login information:</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -r 'print_r(json_decode(base64_decode($_ENV["MAGENTO_CLOUD_RELATIONSHIPS"]))-&gt;database);'
+</code></pre></div>        </div>
+
+        <p>示例结果如下：</p>
+
+        <pre class="no-copy">
+Array
+   (
+      [0] =&gt; stdClass Object
+        (
+           [username] =&gt; user
+           [password] =&gt;
+           [ip] =&gt; 192.0.2.60
+           [host] =&gt; database.internal
+           [query] =&gt; stdClass Object
+              (
+                [is_master] =&gt; 1
+              )
+
+           [path] =&gt; main
+           [scheme] =&gt; mysql
+           [port] =&gt; 3306
+        )
+    )</pre>
+      </li>
+      <li>
+        <p>Use the following command to connect to the database:</p>
+
+        <pre class="no-copy">mysql --host=&lt;host&gt; --user='&lt;database user name&gt;' --password='&lt;user password&gt;' --port='&lt;port&gt;' --database='&lt;path&gt;'</pre>
+      </li>
+    </ol>
+
+    <h2 id="env-start-tunn">SSH tunneling</h2>
+
+    <div>
+
+      <p>You can also use SSH tunneling to connect to a service from your local development environment as if the service were local. Before tunneling, you need to have <a href="/guides/v2.0/cloud/env/environments-ssh.html">SSH configured</a>.</p>
+
+      <p>Use a terminal application to log in and issue commands.</p>
+
+      <p>magento-cloud login</p>
+
+      <p>First, you may want to check if any tunnels are already open using the following command:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud tunnel:list
+</code></pre></div>      </div>
+
+      <p>To build a tunnel, you must know the name of the app to which to tunnel. Use the following commands to list those applications:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;project directory&gt;
+magento-cloud project:list
+magento-cloud apps
+</code></pre></div>      </div>
+
+      <p>For information on the command, you can enter <code class="highlighter-rouge">magento-cloud apps --help</code>.</p>
+
+      <h3 id="tunnel-setup">Set up the SSH tunnel</h3>
+      <p>Use the following command:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud tunnel:open -e &lt;environment ID&gt; --app &lt;app name&gt;
+</code></pre></div>      </div>
+
+      <p>For example, to open a tunnel to the <code class="highlighter-rouge">sprint5</code> branch in a project with an app named <code class="highlighter-rouge">mymagento</code>, enter</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud tunnel:open -e sprint5 --app mymagento
+</code></pre></div>      </div>
+
+      <p>命令行将有以下输出信息：</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SSH tunnel opened on port 30003 to relationship: solr
+SSH tunnel opened on port 30004 to relationship: redis
+SSH tunnel opened on port 30005 to relationship: database
+Logs are written to: /home/magento_user/.magento/tunnels.log
+
+List tunnels with: magento-cloud tunnels
+View tunnel details with: magento-cloud tunnel:info
+Close tunnels with: magento-cloud tunnel:close
+</code></pre></div>      </div>
+
+      <h3 id="tunnel-info">Get tunnel information</h3>
+      <p>To display information about your tunnel, enter:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud tunnel:info -e &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <h3 id="tunnel-services">Connect to services</h3>
+      <p>Now you can connect to services as if they were running locally.</p>
+
+      <p>For example, to connect to the database, use the following command:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql --host=127.0.0.1 --user='&lt;database user name&gt;' --pass='&lt;user password&gt;' --database='&lt;name&gt;' --port='&lt;port&gt;'
+</code></pre></div>      </div>
+
+      <p>Details about the service display if you use the <code class="highlighter-rouge">magento-cloud tunnel:info</code> command.</p>
+
+      <h4 id="section">相关主题</h4>
+      <ul>
+        <li><a href="/guides/v2.0/cloud/project/project-webint-branch.html">使用项目的web接口管理分支</a></li>
+        <li><a href="/guides/v2.0/cloud/reference/cli-ref-topic.html">Magento Cloud CLI reference</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.0/cloud/env/environments-start.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.0/cloud/env/environments-start.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.0/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.0/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

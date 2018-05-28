@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>管理面板用到的设计模式和库 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/pattern-library/controls/button-bar/button-bar.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/pattern-library/controls/button-bar/button-bar.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/pattern-library/controls/button-bar/button-bar.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/pattern-library/controls/button-bar/button-bar.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/pattern-library/controls/button-bar/button-bar.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Admin Pattern Library</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/pattern-library/bk-pattern.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="container">
+    
+
+    
+    <span>Container</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="静态内容容器">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/containers/staticContentContainer/contentContainer.html">静态内容容器</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="淡入淡出，模态窗及覆盖层">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html">淡入淡出，模态窗及覆盖层</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="tabs">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/containers/tabs/tabs.html">Tabs</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="controls">
+    
+
+    
+    <span>Controls</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="按钮">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/controls/buttons/buttons.html">按钮</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="按钮栏">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/controls/button-bar/button-bar.html">按钮栏</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可收缩区块">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/controls/Expandable_Sections/expand-collapse.html">可收缩区块</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="视图控制器">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/controls/viewcontroller/viewcontroller.html">视图控制器</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="数据的展示和处理">
+    
+
+    
+    <span>数据的展示和处理</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="filters">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/filters/data-table-filters/filtering.html">Filters</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="tile">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/displaying-data/tile/tile.html">Tile</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="数据表格">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/displaying-data/datatable/datatable.html">数据表格</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="tree">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/displaying-data/tree/tree.html">Tree</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="feedback-to-user">
+    
+
+    
+    <span>Feedback to User</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="进度条">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/feedbackToUser/progressIndicator/progressIndicator.html">进度条</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="general">
+    
+
+    
+    <span>General</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="accessibility-guideline">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/general/accessibilityguideline/accessibilityGuideline.html">Accessibility Guideline</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="获取用户输入">
+    
+
+    
+    <span>获取用户输入</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="form-elements">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/form_elements/form_elements.html">Form Elements</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="image-uploader">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/image_uploader/image_uploader.html">Image Uploader</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="date-and-time-selector">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/date_time_selector/date_time_selector.html">Date and Time Selector</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="row-pattern-(table)">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/row_pattern/row_pattern.html">Row Pattern (Table)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="use-default-config">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/use_default_config/use_default_config.html">Use Default Config</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="select-from-list">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/getting-user-input/select_from_list/select_from_list.html">Select From List</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="graphics">
+    
+
+    
+    <span>Graphics</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="iconography">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/graphics/iconography/iconography.html">Iconography</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="navigation">
+    
+
+    
+    <span>Navigation</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="links">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/navigation/links/links.html">Links</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="wizard">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/navigation/wizard/wizard.html">Wizard</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="staging-patterns">
+    
+
+    
+    <span>Staging Patterns</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="timeline-dashboard">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/staging-patterns/TimelineDashboard/Timeline-Dashboard.html">Timeline Dashboard</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="scheduled-changes-module">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/staging-patterns/ScheduledChangesModule/module.html">Scheduled Changes Module</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="templates">
+    
+
+    
+    <span>Templates</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="address-form">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/templates/address-form/address-form.html">Address Form</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="sign-in-form">
+
+            
+
+            
+            <a href="/guides/v2.1/pattern-library/templates/sign-in-form/sign-in-form.html">Sign In Form</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/pattern-library/bk-pattern.html">
+            <span property="name">管理面板用到的设计模式和库</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">管理面板用到的设计模式和库</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">管理面板用到的设计模式和库</h1>
+
+  
+
+
+</section>
+
+			<h2 id="button-bar">Button bar</h2>
+<p>Within Magento application, it is often necessary to provide users with page level actions. These actions should be contain in a button bar as described in this guideline.</p>
+
+<p>For solutions not described in this article, please refer to other related patterns or contact the Magento UX Design team.</p>
+
+<h3 id="when-to-use">When to Use</h3>
+<ul>
+  <li>When page level actions are necessary.</li>
+</ul>
+
+<h3 id="when-not-to-use">When Not to Use</h3>
+<ul>
+  <li>When there is already a button bar.</li>
+  <li>When there is a wizard bar.</li>
+  <li>When buttons are needed but they are not page level buttons.</li>
+</ul>
+
+<h3 id="rules">Rules </h3>
+
+<h4 id="1-general-rules">1. General Rules</h4>
+<ul>
+  <li>Only one button bar is allowed per page.</li>
+  <li>Either use a button bar or a wizard bar. Both cannot be on the page.</li>
+  <li>The buttons within the button bar must be one of the page-level buttons from <a href="../buttons/buttons.html"> buttons pattern.</a></li>
+  <li>All the buttons in button bar should be visible at all time.</li>
+</ul>
+
+<h4 id="2-location">2. Location</h4>
+
+<ul>
+  <li>Button bar can be used in a page or a slide-in panel.</li>
+  <li>Its location in either scenario must be right below the page title or the slide-in panel title.</li>
+</ul>
+
+<p><br />
+<strong>按钮栏 Position in Page</strong><br /><br />
+<img src="img/position-in-page.jpg" /></p>
+
+<p><br /></p>
+
+<p><strong>按钮栏 Position in Slide-in Panel</strong><br /><br />
+<img src="img/position-in-modal.jpg" /></p>
+
+<h4 id="3-page-level-button-order-and-priority---general-rules">3. Page Level Button Order and Priority - General Rules</h4>
+
+<ul>
+  <li>There should never be more than one primary page level button on a single page.</li>
+  <li>Primary page level buttons should always be placed on the far right of the button order.</li>
+  <li>If a Back button is present, it should always fall on the far left of the button order.</li>
+  <li>按钮 should be ordered by group as specified below. In situations where button groups do not apply, they should be ordered by importance.</li>
+</ul>
+
+<h4 id="4-ordering-of-按钮栏">4. Ordering of 按钮栏</h4>
+
+<p>Page level buttons can be logically grouped as follows:</p>
+
+<ul>
+  <li>Regress</li>
+  <li>Remove</li>
+  <li>Progress</li>
+</ul>
+
+<p><br /></p>
+
+<p>Groups can contain multiple CTAs but only one primary CTA. Groups should follow the below order:</p>
+
+<p><img src="img/buttonbar1.png" /></p>
+
+<h4 id="5-ordering-by-importance">5. Ordering by Importance</h4>
+
+<p>There should never be more than one primary page level CTA on the same page. Page
+level CTAs should assume an ascending order of importance from left to right wherever
+possible, i.e. least important buttons followed by most important.</p>
+
+<p><img src="img/buttonbar-importance.png" /></p>
+
+<h3 id="style">Style</h3>
+
+<p>All buttons should be right aligned. The button bar is spread across 12 columns and should be fluid.</p>
+
+<p><img src="img/buttonbar-style.jpg" /></p>
+
+<h4 id="recommendation">Recommendation</h4>
+
+<ol>
+  <li>
+    <p>It is recommended that all buttons in button bar should only be in one line. Because the button bar is in fluid grid, it is possible for the buttons to be wrap around to the next line.</p>
+  </li>
+  <li>
+    <p>If you have multiple page-level buttons. We recommend using the split button rather having too many buttons that will clutter the page.</p>
+  </li>
+</ol>
+
+<p><img src="img/button-bar-with-splitbutton.jpg" /></p>
+
+<h3 id="behavior">Behavior</h3>
+
+<h4 id="sticky-button-bar">Sticky button bar</h4>
+
+<p>To ensure page level actions are always visible, The button bar should stick to the top of a browser as the user scrolls and the top of button bar hits the top of browser.</p>
+
+<p><strong>1.Initial State</strong></p>
+
+<p><img src="img/button-bar-sticky1.jpg" /></p>
+
+<p><br />
+<br /></p>
+
+<p><strong>2.After user scrolls, the button bar sticks to the browser.</strong></p>
+
+<p><img src="img/button-bar-sticky2.jpg" /></p>
+
+<h3 id="accessibility">Accessibility</h3>
+<p>按钮 should make use of <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> and <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> so that button text is never dependent on a
+graphic asset.</p>
+
+<h3 id="assets">Assets</h3>
+
+<p>Please reach out to the Magento UX Design team if you need anything else.</p>
+
+<p><a href="src/magento-button-bar.psd">Download 按钮栏 PSD source</a></p>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/pattern-library/controls/button-bar/button-bar.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/pattern-library/controls/button-bar/button-bar.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

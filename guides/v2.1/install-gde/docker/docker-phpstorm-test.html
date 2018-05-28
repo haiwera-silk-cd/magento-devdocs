@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Run PHPUnit | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/install-gde/docker/docker-phpstorm-test.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/install-gde/docker/docker-phpstorm-test.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/install-gde/docker/docker-phpstorm-test.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/install-gde/docker/docker-phpstorm-test.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/install-gde/docker/docker-phpstorm-test.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.1/install-gde/docker/docker-over.html">
+            <span property="name">DevBox (Beta) quick installation overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Run PHPUnit</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Run PHPUnit</h1>
+
+  
+
+
+</section>
+
+			<div class="bs-callout bs-callout-warning">
+      <p>DevBox is currently undergoing an update and is not available for download. A new version will be available in the near future. Please check back for updates.</p>
+</div>
+
+<p>This topic discusses how to run PHPUnit tests from the command line or from PhpStorm.
+For demonstration purposes, this topic discusses how to test Magento modules.
+Typically, you’ll test your own modules; replace the paths shown in the examples with the paths to your test files.</p>
+
+<div>
+
+  <div class="bs-callout bs-callout-info">
+    <p>PhpStorm notes:</p>
+
+    <ul>
+      <li>The instructions in this topic are based on PhpStorm version 2016.3.2. If you use a different version, some steps might be different. Consult your PhpStorm documentation for details.</li>
+      <li>
+        <p>PhpStorm has a commonly used window that has a different name in Windows and Mac OS:</p>
+
+        <ul>
+          <li>Windows: The window is named Settings and you access it by clicking <strong>File</strong> &gt; <strong>Settings</strong>.</li>
+          <li>Mac OS: The window is named Preferences and you access it by clicking <strong>PhpStorm</strong> &gt; <strong>Preferences</strong>.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h2 id="section">先决条件</h2>
+  <p>开始之前, make sure you have completed all of the following tasks:</p>
+
+  <ul>
+    <li><a href="/guides/v2.1/install-gde/docker/docker-phpstorm-prereq.html">PhpStorm prerequisites</a></li>
+    <li><a href="/guides/v2.1/install-gde/docker/docker-phpstorm-project.html">Set up your PhpStorm project</a></li>
+  </ul>
+
+  <div class="bs-callout bs-callout-info">
+    <p>The instructions in this topic are based on PhpStorm version 2016.3.2.
+If you use a different version, some steps might be different.
+Consult your PhpStorm documentation for details.</p>
+  </div>
+
+  <h2 id="from-the-command-line">运行单元测试 from the command line</h2>
+  <p>To run PHPUnit unit tests from the command line:</p>
+
+  <ol>
+    <li>
+      <p>Enter the following command to run a Bash shell in the web container.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose exec --user=magento2 web /bin/bash
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>In the Bash shell, change to the directory containing the objects to test.</p>
+
+      <p>For example, to run tests for the Admin notification module, change to the following directory:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/magento2/vendor/magento/module-admin-notification/Test/Unit
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Run PHPUnit as follows:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path to phpunit&gt; -c &lt;path to phpunit.xml&gt; .
+</code></pre></div>      </div>
+
+      <p>For example,</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/magento2/vendor/bin/phpunit -c /var/www/magento2/dev/tests/unit/phpunit.xml .
+</code></pre></div>      </div>
+
+      <p>Notes:</p>
+
+      <ul>
+        <li>To run a single test, replace <code class="highlighter-rouge">.</code> with the name of the PHP file that defines the tests to run.</li>
+        <li>If there is no <code class="highlighter-rouge">phpunit.xml</code>, use <code class="highlighter-rouge">phpunit.xml.dist</code> instead.
+      *	Use <code class="highlighter-rouge">Ctrl</code>+<code class="highlighter-rouge">p</code>+<code class="highlighter-rouge">Ctrl</code>+<code class="highlighter-rouge">q</code> to exit or detach from a container and leave it running.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2 id="run-integration-tests-from-the-command-line">Run integration tests from the command line</h2>
+  <p>To run PHPUnit integration tests from the command line:</p>
+
+  <ol>
+    <li>
+      <p>Enter the following command to run a Bash shell in the web container.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose exec --user=magento2 web /bin/bash
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>In the Bash shell, change to the following directory:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/magento2/dev/tests/integration 
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Following is a sample command to run a test suite:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/magento2/vendor/bin/phpunit /var/www/magento2/dev/tests/integration/testsuite/Magento/Integration/Model/Config/Integration
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h2 id="run-phpunit-tests-from-phpstorm">Run PHPUnit tests from PhpStorm</h2>
+  <p>This section discusses one way to run PHPUnit tests in PhpStorm.
+For more information about defining tests, consult the PhpStorm documentation.</p>
+
+  <h3 id="set-up-and-run-a-test">Set up and run a test</h3>
+  <p>To run PHPUnit tests from PhpStorm:</p>
+
+  <ol>
+    <li>Open your DevBox PhpStorm project.</li>
+    <li>
+      <p>Expand the files in the left pane until you locate a test to run.</p>
+
+      <p>Tests are located in <code class="highlighter-rouge">&lt;DevBox root folder&gt;/vendor/&lt;module vendor&gt;/&lt;module name&gt;/Test/Unit</code></p>
+    </li>
+    <li>Right-click the name of the test.</li>
+    <li>
+      <p>From the pop-up menu, click <strong>Run &lt;test name&gt;</strong>.</p>
+
+      <p>For example, the following figure shows how to run the SearchDataTest.</p>
+
+      <p><img src="http://devdocs.magento.com/common/images/install_docker_php-storm_unit-searchdata.png" alt="Run a sample unit test" /></p>
+    </li>
+  </ol>
+
+  <p>Test results are displayed in the right pane.
+If errors display, see the next section.</p>
+
+  <h3 id="troubleshoot-unit-tests">Troubleshoot unit tests</h3>
+  <p>If your remote CLI interpreter or Xdebug options aren’t set up properly, the following messages are displayed:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh://magento2@127.0.0.1:32795/usr/local/bin/php -dxdebug.remote_host=127.0.0.1 /home/magento2/.PhpStorm_helpers/phpunit.php --no-configuration Magento\\AdvancedSearch\\Test\\Unit\\Block\\SearchDataTest /var/www/magento2/vendor/magento/module-advanced-search/Test/Unit/Block/SearchDataTest.php
+Testing started at 6:13 PM ...
+
+Process finished with exit code 1
+Cannot find PHPUnit in include path (.:/usr/local/lib/php)
+</code></pre></div>  </div>
+
+  <p>To resolve this issue, make sure you set up your remote CLI interpreter as discussed in <a href="/guides/v2.1/install-gde/docker/docker-phpstorm-project.html#devbox-phpunit-setup">Set up PHPUnit</a>.</p>
+
+  <p>Also make sure Xdebug configuration options are set properly as discussed in <a href="/guides/v2.1/install-gde/docker/docker-phpstorm-project.html#devbox-xdebug-remote">Create the Xdebug remote host</a>.</p>
+
+  <h4 id="section-1">下一步</h4>
+
+  <p><a href="/guides/v2.1/install-gde/docker/docker-phpstorm-debug.html">Debug in PhpStorm and browser</a></p>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/install-gde/docker/docker-phpstorm-test.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/install-gde/docker/docker-phpstorm-test.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

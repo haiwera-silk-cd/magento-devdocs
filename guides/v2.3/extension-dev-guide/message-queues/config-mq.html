@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>配置消息队列 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/message-queues/config-mq.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/extension-dev-guide/message-queues/config-mq.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/extension-dev-guide/message-queues/config-mq.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/extension-dev-guide/message-queues/config-mq.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/extension-dev-guide/message-queues/config-mq.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">PHP开发文档</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">介绍</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="开发者指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/developers_roadmap.html">开发者指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer介绍">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer.html">Composer介绍</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="常用术语表">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer-gloss.html">常用术语表</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="准备(快速开始开发)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/prepare/prepare.html">准备(快速开始开发)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="组件类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-modtypes.html">组件类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于组件的文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/prepare_file-str.html">关于组件的文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发和打包组件指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-summary.html">开发和打包组件指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="extension-lifecycle">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/lifecycle.html">扩展生命周期</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="build">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/build/build.html">Build</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="di.xml文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/di-xml-file.html">di.xml文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="最佳开发环境">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/optimal-dev-environment.html">最佳开发环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer.json文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/composer-integration.html">composer.json文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定义你的配置文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/required-configuration-files.html">定义你的配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建你的组件文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-file-structure.html">创建你的组件文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="注册你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/component-registration.html">注册你的组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)验证">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/XSD-XML-validation.html">统一资源名称(URN)验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="你组件的名称">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/create_component.html">你组件的名称</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="组件加载顺序">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-load-order.html">组件加载顺序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用和禁用组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/enable-module.html">启用和禁用组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="package">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/package/package.html">Package</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="打包组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_module.html">打包组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="上传组件到magento市场">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_mktpl.html">上传组件到Magento市场</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="validate">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/validate/validate.html">Validate</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="测试你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/validate/test-module.html">测试你的组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部份缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching.html">部份缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="创建自定义缓存引擎">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/database-caching.html">创建自定义缓存引擎</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建缓存类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/create-cache-type.html">创建缓存类型</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="页面缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/page-caching.html">页面缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="public-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/public-content.html">公开内容</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="private-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/private-content.html">隐私内容</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="添加命令行命令">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-add.html">添加命令行命令</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令命名指南">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">命令命名指南</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="如何添加命令行命令">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-howto.html">如何添加命令行命令</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="staging-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/staging.html">Staging (仅企业版适用)</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件开发">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/module-development.html">组件开发</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="服务约定">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="public-interfaces-&amp;-apis">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/api-concepts.html">Public interfaces &amp; APIs</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="服务契约设置模式">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/design-patterns.html">服务契约设置模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖注入">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/depend-inj.html">依赖注入</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="objectmanager">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/object-manager.html">ObjectManager</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="事件和观查者">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/events-and-observers.html">事件和观查者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="factories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/factories.html">Factories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="proxies">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/proxies.html">Proxies</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码生成">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/code-generation.html">代码生成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="实体属性值(eav)和扩展属性">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/attributes.html">实体属性值(EAV)和扩展属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="插件(拦截器)">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/plugins.html">插件(拦截器)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="routing">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/routing.html">Routing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="indexing">
+
+            
+
+            
+            <span>Indexing</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="索引概述">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing.html">索引概述</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="索引优化">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexer-batch.html">索引优化</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="添加自定义索引">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing-custom.html">添加自定义索引</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="declarative-schema">
+
+            
+
+            
+            <span>Declarative schema</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="delcarative-schema-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/">Delcarative schema overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="migrate-install/upgrade-scripts-to-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html">Migrate install/upgrade scripts to declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configure-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">Configure declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="develop-data-and-schema-patches">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html">Develop data and schema patches</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="消息队列-(magento-commerce-edition-only)">
+
+            
+
+            
+            <span>消息队列 (Magento Commerce Edition Only)</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="消息队列-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/message-queues.html">消息队列 overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3 active " id="configure-message-queues">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/config-mq.html">Configure message Queues</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="迁移消息队列配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bulk-operations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/bulk-operations.html">Bulk operations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="批量操作实现示例">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/implement-bulk.html">批量操作实现示例</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加扩展属性到实体">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html">添加扩展属性到实体</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searching-with-repositories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/searching-with-repositories.html">Searching with repositories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="将服务配置成web-api">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署期间清空目录">
+
+            
+
+            
+            <a href="/guides/v2.3/howdoi/php/php_clear-dirs.html">部署期间清空目录</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="adapters">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/adapters.html">Adapters</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <span>Configuration</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="sensitive-environemnt-settings">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/sensitive-and-environment-settings.html">敏感环境设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="configuration-importers">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/importers.html">配置导入器</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="framework">
+    
+
+    
+    <span>Framework</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="序列化库">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/framework/serializer.html">序列化库</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="security">
+    
+
+    
+    <span>Security</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="xss-prevention">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/xss-protection.html">XSS防范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="不安全的方法">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/security/non-secure-functions.html">不安全的方法</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="versioning">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/versioning/">Versioning</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模块版本依赖">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/dependencies.html">模块版本依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基础代码修改">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/codebase-changes.html">基础代码修改</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">
+            <span property="name">PHP开发文档</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">配置消息队列</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+		<span class="ee-only">仅企业版适用</span>
+	
+
+	
+
+	<h1 class="page-heading">配置消息队列</h1>
+
+  
+
+
+</section>
+
+			<p>The message queue topology is a Magento Commerce feature. It can be included as part of Magento Commerce installation, or you can add it existing modules.</p>
+
+<h3 id="概述">概述</h3>
+<p>Configuring the message queue topology involves creating and modifying the following configuration files in the <code class="highlighter-rouge">&lt;module&gt;/etc</code> directory:</p>
+
+<ul>
+  <li><a href="#communicationxml"><code class="highlighter-rouge">communication.xml</code></a> - Defines aspects of the message queue system that all communication types have in common.</li>
+  <li><a href="#queueconsumerxml"><code class="highlighter-rouge">queue_consumer.xml</code></a> - Defines the relationship between an existing queue and its consumer.</li>
+  <li><a href="#queuetopologyxml"><code class="highlighter-rouge">queue_topology.xml</code></a> - Defines the message routing rules and declares queues and exchanges.</li>
+  <li><a href="#queuepublisherxml"><code class="highlighter-rouge">queue_publisher.xml</code></a> - Defines the exchange where a topic is published.</li>
+</ul>
+
+<h3 id="use-cases">Use Cases</h3>
+<p>Depending on your needs, you may only need to create and configure <code class="highlighter-rouge">communication.xml</code> and one or two of these files.</p>
+
+<ul>
+  <li>If you only want to publish to an existing queue created by a 3rd party system, you will only need the <code class="highlighter-rouge">queue_publisher.xml</code> file.</li>
+  <li>If you only want to consume from an existing queue,  you will only need the <code class="highlighter-rouge">queue_consumer.xml</code> config file.</li>
+  <li>In cases where you want to configure the local queue and publish to it for 3rd party systems to consume, you will need the <code class="highlighter-rouge">queue_publisher.xml</code> and <code class="highlighter-rouge">queue_topology.xml</code> files.</li>
+  <li>When you want to configure the local queue and consume messages published by 3rd party system, you will need the <code class="highlighter-rouge">queue_topology.xml</code> and <code class="highlighter-rouge">queue_consumer.xml</code> files.</li>
+</ul>
+
+<h3 id="communicationxml"><code class="highlighter-rouge">communication.xml</code></h3>
+
+<p>The <code class="highlighter-rouge">&lt;module&gt;/etc/communication.xml</code> file defines aspects of the message queue system that all communication types have in common. This release supports AMQP and database connections.</p>
+
+<h3 class="no_toc" id="sample-communicationxml-file">Sample <code class="highlighter-rouge">communication.xml</code> file</h3>
+
+<p>The following sample defines two synchronous topics. The first topic is for RPC calls. The second uses a custom service interface.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework-message-queue:etc/queue.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;topic</span> <span class="na">name=</span><span class="s">"synchronous.rpc.test"</span> <span class="na">request=</span><span class="s">"string"</span> <span class="na">response=</span><span class="s">"string"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;handler</span> <span class="na">name=</span><span class="s">"processRpcRequest"</span> <span class="na">type=</span><span class="s">"Magento\TestModuleSynchronousAmqp\Model\RpcRequestHandler"</span> <span class="na">method=</span><span class="s">"process"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/topic&gt;</span>
+  <span class="nt">&lt;topic</span> <span class="na">name=</span><span class="s">"magento.testModuleSynchronousAmqp.api.serviceInterface.execute"</span> <span class="na">schema=</span><span class="s">"Magento\TestModuleSynchronousAmqp\Api\ServiceInterface::execute"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;handler</span> <span class="na">name=</span><span class="s">"processRemoteRequest"</span> <span class="na">type=</span><span class="s">"Magento\TestModuleSynchronousAmqp\Model\RpcRequestHandler"</span> <span class="na">method=</span><span class="s">"process"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/topic&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<h3 class="no_toc" id="topic-element">topic element</h3>
+<p>Topic configuration is flexible in that you can switch the transport layer for topics at deployment time. These values can be overwritten in the <code class="highlighter-rouge">env.php</code> file.</p>
+
+<p>The <code class="highlighter-rouge">name</code> parameter is required. The topic definition must include either a <code class="highlighter-rouge">request</code> or a <code class="highlighter-rouge">schema</code>. Use <code class="highlighter-rouge">schema</code> if you want to implement a custom service interface.  Otherwise, specify <code class="highlighter-rouge">request</code>. If <code class="highlighter-rouge">request</code> is specified, then also specify <code class="highlighter-rouge">response</code> if the topic is synchronous.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>A string that uniquely identifies the topic. A topic name should be a series of strings that are separated by periods. The leftmost string should be the most general, and each string afterward should narrow the scope. For example, to describe actions for tending to pets, you might create names such as <code class="highlighter-rouge">cat.white.feed</code> and <code class="highlighter-rouge">dog.retriever.walk</code>. Wildcards are not supported in the <code class="highlighter-rouge">communication.xml</code> file.</td>
+    </tr>
+    <tr>
+      <td>request</td>
+      <td>Specifies the data type of the topic.</td>
+    </tr>
+    <tr>
+      <td>response</td>
+      <td>Specifies the format of the response. This parameter is required if you are defining a synchronous topic. Omit this parameter if you are defining an asynchronous topic.</td>
+    </tr>
+    <tr>
+      <td>schema</td>
+      <td>The interface that describes the structure of the message. The format must be  <code class="highlighter-rouge">&lt;module&gt;\Api\&lt;ServiceName&gt;::&lt;methodName&gt;</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="no_toc" id="handler-element">handler element</h3>
+<p>The <code class="highlighter-rouge">handler</code> element specifies the class where the logic for handling messages exists and the method it executes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>A string that uniquely defines the handler. The name can be derived from the topic name if the handler is specific to the topic. If the handler provides more generic capabilities, name the handler so that it describes those capabilities.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>The class or interface that defines the handler.</td>
+    </tr>
+    <tr>
+      <td>method</td>
+      <td>The method this handler executes.</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Determines whether this handler is disabled. The default value is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="queueconsumerxml"><code class="highlighter-rouge">queue_consumer.xml</code></h3>
+<p>The <code class="highlighter-rouge">queue_consumer.xml</code> file contains one or more <code class="highlighter-rouge">consumer</code> elements:</p>
+
+<h4 class="no_toc" id="示例-queue_consumer-file">示例 <code class="highlighter-rouge">queue_consumer</code> file</h4>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework-message-queue:etc/queue_consumer.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;consumer</span> <span class="na">name=</span><span class="s">"basic.consumer"</span> <span class="na">queue=</span><span class="s">"basic.consumer.queue"</span> <span class="na">handler=</span><span class="s">"LoggerClass::log"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;consumer</span> <span class="na">name=</span><span class="s">"synchronous.rpc.test"</span> <span class="na">queue=</span><span class="s">"synchronous.rpc.test.queue"</span> <span class="na">handler=</span><span class="s">"LoggerClass::log"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;consumer</span> <span class="na">name=</span><span class="s">"rpc.test"</span> <span class="na">queue=</span><span class="s">"queue.for.rpc.test.unused.queue"</span> <span class="na">consumerInstance=</span><span class="s">"Magento\Framework\MessageQueue\BatchConsumer"</span> <span class="na">connection=</span><span class="s">"amqp"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<h4 class="no_toc" id="consumer-element"><code class="highlighter-rouge">consumer</code> element</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name (required)</td>
+      <td>The name of the consumer.</td>
+    </tr>
+    <tr>
+      <td>queue (required)</td>
+      <td>Defines the queue name to send the message to.</td>
+    </tr>
+    <tr>
+      <td>handler</td>
+      <td>Specifies the class and method that processes the message. The value must be specified in the format <code class="highlighter-rouge">&lt;Vendor&gt;\Module\&lt;ServiceName&gt;::&lt;methodName&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td>consumerInstance</td>
+      <td>The Magento class name that consumes the message</td>
+    </tr>
+    <tr>
+      <td>connection</td>
+      <td>For AMQP connections, the connection name must match the <code class="highlighter-rouge">connection</code> attribute in the <code class="highlighter-rouge">queue_topology.xml</code> file. Otherwise, the connection name must be <code class="highlighter-rouge">db</code>.</td>
+    </tr>
+    <tr>
+      <td>maxMessages</td>
+      <td>Specifies the maximum number of messages to consume.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="queuetopologyxml"><code class="highlighter-rouge">queue_topology.xml</code></h3>
+
+<p>The <code class="highlighter-rouge">queue_topology.xml</code> file defines the message routing rules and declares queues and exchanges. It contains the following elements:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">exchange</code></li>
+  <li><code class="highlighter-rouge">exchange/binding</code>(optional)</li>
+  <li><code class="highlighter-rouge">exchange/arguments</code> (optional)</li>
+  <li><code class="highlighter-rouge">exchange/binding/arguments</code> (optional)</li>
+</ul>
+
+<h4 class="no_toc" id="示例-queue_topologyxml-file">示例 <code class="highlighter-rouge">queue_topology.xml</code> file</h4>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework-message-queue:etc/queue_topology.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;exchange</span> <span class="na">name=</span><span class="s">"magento-topic-based-exchange1"</span> <span class="na">type=</span><span class="s">"topic"</span> <span class="na">connection=</span><span class="s">"db"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;binding</span> <span class="na">id=</span><span class="s">"topicBasedRouting2"</span> <span class="na">topic=</span><span class="s">"anotherTopic"</span> <span class="na">destinationType=</span><span class="s">"queue"</span> <span class="na">destination=</span><span class="s">"topic-queue1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="c">&lt;!--Not part of our use case, but will be processed if someone specifies them--&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"argument1"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>value<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/binding&gt;</span>
+    <span class="nt">&lt;arguments&gt;</span>
+        <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"alternate-exchange"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>magento-log-exchange<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;/arguments&gt;</span>
+  <span class="nt">&lt;/exchange&gt;</span>
+  <span class="nt">&lt;exchange</span> <span class="na">name=</span><span class="s">"magento-topic-based-exchange2"</span> <span class="na">type=</span><span class="s">"topic"</span> <span class="na">connection=</span><span class="s">"db"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;binding</span> <span class="na">id=</span><span class="s">"topicBasedRouting1"</span> <span class="na">topic=</span><span class="s">"#"</span> <span class="na">destinationType=</span><span class="s">"queue"</span> <span class="na">destination=</span><span class="s">"topic-queue2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;arguments&gt;</span>
+      <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"alternate-exchange"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>magento-log-exchange<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;/arguments&gt;</span>
+  <span class="nt">&lt;/exchange&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<h4 class="no_toc" id="exchange-element"><code class="highlighter-rouge">exchange</code> element</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name (required)</td>
+      <td>A unique ID for the exchange.</td>
+    </tr>
+    <tr>
+      <td>type (required)</td>
+      <td>Specifies the type of exchange. Must be <code class="highlighter-rouge">topic</code>.</td>
+    </tr>
+    <tr>
+      <td>connection  (required)</td>
+      <td>For AMQP connections, a string that identifies the connection.  For MySQL connections, the connection name must be <code class="highlighter-rouge">db</code>.</td>
+    </tr>
+    <tr>
+      <td>durable</td>
+      <td>Boolean value indicating whether the exchange is persistent. Non-durable exchanges are purged when the server restarts. The default is <code class="highlighter-rouge">true</code>.</td>
+    </tr>
+    <tr>
+      <td>autoDelete</td>
+      <td>Boolean value indicating whether the exchange is deleted when all queues have finished using it. The default is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+    <tr>
+      <td>internal</td>
+      <td>Boolean value. If set to true, the exchange may not be used directly by publishers, but only when bound to other exchanges. The default is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="no_toc" id="binding-element"><code class="highlighter-rouge">binding</code> element</h4>
+
+<p>The <code class="highlighter-rouge">binding</code> element is a subnode of the <code class="highlighter-rouge">exchange</code> element.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id (required)</td>
+      <td>A unique ID for this binding.</td>
+    </tr>
+    <tr>
+      <td>topic (required)</td>
+      <td>The name of a topic. You can specify an asterisk (*) or pound sign (#) as wildcards. These are described below the table.</td>
+    </tr>
+    <tr>
+      <td>destinationType (required)</td>
+      <td>Must be <code class="highlighter-rouge">queue</code>.</td>
+    </tr>
+    <tr>
+      <td>destination (required)</td>
+      <td>Identifies the name of a queue.</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Determines whether this binding is disabled. The default value is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example topic names that include wildcards:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Description</th>
+      <th>Example matching topics</th>
+      <th>Example non-matching topics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">*.*.*</code></td>
+      <td>Matches any topic that contains exactly two periods.</td>
+      <td><code class="highlighter-rouge">mytopic.createOrder.success</code>, <code class="highlighter-rouge">mytopic.updatePrice.item1</code></td>
+      <td><code class="highlighter-rouge">mytopic.createOrder</code>, <code class="highlighter-rouge">mytopic.createOrder.success.true</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">#</code></td>
+      <td>Matches any topic name.</td>
+      <td><code class="highlighter-rouge">mytopic</code>, <code class="highlighter-rouge">mytopic.createOrder.success</code>, <code class="highlighter-rouge">this.is.a.long.topic.name</code></td>
+      <td>Not applicable</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">mytopic.#</code></td>
+      <td>Matches any topic name that begins with <code class="highlighter-rouge">mytopic</code> and has a period afterward.</td>
+      <td><code class="highlighter-rouge">mytopic.success</code>, <code class="highlighter-rouge">mytopic.createOrder.error</code></td>
+      <td><code class="highlighter-rouge">new.mytopic.success</code>,</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">*.Order.#</code></td>
+      <td>There must be one string before <strong>.Order</strong>. There can be any number of strings (including 0) after that.</td>
+      <td><code class="highlighter-rouge">mytopic.Order</code>, <code class="highlighter-rouge">mytopic.Order.Create</code>, <code class="highlighter-rouge">newtopic.Order.delete.success</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="no_toc" id="arguments-element"><code class="highlighter-rouge">arguments</code> element</h4>
+
+<p>The <code class="highlighter-rouge">arguments</code> element is an optional element that contains one or more <code class="highlighter-rouge">argument</code> elements. These arguments define key/value pairs that are passed to the broker for processing.</p>
+
+<p>Each <code class="highlighter-rouge">argument</code> definition must have the following parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The parameter name</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>The data type of the value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following illustrates an <code class="highlighter-rouge">arguments</code> block:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;arguments&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"warehouseId"</span> <span class="na">xsi:type=</span><span class="s">"int"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/argument&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"carrierName"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>USPS<span class="nt">&lt;/argument&gt;</span>
+<span class="nt">&lt;/arguments&gt;</span></code></pre></figure>
+
+<h3 id="queuepublisherxml"><code class="highlighter-rouge">queue_publisher.xml</code></h3>
+
+<p>The <code class="highlighter-rouge">queue_publisher.xml</code> file defines which connection and exchange to use to publish messages for a specific topic. It contains the following elements:</p>
+
+<ul>
+  <li><span term-uuid="d5777fe2-f786-45d9-b052-cca8a10120d9" class="glossary-term" data-toggle="popover">publisher</span></li>
+  <li>publisher/connection</li>
+</ul>
+
+<h4 class="no_toc" id="示例-queue_publisherxml-file">示例 <code class="highlighter-rouge">queue_publisher.xml</code> file</h4>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"urn:magento:framework-message-queue:etc/queue_publisher.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;publisher</span> <span class="na">topic=</span><span class="s">"magento.testModuleSynchronousAmqp.api.serviceInterface.execute"</span> <span class="na">disabled=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;publisher</span> <span class="na">topic=</span><span class="s">"asynchronous.test"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;connection</span> <span class="na">name=</span><span class="s">"amqp"</span> <span class="na">exchange=</span><span class="s">"magento"</span> <span class="na">disabled=</span><span class="s">"false"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;connection</span> <span class="na">name=</span><span class="s">"db"</span> <span class="na">exchange=</span><span class="s">"exch1"</span> <span class="na">disabled=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/publisher&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<h4 class="no_toc" id="publisher-element"><code class="highlighter-rouge">publisher</code> element</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>topic (required)</td>
+      <td>The name of the topic.</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Determines whether this queue is disabled. The default value is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="no_toc" id="connection-element"><code class="highlighter-rouge">connection</code> element</h4>
+
+<p>The <code class="highlighter-rouge">connection</code> element is a subnode of the <code class="highlighter-rouge">publisher</code> element. There must not be more than one enabled active connection to a pushlisher defined at a time. If you omit the <code class="highlighter-rouge">connection</code> element, the default connection of <code class="highlighter-rouge">amqp</code> and exchange <code class="highlighter-rouge">magento</code> will be used.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name (required)</td>
+      <td>For AMQP connections, the connection name must match the <code class="highlighter-rouge">connection</code> attribute in the <code class="highlighter-rouge">queue_topology.xml</code> file. Otherwise, the connection name must be <code class="highlighter-rouge">db</code>.</td>
+    </tr>
+    <tr>
+      <td>exchange</td>
+      <td>The name of the exchange to publish to. The default system exchange name is <code class="highlighter-rouge">magento</code>.</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>Determines whether this queue is disabled. The default value is <code class="highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="updatequeuexml">Updating <code class="highlighter-rouge">queue.xml</code></h3>
+
+<p>See <a href="/guides/v2.3/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a> for information about upgrading from Magento 2.0 or 2.1.</p>
+
+<h3 id="related-topics">Related Topics</h3>
+<ul>
+  <li><a href="/guides/v2.3/config-guide/mq/rabbitmq-overview.html">消息队列概述</a></li>
+  <li><a href="/guides/v2.3/config-guide/mq/manage-mysql.html">管理消息队列 with MySQL</a></li>
+  <li><a href="/guides/v2.3/install-gde/prereq/install-rabbitmq.html">安装RabbitMQ</a></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/extension-dev-guide/message-queues/config-mq.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/extension-dev-guide/message-queues/config-mq.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

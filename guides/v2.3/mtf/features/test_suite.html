@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>功能测试框架中的测试集 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/mtf/features/test_suite.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/mtf/features/test_suite.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/mtf/features/test_suite.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/mtf/features/test_suite.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/mtf/features/test_suite.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">功能测试框架手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_introduction.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="installation">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_installation.html">Installation</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="quick-start">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_quickstart.html">快速开始</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="adjust-configuration">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust configuration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-magento-application">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_magento.html">Prepare Magento application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-environment-for-test-run">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_environment.html">Prepare environment for test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-run">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_runtest.html">Test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="see-logs-for-failed-tests">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_logs.html">See logs for failed tests</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="create-a-test">
+    
+
+    
+    <a href="/guides/v2.3/mtf/create_test.html">创建一个测试</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="out-of-the-box-test">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/out-of-the-box.html">盒外测试模型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-theory">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/new_test.html">新功能测试.理论</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-practice">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/create_new_test.html">新功能测试.实践</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="features">
+    
+
+    
+    <a href="/guides/v2.3/mtf/features.html">Features</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="隔离管理">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/isolation.html">隔离管理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modularity">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/modularity.html">Modularity</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="parallel-execution-flow">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/parallel_execution.html">并行执行流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="reporting">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/reporting.html">Reporting</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="test-suite">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/test_suite.html">Test suite</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="web-driver-replacement">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/webdriver.html">更换Web driver</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="entities">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_entities.html">Entities</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="fixture">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture.html">Fixture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fixture-repository">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture-repo.html">固定数据仓库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="handler">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_handler.html">Handler</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="block">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_block.html">Block</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="typified-element">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_typified-element.html">典型元素</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="page">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_page.html">Page</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="constraint">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_constraint.html">Constraint</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="data-set">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">Data set</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-case">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">测试用例</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="scenario-test">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_scenariotest.html">场景测试</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <a href="/guides/v2.3/mtf/configuration.html">Configuration</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="update">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_update.html">Update</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.3/mtf/troubleshooting.html">故障排除</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="changelog">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_changelog.html">Changelog</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/mtf/mtf_introduction.html">
+            <span property="name">功能测试框架介绍</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">功能测试框架中的测试集</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">功能测试框架中的测试集</h1>
+
+  
+
+
+</section>
+
+			<h2 id="overview">概述</h2>
+
+<p>In the Functional Testing Framework (FTF), you can run a group of tests, which is called <strong>test suite</strong>. A test suite is a collection of tests, grouped by a specified rule, that is used to test a custom scope of functionality.</p>
+
+<p>You can group the <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test cases</a>, <a href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">variations</a> or <a href="/guides/v2.3/mtf/mtf_entities/mtf_constraint.html">constraints</a> in any combination during the test run.</p>
+
+<p>There are two rule types available:</p>
+
+<ul>
+  <li><strong>allow</strong>, specifying what must be included during the test run</li>
+  <li><strong>deny</strong>, specifying what must be excluded during the test run</li>
+</ul>
+
+<p>The rules for a test case are defined in a separate <code class="highlighter-rouge">.xml</code> file. (Recommended naming: use lowercase letters and underscore as a separator). One file contains rules for one test suite. All files are stored in the <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/testsuites/Magento/Mtf/TestSuite/InjectableTests</code> directory by default. Only one test suite can be run at a time.</p>
+
+<p>The example of the default test suite:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../vendor/magento/mtf/Magento/Mtf/TestRunner/etc/testRunner.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testcase"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;allow&gt;</span>
+            <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"test_type"</span> <span class="na">value=</span><span class="s">"acceptance_test"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/allow&gt;</span>
+        <span class="nt">&lt;deny&gt;</span>
+            <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"stable"</span> <span class="na">value=</span><span class="s">"no"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/deny&gt;</span>
+    <span class="nt">&lt;/rule&gt;</span>
+    <span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"variation"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;allow&gt;</span>
+            <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"test_type"</span> <span class="na">value=</span><span class="s">"acceptance_test"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/allow&gt;</span>
+        <span class="nt">&lt;deny&gt;</span>
+            <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"stable"</span> <span class="na">value=</span><span class="s">"no"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/deny&gt;</span>
+    <span class="nt">&lt;/rule&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<p>This set of rules selects functional tests that accepts the following criteria:</p>
+
+<ul>
+  <li>WITH the tag <code class="highlighter-rouge">const test_type = 'acceptance_test'</code></li>
+  <li>EXCEPT test cases with the tag <code class="highlighter-rouge">const stable = 'no'</code></li>
+</ul>
+
+<p>AND runs variations</p>
+
+<ul>
+  <li>WITH the tag <code class="highlighter-rouge">test_type:acceptance_test</code></li>
+  <li>EXCEPT variations with the tag <code class="highlighter-rouge">stable:no</code>”.</li>
+</ul>
+
+<p>Learn more details in next topics.</p>
+
+<h2 id="configure">Configure <code class="highlighter-rouge">phpunit.xml</code></h2>
+
+<p>Define the test suite to be run in the <code class="highlighter-rouge">&lt;magento2&gt;dev/tests/functional/phpunit.xml</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;env</span> <span class="na">name =</span> <span class="s">"testsuite_rule"</span> <span class="na">value =</span> <span class="s">&lt;test_suite_name</span><span class="nt">&gt;</span> /&gt;
+<span class="nt">&lt;env</span> <span class="na">name =</span> <span class="s">"testsuite_rule_path"</span> <span class="na">value =</span> <span class="s">&lt;test_suite_directory</span><span class="nt">&gt;</span> /&gt;</code></pre></figure>
+
+<p>The default test suite is <code class="highlighter-rouge">&lt;magento2&gt;/dev/tests/functional/testsuites/Magento/Mtf/TestSuite/InjectableTests/basic.xml</code>.</p>
+
+<p>In <code class="highlighter-rouge">phpunit.xml</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">"testsuite_rule"</span> <span class="na">value=</span><span class="s">"basic"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;env</span> <span class="na">name=</span><span class="s">"testsuite_rule_path"</span> <span class="na">value=</span><span class="s">"Magento/Mtf/TestSuite/InjectableTests"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<h2 id="run">Run your test suite</h2>
+
+<p>To run a test suite enter the following commands from your terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> &lt;magento2&gt;/dev/tests/functional
+</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vendor/bin/phpunit testsuites/Magento/Mtf/TestSuite/InjectableTests.php
+</code></pre></div></div>
+
+<h2 id="rule">Rule</h2>
+
+<p>Each test suite can be defined by the rules that <strong>allow</strong> or <strong>deny</strong> running of a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a>, a <a href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">variation</a>, or a <a href="/guides/v2.3/mtf/mtf_entities/mtf_constraint.html">constraint</a>.</p>
+
+<p>The only attribute of a rule node is the <code class="highlighter-rouge">scope</code>, which enables you to use the following options:</p>
+
+<ul>
+  <li><a href="#scope-testsuite"><code class="highlighter-rouge">scope = "testsuite"</code></a>. Enables you to filter the test cases by a namespace, a module, a class.</li>
+  <li><a href="#scope-testcase"><code class="highlighter-rouge">scope = "testcase"</code></a>. Enables you to select the test cases with a specified tag.</li>
+  <li><a href="#scope-variation"><code class="highlighter-rouge">scope = "variation"</code></a>. Enables you to use in a test run only variations with a specified tag.</li>
+  <li><a href="#scope-constraint"><code class="highlighter-rouge">scope = "constraint"</code></a>. Enables you to run only assertions with a specified tag.</li>
+</ul>
+
+<h3 id="scope-testsuite"><code class="highlighter-rouge">scope = "testsuite"</code></h3>
+
+<p>This scope enables you to filter functional tests using the following criteria:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+      <th>Occurrence</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;class&gt;</code></td>
+      <td>Apply a rule to the test case with the specified class name.</td>
+      <td>multiple</td>
+      <td><code class="highlighter-rouge">&lt;class value = "Magento\Catalog\Test\TestCase\Product\CreateSimpleProductEntityTest" /&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;module&gt;</code></td>
+      <td>Apply a rule to all test cases from the specified module. Some test cases may refer to other modules using merging functionality of variations, fixtures etc. You can restrict such reference to other modules adding the <code class="highlighter-rouge">strict="1"</code> argument. The default value is <code class="highlighter-rouge">strict="0"</code>.</td>
+      <td>multiple</td>
+      <td><code class="highlighter-rouge">&lt;module value = "Magento_Tax" strict="1" /&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;namespace&gt;</code></td>
+      <td>Apply a rule to all test cases with the specified namespace.</td>
+      <td>multiple</td>
+      <td><code class="highlighter-rouge">&lt;namespace value = "Magento\Catalog\Test\TestCase\Product" /&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <span term-uuid="621ef86b-7314-4fbc-a80d-ab7fa45a27cb" class="glossary-term" data-toggle="popover">namespace</span> filter example:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../vendor/magento/mtf/Magento/Mtf/TestRunner/etc/testRunner.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testsuite"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;allow&gt;</span>
+            <span class="nt">&lt;namespace</span> <span class="na">value=</span><span class="s">"Magento\Catalog\Test\TestCase\Product"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/allow&gt;</span>
+    <span class="nt">&lt;/rule&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<p>The <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> filter example:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../vendor/magento/mtf/Magento/Mtf/TestRunner/etc/testRunner.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testsuite"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;allow&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">value=</span><span class="s">"Magento_Catalog"</span> <span class="na">strict=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;module</span> <span class="na">value=</span><span class="s">"Magento_Cms"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/allow&gt;</span>
+    <span class="nt">&lt;/rule&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<p>The class filter example:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="c">&lt;!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"../../../../../vendor/magento/mtf/Magento/Mtf/TestRunner/etc/testRunner.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testsuite"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;allow&gt;</span>
+            <span class="nt">&lt;class</span> <span class="na">value=</span><span class="s">"Magento\Catalog\Test\TestCase\Product\CreateSimpleProductEntityTest"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;class</span> <span class="na">value=</span><span class="s">"Magento\ConfigurableProduct\Test\TestCase\CreateConfigurableProductEntityTest"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/allow&gt;</span>
+    <span class="nt">&lt;/rule&gt;</span>
+<span class="nt">&lt;/config&gt;</span></code></pre></figure>
+
+<h3 id="scope-testcase"><code class="highlighter-rouge">scope = "testcase"</code></h3>
+
+<p>In this scope, you can group test cases using tags.</p>
+
+<p>You can use <code class="highlighter-rouge">group</code> and <code class="highlighter-rouge">value</code> parameters in the test case scope. In a test case, they are provided as a constant name and its value respectively. See the following example:</p>
+
+<ul>
+  <li>Any tags that are used in the test case should be added to the beginning of a class definition:</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cm">/* tags */</span>
+<span class="k">const</span> <span class="no">TEST_TYPE</span> <span class="o">=</span> <span class="s1">'3rd_party_test_deprecated'</span><span class="p">;</span>
+<span class="cm">/* end tags */</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>The tag in the rule:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testcase"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;deny&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"test_type"</span> <span class="na">value=</span><span class="s">"3rd_party_test_deprecated"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/deny&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<p>A test case can contain multiple tag groups, and a group can have multiple values. 例如:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cm">/* tags */</span>
+<span class="k">const</span> <span class="no">MVP</span> <span class="o">=</span> <span class="s1">'yes'</span><span class="p">;</span>
+<span class="k">const</span> <span class="no">DOMAIN</span> <span class="o">=</span> <span class="s1">'PS'</span><span class="p">;</span>
+<span class="k">const</span> <span class="no">TEST_TYPE</span> <span class="o">=</span> <span class="s1">'extended_acceptance_test, 3rd_party_test_deprecated'</span><span class="p">;</span>
+<span class="cm">/* end tags */</span>
+
+</code></pre></div></div>
+
+<h3 id="scope-variation"><code class="highlighter-rouge">scope = "variation"</code></h3>
+
+<p>You can use a variation <code class="highlighter-rouge">name</code> or assign a <code class="highlighter-rouge">tag</code> node to a <a href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">data set</a> variation. This enables you to use customized sets of variations during the test run. You can <strong>allow</strong> the variation to use in test run those variations which are specified with tag, or <strong>deny</strong> the variations to omit them.</p>
+
+<h4 id="variation-name-filter">Variation name filter</h4>
+
+<p>You can filter tests by variation name using the <code class="highlighter-rouge">&lt;name value="{name_of_variation}"&gt;</code> rule.</p>
+
+<p><strong>Example of a variation</strong></p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;variation</span> <span class="na">name=</span><span class="s">"ExampleTestCaseVariation1"</span><span class="err">...</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="err">...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/variation&gt;</span>
+<span class="nt">&lt;variation</span> <span class="na">name=</span><span class="s">"ExampleTestCaseVariation2"</span><span class="err">...</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="err">...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/variation&gt;</span>
+<span class="nt">&lt;variation</span> <span class="na">name=</span><span class="s">"ExampleTestCaseVariation3"</span><span class="err">...</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="err">...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/variation&gt;</span></code></pre></figure>
+
+<p><strong>Example of the <code class="highlighter-rouge">&lt;allow&gt;</code> rule</strong></p>
+
+<p>Allow a variation <code class="highlighter-rouge">ExampleTestCaseVariation1</code> only:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"variation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;allow&gt;</span>
+        <span class="nt">&lt;name</span> <span class="na">value=</span><span class="s">"ExampleTestCaseVariation1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/allow&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<p><strong>Example of the <code class="highlighter-rouge">&lt;deny&gt;</code> rule</strong></p>
+
+<p>Allow all variations except the <code class="highlighter-rouge">ExampleTestCaseVariation1</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"variation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;deny&gt;</span>
+        <span class="nt">&lt;name</span> <span class="na">value=</span><span class="s">"ExampleTestCaseVariation1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/deny&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<h4 id="variation-tag-filter">Variation tag filter</h4>
+
+<p>You can use <code class="highlighter-rouge">group</code> and <code class="highlighter-rouge">value</code> parameters in the variation scope.</p>
+
+<p>Example variation</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;variation</span> <span class="na">name=</span><span class="s">"ExampleTestCaseVariation1"</span><span class="err">...</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"tag"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>group_1:value, group_2:value<span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;data</span> <span class="err">...</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/variation&gt;</span></code></pre></figure>
+
+<p>For example, you have a data set with the following variation:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;variation</span> <span class="na">name=</span><span class="s">"CreateSimpleProductEntityTestVariation3"</span> <span class="na">summary=</span><span class="s">"Create product with special price and custom options(fixed price)"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"tag"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>test_type:extended_acceptance_test<span class="nt">&lt;/data&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"product/data/url_key"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>simple-product-%isolation%<span class="nt">&lt;/data&gt;</span>
+    ... ... ...
+    <span class="nt">&lt;constraint</span> <span class="na">name=</span><span class="s">"Magento\Catalog\Test\Constraint\AssertProductSaveMessage"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;constraint</span> <span class="na">name=</span><span class="s">"Magento\Catalog\Test\Constraint\AssertProductInGrid"</span> <span class="nt">/&gt;</span>
+    ... ... ...
+<span class="nt">&lt;/variation&gt;</span></code></pre></figure>
+
+<p>By using the <code class="highlighter-rouge">&lt;allow&gt;</code> element, you can create a rule to use only the <code class="highlighter-rouge">CreateSimpleProductEntityTestVariation3</code> variation:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"variation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;allow&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"test_type"</span> <span class="na">value=</span><span class="s">"extended_acceptance_test"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/allow&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<p>or use all variations except the <code class="highlighter-rouge">CreateSimpleProductEntityTestVariation3</code> variation:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"variation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;deny&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"test_type"</span> <span class="na">value=</span><span class="s">"extended_acceptance_test"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/deny&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<h3 id="scope-constraint"><code class="highlighter-rouge">scope = "constraint"</code></h3>
+
+<p>You can select constraints from the variation that will be run after a test flow using tags and rules with <code class="highlighter-rouge">scope="constraint"</code>.</p>
+
+<p>A tag has two parameters: <code class="highlighter-rouge">group</code> and <code class="highlighter-rouge">value</code>. In a constraint, they are provided as a constant name and its value respectively. See the following example:</p>
+
+<ul>
+  <li>Any tags that are used in the constraint should be added to the beginning of a class definition:</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">AssertProductView</span> <span class="k">extends</span> <span class="nx">AbstractConstraint</span>
+<span class="p">{</span>
+    <span class="cm">/* tags */</span>
+    <span class="k">const</span> <span class="no">SEVERITY</span> <span class="o">=</span> <span class="s1">'low'</span><span class="p">;</span>
+    <span class="cm">/* end tags */</span>
+
+    <span class="c1">// ...
+</span><span class="p">}</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>The rule that allows constraints with this tag only:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testcase"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;allow&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"severity"</span> <span class="na">value=</span><span class="s">"low"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/allow&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<ul>
+  <li>The rule that allows all constraints except those having this tag:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;rule</span> <span class="na">scope=</span><span class="s">"testcase"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;deny&gt;</span>
+        <span class="nt">&lt;tag</span> <span class="na">group=</span><span class="s">"severity"</span> <span class="na">value=</span><span class="s">"low"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/deny&gt;</span>
+<span class="nt">&lt;/rule&gt;</span></code></pre></figure>
+
+<!-- LINKS DEFINITION -->
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/mtf/features/test_suite.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/mtf/features/test_suite.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

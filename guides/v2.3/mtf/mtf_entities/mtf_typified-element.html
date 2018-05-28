@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>典型元素 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/mtf/mtf_entities/mtf_typified-element.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/mtf/mtf_entities/mtf_typified-element.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/mtf/mtf_entities/mtf_typified-element.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/mtf/mtf_entities/mtf_typified-element.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/mtf/mtf_entities/mtf_typified-element.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">功能测试框架手册</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_introduction.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="installation">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_installation.html">Installation</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="quick-start">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_quickstart.html">快速开始</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="adjust-configuration">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_config.html">Adjust configuration</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-magento-application">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_magento.html">Prepare Magento application</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="prepare-environment-for-test-run">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_environment.html">Prepare environment for test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-run">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_runtest.html">Test run</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="see-logs-for-failed-tests">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_quickstart/mtf_quickstart_logs.html">See logs for failed tests</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="create-a-test">
+    
+
+    
+    <a href="/guides/v2.3/mtf/create_test.html">创建一个测试</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="out-of-the-box-test">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/out-of-the-box.html">盒外测试模型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-theory">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/new_test.html">新功能测试.理论</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="new-functional-test.-practice">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/create_test/create_new_test.html">新功能测试.实践</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="features">
+    
+
+    
+    <a href="/guides/v2.3/mtf/features.html">Features</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="隔离管理">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/isolation.html">隔离管理</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="modularity">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/modularity.html">Modularity</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="parallel-execution-flow">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/parallel_execution.html">并行执行流程</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="reporting">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/reporting.html">Reporting</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-suite">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/test_suite.html">Test suite</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="web-driver-replacement">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/features/webdriver.html">更换Web driver</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="entities">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_entities.html">Entities</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="fixture">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture.html">Fixture</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="fixture-repository">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture-repo.html">固定数据仓库</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="handler">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_handler.html">Handler</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="block">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_block.html">Block</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="typified-element">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_typified-element.html">典型元素</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="page">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_page.html">Page</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="constraint">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_constraint.html">Constraint</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="data-set">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">Data set</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="test-case">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">测试用例</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="scenario-test">
+
+            
+
+            
+            <a href="/guides/v2.3/mtf/mtf_entities/mtf_scenariotest.html">场景测试</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <a href="/guides/v2.3/mtf/configuration.html">Configuration</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="update">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_update.html">Update</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <a href="/guides/v2.3/mtf/troubleshooting.html">故障排除</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="changelog">
+    
+
+    
+    <a href="/guides/v2.3/mtf/mtf_changelog.html">Changelog</a>
+    
+
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/mtf/mtf_introduction.html">
+            <span property="name">功能测试框架介绍</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">典型元素</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">典型元素</h1>
+
+  
+
+
+</section>
+
+			<p>A typified element is an element of the GUI (Select, Multiselect etc). Magento has custom typified elements with a special logic, for example: Customized Select, Suggest Dropdown, <span term-uuid="ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f" class="glossary-term" data-toggle="popover">Store View</span> Selector. 典型元素s are often used as elements of a form or a grid. Functional Testing Framework (<abbr title="Functional Testing Framework">FTF</abbr>) enables you to test any typified element.</p>
+
+<h2 id="example">Example</h2>
+
+<p><img src="/common/images/ftf/mtf_typ_element_brows.png" alt="A typified element example in the browser" /></p>
+
+<p>This example shows the <code class="highlighter-rouge">optgroup</code> typified element. You can use the <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/OptgroupselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\OptgroupselectElement</code></a> class to test it.</p>
+
+<h2 id="general">General</h2>
+
+<p>A testing typified element class in the <abbr title="Functional Testing Framework">FTF</abbr> contains methods to be used in the test to manipulate typified elements in the Magento application. You can extend a <a href="#basic_class">basic class</a> or a <a href="#magento_class">Magento class</a> to cover your typified element.</p>
+
+<div class="bs-callout bs-callout-tip">
+  <p>The most important methods are <code class="highlighter-rouge">setValue()</code> and <code class="highlighter-rouge">getValue()</code>. These methods are required when you work with a form.</p>
+</div>
+
+<p>There are two types of testing typified elements: default typified elements and Magento custom typified elements.</p>
+
+<ul>
+  <li>
+    <p>Default typified elements are the web elements that are typically used in a web application.</p>
+  </li>
+  <li>
+    <p>Magento custom typified elements are the web elements that are specific to the Magento application</p>
+  </li>
+</ul>
+
+<h2 id="basic_class">Default testing typified elements</h2>
+
+<p>Default testing typified elements are stored in the <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/vendor/magento/mtf/Magento/Mtf/Client/Element</code> directory.</p>
+
+<p>A root class for a typified element is the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\SimpleElement</code></a> class. This class implements <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/ElementInterface.php"><code class="highlighter-rouge">ElementInterface</code></a> which contains methods such as <code class="highlighter-rouge">click()</code>, <code class="highlighter-rouge">doubleClick()</code>, <code class="highlighter-rouge">isVisible()</code>, <code class="highlighter-rouge">setValue()</code>, <code class="highlighter-rouge">getValue()</code>, <code class="highlighter-rouge">getText()</code>, <code class="highlighter-rouge">find()</code>, <code class="highlighter-rouge">dragAndDrop()</code>, <code class="highlighter-rouge">getElements()</code> etc.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Magento UI element</th>
+      <th><abbr title="Functional Testing Framework">FTF</abbr> class</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;input type="checkbox" /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/CheckboxElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\CheckboxElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select multiple /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\MultiselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;input type="radio" /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/RadiobuttonElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\RadiobuttonElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\SelectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select multiple /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/StrictmultiselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\StrictmultiselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php">MultiselectElement</a>. <code class="highlighter-rouge">setValue()</code> sets the exact value, as opposed to <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php">MultiselectElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/StrictselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\StrictselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>. <code class="highlighter-rouge">setValue()</code> sets the exact value, as opposed to <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;input type="file" /&gt;</code></td>
+      <td><a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/UploadElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\UploadElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="magento_class">Custom testing typified elements</h2>
+
+<p>Testing typified elements for Magento custom elements are stored in the <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/lib/Magento/Mtf/Client/Element</code> directory.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Magento UI element</th>
+      <th><abbr title="Functional Testing Framework">FTF</abbr> class</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="rule-tree" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/ConditionsElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\ConditionsElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div id="ui-datepicker-div" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/DatepickerElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\DatepickerElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="action-select admin__action-multiselect" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/DropdownmultiselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\DropdownmultiselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php">MultiselectElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="search-global" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/GlobalsearchElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\GlobalsearchElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="tree x-tree jstree" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/JquerytreeElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\JquerytreeElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/Tree.php">Tree</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="store-switcher /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/LiselectstoreElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\LiselectstoreElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select class="admin__control-multiselect"&gt;</code>     <code class="highlighter-rouge">&lt;option /&gt;</code> <br />     <code class="highlighter-rouge">&lt;optgroup /&gt;</code> <br />  <code class="highlighter-rouge">&lt;/select&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/MultiselectgrouplistElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\MultiselectgrouplistElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php">MultiselectElement</a>. Contains <code class="highlighter-rouge">option</code> and <code class="highlighter-rouge">optgroup</code> elements.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;section class="block mselect-list" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/MultiselectlistElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\MultiselectlistElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/MultiselectElement.php">MultiselectElement</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="mage-suggest" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/MultisuggestElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\MultisuggestElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/SuggestElement.php">SuggestElement</a>. Allows multiple selection.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select&gt;</code>   <br />      <code class="highlighter-rouge">&lt;optgroup /&gt;</code> <br />     <code class="highlighter-rouge">&lt;optgroup /&gt;</code> <br />  <code class="highlighter-rouge">&lt;/select&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/OptgroupselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\OptgroupselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>. Contains <code class="highlighter-rouge">optgroup</code> elements.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select&gt;</code> <br />      <code class="highlighter-rouge">&lt;option /&gt;</code> <br />     <code class="highlighter-rouge">&lt;optgroup /&gt;</code> <br />  <code class="highlighter-rouge">&lt;/select&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/SelectstoreElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\SelectstoreElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>. Contains <code class="highlighter-rouge">option</code> and <code class="highlighter-rouge">optgroup</code> elements.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;select class="admin__control-select"&gt;</code>  <br />     <code class="highlighter-rouge">&lt;optgroup&gt;</code> <br />         <code class="highlighter-rouge">&lt;option data-title/&gt;</code> <br />     <code class="highlighter-rouge">&lt;/optgroup&gt;</code> <br /> <code class="highlighter-rouge">&lt;/select&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/SimplifiedselectElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\SimplifiedselectElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SelectElement.php">SelectElement</a>. Contains <code class="highlighter-rouge">option</code> and <code class="highlighter-rouge">optgroup</code> elements. <code class="highlighter-rouge">option</code> has a <code class="highlighter-rouge">data-title</code> attribute.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="mage-suggest" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/SuggestElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\SuggestElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a>.</td>
+    </tr>
+    <tr>
+      <td>Not available</td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/Tree.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\Tree</code></a></td>
+      <td>Abstract class</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;div class="tree x-tree" /&gt;</code></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/TreeElement.php"><code class="highlighter-rouge">\Magento\Mtf\Client\Element\TreeElement</code></a></td>
+      <td>Extends <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/lib/Magento/Mtf/Client/Element/Tree.php">Tree</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="howtos">HowTos</h2>
+
+<h3 id="create">Create</h3>
+
+<p><strong>步骤1.</strong> Create a <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> class in the <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/lib/Magento/Mtf/Client/Element</code> directory</p>
+
+<p>It must be named according to the following naming convention. Two capital letters in the name: the first letter and a capital <code class="highlighter-rouge">E</code> in the <code class="highlighter-rouge">Element.php</code>. 例如: <code class="highlighter-rouge">OptgroupselectElement.php</code>.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"> 
+ <span class="cp">&lt;?php</span>
+
+ <span class="k">namespace</span> <span class="nx">Magento\Mtf\Client\Element</span><span class="p">;</span>
+ <span class="sd">/**
+  * 典型元素 class for option group selectors.
+  */</span>
+ <span class="k">class</span> <span class="nc">OptgroupselectElement</span>
+ <span class="p">{</span>
+    <span class="c1">//
+</span> <span class="p">}</span>
+  </code></pre></figure>
+
+<p><strong>步骤2.</strong> Extend your class from the <a href="#basic_class">default element</a> or the <a href="#magento_class">Magento custom element</a> class</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">OptgroupselectElement</span> <span class="k">extends</span> <span class="nx">SelectElement</span>
+</code></pre></div></div>
+
+<p><strong>步骤3.</strong> Redefine methods of the extended class according to your goals</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+ * Option group locator
+ *
+ * @var string
+ */</span>
+<span class="k">protected</span> <span class="nv">$optionGroupValue</span> <span class="o">=</span> <span class="s2">".//optgroup[@label = '%s']/option[text() = '%s']"</span><span class="p">;</span>
+
+<span class="sd">/**
+ * Select value in dropdown that has option groups
+ *
+ * @param string $value
+ * @return void
+ */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">setValue</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eventManager</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">([</span><span class="s1">'set_value'</span><span class="p">],</span> <span class="p">[</span><span class="nx">__METHOD__</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getAbsoluteSelector</span><span class="p">()]);</span>
+    <span class="k">list</span><span class="p">(</span><span class="nv">$group</span><span class="p">,</span> <span class="nv">$option</span><span class="p">)</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="nv">$value</span><span class="p">);</span>
+    <span class="nv">$xpath</span> <span class="o">=</span> <span class="nb">sprintf</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">optionGroupValue</span><span class="p">,</span> <span class="nv">$group</span><span class="p">,</span> <span class="nv">$option</span><span class="p">);</span>
+    <span class="nv">$option</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$xpath</span><span class="p">,</span> <span class="nx">Locator</span><span class="o">::</span><span class="na">SELECTOR_XPATH</span><span class="p">);</span>
+    <span class="nv">$option</span><span class="o">-&gt;</span><span class="na">click</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="use">Use</h3>
+
+<p>典型元素s are used in the <a href="/guides/v2.3/mtf/mtf_entities/mtf_block.html"><abbr title="Functional Testing Framework">FTF</abbr> blocks</a>.
+Use a <code class="highlighter-rouge">find()</code> method to find an element. This method is declared in the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Client/Element/SimpleElement.php">SimpleElement</a> class:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+ * Find element using locator in context of current element
+ *
+ * @param string $selector
+ * @param string $strategy [optional]
+ * @param null|string $type [optional]
+ * @return ElementInterface
+ */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">find</span><span class="p">(</span><span class="nv">$selector</span><span class="p">,</span> <span class="nv">$strategy</span> <span class="o">=</span> <span class="nx">Locator</span><span class="o">::</span><span class="na">SELECTOR_CSS</span><span class="p">,</span> <span class="nv">$type</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">driver</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$selector</span><span class="p">,</span> <span class="nv">$strategy</span><span class="p">,</span> <span class="nv">$type</span><span class="p">,</span> <span class="nv">$this</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The following code is an example of the <code class="highlighter-rouge">find()</code> method usage from the <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Catalog/Test/Block/Adminhtml/Category/Tree.php">\Magento\Catalog\Test\Block\Adminhtml\Category\Tree</a> block:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
+ * Check category in category tree
+ *
+ * @param Category $category
+ * @return bool
+ */</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">isCategoryVisible</span><span class="p">(</span><span class="nx">Category</span> <span class="nv">$category</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$categoryPath</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">prepareFullCategoryPath</span><span class="p">(</span><span class="nv">$category</span><span class="p">);</span>
+    <span class="nv">$categoryPath</span> <span class="o">=</span> <span class="nb">implode</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="nv">$categoryPath</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_rootElement</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">treeElement</span><span class="p">,</span> <span class="nx">Locator</span><span class="o">::</span><span class="na">SELECTOR_CSS</span><span class="p">,</span> <span class="s1">'tree'</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="na">isElementVisible</span><span class="p">(</span><span class="nv">$categoryPath</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="mapping">Map</h3>
+
+<p>典型元素s can be used in the <a href="/guides/v2.3/mtf/mtf_entities/mtf_block.html#mtf_block_mapping">form mapping</a>.</p>
+
+<p><img src="/common/images/ftf/mtf_typ_element_map_gui.png" alt="A typified element mapping example in GUI" /></p>
+
+<p>The following code is a corresponding mapping with the typified element <code class="highlighter-rouge">optgroupselect</code> from the previous image:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;mapping</span> <span class="na">strict=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;wrapper&gt;</span>store<span class="nt">&lt;/wrapper&gt;</span>
+    <span class="nt">&lt;fields&gt;</span>
+        <span class="nt">&lt;group_id&gt;</span>
+            <span class="nt">&lt;input&gt;</span>optgroupselect<span class="nt">&lt;/input&gt;</span>
+        <span class="nt">&lt;/group_id&gt;</span>
+        <span class="nt">&lt;name</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;code</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;is_active&gt;</span>
+            <span class="nt">&lt;input&gt;</span>select<span class="nt">&lt;/input&gt;</span>
+        <span class="nt">&lt;/is_active&gt;</span>
+    <span class="nt">&lt;/fields&gt;</span>
+<span class="nt">&lt;/mapping&gt;</span></code></pre></figure>
+
+<!-- PICTURE DEFINITIONS -->
+
+<!-- LINK DEFINITIONS -->
+
+<!-- General -->
+
+<!-- Basic classes -->
+
+<!-- Magento classes -->
+
+<!-- ABBREVIATIONS -->
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/mtf/mtf_entities/mtf_typified-element.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/mtf/mtf_entities/mtf_typified-element.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

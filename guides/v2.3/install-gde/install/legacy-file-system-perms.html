@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>附录&mdash;Magento文件系统所有者及其附录(遗留) | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/install-gde/install/legacy-file-system-perms.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/install-gde/install/legacy-file-system-perms.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/install-gde/install/legacy-file-system-perms.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/install-gde/install/legacy-file-system-perms.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/install-gde/install/legacy-file-system-perms.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">安装向导</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="如何获取magento">
+    
+
+    
+    <a href="/guides/v2.3/install-gde/bk-install-guide.html">如何获取Magento</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装流程图">
+    
+
+    
+    <a href="/guides/v2.3/install-gde/install-flow-diagram.html">安装流程图</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="基础">
+    
+
+    
+    <span>基础</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="你的magento安装好了吗?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_magento-installed.html">你的Magento安装好了吗?</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="我的服务器运行的是什么系统?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_os-version.html">我的服务器运行的是什么系统?</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="我该如何登录到我的magento服务器，使用终端、命令提示符还是ssh?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_login.html">我该如何登录到我的Magento服务器，使用终端、命令提示符还是SSH?</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块和组件有什么不同?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_module.html">模块和组件有什么不同?</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento服务器需要运行哪些软件?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_software.html">Magento服务器需要运行哪些软件?</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="什么docroot?">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/basics/basics_docroot.html">什么docroot?</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="起步">
+    
+
+    
+    <span>起步</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="相关帮助">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install-resources-parent.html">相关帮助</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="安装快速指引(教程)">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install-quick-ref.html">安装快速指引(教程)</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装流程图">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install-resource-diagram.html">安装流程图</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="一步步安装(参考)">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install-roadmap_part1.html">一步步安装(参考)</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento系统要求">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/system-requirements2.html">Magento系统要求</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="magento技术栈要求">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/system-requirements-tech.html">Magento技术栈要求</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="支持的浏览器">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/system-requirements_browsers.html">支持的浏览器</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="传输层安全(tls)要求">
+                    
+
+                    
+                    <span>传输层安全(TLS)要求</span>
+                    
+
+                    
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-level4  " id="paypal-tls1.2要求">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/system-requirements_tls1-2.html">PayPal TLS1.2要求</a>
+                        
+
+                        </li>
+                        
+                        
+                        
+                        
+                        <li class="nav-level4  " id="repo.magento.com的tls要求">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/system-requirements_repo-tls1-2.html">repo.magento.com的TLS要求</a>
+                        
+
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="先决条件">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/prereq/prereq-overview.html">先决条件</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="apache">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/apache.html">Apache</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="nginx">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/nginx.html">nginx</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="php">
+                    
+
+                    
+                    <span>PHP</span>
+                    
+
+                    
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-level4  " id="php-5.6-or-7.0—centos">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/prereq/php-centos.html">PHP 5.6 or 7.0—CentOS</a>
+                        
+
+                        </li>
+                        
+                        
+                        
+                        
+                        <li class="nav-level4  " id="php-5.6-or-7.0—ubuntu">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/prereq/php-ubuntu.html">PHP 5.6 or 7.0—Ubuntu</a>
+                        
+
+                        </li>
+                        
+                        
+                        
+                        
+                        <li class="nav-level4  " id="php配置要求">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/prereq/php-settings.html">PHP配置要求</a>
+                        
+
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="mysql">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/mysql.html">MySQL</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="获取你的认证密钥">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/connect-auth.html">获取你的认证密钥</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento文件系统所有者和权限">
+                    
+
+                    
+                    <span>Magento文件系统所有者和权限</span>
+                    
+
+                    
+                    <ul>
+                        
+                        
+                        
+                        <li class="nav-level4  " id="所有者和权限概述">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">所有者和权限概述</a>
+                        
+
+                        </li>
+                        
+                        
+                        
+                        
+                        <li class="nav-level4  " id="安装前设置所有者和权限">
+
+                        
+                        <a  href="/guides/v2.3/install-gde/prereq/file-system-perms.html">安装前设置所有者和权限</a>
+                        
+
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="rabbitmq-(magento-commerce-only)">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/install-rabbitmq.html">RabbitMQ (仅企业版适用)</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置远程mysql数据库连接">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/mysql_remote.html">设置远程Mysql数据库连接</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="selinux和iptables">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/security.html">SELinux和iptables</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="可选软件">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/optional.html">可选软件</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="设置更新器(已过时)">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/prereq_updater.html">设置更新器(已过时)</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="获取magento">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/get-software.html">获取Magento</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="(简单)使用magento压缩包在服务器上安装">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/prereq/zip_install.html">(简单)使用Magento压缩包在服务器上安装</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="(集成工程师)集成安装">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/prereq/integrator_install.html">(集成工程师)集成安装</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="安装composer">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/integrator_install_composer.html">安装Composer</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="获取magento开源的工程包">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/integrator_install_ce.html">获取Magento开源的工程包</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="获取magento-ee工程包">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/prereq/integrator_install_ee.html">获取Magento EE工程包</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="(贡献者)克隆magento仓库">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/prereq/dev_install.html">(贡献者)克隆Magento仓库</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="更新安装依赖">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/prepare-install.html">更新安装依赖</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="获取更多安装帮助">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/get-help.html">获取更多安装帮助</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装选项">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/continue-to-install.html">安装选项</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="网页向导安装">
+    
+
+    
+    <span>网页向导安装</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="一步步安装(参考)">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install-roadmap_web.html">一步步安装(参考)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选安装样本数据模块">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/web/install-web-sample-data.html">可选安装样本数据模块</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="使用composer安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web-sample-data-composer.html">使用Composer安装</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="克隆仓库的方式安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web-sample-data-clone.html">克隆仓库的方式安装</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网页向导安装">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/web/install-web.html">网页向导安装</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤1.准备就绪检查">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_1-readiness.html">步骤1.准备就绪检查</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤2.添加数据库">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_2-db.html">步骤2.添加数据库</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤3.-web服务器配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_3-web-conf.html">步骤3. Web服务器配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤4.-定制你的网店">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_4-customize-store.html">步骤4. 定制你的网店</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤-5.创建管理员帐户">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员帐户</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="步骤-6.-安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/web/install-web_6-install.html">步骤 6. 安装</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装完成之后">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/continue-to-verify.html">安装完成之后</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="命令行安装">
+    
+
+    
+    <span>命令行安装</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="一步步安装(参考)">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install-roadmap_cli.html">一步步安装(参考)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="可选安装样本数据模块">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/cli/install-cli-sample-data.html">可选安装样本数据模块</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="使用composer安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-sample-data-composer.html">使用Composer安装</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="克隆仓库的方式安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-sample-data-clone.html">克隆仓库的方式安装</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="使用命令行安装magento">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/cli/install-cli.html">使用命令行安装Magento</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="命令行安装起步">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands.html">命令行安装起步</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装magento">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-install.html">安装Magento</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="卸载和重装magento">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-uninstall.html">卸载和重装Magento</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="display-or-change-the-admin-uri">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="移除样本数据模块或更新样本数据">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-sample-data-other.html">移除样本数据模块或更新样本数据</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="启用或禁用模块">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html">启用或禁用模块</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="卸载模块">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-uninstall-mods.html">卸载模块</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="建立或更新部署配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-deployment.html">建立或更新部署配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="开启或关闭维护模式">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-maint.html">开启或关闭维护模式</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="create-the-magento-database-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db.html">Create the Magento database schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="更新magento表结构及数据">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-db-upgr.html">更新Magento表结构及数据</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="配置网店">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-store.html">配置网店</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="创建、编辑或解锁-magento管理员帐号">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-subcommands-admin.html">创建、编辑或解锁 Magento管理员帐号</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="备份和还原文件系统，媒体文件和数据库">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-backup.html">备份和还原文件系统，媒体文件和数据库</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="卸载composer主题包">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-theme-uninstall.html">卸载composer主题包</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="卸载语言包">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/install-cli-uninstall-langpk.html">卸载语言包</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="贡献开发者--更新和重装magento">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/cli/dev_options.html">贡献开发者--更新和重装Magento</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="更新magento">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/dev_update-magento.html">更新Magento</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="添加或更新组件">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/dev_add-update.html">添加或更新组件</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="切换到发布版本">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/dev_downgrade.html">切换到发布版本</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="重装magento">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/cli/dev_reinstall.html">重装Magento</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装完成之后">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/continue-to-verify_cli.html">安装完成之后</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="安装之后">
+    
+
+    
+    <span>安装之后</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="验证你的安装">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/verify.html">验证你的安装</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="配置magento应用">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/post-install-config.html">配置Magento应用</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="选择性设置umask">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/post-install-umask.html">选择性设置umask</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="附录—magento文件系统所有者及其附录(遗留)">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/legacy-file-system-perms.html">附录—Magento文件系统所有者及其附录(遗留)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装magento后安装样本数据">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/install/sample-data-after-magento.html">安装Magento后安装样本数据</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="使用composer安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/sample-data-after-composer.html">使用Composer安装</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="克隆仓库的方式安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/install/sample-data-after-clone.html">克隆仓库的方式安装</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="故障排除">
+    
+
+    
+    <span>故障排除</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="访问问题">
+
+            
+
+            
+            <span>访问问题</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="使用浏览器无法访问magento">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_access-browser.html">使用浏览器无法访问Magento</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用浏览器访问时出现503-(service-unavailable)错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_mod_access_compat.html">使用浏览器访问时出现503 (Service Unavailable)错误</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装后图片和样式缺失，显示错乱">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_no-styles.html">安装后图片和样式缺失，显示错乱</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装过程中出异常">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_exceptions.html">安装过程中出异常</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="cannot-write-to-the-var/generation-directory">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_var-gen-perms.html">Cannot write to the var/generation directory</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装依赖缺失">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_install_depend.html">安装依赖缺失</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="登录到magento管理面板时出错">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_admin.html">登录到Magento管理面板时出错</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="安装过程中出错">
+
+            
+
+            
+            <span>安装过程中出错</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="安装在70%左右卡住">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_70pct.html">安装在70%左右卡住</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="使用nginx不能正常安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_nginx-port.html">使用nginx不能正常安装</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装期间出现pdo致命错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_pdo.html">安装期间出现PDO致命错误</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装期间出现反射(reflection)异常">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_wrong-mysql.html">安装期间出现反射(Reflection)异常</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装期间sessionhandler::read()出现异常">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_session.html">安装期间SessionHandler::read()出现异常</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="composer的修改导致下载失败">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_composer-fail.html">Composer的修改导致下载失败</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="未知模块magento_bundlesampledata">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_bundlesampledata.html">未知模块Magento_BundleSampleData</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装失败，无法创建install.log">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_install-log.html">安装失败，无法创建install.log</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装可选的样本数据发生错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_sample-data.html">安装可选的样本数据发生错误</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装过程中xdebug出现嵌方法套层数过多的错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_xdebug.html">安装过程中xdebug出现嵌方法套层数过多的错误</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="就绪检查的问题">
+
+            
+
+            
+            <span>就绪检查的问题</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="component-dependency-readiness-issues">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/readiness/tshoot_rc_depend.html">Component dependency readiness issues</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="定时任务(cron)就绪检查的问题">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/readiness/tshoot_rc_cron.html">定时任务(cron)就绪检查的问题</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="文件权限就绪检查的问题">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/readiness/tshoot_rc_perms.html">文件权限就绪检查的问题</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="php版本就绪检查的问题">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/readiness/tshoot_rc_php.html">PHP版本就绪检查的问题</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="git-报错">
+
+            
+
+            
+            <span>git 报错</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="magento仓库克隆不下来">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/git/tshoot_clone.html">Magento仓库克隆不下来</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="更新了magento之后git-pull-origin-develop失败">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/git/tshoot_git-pull-origin.html">更新了Magento之后git pull origin develop失败</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php错误">
+
+            
+
+            
+            <span>PHP错误</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="解决非法偏移的问题">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_opcache.html">解决非法偏移的问题</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="php配置错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_php-set.html">PHP配置错误</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="php-mcrypt扩展可能没有正确安装">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_mcrypt.html">PHP mcrypt扩展可能没有正确安装</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装期间出现date警告">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_php-date.html">安装期间出现date警告</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="其它问题">
+
+            
+
+            
+            <span>其它问题</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="已知的影响安装的问题">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_install-issues.html">已知的影响安装的问题</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="安装期间出现'mysql-server-has-gone-away'">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_mysql_table-open-cache.html">安装期间出现'MySQL server has gone away'</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="回退过程中出现段错误">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_segfault.html">回退过程中出现段错误</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="sqlstate[hy000]-[2002]-no-such-file-or-directory">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/php/tshoot_phpini.html">SQLSTATE[HY000] [2002] No such file or directory</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="无法执行'composer-install'">
+                    
+
+                    
+                    <a  href="/guides/v2.3/install-gde/trouble/tshoot_composer-install.html">无法执行'composer install'</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="如何">
+    
+
+    
+    <span>如何</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="修改docroot提高安全性">
+
+            
+
+            
+            <a href="/guides/v2.3/install-gde/tutorials/change-docroot-to-pub.html">修改docroot提高安全性</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">附录&mdash;Magento文件系统所有者及其附录(遗留)</span>
+
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">附录&mdash;Magento文件系统所有者及其附录(遗留)</h1>
+
+  
+
+
+</section>
+
+			<h2 id="appendix-over">Overview: Magento文件系统所有者ship and appendix (legacy)</h2>
+<p>This topic is provided for convenience for anyone using Magento Open Source or Magento Commerce versions 2.0.0–2.0.5.</p>
+
+<p>In versions <em>before</em> 2.0.6, Magento explicitly set file system permissions when we created files, such as <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> and static view files. Starting with 2.0.6, we do not set permissions explicitly. For more detail about file system ownership and permissions for version 2.0.6 and later, see <a href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">所有者和权限概述</a>.</p>
+
+<h2 id="appendix-summary">Summary of file system permissions</h2>
+<p>This section summarizes the permissions Magento uses when creating files in the file system.</p>
+
+<h3 id="developer-mode-permissions">Developer mode permissions</h3>
+<p>In developer mode, Magento sets permissions as follows:</p>
+
+<ul>
+  <li>
+    <p>Directories: 770</p>
+
+    <p>770 permissions give full control to the owner and to the group, and no permissions to anyone else.</p>
+  </li>
+  <li>
+    <p>Files: 660</p>
+
+    <p>660 permissions give read-write permissions to the owner and to the group, and no permissions to anyone else.</p>
+  </li>
+</ul>
+
+<h3 id="production-mode-permissions">Production mode permissions</h3>
+<p>Changing modes affects permissions and ownership the following subdirectories in your Magento installation:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var/view_preprocessed
+var/generation
+var/di
+</code></pre></div></div>
+
+<p>When you change to production mode, we set the following permissions on these directories and subdirectories:</p>
+
+<ul>
+  <li>
+    <p>Directories: 750</p>
+
+    <p>750 permissions give full control to the owner, read and execute permissions to the group, and no permissions to anyone else.</p>
+  </li>
+  <li>
+    <p>Files: 640</p>
+
+    <p>640 permissions give read-write permissions to the owner, read-only permissions to the group, and no permissions to anyone else.</p>
+  </li>
+</ul>
+
+<h2 id="appendix-install">Set permissions before installing the Magento software</h2>
+<p>Use the following steps:</p>
+
+<ol>
+  <li>If you haven’t already done so, log in to your Magento server as, or switch to, the <a href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.</li>
+  <li>
+    <p>Change to the Magento installation directory:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;web server docroot&gt;/&lt;magento2 base dir&gt;
+</code></pre></div>    </div>
+
+    <p>The base directory is typically a subdirectory named <code class="highlighter-rouge">magento2</code> under your web server’s docroot. Need help locating the docroot? Click <a href="/guides/v2.3/install-gde/basics/basics_docroot.html">here</a>.<br /></p>
+
+    <p>Examples:</p>
+
+    <ul>
+      <li>Ubuntu: <code class="highlighter-rouge">/var/www/magento2</code></li>
+      <li>CentOS: <code class="highlighter-rouge">/var/www/html/magento2</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Set ownership:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chown -R :&lt;your web server group name&gt; .
+</code></pre></div>    </div>
+
+    <p>Typical examples:</p>
+
+    <ul>
+      <li>CentOS: <code class="highlighter-rouge">chown -R :apache .</code></li>
+      <li>Ubuntu: <code class="highlighter-rouge">chown -R :www-data .</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Set permissions:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type d -exec chmod 770 {} \; &amp;&amp; find . -type f -exec chmod 660 {} \; &amp;&amp; chmod u+x bin/magento
+</code></pre></div>    </div>
+
+    <p>If you must enter the commands as <code class="highlighter-rouge">sudo</code>, use:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo find . -type d -exec chmod 770 {} \; &amp;&amp; sudo find . -type f -exec chmod 660 {} \; &amp;&amp; sudo chmod u+x bin/magento
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/install-gde/install/legacy-file-system-perms.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/install-gde/install/legacy-file-system-perms.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

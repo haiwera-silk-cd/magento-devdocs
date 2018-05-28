@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Products endpoint | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/graphql/reference/products.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/graphql/reference/products.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/graphql/reference/products.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/graphql/reference/products.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/graphql/reference/products.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">GraphQL Developer Guide</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="overview">
+    
+
+    
+    <a href="/guides/v2.3/graphql/index.html">Overview</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="implementation">
+    
+
+    
+    <span>Implementation</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="graphql-request-headers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/send-request.html">GraphQL request headers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searches-and-pagination">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="development">
+    
+
+    
+    <span>Development</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="define-the-graphql-schema-for-a-module">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-graphqls-file.html">Define the GraphQL schema for a module</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="resolvers">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/resolvers.html">Resolvers</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="create-a-custom-urlresolver-service">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/create-custom-url-resolver.html">Create a custom urlResolver service</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="exception-handling">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/develop/exceptions.html">Exception handling</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="functional-testing">
+    
+
+    
+    <a href="/guides/v2.3/graphql/functional-testing.html">Functional testing</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="reference">
+    
+
+    
+    <span>Reference</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2 active " id="products-endpoint">
+
+            
+
+            
+            <a href="/guides/v2.3/graphql/reference/products.html">Products endpoint</a>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="product-interface-implementations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/product-interface-implementations.html">Product interface implementations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customizableoptioninterface">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customizable-option-interface.html">CustomizableOptionInterface</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bundleproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/bundle-product.html">BundleProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="categories-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/categories.html">Categories endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configurableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/configurable-product.html">ConfigurableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="downloadableproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/downloadable-product.html">DownloadableProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="giftcardproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/gift-card-product.html">GiftCardProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="groupedproduct-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/grouped-product.html">GroupedProduct endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="other-objects">
+
+            
+
+            
+            <span>Other objects</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="customattributemetadata-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/custom-attribute-metadata.html">CustomAttributeMetadata endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="customer-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/customer.html">Customer endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="urlresolver-endpoint">
+                    
+
+                    
+                    <a  href="/guides/v2.3/graphql/reference/url-resolver.html">urlResolver endpoint</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/graphql/index.html">
+            <span property="name">Overview</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Products endpoint</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Products endpoint</h1>
+
+  
+
+
+</section>
+
+			<p>The <code class="highlighter-rouge">products</code> endpoint allows you to search for catalog items.</p>
+
+<h2 id="query-structure">Query structure</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">products(</span><span class="w">
+</span><span class="err">search</span><span class="p">:</span><span class="w"> </span><span class="err">String</span><span class="w">
+</span><span class="err">filter</span><span class="p">:</span><span class="w"> </span><span class="err">ProductFilterInput</span><span class="w">
+</span><span class="err">pageSize</span><span class="p">:</span><span class="w"> </span><span class="err">Int</span><span class="w">
+</span><span class="err">currentPage</span><span class="p">:</span><span class="w"> </span><span class="err">Int</span><span class="w">
+</span><span class="err">sort</span><span class="p">:</span><span class="w"> </span><span class="err">ProductSortInput</span><span class="w">
+</span><span class="err">)</span><span class="p">:</span><span class="w"> </span><span class="err">Products</span><span class="w">
+</span></code></pre></div></div>
+<p>Each query attribute is defined below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">search</code></td>
+      <td>Performs a full-text search using the specified key words. This attribute is optional. See <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">filter</code></td>
+      <td>Identifies which attributes to search for and return. This attribute is required. See <a href="#ProductFilterInput">ProductFilterInput</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">pageSize</code></td>
+      <td>Specifies the maximum number of results to return at once. The default value is 20. See <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">currentPage</code></td>
+      <td>Specifies which page of results to return. The default value is 1. See <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sort</code></td>
+      <td>Specifies which attribute to sort on, and whether to return the results in ascending or descending order. See <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Products</code></td>
+      <td>An output object that contains the results of the query. See <a href="#Response">Response</a> for details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ProductFilterInput">ProductFilterInput object</h2>
+
+<p>The <code class="highlighter-rouge">ProductFilterInput</code> object defines the filters to be used in the search. A filter contains at least one attribute, a comparison operator, and the value that is being searched for. The following example filter searches for products that has a <code class="highlighter-rouge">sku</code> that contains the string <code class="highlighter-rouge">24-MB</code> with a <code class="highlighter-rouge">price</code> that’s less than <code class="highlighter-rouge">50</code>.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">filter</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="err">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">like</span><span class="p">:</span><span class="w"> </span><span class="s2">"24-MB%"</span><span class="p">}</span><span class="w">
+       </span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">lt</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">}</span><span class="w">
+       </span><span class="p">}</span></code></pre></figure>
+
+<p>See <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a> for more information about the operators.</p>
+
+<p>Magento processes the attribute values specified in  a <code class="highlighter-rouge">ProductFilterInput</code> as  simple data types (strings, integers, booleans). However, returned attributes can be a different, complex, data type. For example, in a response, <code class="highlighter-rouge">price</code> is an object that contains a monetary value and a currency code.</p>
+
+<p>The following attributes can be used to create filters. See the <a href="#Response">Response</a> section for information about each attribute.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>category_ids
+country_of_manufacture
+created_at
+custom_design
+custom_design_from
+custom_design_to
+custom_layout
+custom_layout_update
+description
+gift_message_available
+has_options
+image
+image_label
+manufacturer
+max_price
+meta_description
+meta_keyword
+meta_title
+min_price
+name
+news_from_date
+news_to_date
+options_container
+or
+page_layout
+price
+required_options
+short_description
+sku
+small_image
+small_image_label
+special_from_date
+special_price
+special_to_date
+thumbnail
+thumbnail_label
+tier_price
+updated_at
+weight
+</code></pre></div></div>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>The following attributes are not used in responses:</p>
+  <ul>
+    <li><code class="highlighter-rouge">or</code> - The keyword required to perform a logical OR comparison.</li>
+    <li><code class="highlighter-rouge">news_from_date</code> - This attribute is transformed to <code class="highlighter-rouge">news_from_date</code> in a response.</li>
+    <li><code class="highlighter-rouge">news_to_date</code> - This attribute is transformed to <code class="highlighter-rouge">news_to_date</code> in a response.
+*</li>
+  </ul>
+</div>
+
+<h2 id="Response">Response</h2>
+
+<p>The system returns a <code class="highlighter-rouge">Products</code> object containing the following information:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">items</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">ProductInterface</span><span class="p">]</span><span class="w">
+</span><span class="err">page_info</span><span class="p">:</span><span class="w"> </span><span class="err">SearchResultPageInfo</span><span class="w">
+</span><span class="err">total_count</span><span class="p">:</span><span class="w"> </span><span class="err">Int</span><span class="w">
+</span><span class="err">filters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">LayerFilter</span><span class="p">]</span></code></pre></figure>
+
+<p>Each attribute is described below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">items</code></td>
+      <td>An array of products that match the specified search criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">page_info</code></td>
+      <td>An object that includes the <code class="highlighter-rouge">page_info</code> and <code class="highlighter-rouge">currentPage</code> values specified in the query</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">total_count</code></td>
+      <td>The number of products returned</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">filters</code></td>
+      <td>An array of layered navigation filters. These filters can be used to implement layered navigation on your app.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When a product requires a filter attribute that is not a field on its output schema, inject the attribute name into the class in a module’s <code class="highlighter-rouge">di.xml</code> file.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;type</span> <span class="na">name=</span><span class="s">"Magento\CatalogGraphQl\Model\Resolver\Products\FilterArgument\ProductEntityAttributesForAst"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;arguments&gt;</span>
+    <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"additionalAttributes"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"field_to_sort"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>field<span class="nt">&lt;/item&gt;</span>
+      <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"other_field_to_sort"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>other_field<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/argument&gt;</span>
+  <span class="nt">&lt;/arguments&gt;</span>
+<span class="nt">&lt;/type&gt;</span>
+</code></pre></div></div>
+<p>This example adds <code class="highlighter-rouge">field_to_sort</code> and <code class="highlighter-rouge">other_field_to_sort</code> attributes to the <code class="highlighter-rouge">additionalAttributes</code> array, which is defined in the <code class="highlighter-rouge">ProductEntityAttributesForAst</code> class. The array automatically contains the <code class="highlighter-rouge">min_price</code>, <code class="highlighter-rouge">max_price</code>, and <code class="highlighter-rouge">category_ids</code>attributes.</p>
+
+<h2 id="ProductInterface">ProductInterface</h2>
+
+<p>Any type that implements <code class="highlighter-rouge">ProductInterface</code> contains all the base attributes necessary for the frontend of the product model.
+The <code class="highlighter-rouge">items</code> that are returned in a <code class="highlighter-rouge">ProductInterface</code> array can also contain attributes from resources external to the CatalogGraphQl module:</p>
+
+<ul>
+  <li>Custom and extension attributes defined in any attribute set</li>
+  <li>The attribute is defined in the <a href="#PhysicalProductInterface">PhysicalProductInterface</a> or <a href="/guides/v2.3/graphql/reference/customizable-option-interface.html">CustomizableOptionInterface</a></li>
+  <li>Product types that define their own implementation of <code class="highlighter-rouge">ProductInterface</code>, including
+    <ul>
+      <li><a href="/guides/v2.3/graphql/reference/bundle-product.html">BundleProduct</a></li>
+      <li><a href="/guides/v2.3/graphql/reference/configurable-product.html">ConfigurableProduct</a></li>
+      <li><a href="/guides/v2.3/graphql/reference/downloadable-product.html">DownloadableProduct</a></li>
+      <li><a href="/guides/v2.3/graphql/reference/grouped-product.html">GroupedProduct</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>The following table defines the <code class="highlighter-rouge">ProductInterface</code> attributes and objects.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Data type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">attribute_set_id</code></td>
+      <td>Int</td>
+      <td>The attribute set assigned to the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">categories</code></td>
+      <td>[CategoryInterface]</td>
+      <td>The categories assigned to the product. See <a href="/guides/v2.3/graphql/reference/categories.html">categories endpoint</a> for more information</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">category_ids</code></td>
+      <td>[Int]</td>
+      <td>An array of category IDs the product belongs to</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">country_of_manufacture</code></td>
+      <td>String</td>
+      <td>The product’s country of origin</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">created_at</code></td>
+      <td>String</td>
+      <td>Timestamp indicating when the product was created</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">custom_design</code></td>
+      <td>String</td>
+      <td>A theme that can be applied to the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">custom_design_from</code></td>
+      <td>String</td>
+      <td>The beginning date when a theme is applied to the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">custom_design_to</code></td>
+      <td>String</td>
+      <td>The date at which a theme is no longer applied to the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">custom_layout</code></td>
+      <td>String</td>
+      <td>The name of a custom layout</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">custom_layout_update</code></td>
+      <td>String</td>
+      <td>XML code that is applied as a layout update to the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">description</code></td>
+      <td>String</td>
+      <td>Detailed information about the product. The value can include simple HTML tags</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gift_message_available</code></td>
+      <td>String</td>
+      <td>Indicates whether a gift message is available</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">id</code></td>
+      <td>Int</td>
+      <td>The ID number assigned to the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">image</code></td>
+      <td>String</td>
+      <td>The relative path for the main image on the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">image_label</code></td>
+      <td>String</td>
+      <td>The label assigned to a product image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">is_returnable</code></td>
+      <td>String</td>
+      <td>Indicates whether the product can be returned. This attribute is defined in the Rma module.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">manufacturer</code></td>
+      <td>Int</td>
+      <td>A number representing the product’s manufacturer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">media_gallery_entries</code></td>
+      <td>[MediaGalleryEntry]</td>
+      <td>An array of <a href="#MediaGalleryEntry">MediaGalleryEntry</a> objects</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">meta_description</code></td>
+      <td>String</td>
+      <td>A brief overview of the product for search results listings, maximum 255 characters</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">meta_keyword</code></td>
+      <td>String</td>
+      <td>A comma-separated list of keywords that are visible only to search engines</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">meta_title</code></td>
+      <td>String</td>
+      <td>A string that is displayed in the title bar and tab of the browser and in search results lists</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>String</td>
+      <td>The product name. Customers use this name to identify the product.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">new_from_date</code></td>
+      <td>String</td>
+      <td>The beginning date for new product listings, and determines if the product is featured as a new product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">new_to_date</code></td>
+      <td>String</td>
+      <td>The end date for new product listings</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">options_container</code></td>
+      <td>String</td>
+      <td>If the product has multiple options, determines where they appear on the product page</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">page_layout</code></td>
+      <td>String</td>
+      <td>The page layout of the product page. Values are <code class="highlighter-rouge">1column-center</code>, <code class="highlighter-rouge">2columns-left</code>, <code class="highlighter-rouge">2columns-right</code>, and <code class="highlighter-rouge">3columns</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">price</code></td>
+      <td>ProductPrices</td>
+      <td>The price of an item. A <code class="highlighter-rouge">ProductPrice</code> object is returned. See <a href="{#ProductPrices}">ProductPrices</a> for more information.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">product_links</code></td>
+      <td>[ProductLinks]</td>
+      <td>An array of <a href="#ProductLinks">ProductLinks</a> objects</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">short_description</code></td>
+      <td>String</td>
+      <td>A short description of the product. Its use depends on the store’s theme.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sku</code></td>
+      <td>String</td>
+      <td>A number or code assigned to a product to identify the product, options, price, and manufacturer</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">small_image</code></td>
+      <td>String</td>
+      <td>The relative path to the small image, which is used on catalog pages</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">small_image_label</code></td>
+      <td>String</td>
+      <td>The label assigned to a product’s small image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">special_from_date</code></td>
+      <td>String</td>
+      <td>The beginning date that a product has a special price</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">special_price</code></td>
+      <td>Float</td>
+      <td>The discounted price of the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">special_to_date</code></td>
+      <td>String</td>
+      <td>The end date that a product has a special price</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">swatch_image</code></td>
+      <td>String</td>
+      <td>The file name of a swatch image. This attribute is defined in the Swatches module.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tax_class_id</code></td>
+      <td>Int</td>
+      <td>An ID assigned to a tax class. This attribute is defined in the Tax module.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">thumbnail</code></td>
+      <td>String</td>
+      <td>The relative path to the product’s thumbnail image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">thumbnail_label</code></td>
+      <td>String</td>
+      <td>The label assigned to a product’s thumbnail image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tier_price</code></td>
+      <td>Float</td>
+      <td>The price when tier pricing is in effect and the items purchased threshold has been reached</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tier_prices</code></td>
+      <td>[ProductTierPrices]</td>
+      <td>An array of <a href="#ProductTier">ProductTierPrices</a> objects</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">type_id</code></td>
+      <td>String</td>
+      <td>One of <code class="highlighter-rouge">simple</code>, <code class="highlighter-rouge">virtual</code>, <code class="highlighter-rouge">bundle</code>, <code class="highlighter-rouge">downloadable</code>,<code class="highlighter-rouge">grouped</code>, <code class="highlighter-rouge">configurable</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">updated_at</code></td>
+      <td>String</td>
+      <td>The timestamp indicating when the product was last updated</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website_ids</code></td>
+      <td>[Int]</td>
+      <td>An array of website IDs in which the product is available</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ProductPrices">ProductPrices object</h3>
+<p>The <code class="highlighter-rouge">ProductPrices</code> object contains the regular price of an item, as well as its minimum and maximum prices. Only composite products, which include bundle, configurable, and grouped products, can contain a minimum and maximum price.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">maximalPrice</code></td>
+      <td>Price</td>
+      <td>Used for composite (bundle, configurable, grouped) products. This is the highest possible final price for all the options defined within a composite product. If you’re specifying a price range, this would be the “to” value.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">minimalPrice</code></td>
+      <td>Price</td>
+      <td>Used for composite (bundle, configurable, grouped) products. This is the lowest possible final price for all the options defined within a composite product. If you’re specifying a price range, this would be the “from” value.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">regularPrice</code></td>
+      <td>Price</td>
+      <td>The base price of a product.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="Price">Price object</h4>
+
+<p>The <code class="highlighter-rouge">Price</code> object defines the price of a product as well as any tax-related adjustments.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">amount</code></td>
+      <td>Money</td>
+      <td>The price of the the product and its currency code. See <a href="#Money">Money object</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">adjustments</code></td>
+      <td>[PriceAdjustment]</td>
+      <td>An array of <a href="#PriceAdjustment">PriceAdjustment</a> objects.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="Money">Money object</h5>
+
+<p>A <code class="highlighter-rouge">Money</code> object defines a monetary value, including a numeric value and a currency code.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>Float</td>
+      <td>The price of the product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">currency</code></td>
+      <td>CurrencyEnum</td>
+      <td>A three-letter currency code, such as <code class="highlighter-rouge">USD</code>或<code class="highlighter-rouge">EUR</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="PriceAdjustment">PriceAdjustment array</h5>
+
+<p>The <code class="highlighter-rouge">PricedAdjustment</code> object defines the amount of money to apply as an adjustment, the type of adjustment to apply, and whether the item is included or excluded from the adjustment.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">amount</code></td>
+      <td>Money</td>
+      <td>The amount of the price adjustment and its currency code. See <a href="#Money">Money object</a>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">code</code></td>
+      <td>PriceAdjustmentCodesEnum</td>
+      <td>One of <code class="highlighter-rouge">tax</code>, <code class="highlighter-rouge">weee</code>, or <code class="highlighter-rouge">weee_tax</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">description</code></td>
+      <td>PriceAdjustmentDescriptionEnum</td>
+      <td>Indicates whether the entity described by the code attribute is included or excluded from the adjustment.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="ProductLinks">ProductLinks object</h4>
+
+<p><code class="highlighter-rouge">ProductLinks</code> contains information about linked products, including the link type and product type of each item.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sku</code></td>
+      <td>String</td>
+      <td>The identifier of the linked product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">link_type</code></td>
+      <td>String</td>
+      <td>One of <code class="highlighter-rouge">related</code>, <code class="highlighter-rouge">associated</code>, <code class="highlighter-rouge">upsell</code>, or <code class="highlighter-rouge">crosssell</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">linked_product_sku</code></td>
+      <td>String</td>
+      <td>The SKU of the linked product</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">linked_product_type</code></td>
+      <td>String</td>
+      <td>The type of linked product (<code class="highlighter-rouge">simple</code>, <code class="highlighter-rouge">virtual</code>, <code class="highlighter-rouge">bundle</code>, <code class="highlighter-rouge">downloadable</code>,<code class="highlighter-rouge">grouped</code>, <code class="highlighter-rouge">configurable</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">position</code></td>
+      <td>Int</td>
+      <td>The position within the list of product links</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="MediaGalleryEntry">MediaGalleryEntry object</h3>
+
+<p><code class="highlighter-rouge">MediaGalleryEntry</code> defines characteristics about images and videos associated with a specific product.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">id</code></td>
+      <td>Int</td>
+      <td>The identifier assigned to the object</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">media_type</code></td>
+      <td>String</td>
+      <td><code class="highlighter-rouge">image</code>或<code class="highlighter-rouge">video</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">label</code></td>
+      <td>String</td>
+      <td>The “alt” text displayed on the UI when the user points to the image</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">position</code></td>
+      <td>Int</td>
+      <td>The media item’s position after it has been sorted</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">disabled</code></td>
+      <td>Boolean</td>
+      <td>Whether the image is hidden from view</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">types</code></td>
+      <td>[String]</td>
+      <td>Array of image types. It can have the following values: <code class="highlighter-rouge">image</code>, <code class="highlighter-rouge">small_image</code>, <code class="highlighter-rouge">thumbnail</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">file</code></td>
+      <td>String</td>
+      <td>The path of the image on the server</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content</code></td>
+      <td>ProductMediaGalleryEntriesContent</td>
+      <td>Contains a <a href="#ProductMediaGalleryEntriesContent">ProductMediaGalleryEntriesContent</a> object</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_content</code></td>
+      <td>ProductMediaGalleryEntriesVideoContent</td>
+      <td>Contains a <a href="#ProductMediaGalleryEntriesVideoContent">ProductMediaGalleryEntriesVideoContent</a> object</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="ProductMediaGalleryEntriesContent">ProductMediaGalleryEntriesContent object</h4>
+
+<p><code class="highlighter-rouge">ProductMediaGalleryEntriesContent</code> contains an image in base64 format and basic information about the image.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">base64_encoded_data</code></td>
+      <td>String</td>
+      <td>The image in base64 format</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">type</code></td>
+      <td>String</td>
+      <td>The MIME type of the file, such as <code class="highlighter-rouge">image/png</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>String</td>
+      <td>The file name of the image</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="ProductMediaGalleryEntriesVideoContent">ProductMediaGalleryEntriesVideoContent object</h4>
+
+<p><code class="highlighter-rouge">ProductMediaGalleryEntriesVideoContent</code> contains a link to a video file and basic information about the video.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">media_type</code></td>
+      <td>String</td>
+      <td>Must be <code class="highlighter-rouge">external-video</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_provider</code></td>
+      <td>String</td>
+      <td>Optionally describes the video source</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_url</code></td>
+      <td>String</td>
+      <td>Required. The URL to the video</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_title</code></td>
+      <td>String</td>
+      <td>Required. The title of the video</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_description</code></td>
+      <td>String</td>
+      <td>A description of the video</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">video_metadata</code></td>
+      <td>String</td>
+      <td>Optional data about the video</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ProductTier">ProductTierPrices object</h3>
+
+<p>The <code class="highlighter-rouge">ProductTierPrices</code> object defines a tier price, which is a quantity discount offered to a specific customer group.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_group_id</code></td>
+      <td>Int</td>
+      <td>The ID of the customer group</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">qty</code></td>
+      <td>Float</td>
+      <td>The number of items that must be purchased to qualify for tier pricing</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>Float</td>
+      <td>The price of the fixed price item</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">percentage_value</code></td>
+      <td>Float</td>
+      <td>The percentage discount of the item</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">website_id</code></td>
+      <td>Int</td>
+      <td>The ID assigned to the website</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="PhysicalProductInterface">PhysicalProductInterface</h2>
+
+<p><code class="highlighter-rouge">PhysicalProductInterface</code>defines the weight of all tangible products.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">weight</code></td>
+      <td>Float</td>
+      <td>The weight of the item, in units defined by the store</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="layerfilter-object">LayerFilter object</h2>
+
+<p>The <code class="highlighter-rouge">LayerFilter</code> object can be returned in a response to help create layered navigation on your app.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">name</code></td>
+      <td>String</td>
+      <td>The layered navigation filter name</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">request_var</code></td>
+      <td>String</td>
+      <td>The request variable name for the filter query</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">filter_items_count</code></td>
+      <td>Int</td>
+      <td>The number of filter items in filter group</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">filter_items</code></td>
+      <td>[LayerFilterItemInterface]</td>
+      <td>An array of filter items</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="layerfilteriteminterface">LayerFilterItemInterface</h3>
+
+<p><code class="highlighter-rouge">LayerFilterItemInterface </code> contains an array of items that match the terms defined in the filter.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">label</code></td>
+      <td>String</td>
+      <td>The label applied to a filter</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">value_string</code></td>
+      <td>String</td>
+      <td>The value for filter request variable to be used in a query</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">items_count</code></td>
+      <td>Int</td>
+      <td>The number of items the filter returned</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sample-query">Sample query</h2>
+
+<p>You can review several general interest <code class="highlighter-rouge">products</code> queries at <a href="/guides/v2.3/graphql/search-pagination.html">Searches and pagination in GraphQL</a>.</p>
+
+<p>The following query returns layered navigation for products that have a <code class="highlighter-rouge">sku</code> containing the string <code class="highlighter-rouge">24-WB</code>.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="err">products</span><span class="w"> </span><span class="err">(</span><span class="w">
+        </span><span class="err">filter</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="err">like</span><span class="p">:</span><span class="s2">"24-WB%"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="err">pageSize</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+        </span><span class="err">currentPage</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="err">sort</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">name</span><span class="p">:</span><span class="w"> </span><span class="err">DESC</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="err">)</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="err">items</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">sku</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="err">filters</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">name</span><span class="w">
+            </span><span class="err">filter_items_count</span><span class="w">
+            </span><span class="err">request_var</span><span class="w">
+            </span><span class="err">filter_items</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="err">label</span><span class="w">
+                </span><span class="err">value_string</span><span class="w">
+                </span><span class="err">items_count</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/graphql/reference/products.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/graphql/reference/products.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

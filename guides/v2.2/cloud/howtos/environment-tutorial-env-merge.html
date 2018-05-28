@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Merge and delete an environment (tutorial) | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/howtos/environment-tutorial-env-merge.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.2">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.2
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/cloud/howtos/environment-tutorial-env-merge.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/cloud/howtos/environment-tutorial-env-merge.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/cloud/howtos/environment-tutorial-env-merge.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/cloud/howtos/environment-tutorial-env-merge.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.2/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.2/comp-mgr/bk-compman-upgrade-guide.html">扩展安装及系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.2/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.2/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.2/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.2/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.2/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.2/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.2/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.2/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.2/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.2/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.2/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.2/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.2/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.2/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.2/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.2/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.2/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.2/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.2/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.2/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.2/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.2/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.2/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.2/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.2/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.2/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.2/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.2/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title"></h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Merge and delete an environment (tutorial)</h1>
+
+  
+
+
+</section>
+
+			<h2 id="tut-env-merge">Merge an environment</h2>
+<p>This tutorial shows how to merge changes from an environment to its parent, which in this case is the master branch. You can, for example, merge code updates, new components, changes to themes, and so on.</p>
+
+<p>You can then optionally delete the environment.</p>
+
+<p>This tutorial shows how to create a sample file and merge it. This tutorial assumes you’re already working in an environment; if not, see <a href="/guides/v2.2/cloud/env/environments-start.html#env-start-comm">Get started with an environment</a> to create one.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>You <em>cannot</em> merge environment variables because they are not code. You must set the value of environment variables in an environment.</p>
+</div>
+
+<h3 id="get-started">Get started</h3>
+<p>To get started:</p>
+
+<div>
+
+  <ol>
+    <li>Log in to your local development system, or switch to, the <a href="/guides/v2.2/cloud/before/before-workspace-file-sys-owner.html">Magento文件系统所有者</a>.</li>
+    <li>Change to a directory to which the Magento文件系统所有者 has write access.</li>
+    <li>
+      <p>Enter the following command in a terminal to log in to your project:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud login
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>List your projects. With the project ID, you can complete additional commands.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud project:list
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>If necessary, clone the project to your local. You should have cloned when setting up your local development workspace.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud project:get &lt;project ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>Change to a project directory. For example, <code class="highlighter-rouge">cd /var/www/html/magento2</code></li>
+    <li>
+      <p>List environments in the project. Every environment includes an active Git branch of your code, database, environment variables, configurations, and services.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:list
+</code></pre></div>      </div>
+
+      <div class="bs-callout bs-callout-info" id="info">
+  		<p><code>magento-cloud environment:list</code> displays environment hierarchies whereas <code>git branch</code> displays does not. If you have any nested environments, use <code>magento-cloud environment:list</code> to see the full list.</p>
+</div>
+    </li>
+    <li>
+      <p>Fetch origin branches to get the latest code:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Check out, or switch to, a specific branch and environment. Git commands only checkout the Git branch. The Magento Cloud command also switches to the active environment.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:checkout &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>To create a new environment, use <code class="highlighter-rouge">magento-cloud environment:branch &lt;environment name&gt; &lt;parent environment ID&gt;</code></p>
+    </li>
+    <li>
+      <p>Pull any updated code to your local for the environment ID (which is the Git branch):</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Create a <a href="/guides/v2.2/cloud/project/project-webint-snap.html">snapshot</a> of the environment as a backup:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud snapshot:create -e &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h3 id="merge-an-environment">Merge an environment</h3>
+  <p>To merge an environment:</p>
+
+  <ol>
+    <li>
+      <p>Add a file named <code class="highlighter-rouge">test.txt</code> to the environment root directory.</p>
+
+      <p>You can put whatever contents you want; for example, the number <code class="highlighter-rouge">1</code></p>
+    </li>
+    <li>Save your changes and exit the text editor.</li>
+    <li>
+      <p>Add, commit, and push your change to the environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add -A
+git commit -m "&lt;commit message&gt;"
+git push origin &lt;branch name&gt;
+</code></pre></div>      </div>
+
+      <p>Where <code class="highlighter-rouge">&lt;branch name&gt;</code> is the Git name of the environment (that is, the environment ID).</p>
+    </li>
+    <li>
+      <p>Merge with the parent environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:merge &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>For example,</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:merge master
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h2 id="tut-env-delete">Optionally delete the environment</h2>
+  <p>Before you delete an environment, make sure you don’t need it anymore. You cannot recover a deleted environment later.</p>
+
+  <div class="bs-callout bs-callout-info" id="info">
+  <p>You cannot delete the <code>master</code> environment of any project.</p>
+</div>
+
+  <p>You must be a <a href="/guides/v2.2/cloud/project/user-admin.html#cloud-role-project">project administrator</a>, <a href="/guides/v2.2/cloud/project/user-admin.html#cloud-role-env">environment administrator</a>, or <a href="/guides/v2.2/cloud/project/user-admin.html#cloud-role-acct-owner">account owner</a> to perform this task.</p>
+
+  <p>This section discusses how to optionally delete an environment in the following ways:</p>
+
+  <ul>
+    <li>Make the environment <em>inactive</em> but let it remain in the project</li>
+    <li>Delete the environment entirely and remove it from the project</li>
+  </ul>
+
+  <p>To delete a environment:</p>
+
+  <ol>
+    <li>Log in to your project if you haven’t already done so.</li>
+    <li>
+      <p>Fetch branches from the origin server.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch origin
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>To delete the branch entirely (removing it from the project), check out the branch.</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:checkout &lt;environment ID&gt;
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Delete the environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete &lt;environment ID&gt;
+</code></pre></div>      </div>
+
+      <p>For example, to delete the <code class="highlighter-rouge">deleteme</code> environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete deleteme
+</code></pre></div>      </div>
+
+      <p>To delete more than one environment:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete &lt;environment ID&gt; &lt;environmentID&gt;
+</code></pre></div>      </div>
+
+      <p>For additional options, see the command-line help:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud environment:delete --help
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Answer the prompt:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Are you sure you want to delete the remote Git branch deleteme? [Y/n]
+</code></pre></div>      </div>
+
+      <p>A <code class="highlighter-rouge">Y</code> answer makes the branch inactive but leaves it in the project.</p>
+    </li>
+    <li>
+      <p>Answer the prompt:</p>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Delete the remote Git branch too? [Y/n]
+</code></pre></div>      </div>
+
+      <p>A <code class="highlighter-rouge">Y</code> answer completely removes the branch from the project.</p>
+    </li>
+  </ol>
+
+  <p>Wait for the environment to delete.</p>
+
+  <div class="bs-callout bs-callout-info" id="info">
+  <p>To activate the environment later, use the <code>magento-cloud environment:activate</code> command.</p>
+</div>
+
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.2/cloud/howtos/environment-tutorial-env-merge.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.2/cloud/howtos/environment-tutorial-env-merge.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.2/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.2/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

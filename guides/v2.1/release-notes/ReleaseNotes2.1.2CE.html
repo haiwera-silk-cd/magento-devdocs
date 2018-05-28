@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento Open Source 2.1.2 Release Notes | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/release-notes/ReleaseNotes2.1.2CE.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.1/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.1">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.1
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/release-notes/ReleaseNotes2.1.2CE.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/release-notes/ReleaseNotes2.1.2CE.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/release-notes/ReleaseNotes2.1.2CE.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/release-notes/ReleaseNotes2.1.2CE.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.1/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html">组件管理和系统升级手册</a></li>
+          
+          <li><a href="/guides/v2.1/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.1/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.1/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.1/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.1/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.1/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.1/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.1/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.1/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.1/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.1/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.1/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.1/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.1/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.1/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.1/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.1/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          
+          <li><a href="/guides/v2.1/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.1/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.1/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.1/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.1/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.1/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+        
+        <li><a href="/guides/v2.1/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.1/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.1/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.1/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.1/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.1/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">Release Information</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.1/release-notes/bk-release-notes.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento-2.1-release-notes">
+    
+
+    
+    <span>Magento 2.1 Release Notes</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-open-source-2.1.x-release-notes">
+
+            
+
+            
+            <span>Magento Open Source 2.1.x Release Notes</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.13-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.13CE.html">Magento Open Source 2.1.13 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.12-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.12CE.html">Magento Open Source 2.1.12 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.11-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.11CE.html">Magento Open Source 2.1.11 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.10-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.10CE.html">Magento Open Source 2.1.10 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.9-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.9CE.html">Magento Open Source 2.1.9 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.8-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.8CE.html">Magento Open Source 2.1.8 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.7-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.7CE.html">Magento Open Source 2.1.7 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.6-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.6CE.html">Magento Open Source 2.1.6 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.5-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.5CE.html">Magento Open Source 2.1.5 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.4-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.4CE.html">Magento Open Source 2.1.4 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.3-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.3CE.html">Magento Open Source 2.1.3 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3 active " id="magento-open-source-2.1.2-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.2CE.html">Magento Open Source 2.1.2 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.1-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.1CE.html">Magento Open Source 2.1.1 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-open-source-2.1.0--release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.0CE.html">Magento Open Source 2.1.0  Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-commerce-2.1.x-release-notes">
+
+            
+
+            
+            <span>Magento Commerce 2.1.x Release Notes</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.13-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.13EE.html">Magento Commerce 2.1.13 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.12-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.12EE.html">Magento Commerce 2.1.12 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.11-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.11EE.html">Magento Commerce 2.1.11 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.10-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.10EE.html">Magento Commerce 2.1.10 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.9-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.9EE.html">Magento Commerce 2.1.9 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.8-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.8EE.html">Magento Commerce 2.1.8 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.7-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.7EE.html">Magento Commerce 2.1.7 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.6-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.6EE.html">Magento Commerce 2.1.6 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.5-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.5EE.html">Magento Commerce 2.1.5 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.4-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.4EE.html">Magento Commerce 2.1.4 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.3-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.3EE.html">Magento Commerce 2.1.3 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.2-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.2EE.html">Magento Commerce 2.1.2 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.1-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.1EE.html">Magento Commerce 2.1.1 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-commerce-2.1.0-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/release-notes/ReleaseNotes2.1.0EE.html">Magento Commerce 2.1.0 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)-2.1.x-release-notes">
+
+            
+
+            
+            <span>Magento企业版(云支持版) 2.1.x Release Notes</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.9.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.9.html">magento-cloud-configuration release 101.9.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.8.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.8.html">magento-cloud-configuration release 101.8.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.7.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.7.html">magento-cloud-configuration release 101.7.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.6.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.6.html">magento-cloud-configuration release 101.6.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.5.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.5.html">magento-cloud-configuration release 101.5.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento-cloud-configuration-release-101.4.x-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes101.4.html">magento-cloud-configuration release 101.4.x Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento企业版(云支持版)-versions-2.1.6-through-2.1.11-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.6-2.1.11.html">Magento企业版(云支持版) versions 2.1.6 through 2.1.11 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento企业版(云支持版)-version-2.1.5-and-2.0.13-release-notes">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.5.html">Magento企业版(云支持版) version 2.1.5 and 2.0.13 Release Notes</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento企业版(云支持版)-version-2.1.4-and-2.0.12">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.4.html">Magento企业版(云支持版) version 2.1.4 and 2.0.12</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento企业版(云支持版)-version-2.1.3-and-2.0.11">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.3.html">Magento企业版(云支持版) version 2.1.3 and 2.0.11</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="magento企业版(云支持版)-version-2.1.2-and-2.0.10">
+                    
+
+                    
+                    <a  href="/guides/v2.1/cloud/release-notes/CloudReleaseNotes2.1.2.html">Magento企业版(云支持版) version 2.1.2 and 2.0.10</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+		    
+		    	
+
+<li class="nav-level1  " id="backward-incompatible-changes">
+    
+
+    
+    <a href="/guides/v2.1/release-notes/backward-incompatible-changes/index.html">Backward incompatible changes</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-open-source-changes">
+
+            
+
+            
+            <a href="/guides/v2.1/release-notes/backward-incompatible-changes/open-source.html">Magento Open Source changes</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-commerce-changes">
+
+            
+
+            
+            <a href="/guides/v2.1/release-notes/backward-incompatible-changes/commerce.html">Magento Commerce changes</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="third-party-licenses">
+    
+
+    
+    <span>Third-party licenses</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-open-source-third-party-licenses">
+
+            
+
+            
+            <a href="/guides/v2.1/release-notes/thirdparty_ce.html">Magento Open Source third-party licenses</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento-commerce-third-party-licenses">
+
+            
+
+            
+            <a href="/guides/v2.1/release-notes/thirdparty_ee.html">Magento Commerce third-party licenses</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="magento企业版(云支持版)-third-party-licenses">
+
+            
+
+            
+            <a href="/guides/v2.1/release-notes/thirdparty-mccloud.html">Magento企业版(云支持版) third-party licenses</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.1/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Magento Open Source 2.1.2 Release Notes</span>
+
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Magento Open Source 2.1.2 Release Notes</h1>
+
+  
+
+
+</section>
+
+			<p>We are pleased to present Magento Open Source (formerly Community Edition) 2.1.2. This release includes security enhancements and several functional fixes.</p>
+
+<p>Backward-incompatible changes are documented in <a href="/guides/v2.1/release-notes/backward-incompatible-changes/index.html">Magento 2.1 backward incompatible changes</a>.</p>
+
+<h2 id="highlights">Highlights</h2>
+
+<p>Magento 2.1.2 contains multiple bug fixes and enhancements, including</p>
+
+<ul>
+  <li>
+    <p>Support for <i>PHP 7.0.4 and 5.6.5</i>. (This release supports <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> 5.6.5 and above instead of 5.6.x.)</p>
+  </li>
+  <li>
+    <p>Compatible with <i>MySQL 5.7</i>.</p>
+  </li>
+  <li>
+    <p><i>Two new web APIs (or service contracts) for the Sales module</i> that incorporate functionality into the Sales <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> that is currently available in the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> interface. After you install this patch, you’ll be able to use the Sales API <code class="highlighter-rouge">ShipOrder</code> and <code class="highlighter-rouge">InvoiceOrder</code> methods to capture payment and ship product. See <a href="/guides/v2.1/mrg/intro.html" target="_blank">Module Reference Guide</a> for information on using the <code class="highlighter-rouge">ShipOrder</code> and <code class="highlighter-rouge">InvoiceOrder</code> interfaces.</p>
+  </li>
+</ul>
+
+<h3 class="no_toc" id="why-are-we-adding-new-apis-in-a-patch-release">Why are we adding new APIs in a patch release?</h3>
+
+<p><i>These new interfaces will not break any existing customizations or extensions.</i>  See <a href="https://alankent.me/category/magento/" target="_blank">Alan Kent’s blog about Magento</a> for more information about these features and Magento’s use of semantic versioning.</p>
+
+<h2 id="security-enhancements">Security enhancements</h2>
+<p>This release includes enhancements to improve the security of your Magento software. While there are no confirmed attacks related to these issues to date, certain vulnerabilities can potentially be exploited to access customer information or take over administrator sessions. We recommend that you upgrade your existing Magento software to the latest version as soon as possible.</p>
+
+<p>The following list provides an overview of the security issues fixed in this release. We describe each issue in greater detail in the <a href="https://magento.com/security/patches/magento-2010-and-212-security-update" target="_blank">Magento Security Center</a>.</p>
+
+<h3 class="no_toc" id="general-security">General security</h3>
+
+<!--- 56912/1488-->
+<ul>
+  <li>Fixed issue with using the Magento Enterprise Edition invitations feature to insert malicious <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> and subsequently execute it in the Admin context.</li>
+</ul>
+
+<!--- 57565-->
+<ul>
+  <li>You can no longer change or fake a product price from the Magento <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span> and then complete an order with that faked price.</li>
+</ul>
+
+<!--- 56852/1484-->
+<ul>
+  <li>Fixed issue with arbitrary PHP code execution during <span term-uuid="278c3ce0-cd4c-4ffc-a098-695d94d73bde" class="glossary-term" data-toggle="popover">checkout</span>.</li>
+</ul>
+
+<!--- 56594/1490-->
+<ul>
+  <li>Fixed issue with retrieving potentially sensitive information through the use of <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">backend</span> media.</li>
+</ul>
+
+<!--- 53971-->
+<ul>
+  <li>Fixed issue with running <code class="highlighter-rouge">cron</code> jobs less frequently than specified by the application <code class="highlighter-rouge">cron</code> setting.</li>
+</ul>
+
+<!--- 57965-->
+<ul>
+  <li>Sessions now expire as expected after logout.</li>
+</ul>
+
+<!--- 57463-->
+<ul>
+  <li>Removed potential for exploitation of guest order view feature to harvest order information.</li>
+</ul>
+
+<!--- 56940-->
+<ul>
+  <li>Kount and 3D Secure now work as expected for Braintree Vault.</li>
+</ul>
+
+<!--- 57812/1539, 1543-->
+<ul>
+  <li>You can no longer delete a currently logged-in user.</li>
+</ul>
+
+<!--- 56901/1492-->
+<ul>
+  <li>A user with lesser privileges can no longer force an Admin user to add his private or public key using a JSON call.</li>
+</ul>
+
+<h3 class="no_toc" id="denial-of-service-dos-attacks-and-brute-force-attacks">Denial-of-service (DoS) attacks and brute force attacks</h3>
+
+<!--- 46026/57463-->
+<ul>
+  <li>The Guest order view protection code is no longer vulnerable to brute force attacks.</li>
+</ul>
+
+<!--- 57302/1338-->
+<ul>
+  <li>You can no longer manipulate the full page <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> to store incorrect pages under regular page <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> entries.</li>
+</ul>
+
+<h3 class="no_toc" id="cross-site-request-forgery--csrf">Cross-Site Request Forgery  (CSRF)</h3>
+
+<!--- 57362-->
+<ul>
+  <li>Fixed issue with potential storage of malicious XSS code in the body of an email template. (A malicious user could use this this script to steal user information and cookies, or to bypass cross-site request forgery protection.)</li>
+</ul>
+
+<!--- 57804/1539-->
+<ul>
+  <li>Fixed issue with cross-site scripting reflected in loading section of request.</li>
+</ul>
+
+<h3 class="no_toc" id="sql-injection">SQL injection</h3>
+
+<!--- 56540/1480-->
+<ul>
+  <li>Fixed issue with potential SQL injection through the Zend framework through ordering or grouping parameters.</li>
+</ul>
+
+<h2 id="functional-fixes-and-enhancements">Functional fixes and enhancements</h2>
+<p>We address the following functional issues in this release.</p>
+
+<h3 class="no_toc" id="sales-api-enhancements">Sales API enhancements</h3>
+
+<!--- 56429 -->
+<ul>
+  <li>
+    <p>We’ve added the ability to change the status of a <span term-uuid="c8f00e9d-7f70-4561-9773-60da604ba5c9" class="glossary-term" data-toggle="popover">shipment</span> through the <span term-uuid="377dc0a3-b8a7-4dfa-808e-2de37e4c0029" class="glossary-term" data-toggle="popover">web API</span>.  The new <code class="highlighter-rouge">ShipOrder</code> interface supports tasks you can already do through the Admin dashboard, including the ability to:</p>
+
+    <ul>
+      <li>
+        <p>create a shipment document (full or partial)</p>
+      </li>
+      <li>
+        <p>add details about shipped items into an order</p>
+      </li>
+      <li>
+        <p>change status and state of an order according to performed actions</p>
+      </li>
+      <li>
+        <p>notify customer about new shipment document</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!--- 56428 -->
+<ul>
+  <li>
+    <p>We’ve added the ability to change the status of an invoice through the web API.  The new <code class="highlighter-rouge">InvoiceOrder</code> interface supports tasks you can already do through the Admin dashboard, including the ability to:</p>
+
+    <ul>
+      <li>
+        <p>create an invoice document (full or partial)</p>
+      </li>
+      <li>
+        <p>capture money placed with order payment</p>
+      </li>
+      <li>
+        <p>notify a customer about document creation</p>
+      </li>
+      <li>
+        <p>change order status and state</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>For more information on these API enhancements, see <a href="/guides/v2.1/mrg/ce/Sales/services.html" target="_blank">Magento Sales API</a>.</p>
+
+<!--- 55126-->
+<ul>
+  <li>We’ve fixed an issue with using the REST API to link simple products to configurable ones. <a href="https://github.com/magento/magento2/issues/5243" target="_blank">(GITHUB-5243)</a></li>
+</ul>
+
+<!--- 58401-->
+<ul>
+  <li>You can now use the REST API to create a <span term-uuid="2fd4d100-28d2-45ca-bec1-128444ea98e6" class="glossary-term" data-toggle="popover">configurable product</span> with a linked child product. <a href="https://github.com/magento/magento2/issues/5243" target="_blank">(GITHUB-5243)</a></li>
+</ul>
+
+<h3 class="no_toc" id="cart-and-checkout">Cart and checkout</h3>
+
+<!--- 56431, 56426-->
+<ul>
+  <li>Magento now updates <span term-uuid="ab517fb3-c9ff-4da8-b7f9-00337c57b3a5" class="glossary-term" data-toggle="popover">order status</span> as expected after a shipment or <span term-uuid="631b9627-a367-4a56-b3b1-0f6ca8fe6e02" class="glossary-term" data-toggle="popover">invoice</span> has been created through the API.</li>
+</ul>
+
+<!--- 54964-->
+<ul>
+  <li>Magento now updates the mini cart as expected when you reorder an item. Previously, Magento added the reordered items to the shopping cart, but the mini cart did not update its item count. <a href="https://github.com/magento/magento2/issues/6121" target="_blank">(GITHUB-6121)</a></li>
+</ul>
+
+<h3 class="no_toc" id="tracking-and-shipping">Tracking and shipping</h3>
+
+<!--- 57460-->
+<ul>
+  <li>Magento no longer throws an <span term-uuid="53da11f1-d0b8-4a7e-b078-1e099462b409" class="glossary-term" data-toggle="popover">exception</span> if you enter an invalid FedEx shipment tracking number.</li>
+</ul>
+
+<!--- 57097-->
+<ul>
+  <li>Changing the city field of an order now affects the shipping rate as expected. Previously, the shipping rate did not update when you changed the city field.</li>
+</ul>
+
+<h3 class="no_toc" id="upgrade">Upgrade</h3>
+
+<!--- 59505-->
+<ul>
+  <li>You can now save simple products created in 2.0.x environments after upgrading to environments running Magento 2.1.x. Previously, you could not successfully save the opened product after upgrading.</li>
+</ul>
+
+<h3 class="no_toc" id="general-fixes">General fixes</h3>
+
+<!--- 54737, 55116-->
+<ul>
+  <li>Magento 2.1.2 now supports PHP 7.0.4.</li>
+</ul>
+
+<!--- 57003-->
+<ul>
+  <li>The Product page scope selector now displays all related websites associated with a restricted user.</li>
+</ul>
+
+<!--- 56952-->
+<ul>
+  <li>We’ve resolved an issue with the get active payment methods (<code class="highlighter-rouge">getActiveMethods</code>). <a href="https://github.com/magento/magento2/issues/5413" target="_blank">(GITHUB-5413)</a></li>
+</ul>
+
+<!--- 58568-->
+<ul>
+  <li>Magento now correctly renders <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> tags on the Sales Order page price field.</li>
+</ul>
+
+<!--- 57032-->
+<ul>
+  <li>Visual swatches are now displayed in search results.</li>
+</ul>
+
+<!--- 57049-->
+<ul>
+  <li>Magento now factors in the Weight attribute as expected when you use advanced search on grouped products.</li>
+</ul>
+
+<!--- DELETED:  (won't fix) 57578, CLONE: 58123, 58111, 57049, OMIT: 58667, 57878, 58473, 58421, 58402, 58313 (releasenotes),57845, 55862, 57294, 58166, 58204, (internal) 58929, 58875, 58700, 58606, 58590, 58474, 56425 -->
+
+<h2 id="known-issues">Known issues</h2>
+
+<ul>
+  <li>
+    <p><strong>Issue</strong>: Error creating configurable products in 2.1.1 <a href="https://github.com/magento/magento2/issues/6424" target="_blank">(GITHUB-6424)</a>. <strong>Workaround</strong>: Clear your browser cache after upgrading. 
+<!--- 58017--></p>
+  </li>
+  <li>
+    <p><strong>Issue</strong>: When you edit a configurable product and add options to a simple product, Magento does not save these options. <strong>Workaround</strong>: None.
+<!--- 58034--></p>
+  </li>
+  <li>
+    <p><strong>Issue</strong>: Logo for transactional emails cannot be uploaded successfully <a href="https://github.com/magento/magento2/issues/6275" target="_blank">(GITHUB-6275)</a>. <strong>Workaround:</strong> None.</p>
+  </li>
+</ul>
+
+<!--- 57291-->
+
+<ul>
+  <li><strong>Issue</strong>: The <code class="highlighter-rouge">catalogProductRepository</code> API (REST) returns an unexpected attribute type. Certain <code class="highlighter-rouge">attribute_code</code> values (for example,  <code class="highlighter-rouge">category_ids</code>) return an array instead of the expected string. <strong>Workaround</strong>: As needed, adjust your code so that it handles the response as an array.</li>
+</ul>
+
+<!--- 56853-->
+
+<ul>
+  <li><strong>Issue</strong>:  Magento does not correctly display Product &gt; <span term-uuid="8d40d668-4996-4856-9f81-b1386cf4b14f" class="glossary-term" data-toggle="popover">Catalog</span> table after upgrade from 2.0.1 to 2.1.0 on systems running Varnish. <strong>Workaround</strong>: Restart Varnish after upgrading. For more information, see <a href="http://devdocs.magento.com/guides/v2.0/comp-mgr/upgrader/upgrade.html" target="_blank">Component Manager and System Upgrade Guide: 步骤4./a&gt;.
+<!--- 54618--></a></li>
+</ul>
+
+<h2 id="system-requirements">System requirements</h2>
+<p>Our technology stack is built on PHP and MySQL. For more information, see
+<a href="/magento-system-requirements.html" target="_blank">系统要求</a>.</p>
+
+<div class="bs-callout bs-callout-info" id="info">
+  <p>Magento 2.1.2 requirements have changed slightly from 2.1.1. This release supports PHP 5.6.5 and above instead of 5.6.x.</p>
+</div>
+
+<div>
+
+  <h2 id="install-the-magento-software">Install the Magento software</h2>
+
+  <p>You can get Magento Open Source (formerly Community Edition) 2.1 from Github, Composer, or using a compressed archive.</p>
+
+  <p>See one of the following sections for more information:</p>
+
+  <ul>
+    <li><a href="#install-rc-composer">Get the Magento Open Source software using Composer</a></li>
+    <li><a href="#install-archive">Get a compressed archive</a></li>
+    <li><a href="#install-finish">Complete the installation</a></li>
+  </ul>
+
+  <h3 id="install-rc-composer" class="no_toc">Get the Magento Open Source software using Composer</h3>
+
+  <p>The Open Source software is available from <code class="highlighter-rouge">repo.magento.com</code>. Before getting the Open Source software, familiarize yourself with the Composer metapackage  <a href="/guides/v2.1/install-gde/prereq/integrator_install.html" target="_blank">先决条件</a>, then run</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=&lt;version&gt; &lt;installation directory name&gt;
+</code></pre></div>  </div>
+
+  <p>where <code class="highlighter-rouge">&lt;version&gt;</code> is <code class="highlighter-rouge">2.1.0</code>, <code class="highlighter-rouge">2.1.1</code>, and so on</p>
+
+  <p>For example, to install Magento Open Source 2.1.1 in the <code class="highlighter-rouge">magento2</code> directory:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.1.1 magento2
+</code></pre></div>  </div>
+
+  <h3 id="install-archive" class="no_toc">Get a compressed archive</h3>
+
+  <div>
+
+    <p>The following table discusses where to 获取Magento. We provide the following downloads:</p>
+
+    <ul>
+      <li>Magento Open Source software only</li>
+      <li>Magento Open Source software with sample data (designed to help you learn Magento faster)</li>
+    </ul>
+
+    <p>These packages are easy to get and install. You don’t need to use Composer, all you need to do is to upload a package to your Magento server or hosted platform, unpack it, and run the web-based Setup Wizard.</p>
+
+    <p>Archives are available in the following formats: <code class="highlighter-rouge">.zip</code>, <code class="highlighter-rouge">.tar.bz2</code>, <code class="highlighter-rouge">.tar.gz</code></p>
+
+    <p>To get the Magento Open Source software archive:</p>
+
+    <ol>
+      <li>Go to <a href="http://magento.com/download" target="_blank">http://magento.com/download</a>.</li>
+      <li>
+        <p>Choose either the software or the software and sample data:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">Magento-CE-&lt;version&gt;.*</code> (without sample data)</li>
+          <li><code class="highlighter-rouge">Magento-CE-&lt;version&gt;+Samples.*</code> (with sample data)</li>
+        </ul>
+
+        <p><code class="highlighter-rouge">&lt;version&gt;</code> is the three-digit release number (for example, <code class="highlighter-rouge">2.0.7</code>, <code class="highlighter-rouge">2.1.0</code>, and so on).</p>
+      </li>
+    </ol>
+
+    <h3 id="install-finish" class="no_toc">Complete the installation</h3>
+
+    <p>After you get the Open Source software:</p>
+
+    <ol>
+      <li><a href="/guides/v2.1/install-gde/prereq/file-system-perms.html">Set file system ownership and permissions</a>.</li>
+      <li>
+        <p>Install the software:</p>
+
+        <ul>
+          <li><a href="/guides/v2.1/install-gde/install/web/install-web.html">网页安装向导</a></li>
+          <li><a href="/guides/v2.1/install-gde/install/cli/install-cli.html">命令行</a></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 id="upgrade-from-an-earlier-version">Upgrade from an earlier version</h2>
+    <p>See the following sections for more information.</p>
+
+    <h3 id="upgrade-github" class="no_toc">Upgrade an existing installation from the GitHub repository</h3>
+
+    <p>Developers who contribute to the Open Source codebase can <a href="/guides/v2.1/comp-mgr/bk-compman-upgrade-guide.html" target="_blank">upgrade manually</a> from the Magento Open Source GitHub repository.</p>
+
+    <ol>
+      <li>
+        <p>Go to the <a href="/guides/v2.1/install-gde/install/cli/dev_update-magento.html" target="_blank">Contributing Developers</a> page.</p>
+      </li>
+      <li>
+        <p>Follow the instructions to pull the updates from the repository and update using Composer.</p>
+      </li>
+    </ol>
+
+    <h3 id="upgrade-other" class="no_toc">Other upgrades</h3>
+
+    <p>Other types of upgrades are discussed in <a href="http://devdocs.magento.com/guides/v2.1/release-notes/tech_bull_21-upgrade.html">Upgrade to Magento version 2.1 (June 22, 2016)</a>.</p>
+
+    <h2 id="migration-toolkits">Migration toolkits</h2>
+    <p>The <a href="/guides/v2.1/migration/migration-migrate.html" target="_blank">数据迁移工具</a> helps transfer existing Magento 1.x store data to Magento 2.x. This command-line interface includes verification, progress tracking, logging, and testing functions. For installation instructions, see  <a href="/guides/v2.1/migration/migration-tool-install.html" target="_blank">Install the 数据迁移工具</a>. Consider exploring or contributing to the <a href="https://github.com/magento/data-migration-tool" target="_blank"> Magento 数据迁移 repository</a>.</p>
+
+    <p>The <a href="https://github.com/magento/code-migration" target="_blank">代码迁移 Toolkit</a> helps transfer existing Magento 1.x store extensions and customizations to Magento 2.0.x. The command-line interface includes scripts for converting Magento 1.x modules and layouts.</p>
+  </div>
+</div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/release-notes/ReleaseNotes2.1.2CE.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.1/release-notes/ReleaseNotes2.1.2CE.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.1/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.1/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>LESS编码规范 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/coding-standards/code-standard-less.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/coding-standards/code-standard-less.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/coding-standards/code-standard-less.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/coding-standards/code-standard-less.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/coding-standards/code-standard-less.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">编码规范</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="coding-standards">
+    
+
+    
+    <a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="code-demarcation-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-demarcation.html">代码界定标准</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-php.html">PHP编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="php-code-sniffers">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-sniffers.html">PHP代码嗅探程序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/docblock-standard-general.html">注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="javascript-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-javascript.html">js编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="javascript-docblock-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/docblock-standard-javascript.html">JavaScript 注释文档块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="jquery-widget-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-jquery-widgets.html">jq小工具编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="less-coding-standard">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-less.html">LESS编码规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="html-style-guide">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/code-standard-html.html">HTML编码风格向导</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-guidelines">
+    
+
+    
+    <a href="/guides/v2.3/coding-standards/technical-guidelines.html">技术指南</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="technical-vision">
+    
+
+    
+    <span>技术视角</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="web-api">
+
+            
+
+            
+            <a href="/guides/v2.3/coding-standards/technical-vision/webapi.html">Web Api</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/coding-standards/bk-coding-standards.html">
+            <span property="name">编码规范</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">LESS编码规范</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">LESS编码规范</h1>
+
+  
+
+
+</section>
+
+			<p>This standard defines Magento internal requirements for code formatting and style for teams that develop LESS and <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> code.</p>
+
+<p>Some parts of Magento code might not comply with this coding standard yet, but we are working to gradually improve this.</p>
+
+<p>This coding standard is optional for third-party Magento developers.</p>
+
+<h2 id="general-rules">General rules</h2>
+
+<h3 id="indentation">Indentation</h3>
+
+<p>Use only spaces for indentation:</p>
+
+<ul>
+  <li>Tab size: 4 spaces</li>
+  <li>Indent size: 4 spaces</li>
+  <li>Continuation indent: 4 spaces</li>
+</ul>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    .nav-item {
+        ...
+    }
+}
+</code></pre></div></div>
+
+<h3 id="formatting">Formatting</h3>
+
+<h4 id="braces">Braces</h4>
+
+<p>Add one space before opening braces and a line break after. Add a line break before closing braces.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    color: @nav__color;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav{color: @nav__color;}
+</code></pre></div></div>
+
+<h4 id="selector-delimiters">Selector delimiters</h4>
+
+<p>Add a line break after each selector delimiter. Do not add spaces before or after delimiters.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav,
+.bar {
+    color: @color__base;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav, .bar {
+    color: @color__base;
+}
+</code></pre></div></div>
+
+<h4 id="quotes">Quotes</h4>
+
+<p>Use single quotes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    content: 'lorem ipsum';
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    content: "lorem ipsum";
+}
+</code></pre></div></div>
+
+<h4 id="combinator-indents">Combinator indents</h4>
+
+<p>Add spaces before and after combinators.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav + .bar {
+    color: @bar__color;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav+.bar {
+    color: @bar__color;
+}
+
+.nav +.bar {
+    color: @bar__color;
+}
+
+.nav+ .bar {
+    color: @bar__color;
+}
+</code></pre></div></div>
+
+<h4 id="properties-line-break">Properties line break</h4>
+
+<p>Start each property declaration in a new line.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    background-color: @nav__background-color;
+    color: @nav__color;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    color: @nav__color; background-color: @nav__background-color;
+}
+</code></pre></div></div>
+
+<h4 id="properties-colon-indents">Properties colon indents</h4>
+
+<p>Add space after but not before the colon that separates property names from values.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    color: @nav__color;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    color : @nav__color;
+}
+
+.bar {
+    color:@bar__color;
+}
+
+.item {
+    color :@item__color;
+}
+</code></pre></div></div>
+
+<h4 id="end-of-file">End of file</h4>
+
+<p>Add a blank line at the end of file.</p>
+
+<h4 id="end-of-selector">End of selector</h4>
+
+<p>Add a blank line after a selector.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css
+    .nav {
+        background-color: @nav__background-color;
+    }
+
+    .bar {
+        background-color: @bar__background-color;
+    }
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>css
+    .nav {
+        background-color: @nav__background-color;
+    }
+    .bar {
+        background-color: @bar__background-color;
+    }
+</code></pre></div></div>
+
+<h4 id="end-of-the-property-line">End of the property line</h4>
+
+<p>Add a semicolon after property.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    background-color: @nav__background-color;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    background-color: @nav__background-color
+}
+</code></pre></div></div>
+
+<h4 id="important-property">!important property</h4>
+
+<p>Avoid using the <code class="highlighter-rouge">!important</code> property if possible. If it is required, add a space before the property.</p>
+
+<p><strong>Correct</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.jquery-ui-calendar-item {
+    background-color: @nav__background-color !important;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    .jquery-ui-calendar-item {
+        background-color: @nav__background-color!important;
+    }
+</code></pre></div></div>
+
+<h3 id="comments">Comments</h3>
+
+<p>First and second level comments must be surrounded by empty lines.
+First, second and third level comments should have two spaces after “//”. Inline comments should have one space after “//”.</p>
+
+<p><strong>Correct</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//
+//  First level comment
+//  _____________________________________________
+
+.nav {
+    background-color: @nav__background-color;
+}
+
+//
+//  Second level comment
+//  ---------------------------------------------
+
+.nav {
+    background-color: @nav__background-color;
+}
+
+//  Comment
+.nav {
+    //  New line comment
+    background-color: @nav__background-color; // ToDo UI: todo inline comment
+    color: @nav__color; // inline comment
+}
+</code></pre></div></div>
+
+<h3 id="selectors">Selectors</h3>
+
+<h4 id="types">Types</h4>
+
+<p>Magento supports the two most recent versions of all major browsers. IEis supported from version 9 and later.</p>
+
+<p>You can use almost all CSS3 selectors: descendants, attributes, pseudo classes, structural, pseudo elements, and so on.</p>
+
+<p>Exception: Avoid the <code class="highlighter-rouge">id</code> selector.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    ...
+}
+
+.nav + bar {
+    ...
+}
+
+.nav:not(.bar) {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#foo {
+    ...
+}
+</code></pre></div></div>
+
+<h3 id="classes-naming">Classes Naming</h3>
+
+<h4 id="standard-classes">Standard classes</h4>
+
+<p>Class names should be lowercase, start with a letter (except helper classes), words should be separated with dash ‘-‘.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav-bar {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.navBar {
+   ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>: underscore separation</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav_bar {
+   ...
+}
+</code></pre></div></div>
+
+<h4 id="helper-classes">Helper classes</h4>
+
+<p>Helper class names should be lowercase and start with underscore (“_”).</p>
+
+<p>Some parts of Magento code might not comply with this standard yet. You might still find helper names with no underscores. We are working to gradually remove the inconsistency.</p>
+
+<p><strong>Example</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>._active {
+    ...
+}
+</code></pre></div></div>
+
+<h4 id="size">Size</h4>
+
+<p>Use class names that are as short as possible, but as long as necessary.
+Try to convey what class is about while being as brief as possible.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav-bar {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>: too long</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.navigation-panel-in-footer {
+   ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>: too short</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nvpf {
+   ...
+}
+</code></pre></div></div>
+
+<h4 id="meaning">Meaning</h4>
+
+<p>Use meaningful, specific class names that reflect the purpose of the element. Class names should not be presentational or cryptic.</p>
+
+<p><strong>Correct</strong>: specific</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.category {
+    ...
+}
+.category-title {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>: cryptic</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.foo-1901 {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>: presentational</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.button-green {
+   ...
+}
+
+.clear {
+   ...
+}
+</code></pre></div></div>
+
+<h3 id="selectors-naming">Selectors naming</h3>
+
+<h4 id="type-selectors">Type selectors</h4>
+
+<p>Avoid qualifying class names with type selectors.</p>
+
+<p>Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.error {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div.error {
+   ...
+}
+</code></pre></div></div>
+
+<p>Type selectors must be lowercase.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav &gt; li {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav &gt; LI {
+   ...
+}
+</code></pre></div></div>
+
+<h4 id="formatting-1">Formatting</h4>
+
+<p>Write selector in one line, do not use concatenation.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.product-list-item {
+    ...
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.product {
+    ...
+    &amp;-list {
+        ...
+        &amp;-item {
+            ...
+        }
+    }
+}
+</code></pre></div></div>
+
+<h4 id="nesting">Nesting</h4>
+
+<p>Avoid using more than three levels of nesting.</p>
+
+<p>Exceptions are pseudo elements and states.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.footer {
+    ...
+    .nav {
+        ...
+    }
+    .nav-list {
+        ...
+        .nav-list-item {
+            ...
+        }
+    }
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.footer {
+    ...
+    .nav {
+        ...
+        .nav-list {
+            ...
+            .nav-list-item {
+                ...
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<h2 id="properties">Properties</h2>
+
+<h3 id="sorting">Sorting</h3>
+
+<p>Sort all properties in the alphabetical order. Mixins, variables, and so on should go first.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    background-color: @nav__background-color;
+    color: @nav__color;
+    text-align: center;
+}
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.nav {
+    color: @nav__color;
+    text-align: center;
+    background-color: @nav__background-color;
+}
+</code></pre></div></div>
+
+<h3 id="shorthand">Shorthand</h3>
+
+<p>Use shorthand properties where possible.</p>
+
+<p>CSS offers a variety of shorthand properties that should be used whenever possible, even in cases where only one value is explicitly set.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>border-top: 0;
+padding: 0 1em 2em;
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>border-top-style: none;
+padding-bottom: 2rem;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-top: 0;
+</code></pre></div></div>
+
+<h3 id="0-and-units">0 and units</h3>
+
+<p>Do not specify units “0” value.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>border-width: 0;
+margin: 0;
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>border-width: 0px;
+margin: 0rem;
+</code></pre></div></div>
+
+<h3 id="floating-values">Floating values</h3>
+
+<p>Omit leading “0”s in values, use dot instead.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> margin-left: .5rem;
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>margin-left: 0.5rem;
+</code></pre></div></div>
+
+<h3 id="hexadecimal-notation">Hexadecimal notation</h3>
+
+<ul>
+  <li>Use lowercase only.</li>
+  <li>Use three-character hexadecimal notation where possible.</li>
+  <li>Avoid using hexadecimal values for color in properties, use only variables instead.</li>
+</ul>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@nav__color: #fafafa;
+@nav-item__color: #f00;
+...
+color: @nav-item__color;
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>color: #ff0000;
+@nav__color: #FAFAFA;
+@nav-item__color: red;
+</code></pre></div></div>
+
+<h2 id="variables">Variables</h2>
+
+<h3 id="location">Location</h3>
+
+<h4 id="local-variables">Local variables</h4>
+
+<p>If variables are local and used only in a <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> scope, they should be located in the module file, in the beginning of the general comment.</p>
+
+<p><strong>Example</strong> <code class="highlighter-rouge">_module.less</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+
+//
+//  Variables
+//  _____________________________________________
+
+    //  Colors
+@btn__color: @color-brownie;
+@btn-primary__color: @color-white;
+@btn-secondary__color: @color-white;
+...
+</code></pre></div></div>
+
+<h4 id="theme-variables">Theme variables</h4>
+
+<p>If variables are common for several modules they should be specified in the <code class="highlighter-rouge">_theme.less</code> file</p>
+
+<h3 id="naming">Naming</h3>
+
+<p>All variable names must be lowercase.</p>
+
+<h4 id="value-variables">Value variables</h4>
+
+<p>General model is the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@property</span><span class="o">-</span><span class="n">name</span>
+</code></pre></div></div>
+
+<p><strong>Examples</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@primary__color: @color-phoenix;
+@indent__base: 2rem;
+@border-radius-round: 100%;
+</code></pre></div></div>
+
+<h4 id="parameter-variables">Parameter variables</h4>
+
+<p>General model is the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@component-element__state__property__modifier
+</code></pre></div></div>
+
+<p>Component name must meaningful. It can contain the <code class="highlighter-rouge">primary</code>, <code class="highlighter-rouge">secondary</code>, <code class="highlighter-rouge">tertiary</code> names.</p>
+
+<p><code class="highlighter-rouge">base</code> is a modifier.</p>
+
+<p><strong>Examples</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@color-orange: '';
+
+@link__hover__color: '';
+
+@nav-element__background-color: '';
+
+@secondary__color: '';
+
+@side-nav__indent__s: '';
+
+@side-nav-el__background-color: '';
+
+@side-nav-el__active__background-color: '';
+
+@side-nav-el__active-focus__background-color: '';
+
+@side-nav-el__active-focus__font-size__xl: '';
+
+@text__color__base: '';
+</code></pre></div></div>
+
+<h2 id="mixins">Mixins</h2>
+
+<h3 id="location-1">Location</h3>
+
+<p><span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> mixins (except extends) should be located in the <code class="highlighter-rouge">source/utilities</code> directory.</p>
+
+<h3 id="naming-1">Naming</h3>
+
+<p>For <span term-uuid="1a305bdb-9be8-44aa-adad-98758821d6a7" class="glossary-term" data-toggle="popover">mixin</span> naming apply the class naming rules.</p>
+
+<p>For mixins grouping use the double underscore “__” prefix.</p>
+
+<p><strong>Example</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.extend__clearfix (...) {
+    ...
+}
+
+.vendor-prefix__flex-direction (...) {
+    ...
+}
+</code></pre></div></div>
+
+<h2 id="extends">Extends</h2>
+
+<h3 id="location-2">Location</h3>
+
+<p>Local extends used only in one file, should be specified in this file.
+Extends that are used in several files should be specified in the theme’s <code class="highlighter-rouge">source/_extend.less</code> file.</p>
+
+<h3 id="naming-2">Naming</h3>
+
+<p>Extend names should start with the <code class="highlighter-rouge">.abs-</code> prefix.</p>
+
+<h2 id="import-directive"><code class="highlighter-rouge">@import</code> directive</h2>
+
+<p>Always add the file <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> of the imported resource.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import 'source/lib/_lib.less';
+@import (css) 'styles.css';
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import 'source/lib/_lib';
+@import (css) 'styles';
+</code></pre></div></div>
+
+<p>Use single quotes.</p>
+
+<p><strong>Correct</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import 'source/lib/_lib.less';
+</code></pre></div></div>
+
+<p><strong>Incorrect</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "source/lib/_lib.less";
+</code></pre></div></div>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/coding-standards/code-standard-less.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/coding-standards/code-standard-less.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

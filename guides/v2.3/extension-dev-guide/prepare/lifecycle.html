@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>扩展的生命周期 | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/prepare/lifecycle.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/extension-dev-guide/prepare/lifecycle.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/extension-dev-guide/prepare/lifecycle.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/extension-dev-guide/prepare/lifecycle.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/extension-dev-guide/prepare/lifecycle.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">PHP开发文档</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">介绍</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="开发者指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/developers_roadmap.html">开发者指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer介绍">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer.html">Composer介绍</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="常用术语表">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/intro/intro-composer-gloss.html">常用术语表</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="准备(快速开始开发)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/prepare/prepare.html">准备(快速开始开发)</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="组件类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-modtypes.html">组件类型</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="关于组件的文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/prepare_file-str.html">关于组件的文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="开发和打包组件指引">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/dev-summary.html">开发和打包组件指引</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="extension-lifecycle">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/prepare/lifecycle.html">扩展生命周期</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="build">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/build/build.html">Build</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="di.xml文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/di-xml-file.html">di.xml文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="最佳开发环境">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/optimal-dev-environment.html">最佳开发环境</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="composer.json文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/composer-integration.html">composer.json文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="定义你的配置文件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/required-configuration-files.html">定义你的配置文件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建你的组件文件结构">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-file-structure.html">创建你的组件文件结构</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="注册你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/component-registration.html">注册你的组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="统一资源名称(urn)验证">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/XSD-XML-validation.html">统一资源名称(URN)验证</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="你组件的名称">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/create_component.html">你组件的名称</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="组件加载顺序">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/module-load-order.html">组件加载顺序</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="启用和禁用组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/build/enable-module.html">启用和禁用组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="package">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/package/package.html">Package</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="打包组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_module.html">打包组件</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="上传组件到magento市场">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/package/package_mktpl.html">上传组件到Magento市场</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="validate">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/validate/validate.html">Validate</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="测试你的组件">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/validate/test-module.html">测试你的组件</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="部份缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching.html">部份缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="创建自定义缓存引擎">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/database-caching.html">创建自定义缓存引擎</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="创建缓存类型">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/partial-caching/create-cache-type.html">创建缓存类型</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="页面缓存">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cache/page-caching.html">页面缓存</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="public-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/public-content.html">公开内容</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="private-content">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cache/page-caching/private-content.html">隐私内容</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="添加命令行命令">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-add.html">添加命令行命令</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="命令命名指南">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">命令命名指南</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="如何添加命令行命令">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-howto.html">如何添加命令行命令</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="staging-(magento-commerce-only)">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/staging.html">Staging (仅企业版适用)</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件开发">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/module-development.html">组件开发</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="服务约定">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="public-interfaces-&amp;-apis">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/api-concepts.html">Public interfaces &amp; APIs</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="服务契约设置模式">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/design-patterns.html">服务契约设置模式</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="依赖注入">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/depend-inj.html">依赖注入</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="objectmanager">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/object-manager.html">ObjectManager</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="事件和观查者">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/events-and-observers.html">事件和观查者</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="factories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/factories.html">Factories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="proxies">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/proxies.html">Proxies</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="代码生成">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/code-generation.html">代码生成</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="实体属性值(eav)和扩展属性">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/attributes.html">实体属性值(EAV)和扩展属性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="插件(拦截器)">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/plugins.html">插件(拦截器)</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="routing">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/routing.html">Routing</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="indexing">
+
+            
+
+            
+            <span>Indexing</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="索引概述">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing.html">索引概述</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="索引优化">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexer-batch.html">索引优化</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="添加自定义索引">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/indexing-custom.html">添加自定义索引</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="declarative-schema">
+
+            
+
+            
+            <span>Declarative schema</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="delcarative-schema-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/">Delcarative schema overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="migrate-install/upgrade-scripts-to-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html">Migrate install/upgrade scripts to declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configure-declarative-schema">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">Configure declarative schema</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="develop-data-and-schema-patches">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html">Develop data and schema patches</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="消息队列-(magento-commerce-edition-only)">
+
+            
+
+            
+            <span>消息队列 (Magento Commerce Edition Only)</span>
+            
+
+            
+            <ul>
+                
+
+                
+                
+                <li class="nav-level3  " id="消息队列-overview">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/message-queues.html">消息队列 overview</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="configure-message-queues">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/config-mq.html">Configure message Queues</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="迁移消息队列配置">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/queue-migration.html">迁移消息队列配置</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="bulk-operations">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/bulk-operations.html">Bulk operations</a>
+                    
+
+                    
+                </li>
+                
+                
+
+                
+                
+                <li class="nav-level3  " id="批量操作实现示例">
+                    
+
+                    
+                    <a  href="/guides/v2.3/extension-dev-guide/message-queues/implement-bulk.html">批量操作实现示例</a>
+                    
+
+                    
+                </li>
+                
+                
+            </ul>
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="添加扩展属性到实体">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html">添加扩展属性到实体</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="searching-with-repositories">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/searching-with-repositories.html">Searching with repositories</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="将服务配置成web-api">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="部署期间清空目录">
+
+            
+
+            
+            <a href="/guides/v2.3/howdoi/php/php_clear-dirs.html">部署期间清空目录</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="adapters">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/adapters.html">Adapters</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="configuration">
+    
+
+    
+    <span>Configuration</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="sensitive-environemnt-settings">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/sensitive-and-environment-settings.html">敏感环境设置</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="configuration-importers">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/configuration/importers.html">配置导入器</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="framework">
+    
+
+    
+    <span>Framework</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="序列化库">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/framework/serializer.html">序列化库</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="security">
+    
+
+    
+    <span>Security</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="xss-prevention">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/xss-protection.html">XSS防范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="不安全的方法">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/security/non-secure-functions.html">不安全的方法</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="versioning">
+    
+
+    
+    <a href="/guides/v2.3/extension-dev-guide/versioning/">Versioning</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模块版本依赖">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/dependencies.html">模块版本依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="基础代码修改">
+
+            
+
+            
+            <a href="/guides/v2.3/extension-dev-guide/versioning/codebase-changes.html">基础代码修改</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">
+            <span property="name">PHP开发文档</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">扩展的生命周期</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">扩展的生命周期</h1>
+
+  
+
+
+</section>
+
+			<p>This topic describes a module’s lifecycle and how to create classes that execute code when your module is initialized, upgraded, or uninstalled.
+These executable classes can perform tasks that set up the database, update data, and clean up data.</p>
+
+<p><em>Note:</em> Theme and language package extensions do not need initialization or uninstallation tasks because they do not install database schemas or update data.</p>
+
+<h2 id="lifecycle-guidelines">Lifecycle guidelines</h2>
+
+<p>Follow these guidelines when developing your executable classes to have them run during specific lifecycle stages:</p>
+
+<ul>
+  <li>Put your executable class in the <code class="highlighter-rouge">Setup</code> directory inside your module’s root directory.</li>
+  <li>Use the specific file and class name for your class’s target lifecycle stage.</li>
+  <li>Implement the specific class interface and function for your class’s target stage.</li>
+  <li>Follow Magento’s <a href="/guides/v2.3/architecture/versioning.html">versioning policy</a> when changing your module’s version.</li>
+</ul>
+
+<h2 id="schema-initialization-stages">Schema initialization stages</h2>
+
+<p>The schema initialization stages are the first set of processes Magento runs when your module is installed, re-installed, or upgraded.</p>
+
+<h3 id="schema-installation">Schema installation</h3>
+
+<p>Magento executes the schema installation class during your module’s initial install. 
+If the <code class="highlighter-rouge">schema_version</code> for your module is found in the <code class="highlighter-rouge">setup_module</code> table, Magento skips this stage and proceeds to the <a href="#schema-upgrade">schema upgrade</a> stage.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name:</strong></td>
+      <td><code class="highlighter-rouge">InstallSchema</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface:</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/InstallSchemaInterface.php"><code class="highlighter-rouge">InstallSchemaInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method:</strong></td>
+      <td><code class="highlighter-rouge">install()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> InstallSchema.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\InstallSchema</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\InstallSchemaInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">SchemaSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Install schema logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="schema-upgrade">Schema upgrade</h3>
+
+<p>Magento executes your module’s schema upgrade class when it detects an earlier installation. 
+The purpose of this class is to update the database structure or apply patches.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">UpgradeSchema</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/UpgradeSchemaInterface.php"><code class="highlighter-rouge">UpgradeSchemaInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">upgrade()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> UpgradeSchema.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\UpgradeSchema</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\UpgradeSchemaInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">upgrade</span><span class="p">(</span><span class="nx">SchemaSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Upgrade schema logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="recurring-schema-event">Recurring schema event</h3>
+
+<p>Magento executes your module’s recurring schema event class after every schema installation or upgrade stage.
+This class makes final modifications to the database schema after it has been installed or updated.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">Recurring</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/InstallSchemaInterface.php"><code class="highlighter-rouge">InstallSchemaInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">install()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> Recurring.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\Recurring</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\InstallSchemaInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">SchemaSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Recurring schema event logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="data-initialization">Data initialization</h2>
+
+<p>Magento goes through your module’s data initialization stages after the schema initialization processes complete.</p>
+
+<h3 id="data-installation">Data installation</h3>
+
+<p>Magento executes the data installation class during your module’s initial install unless an existing version entry is found in the database.
+The purpose of this class is to populate the database with initial data.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">InstallData</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/InstallDataInterface.php"><code class="highlighter-rouge">InstallDataInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">install()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> InstallData.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\InstallData</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\InstallDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Data install logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="data-upgrade">Data upgrade</h3>
+
+<p>Magento executes the data upgrade class when it detects an earlier version in the <code class="highlighter-rouge">schema_version</code> field for the module in the <code class="highlighter-rouge">setup_module</code> table.
+The purpose of this class is to fix corrupted data or populate a new data field after a schema change.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">UpgradeData</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/UpgradeDataInterface.php"><code class="highlighter-rouge">UpgradeDataInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">upgrade()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> UpgradeData.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\UpgradeData</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\UpgradeDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">upgrade</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Data upgrade logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="recurring-data-event">Recurring data event</h3>
+
+<p>Magento executes your module’s recurring data event class after every data installation or upgrade stage.
+This class makes final modifications to the database store after data has been installed or updated.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">RecurringData</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/InstallDataInterface.php"><code class="highlighter-rouge">InstallDataInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">install()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> InstallDataInterface.php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\RecurringData</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\InstallDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Recurring data event logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="database-interface">Database interface</h2>
+
+<p>Use the <a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/ModuleDataSetupInterface.php"><code class="highlighter-rouge">ModuleDataSetupInterface</code></a> when you need to do database manipulations.
+If your installation or upgrade logic spans multiple classes, pass this resource on to other classes that need to modify the database.</p>
+
+<p><strong>Example:</strong> <a href="https://github.com/magento/magento2/blob/2.3/app/code/Magento/Customer/Setup/InstallData.php">Customer module’s InstallData.php</a></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">InstallData</span> <span class="k">implements</span> <span class="nx">InstallDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * @var CustomerFactory
+     */</span>
+    <span class="k">private</span> <span class="nv">$customerSetupFactory</span><span class="p">;</span>
+
+    <span class="sd">/**
+     * @param CustomerFactory $customerSetupFactory
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">CustomerFactory</span> <span class="nv">$customerSetupFactory</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">customerSetupFactory</span> <span class="o">=</span> <span class="nv">$customerSetupFactory</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="sd">/** @var Customer $customerSetup */</span>
+        <span class="nv">$customerSetup</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">customerSetupFactory</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">([</span><span class="s1">'setup'</span> <span class="o">=&gt;</span> <span class="nv">$setup</span><span class="p">]);</span>
+
+        <span class="nv">$setup</span><span class="o">-&gt;</span><span class="na">startSetup</span><span class="p">();</span>
+
+        <span class="o">...</span>
+
+        <span class="nv">$customerSetup</span><span class="o">-&gt;</span><span class="na">installEntities</span><span class="p">();</span>
+
+        <span class="nv">$customerSetup</span><span class="o">-&gt;</span><span class="na">installCustomerForms</span><span class="p">();</span>
+
+        <span class="nv">$disableAGCAttribute</span> <span class="o">=</span> <span class="nv">$customerSetup</span><span class="o">-&gt;</span><span class="na">getEavConfig</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">(</span><span class="s1">'customer'</span><span class="p">,</span> <span class="s1">'disable_auto_group_change'</span><span class="p">);</span>
+        
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="module-version">Module version</h2>
+
+<p>Use the <a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/ModuleContextInterface.php"><code class="highlighter-rouge">ModuleContextInterface</code></a> to get the current module version and execute logic based on the version.</p>
+
+<p><strong>Example:</strong> <a href="https://github.com/magento/magento2/blob/2.3/app/code/Magento/User/Setup/UpgradeData.php">User module’s UpgradeData.php</a></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nx">Magento\User\Setup</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Framework\Encryption\Encryptor</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\ModuleContextInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\ModuleDataSetupInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\Setup\UpgradeDataInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">UpgradeData</span> <span class="k">implements</span> <span class="nx">UpgradeDataInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * @inheritdoc
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">upgrade</span><span class="p">(</span><span class="nx">ModuleDataSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$setup</span><span class="o">-&gt;</span><span class="na">startSetup</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">version_compare</span><span class="p">(</span><span class="nv">$context</span><span class="o">-&gt;</span><span class="na">getVersion</span><span class="p">(),</span> <span class="s1">'2.0.1'</span><span class="p">,</span> <span class="s1">'&lt;'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">upgradeHash</span><span class="p">(</span><span class="nv">$setup</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nv">$setup</span><span class="o">-&gt;</span><span class="na">endSetup</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="o">...</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="uninstall-event">Uninstall event</h2>
+
+<p>Magento executes the uninstall event class when your module is uninstalled using the <a href="/guides/v2.3/comp-mgr/module-man/compman-uninst-final.html">Component Manager</a> or with the following command line command:</p>
+
+<p><code class="highlighter-rouge">bin/magento module:uninstall --remove-data &lt;module_name&gt;</code></p>
+
+<p>In this phase, your module should remove all traces of its existence in the database by dropping tables, deleting data, or restoring data.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Class name</strong></td>
+      <td><code class="highlighter-rouge">Uninstall</code></td>
+    </tr>
+    <tr>
+      <td><strong>Interface</strong></td>
+      <td><a href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Setup/UninstallInterface.php"><code class="highlighter-rouge">UninstallInterface</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Method</strong></td>
+      <td><code class="highlighter-rouge">uninstall()</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong> Uninstall.php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="err">\</span><span class="nc">VendorName\ModuleName\Setup\Uninstall</span> <span class="k">implements</span> <span class="nx">\Magento\Framework\Setup\UninstallInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**
+     * {@inheritdoc}
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">uninstall</span><span class="p">(</span><span class="nx">SchemaSetupInterface</span> <span class="nv">$setup</span><span class="p">,</span> <span class="nx">ModuleContextInterface</span> <span class="nv">$context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">//Uninstall logic
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="disabled-modules">Disabled modules</h3>
+
+<p>A disabled module can still execute its uninstall event.
+However, module-specific configurations such as its dependency injection and event/observer configurations will not be available and will cause problems.</p>
+
+<p>Avoid this situation by not including dependencies in your uninstall event class</p>
+
+<p><strong>Related Topics</strong></p>
+
+<ul>
+  <li>Magento’s <a href="/guides/v2.3/architecture/versioning.html">versioning policy</a></li>
+</ul>
+
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/extension-dev-guide/prepare/lifecycle.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/extension-dev-guide/prepare/lifecycle.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+

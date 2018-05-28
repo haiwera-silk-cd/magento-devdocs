@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Magento 1.x GDPR compliance | Magento 2 Developer Documentation</title>
+	<meta name="description" content="Magento 2 Developer Documentation.
+">
+
+	<link rel="stylesheet" href="/assets/css/app.css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+	<link rel="stylesheet" href="/common/css/devdocs.css" />
+
+	<script>
+  var baseUrl = "";
+  var algolia = {
+    id : "E642SEDTHL",
+    index:  "devdocs",
+    key:  "d2d0f33ab73e291ef8d88d8b565e754c"
+  };
+</script>
+
+
+
+
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/architecture/gdpr/magento-1x.html">
+
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://magento.com/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://magento.com/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://magento.com/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://magento.com/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://magento.com/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://magento.com/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://magento.com/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://magento.com/apple-touch-icon-180x180.png">
+
+</head>
+<body class="layout-default">
+
+	<header class="site-header">
+
+		<nav class="site-nav">
+
+  <div class="menu-btn">
+    <a id="menu-btn" class="menu-trigger menu-icon" href="#nav-main" aria-haspopup="true" aria-controls="nav-main"></a>
+  </div>
+
+  <div class="nav-container">
+
+    <a class="logo" href="/guides/v2.3/">
+      <img src="/assets/i/m-logo.svg" alt=""><img src="/assets/i/magento-logo.svg" alt="Magento" class="magento-logo" />
+      <span class="site-logo">DevDocs</span>
+    </a>
+
+    <div id="nav-main" class="nav-main-wrap" aria-labelledby="menu-btn">
+      
+<div class="version-switcher dropdown" data-version="2.3">
+	<button id="version-switcher-button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Magento 2.3 Pre-release
+	</button>
+
+	<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="version-switcher-button">
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.0/architecture/gdpr/magento-1x.html">Magento 2.0</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.1/architecture/gdpr/magento-1x.html">Magento 2.1</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.2/architecture/gdpr/magento-1x.html">Magento 2.2</a></li>
+	
+		<li><a class="dropdown-item" data-proofer-ignore href="/guides/v2.3/architecture/gdpr/magento-1x.html">Magento 2.3 Pre-release</a></li>
+	
+  </ul>
+
+</div>
+
+
+      <!-- Main Navigation -->
+<ul class="nav-main" role="menubar">
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">部署</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          <li><a href="/guides/v2.3/install-gde/bk-install-guide.html">安装向导</a></li>
+          
+          <li><a href="/guides/v2.3/config-guide/bk-config-guide.html">配置手册</a></li>
+          
+          <li><a href="/guides/v2.3/performance-best-practices/index.html">高效实践</a></li>
+          
+          <li><a href="/guides/v2.3/migration/bk-migration-guide.html">迁移指引</a></li>
+          <li><a href="/guides/v2.3/cloud/bk-cloud.html">上云指引</a></li>
+          <li><a href="/magento-release-information.html">版本日志</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">开发</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+
+      <div class="nav-section">
+        <div class="nav-section-title">服务端</div>
+        <ul>
+          <li><a href="/guides/v2.3/architecture/bk-architecture.html">架构说明</a></li>
+          <li><a href="/guides/v2.3/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a></li>
+          <li><a href="/guides/v2.3/ext-best-practices/bk-ext-best-practices.html">扩展开发实践</a></li>
+          <li><a href="/guides/v2.3/mrg/intro.html">各模块介绍</a></li>
+          <li><a href="/guides/v2.3/coding-standards/bk-coding-standards.html">编码规范</a></li>
+          <li><a href="/guides/v2.3/contributor-guide/contributing.html">贡献指引</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">前端</div>
+        <ul>
+          <li class=""><a href="/guides/v2.3/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a></li>
+          
+          <li><a href="/guides/v2.3/ui_comp_guide/bk-ui_comps.html">UI组件手册</a></li>
+          
+          <li><a href="/guides/v2.3/javascript-dev-guide/bk-javascript-dev-guide.html">JavaScript开发手册</a></li>
+          <li><a href="/guides/v2.3/pattern-library/bk-pattern.html">管理面板设计模式及所用库</a></li>
+          <li><a href="/guides/v2.3/design-styleguide/bk-styleguide.html">管理面板样式手册</a></li>
+          <li><a href="https://magento-research.github.io/pwa-devdocs/">PWA Studios</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title"><abbr>API</abbr></div>
+        <ul>
+          <li><a href="/guides/v2.3/get-started/bk-get-started-api.html">Web APIs起步</a></li>
+          <li><a href="/guides/v2.3/rest/bk-rest.html">REST API参考</a></li>
+          <li><a href="/guides/v2.3/soap/bk-soap.html">SOAP API参考</a></li>
+          
+          <li><a href="/guides/v2.3/graphql/index.html">GraphQL开发者手册(新!)</a></li>
+          
+          
+          <li><a href="/guides/v2.3/marketplace/eqp/api.html">Marketplace EQP API Reference</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">测试</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/test/testing.html">Magento测试手册</a></li>
+        
+        <li><a href="/guides/v2.3/magento-functional-testing-framework/release-2/introduction.html">功能验收测试(新!)</a></li>
+        
+        <li><a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试</a></li>
+        <li><a href="/guides/v2.3/test/integration/integration_test_execution.html">集成测试</a></li>
+        <li><a href="/guides/v2.3/test/js/jasmine.html">JavaScript单元测试</a></li>
+        <li><a href="/guides/v2.3/test/unit/unit_test_execution.html">PHP单元测试</a></li>
+        <li><a href="/guides/v2.3/get-started/web-api-functional-testing.html">Web API功能测试</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-separator"></li>
+
+
+  <li class="nav-main-item" tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">功能文档</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+          
+          <li class="leaf"><a href="/guides/v2.3/advanced-reporting/overview.html">高级报表</a></li>
+          
+        
+        <li class="leaf"><a href="/guides/v2.3/b2b/bk-b2b.html">B2B</a></li>
+        
+        <li><a href="/guides/v2.3/howdoi/checkout/checkout_overview.html">Checkout</a></li>
+        <li><a href="/guides/v2.3/payments-integrations/bk-payments-integrations.html">支付集成</a></li>
+        
+          <li><a href="/guides/v2.3/extension-dev-guide/staging.html">Staging</a></li>
+        
+      </ul>
+    </div>
+
+  </li>
+
+
+  <li class="nav-main-item"  tabindex="0" role="menuitem" aria-haspopup="true">
+    <span tabindex="-1">指引</span>
+
+    <div class="nav-popup" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a></li>
+        
+        <li><a  data-proofer-ignore href="/guides/v2.3/get-started/order-tutorial/order-intro.html">使用EST APIs处理订单</a></li>
+        
+
+        <li><a href="/videos/">视频教程</a></li>
+      </ul>
+    </div>
+
+  </li>
+
+</ul><!-- /.nav-main -->
+
+    </div>
+
+    <div class="search-btn">
+      <a class="search-trigger search-icon" href="#"></a>
+    </div>
+
+    <form class="quick-search" action="/guides/v2.3/search.html" method="get" novalidate="novalidate">
+      <input type="search" name="q" placeholder="Search" />
+      <a href="#" class="quick-search-close">&times;</a>
+    </form>
+
+  </div>
+
+</nav><!-- #site-nav -->
+<div class="nav-main-fader"></div>
+
+
+	</header>
+
+	<div class="global-wrapper">
+
+		<div class="main-container">
+			<a id="main-content"></a>
+
+
+<div class="content-container">
+
+	<!-- sidebar -->
+<aside class="sidebar">
+	<a href="#" data-proofer-ignore class="toc-toggler">内容表格</a>
+	<div class="sidebar-wrapper">
+
+		
+
+		<h4 class="guide-title">架构指引</h4>
+		<div class="collapsible-navigation">
+		    <ul>
+		    
+		    	
+
+<li class="nav-level1  " id="介绍">
+    
+
+    
+    <a href="/guides/v2.3/architecture/bk-architecture.html">介绍</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="architectural-basics">
+    
+
+    
+    <a href="/guides/v2.3/architecture/archi_perspectives/ABasics_intro.html">架构基础</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="可扩展和模块化">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/extensibility.html">可扩展和模块化</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="容易的前端定制">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/frontend_custom_strategies.html">容易的前端定制</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="全局可扩展的特性">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/global_extensibility_features.html">全局可扩展的特性</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="security">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/security_intro.html">Security</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="网店前台自定义策略">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/storefront_customization.html">网店前台自定义策略</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="架构图">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/arch_diagrams.html">架构图</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="技术栈">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/tech-stack.html">技术栈</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="架构的分层">
+    
+
+    
+    <a href="/guides/v2.3/architecture/archi_perspectives/ALayers_intro.html">架构的分层</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="presentation-layer">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/present_layer.html">Presentation layer</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="服务层">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/service_layer.html">服务层</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="领域层">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/domain_layer.html">领域层</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="持久层">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/persist_layer.html">持久层</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="组件">
+    
+
+    
+    <a href="/guides/v2.3/architecture/archi_perspectives/components/Acomponents.html">组件</a>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="模块概述">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块和地区">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_and_areas.html">模块和地区</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块规范">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_conventions.html">模块规范</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块关系">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_relationships.html">模块关系</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块依赖">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_depend.html">模块依赖</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2  " id="模块依赖类型">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/archi_perspectives/components/modules/mod_depend_types.html">模块依赖类型</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="magento框架">
+    
+
+    
+    <a href="/guides/v2.3/architecture/archi_perspectives/framework.html">Magento框架</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="第三方库">
+    
+
+    
+    <a href="/guides/v2.3/architecture/archi_perspectives/third-party-libs.html">第三方库</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="gdpr-compliance">
+    
+
+    
+    <span>GDPR compliance</span>
+    
+
+    
+    <ul>
+        
+        
+        
+        <li class="nav-level2  " id="magento-2.x">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/gdpr/magento-2x.html">Magento 2.x</a>
+            
+
+            
+        </li>
+        
+        
+        
+        
+        <li class="nav-level2 active " id="magento-1.x">
+
+            
+
+            
+            <a href="/guides/v2.3/architecture/gdpr/magento-1x.html">Magento 1.x</a>
+            
+
+            
+        </li>
+        
+        
+    </ul>
+    
+</li>
+
+
+		    
+		    </ul>
+		</div>
+
+	</div>
+
+</aside>
+<!-- /sidebar -->
+
+
+	<section class="content">
+		<div class="content-wrap">
+			<!-- page-header -->
+<section class="page-intro">
+	
+
+  <nav class="breadcrumbs">
+
+    <ol class="breadcrumb list-unstyled" vocab="http://schema.org/" typeof="BreadcrumbList">
+
+      <li class="breadcrumb-item"><a class="breadcrumb-item" href="/guides/v2.3/"><span>首页</span></a></li>
+
+    <!-- Iteration breadcrumb item -->
+    
+    
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+
+        
+          <a property="item" typeof="WebPage" href="/guides/v2.3/architecture/bk-architecture.html">
+            <span property="name">架构指引</span>
+          </a>
+        
+
+        <meta property="position" content="1" />
+      </li>
+
+    
+
+      <!-- Skip if root -->
+      
+
+      <!-- Get breadcrumb title -->
+      
+
+      <!-- SEO data -->
+      
+
+      <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+
+        
+
+          
+
+          <span property="name">Magento 1.x GDPR compliance</span>
+
+        
+
+        <meta property="position" content="2" />
+      </li>
+
+    
+
+    </ol>
+
+  </nav>
+
+
+
+	
+
+	
+
+	<h1 class="page-heading">Magento 1.x GDPR compliance</h1>
+
+  
+
+
+</section>
+
+			<p>The European Union (EU) enacted <a href="https://www.eugdpr.org/">General Data Protection Regulation</a> (GDPR) to give its citizens more control over their personal data. GDPR applies to any organization operating within the EU. It also applies to organizations outside of the EU that offer goods or services to customers or businesses in the EU.</p>
+
+<p>We are publishing this compliance information to help our merchants and their system integrators with GDPR compliance. A system integrator can use the data flow diagrams and database information to build scripts to resolve use cases similar to the following:</p>
+
+<ul>
+  <li>A shopper asks for a copy of the data the merchant has stored about her</li>
+  <li>A shopper requests that all information about him be deleted</li>
+</ul>
+
+<p>See the corporate <a href="https://magento.com/gdpr">Magento website</a> for more information about how Magento helps merchants comply with GDPR.</p>
+
+<h2 id="dataflow-diagrams">Dataflow diagrams</h2>
+
+<p>The data flow diagrams show the types of data that customers and administrators can enter and retrieve on the storefront and in Admin.</p>
+
+<h3 id="frontend-data-entry-points">Frontend data entry points</h3>
+
+<p>A user can enter customer, address, and payment information when registering for an account, during checkout, and similar events.</p>
+
+<p><img src="frontend-data-entry-points.svg" alt="Frontend data entry points" /></p>
+
+<h3 id="frontend-data-access-points">Frontend data access points</h3>
+
+<p>Magento loads customer information when the customer logs in and views several different pages or checks out.</p>
+
+<p><img src="frontend-data-access-points.svg" alt="Frontend data access points" /></p>
+
+<h3 id="backend-data-entry-points">Backend data entry points</h3>
+
+<p>A merchant can enter customer, address, and payment information when using Admin to create a customer or order.</p>
+
+<p><img src="backend-data-entry-points.svg" alt="Backend data entry points" /></p>
+
+<h3 id="backend-data-access-points">Backend data access points</h3>
+
+<p>Magento loads customer information when a merchant views several types of grids, clicks on a grid to see detailed information, and performs various other tasks.</p>
+
+<p><img src="backend-data-access-points.svg" alt="Backend data access points" /></p>
+
+<h2 id="database-entities">Database entities</h2>
+
+<p>Magento 1 stores customer information in customer, sales, and other database tables.</p>
+
+<h3 id="customer-data">Customer data</h3>
+
+<p>Magento 1 stores customer information in the <code class="highlighter-rouge">customer_entity</code> and <code class="highlighter-rouge">customer_address_entity</code> tables. Both of these tables have several reference tables that can contain custom customer attributes.</p>
+
+<h4 id="customer_entity-and-reference-tables"><code class="highlighter-rouge">customer_entity</code> and reference tables</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">customer_entity</code>table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These tables reference <code class="highlighter-rouge">customer_entity</code> and can contain custom customer attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_entity_datetime</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>datetime</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_entity_decimal</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>decimal(12,4)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_entity_int</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>int(11)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_entity_text</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_entity_varchar</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="customer_address_entity-and-reference-tables"><code class="highlighter-rouge">customer_address_entity</code> and reference tables</h4>
+
+<p>The following tables reference <code class="highlighter-rouge">customer_address_entity</code> and can contain custom customer attributes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_address_entity_datetime</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>datetime</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_address_entity_decimal</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>decimal(12,4)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_address_entity_int</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>int(11)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_address_entity_text</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_address_entity_varchar</code></td>
+      <td><code class="highlighter-rouge">value</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="order-data">Order data</h3>
+
+<p>The <code class="highlighter-rouge">sales_flat_order</code> and related tables contain the customer’s name, billing and shipping addresses, and related information.</p>
+
+<h4 id="sales_flat_order-table"><code class="highlighter-rouge">sales_flat_order</code> table</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">sales_order</code> table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_email</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_firstname</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_gender</code></td>
+      <td>int(11)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_lastname</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_middlename</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_prefix</code></td>
+      <td>varchar(32)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_suffix</code></td>
+      <td>varchar(32)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_taxvat</code></td>
+      <td>varchar(32)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remote_ip</code></td>
+      <td>varchar(32)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sales_flat_order_address-table"><code class="highlighter-rouge">sales_flat_order_address</code> table</h4>
+
+<p>The <code class="highlighter-rouge">sales_flat_order_address</code> table contains the customer’s address.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">fax</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">region</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">postcode</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lastname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">street</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">city</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">telephone</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">firstname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">prefix</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">suffix</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">middlename</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">company</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">vat_id</code></td>
+      <td>text</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sales_flat_order_grid-table"><code class="highlighter-rouge">sales_flat_order_grid</code> table</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">sales_flat_order_grid</code> table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">shipping_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sales_flat_order_payment-table"><code class="highlighter-rouge">sales_flat_order_payment</code> table</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">sales_flat_order_payment</code> table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">cc_exp_month</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_ss_start_year</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">echeck_bank_name</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">echeck_type</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_ss_start_month</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_owner</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_exp_year</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">echeck_routing_number</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">echeck_account_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="quote-data">Quote data</h3>
+
+<p>Quotes contain a customer’s name, email, address, and related information.</p>
+
+<h4 id="sales_flat_quote-table"><code class="highlighter-rouge">sales_flat_quote</code> table</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">sales_flat_quote</code> table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_tax_class_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_group_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_prefix</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_firstname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_middlename</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_lastname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_suffix</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_dob</code></td>
+      <td>datetime</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_note</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">remote_ip</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_gender</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sales_flat_quote_address-table"><code class="highlighter-rouge">sales_flat_quote_address</code> table</h4>
+
+<p>The following columns in the <code class="highlighter-rouge">sales_flat_quote_address</code> table contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">prefix</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">firstname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">middlename</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">lastname</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">suffix</code></td>
+      <td>varchar(40)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">company</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">street</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">city</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">region</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">postcode</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">fax</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sales_flat_quote_payment-table"><code class="highlighter-rouge">sales_flat_quote_payment</code> table</h4>
+
+<p>The <code class="highlighter-rouge">sales_flat_quote_payment</code> table includes credit card information and other transactional information.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">cc_last_4</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_owner</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_exp_month</code></td>
+      <td>smallint(5)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_exp_year</code></td>
+      <td>smallint(5)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_ss_owner</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_ss_start_month</code></td>
+      <td>smallint(5)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">cc_ss_start_year</code></td>
+      <td>smallint(5)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="archive-data">Archive data</h3>
+
+<p>The following tables and columns contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_creditmemo_grid_archive</code></td>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_invoice_grid_archive</code></td>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_order_grid_archive</code></td>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_order_grid_archive</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_order_grid_archive</code></td>
+      <td><code class="highlighter-rouge">shipping_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_sales_shipment_grid_archive</code></td>
+      <td><code class="highlighter-rouge">shipping_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sales-data">Sales data</h3>
+
+<p>The following tables and columns contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">sales_flat_creditmemo_grid</code></td>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sales_flat_invoice_grid</code></td>
+      <td><code class="highlighter-rouge">billing_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rma-data">RMA data</h3>
+
+<p>The following RMA tables and columns contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_rma</code></td>
+      <td><code class="highlighter-rouge">customer_custom_email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_rma_grid</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_rma_grid</code></td>
+      <td><code class="highlighter-rouge">customer_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="miscellaneous-data">Miscellaneous data</h3>
+
+<p>The following tables and columns contain customer information:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table</th>
+      <th>Column</th>
+      <th>Data type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">core_email_queue_recipients</code></td>
+      <td><code class="highlighter-rouge">recipient_email</code></td>
+      <td>varchar(128)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">core_email_queue_recipients</code></td>
+      <td><code class="highlighter-rouge">recipient_name</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_flowpassword</code></td>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">customer_flowpassword</code></td>
+      <td><code class="highlighter-rouge">ip</code></td>
+      <td>varchar(50)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_giftregistry_person</code></td>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(150)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_giftregistry_person</code></td>
+      <td><code class="highlighter-rouge">firstname</code></td>
+      <td>varchar(100)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_giftregistry_person</code></td>
+      <td><code class="highlighter-rouge">lastname</code></td>
+      <td>varchar(100)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_giftregistry_person</code></td>
+      <td><code class="highlighter-rouge">middlename</code></td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_invitation</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_invitation</code></td>
+      <td><code class="highlighter-rouge">email</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_invitation</code></td>
+      <td><code class="highlighter-rouge">referral_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_reminder_rule_coupon</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_reminder_rule_coupon</code></td>
+      <td><code class="highlighter-rouge">emails_failed</code></td>
+      <td>smallint(5)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_scheduled_operations</code></td>
+      <td><code class="highlighter-rouge">email_receiver</code></td>
+      <td>varchar(150)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">enterprise_scheduled_operations</code></td>
+      <td><code class="highlighter-rouge">email_sender</code></td>
+      <td>varchar(150)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gift_message</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gift_message</code></td>
+      <td><code class="highlighter-rouge">recipient</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gift_message</code></td>
+      <td><code class="highlighter-rouge">sender</code></td>
+      <td>varchar(255)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">newsletter_subscriber</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">newsletter_subscriber</code></td>
+      <td><code class="highlighter-rouge">subscriber_email</code></td>
+      <td>varchar(150)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">persistent_session</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">persistent_session</code></td>
+      <td><code class="highlighter-rouge">info</code></td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">poll_vote</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">poll_vote</code></td>
+      <td><code class="highlighter-rouge">ip_address</code></td>
+      <td>varbinary(16)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">rating_option_vote</code></td>
+      <td><code class="highlighter-rouge">customer_id</code></td>
+      <td>int(10)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">rating_option_vote</code></td>
+      <td><code class="highlighter-rouge">remote_ip</code></td>
+      <td>varchar(50)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">rating_option_vote</code></td>
+      <td><code class="highlighter-rouge">remote_ip_long</code></td>
+      <td>varbinary(516)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">send_friend_log</code></td>
+      <td><code class="highlighter-rouge">ip</code></td>
+      <td>varbinary(16)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other tables that reference Customer:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">catalog_compare_item</code></li>
+  <li><code class="highlighter-rouge">downloadable_link_purchased</code></li>
+  <li><code class="highlighter-rouge">enterprise_customerbalance</code></li>
+  <li><code class="highlighter-rouge">enterprise_customersegment_customer</code></li>
+  <li><code class="highlighter-rouge">enterprise_giftregistry_entity</code></li>
+  <li><code class="highlighter-rouge">enterprise_reminder_rule_log</code></li>
+  <li><code class="highlighter-rouge">enterprise_reward</code></li>
+  <li><code class="highlighter-rouge">log_customer</code></li>
+  <li><code class="highlighter-rouge">log_visitor_online</code></li>
+  <li><code class="highlighter-rouge">oauth_token</code></li>
+  <li><code class="highlighter-rouge">product_alert_price</code></li>
+  <li><code class="highlighter-rouge">product_alert_stock</code></li>
+  <li><code class="highlighter-rouge">report_compared_product_index</code></li>
+  <li><code class="highlighter-rouge">report_viewed_product_index</code></li>
+  <li><code class="highlighter-rouge">review_detail</code></li>
+  <li><code class="highlighter-rouge">sales_billing_agreement</code></li>
+  <li><code class="highlighter-rouge">sales_flat_shipment</code></li>
+  <li><code class="highlighter-rouge">sales_recurring_profile</code></li>
+  <li><code class="highlighter-rouge">salesrule_coupon_usage</code></li>
+  <li><code class="highlighter-rouge">salesrule_customer</code></li>
+  <li><code class="highlighter-rouge">tag</code></li>
+  <li><code class="highlighter-rouge">tag_relation</code></li>
+  <li><code class="highlighter-rouge">wishlist</code></li>
+</ul>
+
+			
+		</div>
+		<!-- /.content-wrap -->
+
+		<div class="page-info">
+
+    
+  
+    
+    <div class="github-link">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.3/architecture/gdpr/magento-1x.md" target="_blank">
+        去GitHub上编辑
+      </a>
+    </div>
+    
+  
+    
+    <div class="new-issue">
+      <a href="https://github.com/magento/devdocs/issues/new?title=Feedback on page: /guides/v2.3/architecture/gdpr/magento-1x.html" target="_blank">反馈</a>
+    </div>
+    
+  
+  </div>
+
+	</section>
+	<!-- /.content -->
+
+</div> <!-- /.content-container -->
+
+
+	</div>
+	<!-- /.main-container -->
+</div>
+<!-- /#gl-wrapper -->
+
+<!-- footer-->
+<div class="page-footer">
+  <div class="container">
+
+    <div class="copyright-links">
+      <ul class="nav footer-links">
+  <li><a href="/guides/v2.3/contributor-guide/contributing_docs.html">成为贡献者</a>
+  <li><a href="https://magento.github.io/glossary/index.html?audience=developer">术语表</a></li>
+  <li><a href="http://magento.com/legal/terms/privacy/">隐私政策</a></li>
+  <li><a href="http://magento.com/legal/terms/">服务条款</a></li>
+  <li><a href="http://magento.com/legal/licensing/">许可/商标 常见问题</a></li>
+  <li><a href="/guides/v2.3/release-notes/bk-release-notes.html">版本日志</a></li>
+  <li><a href="/magento-third-party.html">三方许可</a></li>
+</ul>
+
+    </div>
+
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
+
+  </div>
+</div>
+<!-- / #footer -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+
+<script src="/common/js/devdocs.min.js"></script>
+
+
+
+
+</body>
+</html>
+
