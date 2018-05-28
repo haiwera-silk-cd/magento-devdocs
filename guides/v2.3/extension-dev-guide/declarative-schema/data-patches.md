@@ -29,7 +29,7 @@ The following code sample defines a data patch class that has a dependency.
 {% highlight php startinline=true %}
 <?php
     /**
-     * Copyright © Magento, Inc. All rights reserved.
+     * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
      * See COPYING.txt for license details.
      */
 

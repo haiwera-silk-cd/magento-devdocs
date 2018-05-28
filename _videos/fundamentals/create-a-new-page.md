@@ -51,7 +51,7 @@ Learning/HelloPage/etc/module.xml
 #### registration.php
 {% highlight php %}
 <?php /**
-* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a> * See COPYING.txt for license details.
 */
 \Magento\Framework\Component\ComponentRegistrar::register( \Magento\Framework\Component\ComponentRegistrar::MODULE, 'Learning_HelloPage',
 __DIR__
@@ -63,7 +63,7 @@ __DIR__
 <?xml version="1.0"?>
 <!--
 /**
-* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a> * See COPYING.txt for license details.
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
@@ -83,7 +83,7 @@ Now, since we’re working in the frontend area, we’ll add the `etc/frontend/r
 <?xml version="1.0"?>
 <!--
 /**
-* Copyright © 2016 Magento. All rights reserved. * See COPYING.txt for license details.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a> * See COPYING.txt for license details.
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
@@ -113,7 +113,7 @@ Let’s create an action file `Controller/Page/View.php`:
 
 {% highlight php %}
 <?php /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 namespace Learning\HelloPage\Controller\Page;

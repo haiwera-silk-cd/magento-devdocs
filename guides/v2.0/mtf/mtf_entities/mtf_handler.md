@@ -67,7 +67,7 @@ Example of `WidgetInterface.php` (should be placed in `<magento2_root_dir>/dev/t
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -146,7 +146,7 @@ Let's create a cURL handler that creates a new widget.
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -173,7 +173,7 @@ The following code includes detailed comments for better understanding.
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -309,7 +309,7 @@ Let's create a UI handler that creates a new widget.
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -335,7 +335,7 @@ The code has detailed comments for better understanding.
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -427,7 +427,7 @@ class Curl extends AbstractCurl
 <?xml version="1.0" ?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -450,7 +450,7 @@ Let's create a WebAPI handler that creates a new {% glossarytooltip f35f5e81-db5
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -473,7 +473,7 @@ interface WidgetInterface extends HandlerInterface
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -565,7 +565,7 @@ class Curl extends AbstractCurl
 <?xml version="1.0" ?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->

@@ -73,7 +73,7 @@ To install MySQL 5.7 on Ubuntu 16:
 		Your MySQL connection id is 45
 		Server version: 5.6.19-0ubuntu0.14.04.1 (Ubuntu)
 
-		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 
 		Oracle is a registered trademark of Oracle Corporation and/or its
 		affiliates. Other names may be trademarks of their respective
@@ -110,7 +110,7 @@ To install MySQL 5.6 on Ubuntu 14:
 		Your MySQL connection id is 45
 		Server version: 5.6.19-0ubuntu0.14.04.1 (Ubuntu)
 
-		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 
 		Oracle is a registered trademark of Oracle Corporation and/or its
 		affiliates. Other names may be trademarks of their respective
@@ -151,7 +151,7 @@ To install MySQL 5.6 on Ubuntu 12, use the following instructions from <a href="
 		Your MySQL connection id is 43
 		Server version: 5.6.21-1+deb.sury.org~precise+1 (Ubuntu)
 
-		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 
 		Oracle is a registered trademark of Oracle Corporation and/or its
 		affiliates. Other names may be trademarks of their respective
@@ -252,7 +252,7 @@ The following procedure is based on <a href="http://sharadchhetri.com/2013/12/26
 		Your MySQL connection id is 15
 		Server version: 5.6.23 MySQL Community Server (GPL)
 
-		Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+		Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 
 		Oracle is a registered trademark of Oracle Corporation and/or its
 		affiliates. Other names may be trademarks of their respective

@@ -134,7 +134,7 @@ It contains a `StoreIds.php` data source, that is similar to what we need. It ha
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -284,7 +284,7 @@ A new PHP class `Synonym.php` is generated in `<magento2_root_dir>/dev/tests/fun
 {%highlight php%}
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -904,7 +904,7 @@ Fortunately, this type of assertion  is commonly used in functional tests. If we
 
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 

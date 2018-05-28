@@ -25,7 +25,7 @@ A block `Magento\Ui\Test\Block\Messages` extends a basic block [`Magento\Mtf\Blo
 {% collapsible Show/hide the code %}
 {% highlight php inline=true %}
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -237,7 +237,7 @@ The mapping file defines the fields from the form.
 <?xml version="1.0" ?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -291,7 +291,7 @@ The file contains the following mapping:
 <?xml version="1.0" ?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -524,7 +524,7 @@ Let's see the [`Catalog/Test/Page/Product/CatalogProductView.xml`] page. For the
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
  -->
@@ -549,7 +549,7 @@ Let's create render for the bundle product.
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
  -->
@@ -566,7 +566,7 @@ Let's create render for the bundle product.
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright © 2015 Magento. All rights reserved.
+ * Copyright © 2015 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
  -->

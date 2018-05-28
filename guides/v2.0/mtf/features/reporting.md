@@ -291,7 +291,7 @@ The following example shows how to use a custom observer in the example with the
 {% highlight php %}
 <?php
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 

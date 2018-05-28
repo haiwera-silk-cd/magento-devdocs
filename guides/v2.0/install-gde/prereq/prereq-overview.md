@@ -94,7 +94,7 @@ You must run MySQL version 5.6或更新 as the following result indicates:
 		Your MySQL connection id is 871
 		Server version: 5.6.21 MySQL Community Server (GPL)
 
-		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+		Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 
 		Oracle is a registered trademark of Oracle Corporation and/or its
 		affiliates. Other names may be trademarks of their respective

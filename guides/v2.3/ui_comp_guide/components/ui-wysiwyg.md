@@ -87,7 +87,7 @@ First, create a layout file in the `ModuleName\view\adminhtml\layout` directory 
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -109,7 +109,7 @@ Next, create a custom form in the `ModuleName\view\adminhtml\ui_component` direc
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -151,7 +151,7 @@ To use PHP modifiers, your data provider must inherit from `ModifierPoolDataProv
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 namespace Magento\Ui\DataProvider;
@@ -229,7 +229,7 @@ Your form must then use a data provider that inherits from `ModifierPoolDataProv
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 namespace Test\Module\Model;
@@ -264,7 +264,7 @@ The following example shows how to change the default Magento WYSIWYG editor too
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 namespace Test\Module\Ui\DataProvider\Custom\Modifier;
@@ -317,7 +317,7 @@ Here's an example that connects the data provider and modifier created in the pr
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -355,7 +355,7 @@ First, add your editor name to the CMS module's `system.xml` file to extend the 
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -381,7 +381,7 @@ Next, add a `di.xml` file to your `Test\Module\etc\adminhtml` directory to injec
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -415,7 +415,7 @@ You can override this object and pass in your own adapter class that serves as a
 
 ```php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -438,7 +438,7 @@ Last, create the adapter for your editor. The `setup.js` file contains all the m
 
 ```js
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 

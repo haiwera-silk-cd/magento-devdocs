@@ -53,7 +53,7 @@ Now create two files:
 {% collapsible Show code %}
 {% highlight php startinline=true %}
 /**
-* Copyright © 2016 Magento. All rights reserved.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 * See COPYING.txt for license details.
 */
 
@@ -74,7 +74,7 @@ Now create two files:
 <?xml version="1.0"?>
 <!--
 /**
-* Copyright © 2016 Magento. All rights reserved.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 * * See COPYING.txt for license details.
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -99,7 +99,7 @@ Create the file `Setup/InstallSchema.php`.
 {% collapsible Show code %}
 {% highlight php startinline=true %}
 /**
-* Copyright © 2016 Magento. All rights reserved.
+* Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
 * See COPYING.txt for license details.
 */
 
@@ -162,7 +162,7 @@ Let’s create the `Setup/InstallData.php` file:
 {% collapsible Show code %}
 {% highlight php startinline=true %}
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -271,7 +271,7 @@ Then create the file `Setup/UpgradeSchema.php`:
 {% highlight php startinline=true %}
 
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -323,7 +323,7 @@ To create the `Setup/UpgradeData.php` file:
 {% collapsible Show code %}
 {% highlight php startinline=true %}
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2016 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 

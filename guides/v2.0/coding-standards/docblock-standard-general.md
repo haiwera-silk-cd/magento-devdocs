@@ -139,7 +139,7 @@ Use the following templates for the license notice and copyright blocks:
 {% highlight php %}
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 
@@ -163,7 +163,7 @@ interface MetadataObjectInterface
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 -->
@@ -174,7 +174,7 @@ interface MetadataObjectInterface
 {% highlight js %}
 
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a>
  * See COPYING.txt for license details.
  */
 {% endhighlight %}
