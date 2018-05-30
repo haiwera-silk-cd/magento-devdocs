@@ -4,7 +4,7 @@ subgroup: 组件
 title: 可插入列表组件
 menu_title: 可插入列表组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-insertlisting.md
+github_link: ui_comp_guide/components/ui-insertlisting.md
 ---
 ## Overview
 The 可插入列表components inserts [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html) into other 组件.

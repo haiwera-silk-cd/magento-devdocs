@@ -44,7 +44,7 @@ The following diagram demonstrates XML structure of an action group:
 * File name ends with `ActionGroup`. Example: _LoginToAdminActionGroup.xml_.
 * File name and `<actionGroup>` name are the same.
 
-## Example
+## 例如
 {%raw%}
 The following example demonstrates declaration of group of actions to execute authorization into Admin area.
 

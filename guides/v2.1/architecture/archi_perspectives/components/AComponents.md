@@ -6,8 +6,8 @@ menu_title: 组件
 menu_order:
 menu_node: parent
 version: 2.1
-github_link: architecture/archi_perspectives/组件/A组件.md
-redirect_from: /guides/v1.0/architecture/components/Acomponents.html
+github_link: architecture/archi_perspectives/components/AComponents.md
+redirect_from: /guides/v1.0/architecture/components/AComponents.html
 ---
 
 ## Magento组件

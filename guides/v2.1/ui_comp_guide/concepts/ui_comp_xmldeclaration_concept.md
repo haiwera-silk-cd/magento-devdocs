@@ -42,7 +42,7 @@ In the top node, there can be an `<argument/>` node. The `<argument/>` node cont
 The top node can have nested nodes. Every nested node is regarded as a separate UI component (i.e. the toolbar). For example, if you want your listing to have a toolbar, then the top node is for the listing and a nested node represents a toolbar. Nested nodes can also contain the `<argument>` node.
 
 
-## Example of a basic component's configuration file
+## 例如 of a basic component's configuration file
 
 {%highlight xml%}
 <?xml version="1.0" encoding="UTF-8"?>

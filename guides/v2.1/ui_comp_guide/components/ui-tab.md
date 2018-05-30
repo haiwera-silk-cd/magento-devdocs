@@ -4,7 +4,7 @@ subgroup: 组件
 title: 标签页组件
 menu_title: 标签页组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-tab.md
+github_link: ui_comp_guide/components/ui-tab.md
 ---
 
 ## Overview

@@ -21,7 +21,7 @@ For a particular page, its {% glossarytooltip 73ab5daa-5857-4039-97df-11269b6261
 A page layout file defines the page wireframe, for example, one-column layout. Technically page layout is an .xml file defining the structure inside the `<body>` section of the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} page {% glossarytooltip 8f407f13-4350-449b-9dc5-217dcf01bc42 %}markup{% endglossarytooltip %}. Page layouts feature only <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html#layout_overview_blocks" target="_blank">containers</a>. 
 All page layouts used for page rendering should be declared in the page layout declaration file.
 
-Page configuration is also an .xml file. It defines the detailed structure (page header, footer, etc.), contents and page meta information, including the page layout used. Page configuration features both main elements, <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html#layout_overview_blocks" target="_blank">blocks of particular classes</a> and containers.
+Page configuration is also an .xml file. It defines the detailed structure (page header, footer, 等.), contents and page meta information, including the page layout used. Page configuration features both main elements, <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-overview.html#layout_overview_blocks" target="_blank">blocks of particular classes</a> and containers.
 
 We also distinguish the third type of layout files, *generic layouts*. They are .xml files which define the contents and detailed structure inside the <code>&lt;body&gt;</code> section of the HTML page markup. These files are used for pages returned by AJAX requests, emails, HTML snippets and so on.
 

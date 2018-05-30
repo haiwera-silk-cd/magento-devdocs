@@ -4,7 +4,7 @@ subgroup: 组件
 title: 隐藏域组件
 menu_title: 隐藏域组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-hidden.md
+github_link: ui_comp_guide/components/ui-hidden.md
 ---
 
 ## Overview

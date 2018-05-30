@@ -96,7 +96,7 @@ There are several ways to generate and execute your new test in the context of a
   ```
 - To generate any combination of suites and tests, use [`generate:tests`] with the `--tests` flag.
 
-## Examples
+## 例如s
 
 ### Browser actions in suite conditions
 

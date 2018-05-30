@@ -168,7 +168,7 @@ if (!strpos($response, 'data-ui-id="messages-message-success"')) {
 }
 {% endhighlight %}
 
-## Examples {#examples}
+## 例如s {#examples}
 
 The following examples explain how to use the reporting tool on practice.
 

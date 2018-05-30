@@ -69,7 +69,7 @@ Name  | Config path | EE only? |
 Add Store Code to Urls | `web/url/use_store` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Auto-redirect to Base URL | `web/url/redirect_to_base` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Use Web Server Rewrites | `web/seo/use_rewrites` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Use Secure URLs on Storefront | `web/secure/use_in_frontend` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+在网店前台使用安全的URL | `web/secure/use_in_frontend` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Use Secure URLs in Admin | `web/secure/use_in_adminhtml` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enable HTTP Strict Transport Security (HSTS) | `web/secure/enable_hsts` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Upgrade Insecure Requests | `web/secure/enable_upgrade_insecure` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |

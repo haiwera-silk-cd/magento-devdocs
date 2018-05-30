@@ -4,14 +4,14 @@ subgroup: 组件
 title: 导出按钮组件
 menu_title: 导出按钮组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-exportbutton.md
+github_link: ui_comp_guide/components/ui-exportbutton.md
 ---
 
 ## Overview
 
 The 导出按钮组件 implements the ability to export grid data to the specified data format (cvs, xml, and so on).
 
-## Structure
+## 结构
 
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/export.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/export.js)
 
@@ -91,7 +91,7 @@ To enable the ExportButton сomponent, add the `exportButton` element with a `se
 </exportButton>
 {% endhighlight %}
 
-## Example
+## 例如
 
 Example: `<Magento_Sales_module_dir>/view/adminhtml/ui_component/sales_order_grid.xml`
 

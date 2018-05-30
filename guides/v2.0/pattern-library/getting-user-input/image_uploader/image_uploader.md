@@ -10,7 +10,7 @@ github_link: pattern-library/getting-user-input/image_uploader/image_uploader.md
 ---
 
 ## Image uploader
-The Image uploader provides the ability for users to upload a single image, or group of images, to the application, most commonly images associated with Products (during the Product Creation process). These iamges may serve as thumbnail images, detailed Product images, images to within a product gallery, etc.  
+The Image uploader provides the ability for users to upload a single image, or group of images, to the application, most commonly images associated with Products (during the Product Creation process). These iamges may serve as thumbnail images, detailed Product images, images to within a product gallery, 等.  
 
 
 <h3 id="whentouse">When to Use</h3>
@@ -18,7 +18,7 @@ When it is desireable to allow users to upload a single image or multiple images
 
 
 <h3 id="whennottouse">When Not to Use</h3>
-This pattern should be used specifically to upload images, and not to upload documents such as PDFs, WordDocs, Spreadsheets, etc. Please refer to the "File Upload" pattern.
+This pattern should be used specifically to upload images, and not to upload documents such as PDFs, WordDocs, Spreadsheets, 等. Please refer to the "File Upload" pattern.
 
 
 <h3 id="variations">Variations</h3>

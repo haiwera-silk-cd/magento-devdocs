@@ -105,7 +105,7 @@ userInput="We'll email you an order confirmation with details and tracking info.
 * File name is given camel case with first letter upper case name.  The name represents data type. For example, file with Customer data is _CustomerData.xml_, for Simple Product it should be `SimpleProductData.xml`.
 * entity name is given camel case with first letter upper case name.
 
-## Example
+## 例如
 
 _.../Catalog/Data/CategoryData.xml_:
 

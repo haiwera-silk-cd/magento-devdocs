@@ -38,7 +38,7 @@ Do not start Magento 2 cron jobs.
 
   If Binary Logging is enabled for your Magento 1 database, set the global [`log_bin_trust_function_creators`](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_bin_trust_function_creators){:target="_blank"} MySQL system variable to `1`, or grant the [SUPER privilege](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_super){:target="_blank"} to your account.
 
-* We do not recommend creating new entities (products, categories, attributes, etc.) in your Magento 2 store before migration because the 数据迁移工具 overwrites such new entities with the old ones from Magento 1.
+* We do not recommend creating new entities (products, categories, attributes, 等.) in your Magento 2 store before migration because the 数据迁移工具 overwrites such new entities with the old ones from Magento 1.
 
 ## Extensions
 

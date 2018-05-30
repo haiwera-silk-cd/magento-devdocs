@@ -28,11 +28,11 @@ The module does not create any backward incompatible changes. Can be deactivated
 
 When the module is uninstalled, the other <i>ProductType</i>SharedCatalog modules won't work.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Shared catalogs are using message queues to save prices. For more information about queues, see [消息队列]({{ page.baseurl }}/extension-dev-guide/message-queues.html).
 

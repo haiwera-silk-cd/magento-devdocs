@@ -64,7 +64,7 @@ This process trigger is what the user tell system to start process. It can be an
 <img src="img/progressbar-progressing.png">
 
 4. **Success**
-Once success, the page should refresh to show success status. The success status and behavior will depend on context of the scenario. (ie. open new page, stay on the same page, success message, etc.)
+Once success, the page should refresh to show success status. The success status and behavior will depend on context of the scenario. (ie. open new page, stay on the same page, success message, 等.)
 
 5. **Failed**
 The progress bar will disappeared and is replaced with this error message.

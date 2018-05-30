@@ -22,7 +22,7 @@ This section provides our best information about how to speed up and simplify yo
 
 * **Remove outdated and redundant data** from your Magento 1 database before migration.
 
-  Such data may include logs, order quotes, recently viewed or compared products, visitors, event-specific categories, promotional rules, etc.
+  Such data may include logs, order quotes, recently viewed or compared products, visitors, event-specific categories, promotional rules, 等.
 
 * **Follow our [General Rules for Successful Migration]({{ page.baseurl }}/migration/migration-migrate.html)** to avoid issues or conflicts.
 

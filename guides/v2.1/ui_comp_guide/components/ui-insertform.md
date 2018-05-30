@@ -4,7 +4,7 @@ subgroup: 组件
 title: 可插入表单组件
 menu_title: 可插入表单组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-form.md
+github_link: ui_comp_guide/components/ui-form.md
 ---
 
 ## Overview

@@ -4,7 +4,7 @@ subgroup: 组件
 title: 表单组件
 menu_title: 表单组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-form.md
+github_link: ui_comp_guide/components/ui-form.md
 redirect_from: /guides/v2.1/ui-components/ui-form.html
 ---
 
@@ -15,7 +15,7 @@ The 表单组件 is a collection of fields that can be grouped in tabs and field
 Form is a [basic component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure).
 
 
-## Structure
+## 结构
 
 {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}Javascript{% endglossarytooltip %} constructor: [form.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/form/form.js)
 

@@ -163,7 +163,7 @@ This topic describes the basic elements used in XML configuration files for decl
   </tr>
 </table>
 
-## Example of the basic UI 组件 configuration structure
+## 例如 of the basic UI 组件 configuration structure
 
 {%highlight xml%}
 

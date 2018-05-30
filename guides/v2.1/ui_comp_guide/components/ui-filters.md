@@ -4,7 +4,7 @@ subgroup: 组件
 title: 过滤器组件
 menu_title: 过滤器组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-filters.md
+github_link: ui_comp_guide/components/ui-filters.md
 ---
 
 ## Overview
@@ -13,7 +13,7 @@ The 过滤器components renders UI controls for filtering and applies filtering.
 
 See the [管理面板用到的设计模式和库 (Filters)]({{ page.baseurl }}/pattern-library/filters/data-table-filters/filtering.html) topic for information about the UI design patterns that can be implemented using 过滤器组件.
 
-## Structure
+## 结构
 Constructor: [app/code/Magento/Ui/view/base/web/js/grid/filters/filters.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/grid/filters/filters.js)
 
 ## Filters configuration

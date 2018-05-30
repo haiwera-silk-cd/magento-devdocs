@@ -32,7 +32,7 @@ Recommended use cases of the annotation types:
 - [title] - description of the test purpose.
 - [description] - description of how the test achieves the purpose defined in the title.
 
-## Example
+## 例如
 
 ```xml
 <annotations>

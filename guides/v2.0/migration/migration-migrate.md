@@ -18,7 +18,7 @@ Before you start migration, stop all Magento 1 cron jobs.
 
 During the migration process, **do not:**
 
-1. Make any changes in the Magento 1 {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} except for order management (shipping, creating invoice, credit memos, etc.)
+1. Make any changes in the Magento 1 {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} except for order management (shipping, creating invoice, credit memos, 等.)
 
 2. Alter any code
 

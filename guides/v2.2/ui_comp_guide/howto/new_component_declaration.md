@@ -52,7 +52,7 @@ If the custom component you create is a [basic UI component]({{ page.baseurl }}/
 
 If the custom component you create is secondary (not a basic one), it is declared using  `<container>`或`<component>` in the XML configuration file of the basic component.
 
-## Example: Creating a custom secondary (not basic) component 
+## 例如: Creating a custom secondary (not basic) component 
 Task: In the Customer form, replace the select field with a custom UI component. The custom component extends the 单选框组件 by adding a custom option that enables custom functionality. 
 
 The Customer form configuration is defined in `<Magento_Customer_module_dir>/view/base/ui_component/customer_form.xml`. The default configuration of the select field we will extend is following:

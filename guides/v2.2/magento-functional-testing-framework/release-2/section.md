@@ -62,7 +62,7 @@ The following conventions apply to MFTF sections:
 * Camel case is used for `<section>` elements.
   They describe the function of the element rather than attempting to describe the selector used.
 
-## Example
+## 例如
 
 Example (`.../Catalog/Section/AdminCategorySidebarActionSection.xml` file):
 

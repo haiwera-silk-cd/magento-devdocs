@@ -25,11 +25,11 @@ The `Magento_ConfigurableSharedCatalog` module provides the following features:
 
 The `Magento_ConfigurableSharedCatalog` module has a dependency on the `Magento_SharedCatalog` and `Magento_Configurable` modules, which must be installed and enabled first. This module does not create any backward incompatible changes. It can be uninstalled or deactivated at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the `Magento_ConfigurableSharedCatalog` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

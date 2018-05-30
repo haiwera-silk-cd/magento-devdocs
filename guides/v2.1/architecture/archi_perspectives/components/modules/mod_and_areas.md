@@ -19,7 +19,7 @@ An *area* is a logical component that organizes code for optimized request proce
 
 For example, if you are invoking a REST web service call, rather than load all the code related to generating user {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} pages, you can specify a separate area that loads code whose scope is limited to answering  REST calls.
 
-### Magento area types
+### Magento地区类型
 
 Magento is organized into these main areas:
 

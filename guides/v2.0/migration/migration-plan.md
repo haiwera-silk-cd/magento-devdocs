@@ -16,7 +16,7 @@ To migrate successfully and avoid issues, you need to thourougly plan and test y
 
 ## Before you start: Consider upgrade
 
-Migration is a perfect moment to make serious changes and get your site ready for the next level of growth. Consider whether your new site needs to be designed with more hardware or a more advanced topology with better caching tiers, etc.
+Migration is a perfect moment to make serious changes and get your site ready for the next level of growth. Consider whether your new site needs to be designed with more hardware or a more advanced topology with better caching tiers, 等.
 
 ## 步骤1. Review extensions on your current site
 
@@ -34,7 +34,7 @@ Migration is a perfect moment to make serious changes and get your site ready fo
 
 * 安装Magento 2.x (with all modules of this release) and the 数据迁移工具 on a system that meets the [Magento系统要求]
 
-* Make your custom adjustments to the 数据迁移工具 code in case you do not need to migrate some data (like CMS Pages, Sales Rules, etc.) or want to convert your Magento customization during migration. Read the 数据迁移工具's [Technical Specification] to better understand how migration works from inside
+* Make your custom adjustments to the 数据迁移工具 code in case you do not need to migrate some data (like CMS Pages, Sales Rules, 等.) or want to convert your Magento customization during migration. Read the 数据迁移工具's [Technical Specification] to better understand how migration works from inside
 
 ## 步骤3. Dry run
 
@@ -77,7 +77,7 @@ In such migration testing, follow these steps:
 
 ## 步骤5. Make changes to the migrated data (if needed)
 
-Sometimes you may want to have your Magento 2 store with different catalog structure, sales rules, CMS pages, etc. after migration.
+Sometimes you may want to have your Magento 2 store with different catalog structure, sales rules, CMS pages, 等. after migration.
 
 It is is important to practice caution while working through manual data changes. Mistakes will create errors in the incremental data migration step that follows.
 

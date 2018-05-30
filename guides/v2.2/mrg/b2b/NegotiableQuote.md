@@ -28,11 +28,11 @@ When working with the `SharedCatalog` module, `NegotiableQuote` will be restrict
 
 The module does not create any backward incompatible changes. Can be deactivated and uninstalled at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Magento_NegotiableQuote uses Extensible attributes to extend Magento_Quote. For more information about the Magento extensible attributes, see [添加扩展属性到实体]({{ page.baseurl }}/extension-dev-guide/extension_attributes/adding-attributes.html).
 

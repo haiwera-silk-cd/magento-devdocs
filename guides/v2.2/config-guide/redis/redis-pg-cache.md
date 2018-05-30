@@ -61,7 +61,7 @@ where
 </tbody>
 </table>
 
-## Example command
+## 例如 command
 
 The following example enables Redis default caching, sets the host to `redis.example.com` and assigns the database number to 0. All other parameters are set to the default value.
 
@@ -118,7 +118,7 @@ where
 </tbody>
 </table>
 
-## Example command
+## 例如 command
 
 The following example enables Redis page caching, sets the host to `redis.example.com` and assigns the database number to 1. All other parameters are set to the default value.
 

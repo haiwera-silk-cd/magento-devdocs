@@ -18,11 +18,11 @@ This module also provides several B2B branding elements. For example, it adds a 
 
 This module must be installed to use and to configure the other B2B modules. It can be uninstalled after other B2B modules are uninstalled.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the Magento_B2b模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

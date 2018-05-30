@@ -179,7 +179,7 @@ class YourTestStep implements TestStepInterface
     (
         // data that are required for this step along with other dependencies.
     ) {
-        // all required classes (fixtures, pages, etc.) have to be assigned here.
+        // all required classes (fixtures, pages, 等.) have to be assigned here.
     };
     
     public function run()
@@ -301,7 +301,7 @@ Let's see a test step on the example with `Magento\Customer\Test\TestStep\LoginC
  
 ### `constructor()` method  {#constructor-method}
 
-You can optionally use the `constructor()` method which injects data to be used by `run()`. The data may include classes like pages, variation data, data returned by previous executed steps, etc.
+You can optionally use the `constructor()` method which injects data to be used by `run()`. The data may include classes like pages, variation data, data returned by previous executed steps, 等.
 
 On the previous example the `constructor()`:
 

@@ -24,7 +24,7 @@ This module has a dependency on the `Magento_RequisitionList` and `Magento_Bundl
 
 The `Magento_BundleRequisitionList` module does not create any backward incompatible changes and can be uninstalled at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 

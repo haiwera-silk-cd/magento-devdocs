@@ -22,4 +22,4 @@ After you have completed your migration and thoroughly tested your new Magento 2
 
 *	<a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-index.html#config-cli-subcommands-index-reindex" target="_blank">Reindex all Magento 2 indexers</a>
 
-*	Change DNS, load balancers, etc. to point to Magento 2 production hardware
+*	Change DNS, load balancers, 等. to point to Magento 2 production hardware

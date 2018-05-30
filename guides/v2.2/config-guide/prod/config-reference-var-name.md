@@ -180,7 +180,7 @@ The following table shows a few sample variables.
 | Custom Admin URL | Advanced > **Admin**  | `<SCOPE>__ADMIN__URL__CUSTOM`  |
 | Custom Admin Path  | Advanced > **Admin** | `<SCOPE>__ADMIN__URL__CUSTOM_PATH` |
 
-## Examples {#cloud-system-vars-ex}
+## 例如s {#cloud-system-vars-ex}
 This section shows how to find values of some sample variables.
 
 ### Elasticsearch server hostname

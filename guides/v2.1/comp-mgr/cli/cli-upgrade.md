@@ -93,7 +93,7 @@ To prevent access to your store while it's being upgraded, put your store in mai
 		rm -rf <Magento install dir>/var/generation/*
 
     <div class="bs-callout bs-callout-info" markdown="1">
-    If you use a cache storage other than filesystem (e.g., Redis, Memcached, etc.) you need to manually clear the cache there too.
+    If you use a cache storage other than filesystem (e.g., Redis, Memcached, 等.) you need to manually clear the cache there too.
     </div>
 
 4. Update the database schema and data:

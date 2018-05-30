@@ -26,11 +26,11 @@ The merchant can configure maximum number of requisition lists per customer.
 
 The module does not create any backward incompatible changes. It can be deactivated and uninstalled in any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the Magento_RequisitionList模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

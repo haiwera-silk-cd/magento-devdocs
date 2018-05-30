@@ -9,7 +9,7 @@ This topic discusses an example of securing communication between your web serve
     <p>Unless otherwise noted, all commands in this topic must be entered as a user with <code>root</code> privileges.</p>
 </div>
 
-### Recommendations
+### 强烈建议
 We recommend the following:
 
 *	Your web server uses TLS.

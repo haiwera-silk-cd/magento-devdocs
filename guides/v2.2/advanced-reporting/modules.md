@@ -7,31 +7,31 @@ functional_areas:
     - Reports
 ---
 
-Advanced reporting functionality is implemented in the following Magento modules.
+高级报表的功能在以下Magento模块中实现.
 
-[Analytics] implements the following:
+[Analytics] 模快实现以下的功能:
 
-  * Enabling subscription to the Magento Business Intelligence (MBI) and automatic re-subscription
-  * Changing the base URL without change of the MBI account
-  * Declaring the configuration schemas for [report data collection]
-  * Collecting the Magento instance data as reports for the MBI
-  * Introducing API that provides the collected data
-  * Extending Magento configuration with the module parameters:
-    * Subscription status (enabled/disabled)
-    * Industry (a business area in which the instance website works)
-    * Time of data collection (time of the day when the module collects data)
+  * 允许订阅Magento商业智能(MBI)和自动重新订阅
+  * 修改其础URL而不改变MBI帐号
+  * 为[报表数据集]声明配置方案
+  * 为MBI收集Magento的报表数据
+  * 采用提供收集的数据的API
+  * 使用模块参数扩展Magento的配置
+    * 订阅状态(启用/禁用)
+    * 行业(你的站点工作的商业领域)
+    * 数据收集的时间(模块收集数那天的时间)
 
-[CatalogAnalytics] configures data definitions for data collection related to the Catalog module entities
+[CatalogAnalytics] 为关联到产品目录模块的实体数据收集配置数据定义
   
-[CustomerAnalytics] configures data definitions for data collection related to the Customer module entities
+[CustomerAnalytics] 为关联到客户模块的实体数据收集配置数据定义
   
-[QuoteAnalytics] configures data definitions for data collection related to the Quote module entities
+[QuoteAnalytics] 为关联到报价模块的实体数据收集配置数据定义
   
-[ReviewAnalytics] configures data definitions for data collection related to the Review module entities
+[ReviewAnalytics] 为关联到Review(展现)模块的实体数据收集配置数据定义
   
-[SalesAnalytics] configures data definitions for data collection related to the Sales module entities
+[SalesAnalytics] 为关联到销售模块的实体数据收集配置数据定义
   
-[WishlistAnalytics] configures data definitions for data collection related to the Wishlist module entities
+[WishlistAnalytics] 为关联到收藏列表模块的实体数据收集配置数据定义
 
 <!-- LINK DEFINITIONS -->
 
@@ -43,7 +43,7 @@ Advanced reporting functionality is implemented in the following Magento modules
 [SalesAnalytics]: {{ page.baseurl }}/mrg/ce/SalesAnalytics.html
 [WishlistAnalytics]: {{ page.baseurl }}/mrg/ce/WishlistAnalytics.html
 
-[report data collection]: ./data-collection.html
+[报表数据集]: ./data-collection.html
 
 <!-- ABBREVIATIONS -->
-*[MBI]: Magento Business Analytics
+*[MBI]: Magento商业分析

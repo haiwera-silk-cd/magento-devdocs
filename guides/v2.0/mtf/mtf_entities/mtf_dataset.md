@@ -9,7 +9,7 @@ A data set contains data used by a [test case] and [constraints][constraint].
 A data set can have several variations.
 Each variation has constraints that are called at the end of the test flow.
 
-## Example data set {#example}
+## 例如 data set {#example}
 
 Let's see an example for `CreateSimpleProductEntityTest`. A data set and its corresponding [test case] must be placed in the `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Catalog/Test/TestCase/Product` directory.
 

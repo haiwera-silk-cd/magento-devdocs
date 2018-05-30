@@ -45,7 +45,7 @@ pages:
           url: /architecture/archi_perspectives/persist_layer.html
 
     - label: 组件
-      url: /architecture/archi_perspectives/components/Acomponents.html
+      url: /architecture/archi_perspectives/components/AComponents.html
       children:
 
         - label: 模块概述

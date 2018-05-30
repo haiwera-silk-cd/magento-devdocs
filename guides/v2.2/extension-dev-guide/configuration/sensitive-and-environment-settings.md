@@ -28,7 +28,7 @@ Examples of sensitive information include:
 *	Keys (such as API keys)
 *	User names and passwords
 *	E-mail addresses
-*	Any personally identifiable information (e.g., address, phone number, date of birth, government identification number, etc.)
+*	Any personally identifiable information (e.g., address, phone number, date of birth, government identification number, 等.)
 
 ### Environment or system-specific values
 

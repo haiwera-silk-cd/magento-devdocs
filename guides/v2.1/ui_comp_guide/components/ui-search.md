@@ -4,7 +4,7 @@ subgroup: 组件
 title: 搜索组件
 menu_title: 搜索组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-search.md
+github_link: ui_comp_guide/components/ui-search.md
 ---
 
 ## Overview

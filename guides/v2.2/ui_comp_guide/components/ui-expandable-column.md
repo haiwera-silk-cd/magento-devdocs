@@ -4,7 +4,7 @@ subgroup: 组件
 title: Expandable Column сomponent
 menu_title: Expandable 表格列组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-expandable-column.md
+github_link: ui_comp_guide/components/ui-expandable-column.md
 ---
 
 ## Overview
@@ -12,7 +12,7 @@ The Expandable Column {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}
 
 The Expandable 表格列组件 can be used in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
 
-## Structure
+## 结构
 
 The Expandable Column UI component includes the following files:
 

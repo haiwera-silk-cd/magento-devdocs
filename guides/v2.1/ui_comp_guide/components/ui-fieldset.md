@@ -4,7 +4,7 @@ subgroup: 组件
 title: 输入框集组件
 menu_title: Fieldset component
 version: 2.1
-github_link: ui_comp_guide/组件/ui-fieldset.md
+github_link: ui_comp_guide/components/ui-fieldset.md
 ---
 
 ## Overview

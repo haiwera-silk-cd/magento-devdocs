@@ -63,7 +63,7 @@ Example with `after`:
 
 `myAction` will be executed after the action, which has `stepKey="fillField"`.
 
-## Example
+## 例如
 
 {%raw%}
 The following example contains four actions:

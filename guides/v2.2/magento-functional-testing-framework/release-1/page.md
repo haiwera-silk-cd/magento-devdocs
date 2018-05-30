@@ -52,7 +52,7 @@ The following diagram demonstrates XML structure of a page in the MFTF:
 * `*Page.xml` is stored in the _Section_ directory of a module
 * a name format is `{Admin|Storefront}{PageDescription}Page.xml`
 
-## Examples
+## 例如s
 
 The following examples demonstrate explicit page and parameterized page with explanations.
 

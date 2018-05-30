@@ -28,7 +28,7 @@ Within an XML test file, annotations are contained within their own node.
 * Each annotation tag contains only one value.
 If multiple annotation values are supported and required each value requires a separate tag.
 
-## Example
+## 例如
 
 ```xml
 <annotations>

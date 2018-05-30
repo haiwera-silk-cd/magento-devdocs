@@ -536,7 +536,7 @@ Templates are not supported by PHPDocumentor anymore. Therefore, they MUST NOT b
 
 It's encouraged to replace existing DocBlock templates with regular DocBlock comments when the file is being modified.
 
-## Structure of documentation space
+## 结构 of documentation space
 {:#documentation-space}
 
 `@category`, `@package`, and `@subpackage` MUST NOT be used.

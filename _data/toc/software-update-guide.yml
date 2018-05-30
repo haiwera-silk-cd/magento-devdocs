@@ -119,7 +119,7 @@ pages:
       url: /comp-mgr/install-extensions.html
       children:
 
-        - label: 安装B2B扩展
+        - label: 安装B2B扩展
           url: /comp-mgr/install-extensions/b2b-installation.html
 
     - label: 从Magento开源版升级到Magento企业版

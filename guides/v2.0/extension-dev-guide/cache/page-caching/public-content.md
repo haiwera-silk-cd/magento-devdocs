@@ -103,7 +103,7 @@ class DynamicController extends \Magento\Framework\App\Action\Action
 Most caching servers and proxies use a {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} as a key for cache records; however, Magento URLs are not unique *enough* to allow caching by URL only. Cookie and session data in the URL can also lead to undesirable side effects,  including:
 
 -   Collisions in cache storage
--   Unwanted information leaks (e.g., French language website partially visible on an English language website, prices for customer group visiable in public, etc.)
+-   Unwanted information leaks (e.g., French language website partially visible on an English language website, prices for customer group visiable in public, 等.)
 
 To make each cached URL totally unique, we use *HTTP context variables*. Context variables enable the Magento application to serve different content on the same URL based on:
 
@@ -208,7 +208,7 @@ class View extends AbstractProduct implements \Magento\Framework\DataObject\Iden
 Magento uses cache tags for link creation. The performance of cache storage has a direct dependency on the number of tags per cache record, so try to minimize the number of tags and use them only for entities that are used in production mode. In other words, don't use invalidation for actions related to store setup.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-Use only HTTP POST or PUT methods to change state (e.g., adding to a shopping cart, adding to a wishlist, etc.) and don't expect to see caching on these methods. Using GET or HEAD methods might trigger caching and prevent updates to private content. For more information about caching, see [RFC-2616 section 13](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html) {:target="&#95;blank"}
+Use only HTTP POST or PUT methods to change state (e.g., adding to a shopping cart, adding to a wishlist, 等.) and don't expect to see caching on these methods. Using GET or HEAD methods might trigger caching and prevent updates to private content. For more information about caching, see [RFC-2616 section 13](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html) {:target="&#95;blank"}
 </div>
 
 {% include cache/page-cache-checklists.md%}

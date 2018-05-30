@@ -6,7 +6,7 @@ landing-page: UI 组件
 menu_title: Overview
 menu_node: parent
 version: 2.0
-github_link: ui-组件/ui-component.md
+github_link: ui-components/ui-component.md
 redirect_from: 
   - /guides/v2.0/ui-library/ui-library-component.html
   - /guides/v2.0/ui_comp_guide/bk-ui_comps.html

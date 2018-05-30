@@ -4,7 +4,7 @@ subgroup: 组件
 title: Link表格列组件
 menu_title: Link表格列组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-linkcolumn.md
+github_link: ui_comp_guide/components/ui-linkcolumn.md
 ---
 
 ## Overview

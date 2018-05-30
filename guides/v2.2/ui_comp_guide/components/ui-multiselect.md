@@ -4,7 +4,7 @@ subgroup: 组件
 title: 多选框组件
 menu_title: 多选框组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-multiselect.md
+github_link: ui_comp_guide/components/ui-multiselect.md
 ---
 
 ## Overview

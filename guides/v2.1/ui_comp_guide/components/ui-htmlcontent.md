@@ -4,7 +4,7 @@ subgroup: 组件
 title: Html内容组件
 menu_title: Html内容组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-htmlcontent.md
+github_link: ui_comp_guide/components/ui-htmlcontent.md
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ The HtmlContent {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI com
 The layout structure inside HtmlContent must contain only one top-level block. The top-level block may contain as many child blocks or containers as required.
 All blocks inside HtmlContent are integrated into the layout, so external blocks can refer to them and vice verse.
 
-## Structure
+## 结构
 The HtmlContent UI component comprises the following files:
 
 - JS component: [app/code/Magento/Ui/view/base/web/js/form/组件/html.js]({{ site.mage2200url }}app/code/Magento/Ui/view/base/web/js/form/组件/html.js)
@@ -66,7 +66,7 @@ HtmlContent-specific options:
 </table>
 
 
-## Example of the Html内容组件 configuration
+## 例如 of the Html内容组件 configuration
 
 ### How to render layout in scope of UI configuration
 

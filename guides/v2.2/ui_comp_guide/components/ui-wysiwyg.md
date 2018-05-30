@@ -4,7 +4,7 @@ subgroup: 组件
 title: 富文本输入组件
 menu_title: 富文本输入组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-wysiwyg.md
+github_link: ui_comp_guide/components/ui-wysiwyg.md
 ---
 
 ## Overview

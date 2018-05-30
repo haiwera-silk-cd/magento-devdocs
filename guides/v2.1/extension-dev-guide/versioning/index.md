@@ -129,7 +129,7 @@ This example uses several composer packages on the public github to simulate a m
 
 <li>Run <code>composer update</code> and notice the core modules were updated since RC1, but the extension remains unchanged because of BC policy.
 
-   This step repeats with each subsequent release of Magento (2.1, 2.2, 2.3, etc.). Deprecation strategy and community communication happens in 2.3.
+   This step repeats with each subsequent release of Magento (2.1, 2.2, 2.3, 等.). Deprecation strategy and community communication happens in 2.3.
 </li>
 
 <li>Magento decides backward incompatible changes are allowed and does this as part of the upcoming release 2.4.

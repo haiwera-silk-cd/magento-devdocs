@@ -35,7 +35,7 @@ In the `config.xml` file in your `%Vendor_Module%/etc` directory, configure the 
 
 Additionally to the default option, a payment method configuration can contain any other custom options. 
 
-## Example
+## 例如
 
 Following is the illustration of such configuration (`config.xml` of the Braintree module)
 

@@ -22,11 +22,11 @@ A merchant can view and manage company profiles in Admin. A company's status con
 
 This module does not create any backward incompatible changes. This module can be deactivated after all the other B2B modules (except `QuickOrder` and `RequisitionList`) are deactivated.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the Magento_Company模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

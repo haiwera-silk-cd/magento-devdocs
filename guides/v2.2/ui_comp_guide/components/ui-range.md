@@ -4,7 +4,7 @@ subgroup: 组件
 title: 范围筛选组件
 menu_title: 范围筛选组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-range.md
+github_link: ui_comp_guide/components/ui-range.md
 ---
 
 ## Overview

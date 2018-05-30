@@ -4,7 +4,7 @@ subgroup: 组件
 title: 操作列组件
 menu_title: 操作列组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-actionscolumn.md
+github_link: ui_comp_guide/components/ui-actionscolumn.md
 ---
 
 ## Overview

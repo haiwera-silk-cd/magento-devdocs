@@ -4,7 +4,7 @@ subgroup: 组件
 title: 导航栏组件
 menu_title: 导航栏组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-nav.md
+github_link: ui_comp_guide/components/ui-nav.md
 ---
 
 ## Overview

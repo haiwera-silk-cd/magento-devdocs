@@ -26,11 +26,11 @@ The `Magento_GroupedRequisitionList` module provides the following features:
 
 The module has dependency on the `Magento_RequisitionList` module and `Magento_Grouped` modules, which must be installed and enabled first. This module does not create any backward incompatible changes. Can be uninstalled or deactivated at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the `Magento_GroupedRequisitionList` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

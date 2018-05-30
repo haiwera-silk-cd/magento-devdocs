@@ -4,7 +4,7 @@ subgroup: 组件
 title: 模态窗组件
 menu_title: Modal component
 version: 2.1
-github_link: ui_comp_guide/组件/ui-modal.md
+github_link: ui_comp_guide/components/ui-modal.md
 redirect_from: guides/v2.0/ui-components/ui-modal.html
 ---
 
@@ -18,7 +18,7 @@ The Modal component can be used for both {% glossarytooltip 29ddb393-ca22-4df9-a
 
 For recommendations about modal windows usage from the UX point of view, see the corresponding topic in the [Magento Admin pattern library]({{ page.baseurl }}/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html).
 
-## Structure
+## 结构
 
 The modal UI component comprises the following files:
 
@@ -90,7 +90,7 @@ Modal-specific configuration:
   </tr>
 </table>
 
-## Example of the Modal component configuration
+## 例如 of the Modal component configuration
 
 The following sample is an example of the configuration for a simple modal window containing one text field and a standard set of action buttons (**Cancel**, **Clear**, **Done**):
 

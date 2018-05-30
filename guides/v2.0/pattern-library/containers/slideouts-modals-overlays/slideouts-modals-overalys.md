@@ -24,7 +24,7 @@ Modal windows are best used to focus attention either on some particular content
 
 **Use of Modal Overlay**
 
-Overlays, for the purposes of this document, generally refer to any content that appears over the primary page when triggered. Overlays also refer more specifically to those containers used to present actions, navigation, filtering options, tooltips and contextual help, messages, etc.  See examples below.
+Overlays, for the purposes of this document, generally refer to any content that appears over the primary page when triggered. Overlays also refer more specifically to those containers used to present actions, navigation, filtering options, tooltips and contextual help, messages, 等.  See examples below.
 
 <h3 id="slideouts">Slide-out</h3>
 **Behavior and Animation**
@@ -103,7 +103,7 @@ There are two general ways of using Slideout — "Subflow" and "Extend Form".
 
 <img src="img/slideout-panel10.png"/><br />
 
-If the form in slide-in panel creates new entities, or changes existing ones (Create Product Configurations, Add Attribute) primary action in the Slideout 按钮栏 should be a noun explaining the panel resulting action: "Generate Configurations", "Create Attribute", etc.
+If the form in slide-in panel creates new entities, or changes existing ones (Create Product Configurations, Add Attribute) primary action in the Slideout 按钮栏 should be a noun explaining the panel resulting action: "Generate Configurations", "Create Attribute", 等.
 Clicking that button will:
 <ol>
 	<li>Validate the form in Slideout. <br />If form has errors, it will show the error messages following the Error Messaging Pattern. If no errors found, it will:</li>

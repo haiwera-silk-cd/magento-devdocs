@@ -68,7 +68,7 @@ Example with `after`:
 * Should be in camelCase with lowercase first letter
 * Should be the last attribute of an element
 
-## Example
+## 例如
 {%raw%}
 The following example contains four actions:
 

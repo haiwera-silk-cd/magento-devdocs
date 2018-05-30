@@ -22,7 +22,7 @@ When a customer adds an item to their {% glossarytooltip c7ecb18d-cefe-452d-83e2
 * Track each item the customer wants to buy, including the quantity and base cost
 * Gather information about the customer, including billing and shipping addresses
 * Determine shipping costs
-* Calculate the subtotal, add costs (shipping fees, taxes, etc.) and apply coupons to determine the grand total
+* Calculate the subtotal, add costs (shipping fees, taxes, 等.) and apply coupons to determine the grand total
 * Determine the {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %}
 * Place the order so that the merchant can fulfill it.
 

@@ -15,7 +15,7 @@ This example shows the `optgroup` typified element. You can use the [`\Magento\M
 
 This topic discusses how to create classes for a typified element and to use them in tests.
 
-## Structure {#structure}
+## 结构 {#structure}
 
 ### General {#general}
 

@@ -219,7 +219,7 @@ Let's look at the repository structure.
 |`field` attribute   |Semantics   | Is required?  |
 |---|---|---|
 | `name`  | Field name in fixture |Required  |
-| `xsi:type` |Type of field value |Required|
+| `xsi:type` |Type of field value |必需|
 
 |`field` daughter element   |Semantics   | Is required?  |
 |---|---|---|
@@ -228,7 +228,7 @@ Let's look at the repository structure.
 |`item` attribute |Semantics   | Is required?  |
 |---|---|---|
 | `name`  | Key name of the item  |Required  |
-| `xsi:type` |Type of the item value |Required|
+| `xsi:type` |Type of the item value |必需|
 
 The `default` data set is used in the test when the repository hasn't been specified in the test, although you can explicitly specify `default`. If repository name in the test is `cms_page_link`, then fields will be filled with data from `<dataset name="cms_page_link">`.
 

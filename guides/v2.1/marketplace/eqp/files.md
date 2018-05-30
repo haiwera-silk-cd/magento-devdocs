@@ -196,7 +196,7 @@ DELETE /rest/v1/files/uploads/:file_upload_id
 
 Available parameters:
 
-|Parameter|Type|Required|Description|
+|Parameter|Type|必需|Description|
 |---------|----|--------|-----------|
 |submission_ids|array|no|A list of submission IDs to disassociate the the file from the specified package.|
 {:.style="table-layout: auto;"}

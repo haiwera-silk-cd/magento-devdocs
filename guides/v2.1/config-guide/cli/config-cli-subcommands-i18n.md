@@ -262,7 +262,7 @@ To help you to make your store more flexible, you can upload several language pa
 
 To enable an additional package for an existing language, name the new package any name except for an existing language code name (to avoid confusion). Specify configurations of a package in the language package's `language.xml` meta-information file as discussed in the the next section.
 
-## Examples of using translation commands
+## 例如s of using translation commands
 The following sections provide end-to-end examples of using the commands discussed in this topic to create translation dictionaries and translation packages:
 
 -   <a href="#config-cli-subcommands-xlate-example1">Example: Create a translation dictionary for a module or theme</a>

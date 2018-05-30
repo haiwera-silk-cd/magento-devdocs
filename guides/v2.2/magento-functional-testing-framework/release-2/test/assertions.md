@@ -40,7 +40,7 @@ To use variables embedded in a string in `expected` and `actual` of your asserti
 
 `actual="A long assert string {$stepKeyOfGrab} with an embedded variable reference." actualType="variable"`
 
-## Example
+## 例如
 
 The following example shows a common test that gets text from a page and asserts that it matches what we expect to see. If it does not, the test will fail at the assert step.
 

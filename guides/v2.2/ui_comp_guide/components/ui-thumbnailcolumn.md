@@ -4,7 +4,7 @@ subgroup: 组件
 title: 缩略图列组件
 menu_title: 缩略图列组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-thumbnailcolumn.md
+github_link: ui_comp_guide/components/ui-thumbnailcolumn.md
 ---
 
 ## Overview

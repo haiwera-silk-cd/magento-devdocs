@@ -4,7 +4,7 @@ subgroup: 组件
 title: 下拉操作组件
 menu_title: 下拉操作组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-massactions.md
+github_link: ui_comp_guide/components/ui-massactions.md
 ---
 
 ## Overview

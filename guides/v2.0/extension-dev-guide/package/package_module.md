@@ -138,7 +138,7 @@ Magento can retrieve your extension package from any valid GitHub {% glossarytoo
 
 
 
-<!-- After you have created the module's `composer.json` file in the root directory of the module, Composer can recognize your package as compatible with its deployment strategy. Such packages can be published to a code repository (GitHub, SVN, etc.), packagist.org, or on your own private package repository. -->
+<!-- After you have created the module's `composer.json` file in the root directory of the module, Composer can recognize your package as compatible with its deployment strategy. Such packages can be published to a code repository (GitHub, SVN, 等.), packagist.org, or on your own private package repository. -->
 
 
 

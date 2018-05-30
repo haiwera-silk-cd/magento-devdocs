@@ -4,7 +4,7 @@ subgroup: 组件
 title: 数据组件
 menu_title: 数据组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-date.md
+github_link: ui_comp_guide/components/ui-date.md
 ---
 
 ## Overview

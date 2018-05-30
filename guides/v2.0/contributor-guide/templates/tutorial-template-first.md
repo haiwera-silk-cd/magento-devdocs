@@ -44,6 +44,6 @@ This tutorial will show a < audience/skill level> how to < perform the task addr
 
 ## Complete these prerequisites
 
-* List any skills required (PHP, database, admin, etc.)
+* List any skills required (PHP, database, admin, 等.)
 * List any assumptions or requirements before starting.
 * List any steps, bulleted and in order, necessary before starting the tutorial.

@@ -20,11 +20,11 @@ Multiple items can be sent to the shopping cart from a CSV file, by copy and pas
 
 The module does not create any backward incompatible changes. It heavily depends on the `Magento_AdvancedCheckout` module and cannot work without it. Can be deactivated and uninstalled at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the `Magento_QuickOrder` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

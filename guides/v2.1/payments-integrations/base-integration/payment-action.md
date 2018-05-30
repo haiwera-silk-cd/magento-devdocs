@@ -25,7 +25,7 @@ The gateway command for the payment action must be configured in the `di.xml` fi
 Configure the command as described in [网关命令]({{ page.baseurl }}/payments-integrations/payment-gateway/gateway-command.html).
 
 
-## Example: `authorize` payment action for Braintree
+## 例如: `authorize` payment action for Braintree
 
 Configuring the gateway command and adding it to command pool (`app/code/Magento/Braintree/etc/di.xml`):
 

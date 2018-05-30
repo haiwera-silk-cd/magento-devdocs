@@ -96,7 +96,7 @@ You must associate a root category with a store using the Magento {% glossarytoo
 Theme configuration includes all themes registered in your Magento system; the data comes directly from the `theme` database table.
 (Theme configuration is in the `themes` array in `config.php`.)
 
-#### Structure of theme data
+#### 结构 of theme data
 The key of array is full theme path: `area` + `theme path`
 
 For example, `frontend/Magento/luma`.

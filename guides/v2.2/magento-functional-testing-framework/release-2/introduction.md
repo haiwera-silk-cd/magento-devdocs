@@ -80,7 +80,7 @@ Open the file and check the corresponding dependency:
 
 ```
 tests
-    _data                       // Additional files required for tests (e.g. pictures, CSV files for import/export, etc.)
+    _data                       // Additional files required for tests (e.g. pictures, CSV files for import/export, 等.)
     _output                     // The directory is generated during test run. It contains testing reports.
     _suite                      // Test suites
     functional                  // Functional acceptance tests

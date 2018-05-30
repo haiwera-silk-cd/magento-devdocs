@@ -59,7 +59,7 @@ The `<magento2_root_dir>/dev/tests/functional/phpunit.xml` contains PHPUnit conf
     <td><code>log_directory</code></td>
     <td>Path to a directory with testing reports.</td>
     <td><code>"&lt;path to the reporting directory&gt;"</code></td>
-    <td><a href="http://localhost:4000/guides/v2.0/mtf/features/reporting.html#report-directory" target="_blank">Set a reporting directory</a></td>
+    <td><a href="/guides/v2.0/mtf/features/reporting.html#report-directory" target="_blank">Set a reporting directory</a></td>
 </tr>
 <tr>
     <td><code>events_preset</code></td>

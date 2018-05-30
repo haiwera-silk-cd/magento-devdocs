@@ -22,7 +22,7 @@ See the [list of Robo commands](robo.html). If you'd like to run the Codeception
 vendor/bin/codecept run functional
 ```
 
-## Examples
+## 例如s
 
 Run all tests in `dev/tests/acceptance/tests/functional/Magento/FunctionalTest`:
 

@@ -20,11 +20,11 @@ In Admin, the `CompanyPayment` module adds an additional panel (on the Company p
 
 The module has a dependency on the `Magento_Company` module, which must be installed and enabled first. This module does not create any backward incompatible changes. It can be deactivated and uninstalled at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the `Magento_CompanyPayment` module. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

@@ -2,7 +2,7 @@
 group: UI_组件_guide
 title: 输入框集组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-fieldset.md
+github_link: ui_comp_guide/components/ui-fieldset.md
 ---
 
 The Fieldset component implements a container for visually-grouped form elements, such as buttons and form fields.

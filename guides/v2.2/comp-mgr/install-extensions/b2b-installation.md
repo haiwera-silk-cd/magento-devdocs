@@ -1,8 +1,8 @@
 ---
 group: compman
 subgroup: 10_从命令行安装扩展
-title: 安装B2B扩展
-menu_title: 安装B2B扩展
+title: 安装B2B扩展
+menu_title: 安装B2B扩展
 menu_order: 1
 version: 2.2
 github_link: comp-mgr/install-extensions/b2b-installation.md

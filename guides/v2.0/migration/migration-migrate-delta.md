@@ -16,7 +16,7 @@ functional_areas:
 
 Incremental migration enables you to migrate only the changes made in Magento 1 since the last time you migrated data. These changes are:
 
-* data that customers added via {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} (created orders, reviews, changes in customer profiles, etc.)
+* data that customers added via {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} (created orders, reviews, changes in customer profiles, 等.)
 
 * all operations with orders in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} panel
 

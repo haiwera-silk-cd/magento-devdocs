@@ -28,7 +28,7 @@ Classes implementing this adapter interface use the third-party class directly t
 
 This approach allows you to update or substitute different implementations provided by other third-party classes without the need to update code that uses your adapter.
 
-## Examples of adapters in Magento
+## 例如s of adapters in Magento
 
 ### `Magento/Framework/Code/Minifier`
 
@@ -44,7 +44,7 @@ The [`Magento/Framework/Image`](https://github.com/magento/magento2/tree/2.0/lib
 
 The [`AdapterInterface`](https://github.com/magento/magento2/blob/2.0/lib/internal/Magento/Framework/Image/Adapter/AdapterInterface.php){:target="_blank"} class defines the available functionality, and the [`Gd2`](https://github.com/magento/magento2/blob/2.0/lib/internal/Magento/Framework/Image/Adapter/Gd2.php){:target="_blank"} and [`ImageMagick`](https://github.com/magento/magento2/blob/2.0/lib/internal/Magento/Framework/Image/Adapter/ImageMagick.php){:target="_blank"} adapter classes provides the concrete implementation using the third-party libraries.
 
-## Example Code
+## 例如 Code
 
 The code below describes an interface for an adapter that parses {% glossarytooltip a5ef9041-976f-4eb3-826e-bf836027d8c3 %}markdown{% endglossarytooltip %}.
 

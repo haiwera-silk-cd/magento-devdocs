@@ -4,7 +4,7 @@ subgroup: 组件
 title: 单/复选框组组件
 menu_title: 单/复选框组组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-checkboxset.md
+github_link: ui_comp_guide/components/ui-checkboxset.md
 ---
 
 ## Overview

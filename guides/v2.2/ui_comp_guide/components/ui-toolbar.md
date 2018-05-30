@@ -4,7 +4,7 @@ subgroup: 组件
 title: 工具栏组件
 menu_title: 工具栏组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-toolbar.md
+github_link: ui_comp_guide/components/ui-toolbar.md
 ---
 ## Overview
 

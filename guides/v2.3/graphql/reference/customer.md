@@ -62,7 +62,7 @@ Attribute |  Data Type | Description
 `reward_warning_notification` | Int | The number of the email template to use for notifications about rewards points expiring. This attribute is defined in the Reward module.
 
 
-## Example usage
+## 例如 usage
 
 The following call returns information about the logged-in customer.
 

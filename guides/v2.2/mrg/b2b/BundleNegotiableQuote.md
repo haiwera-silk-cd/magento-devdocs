@@ -23,11 +23,11 @@ This module has a dependency on the Magento_NegotiableQuote and Magento_Bundle, 
 
 The `Magento_BundleNegotiableQuote` module does not create any backward incompatible changes and can be uninstalled at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the Magento_BundleNegotiableQuote模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

@@ -4,7 +4,7 @@ subgroup: 组件
 title: 表格显示数量控制组件
 menu_title: 表格显示数量控制组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-sizes.md
+github_link: ui_comp_guide/components/ui-sizes.md
 ---
 
 ## Overview

@@ -46,7 +46,7 @@ Most assertions contain attribute `message` that specifies text of an informatio
 
 If `variable` is used, the corresponding value reference uses PHP language style like `{$nameOfStepKey}`. See the example below.
 
-## Example
+## 例如
 
 In this very common test writing example we are grabbing text from a page and then asserting that it matches what we expect to see. If it does not, the test will fail at the assert step.
 

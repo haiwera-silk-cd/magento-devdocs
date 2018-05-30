@@ -21,7 +21,7 @@ Attribute |  Data Type | Description
 `canonical_url` | String | The internal relative URL. If the specified  `url` is a redirect, the query returns the redirected URL, not the original.
 `type` | UrlRewriteEntityTypeEnum | The value of `UrlRewriteEntityTypeEnum` is one of PRODUCT, CATEGORY, or CMS_PAGE.
 
-## Example usage
+## 例如 usage
 
 **Request**
 

@@ -4,7 +4,7 @@ subgroup: 组件
 title: 数据列组件
 menu_title: 数据列组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-datecolumn.md
+github_link: ui_comp_guide/components/ui-datecolumn.md
 ---
 
 ## Overview

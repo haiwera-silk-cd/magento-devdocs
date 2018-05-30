@@ -13,11 +13,11 @@ functional_areas:
 To implement transaction {% glossarytooltip 34ecb0ab-b8a3-42d9-a728-0b893e8c0417 %}authorization{% endglossarytooltip %} our payment should receive some payment details from payment form, like credit card details,
 and send received details to payment processor.
 
-Depends on your payment integration payment details might be different, but, usually, it's credit card details, tokenized cards, payment nonce, etc.
+Depends on your payment integration payment details might be different, but, usually, it's credit card details, tokenized cards, payment nonce, 等.
 
 However, in any case you should write some code to retrieve payment details from payment form.
 
-## Example: Braintree request builder for the `payment` part of the request
+## 例如: Braintree request builder for the `payment` part of the request
 
 We have specified `BraintreeAuthorizeRequest` builder composite to process authorization and it includes the `Magento\Braintree\Gateway\Request\PaymentDataBuilder` builder. This is builder responsible for the payment information part of the request, in other words, the credit card information. Let's look closer at it's implementation.
 

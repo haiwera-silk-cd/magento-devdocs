@@ -146,7 +146,7 @@ Checkboxes and Drag handles are mutually exclusive features. i.e. Tree structure
 
 
 <h3 id="variation5">Action Menu</h3>
-Action icon is used for any action that will be perform to the items in the tree. This may include edit, delete, move up, move down, etc.
+Action icon is used for any action that will be perform to the items in the tree. This may include edit, delete, move up, move down, 等.
 
 The action icon is not required for the tree. It only appear as needed.
 

@@ -64,7 +64,7 @@ The following diagram demonstrates XML structure of a section in the MFTF:
 * Elements in sections are given camel case with first letter lowercase name.
   They describe the function of the element rather than attempting to describe the selector used.
 
-## Example
+## 例如
 
 _.../Catalog/Section/AdminCategorySidebarActionSection.xml_:
 

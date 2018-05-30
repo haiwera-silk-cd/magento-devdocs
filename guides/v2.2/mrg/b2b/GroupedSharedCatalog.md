@@ -25,11 +25,11 @@ The `Magento_GroupedSharedCatalog` module provides the following features:
 
 The module has dependency on the `Magento_SharedCatalog` module and `Magento_Grouped` modules, which must be installed and enabled first. This module does not create any backward incompatible changes. Can be uninstalled or deactivated at any time.
 
-## Structure
+## 结构
 
 [Learn about a typical file structure for a Magento 2 module]({{ page.baseurl }}/extension-dev-guide/build/module-file-structure.html).
 
-## Extensibility
+## 可扩展性
 
 Extension developers can interact with the Magento_GroupedSharedCatalog模块. For more information about the Magento extension mechanism, see [Magento plug-ins]({{ page.baseurl }}/extension-dev-guide/plugins.html).
 

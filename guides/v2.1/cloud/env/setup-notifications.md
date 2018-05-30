@@ -100,10 +100,10 @@ log:
 Log levels determine the level of detail your notification messages contain. You can choose from the following options:
 
 -   **debug**—Detailed debug information.
--   **info**—Interesting events. For example, a user logs in, SQL logs, etc.
+-   **info**—Interesting events. For example, a user logs in, SQL logs, 等.
 -   **notice**—Normal but significant events.
 -   **warning**—Exceptional occurrences that are not errors. For example, use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.
 -   **error**—Runtime errors that don't require immediate action but should be logged and monitored.
 -   **critical**—Critical conditions. For example, an unavailable application component, unexpected exceptions.
--   **alert**—Action must be taken immediately. For example, your website is down, the database is unavailable, etc. This should trigger SMS alerts and wake you up.
+-   **alert**—Action must be taken immediately. For example, your website is down, the database is unavailable, 等. This should trigger SMS alerts and wake you up.
 -   **emergency**—The system is unusable.

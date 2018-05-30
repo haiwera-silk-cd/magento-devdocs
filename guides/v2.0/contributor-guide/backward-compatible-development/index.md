@@ -29,7 +29,7 @@ The core Magento team and contributing developers work in two release types
 The following code modifications are forbidden for all code (both `@api` and non `@api`) without approval of a Magento architect.
 
 <div class="bs-callout bs-callout-info" markdown="1">
-  The rules listed do not apply to customization code (e.g. Plugins, Observers, JS Mixins, etc.).
+  The rules listed do not apply to customization code (e.g. Plugins, Observers, JS Mixins, 等.).
 </div>
 
 ### PHP
@@ -379,7 +379,7 @@ Examples of these tasks include:
 
 * Changing the input/output values format of a method
 * Changing a value format in the DB
-* Changing XML files (layouts, configuration files, etc.)
+* Changing XML files (layouts, configuration files, 等.)
 
 Some changes are detected and documented by an automated tool.
 These backward incompatible changes do not need manual documentation:

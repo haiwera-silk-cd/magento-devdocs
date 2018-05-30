@@ -4,7 +4,7 @@ subgroup: 组件
 title: 动态行组件
 menu_title: 动态行组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-dynamicrows.md
+github_link: ui_comp_guide/components/ui-dynamicrows.md
 ---
 
 ## Overview

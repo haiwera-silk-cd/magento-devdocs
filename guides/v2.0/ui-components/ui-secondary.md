@@ -5,7 +5,7 @@ title: Listing/Grid Secondary 组件
 menu_title: Listing/Grid Secondary 组件
 menu_node: parent
 version: 2.0
-github_link: ui-组件/ui-secondary.md
+github_link: ui-components/ui-secondary.md
 redirect_from: /guides/v2.0/ui-library/ui-secondary.html
 
 ---

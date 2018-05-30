@@ -42,7 +42,7 @@ The XML format for the `actionGroups` declaration is:
 </actionGroups>
 ```
 
-## Example
+## 例如
 {%raw%}
 
 These examples build a declaration for a group of actions that grant authorization to the Admin area, and use the declaration in a test.

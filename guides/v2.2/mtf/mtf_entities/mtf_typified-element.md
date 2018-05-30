@@ -7,7 +7,7 @@ github_link: mtf/mtf_entities/mtf_typified-element.md
 
 A typified element is an element of the GUI (Select, Multiselect etc). Magento has custom typified elements with a special logic, for example: Customized Select, Suggest Dropdown, {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}Store View{% endglossarytooltip %} Selector. 典型元素s are often used as elements of a form or a grid. Functional Testing Framework (FTF) enables you to test any typified element.
 
-## Example {#example}
+## 例如 {#example}
 
 ![A typified element example in the browser]
 

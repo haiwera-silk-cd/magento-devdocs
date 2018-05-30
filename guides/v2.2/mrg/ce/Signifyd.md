@@ -18,7 +18,7 @@ The module implementation allows you to:
  - automatically receive a [Signifyd guarantee](https://www.signifyd.com/docs/api/#/reference/guarantees) for a created case
  - automatically cancel a guarantee when the order is canceled
 
-## Extensibility
+## 可扩展性
 
 The Magento_Signifyd模块 does not have own Events, Layouts, and UI 组件 as extension points.
 

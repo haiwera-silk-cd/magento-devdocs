@@ -72,17 +72,17 @@
 <a name="1"></a>
 <h2>Code Organized in Modules</h2>
 
-<p>Magento organizes its code into individual Modules. In a typical PHP <a href="http://en.wikipedia.org/wiki/Model–view–controller" target="_new"><b>Model-View-Controller (MVC)</b></a> application, all the Controllers will be in one folder, all the Models in another, etc.  In Magento, files are grouped together based on functionality, which are called <b>modules</b> in Magento.
+<p>Magento organizes its code into individual Modules. In a typical PHP <a href="http://en.wikipedia.org/wiki/Model–view–controller" target="_new"><b>Model-View-Controller (MVC)</b></a> application, all the Controllers will be in one folder, all the Models in another, 等.  In Magento, files are grouped together based on functionality, which are called <b>modules</b> in Magento.
 
 <h4>Magento's Code</h4>
-<p>For example, you'll find Controllers, Models, Helpers, Blocks, etc. related to Magento's checkout functionality in
+<p>For example, you'll find Controllers, Models, Helpers, Blocks, 等. related to Magento's checkout functionality in
 <pre>app/code/core/Mage/Checkout</pre>
 
-<p>You'll find Controllers, Models, Helpers, Blocks, etc. related to Magento's Google Checkout functionality in
+<p>You'll find Controllers, Models, Helpers, Blocks, 等. related to Magento's Google Checkout functionality in
 <pre>app/code/core/Mage/GoogleCheckout</pre>
 
 <h4>Your Code</h4>
-<p>When you want to customize or extend Magento, rather than editing core files directly, or even placing your new Controllers, Models, Helpers, Blocks, etc. next to Magento code, you'll create your own Modules in
+<p>When you want to customize or extend Magento, rather than editing core files directly, or even placing your new Controllers, Models, Helpers, Blocks, 等. next to Magento code, you'll create your own Modules in
 <pre>app/code/local/Package/Modulename</pre>
 
 <p><b>Package</b> (also often referred to as a <b>Namespace</b>) is a unique name that identifies your company or organization. The intent is that each member of the world-wide Magento community will use their own Package name when creating modules in order to avoid colliding with another user's code.  </p>
@@ -354,7 +354,7 @@ $this->loadLayout();
 $this->renderLayout();
 </pre>
 
-<p>Magento will load up a Layout with a skeleton site structure.  There will be Structure Blocks to give you your <tt>html</tt>, <tt>head</tt>, and <tt>body</tt>, as well as HTML to setup single or multiple columns of Layout. Additionally, there will be a few Content Blocks for the navigation, default welcome message, etc.
+<p>Magento will load up a Layout with a skeleton site structure.  There will be Structure Blocks to give you your <tt>html</tt>, <tt>head</tt>, and <tt>body</tt>, as well as HTML to setup single or multiple columns of Layout. Additionally, there will be a few Content Blocks for the navigation, default welcome message, 等.
 
 <p>"Structure" and "Content" are arbitrary designations in the Layout system.  A Block doesn't programmatically know if it's Structure or Content, but it's useful to think of a Block as one or the other.</p>
 
@@ -415,7 +415,7 @@ public function indexAction()
 <a name="8"></a>
 <h2>Observers</h2>
 
-<p>Like any good object-oriented system, Magento implements an Event/Observer pattern for end users to hook into.  As certain actions happen during a Page request (a Model is saved, a user logs in, etc.), Magento will issue an event signal. </p>
+<p>Like any good object-oriented system, Magento implements an Event/Observer pattern for end users to hook into.  As certain actions happen during a Page request (a Model is saved, a user logs in, 等.), Magento will issue an event signal. </p>
 
 <p>When creating your own Modules, you can "listen" for these events.  Say you wanted to get an email every time a certain customer logged into the store.  You could listen for the "customer_login" event (setup in config.xml)</p>
 

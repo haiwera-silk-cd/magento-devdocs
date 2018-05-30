@@ -2,7 +2,7 @@
 group: cloud
 title: 安装、管理和升级扩展
 version: 2.0
-github_link: cloud/howtos/install-组件.md
+github_link: cloud/howtos/install-components.md
 redirect_from:
   - /guides/v2.2/cloud/howtos/update-components.html
 functional_areas:

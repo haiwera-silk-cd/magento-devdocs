@@ -7,22 +7,22 @@ functional_areas:
     - Reports
 ---
 
-A Magento instance collects data that the Magento Business Intelligence (MBI) service uses to build the advanced reports.
-All the data are stored in an encrypted archive file which is securely transferred to the MBI.
-Data collection is declared in a configuration file `etc/analytics.xml`. It declares:
+Magento收集Magento商业智能(MBI)服务用于构建高级报表的数据。
+所有这些数据存储在一个可以安全传输到MBI的加密的归档文件中
+数据收集器声明在`etc/analytics.xml`配置文件中。 它声明了:
 
-- which report files must be included into the archive file
-- which provider classes must collect data for each report file
-- which report data configuration must be applied to collected data
+- 哪些报表文件必须被包含到这个归档中
+- 哪些提供器类必须为每个报表文件提供数据
+- 哪些报表数据配置必须被应用到收集到的数据
 
 <div class="bs-callout bs-callout-warning" markdown="1" >
-This topic serves to provide better understanding of how data collection works.
-Any changes in configuraton files will cause issues, because the MBI service doesn't expect any changes of configuration in the current version.
+这篇文章旨在提供更好的解释，关于数据收集器是如何工作。
+配置文件的作何改变都会导致问题，因为MBI服务不希望在当前的版本中，配置文件有任何更改。
 </div>
 
-## Example
+## 例如
 
-An example of the `etc/analytics.xml` file:
+这是一个`etc/analytics.xml`的示例文件
 
 ```xml
 <?xml version="1.0"?>
@@ -55,44 +55,44 @@ An example of the `etc/analytics.xml` file:
 </config>
 ```
 
-The example configuration file declares the following:
+上面的示例配置声明了以下内容:
 
-*   The `modules.csv`, `store_config.csv`, `stores.csv` report files must be included into the archive file prepared for the MBI service.
-*   `modules.csv` must contain data provided by the `\Magento\Analytics\ReportXml\ReportProvider` class.
- Provided data must be configured according to the `modules` report declarations defined in the `etc/reports.xml` file.
-*   `store_config.csv` must contain data provided by the `Magento\Analytics\Model\StoreConfigurationProvider` class.
-*   `stores.csv` must contain data provided by the `\Magento\Analytics\ReportXml\ReportProvider` class.
- Provided data are configured according to the `store_config` report declarations defined in the `etc/reports.xml` file.
- Also, the report file must contain data provided by the `Magento\Analytics\Model\StoreConfigurationProvider` class.
+*   `modules.csv`, `store_config.csv`, `stores.csv`报表文件必须被包含在准备给MBI服务的归档文件中
+*   `modules.csv`必须包含数据提供器`\Magento\Analytics\ReportXml\ReportProvider`类提供的数据.
+ 提供的数据必根据在`modules`报表申明的在`etc/reports.xml`文件中定义的进行配置.
+*   `store_config.csv`必须包含数据提供器`Magento\Analytics\Model\StoreConfigurationProvider`类提供的数据.
+*   `stores.csv`必须包含数据提供器`\Magento\Analytics\ReportXml\ReportProvider` 类提供的数据.
+ 提供的数据根据在`store_config`报表中声明在`etc/reports.xml`文件中定义的进行配置.
+ 同样, 报表文件必须包含数据提供器`Magento\Analytics\Model\StoreConfigurationProvider` 类提供的数据.
 
-## Extensibility
+## 可扩展性
 
-Configuration of data collection can be extended or changed in any module adding the corresponding `<module_name>/etc/analytics.xml` file with nodes that must be changed or added.
+数据集的配置可以在任何模块被修改或扩展，添加对应的`<module_name>/etc/analytics.xml`文件并且必须修改或添加其节点。
 
-## Structure
+## 结构
 
-The `etc/analytics.xsd` schema declares structure of the `etc/analytics.xml` file .
+`etc/analytics.xsd`文件声明了`etc/analytics.xml`文件要遵遁的结构.
 
 {% include_relative img/analytics_xsd.svg %}
 
 ### `<config>`
 
-Configuration of an XML.
+xml的配置
 
-|Attribute|Description|Constant value|Use|
+|属性|描述|常量|用法|
 |---|---|---|---|
-|`xmlns:xsi`|Default namespace declaration|`"http://www.w3.org/2001/XMLSchema-instance"`|Required|
-|`xsi:noNamespaceSchemaLocation`|An XML Schema document that does not have a target namespace|`"urn:magento:module:Magento_Analytics:etc/reports.xsd"`|Required|
+|`xmlns:xsi`|默认命令空间声明|`"http://www.w3.org/2001/XMLSchema-instance"`|必需|
+|`xsi:noNamespaceSchemaLocation`|一个没有目标命名空间的XML结构的文档|`"urn:magento:module:Magento_Analytics:etc/reports.xsd"`|必需|
 
 ### `<file>`
 
-A report file (`.csv` by default) with collected data to be added to the archive file.
-The `\Magento\Analytics\Model\ReportWriter` class is responsible for a decision about a data file extension (`.csv`, `.json`, etc.).
+收集了数据并将被归档到归档文件的报表文件(默认是`.csv`)
+T`\Magento\Analytics\Model\ReportWriter` 类将决定响应的数据和文件类型，可以是 (`.csv`, `.json`, 等.).
 
-|Attribute|Description|Example value|Use|
+|属性|描述|示例值|用法|
 |---|---|---|---|
-|`name`|A filename with no extension|`"modules"`|Required|
-|`prefix`|Reserved for future use.|--|--|
+|`name`|文件名，不包含扩展名|`"modules"`|必需|
+|`prefix`|保留|--|--|
 
 ```xml
 <config ...>
@@ -112,7 +112,7 @@ The `\Magento\Analytics\Model\ReportWriter` class is responsible for a decision 
 
 ### `<providers>`
 
-The node must contain a `<reportProvider>` node, or a `<customProvider>` node, or both.
+节点必须包含`<reportProvider>`或`<customProvider>`，或两者都包含。
 
 ```xml
 ...
@@ -142,15 +142,15 @@ The node must contain a `<reportProvider>` node, or a `<customProvider>` node, o
 
 ### `<reportProvider>`
 
-A class that provides data for a report file.
-It can contain parameters.
+一个为报表文件提供数据的类.
+可以包含参数。
 
-|Attribute|Description|Example value|Use|
+|属性|描述|示例值|用法|
 |---|---|---|---|
-|`name`|A provider name|`modules`|Required|
-|`class`|Full name of a class that provides data|`"Magento\Analytics\ReportXml\ReportProvider"`|Required|
+|`name`|数据提供器的名字|`modules`|必需|
+|`class`|完整的数据提供器的类名|`"Magento\Analytics\ReportXml\ReportProvider"`|必需|
 
-Currently there is only one report provider is available that is `Magento\Analytics\ReportXml\ReportProvider`.
+当前仅支持一种有效的数据提供器`Magento\Analytics\ReportXml\ReportProvider`.
 
 ```xml
 ...
@@ -165,8 +165,8 @@ Currently there is only one report provider is available that is `Magento\Analyt
 
 ### `<parameters>`
 
-Parameters used by `<reportProvider>`.
-Currently there is only one parameter is available. It is declared in `<name>`.
+用于`<reportProvider>`的参数。
+当前只有一个可用参数`<name>`
 
 ```xml
 ...
@@ -179,17 +179,17 @@ Currently there is only one parameter is available. It is declared in `<name>`.
 ...
 ```
 
-If `reportProvider class="Magento\Analytics\ReportXml\ReportProvider"`, then `<name>` references to the `<report name />` in `reports.xml`.
+如果提供器是`reportProvider class="Magento\Analytics\ReportXml\ReportProvider"`，那么可以直接在`reports.xml`使用`<report name />`
 
 ### `<customProvider>`
 
-A class that provides data for a report file.
-It cannot contain any parameters.
+一个为报表文件提供数据的类.
+可以包含任何参数
 
-|Attribute|Description|Example value|Use|
+|属性|描述|示例值|用法|
 |---|---|---|---|
-|`name`|A provider name|"store_config"|Required|
-|`class`|Full name of a class that provides data|`"Magento\Analytics\Model\StoreConfigurationProvider"`|Required|
+|`name`|数据提供器的名字|"store_config"|必需|
+|`class`|完整的数据提供器的类名|`"Magento\Analytics\Model\StoreConfigurationProvider"`|必需|
 
 ```xml
 ...
@@ -210,4 +210,4 @@ It cannot contain any parameters.
 [modules]: data-collection.html
 
 <!-- ABBREVIATIONS -->
-*[MBI]: Magento Business Analytics
+*[MBI]: Magento商业分析

@@ -4,7 +4,7 @@ subgroup: 组件
 title: 按钮组件
 menu_title: 按钮组件
 version: 2.1
-github_link: ui_comp_guide/组件/ui-button.md
+github_link: ui_comp_guide/components/ui-button.md
 ---
 
 ## Overview

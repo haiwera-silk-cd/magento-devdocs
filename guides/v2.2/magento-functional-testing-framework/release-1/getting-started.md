@@ -24,7 +24,7 @@ Make sure that you've set up the following software:
 * [Selenium Server Standalone v3.6.0+](#selenium-server)
 * [ChromeDriver v2.33+][chromedriver]
 
-### Recommendations
+### 强烈建议
 
 We recommend using [PHPStorm 2017](https://www.jetbrains.com/phpstorm/) for your IDE.
 They recently added support for [Codeception Test execution](https://blog.jetbrains.com/phpstorm/2017/03/codeception-support-comes-to-phpstorm-2017-1/) which is helpful when debugging.

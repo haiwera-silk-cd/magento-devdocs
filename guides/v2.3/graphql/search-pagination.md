@@ -81,7 +81,7 @@ sort: {
 }
 ```
 
-## Example Searches
+## 例如 Searches
 
 The following sections provide examples of each type of search. These examples use the Magento Open Source sample data.
 

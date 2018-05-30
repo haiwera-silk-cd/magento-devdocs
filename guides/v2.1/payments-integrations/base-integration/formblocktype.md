@@ -17,7 +17,7 @@ The payment information form rendering in {% glossarytooltip 29ddb393-ca22-4df9-
 This block is used to display payment form on billing form in Admin panel. In
 most cases it is enough to use the `\Magento\Payment\Block\Form\Cc`. All payments details are displayed according to specified keys in `paymentInfoKeys` option in {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} configuration.
 
-## Example of custom formBlockType: Braintree payment method implementation
+## 例如 of custom formBlockType: Braintree payment method implementation
 
 In the integration with the Braintree payment provider, we use the `\Magento\Braintree\Block\Form` class as `formBlockType`. It allows displaying only card types available for configured countries:
 

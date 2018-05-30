@@ -27,7 +27,7 @@ A payment provider integration can have multiple response validators, that shoul
 * [\Magento\Payment\Gateway\Validator\ValidatorComposite]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Validator/ValidatorComposite.php): a chain of Validator objects, which are executed one by one and the result gets aggregated into one Result object.
 * [\Magento\Payment\Gateway\Validator\Result]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Validator/Result.php): base class for Result object. You still have an ability to create a Result of your own, but the default one covers the most amount of cases.
 
-## Example
+## 例如
 
 In the following example a response validator is implemented and added to the pool of the Braintree payment provider request validators.  
 

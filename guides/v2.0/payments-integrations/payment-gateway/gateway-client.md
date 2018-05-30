@@ -22,7 +22,7 @@ The following gateway client implementations can be used out-of-the-box:
 * [\Magento\Payment\Gateway\Http\Client\Zend]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Http/Client/Zend.php)
 * [\Magento\Payment\Gateway\Http\Client\Soap]({{ site.mage2000url }}app/code/Magento/Payment/Gateway/Http/Client/Soap.php)
 
-## Example
+## 例如
 Following is the illustration of how a Zend client can be added in `di.xml`:
 
 {% highlight xml %}

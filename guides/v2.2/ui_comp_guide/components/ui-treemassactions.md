@@ -4,7 +4,7 @@ subgroup: 组件
 title: 树形下拉操作组件
 menu_title: 树形下拉操作组件
 version: 2.2
-github_link: ui_comp_guide/组件/ui-treemassactions.md
+github_link: ui_comp_guide/components/ui-treemassactions.md
 ---
 
 ## Overview

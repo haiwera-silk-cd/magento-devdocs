@@ -314,7 +314,7 @@ class Edit extends Action
 
 2.9. Service classes (ones that provide behavior but not data, like `EventManager`) SHOULD NOT have a mutable state.
 
-2.10. Only data objects or entities (Product, Category, etc.) MAY have any observable state.
+2.10. Only data objects or entities (Product, Category, 等.) MAY have any observable state.
 
 2.11. "Setters" SHOULD NOT be used. They are only allowed in Data Transfer Objects.
 
@@ -496,7 +496,7 @@ class View extends Template
 
 5.15. Exceptions SHOULD NOT be caught in a loop. The loop SHOULD be wrapped with a `try/catch` construct instead.
 
-5.16. If a method uses system resources (such as files, sockets, streams, etc.), the code MUST be wrapped with a `try` block and the corresponding `finally` block. In the `finally` sections, all resources SHOULD be properly released.
+5.16. If a method uses system resources (such as files, sockets, streams, 等.), the code MUST be wrapped with a `try` block and the corresponding `finally` block. In the `finally` sections, all resources SHOULD be properly released.
 
 5.17. `LocalizedException` SHOULD only be thrown in the Presentation layer (Controllers, Blocks).
 
@@ -582,7 +582,7 @@ We are reviewing this section and will publish it soon.
 
 8.3. If component A uses behavior of Component B, such Component B MUST be declared in the `require` section of Component A's `composer.json` file, except for cases where Component B is used in the code that customizes the behavior of Component B.
 
-8.4. If component A extends/customizes the behavior of component B through its customization points (layout handles, plugins, events, etc.), such Component B MUST be declared in the `suggest` section of Component A.
+8.4. If component A extends/customizes the behavior of component B through its customization points (layout handles, plugins, events, 等.), such Component B MUST be declared in the `suggest` section of Component A.
 
 8.5. Only the `@api` code of any module can be referenced by other modules.
 
@@ -664,7 +664,7 @@ We are reviewing this section and will publish it soon.
 
 13.1. Magento 2 [CLI Command Naming Guidelines] MUST be followed.
 
-13.2. A CLI command MUST be created for any functionality intended to be used by a system integrator/system administrator/developer (for example: change indexer mode, generate a configuration file, etc.).
+13.2. A CLI command MUST be created for any functionality intended to be used by a system integrator/system administrator/developer (for example: change indexer mode, generate a configuration file, 等.).
 
 13.3. A CLI command MUST always run in a global area. If a command needs a specific area to perform its functions, such area SHOULD be set up before execution.
 
