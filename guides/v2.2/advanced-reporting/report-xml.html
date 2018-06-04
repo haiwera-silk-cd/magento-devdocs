@@ -255,25 +255,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="overview">
+<li class="nav-level1  " id="概述">
     
 
     
-    <a href="/guides/v2.2/advanced-reporting/overview.html">Overview</a>
-    
-
-    
-</li>
-
-
-		    
-		    	
-
-<li class="nav-level1  " id="modules">
-    
-
-    
-    <a href="/guides/v2.2/advanced-reporting/modules.html">Modules</a>
+    <a href="/guides/v2.2/advanced-reporting/overview.html">概述</a>
     
 
     
@@ -283,11 +269,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="data-collection">
+<li class="nav-level1  " id="模块">
     
 
     
-    <a href="/guides/v2.2/advanced-reporting/data-collection.html">Data collection</a>
+    <a href="/guides/v2.2/advanced-reporting/modules.html">模块</a>
     
 
     
@@ -297,11 +283,25 @@
 		    
 		    	
 
-<li class="nav-level1 active " id="report-xml">
+<li class="nav-level1  " id="数据集">
     
 
     
-    <a href="/guides/v2.2/advanced-reporting/report-xml.html">Report XML</a>
+    <a href="/guides/v2.2/advanced-reporting/data-collection.html">数据集</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1 active " id="xml报告">
+    
+
+    
+    <a href="/guides/v2.2/advanced-reporting/report-xml.html">XML报告</a>
     
 
     
@@ -377,32 +377,32 @@
 
 </section>
 
-			<p><strong>Report XML</strong> is a markup language created to build advanced reports.
-The language declares SQL queries using declarations in XML.</p>
+			<p><strong>报表 XML</strong> 是一种用于被创建用于构建高级报表的标记语言。
+这种语言在XML中使用声明声明了SQL请求。</p>
 
-<p>You can retrieve data for integration with advanced reporting service using a report name.
-A report name is the same as the <code class="highlighter-rouge">name</code> attribute in the <code class="highlighter-rouge">&lt;report&gt;</code> node as described below.</p>
+<p>你可以使用一个报表名为集成高级报表接收数据。
+报表名在<code class="highlighter-rouge">&lt;report&gt;</code>节点的<code class="highlighter-rouge">name</code>属性定义，描述如下.</p>
 
-<h2 id="report-columns">Report columns</h2>
+<h2 id="报表列">报表列</h2>
 
-<p>Report XML does not support the asterisk statement.
-All columns must be declared:</p>
+<p>报表XML不支持<code class="highlighter-rouge">*</code>号语名.
+所有的列都必须被声明:</p>
 
 <ul>
-  <li>for the main table — inside the <code class="highlighter-rouge">&lt;source&gt;</code> node</li>
-  <li>for join tables — inside the <code class="highlighter-rouge">&lt;link-source&gt;</code> node</li>
+  <li>主表由<code class="highlighter-rouge">&lt;source&gt;</code>节点指定</li>
+  <li>要连(join)的表由<code class="highlighter-rouge">&lt;link-source&gt;</code>节点指定</li>
 </ul>
 
-<p>Columns are added using the <code class="highlighter-rouge">&lt;attribute&gt;</code> node.</p>
+<p>添加<code class="highlighter-rouge">&lt;attribute&gt;</code>节点来指定须要的列.</p>
 
-<h2 id="syntax-and-structure">Syntax and structure</h2>
+<h2 id="语法和结构">语法和结构</h2>
 
-<p>All report files are located in the <code class="highlighter-rouge">etc</code> directory of a module:</p>
+<p>所有的报表配置文件都存放在模块的<code class="highlighter-rouge">etc</code>目录下</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;module_dir&gt;/etc/reports.xml
 </code></pre></div></div>
 
-<p>The following is a visualized XML Schema for <code class="highlighter-rouge">reports.xml</code>:</p>
+<p>下面是一个<code class="highlighter-rouge">reports.xml</code>的示例：</p>
 
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="841" height="426" version="1.1" id="svg358" sodipodi:docname="reports_xsd.svg" inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
@@ -660,36 +660,36 @@ All columns must be declared:</p>
   </a>
 </svg>
 
-<p>Report files can be located in any module that depends on the <code class="highlighter-rouge">Analytics</code> module (e.g. the <code class="highlighter-rouge">SalesAnalytics</code> module created for the reports related to <em>Sales</em>).
-Each report is declared in the <code class="highlighter-rouge">&lt;report&gt;</code> node.</p>
+<p>报表配置文件可以在依赖<code class="highlighter-rouge">Analytics</code>模块的任何模块(如:被创建用于收集<strong>销售</strong>相关数据的<code class="highlighter-rouge">SalesAnalytics</code>模块)中找到
+每个报表配置文件声明一个<code class="highlighter-rouge">&lt;report&gt;</code>节点.</p>
 
-<p>A <code class="highlighter-rouge">report</code> node is rendered into an SQL query.</p>
+<p><code class="highlighter-rouge">report</code>节点将会被渲染成一条SQL请求.</p>
 
 <h3 id="config"><code class="highlighter-rouge">&lt;config&gt;</code></h3>
 
-<p>Configuration of an XML.</p>
+<p>xml的配置</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Constant value</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>常量</th>
+      <th>用法</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">xmlns:xsi</code></td>
-      <td>Default namespace declaration.</td>
+      <td>默认命令空间声明.</td>
       <td><code class="highlighter-rouge">http://www.w3.org/2001/XMLSchema-instance</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">xsi:noNamespaceSchemaLocation</code></td>
-      <td>An XML Schema document that does not have a target namespace.</td>
+      <td>一个没有目标命名空间的XML结构的文档.</td>
       <td><code class="highlighter-rouge">urn:magento:module:Magento_Analytics:etc/reports.xsd</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
   </tbody>
 </table>
@@ -699,177 +699,177 @@ Each report is declared in the <code class="highlighter-rouge">&lt;report&gt;</c
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>使用</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>Name of report configuration. You can use it for merging purposes or as a reference.</td>
-      <td>Required</td>
+      <td>报表配置的名称，你可以用它来合并，或作为一个引用。</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">connection</code></td>
-      <td>Name of connection to the database, when a Magento store has more than one database.</td>
-      <td>Optional</td>
+      <td>数据库连接的名称,当Magento有多个数据库时。</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">iterator</code></td>
-      <td>Full class name or an interface name of a statement iterator. To use a custom iterator, add an <code class="highlighter-rouge">iterator</code> attribute which contains an iterator class or an interface name. This iterator can get statement iterator in the constructor method and wrap or change the current values with the custom data.</td>
-      <td>Optional</td>
+      <td>一个语名迭代器的完整的类名或接口名。要使用自定义的迭代器，可以添加一个包含了这个迭代器完整类名或接口名的<code class="highlighter-rouge">iterator</code>属性。这个迭代器可以在构造器中获取一个语句迭代器，并且可以使用自定义数据包裹或改变当前值</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
-<p>All data of the <code class="highlighter-rouge">reports.xml</code> file from the <code class="highlighter-rouge">&lt;report&gt;</code> node that has the same attribute <code class="highlighter-rouge">name</code> will be merged.</p>
+<p>所有<code class="highlighter-rouge">reports.xml</code>文件中的有相同<code class="highlighter-rouge">name</code>属性的<code class="highlighter-rouge">&lt;report&gt;</code>节点都会被合并。</p>
 
 <h3 id="source"><code class="highlighter-rouge">&lt;source&gt;</code></h3>
 
-<p>The data sources that correspond to table names in a database.</p>
+<p>数据源对应数据库中的表名。</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>使用</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>Table name</td>
-      <td>Required</td>
+      <td>名称</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">alias</code></td>
-      <td>Table alias</td>
-      <td>Optional</td>
+      <td>表别名</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
-<p>The main table is specified with the <code class="highlighter-rouge">&lt;source&gt;</code> tag.
-After rendering, it is represented in an SQL query as the <code class="highlighter-rouge">FROM</code> statement .</p>
+<p>主表由<code class="highlighter-rouge">&lt;source&gt;</code>标签指定.
+渲染之后，这表示SQL语句中的<code class="highlighter-rouge">FROM</code>子句。</p>
 
-<p>A report can be filtered using <code class="highlighter-rouge">&lt;filter&gt;</code> declared inside the <code class="highlighter-rouge">&lt;source&gt;</code> node.</p>
+<p>一个报表可以在<code class="highlighter-rouge">&lt;source&gt;</code>节点中使用<code class="highlighter-rouge">&lt;filter&gt;</code>来应用过滤.</p>
 
 <h3 id="link-source"><code class="highlighter-rouge">&lt;link-source&gt;</code></h3>
 
-<p>In the <code class="highlighter-rouge">source</code> node, you can also add a data source with the <code class="highlighter-rouge">&lt;link-source&gt;</code> tag.
-After rendering it is represented as the <code class="highlighter-rouge">JOIN</code> statement in an SQL query.</p>
+<p>在<code class="highlighter-rouge">source</code>节点中，你也可以使用<code class="highlighter-rouge">&lt;link-source&gt;</code>标签来添加数据源.
+渲染之后，它表示SQL语句中的<code class="highlighter-rouge">JOIN</code>子句。</p>
 
-<p>The <code class="highlighter-rouge">&lt;link-source&gt;</code> node contains the following attributes:</p>
+<p><code class="highlighter-rouge">&lt;link-source&gt;</code>节点包含以下属性:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>使用</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>Table name</td>
-      <td>Required</td>
+      <td>名称</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">alias</code></td>
-      <td>Table alias</td>
-      <td>Optional</td>
+      <td>表别名</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">link-type</code></td>
-      <td>Join type</td>
-      <td>Optional</td>
+      <td>连接类型</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
-<p>The name must be the same as the table name in database.
-The <code class="highlighter-rouge">alias</code> attribute can be used in the same way as an alias in the SQL.
-The <code class="highlighter-rouge">link-type</code> attribute specifies the type of join in SQL query and can be either <code class="highlighter-rouge">INNER</code>或<code class="highlighter-rouge">LEFT</code>.</p>
+<p>名称必须和数据库中的表名一样。
+<code class="highlighter-rouge">alias</code>属性用途和SQL中的别名是相同的。
+<code class="highlighter-rouge">link-type</code>属性指定SQL语句中的连接类型，可以是<code class="highlighter-rouge">INNER</code>或<code class="highlighter-rouge">LEFT</code>.</p>
 
-<p>Join conditions are described in the <code class="highlighter-rouge">&lt;link-source&gt;</code> node using the <code class="highlighter-rouge">&lt;using&gt;</code> tag.
-After rendering it is represented as the <code class="highlighter-rouge">ON</code> statement in an SQL query.
-<code class="highlighter-rouge">&lt;using&gt;</code> works in the same way as the filter, described below in this document.</p>
+<p><code class="highlighter-rouge">&lt;link-source&gt;</code>节点的连接条件使用<code class="highlighter-rouge">&lt;using&gt;</code>标签描述.
+渲染之后，它表示SQL中的<code class="highlighter-rouge">ON</code>子句。
+<code class="highlighter-rouge">&lt;using&gt;</code>工作方式和过滤器相同，在本文下方描述.</p>
 
 <h3 id="attribute"><code class="highlighter-rouge">&lt;attribute&gt;</code></h3>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>使用</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>Column name in database</td>
-      <td>Required</td>
+      <td>数据库中的列名</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">alias</code></td>
-      <td>Column alias. It can be used in the same way as the column alias in SQL.</td>
-      <td>Optional</td>
+      <td>列别名，和SQL中的列别名是相同作用</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">function</code></td>
-      <td>Available values: <code class="highlighter-rouge">count</code>, <code class="highlighter-rouge">lower</code>, <code class="highlighter-rouge">date</code>, <code class="highlighter-rouge">sum</code>, <code class="highlighter-rouge">max</code>, <code class="highlighter-rouge">avg</code>, <code class="highlighter-rouge">min</code>, <code class="highlighter-rouge">sha1</code></td>
-      <td>Optional</td>
+      <td>有效值有: <code class="highlighter-rouge">count</code>, <code class="highlighter-rouge">lower</code>, <code class="highlighter-rouge">date</code>, <code class="highlighter-rouge">sum</code>, <code class="highlighter-rouge">max</code>, <code class="highlighter-rouge">avg</code>, <code class="highlighter-rouge">min</code>, <code class="highlighter-rouge">sha1</code></td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">group</code></td>
       <td>boolean</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">distinct</code></td>
       <td>boolean</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
 <h3 id="filter"><code class="highlighter-rouge">&lt;filter&gt;</code></h3>
 
-<p>A report can be filtered using <code class="highlighter-rouge">&lt;filter&gt;</code> declared inside the parent node.
-The node can have nested filters and <code class="highlighter-rouge">&lt;conditions&gt;</code>.
-Filters use an attribute <code class="highlighter-rouge">glue</code> that helps to filter records that are based on more than one condition.</p>
+<p>报表可以使用在父节点里的<code class="highlighter-rouge">&lt;filter&gt;</code>来过滤数据。
+此节点可以可以嵌套过滤器和<code class="highlighter-rouge">&lt;conditions&gt;</code>.
+过滤器使用属性<code class="highlighter-rouge">glue</code>，帮助过滤基于多个条件查找的结果。</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Values</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>值</th>
+      <th>使用</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">glue</code></td>
-      <td>Logical operator</td>
+      <td>逻辑操作符</td>
       <td><code class="highlighter-rouge">or</code>, <code class="highlighter-rouge">and</code></td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="示例">示例</h4>
 
-<p>Example of a nested condition in SQL:</p>
+<p>一个嵌套条件SQL的示例:</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WHERE</span> <span class="p">((</span><span class="n">billing</span><span class="p">.</span><span class="n">entity_id</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">AND</span> <span class="p">((</span><span class="n">billing</span><span class="p">.</span><span class="n">entity_id</span> <span class="o">&lt;</span> <span class="s1">'200'</span> <span class="k">AND</span> <span class="n">billing</span><span class="p">.</span><span class="n">entity_id</span> <span class="o">!=</span> <span class="s1">'42'</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">billing</span><span class="p">.</span><span class="n">entity_id</span> <span class="o">&gt;</span> <span class="s1">'200'</span> <span class="k">OR</span> <span class="n">billing</span><span class="p">.</span><span class="n">entity_id</span> <span class="o">!=</span> <span class="s1">'201'</span><span class="p">))))</span>
 </code></pre></div></div>
 
-<p>Example of a nested condition in Report XML:</p>
+<p>一个嵌套条件XML的示例:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;filter</span> <span class="na">glue=</span><span class="s">"and"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;condition</span> <span class="na">attribute=</span><span class="s">"entity_id"</span> <span class="na">operator=</span><span class="s">"null"</span> <span class="nt">/&gt;</span>
@@ -886,42 +886,42 @@ Filters use an attribute <code class="highlighter-rouge">glue</code> that helps 
 
 <h3 id="conditions"><code class="highlighter-rouge">&lt;conditions&gt;</code></h3>
 
-<p>The <code class="highlighter-rouge">&lt;conditions&gt;</code> node contains the following attributes:</p>
+<p><code class="highlighter-rouge">&lt;conditions&gt;</code>节点包含以下属性:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Value</th>
-      <th>Required?</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>值</th>
+      <th>是否必需?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">attribute</code></td>
-      <td>Column name in the database.</td>
+      <td>数据库列名.</td>
       <td>string</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">type</code></td>
-      <td>Type of comparison value.</td>
-      <td><code class="highlighter-rouge">value</code> for a scalar value (default)<br /> <code class="highlighter-rouge">identifier</code> for a column</td>
-      <td>Optional</td>
+      <td>要比较的类型</td>
+      <td><code class="highlighter-rouge">value</code>表示一个标量(默认)<br /> <code class="highlighter-rouge">identifier</code>表示与另一列比较</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">operator</code></td>
-      <td>Comparison operator</td>
-      <td>Required</td>
+      <td>比较操作符</td>
+      <td>必需</td>
       <td> </td>
     </tr>
   </tbody>
 </table>
 
-<p>Comparison operator is used to compare columns with the value or columns that can be specified inside the <code class="highlighter-rouge">&lt;conditions&gt;</code> XML node.</p>
+<p>比较操作符 is used to compare columns with the value or columns that can be specified inside the <code class="highlighter-rouge">&lt;conditions&gt;</code> XML node.</p>
 
-<p>You can find all the supported comparison operators in <code class="highlighter-rouge">\Magento\Analytics\ReportXml\DB\ConditionResolver::$conditionMap</code>.</p>
+<p>你可以在<code class="highlighter-rouge">\Magento\Analytics\ReportXml\DB\ConditionResolver::$conditionMap</code>中找到所有支持的操作符</p>
 
 <!-- LINK DEFINITIONS -->
 
@@ -977,7 +977,7 @@ Filters use an attribute <code class="highlighter-rouge">glue</code> that helps 
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

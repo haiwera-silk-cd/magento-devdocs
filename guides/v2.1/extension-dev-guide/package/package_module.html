@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/extension-dev-guide/package/package_module.html">
+	<link rel="canonical" href="/guides/v2.1/extension-dev-guide/package/package_module.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -361,7 +361,7 @@
         
         
         
-        <li class="nav-level2  " id="extension-lifecycle">
+        <li class="nav-level2  " id="扩展生命周期">
 
             
 
@@ -381,11 +381,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="build">
+<li class="nav-level1  " id="构建">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/build/build.html">Build</a>
+    <a href="/guides/v2.1/extension-dev-guide/build/build.html">构建</a>
     
 
     
@@ -539,11 +539,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="package">
+<li class="nav-level1  " id="打包">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/package/package.html">Package</a>
+    <a href="/guides/v2.1/extension-dev-guide/package/package.html">打包</a>
     
 
     
@@ -585,11 +585,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="validate">
+<li class="nav-level1  " id="验证">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/validate/validate.html">Validate</a>
+    <a href="/guides/v2.1/extension-dev-guide/validate/validate.html">验证</a>
     
 
     
@@ -675,7 +675,7 @@
         
         
         
-        <li class="nav-level2  " id="public-content">
+        <li class="nav-level2  " id="公开内容">
 
             
 
@@ -689,7 +689,7 @@
         
         
         
-        <li class="nav-level2  " id="private-content">
+        <li class="nav-level2  " id="隐私内容">
 
             
 
@@ -755,11 +755,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="staging-(magento-commerce-only)">
+<li class="nav-level1  " id="预发布-(仅企业版适用)">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/staging.html">Staging (仅企业版适用)</a>
+    <a href="/guides/v2.1/extension-dev-guide/staging.html">预发布 (仅企业版适用)</a>
     
 
     
@@ -865,12 +865,12 @@
         
         
         
-        <li class="nav-level2  " id="factories">
+        <li class="nav-level2  " id="工厂">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/factories.html">Factories</a>
+            <a href="/guides/v2.1/extension-dev-guide/factories.html">工厂</a>
             
 
             
@@ -879,12 +879,12 @@
         
         
         
-        <li class="nav-level2  " id="proxies">
+        <li class="nav-level2  " id="代理">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/proxies.html">Proxies</a>
+            <a href="/guides/v2.1/extension-dev-guide/proxies.html">代理</a>
             
 
             
@@ -935,12 +935,12 @@
         
         
         
-        <li class="nav-level2  " id="routing">
+        <li class="nav-level2  " id="路由">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/routing.html">Routing</a>
+            <a href="/guides/v2.1/extension-dev-guide/routing.html">路由</a>
             
 
             
@@ -949,12 +949,12 @@
         
         
         
-        <li class="nav-level2  " id="indexing">
+        <li class="nav-level2  " id="索引">
 
             
 
             
-            <span>Indexing</span>
+            <span>索引</span>
             
 
             
@@ -1110,12 +1110,12 @@
         
         
         
-        <li class="nav-level2  " id="adapters">
+        <li class="nav-level2  " id="适配器">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/adapters.html">Adapters</a>
+            <a href="/guides/v2.1/extension-dev-guide/adapters.html">适配器</a>
             
 
             
@@ -1136,11 +1136,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="security">
+<li class="nav-level1  " id="安全">
     
 
     
-    <span>Security</span>
+    <span>安全</span>
     
 
     
@@ -1170,11 +1170,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="versioning">
+<li class="nav-level1  " id="版本控制">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/versioning/">Versioning</a>
+    <a href="/guides/v2.1/extension-dev-guide/versioning/">版本控制</a>
     
 
     
@@ -1390,7 +1390,7 @@
 </table>
 
   <h3 id="package-metapackage">Using metapackages</h3>
-  <p>Metapackages allow you to group an <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> that consists of multiple packages into a cohesive unit. This works exactly as described in standard <a href="https://getcomposer.org/doc/04-schema.md#type">composer.json documentation</a>. If you have an extension that uses more than one package you must use a <span term-uuid="7490850a-0654-4ce1-83ff-d88c1d7d07fa" class="glossary-term" data-toggle="popover">metapackage</span> as the <em>root package</em>. Otherwise you should not use metapackage. A metapackage that you submit to Magento Marketplace should be a .zip file containing only the metapackage <code class="highlighter-rouge">composer.json</code> file.</p>
+  <p>Metapackages allow you to group an <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> that consists of multiple packages into a cohesive unit. This works exactly as described in standard <a href="https://getcomposer.org/doc/04-schema.md#type">composer.json documentation</a>. If you have an extension that uses more than one package you must use a <span term-uuid="7490850a-0654-4ce1-83ff-d88c1d7d07fa" class="glossary-term" data-toggle="popover">metapackage</span> as the <em>root package</em>. Otherwise you should not use metapackage. A metapackage that you submit to Magento Marketplace should be a .zip file containing only the metapackage <code class="highlighter-rouge">composer.json</code> file.</p>
 
   <div class="bs-callout bs-callout-info" id="info">
   <p>We recommend metapackages refer to specific component versions. Do not use wildcards to represent version ranges.</p>
@@ -1472,7 +1472,7 @@
 
   <p>Magento can retrieve your extension package from any valid GitHub <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span>.</p>
 
-  <!-- After you have created the module's `composer.json` file in the root directory of the module, Composer can recognize your package as compatible with its deployment strategy. Such packages can be published to a code repository (GitHub, SVN, etc.), packagist.org, or on your own private package repository. -->
+  <!-- After you have created the module's `composer.json` file in the root directory of the module, Composer can recognize your package as compatible with its deployment strategy. Such packages can be published to a code repository (GitHub, SVN, 等.), packagist.org, or on your own private package repository. -->
 
   <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
@@ -1578,7 +1578,7 @@ A private repository can be used for development or private code but installatio
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

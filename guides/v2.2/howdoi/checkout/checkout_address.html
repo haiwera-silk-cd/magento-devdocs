@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/howdoi/checkout/checkout_address.html">
+	<link rel="canonical" href="/guides/v2.2/howdoi/checkout/checkout_address.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -249,17 +249,17 @@
 
 		
 
-		<h4 class="guide-title">How to</h4>
+		<h4 class="guide-title">如何</h4>
 		<div class="collapsible-navigation">
 		    <ul>
 		    
 		    	
 
-<li class="nav-level1  " id="how-to">
+<li class="nav-level1  " id="如何">
     
 
     
-    <a href="/guides/v2.2/howdoi/bk-how-do-i.html">How To</a>
+    <a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a>
     
 
     
@@ -269,7 +269,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="contributor-sign-up-sheet">
+<li class="nav-level1  " id="贡献者注册表单">
     
 
     
@@ -838,7 +838,7 @@
   <li><a href="#rate_processor">Create the JS model for the shipping rate processor</a>.</li>
   <li><a href="#save">Create the JS model for the shipping address saving processor</a>.</li>
   <li><a href="#register">Create the JS component registering the processors</a>.</li>
-  <li><a href="#layout">Declare the new components in the checkout page layout.</a>.</li>
+  <li><a href="#layout">Declare the new 组件 in the checkout page layout.</a>.</li>
   <li><a href="#ship_to">Add the shipping address renderer to the “Ship-To” block (optional)</a>.</li>
 </ol>
 
@@ -1041,7 +1041,7 @@
     <span class="p">}</span>
 <span class="p">);</span></code></pre></figure>
 
-<h2 id="layout">Declare the new components in the checkout page layout</h2>
+<h2 id="layout">Declare the new 组件 in the checkout page layout</h2>
 
 <p>In your custom module directory, create a new <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code> file. In this file, add the following:</p>
 
@@ -1050,7 +1050,7 @@
         <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"checkout.root"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;arguments&gt;</span>
                 <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"components"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"组件"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"checkout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                             <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                                 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"steps"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
@@ -1090,7 +1090,7 @@
 
 <p>On the Review and Payment Information step of checkout, the shipping address is displayed in the <strong>Ship-To</strong> section for customer to make sure everything is set correctly.</p>
 
-<p>If you want your custom address type to be displayed here as well, you need to create an <code class="highlighter-rouge">.html</code> template for rendering it, and declare in the corresponding location in <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span>.</p>
+<p>If you want your custom address type to be displayed here as well, you need to create an <code class="highlighter-rouge">.html</code> template for rendering it, and declare in the corresponding location in <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">布局</span>.</p>
 
 <h3 id="add-template-for-displaying-the-address-in-the-ship-to-section">Add template for displaying the address in the Ship-To section</h3>
 
@@ -1108,7 +1108,7 @@
             <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Checkout\Block\Onepage"</span> <span class="na">name=</span><span class="s">"checkout.root"</span> <span class="na">template=</span><span class="s">"onepage.phtml"</span> <span class="na">cacheable=</span><span class="s">"false"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;arguments&gt;</span>
                     <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"components"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"组件"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                             <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"sidebar"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                                 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                                     <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"shipping-information"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
@@ -1189,7 +1189,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

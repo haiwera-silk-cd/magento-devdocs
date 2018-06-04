@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/javascript-dev-guide/javascript/js-resources.html">
+	<link rel="canonical" href="/guides/v2.2/javascript-dev-guide/javascript/js-resources.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -733,7 +733,7 @@
 
 			<h2 id="m2devgde-js-resources-intro">概述</h2>
 
-<p>This topic describes the general concepts of how work with <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> components is organized in Magento.</p>
+<p>This topic describes the general concepts of how work with <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> 组件 is organized in Magento.</p>
 
 <p>To address the problem of slow page load, we exclude JavaScript from the page headers and we added the ability to use the <a href="http://requirejs.org" target="_blank">RequireJS library</a>.</p>
 
@@ -743,7 +743,7 @@
 
 <h3 id="js-resources-location">JS resources location</h3>
 
-<p>In Magento, you can find the JS components on the following levels:</p>
+<p>In Magento, you can find the JS 组件 on the following levels:</p>
 
 <ul>
   <li><span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">Library</span> level (<code class="highlighter-rouge">lib/web</code>). Resources located here are available in any place in Magento.</li>
@@ -757,13 +757,13 @@
 </div>
 
 <h3 id="specifying-js">Specifying JS</h3>
-<p>We recommend specifying JavaScript resources in the templates rather than in the <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span> updates, to ensure processing of the resources in body of a page.</p>
+<p>We recommend specifying JavaScript resources in the templates rather than in the <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">布局</span> updates, to ensure processing of the resources in body of a page.</p>
 
 <h2 id="accessing-js-resources">Accessing JS resources</h2>
 
 <p>JS resources are accessed using relative paths.</p>
 
-<p>Examples:</p>
+<p>例如:</p>
 
 <p><strong>示例1</strong></p>
 
@@ -860,7 +860,7 @@
 	    <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\RequireJs\Block\Html\Head\Config"</span> <span class="na">name=</span><span class="s">"requirejs-config"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Translation\Block\Html\Head\Config"</span> <span class="na">name=</span><span class="s">"translate-config"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Translation\Block\Js"</span> <span class="na">name=</span><span class="s">"translate"</span> <span class="na">template=</span><span class="s">"Magento_Translation::translate.phtml"</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Framework\View\Element\Js\Components"</span> <span class="na">name=</span><span class="s">"head.components"</span> <span class="na">as=</span><span class="s">"components"</span> <span class="na">template=</span><span class="s">"Magento_Backend::page/js/components.phtml"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Framework\View\Element\Js\组件"</span> <span class="na">name=</span><span class="s">"head.组件"</span> <span class="na">as=</span><span class="s">"组件"</span> <span class="na">template=</span><span class="s">"Magento_Backend::page/js/组件.phtml"</span><span class="nt">/&gt;</span>
             <span class="nt">&lt;block</span> <span class="na">class=</span><span class="s">"Magento\Framework\View\Element\Html\Calendar"</span> <span class="na">name=</span><span class="s">"head.calendar"</span> <span class="na">as=</span><span class="s">"calendar"</span> <span class="na">template=</span><span class="s">"Magento_Backend::page/js/calendar.phtml"</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/referenceContainer&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
@@ -957,7 +957,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

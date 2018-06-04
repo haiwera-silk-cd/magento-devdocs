@@ -361,7 +361,7 @@
         
         
         
-        <li class="nav-level2  " id="extension-lifecycle">
+        <li class="nav-level2  " id="扩展生命周期">
 
             
 
@@ -381,11 +381,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="build">
+<li class="nav-level1  " id="构建">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/build/build.html">Build</a>
+    <a href="/guides/v2.1/extension-dev-guide/build/build.html">构建</a>
     
 
     
@@ -539,11 +539,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="package">
+<li class="nav-level1  " id="打包">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/package/package.html">Package</a>
+    <a href="/guides/v2.1/extension-dev-guide/package/package.html">打包</a>
     
 
     
@@ -585,11 +585,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="validate">
+<li class="nav-level1  " id="验证">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/validate/validate.html">Validate</a>
+    <a href="/guides/v2.1/extension-dev-guide/validate/validate.html">验证</a>
     
 
     
@@ -675,7 +675,7 @@
         
         
         
-        <li class="nav-level2 active " id="public-content">
+        <li class="nav-level2 active " id="公开内容">
 
             
 
@@ -689,7 +689,7 @@
         
         
         
-        <li class="nav-level2  " id="private-content">
+        <li class="nav-level2  " id="隐私内容">
 
             
 
@@ -755,11 +755,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="staging-(magento-commerce-only)">
+<li class="nav-level1  " id="预发布-(仅企业版适用)">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/staging.html">Staging (仅企业版适用)</a>
+    <a href="/guides/v2.1/extension-dev-guide/staging.html">预发布 (仅企业版适用)</a>
     
 
     
@@ -865,12 +865,12 @@
         
         
         
-        <li class="nav-level2  " id="factories">
+        <li class="nav-level2  " id="工厂">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/factories.html">Factories</a>
+            <a href="/guides/v2.1/extension-dev-guide/factories.html">工厂</a>
             
 
             
@@ -879,12 +879,12 @@
         
         
         
-        <li class="nav-level2  " id="proxies">
+        <li class="nav-level2  " id="代理">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/proxies.html">Proxies</a>
+            <a href="/guides/v2.1/extension-dev-guide/proxies.html">代理</a>
             
 
             
@@ -935,12 +935,12 @@
         
         
         
-        <li class="nav-level2  " id="routing">
+        <li class="nav-level2  " id="路由">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/routing.html">Routing</a>
+            <a href="/guides/v2.1/extension-dev-guide/routing.html">路由</a>
             
 
             
@@ -949,12 +949,12 @@
         
         
         
-        <li class="nav-level2  " id="indexing">
+        <li class="nav-level2  " id="索引">
 
             
 
             
-            <span>Indexing</span>
+            <span>索引</span>
             
 
             
@@ -1110,12 +1110,12 @@
         
         
         
-        <li class="nav-level2  " id="adapters">
+        <li class="nav-level2  " id="适配器">
 
             
 
             
-            <a href="/guides/v2.1/extension-dev-guide/adapters.html">Adapters</a>
+            <a href="/guides/v2.1/extension-dev-guide/adapters.html">适配器</a>
             
 
             
@@ -1136,11 +1136,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="security">
+<li class="nav-level1  " id="安全">
     
 
     
-    <span>Security</span>
+    <span>安全</span>
     
 
     
@@ -1170,11 +1170,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="versioning">
+<li class="nav-level1  " id="版本控制">
     
 
     
-    <a href="/guides/v2.1/extension-dev-guide/versioning/">Versioning</a>
+    <a href="/guides/v2.1/extension-dev-guide/versioning/">版本控制</a>
     
 
     
@@ -1390,7 +1390,7 @@
 
 <ul>
   <li>Collisions in cache storage</li>
-  <li>Unwanted information leaks (e.g., French language website partially visible on an English language website, prices for customer group visiable in public, etc.)</li>
+  <li>Unwanted information leaks (e.g., French language website partially visible on an English language website, prices for customer group visiable in public, 等.)</li>
 </ul>
 
 <p>To make each cached URL totally unique, we use <em>HTTP context variables</em>. Context variables enable the Magento application to serve different content on the same URL based on:</p>
@@ -1494,7 +1494,7 @@ hash_data(regsub(req.http.cookie, "^.?X-Magento-Vary=([^;]+);.*$", "\1"));
 <p>Magento uses cache tags for link creation. The performance of cache storage has a direct dependency on the number of tags per cache record, so try to minimize the number of tags and use them only for entities that are used in production mode. In other words, don’t use invalidation for actions related to store setup.</p>
 
 <div class="bs-callout bs-callout-warning">
-  <p>Use only HTTP POST or PUT methods to change state (e.g., adding to a shopping cart, adding to a wishlist, etc.) and don’t expect to see caching on these methods. Using GET or HEAD methods might trigger caching and prevent updates to private content. For more information about caching, see <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">RFC-2616 section 13</a> {:target=”_blank”}</p>
+  <p>Use only HTTP POST or PUT methods to change state (e.g., adding to a shopping cart, adding to a wishlist, 等.) and don’t expect to see caching on these methods. Using GET or HEAD methods might trigger caching and prevent updates to private content. For more information about caching, see <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">RFC-2616 section 13</a> {:target=”_blank”}</p>
 </div>
 
 <h2 id="cacheable-page-checklist">Cacheable page checklist</h2>
@@ -1522,7 +1522,7 @@ hash_data(regsub(req.http.cookie, "^.?X-Magento-Vary=([^;]+);.*$", "\1"));
 <h2 id="non-cacheable-page-checklist">Non-cacheable page checklist</h2>
 <ul>
   <li>
-    <p>Use POST requests to modify Magento state (e.g., adding to shopping cart, wishlist, etc.)</p>
+    <p>Use POST requests to modify Magento state (e.g., adding to shopping cart, wishlist, 等.)</p>
   </li>
   <li>
     <p>Blocks that can’t be cached should be marked as non-cacheable in the layout. However, be aware that adding a non-cacheable block to a page prevents the full page cache from caching that page.</p>
@@ -1585,7 +1585,7 @@ hash_data(regsub(req.http.cookie, "^.?X-Magento-Vary=([^;]+);.*$", "\1"));
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

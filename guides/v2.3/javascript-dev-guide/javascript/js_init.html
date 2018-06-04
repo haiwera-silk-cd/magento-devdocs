@@ -766,7 +766,7 @@
 
 <h5 id="init_process">How <code class="highlighter-rouge">data-mage-init</code> is processed</h5>
 
-<p>On DOM ready, the <code class="highlighter-rouge">data-mage-init</code> attribute is parsed to extract components’ names and configuration to be applied to the element.
+<p>On DOM ready, the <code class="highlighter-rouge">data-mage-init</code> attribute is parsed to extract 组件’ names and configuration to be applied to the element.
 Depending on the type of the inserted JS component, processing is performed as follows:</p>
 <ul>
 
@@ -798,7 +798,7 @@ return;
 </li>
 
 <li>If none of the previous cases is true, the component is executed with no further processing.
-Such a component does not require either <code>config</code>或<code>element</code>. The recommended way to declare such components is <a href="#init_script">using the &lt;script&gt; tag</a>.</li>
+Such a component does not require either <code>config</code>或<code>element</code>. The recommended way to declare such 组件 is <a href="#init_script">using the &lt;script&gt; tag</a>.</li>
 </ul>
 
 <h4 id="declarative-notation-using-the-script-typetextx-magento-init--tag-decl_tag">Declarative notation using the <code class="highlighter-rouge">&lt;script type="text/x-magento-init" /&gt;</code> tag {decl_tag}</h4>
@@ -807,12 +807,12 @@ Such a component does not require either <code>config</code>或<code>element</co
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-magento-init"</span><span class="nt">&gt;</span>
 <span class="p">{</span>
-    <span class="c1">// components initialized on the element defined by selector</span>
+    <span class="c1">// 组件 initialized on the element defined by selector</span>
 	<span class="s2">"&lt;element_selector&gt;"</span><span class="p">:</span> <span class="p">{</span>
 		<span class="s2">"&lt;js_component1&gt;"</span><span class="p">:</span> <span class="p">...,</span>
 		<span class="s2">"&lt;js_component2&gt;"</span><span class="p">:</span> <span class="p">...</span>
     <span class="p">},</span>
-    <span class="c1">// components initialized without binding to an element</span>
+    <span class="c1">// 组件 initialized without binding to an element</span>
     <span class="s2">"*"</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">"&lt;js_component3&gt;"</span><span class="p">:</span> <span class="p">...</span>
     <span class="p">}</span>
@@ -821,8 +821,8 @@ Such a component does not require either <code>config</code>或<code>element</co
 
 <p>Where:</p>
 <ul>
-<li><code>&lt;element_selector&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">selector</a> (in terms of querySelectorAll) for the element on which the following JS components are called.</li>
-<li><code>&lt;js_component1&gt;</code>和<code>&lt;js_component2&gt;</code> are the JS components being initialized on the element with the selector specified as <code>&lt;element_selector&gt;</code>.</li>
+<li><code>&lt;element_selector&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">selector</a> (in terms of querySelectorAll) for the element on which the following JS 组件 are called.</li>
+<li><code>&lt;js_component1&gt;</code>和<code>&lt;js_component2&gt;</code> are the JS 组件 being initialized on the element with the selector specified as <code>&lt;element_selector&gt;</code>.</li>
 <li><code>&lt;js_component3&gt;</code> is the JS component called with no binding to an element.</li>
 </ul>
 
@@ -861,7 +861,7 @@ Such a component does not require either <code>config</code>或<code>element</co
 <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
-<h2 id="js_widget_init">Calling JS components requiring initialization in JS files</h2>
+<h2 id="js_widget_init">Calling JS 组件 requiring initialization in JS files</h2>
 
 <p>To call a widget in JS code, use a notation similar to the following (<a href="/guides/v2.0/frontend-dev-guide/javascript/widget_accordion.html">accordion</a> widget is intiialized on the <code class="highlighter-rouge">[data-role=example]</code> element as illustration):</p>
 
@@ -955,7 +955,7 @@ Such a component does not require either <code>config</code>或<code>element</co
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

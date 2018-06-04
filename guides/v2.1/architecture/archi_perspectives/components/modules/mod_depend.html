@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend.html">
+	<link rel="canonical" href="/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -261,7 +261,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="architectural-basics">
+<li class="nav-level1  " id="架构基础">
     
 
     
@@ -455,7 +455,7 @@
     
 
     
-    <a href="/guides/v2.1/architecture/archi_perspectives/components/Acomponents.html">组件</a>
+    <a href="/guides/v2.1/architecture/archi_perspectives/components/AComponents.html">组件</a>
     
 
     
@@ -717,54 +717,54 @@
 
 			<h2 id="m2devgde-moddep-intro">概述</h2>
 
-<p>A <em>software dependency</em> identifies  one software component’s reliance on another for proper functioning. A core principle of Magento architecture is the <strong>minimization of software dependencies</strong>. Instead of being closely interrelated with other modules, modules are optimally designed to be <i>loosely coupled</i>. Loosely coupled modules require little or no knowledge of other modules to perform their tasks.</p>
+<p><em>软件依赖</em> 表示一个软件组件为实现适当的功能依赖其它组件。Magento架构的一个核心原则是 <strong>最小化软件依赖</strong>. 并不是成为紧密地相互关联，而是被最佳地设计成<i>松藕合</i>。松藕合的模块执行它自身的任务时，需要更少或根本不需要知道其它模块的信息。</p>
 
-<p>Each Magento <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> is responsible for a unique feature. In practice, this means that:</p>
+<p>每一个Magento的<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>响应一个唯一的特性。实践中，这意味着：</p>
 
 <ul>
   <li>
-    <p>Several modules cannot be responsible for one feature.</p>
+    <p>多个模块不能响应同一个特性</p>
   </li>
   <li>
-    <p>One module cannot be responsible for several features.</p>
+    <p>一个模块不能响应多个特性</p>
   </li>
   <li>
-    <p>模块依赖 on other modules must be declared explicitly. You must also declare any dependency upon other 组件 (for example, a theme, language package, or library).</p>
+    <p>模块依赖其它模块必须明确声明. 也要声明任何依赖的其它组件(例如, 主题，语言包，或库).</p>
   </li>
   <li>
-    <p>Removing or disabling a module does not result in disabling other modules.</p>
+    <p>移除或禁用模块不会导致禁用其它模块。</p>
   </li>
 </ul>
 
-<h2 id="what-组件-can-modules-depend-upon">What 组件 can modules depend upon?</h2>
+<h2 id="什么组件能被模块依赖">什么组件能被模块依赖？</h2>
 
-<p>Although Magento architecture favors loosely coupled software 组件, modules can contain dependencies upon these software 组件:</p>
+<p>虽然Magento架构偏好松藕合的软件组件。但模块能包含这些的软件组件的依赖：</p>
 
 <ul>
   <li>
-    <p>other modules</p>
+    <p>其它模块</p>
   </li>
   <li>
-    <p><span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> extensions</p>
+    <p><span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span>扩展</p>
   </li>
   <li>
-    <p>libraries (either Magento框架 <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">library</span> or third party libraries)</p>
+    <p>库(可以是Magento框架的<span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">库</span>或第三方库)</p>
   </li>
 </ul>
 
 <div class="bs-callout bs-callout-warning" id="warning">
-<p>Note: You can lose the historical information contained in a module if the module is removed or disabled. We recommend alternative storage of module information before you remove or disable a module.</p></div>
+<p>注意：如果模块被移除或禁用你可能会丢失模块包含的历史信息。我们建议您在禁用或移除模块前备份模块信息。</p></div>
 
-<h2 id="managing-module-dependencies">Managing module dependencies</h2>
+<h2 id="管理模块依赖">管理模块依赖</h2>
 
-<p>At a high level, there are three main steps for managing module dependencies:</p>
+<p>在高层，Magento模块依赖主要有三个步骤：</p>
 
 <ol>
   <li>
-    <p>Name and declare the module in the <code class="highlighter-rouge">module.xml</code> file.</p>
+    <p>在<code class="highlighter-rouge">module.xml</code>文件中命名和声明模块。</p>
   </li>
   <li>
-    <p>Declare any dependencies that the module has (whether on other modules or on a different component) in the module’s <code class="highlighter-rouge">composer.json</code> file.</p>
+    <p>在模块的<code class="highlighter-rouge">composer.json</code>文件中声明所有模块有的依赖(无论是其它模块还是不同的组件)</p>
   </li>
   <li>
     <p>(<em>Optional</em>) Define the desired load order of config files and <code class="highlighter-rouge">.css</code> files in the <code class="highlighter-rouge">module.xml</code> file.</p>
@@ -778,6 +778,9 @@
 <p><a href="/guides/v2.1/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a></p>
 
 <p><a href="/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend_types.html">Types of module dependencies</a></p>
+<blockquote>
+
+</blockquote>
 
 			
 		</div>
@@ -789,7 +792,7 @@
   
     
     <div class="github-link">
-      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/architecture/archi_perspectives/组件/modules/mod_depend.md" target="_blank">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend.md" target="_blank">
         去GitHub上编辑
       </a>
     </div>
@@ -831,7 +834,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

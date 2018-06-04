@@ -255,25 +255,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="overview">
+<li class="nav-level1  " id="概述">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/overview.html">Overview</a>
-    
-
-    
-</li>
-
-
-		    
-		    	
-
-<li class="nav-level1  " id="modules">
-    
-
-    
-    <a href="/guides/v2.3/advanced-reporting/modules.html">Modules</a>
+    <a href="/guides/v2.3/advanced-reporting/overview.html">概述</a>
     
 
     
@@ -283,11 +269,11 @@
 		    
 		    	
 
-<li class="nav-level1 active " id="data-collection">
+<li class="nav-level1  " id="模块">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/data-collection.html">Data collection</a>
+    <a href="/guides/v2.3/advanced-reporting/modules.html">模块</a>
     
 
     
@@ -297,11 +283,25 @@
 		    
 		    	
 
-<li class="nav-level1  " id="report-xml">
+<li class="nav-level1 active " id="数据集">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/report-xml.html">Report XML</a>
+    <a href="/guides/v2.3/advanced-reporting/data-collection.html">数据集</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="xml报告">
+    
+
+    
+    <a href="/guides/v2.3/advanced-reporting/report-xml.html">XML报告</a>
     
 
     
@@ -377,24 +377,24 @@
 
 </section>
 
-			<p>A Magento instance collects data that the Magento Business Intelligence (<abbr title="Magento Business Analytics">MBI</abbr>) service uses to build the advanced reports.
-All the data are stored in an encrypted archive file which is securely transferred to the <abbr title="Magento Business Analytics">MBI</abbr>.
-Data collection is declared in a configuration file <code class="highlighter-rouge">etc/analytics.xml</code>. It declares:</p>
+			<p>Magento收集Magento商业智能(<abbr title="Magento Business Analytics">MBI</abbr>)服务用于构建高级报表的数据。
+所有这些数据存储在一个可以安全传输到<abbr title="Magento Business Analytics">MBI</abbr>的加密的归档文件中
+数据收集器声明在<code class="highlighter-rouge">etc/analytics.xml</code>配置文件中。 它声明了:</p>
 
 <ul>
-  <li>which report files must be included into the archive file</li>
-  <li>which provider classes must collect data for each report file</li>
-  <li>which report data configuration must be applied to collected data</li>
+  <li>哪些报表文件必须被包含到这个归档中</li>
+  <li>哪些提供器类必须为每个报表文件提供数据</li>
+  <li>哪些报表数据配置必须被应用到收集到的数据</li>
 </ul>
 
 <div class="bs-callout bs-callout-warning">
-  <p>This topic serves to provide better understanding of how data collection works.
-Any changes in configuraton files will cause issues, because the <abbr title="Magento Business Analytics">MBI</abbr> service doesn’t expect any changes of configuration in the current version.</p>
+  <p>这篇文章旨在提供更好的解释，关于数据收集器是如何工作。
+配置文件的作何改变都会导致问题，因为<abbr title="Magento Business Analytics">MBI</abbr>服务不希望在当前的版本中，配置文件有任何更改。</p>
 </div>
 
-<h2 id="example">Example</h2>
+<h2 id="例如">例如</h2>
 
-<p>An example of the <code class="highlighter-rouge">etc/analytics.xml</code> file:</p>
+<p>这是一个<code class="highlighter-rouge">etc/analytics.xml</code>的示例文件</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
 
@@ -426,25 +426,25 @@ Any changes in configuraton files will cause issues, because the <abbr title="Ma
 <span class="nt">&lt;/config&gt;</span>
 </code></pre></div></div>
 
-<p>The example configuration file declares the following:</p>
+<p>上面的示例配置声明了以下内容:</p>
 
 <ul>
-  <li>The <code class="highlighter-rouge">modules.csv</code>, <code class="highlighter-rouge">store_config.csv</code>, <code class="highlighter-rouge">stores.csv</code> report files must be included into the archive file prepared for the <abbr title="Magento Business Analytics">MBI</abbr> service.</li>
-  <li><code class="highlighter-rouge">modules.csv</code> must contain data provided by the <code class="highlighter-rouge">\Magento\Analytics\ReportXml\ReportProvider</code> class.
- Provided data must be configured according to the <code class="highlighter-rouge">modules</code> report declarations defined in the <code class="highlighter-rouge">etc/reports.xml</code> file.</li>
-  <li><code class="highlighter-rouge">store_config.csv</code> must contain data provided by the <code class="highlighter-rouge">Magento\Analytics\Model\StoreConfigurationProvider</code> class.</li>
-  <li><code class="highlighter-rouge">stores.csv</code> must contain data provided by the <code class="highlighter-rouge">\Magento\Analytics\ReportXml\ReportProvider</code> class.
- Provided data are configured according to the <code class="highlighter-rouge">store_config</code> report declarations defined in the <code class="highlighter-rouge">etc/reports.xml</code> file.
- Also, the report file must contain data provided by the <code class="highlighter-rouge">Magento\Analytics\Model\StoreConfigurationProvider</code> class.</li>
+  <li><code class="highlighter-rouge">modules.csv</code>, <code class="highlighter-rouge">store_config.csv</code>, <code class="highlighter-rouge">stores.csv</code>报表文件必须被包含在准备给<abbr title="Magento Business Analytics">MBI</abbr>服务的归档文件中</li>
+  <li><code class="highlighter-rouge">modules.csv</code>必须包含数据提供器<code class="highlighter-rouge">\Magento\Analytics\ReportXml\ReportProvider</code>类提供的数据.
+ 提供的数据必根据在<code class="highlighter-rouge">modules</code>报表申明的在<code class="highlighter-rouge">etc/reports.xml</code>文件中定义的进行配置.</li>
+  <li><code class="highlighter-rouge">store_config.csv</code>必须包含数据提供器<code class="highlighter-rouge">Magento\Analytics\Model\StoreConfigurationProvider</code>类提供的数据.</li>
+  <li><code class="highlighter-rouge">stores.csv</code>必须包含数据提供器<code class="highlighter-rouge">\Magento\Analytics\ReportXml\ReportProvider</code> 类提供的数据.
+ 提供的数据根据在<code class="highlighter-rouge">store_config</code>报表中声明在<code class="highlighter-rouge">etc/reports.xml</code>文件中定义的进行配置.
+ 同样, 报表文件必须包含数据提供器<code class="highlighter-rouge">Magento\Analytics\Model\StoreConfigurationProvider</code> 类提供的数据.</li>
 </ul>
 
-<h2 id="extensibility">Extensibility</h2>
+<h2 id="可扩展性">可扩展性</h2>
 
-<p>Configuration of data collection can be extended or changed in any module adding the corresponding <code class="highlighter-rouge">&lt;module_name&gt;/etc/analytics.xml</code> file with nodes that must be changed or added.</p>
+<p>数据集的配置可以在任何模块被修改或扩展，添加对应的<code class="highlighter-rouge">&lt;module_name&gt;/etc/analytics.xml</code>文件并且必须修改或添加其节点。</p>
 
-<h2 id="structure">Structure</h2>
+<h2 id="结构">结构</h2>
 
-<p>The <code class="highlighter-rouge">etc/analytics.xsd</code> schema declares structure of the <code class="highlighter-rouge">etc/analytics.xml</code> file .</p>
+<p><code class="highlighter-rouge">etc/analytics.xsd</code>文件声明了<code class="highlighter-rouge">etc/analytics.xml</code>文件要遵遁的结构.</p>
 
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="924" height="166" version="1.1" id="svg208" sodipodi:docname="analytics_xsd.svg" inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
@@ -619,57 +619,57 @@ Any changes in configuraton files will cause issues, because the <abbr title="Ma
 
 <h3 id="config"><code class="highlighter-rouge">&lt;config&gt;</code></h3>
 
-<p>Configuration of an XML.</p>
+<p>xml的配置</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Constant value</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>常量</th>
+      <th>用法</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">xmlns:xsi</code></td>
-      <td>Default namespace declaration</td>
+      <td>默认命令空间声明</td>
       <td><code class="highlighter-rouge">"http://www.w3.org/2001/XMLSchema-instance"</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">xsi:noNamespaceSchemaLocation</code></td>
-      <td>An XML Schema document that does not have a target namespace</td>
+      <td>一个没有目标命名空间的XML结构的文档</td>
       <td><code class="highlighter-rouge">"urn:magento:module:Magento_Analytics:etc/reports.xsd"</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
   </tbody>
 </table>
 
 <h3 id="file"><code class="highlighter-rouge">&lt;file&gt;</code></h3>
 
-<p>A report file (<code class="highlighter-rouge">.csv</code> by default) with collected data to be added to the archive file.
-The <code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code> class is responsible for a decision about a data file extension (<code class="highlighter-rouge">.csv</code>, <code class="highlighter-rouge">.json</code>, etc.).</p>
+<p>收集了数据并将被归档到归档文件的报表文件(默认是<code class="highlighter-rouge">.csv</code>)
+T<code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code> 类将决定响应的数据和文件类型，可以是 (<code class="highlighter-rouge">.csv</code>, <code class="highlighter-rouge">.json</code>, 等.).</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Example value</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>示例值</th>
+      <th>用法</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>A filename with no extension</td>
+      <td>文件名，不包含扩展名</td>
       <td><code class="highlighter-rouge">"modules"</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">prefix</code></td>
-      <td>Reserved for future use.</td>
+      <td>保留</td>
       <td>–</td>
       <td>–</td>
     </tr>
@@ -693,7 +693,7 @@ The <code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code>
 
 <h3 id="providers"><code class="highlighter-rouge">&lt;providers&gt;</code></h3>
 
-<p>The node must contain a <code class="highlighter-rouge">&lt;reportProvider&gt;</code> node, or a <code class="highlighter-rouge">&lt;customProvider&gt;</code> node, or both.</p>
+<p>节点必须包含<code class="highlighter-rouge">&lt;reportProvider&gt;</code>或<code class="highlighter-rouge">&lt;customProvider&gt;</code>，或两者都包含。</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
     <span class="nt">&lt;file</span> <span class="err">...</span><span class="nt">&gt;</span>    
@@ -722,30 +722,30 @@ The <code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code>
 
 <h3 id="reportprovider"><code class="highlighter-rouge">&lt;reportProvider&gt;</code></h3>
 
-<p>A class that provides data for a report file.
-It can contain parameters.</p>
+<p>一个为报表文件提供数据的类.
+可以包含参数。</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Example value</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>示例值</th>
+      <th>用法</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>A provider name</td>
+      <td>数据提供器的名字</td>
       <td><code class="highlighter-rouge">modules</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">class</code></td>
-      <td>Full name of a class that provides data</td>
+      <td>完成的数据提供器的类名</td>
       <td><code class="highlighter-rouge">"Magento\Analytics\ReportXml\ReportProvider"</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
   </tbody>
 </table>
@@ -781,30 +781,30 @@ Currently there is only one parameter is available. It is declared in <code clas
 
 <h3 id="customprovider"><code class="highlighter-rouge">&lt;customProvider&gt;</code></h3>
 
-<p>A class that provides data for a report file.
+<p>一个为报表文件提供数据的类.
 It cannot contain any parameters.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
-      <th>Description</th>
-      <th>Example value</th>
-      <th>Use</th>
+      <th>属性</th>
+      <th>描述</th>
+      <th>示例值</th>
+      <th>用法</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>A provider name</td>
+      <td>数据提供器的名字</td>
       <td>“store_config”</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">class</code></td>
-      <td>Full name of a class that provides data</td>
+      <td>完成的数据提供器的类名</td>
       <td><code class="highlighter-rouge">"Magento\Analytics\Model\StoreConfigurationProvider"</code></td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
   </tbody>
 </table>
@@ -877,7 +877,7 @@ It cannot contain any parameters.</p>
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

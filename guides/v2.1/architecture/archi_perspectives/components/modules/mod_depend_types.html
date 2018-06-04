@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend_types.html">
+	<link rel="canonical" href="/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend_types.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -261,7 +261,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="architectural-basics">
+<li class="nav-level1  " id="架构基础">
     
 
     
@@ -455,7 +455,7 @@
     
 
     
-    <a href="/guides/v2.1/architecture/archi_perspectives/components/Acomponents.html">组件</a>
+    <a href="/guides/v2.1/architecture/archi_perspectives/components/AComponents.html">组件</a>
     
 
     
@@ -715,90 +715,90 @@
 
 </section>
 
-			<h2 id="m2devgde-moddep-declare-dep">Two types of dependencies</h2>
+			<h2 id="m2devgde-moddep-declare-dep">两类依赖</h2>
 
-<p>There are two types of Magento <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> dependencies: hard and soft dependencies.</p>
+<p>Magento<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>有两种依赖类型: 硬依赖和软依赖.</p>
 
-<h2 id="hard-dependencies">Hard dependencies</h2>
+<h2 id="硬依赖">硬依赖</h2>
 
-<p>Modules with a <em>hard dependency</em> on another module cannot function without the module it depends on. Specifically:</p>
+<p>模块和另一个模块有 <em>硬依赖</em> ，在缺少另一个模块时这个模块是无法起做用的。特别地：</p>
 
 <ul>
   <li>
-    <p>The module contains code that directly uses logic from another module  (for example, the latter module’s instances, class constants, static methods, public class properties, interfaces, and traits).</p>
+    <p>这个模块直接包含另一个模块的逻辑代码，(例如,后者的模块实例，类常量，静态方法，公共类属性，接口及特点)</p>
   </li>
   <li>
-    <p>The module contains strings that include class names, method names, class constants, class properties, interfaces, and traits from another module.</p>
+    <p>模块包含另一个模块的类名，方法名，类常量，类属性，接口及特点的字符串。</p>
   </li>
   <li>
-    <p>The module deserializes an object declared in another module.</p>
+    <p>模块反序列化另一个模块声明的类对像。</p>
   </li>
   <li>
-    <p>The module uses or modifies the database tables used by another module.</p>
+    <p>模块使用或修改用于另一个模块的数据库表。</p>
   </li>
 </ul>
 
-<h2 id="soft-dependencies">Soft dependencies</h2>
+<h2 id="软依赖">软依赖</h2>
 
-<p>Modules with a <em>soft dependency</em> on another module can function properly without the other module, even if it has a dependency upon it. Specifically:</p>
+<p>模块和另一个模块有 <em>软依赖</em> ，在缺少另一个模块时即使存在依赖可能也可以正常工作。</p>
 
 <ul>
   <li>
-    <p>The module directly checks another module’s availability.</p>
+    <p>模块直接检查别一个模块的有效性。</p>
   </li>
   <li>
-    <p>The module extends another module’s configuration.</p>
+    <p>模块扩展另一个模块的配置。</p>
   </li>
   <li>
-    <p>The module extends another module’s <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span>.</p>
+    <p>模块扩展另一个模块的 <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">布局</span>。</p>
   </li>
 </ul>
 
 <div class="bs-callout bs-callout-warning" id="warning">
   <p>
-    Note: If a module uses code from another module, it should declare the dependency explicitly.
+    注意：一个模块使用另一个模块的代码，应该明确的声明依赖。
   </p>
 </div>
 
-<p>Magento installs modules in the following order:</p>
+<p>Magento以下面的顺序安装模块：</p>
 
-<p>1) the module serving as a dependency for another module</p>
+<p>1) 作为另一个模块的依赖为其提供服务的模块</p>
 
-<p>2) the module dependent on it</p>
+<p>2) 依赖它的模块</p>
 
-<h2 id="m2devgde-moddep-inapp-dep">Inappropriate dependencies</h2>
+<h2 id="m2devgde-moddep-inapp-dep">不恰当的依赖</h2>
 
-<p>Avoid creating the following dependencies:</p>
+<p>避免创建以下类的依赖：</p>
 
 <ul>
   <li>
-    <p>Circular (both direct and indirect)</p>
+    <p>循环(包括直接的和间接的)</p>
   </li>
   <li>
-    <p>Undeclared</p>
+    <p>未声明的</p>
   </li>
   <li>
-    <p>Incorrect</p>
+    <p>错误的</p>
   </li>
 </ul>
 
-<h2 id="m2devgde-moddep-diff-layer">Dependencies between modules in different product layers</h2>
+<h2 id="m2devgde-moddep-diff-layer">在不同产品层的模块间的依赖</h2>
 
-<p>You can build dependencies between the modules belonging to different layers.</p>
+<p>你可以在模块间的不同层构建依赖。</p>
 
-<h2 id="m2devgde-moddep-frmwk-layer">Dependencies in the Framework layer</h2>
+<h2 id="m2devgde-moddep-frmwk-layer">框架层的依赖</h2>
 
-<p>Modules belonging to the Magento框架 can be used in the application layer by an explicit dependency.</p>
+<p>Magento框架的模块可以通过显示依赖用于应用层。</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Note: In this case, using interfaces is preferable to using classes. </p>
-  <p>You can build dependencies between classes in the Magento框架 even if they belong to different modules.</p>
+  <p>注意：这种情况下，使用接口比直接用类更好。 </p>
+  <p>你可以在Magento的类之间构建依赖，即使他们属于不同模块。</p>
 </div>
 
-<h2 id="m2devgde-moddep-app-layer">Dependencies in the Application layer</h2>
-<p>Modules belonging to the application layer cannot be used in the Magento框架.</p>
+<h2 id="m2devgde-moddep-app-layer">应用层依赖</h2>
+<p>属于应用层的模块不能被用在Magento框架上。</p>
 
-<p>You can build dependencies between classes in the application layer, but these classes must belong to the same module. Dependencies between the modules of the application layer should be built only by the <span term-uuid="cdf644c4-bc99-4550-a954-dd5ae165785a" class="glossary-term" data-toggle="popover">service contract</span> or the service provider interface (SPI).</p>
+<p>你可以应用层的类之间构建依赖，但是这些类必须属于相同的模块。模块间的应用层依赖只能被<span term-uuid="cdf644c4-bc99-4550-a954-dd5ae165785a" class="glossary-term" data-toggle="popover">服务契约</span>或服务提供器接口(SPI)构建。</p>
 
 <h2 id="m2arch-module-related">相关主题</h2>
 
@@ -814,7 +814,7 @@
   
     
     <div class="github-link">
-      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/architecture/archi_perspectives/组件/modules/mod_depend_types.md" target="_blank">
+      <a class="improve-page" href="https://github.com/magento/devdocs/blob/develop/guides/v2.1/architecture/archi_perspectives/components/modules/mod_depend_types.md" target="_blank">
         去GitHub上编辑
       </a>
     </div>
@@ -856,7 +856,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

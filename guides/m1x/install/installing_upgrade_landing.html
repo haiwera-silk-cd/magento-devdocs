@@ -36,7 +36,7 @@
 <li>Magento Enterprise Edition (EE) 1.13 or 1.14</li></ul>
 
 <h2 id="upgrade-path">Upgrade Path</h2>
-<div class="msg-box important"><img src="/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: Magento recommends CE 1.9.1.0 or later or EE 1.14.1.0 or later for <em>all CE and EE installations and upgrades</em> to get the latest fixes, features, and security updates.</span></div>
+<div class="msg-box important"><img src="/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: Magento recommends CE 1.9.1.0或更新 or EE 1.14.1.0或更新 for <em>all CE and EE installations and upgrades</em> to get the latest fixes, features, and security updates.</span></div>
 
 <p>The following table provides basic information about how you perform your upgrade. More detailed information is discussed later in this article.</p>
 <table>
@@ -50,7 +50,7 @@
   <td>Your current CE version > CE 1.7 > CE 1.9.0.0</td>
 </tr>
 <tr>
-  <td>CE 1.5 or later</td>
+  <td>CE 1.5或更新</td>
   <td>Your current CE version > CE 1.9.0.0</td>
 </tr>
 <tr>
@@ -58,19 +58,19 @@
   <td>Your current EE version > EE 1.12 > EE 1.14.0.0<!-- &dagger; --></td>
 </tr>
 <tr>
-  <td>EE 1.8 or later</td>
+  <td>EE 1.8或更新</td>
   <td>Your current EE version > EE 1.14.0.0<!-- &dagger; --></td>
 </tr>
 </tbody>
 </table>
 
 <h3 id="upgrade-path-ee">Magento EE Upgrade Path</h3>
-<p>Because of changes to URL rewrites, the upgrade to Magento EE 1.13.0.2 or later is more complex than other upgrades. (This includes upgrading to Magento EE 1.14.)</p>
+<p>Because of changes to URL rewrites, the upgrade to Magento EE 1.13.0.2或更新 is more complex than other upgrades. (This includes upgrading to Magento EE 1.14.)</p>
 <p>Follow are the specific versions affected:</p>
-<ul><li>Upgrading from EE 1.12 or earlier to EE 1.13.0.2 or later (including to EE 1.14)</li>
-<li>Upgrading from EE 1.13.0.1 to EE 1.13.0.2 or later (including to EE 1.14)</li></ul>
+<ul><li>Upgrading from EE 1.12 or earlier to EE 1.13.0.2或更新 (including to EE 1.14)</li>
+<li>Upgrading from EE 1.13.0.1 to EE 1.13.0.2或更新 (including to EE 1.14)</li></ul>
 <p>For more information about these upgrades, see <a href="#ee1300-11301-upgrade-to-ee11302-start">Understanding the Upgrade to EE 1.13.0.2 or EE 1.14</a>.</p>
-<div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>:  If you're upgrading from EE 1.13.0.2 to EE 1.13.1.0 or later, your upgrade doesn't involve changes to URL rewrites and you can skip some of the steps discussed in the other upgrades. Continue with <a href="/guides/m1x/install/installing_upgrade_details.html" target="_blank">Upgrading to and Verifying Magento Community Edition (CE) and Enterprise Edition (EE)&mdash;Part 2</a>.</div>
+<div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>:  If you're upgrading from EE 1.13.0.2 to EE 1.13.1.0或更新, your upgrade doesn't involve changes to URL rewrites and you can skip some of the steps discussed in the other upgrades. Continue with <a href="/guides/m1x/install/installing_upgrade_details.html" target="_blank">Upgrading to and Verifying Magento Community Edition (CE) and Enterprise Edition (EE)&mdash;Part 2</a>.</div>
 
 
 <h3 id="upgrade-path-ce">Upgrading to Magento CE 1.9</h3>
@@ -80,7 +80,7 @@
 If you're currently using EE 1.13.0.0, start over with a fresh installation or upgrade.<br>
 If you're currently using an EE version earlier than EE 1.13.0.0, upgrade <em>directly</em> to EE 1.13.0.1 .</p> -->
 <h3 id="upgrade-path-older">Upgrading From Older Versions of Magento CE or EE</h3>
-<p>Provided you complete all tasks discussed in this article exactly as discussed, you can upgrade to Magento CE 1.9 or EE 1.14 from CE 1.5 or later or EE 1.8 or later.</p>
+<p>Provided you complete all tasks discussed in this article exactly as discussed, you can upgrade to Magento CE 1.9 or EE 1.14 from CE 1.5或更新 or EE 1.8或更新.</p>
 <p><strong>Important</strong>: <em>Do not</em> upgrade directly to this release if you're currently running CE 1.4 or earlier or EE 1.7 or earlier. A safer approach would be:</p>
 <ol><li>Upgrade to CE 1.7 or EE 1.12</li>
 <li>Thoroughly test CE 1.7 or EE 1.12 and fix any issues</li>
@@ -96,13 +96,13 @@ If you're currently using an EE version earlier than EE 1.13.0.0, upgrade <em>di
 
 <h2 id="ee1300-11301-upgrade-to-ee11302-start">Understanding the Upgrade to EE 1.13.0.2 or EE 1.14</h2>
 <p>The following sections apply <em>only</em> to the following Magento EE upgrades:</p>
-<ul><li>Upgrading from EE 1.12 or earlier to EE 1.13.0.2 or later</li>
-<li>Upgrading from EE 1.13.0.1 to EE 1.13.0.2 or later</li></ul>
+<ul><li>Upgrading from EE 1.12 or earlier to EE 1.13.0.2或更新</li>
+<li>Upgrading from EE 1.13.0.1 to EE 1.13.0.2或更新</li></ul>
 
-<div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>:  If you're upgrading from EE 1.13.0.2 to EE 1.13.1.0 or later, your upgrade doesn't involve changes to URL rewrites and you can skip some of the steps discussed in the other upgrades. Continue with <a href="/guides/m1x/install/installing_upgrade_details.html" target="_blank">Upgrading to and Verifying Magento Community Edition (CE) and Enterprise Edition (EE)&mdash;Part 2</a>.</div>
+<div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>:  If you're upgrading from EE 1.13.0.2 to EE 1.13.1.0或更新, your upgrade doesn't involve changes to URL rewrites and you can skip some of the steps discussed in the other upgrades. Continue with <a href="/guides/m1x/install/installing_upgrade_details.html" target="_blank">Upgrading to and Verifying Magento Community Edition (CE) and Enterprise Edition (EE)&mdash;Part 2</a>.</div>
 
 <h3 id="overview-ee11302-upgrade-url-keys">Why This Upgrade is Different</h3>
-<p>This section discusses why the upgrade to EE 1.13.0.2 or later requires you to perform different tasks than previous upgrades.</p>
+<p>This section discusses why the upgrade to EE 1.13.0.2或更新 requires you to perform different tasks than previous upgrades.</p>
 <p>One of the results of the change to the way URL keys are handled is that URLs for the same products or categories might need to change from the URLs in the version you're upgrading from. Following are scenarios that might cause URL keys to change:</p>
 <ul><li>All product keys must be unique. Any duplicate product URL keys are changed. For example, if two products had the URL key <code>nike-shoes</code>, one of them is changed to a URL key like <code>nike-shoes-1</code> by the URL redirect scripts. This also resolves any conflicts (for example, if you already had another product with key <code>nike-shoes-1</code>).</li>
 <li>Categories at the same level in the hierarchy in the same store view must have unique URL keys.<br />
@@ -114,7 +114,7 @@ For example, if you have a <code>shoes</code> category with URL key <code>shoes<
 <li><a href="#ee11302-upgrade-113">Upgrading From EE 1.13.0.1</a></li></ul>
 
 <h3 id="ee11302-upgrade-112">Upgrading From EE 1.12 or Earlier</h3>
-<p>Following is a high-level roadmap to upgrade to EE 1.13.0.2 or later from EE 1.12 or earlier. This upgrade involves tasks not required for other Magento upgrades; these new tasks are indicated in the roadmap.</p>
+<p>Following is a high-level roadmap to upgrade to EE 1.13.0.2或更新 from EE 1.12 or earlier. This upgrade involves tasks not required for other Magento upgrades; these new tasks are indicated in the roadmap.</p>
 <ol><li>安装Magento in a different directory:
 <ul><li><em>Recommended</em>. Set up a new system (that is, another host) on which to install Magento.<br />
 The system should be identical to, if not better than, your current system. The new system must meet the <a href="/guides/m1x/system-requirements.html" target="_blank">Magento系统要求</a>.</li>
@@ -154,7 +154,7 @@ If not, fix issues, retest, and upgrade again.</li></ol>
 <p>Step-by-step instructions for your upgrade start <a href="/guides/m1x/install/installing_upgrade_details.html" target="_blank">here</a>.</p>
 
 <h3 id="ee11302-upgrade-113">Upgrading From EE 1.13.0.1</h3>
-<p>Following is a high-level roadmap to upgrade to EE 1.13.0.2 or later from EE 1.13.0.1. This upgrade involves tasks not required for other Magento upgrades; these new tasks are indicated in the roadmap.</p>
+<p>Following is a high-level roadmap to upgrade to EE 1.13.0.2或更新 from EE 1.13.0.1. This upgrade involves tasks not required for other Magento upgrades; these new tasks are indicated in the roadmap.</p>
 <ol><li>安装Magento in a different directory:
 <ul><li><em>Recommended</em>. Set up a new system (that is, another host) on which to install Magento.<br />
 The system should be identical to, if not better than, your current system. The new system must meet the <a href="/guides/m1x/system-requirements.html" target="_blank">Magento系统要求</a>.</li>

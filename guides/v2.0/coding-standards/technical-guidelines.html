@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/coding-standards/technical-guidelines.html">
+	<link rel="canonical" href="/guides/v2.0/coding-standards/technical-guidelines.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -241,7 +241,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="coding-standards">
+<li class="nav-level1  " id="编码规范">
     
 
     
@@ -253,7 +253,7 @@
         
         
         
-        <li class="nav-level2  " id="code-demarcation-standard">
+        <li class="nav-level2  " id="代码界定标准">
 
             
 
@@ -267,7 +267,7 @@
         
         
         
-        <li class="nav-level2  " id="php-coding-standard">
+        <li class="nav-level2  " id="php编码规范">
 
             
 
@@ -281,7 +281,7 @@
         
         
         
-        <li class="nav-level2  " id="php-code-sniffers">
+        <li class="nav-level2  " id="php代码嗅探程序">
 
             
 
@@ -295,7 +295,7 @@
         
         
         
-        <li class="nav-level2  " id="docblock-standard">
+        <li class="nav-level2  " id="注释文档块规范">
 
             
 
@@ -309,7 +309,7 @@
         
         
         
-        <li class="nav-level2  " id="javascript-coding-standard">
+        <li class="nav-level2  " id="js编码规范">
 
             
 
@@ -323,7 +323,7 @@
         
         
         
-        <li class="nav-level2  " id="javascript-docblock-standard">
+        <li class="nav-level2  " id="javascript-注释文档块规范">
 
             
 
@@ -337,7 +337,7 @@
         
         
         
-        <li class="nav-level2  " id="jquery-widget-coding-standard">
+        <li class="nav-level2  " id="jq小工具编码规范">
 
             
 
@@ -351,7 +351,7 @@
         
         
         
-        <li class="nav-level2  " id="less-coding-standard">
+        <li class="nav-level2  " id="less编码规范">
 
             
 
@@ -365,7 +365,7 @@
         
         
         
-        <li class="nav-level2  " id="html-style-guide">
+        <li class="nav-level2  " id="html编码风格向导">
 
             
 
@@ -385,7 +385,7 @@
 		    
 		    	
 
-<li class="nav-level1 active " id="technical-guidelines">
+<li class="nav-level1 active " id="技术指南">
     
 
     
@@ -399,7 +399,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="technical-vision">
+<li class="nav-level1  " id="技术视角">
     
 
     
@@ -567,7 +567,7 @@
 
 <p>2.2. Object MUST be ready for use after instantiation. No additional public initialization methods are allowed.</p>
 
-<div class="collapsible"><b class="collapsible-title">Examples: </b><div class="collapsible-content"><table>
+<div class="collapsible"><b class="collapsible-title">例如: </b><div class="collapsible-content"><table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
         <th><span style="color: green">Recommended</span></th>
@@ -646,7 +646,7 @@
 
 <p start="3.2">2.3.2. Events MUST NOT be triggered in constructors.</p>
 
-<div class="collapsible"><b class="collapsible-title">Examples: </b><div class="collapsible-content"><table>
+<div class="collapsible"><b class="collapsible-title">例如: </b><div class="collapsible-content"><table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
         <th><span style="color: green">Recommended</span></th>
@@ -699,7 +699,7 @@
 
 <p start="2.4">2.4. All dependencies MUST be requested by the most generic type that is required by the client object.</p>
 
-<div class="collapsible"><b class="collapsible-title">Examples: </b><div class="collapsible-content"><table>
+<div class="collapsible"><b class="collapsible-title">例如: </b><div class="collapsible-content"><table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
         <th><span style="color: green">Recommended</span></th>
@@ -746,7 +746,7 @@
 <p>2.5. Proxies and interceptors MUST NEVER be explicitly requested in constructors.</p>
 
 <p>2.6. Inheritance SHOULD NOT be used. Composition SHOULD be used for code reuse.</p>
-<div class="collapsible"><b class="collapsible-title">Examples: </b><div class="collapsible-content"><table>
+<div class="collapsible"><b class="collapsible-title">例如: </b><div class="collapsible-content"><table>
     <tr>
         <th><span style="color: red">Not recommended</span></th>
         <th><span style="color: green">Recommended</span></th>
@@ -816,7 +816,7 @@
 
 <p>2.9. Service classes (ones that provide behavior but not data, like <code class="highlighter-rouge">EventManager</code>) SHOULD NOT have a mutable state.</p>
 
-<p>2.10. Only data objects or entities (Product, Category, etc.) MAY have any observable state.</p>
+<p>2.10. Only data objects or entities (Product, Category, 等.) MAY have any observable state.</p>
 
 <p>2.11. “Setters” SHOULD NOT be used. They are only allowed in Data Transfer Objects.</p>
 
@@ -935,7 +935,7 @@
 
 <p>3.1. There SHOULD be no circular dependencies between objects.</p>
 
-<p>3.2. The <code class="highlighter-rouge">app/etc/di.xml</code> file MUST contain only framework-level <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">Dependency Injection</span> (DI) settings.</p>
+<p>3.2. The <code class="highlighter-rouge">app/etc/di.xml</code> file MUST contain only framework-level <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">依赖注入</span> (DI) settings.</p>
 
 <p>3.3. All modular DI settings (except for Presentation layer configuration) SHOULD be stored in <code class="highlighter-rouge">&lt;module_dir&gt;/etc/di.xml</code>.</p>
 
@@ -981,7 +981,7 @@
 
 <p>5.8. All direct communications with third-party libraries MUST be wrapped with a try/catch statement.</p>
 
-<p>5.9. <code class="highlighter-rouge">\Exception</code> SHOULD be caught only in the code that calls third-party libraries, in addition to catching specific exceptions thrown by the <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">library</span>.</p>
+<p>5.9. <code class="highlighter-rouge">\Exception</code> SHOULD be caught only in the code that calls third-party libraries, in addition to catching specific exceptions thrown by the <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">库</span>.</p>
 
 <p>5.10. <code class="highlighter-rouge">\Exception</code> SHOULD NOT be thrown in Front Controller and Action Controllers.</p>
 
@@ -995,7 +995,7 @@
 
 <p>5.15. Exceptions SHOULD NOT be caught in a loop. The loop SHOULD be wrapped with a <code class="highlighter-rouge">try/catch</code> construct instead.</p>
 
-<p>5.16. If a method uses system resources (such as files, sockets, streams, etc.), the code MUST be wrapped with a <code class="highlighter-rouge">try</code> block and the corresponding <code class="highlighter-rouge">finally</code> block. In the <code class="highlighter-rouge">finally</code> sections, all resources SHOULD be properly released.</p>
+<p>5.16. If a method uses system resources (such as files, sockets, streams, 等.), the code MUST be wrapped with a <code class="highlighter-rouge">try</code> block and the corresponding <code class="highlighter-rouge">finally</code> block. In the <code class="highlighter-rouge">finally</code> sections, all resources SHOULD be properly released.</p>
 
 <p>5.17. <code class="highlighter-rouge">LocalizedException</code> SHOULD only be thrown in the Presentation layer (Controllers, Blocks).</p>
 
@@ -1102,7 +1102,7 @@
 
 <p>8.3. If component A uses behavior of Component B, such Component B MUST be declared in the <code class="highlighter-rouge">require</code> section of Component A’s <code class="highlighter-rouge">composer.json</code> file, except for cases where Component B is used in the code that customizes the behavior of Component B.</p>
 
-<p>8.4. If component A extends/customizes the behavior of component B through its customization points (layout handles, plugins, events, etc.), such Component B MUST be declared in the <code class="highlighter-rouge">suggest</code> section of Component A.</p>
+<p>8.4. If component A extends/customizes the behavior of component B through its customization points (layout handles, plugins, events, 等.), such Component B MUST be declared in the <code class="highlighter-rouge">suggest</code> section of Component A.</p>
 
 <p>8.5. Only the <code class="highlighter-rouge">@api</code> code of any module can be referenced by other modules.</p>
 
@@ -1184,7 +1184,7 @@
 
 <p>13.1. Magento 2 <a href="/guides/v2.0/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">CLI Command Naming Guidelines</a> MUST be followed.</p>
 
-<p>13.2. A CLI command MUST be created for any functionality intended to be used by a system integrator/system administrator/developer (for example: change indexer mode, generate a configuration file, etc.).</p>
+<p>13.2. A CLI command MUST be created for any functionality intended to be used by a system integrator/system administrator/developer (for example: change indexer mode, generate a configuration file, 等.).</p>
 
 <p>13.3. A CLI command MUST always run in a global area. If a command needs a specific area to perform its functions, such area SHOULD be set up before execution.</p>
 
@@ -1275,7 +1275,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

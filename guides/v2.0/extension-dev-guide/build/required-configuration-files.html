@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/extension-dev-guide/build/required-configuration-files.html">
+	<link rel="canonical" href="/guides/v2.0/extension-dev-guide/build/required-configuration-files.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -355,7 +355,7 @@
         
         
         
-        <li class="nav-level2  " id="extension-lifecycle">
+        <li class="nav-level2  " id="扩展生命周期">
 
             
 
@@ -375,11 +375,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="build">
+<li class="nav-level1  " id="构建">
     
 
     
-    <a href="/guides/v2.0/extension-dev-guide/build/build.html">Build</a>
+    <a href="/guides/v2.0/extension-dev-guide/build/build.html">构建</a>
     
 
     
@@ -521,11 +521,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="package">
+<li class="nav-level1  " id="打包">
     
 
     
-    <a href="/guides/v2.0/extension-dev-guide/package/package.html">Package</a>
+    <a href="/guides/v2.0/extension-dev-guide/package/package.html">打包</a>
     
 
     
@@ -567,11 +567,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="validate">
+<li class="nav-level1  " id="验证">
     
 
     
-    <a href="/guides/v2.0/extension-dev-guide/validate/validate.html">Validate</a>
+    <a href="/guides/v2.0/extension-dev-guide/validate/validate.html">验证</a>
     
 
     
@@ -657,7 +657,7 @@
         
         
         
-        <li class="nav-level2  " id="public-content">
+        <li class="nav-level2  " id="公开内容">
 
             
 
@@ -671,7 +671,7 @@
         
         
         
-        <li class="nav-level2  " id="private-content">
+        <li class="nav-level2  " id="隐私内容">
 
             
 
@@ -836,12 +836,12 @@
         
         
         
-        <li class="nav-level2  " id="factories">
+        <li class="nav-level2  " id="工厂">
 
             
 
             
-            <a href="/guides/v2.0/extension-dev-guide/factories.html">Factories</a>
+            <a href="/guides/v2.0/extension-dev-guide/factories.html">工厂</a>
             
 
             
@@ -850,12 +850,12 @@
         
         
         
-        <li class="nav-level2  " id="proxies">
+        <li class="nav-level2  " id="代理">
 
             
 
             
-            <a href="/guides/v2.0/extension-dev-guide/proxies.html">Proxies</a>
+            <a href="/guides/v2.0/extension-dev-guide/proxies.html">代理</a>
             
 
             
@@ -906,12 +906,12 @@
         
         
         
-        <li class="nav-level2  " id="routing">
+        <li class="nav-level2  " id="路由">
 
             
 
             
-            <a href="/guides/v2.0/extension-dev-guide/routing.html">Routing</a>
+            <a href="/guides/v2.0/extension-dev-guide/routing.html">路由</a>
             
 
             
@@ -920,12 +920,12 @@
         
         
         
-        <li class="nav-level2  " id="indexing">
+        <li class="nav-level2  " id="索引">
 
             
 
             
-            <span>Indexing</span>
+            <span>索引</span>
             
 
             
@@ -1070,12 +1070,12 @@
         
         
         
-        <li class="nav-level2  " id="adapters">
+        <li class="nav-level2  " id="适配器">
 
             
 
             
-            <a href="/guides/v2.0/extension-dev-guide/adapters.html">Adapters</a>
+            <a href="/guides/v2.0/extension-dev-guide/adapters.html">适配器</a>
             
 
             
@@ -1096,11 +1096,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="security">
+<li class="nav-level1  " id="安全">
     
 
     
-    <span>Security</span>
+    <span>安全</span>
     
 
     
@@ -1130,11 +1130,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="versioning">
+<li class="nav-level1  " id="版本控制">
     
 
     
-    <a href="/guides/v2.0/extension-dev-guide/versioning/">Versioning</a>
+    <a href="/guides/v2.0/extension-dev-guide/versioning/">版本控制</a>
     
 
     
@@ -1339,7 +1339,7 @@
 
   <h3 id="tailor-your-configuration-files-for-what-your-module-does">Tailor your configuration files for what your module does</h3>
 
-  <p>The exact set of configuration files required for your module depends on what your new module does. The required configuration files depend on how you plan to use the module: will the module be manifested on the storefront UI, or in the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> panel, or as a <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">backend</span> <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> that makes a service call? Or all of the above. For example, if your module performs a function in the Admin, you should add any necessary configuration files for those functions to <code class="highlighter-rouge">etc/adminhtml/</code>, like:</p>
+  <p>The exact set of configuration files required for your module depends on what your new module does. The required configuration files depend on how you plan to use the module: will the module be manifested on the storefront UI, or in the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> panel, or as a <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">backend</span> <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> that makes a service call? Or all of the above. For example, if your module performs a function in the Admin, you should add any necessary configuration files for those functions to <code class="highlighter-rouge">etc/adminhtml/</code>, like:</p>
 
   <ul>
     <li><code class="highlighter-rouge">&lt;your module root dir&gt;/etc/adminhtml/di.xml</code></li>
@@ -1364,7 +1364,7 @@
 
   <h4 id="section-2">下一步</h4>
 
-  <p><a href="/guides/v2.0/extension-dev-guide/build/module-file-structure.html">创建你的组件文件结构</a></p>
+  <p><a href="/guides/v2.0/extension-dev-guide/build/module-file-structure.html">创建你的components文件结构</a></p>
 </div>
 
 			
@@ -1419,7 +1419,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

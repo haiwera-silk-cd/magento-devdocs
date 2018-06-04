@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/howdoi/checkout/checkout_customize.html">
+	<link rel="canonical" href="/guides/v2.3/howdoi/checkout/checkout_customize.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -249,17 +249,17 @@
 
 		
 
-		<h4 class="guide-title">How to</h4>
+		<h4 class="guide-title">如何</h4>
 		<div class="collapsible-navigation">
 		    <ul>
 		    
 		    	
 
-<li class="nav-level1  " id="how-to">
+<li class="nav-level1  " id="如何">
     
 
     
-    <a href="/guides/v2.3/howdoi/bk-how-do-i.html">How To</a>
+    <a href="/guides/v2.3/howdoi/bk-how-do-i.html">如何</a>
     
 
     
@@ -269,7 +269,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="contributor-sign-up-sheet">
+<li class="nav-level1  " id="贡献者注册表单">
     
 
     
@@ -819,11 +819,11 @@
 
 			<h2> 这里有什么</h2>
 
-<p>This topic contains the basic information about how to customize the view of an existing <span term-uuid="278c3ce0-cd4c-4ffc-a098-695d94d73bde" class="glossary-term" data-toggle="popover">checkout</span> step. In the Magento application, checkout is implemented using UI components. You can customize each step by changing the <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> implementation or template for a component, adding, removing or disabling a component.</p>
+<p>This topic contains the basic information about how to customize the view of an existing <span term-uuid="278c3ce0-cd4c-4ffc-a098-695d94d73bde" class="glossary-term" data-toggle="popover">checkout</span> step. In the Magento application, checkout is implemented using UI 组件. You can customize each step by changing the <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> implementation or template for a component, adding, removing or disabling a component.</p>
 
 <h2 id="change-the-components-js-implementation-and-template">Change the component’s .js implementation and template</h2>
 
-<p>To change the <code class="highlighter-rouge">.js</code> implementation and template used for components rendering, you need to declare the new files in the checkout page <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">layout</span>. To do this, take the following steps:</p>
+<p>To change the <code class="highlighter-rouge">.js</code> implementation and template used for 组件 rendering, you need to declare the new files in the checkout page <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">布局</span>. To do this, take the following steps:</p>
 
 <ol>
   <li>In your custom module directory, create the following new file: <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code>. (For your checkout customization to be applied correctly, your custom <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> should depend on the Magento_Checkout模块.)</li>
@@ -863,7 +863,7 @@
         <span class="nt">&lt;referenceBlock</span> <span class="na">name=</span><span class="s">"checkout.root"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;arguments&gt;</span>
                 <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">"jsLayout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"components"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"组件"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"checkout"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                             <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"children"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
                                 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"steps"</span> <span class="na">xsi:type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
@@ -898,7 +898,7 @@
 
 <p>Any <span term-uuid="9bcc648c-bd08-4feb-906d-1e24c4f2f422" class="glossary-term" data-toggle="popover">UI component</span> is added in the <code class="highlighter-rouge">checkout_index_index.xml</code> similar to the way a <a href="/guides/v2.3/howdoi/checkout/checkout_new_step.html#add-your-step-to-the-checkout-page-layout">checkout step component is added</a>.</p>
 
-<p>Make sure that you declare a component so that it is rendered correctly by the parent component. If a parent component is a general UI component (referenced by the <code class="highlighter-rouge">uiComponent</code> alias), its child components are rendered without any conditions. But if a parent component is a an extension of a general UI components, then children rendering might be restricted in certain way. For example a component can render only children from a certain <code class="highlighter-rouge">displayArea</code>.</p>
+<p>Make sure that you declare a component so that it is rendered correctly by the parent component. If a parent component is a general UI component (referenced by the <code class="highlighter-rouge">uiComponent</code> alias), its child 组件 are rendered without any conditions. But if a parent component is a an extension of a general UI 组件, then children rendering might be restricted in certain way. For example a component can render only children from a certain <code class="highlighter-rouge">displayArea</code>.</p>
 
 <h2 id="disable-a-component">Disable a component</h2>
 <p>To disable the component in your <code class="highlighter-rouge">checkout_index_index.xml</code> use the following instructions:</p>
@@ -915,7 +915,7 @@
 
 <p>The following sample is an example of the around method removing a component:</p>
 
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nb">unset</span><span class="p">(</span><span class="nv">$jsLayout</span><span class="p">[</span><span class="s1">'components'</span><span class="p">][</span><span class="s1">'checkout'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'steps'</span><span class="p">][</span><span class="o">%</span><span class="nx">path_to_target_node</span><span class="o">%</span><span class="p">]);</span> <span class="c1">//%path_to_target_node% is the path to the component's node in checkout_index_index.xml
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nb">unset</span><span class="p">(</span><span class="nv">$jsLayout</span><span class="p">[</span><span class="s1">'组件'</span><span class="p">][</span><span class="s1">'checkout'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'steps'</span><span class="p">][</span><span class="o">%</span><span class="nx">path_to_target_node</span><span class="o">%</span><span class="p">]);</span> <span class="c1">//%path_to_target_node% is the path to the component's node in checkout_index_index.xml
 </span><span class="k">return</span> <span class="nv">$jsLayout</span><span class="p">;</span></code></pre></figure>
 
 <p>(If you want to use this sample in your code, replace the <code class="highlighter-rouge">%path_to_target_node%</code> placeholder with real value.)</p>
@@ -977,7 +977,7 @@
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

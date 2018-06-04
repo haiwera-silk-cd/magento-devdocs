@@ -82,7 +82,7 @@
 <p>Complete the tasks discussed in the following sections in the order shown:</p>
 <ol><li>Installing and configuring required prerequisite Software for <a href="/guides/m1x/install/installing_req-prereq_ubuntu.html" target="_blank">Ubuntu</a>或<a href="/guides/m1x/install/installing_req-prereq_centos.html" target="_blank">CentOS</a></li>
 <li><a href="#install-prereq-selinux">SELinux Prerequisite</a></li>
-<li><a href="#install-iptables">Opening Ports In Your Firewall</a></li>
+<li><a href="#install-iptables">开户防火墙端口</a></li>
 <li><a href="#install-optional">Installing 可选软件</a></li>
 <li><a href="#install-create-db">Creating a Magento Database Instance</a></li>
 <li><a href="#install-extract-archive">Extracting the Magento Installation Archive</a></li>
@@ -91,8 +91,8 @@
 
 
 <h3 id="install-prereq-selinux">SELinux Prerequisite</h3>
-<p><a href="http://selinuxproject.org/page/Main_Page" target="_blank">Security Enhanced Linux (SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this section.</p>
-<p>If Apache and the database server are on the same host, you can skip this section and continue with <a href="#install-iptables">Opening Ports In Your Firewall</a>.</p>
+<p><a href="http://selinuxproject.org/page/Main_Page" target="_blank">Linux增强安全(SELinux)</a> enables CentOS and Ubuntu administrators greater access control over their servers. If you're using SELinux <em>and</em> Apache must initiate a connection to another host, you must run the commands discussed in this section.</p>
+<p>If Apache and the database server are on the same host, you can skip this section and continue with <a href="#install-iptables">开户防火墙端口</a>.</p>
 <p>To enable Apache to initiate a connection to another host with SELinux enabled:</p>
 <ol><li>To determine if SELinux is enabled, use the following command:
 <pre>getenforce</pre>
@@ -105,7 +105,7 @@
 </ul>
 </li></ol>
 
-<h3 id="install-iptables">Opening Ports In Your Firewall</h3>
+<h3 id="install-iptables">开户防火墙端口</h3>
 <p>Depending on your security requirements, you might find it necessary to open port 80 and other ports in your firewall. Because of the sensitive nature of networking security, Magento strongly recommends you consult with your IT department before proceeding. Following are some suggested references:</p>
 <ul><li>Ubuntu: <a href="https://help.ubuntu.com/community/IptablesHowTo" target="_blank">Ubuntu documentation page</a>.</li>
 <li>CentOS: <a href="http://wiki.centos.org/HowTos/Network/IPTables" target="_blank">CentOS how-to</a>和<a href="http://www.centos.org/docs/4/4.5/Security_Guide/s1-firewall-ipt-basic.html" target="_blank">CentOS reference page</a>.</li></ul>

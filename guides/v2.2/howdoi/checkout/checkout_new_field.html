@@ -249,17 +249,17 @@
 
 		
 
-		<h4 class="guide-title">How to</h4>
+		<h4 class="guide-title">如何</h4>
 		<div class="collapsible-navigation">
 		    <ul>
 		    
 		    	
 
-<li class="nav-level1  " id="how-to">
+<li class="nav-level1  " id="如何">
     
 
     
-    <a href="/guides/v2.2/howdoi/bk-how-do-i.html">How To</a>
+    <a href="/guides/v2.2/howdoi/bk-how-do-i.html">如何</a>
     
 
     
@@ -269,7 +269,7 @@
 		    
 		    	
 
-<li class="nav-level1  " id="contributor-sign-up-sheet">
+<li class="nav-level1  " id="贡献者注册表单">
     
 
     
@@ -857,7 +857,7 @@ take the steps described further.</p>
     <span class="s1">'visible'</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
 <span class="p">];</span>
 
-<span class="nv">$jsLayout</span><span class="p">[</span><span class="s1">'components'</span><span class="p">][</span><span class="s1">'checkout'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'steps'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shipping-step'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shippingAddress'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shipping-address-fieldset'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="nv">$customAttributeCode</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$customField</span><span class="p">;</span></code></pre></figure>
+<span class="nv">$jsLayout</span><span class="p">[</span><span class="s1">'组件'</span><span class="p">][</span><span class="s1">'checkout'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'steps'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shipping-step'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shippingAddress'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="s1">'shipping-address-fieldset'</span><span class="p">][</span><span class="s1">'children'</span><span class="p">][</span><span class="nv">$customAttributeCode</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$customField</span><span class="p">;</span></code></pre></figure>
 
 <p>This way, your field is added to the <code class="highlighter-rouge">customAttributes</code> property of <code class="highlighter-rouge">'Magento_Checkout/js/model/new-customer-address.js</code>, a JS object that lists all predefined address attributes and matches the corresponding server-side interface <code class="highlighter-rouge">\Magento\Quote\Api\Data\AddressInterface</code>. The <code class="highlighter-rouge">customAttributes</code> property was designed to contain custom EAV address attributes and is related to <code class="highlighter-rouge">\Magento\Quote\Model\Quote\Address\CustomAttributeListInterface::getAttributes</code> method. The code above will automatically handle local storage persistence on <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span>.</p>
 
@@ -903,7 +903,7 @@ take the steps described further.</p>
     <span class="p">};</span>
 <span class="p">});</span></code></pre></figure>
 
-<p>When adding a field to the billing address form, you need to modify the behavior of one of the following components: <code class="highlighter-rouge">Magento_Checkout/js/action/place-order</code>或<code class="highlighter-rouge">Magento_Checkout/js/action/set-payment-information</code>, depending on when do you need the custom field valued to be passed to the server side. For example of a mixin, modifying one of these components, see the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/CheckoutAgreements/view/frontend/web/js/model/place-order-mixin.js">place-order-mixin.js</a> in the Magento_CheckoutAgreements <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>.</p>
+<p>When adding a field to the billing address form, you need to modify the behavior of one of the following 组件: <code class="highlighter-rouge">Magento_Checkout/js/action/place-order</code>或<code class="highlighter-rouge">Magento_Checkout/js/action/set-payment-information</code>, depending on when do you need the custom field valued to be passed to the server side. For example of a mixin, modifying one of these 组件, see the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/CheckoutAgreements/view/frontend/web/js/model/place-order-mixin.js">place-order-mixin.js</a> in the Magento_CheckoutAgreements <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>.</p>
 
 <p><em>*步骤3.</em></p>
 
@@ -1000,7 +1000,7 @@ Magento will generate the interface that includes your custom attribute and you 
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

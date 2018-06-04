@@ -1,87 +1,85 @@
-# Magento Developer Documentation
+# Magento 中文文档
 
-Welcome! This site contains the latest Magento developer documentation for ongoing Magento 2.x releases.
+欢迎使用Magento中文文档，由于此文档使用Jekyll在github上编译会出现超时问题，故本文档每周五从master由笔者本地编译到gh-pages分支。请不要直接在gh-pages分支上进行翻译。本仓库起于[magento/devdocs ddec2e4af6d](https://github.com/magento/devdocs/commit/ddec2e4af6d9d96579ac58ef98207a8eaaa8f688),最后更新日期为2018年5月27. 英文文档请参考[Magento Devdocs](https://devdocs.magento.com)
 
-To contribute, please fork the `develop` branch.
+为了减小本仓库大小以方便贡献者克隆，本文档所有图片、PDF、zip文件引用[Magento Devdocs](https://devdocs.magento.com)原网站内容，在`_config.yml`中定义了变量`magentourl`，笔者已悉数修改，若有遗漏，欢迎参与修改。
 
-# Building this site
+# 站点环境构建
 
-You can build this site locally in the following ways:
+你可以使用下面的方式在本地构建文档站点:
 
-- [Installing the project dependencies locally](#build-using-jekyll) (Mac, Linux)
-- [Using a Docker container](#build-using-docker) (Mac, Linux)
-- [Using a Vagrant virtual machine](#build-using-vagrant) (Mac, Linux, Windows)
+- [安装本地项目依赖](#build-using-jekyll) (Mac, Linux)
+- [使用docker容器](#build-using-docker) (Mac, Linux)
+- [使用Vagrant虚拟机](#build-using-vagrant) (Mac, Linux, Windows)
 
-## Build using Jekyll
+## 使用Jekyll构建
 
-For local builds, you need to install Ruby 2.4或更新.
+为了保证能在本地进行构建，你须要安装Ruby 2.4或更新。
 
-To check the Ruby version on your environment, run in your terminal:
+要检查您的系统的Ruby版本，可以在终端执行
 
 ```shell
 $ ruby -v
 ```
 
-### Install the latest Ruby (if the Ruby version is less than 2.4)
+### 安装最新版的Ruby (如果您的Ruby版本小于2.4)
 
-**MacOS users**
+**MacOS 用户**
 
-1. Install Homebrew. See the [Homebrew site](https://brew.sh) for instructions.
-1. Use Homebrew to install the latest stable version of Ruby:
+1. 安装 Homebrew. 安装指令请参考[Homebrew site](https://brew.sh).
+2. 使用homebrew安装最新版的Ruby:
  
    ```
    $ brew install ruby
    ```
 
-**Unix, Windows and other OS users**
+**Unix, Windows或其它系统的用户**
 
-See the [Ruby site](https://www.ruby-lang.org/en/documentation/installation) for instructions.
+请参考[Ruby site](https://www.ruby-lang.org/en/documentation/installation)安装.
 
 ### 安装Bundler
 
-Install the [Bundler](http://bundler.io/) gem, which helps with Ruby dependencies:
+安装[Bundler](http://bundler.io/) gem,用于解决Ruby依赖:
 
 ```
 $ gem install bundler
 ```
 
-Once you have completed preparing your environment, you can build locally and review the site in your browser.
+一但你完成上述步骤，你便可以在本地构建并使用浏览器来查看你的文档站点了。
 
 ### 安装devdocs
 
-Clone or download the repository. The first time you are at the `devdocs` directory, run:
+克隆或下载本仓库，完成后首先你会进到`devdocs`目录，执行
 
 ```
 $ bundle install
 ```
 
-Once you have completed preparing your environment, you can build locally and review the site in your browser.
+### 本地构建:
 
-### To build locally:
+#### 使用rake
 
-#### Using rake
+[rake](https://github.com/ruby/rake)是一个本地的Ruby工具，用于自动化任务。 
 
-[rake](https://github.com/ruby/rake) is a native Ruby tool that helps to automate tasks.
-
-1. Run the rake task that installs all required dependencies and starts the [Jekyll](https://jekyllrb.com/) server:
+1.使用rake请求所有依赖并启动[Jekyll](https://jekyllrb.com/)服务:
 
    ```
    $ rake preview
    ```
 
-1. Press `Ctrl+C` in the serve terminal to stop the server.
+1. 按`Ctrl+C`终止命令.
 
-If rake fails on your environment, generate the preview [using jekyll](#using-jekyll).
+如果rake在你的环境出现错误，请[using jekyll](#using-jekyll)
 
-#### Using jekyll
+#### 使用Jekyll
 
-1. The first time you are at the `devdocs` directory or when you need to pick up changes in `Gemfile.lock` dependencies (for example, theme changes), run:
+1. 首先来到`devdocs`目录，当你要应用你的`Gemfile.lock`改变时（比如，主题改变)请使用下面的命令来重新解决依赖.
 
    ```
    $ bundle install
    ```
 
-1. To generate the local preview, run:
+1. 生成本地预览
 
    ```
    $ bundle exec jekyll serve --incremental
@@ -97,17 +95,18 @@ If rake fails on your environment, generate the preview [using jekyll](#using-je
       Server running... press ctrl-c to stop.
    ```
 
-1. Use the **Server address** URL `http://127.0.0.1:4000/` in a browser to preview the content.
+1. 使用 **服务器地址** `http://127.0.0.1:4000/`在浏览器查看站点
 
-1. Press `Ctrl+C` in the serve terminal to stop the server.
+1. 按`Ctrl+C`终止命令
 
-> ***TIP***  
-> Leave the serve terminal open and running. Every time you save changes to a file, it automatically regenerates the site so you can test the output immediately. Changing the `_config.yml` file requires a fresh build. Using the `--incremental` option limits re-builds to posts and pages that have changed.
+> ***小提示***  
+> 离开服务终端打开并执行，每当你保存某个文件的修改，它将自动重成重新生成站点，因此你可以立即测试输出的内容。修改`_config.yml`文件必须要重新构建。使用`--incremental`选项将限制重新构建修改的页面
 
-### To minimize build time locally:
+### 本地最小化构建时间
 
-1. Create a `_config.local.yml` file at the root of the project directory and exclude all versions except the one that you want to preview.
-The following example will generate Magento 2.2 documentation only.
+1. 在项目跟目录创建一个`_config.local.yml`文件，排除所有你不须要的版本
+
+下面的例子将只生成Magento2.2的文档
 
    ```yaml
     exclude:
@@ -129,55 +128,62 @@ The following example will generate Magento 2.2 documentation only.
      - Rakefile
    ```
 
-1. Run the preview command:
+1. 执行预览命令
 
    ```
    $ rake preview
    ```
-   This command:
-   * Checks your environment according to the dependencies in `Gemfile.lock`.
-   * Removes the `_site/` directory, which contains previously generated preview files.
-   * Generates a new preview and opens the landing page in a web browsers.
+   此命令将：
+   * 根据`Gemfile.lock`检查你的环境所需的依赖:
+   * 删除包含了之前生成结果的`_site/`目录
+   * 生成新的预览并在浏览器打开
    
-If you don't have the `_config.local.yml` file at the root of your `devdocs/` directory, the rake will generate all versions of the documentation.
+如果在你的`devdocs/`目录下没有`_config.local.yml`文件,rank将为所有版本生成文档
 
-## Build using Docker
-This repository comes with the necessary configuration files for building a local copy of the Magento DevDocs with [Docker](https://docs.docker.com/), using [Docker Compose](https://docs.docker.com/compose/overview/).
+## 使用docker构建
 
-To use Docker and Docker Compose, first download and install Docker for the appropriate operating system, and then install Docker Compose to execute the `docker-compose.yml` configuration file.
 
-### Docker for Mac
-- Refer [here](https://docs.docker.com/docker-for-mac/install/) for the official installation instructions.
+本仓库已经有了docker必要的用于构建Devdocs的配置文件,参考[Docker](https://docs.docker.com/), 使用[Docker Compose](https://docs.docker.com/compose/overview/).
+
+要使用docker和docker compose，首先要下载并安装与你的系统相应的docker，然后安装docker composer来执行`docker-composer.yml`配置文件
+
+### Mac下使用Docker
+- 参考 [这里](https://docs.docker.com/docker-for-mac/install/),了解官方的安装命令. 
 
 ### Docker for Windows
-- Refer [here](https://docs.docker.com/docker-for-windows/install/) for the official installation instructions.
+- 参考 [这里](https://docs.docker.com/docker-for-windows/install/),了解官方的安装命令.
 
 ### Docker Compose
-- Refer [here](https://docs.docker.com/compose/install/) for the official installation instructions.
+- 参考 [这里](https://docs.docker.com/compose/install/),了解官方的安装命令.
 
-### Execution Steps
-1. Using [git](https://git-scm.com/), [clone](https://help.github.com/articles/cloning-a-repository/) this repository.
-2. Navigate to the resulting directory.
-3. Run `docker-compose up` to initialize the build process. Refer [here](https://docs.docker.com/compose/gettingstarted/#step-build-and-run-your-app-with-compose) for more details on the use of `docker-compose`.
-4. Visit `http://localhost:4000/` in a web browser, and you should be presented with a local copy of the Magento DevDocs. The configuration for the local port (`4000` by default) is found in the [docker-compose.yml](https://github.com/magento/devdocs/blob/develop/docker-compose.yml) file. If another port is desired, please refer [here](https://docs.docker.com/compose/compose-file/compose-file-v2/#ports) for further details regarding Docker Compose port mapping.
+### 执行步骤
+1. 使用 [git](https://git-scm.com/), [clone](https://help.github.com/articles/cloning-a-repository/)本仓库.
+2. 定位到你的安装目录
+3. 执行 `docker-compose up`来初始化构建过程. 参考 [这里](https://docs.docker.com/compose/gettingstarted/#step-build-and-run-your-app-with-compose)，了解更多`docker-compose`的细节.
+4. 在浏览器访问`http://localhost:4000/`, 你可以看到一个本地的devdocs文档. 你可以在[docker-compose.yml](https://github.com/magento/devdocs/blob/develop/docker-compose.yml)文件中找到你默认配置的端口 (默认情况下是`4000`).如果你要使用其它端口, 请参考[这里](https://docs.docker.com/compose/compose-file/compose-file-v2/#ports),了解Docker composer端口映射的特性及细节。
 
-### Addressing Problems With Docker Build
-1. Verify that the Docker engine is installed for the appropriate operating system.
-2. Verify that Docker Compose is installed.
-3. Verify that this repository has been cloned.
-4. Verify that the correct Docker Compose command(s) have been used in the same directory as the `docker-compose.yml` file.
-5. If there are still problems, please open an [Issue](https://help.github.com/articles/creating-an-issue/) on this repository.
+### docker构建的问题定位
+1. 验证你的系统的docker引擎是否安装
+2. 验证docker composer是否安装 
+3. 验证仓库是否克隆正确
+4. 验证你是否在`docker-composer.yml`相同的目录下执行了正确的docker compose命令
+5. 如果还有问题，请在此向我们提交你的[问题](https://help.github.com/articles/creating-an-issue/)
 
-## Build using Vagrant
+## 使用Vagrant构建
 
-You can deploy the devdocs site locally using [this Vagrant project](https://github.com/magento-devdocs/vagrant-for-magento-devdocs).
+你可以在本地使用[this Vagrant project](https://github.com/magento-devdocs/vagrant-for-magento-devdocs)部署devdocs站点
 
 ***
 
-If you have questions, open an issue and ask us. We're looking forward to hearing from you!
+如果你遇到任何问题，请向我们提交你的问题，我们将密切关注
 
 *	<a href="https://twitter.com/MagentoDevDocs" class="twitter-follow-button" data-show-count="false">Follow @MagentoDevDocs</a>
 
-*	<a href="mailto:DL-Magento-Doc-Feedback@magento.com">E-mail us</a>
+*	<a href="mailto:DL-Magento-Doc-Feedback@magento.com">发送邮件</a>
 
-*	<a href="http://devdocs.magento.com">Visit our documentation site</a>, built using [GitHub pages](https://pages.github.com/).
+*	<a href="http://magento.haiwera.xyz">打开中文文档</a>, 构建[GitHub pages](https://pages.github.com/).
+*	<a href="http://devdocs.magento.com">打开英文文档</a>
+
+## 支持
+
+*   <a href="http://www.silksoftware.com">成都思而科软件有限公司</a> - <a href="http://haiwera.xyz">Haiwera</a>

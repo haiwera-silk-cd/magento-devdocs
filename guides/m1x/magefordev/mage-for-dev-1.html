@@ -204,7 +204,7 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 <a name="4"></a>
 <h2>Context-Based URI Model Loading</h2>
 
-<p>Now that we're in our Action method entry point, we'll want to start instantiating classes that do things.  Magento offers a special way to instantiate Models, Helpers and Blocks using static factory methods on the global Mage class. For example:
+<p>Now that we're in our Action method entry point, we'll want to start instantiating classes that do things.  Magento offers a special way to instantiate Models, Helpers and Blocks using static factory methods on the global Mage class. 例如:
 
 <pre>
 Mage::getModel('catalog/product');
@@ -235,7 +235,7 @@ Mage_Catalog_Helper_Product
 <a name="5"></a>
 <h2>Magento Models</h2>
 
-<p>Magento, like most frameworks these days, offers an Object Relational Mapping (ORM) system. ORMs get you out of the business of writing SQL and allow you to manipulate a datastore purely through PHP code. For example:
+<p>Magento, like most frameworks these days, offers an Object Relational Mapping (ORM) system. ORMs get you out of the business of writing SQL and allow you to manipulate a datastore purely through PHP code. 例如:
 
 <pre>
 $model = Mage::getModel('catalog/product')-&gt;load(27);
@@ -283,7 +283,7 @@ foreach($products_collection as $product)
 <a name="6"></a>
 <h2>Helpers</h2>
 
-<p>Magento's Helper classes contain utility methods that will allow you to perform common tasks on objects and variables. For example:<br/>
+<p>Magento's Helper classes contain utility methods that will allow you to perform common tasks on objects and variables. 例如:<br/>
 <tt>$helper = Mage::helper('catalog');</tt>
 
 <p>You'll notice we've left off the second part of the grouped class name.  Each Module has a default Data Helper class.  The following is equivalent to the above:<br/>

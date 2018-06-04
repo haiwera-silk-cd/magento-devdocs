@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html">
+	<link rel="canonical" href="/guides/v2.2/frontend-dev-guide/css-topics/css-preprocess.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1266,7 +1266,7 @@ For each CSS file included in the layouts, LESS preprocessor does the following:
 
 <ol>
 <li>Checks if the requested <code>.css</code> file is found. If it is found, the preprocessor stops its execution. Otherwise, it proceeds to the next step.</li>
-<li>Changes the <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">extension</span> of the requested file to <code>.less</code> and tries to find the file using the <a href="/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-static" target="_blank">Magento fallback mechanism</a>. If the <code>.less</code> file is not found, LESS preprocessor stops its execution. Otherwise, it proceeds to the next step.</li>
+<li>Changes the <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> of the requested file to <code>.less</code> and tries to find the file using the <a href="/guides/v2.2/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-static" target="_blank">Magento fallback mechanism</a>. If the <code>.less</code> file is not found, LESS preprocessor stops its execution. Otherwise, it proceeds to the next step.</li>
 <li>Reads <code>.less</code> file contents and resolves <a href="#fedg_css-magento-import"><code>@magento_import</code></a> and default LESS <code>@import</code> directives.</li>
 
 <li>Resolves all paths in <code>.less</code> files to relative paths in the system using the Magento fallback mechanism. All files resolved by the LESS preprocessor are copied to <code>var/view_preprocessed/less</code>. Imported files are processed recursively.</li>
@@ -1298,7 +1298,7 @@ For each CSS file included in the layouts, LESS preprocessor does the following:
 
 <p>Once you save your changes and run the <code class="highlighter-rouge">magento setup:static-content:deploy</code> cli command from the <code class="highlighter-rouge">&lt;your_Magento_instance&gt;/bin</code> directory, the tool pre-processes (including compilation) and publishes the static view files.</p>
 
-<p>All errors occurring during <code class="highlighter-rouge">.less</code> files compilation are handled by the <a href="https://github.com/oyejorge/less.php"><code class="highlighter-rouge">oyejorge/less.php</code></a> third party <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">library</span>.</p>
+<p>All errors occurring during <code class="highlighter-rouge">.less</code> files compilation are handled by the <a href="https://github.com/oyejorge/less.php"><code class="highlighter-rouge">oyejorge/less.php</code></a> third party <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">库</span>.</p>
 
 <p>Errors are caught as exceptions and written to the system log (by default it is <code class="highlighter-rouge">var/log/system.log</code>) and displayed on the screen. For each error, the following information is written:</p>
 
@@ -1509,7 +1509,7 @@ The best practice is to specify the file extension in the path, though technical
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>

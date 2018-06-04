@@ -255,25 +255,11 @@
 		    
 		    	
 
-<li class="nav-level1 active " id="overview">
+<li class="nav-level1 active " id="概述">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/overview.html">Overview</a>
-    
-
-    
-</li>
-
-
-		    
-		    	
-
-<li class="nav-level1  " id="modules">
-    
-
-    
-    <a href="/guides/v2.3/advanced-reporting/modules.html">Modules</a>
+    <a href="/guides/v2.3/advanced-reporting/overview.html">概述</a>
     
 
     
@@ -283,11 +269,11 @@
 		    
 		    	
 
-<li class="nav-level1  " id="data-collection">
+<li class="nav-level1  " id="模块">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/data-collection.html">Data collection</a>
+    <a href="/guides/v2.3/advanced-reporting/modules.html">模块</a>
     
 
     
@@ -297,11 +283,25 @@
 		    
 		    	
 
-<li class="nav-level1  " id="report-xml">
+<li class="nav-level1  " id="数据集">
     
 
     
-    <a href="/guides/v2.3/advanced-reporting/report-xml.html">Report XML</a>
+    <a href="/guides/v2.3/advanced-reporting/data-collection.html">数据集</a>
+    
+
+    
+</li>
+
+
+		    
+		    	
+
+<li class="nav-level1  " id="xml报告">
+    
+
+    
+    <a href="/guides/v2.3/advanced-reporting/report-xml.html">XML报告</a>
     
 
     
@@ -377,41 +377,41 @@
 
 </section>
 
-			<p><a href="http://docs.magento.com/m2/ce/user_guide/reports/advanced-reporting.html" target="_blank">Advanced reporting functionality</a> is provided through integration of a Magento instance with the <a href="https://magento.com/products/business-intelligence" target="_blank">Magento Business Intelligence</a> (MBI).
-Magento collects data and sends this information to the MBI for analytics.</p>
+			<p><a href="http://docs.magento.com/m2/ce/user_guide/reports/advanced-reporting.html" target="_blank">高级报表功能</a>是通过集成提供，由Magento集成<a href="https://magento.com/products/business-intelligence" target="_blank">Magento商业智能</a> (MBI).
+Magento收集数据并发送这些信息到MBI用于分析</p>
 
-<p><strong>Magento Admin &gt; Dashboard &gt; “Go to 高级报表”</strong> button opens reports in  <code class="highlighter-rouge">https://advancedreporting.rjmetrics.com/report</code> with corresponding authorization.</p>
+<p><strong>Magento Admin &gt; Dashboard &gt; “Go to 高级报表”</strong> 使用相应的身份在<code class="highlighter-rouge">https://advancedreporting.rjmetrics.com/report</code>打开报表</p>
 
 <h2 id="先决条件">先决条件</h2>
 
 <ol>
-  <li>The website must run on a public web server.</li>
-  <li>The domain must have a valid security (SSL) certificate.</li>
-  <li>Magento must have been installed or upgraded successfully without error.</li>
-  <li>In the Magento configuration, the <a href="http://docs.magento.com/m2/ce/user_guide/stores/store-urls.html" target="_blank">Base URL (Secure) setting</a> for the store view must point to the secure URL. For example https://yourdomain.com.</li>
-  <li>In the Magento configuration, <strong>Use Secure URLs on Storefront</strong>, <strong>and Use Secure URLs in Admin</strong> must be <a href="http://docs.magento.com/m2/ce/user_guide/Resources/Images/config-general-web-base-urls-secure.png" target="_blank">set to <strong>Yes</strong></a>.</li>
-  <li>Make sure that <a href="http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-cron.html" target="_blank">Magento crontab</a> is created and cron jobs are running on the installed server.</li>
+  <li>站点必须运行在一个能上公网的服务器上</li>
+  <li>域名必须拥有有效的(SSL)证书</li>
+  <li>Magento必须已经安装或更新成功，没有出现错误。</li>
+  <li>在Magento配置中, 网店的<a href="http://docs.magento.com/m2/ce/user_guide/stores/store-urls.html" target="_blank">基础URL(安全)设置</a>必须指向安全的URL. 例如: https://yourdomain.com.</li>
+  <li>在Magento配置中, <strong>在网店前台使用安全的URL</strong>, <strong>和在管理面板使用安全的URL</strong> 必须[设置成 <strong>是</strong>]{:target=”_blank”}.</li>
+  <li>确保<a href="http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-cron.html" target="_blank">Magento定时任务</a>已经创建并且定时任务已经在你安装的服务器上运行。</li>
 </ol>
 
 <div class="bs-callout bs-callout-info">
-  <p>The first synchronization of a Magento instance and the MBI can take up to a day to complete after the successful subscription.</p>
+  <p>在订阅成功后Magento和MBI的第一次同步可能要花一整天的时间才能完成</p>
 </div>
 
-<h2 id="recommendations">Recommendations</h2>
+<h2 id="强烈建议">强烈建议</h2>
 
-<p>To avoid system overload during its prime time, you can set the preferable time of a day for a data collection.</p>
+<p>为了避免在重要的时刻过载，你可以设置一个你想要的时间来收集数据</p>
 
 <p><strong>Magento Admin &gt; Stores &gt; Settings &gt; Configuration &gt; General &gt; 高级报表</strong></p>
 
-<h2 id="extensibility">Extensibility</h2>
+<h2 id="可扩展性">可扩展性</h2>
 
-<p>Though the Analytics module provides API, it is used specifically to interchange data with the MBI. We do not recommend to extend the advanced reporting functionality in this version.</p>
+<p>虽然分析(Analytics)模块提供的API,可以指定用于与MBI互换数据，但在这个版本我们不推荐扩展高级报表的功能。</p>
 
 <h2 id="相关主题">相关主题</h2>
 
-<p><a href="modules.html" target="_blank">Magento modules that implement the functionality</a></p>
+<p><a href="modules.html" target="_blank">Magento模块功能实现</a></p>
 
-<p><a href="data-collection.html" target="_blank">Data collection configuration and settings</a></p>
+<p><a href="data-collection.html" target="_blank">数据收集配置和设置</a></p>
 
 <!-- LINK DEFINITIONS -->
 
@@ -468,7 +468,7 @@ Magento collects data and sends this information to the MBI for analytics.</p>
 
     </div>
 
-		<div class="copyright-date">&copy; 2018 Magento. All rights reserved. translated by <a target="_blank" href="https://www.silksoftware.com">silksoftware co.ltd</a> - <a href="http://haiwera.xyz">Haiwera</a></div>
+		<div class="copyright-date">&copy; 2018 Magento. All rights reserved.</div>
 
   </div>
 </div>
