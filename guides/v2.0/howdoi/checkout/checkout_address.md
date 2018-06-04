@@ -292,7 +292,7 @@ The <code>address_type</code> you need to specify in the layout, is the value yo
 
 On the Review and Payment Information step of checkout, the shipping address is displayed in the **Ship-To** section for customer to make sure everything is set correctly.
 
-If you want your custom address type to be displayed here as well, you need to create an `.html` template for rendering it, and declare in the corresponding location in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}.
+If you want your custom address type to be displayed here as well, you need to create an `.html` template for rendering it, and declare in the corresponding location in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}.
 
 ### Add template for displaying the address in the Ship-To section
 

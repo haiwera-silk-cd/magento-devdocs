@@ -23,7 +23,7 @@ functional_areas:
 
 完整的列表请参考<a href="{{ page.baseurl }}/install-gde/system-requirements.html">系统要求</a> 这里只讨论必要的:
 
-*	展示网页的Web服务软件. 目前, 我们已经写了关于<a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank">Apache</a>的文档，并计划将来写其Web服务器软件的文档。
+*	展示网页的Web服务软件. 目前, 我们已经写了关于<a href="http://en.wikipedia.org/wiki/Apache_HTTP_Server" target="_blank">Apache</a>的文档，并计划将来写其它Web服务器软件的文档。
 
 *	负责数据持久化存储和检索的数据库管理系统. 我们支持<a href="http://dev.mysql.com/doc/refman/4.1/en/what-is-mysql.html" target="_blank">MySQL</a>.
 

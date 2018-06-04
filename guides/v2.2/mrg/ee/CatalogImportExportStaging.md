@@ -25,7 +25,7 @@ You can find the list of modules that have dependencies on the Magento_CatalogIm
 
 ## Extension points
 
-The Magento_CatalogImportExportStaging模块 does not provide any specific {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} points. You can extend it using the Magento extension mechanism.
+The Magento_CatalogImportExportStaging模块 does not provide any specific {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} points. You can extend it using the Magento extension mechanism.
 
 For more information about the Magento extension mechanism, see [Magento plug-ins](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/plugins.html) and [Magento dependency injection](http://devdocs.magento.com/guides/v2.2/extension-dev-guide/depend-inj.html).
 

@@ -24,7 +24,7 @@ To install the knockout debugging plugin for Google Chrome, take the following s
 4. In left pane, select **Extensions**.
 5. Scroll to end of the page and click **Get more extensions** link.
 6. In the **Search** field write **Knockoutjs context debugger** and press the **Enter** key.
-7. In the result, find the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} named **Knockoutjs context debugger** (usually the first result), and click **Add to Chrome**.
+7. In the result, find the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} named **Knockoutjs context debugger** (usually the first result), and click **Add to Chrome**.
 
 To define the {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %} using the plugin:
 

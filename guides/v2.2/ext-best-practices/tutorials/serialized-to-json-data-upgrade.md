@@ -12,7 +12,7 @@ github_link: ext-best-practices/tutorials/serialized-to-json-data-upgrade.md
 
 The following tutorial lists the steps needed to create an upgrade script that converts the data stored in the database from the default {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} serialized format to JSON format.
 
-Use this tutorial to create an upgrade script to update your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} to work with Magento 2.2 and above.
+Use this tutorial to create an upgrade script to update your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} to work with Magento 2.2 and above.
 
 ## 在开始之前
 

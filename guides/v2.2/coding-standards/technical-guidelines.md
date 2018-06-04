@@ -441,7 +441,7 @@ class View extends Template
 
 3.1. There SHOULD be no circular dependencies between objects.
 
-3.2. The `app/etc/di.xml` file MUST contain only framework-level {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}Dependency Injection{% endglossarytooltip %} (DI) settings.
+3.2. The `app/etc/di.xml` file MUST contain only framework-level {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} (DI) settings.
 
 3.3. All modular DI settings (except for Presentation layer configuration) SHOULD be stored in `<module_dir>/etc/di.xml`.
 
@@ -482,7 +482,7 @@ class View extends Template
 
 5.8. All direct communications with third-party libraries MUST be wrapped with a try/catch statement.
 
-5.9. `\Exception` SHOULD be caught only in the code that calls third-party libraries, in addition to catching specific exceptions thrown by the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}.
+5.9. `\Exception` SHOULD be caught only in the code that calls third-party libraries, in addition to catching specific exceptions thrown by the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}.
 
 5.10. `\Exception` SHOULD NOT be thrown in Front Controller and Action Controllers.
 

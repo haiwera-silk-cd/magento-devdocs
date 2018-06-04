@@ -49,7 +49,7 @@ where;
 
 In the `Delta` mode, the 数据迁移工具 migrates data created only by Magento's own modules and is not responsible for the code or extensions made by third-party developers. If these extensions created data in the storefront database and the merchant wants to have this data in Magento 2 --- config files of the 数据迁移工具 should be created and modified accordingly.
 
-If an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} has its own tables, and you need to track their changes for delta migration, follow these steps:
+If an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} has its own tables, and you need to track their changes for delta migration, follow these steps:
 
 1. Add the tables to be tracked to the `deltalog.xml` file
 

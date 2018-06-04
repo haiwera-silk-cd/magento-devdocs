@@ -14,7 +14,7 @@ This topic explains how default templates work in the Magento application.
 
 ## How templates are initiated {#template-layout}
 
-Templates are initiated in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files, and
+Templates are initiated in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} files, and
 each layout block has an associated template. 
 
 The template is specified in the `template` attribute of the `<block>` layout instruction. 

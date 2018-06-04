@@ -158,7 +158,7 @@ If your payment method requires credit cards information, you might use the Mage
 </table>
 
 ### Access the system config data
-Your payment method might need to get data that cannot be defined in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} configuration, JS 组件 or templates directly, for example, data from the Magento system config.
+Your payment method might need to get data that cannot be defined in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} configuration, JS 组件 or templates directly, for example, data from the Magento system config.
 This configuration is stored in the `window.checkoutConfig` variable that is defined in root checkout template.
 
 In order to get access to the system configuration, your payment method or a group of payment methods has to implement the [`\Magento\Checkout\Model\ConfigProviderInterface`]({{ site.mage2000url }}app/code/Magento/Checkout/Model/ConfigProviderInterface.php) interface, and the class implementing it must be injected to the composite config provider via DI {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} configuration. The following code samples illustrate this.

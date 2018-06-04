@@ -83,7 +83,7 @@ class CardRenderer extends AbstractCardRenderer
 
 ## Layout and template
 
-Next, you need to create the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} to be used for displaying token details. In this layout, specify the previously created token renderer.
+Next, you need to create the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} to be used for displaying token details. In this layout, specify the previously created token renderer.
 
 Example ([vault_cards_listaction.xml]({{ site.mage2100url }}app/code/Magento/Braintree/view/frontend/layout/vault_cards_listaction.xml)):
 

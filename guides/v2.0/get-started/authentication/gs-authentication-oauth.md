@@ -13,7 +13,7 @@ functional_areas:
 
 Magento OAuth authentication is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} authentication. OAuth is a token-passing mechanism that allows a system to control which external applications have access to internal data without revealing or storing any user IDs or passwords.
 
-In Magento, a third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} that uses OAuth for authentication is called an [_integration_]( {{ page.baseurl }}/get-started/create-integration.html ). An integration defines which resources the extension can access. The extension can be granted access to all resources or a customized subset of resources.
+In Magento, a third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} that uses OAuth for authentication is called an [_integration_]( {{ page.baseurl }}/get-started/create-integration.html ). An integration defines which resources the extension can access. The extension can be granted access to all resources or a customized subset of resources.
 
 As the process of registering the integration proceeds, Magento creates the tokens that the extension needs for authentication. It first creates a request token. This token is short-lived and must be exchanged for access token. Access tokens are long-lived and will not expire unless the merchant revokes access to the extension.
 

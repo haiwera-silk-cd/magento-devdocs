@@ -32,4 +32,4 @@ Just relying on the interface through {% glossarytooltip 2be50595-c5c7-4b9d-911c
 
 ### How do I configure my module so that it appears in a specific place on the Admin?
 
-Use the `<Module Directory>/etc/adminhtml/menu.xml` file to configure from where on the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} is accessible.
+Use the `<Module Directory>/etc/adminhtml/menu.xml` file to configure from where on the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} is accessible.

@@ -49,7 +49,7 @@ Depending on your needs, you can use the existing <a href="#m2devgde-xlate-langu
 ### Changes in Magento 2
 Changes made:
 
-*	The {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} (`i18n` directory) can now be moved and saved to any directory of your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %}.
+*	The {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} (`i18n` directory) can now be moved and saved to any directory of your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}.
 *	The phrases for translations are enabled in the <a href="{{ site.mage2100url }}lib/internal/Magento/Framework/Phrase.php" target="_blank">Phrase</a> class.
 
 

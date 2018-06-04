@@ -12,7 +12,7 @@ functional_areas:
 
 ## Overview
 
-Magento’s flexible platform lets you place an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} anywhere in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel. However, it can be difficult finding the right place for your extension and how it should look, so we’ve prepared the following guidelines to help.
+Magento’s flexible platform lets you place an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} anywhere in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel. However, it can be difficult finding the right place for your extension and how it should look, so we’ve prepared the following guidelines to help.
 
 ## Things to Avoid
 

@@ -689,7 +689,7 @@ Extend names should start with the `.abs-` prefix.
 
 ## `@import` directive
 
-Always add the file {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the imported resource.
+Always add the file {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} of the imported resource.
 
 **Correct**:
 

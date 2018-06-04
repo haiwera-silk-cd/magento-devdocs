@@ -28,7 +28,7 @@ Frontend developers can use this guide to create custom themes to tailor the Mag
 <p>Although PHP coding is involved, this is typically copying and pasting small fragments of PHP code from existing template files into a new template file with differently structured HTML.</p>
 <p>This can be useful if the existing HTML generated does not have sufficient CSS class names or HTML elements to achieve the presentation change you would like to achieve.</p></li>
 <li><p>The next level of sophistication is to make structural changes to your site by moving functionality between places on a page or to completely different pages.</p>
-<p>This is achieved using the Magento {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} engine.  No PHP coding is required to make layout changes, but the layout engine is moderately sophisticated.</p></li>
+<p>This is achieved using the Magento {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} engine.  No PHP coding is required to make layout changes, but the layout engine is moderately sophisticated.</p></li>
 <li><p>Finally, you can develop new modules to add new custom functionality to your site or to extend functionality provided by existing Magento or third party modules.</p>
 <p>This third level of customization is not addressed in this guide.</p>
 <p>See the Developers' Guide for details on how to develop new modules.</p>

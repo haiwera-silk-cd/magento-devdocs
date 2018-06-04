@@ -10,7 +10,7 @@ functional_areas:
   - Integration
 ---
 
-The payment information form rendering in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} order creation is defined by the block class, its template and {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}. 
+The payment information form rendering in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} order creation is defined by the block class, its template and {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}. 
 
 `formBlockType` is one of the arguments you must [configure for the payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html). 
 

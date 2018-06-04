@@ -10,7 +10,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/introduction.html
 
 ---
 
-This guide is for developers that are building a new *component* from scratch for custom {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of Magento functionality.
+This guide is for developers that are building a new *component* from scratch for custom {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} of Magento functionality.
 
 ## Magento is made up of the following types of 组件:
 

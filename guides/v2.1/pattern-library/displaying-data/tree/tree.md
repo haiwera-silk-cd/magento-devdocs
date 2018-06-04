@@ -170,7 +170,7 @@ The action icon is not required for the tree. It only appear as needed.
 The 'Add' triggers should be placed above the tree container area. (Note: the outline of the container is not always needed.) 
 <br><br>
 There are two types of items that can be added:<br><br>
-<strong>1. A Group item </strong> This is the parent item, which means there can be children. Example: a folder for the media {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} or a new {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %}. The group item can also be added to another parent group. This allows for n-level tree.
+<strong>1. A Group item </strong> This is the parent item, which means there can be children. Example: a folder for the media {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} or a new {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %}. The group item can also be added to another parent group. This allows for n-level tree.
 <br><br>
 <strong>2. An item </strong> This is the child. Example: a media item or a sub-category. The child item will be added to whichever parent is selected or to the same parent as sibling.
 <br>

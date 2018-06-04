@@ -242,7 +242,7 @@ Your theme does not have a parent theme:
 <li>Your theme has a parent theme:
 <ul>
 <li>if your theme logo image has the same name and format as the parent's theme logo, there is no need to declare it;</li>
-<li>if your logo image has different name or format, declare it in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}.</li>
+<li>if your logo image has different name or format, declare it in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}.</li>
 </ul>
 </li>
 </ul>

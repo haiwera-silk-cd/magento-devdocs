@@ -13,7 +13,7 @@ functional_areas:
 <h2 id="fedg_layout_xml-instruc_overview">这里有什么</h2>
 
 
-Changing {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files is one of the two possible ways to customize page layout in Magento (the second way is altering templates). 
+Changing {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} files is one of the two possible ways to customize page layout in Magento (the second way is altering templates). 
 To change the page wireframe, modify the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-page" target="_blank">page layout</a> files; all other customizations are performed in the <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-conf" target="_blank">page configuration</a>或<a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-gen" target="_blank">generic layout</a> files. 
 
 Use {% glossarytooltip bcbc9bf8-3251-4b3c-a802-07417770af3b %}layout instructions{% endglossarytooltip %} to:

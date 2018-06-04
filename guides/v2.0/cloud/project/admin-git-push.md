@@ -53,7 +53,7 @@ Based on what you put in your `.magento.app.yaml`, it is going to build for each
     Installing build dependencies...
         Installing ruby build dependencies: sass
 
-In this case we have a dependency on the Ruby  `sass` {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} so it has installed it. (Again, this comes from `.magento.app.yaml`.)
+In this case we have a dependency on the Ruby  `sass` {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} so it has installed it. (Again, this comes from `.magento.app.yaml`.)
 
     Found a `composer.json`, installing dependencies.
 

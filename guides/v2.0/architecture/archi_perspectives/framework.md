@@ -14,7 +14,7 @@ redirect_from: /guides/v1.0/architecture/archi_perspectives/framework.html
 The Magento框架 controls how application 组件 interact, including request flow, routing, indexing, caching, and {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %} handling. It provides services that reduce the effort of creating modules that contain business logic, contributing to the goal of both making Magento code more modular as well as decreasing dependencies.
 
 This primarily {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} software component is organized into logical groups called <i>libraries</i>, which all modules can call.  Most of the framework code sits under the {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}domain{% endglossarytooltip %} layer or encloses the presentation, service, and domain layers. The framework contains no business logic.
-(Although the Magento框架 does not contain resource models, it does contain a {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} of code to help implement a resource model.)
+(Although the Magento框架 does not contain resource models, it does contain a {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} of code to help implement a resource model.)
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Don't confuse the Magento框架 with the Zend web application framework that ships with Magento.</p>
@@ -60,7 +60,7 @@ lib/
 
 ## Highlights of Magento框架
 
-The Magento框架 (`lib/internal/Magento/Framework/`) provides a robust range of functionality. If you are an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developer, you may be interested in this subset of Framework namespaces.
+The Magento框架 (`lib/internal/Magento/Framework/`) provides a robust range of functionality. If you are an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developer, you may be interested in this subset of Framework namespaces.
 
 <table>
    <tbody>

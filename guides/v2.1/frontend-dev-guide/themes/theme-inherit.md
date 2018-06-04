@@ -18,7 +18,7 @@ functional_areas:
 
 The level of theme inheritance is not limited.
 
-主题的继承关系 is based on the fallback mechanism, which guarantees that if a view file is not found in the current theme, the system searches in the ancestor themes, {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} view files or {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}.
+主题的继承关系 is based on the fallback mechanism, which guarantees that if a view file is not found in the current theme, the system searches in the ancestor themes, {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} view files or {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}.
 
 The fallback order is slightly different for static assets (CSS, JavaScript, fonts and images) and other theme files, layouts and templates. The article describes the fallback for each type of theme files, and provides an overview of how to override ancestor themes and module designs.
 
@@ -91,7 +91,7 @@ In the Orange theme there is a footer background image located at `app/design/fr
 
 <img src="{{ site.baseurl }}/common/images/inh-background1.jpg"/>
 
-OrangeCo wants it to be replaced with a holiday one, so it places a new background image with exactly the same name and {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} in `app/design/frontend/OrangeCo/orange_winter/web/images/background.jpg`
+OrangeCo wants it to be replaced with a holiday one, so it places a new background image with exactly the same name and {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} in `app/design/frontend/OrangeCo/orange_winter/web/images/background.jpg`
 
 Once the Orange Winter theme is [applied]({{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html), the new holiday image overrides the one from Orange, so on {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} the holiday background is visible.
 
@@ -126,7 +126,7 @@ You can find out what exactly code changes are required to perform this and othe
 
 ## Extend layouts {#theme-inherit-layout}
 
-The layouts processing mechanism does not involve fallback. The system collects {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files in the following order:
+The layouts processing mechanism does not involve fallback. The system collects {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} files in the following order:
 
 1. Current theme layouts: `<theme_dir>/<Vendor>_<Module>/layout/`
 2. Ancestor themes layouts, starting from the  most distant ancestor, recursively until a theme with no parent is reached: `<parent_theme_dir>/<Vendor>_<Module>/layout/`

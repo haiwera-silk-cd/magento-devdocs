@@ -26,7 +26,7 @@ Layered application design offers many advantages, but users of Magento will app
 
 * Stringent separation of business logic from presentation logic simplifies the customization process. For example, you can alter your storefront appearance without affecting any of the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} business logic.
 
-* Clear organization of code predictably points {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers to code location.
+* Clear organization of code predictably points {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers to code location.
 
 ## 相关主题
 

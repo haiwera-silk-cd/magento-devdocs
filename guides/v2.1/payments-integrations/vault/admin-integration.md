@@ -14,7 +14,7 @@ To be able to use vault in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739
 
 1. Create a token component provider and specify it in the `<your_module_dir>/etc/di.xml`. 
 2. Create a custom vault JS component and specify it in the component provider. 
-3. Create a `.phtml` template, specify it in the component provider and the corresponding {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} file.
+3. Create a `.phtml` template, specify it in the component provider and the corresponding {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} file.
 
 There are more details about these steps in the following sections. 
 

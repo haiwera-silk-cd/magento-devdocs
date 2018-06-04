@@ -86,7 +86,7 @@ This section discusses possible errors and how to solve them.
 	3.	Click **OK** and try your test again.
 
 ## Use Xdebug in a browser
-This section discusses how to use Xdebug in Chrome using the Xdebug Helper {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %}. For information about Xdebug tools for other browsers, consult the browser documentation.
+This section discusses how to use Xdebug in Chrome using the Xdebug Helper {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}. For information about Xdebug tools for other browsers, consult the browser documentation.
 
 To use Xdebug Helper with Chrome:
 

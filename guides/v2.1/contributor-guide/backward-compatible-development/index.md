@@ -11,7 +11,7 @@ This page describes rules and best practices for backward compatible development
 
 ## Backward Сompatibility Policy
 
-See the [versioning][versioning] documentation for the definitions of MAJOR and MINOR changes and how it impacts {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers.
+See the [versioning][versioning] documentation for the definitions of MAJOR and MINOR changes and how it impacts {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers.
 
 The core Magento team and contributing developers work in two release types
 
@@ -240,7 +240,7 @@ The following is a list of prohibited CSS/LESS changes:
 The following is a list of prohibited Magento API changes:
 
 * Removing or renaming an event
-* Removing or renaming a {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} handle
+* Removing or renaming a {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} handle
 * Removing or renaming a store configuration path
 * Modifying the directory structure
 * Removing an @api annotation

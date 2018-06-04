@@ -67,7 +67,7 @@ However, there is no requirement that service contracts conform to all three pat
 
 ## Advantages of service contracts
 
-服务约定 allow you to add a new customer {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} that adds or changes business logic-level resource models without breaking the system.
+服务约定 allow you to add a new customer {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} that adds or changes business logic-level resource models without breaking the system.
 
 This is done using the *&lt;preference&gt;* element in a custom module's {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration file (`di.xml`) file.
 

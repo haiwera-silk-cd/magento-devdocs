@@ -135,7 +135,7 @@ define(
 
 ## Add the validation to the checkout layout {#layout}
 
-The last step is specifying the script you created on the previous step in the checkout page {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}.
+The last step is specifying the script you created on the previous step in the checkout page {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}.
 
 In your custom module directory, create a new `<your_module_dir>/view/frontend/layout/checkout_index_index.xml` file.
 In this file, add the following:

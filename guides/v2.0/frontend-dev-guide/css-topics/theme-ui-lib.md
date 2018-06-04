@@ -13,7 +13,7 @@ functional_areas:
 
 <h2 id="fedg_using-ui-lib_overview">这里有什么</h2>
 
-The Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} is a flexible <a href="http://lesscss.org/" target="_blank">LESS</a>-based {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} library designed to assist Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} developers. It employs a set of mixins for base elements to ease frontend theme development and customization. 
+The Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} is a flexible <a href="http://lesscss.org/" target="_blank">LESS</a>-based {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} library designed to assist Magento {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} developers. It employs a set of mixins for base elements to ease frontend theme development and customization. 
 
 This topic describes how the library is organized, and how to use it. 
 
@@ -26,7 +26,7 @@ The Magento UI库 provides the ability to customize and reuse the following user
 *	drop-downs
 *	forms
 *	icons
-*	{% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}
+*	{% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}
 *	loaders
 *	messages
 *	pagination

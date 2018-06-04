@@ -15,21 +15,21 @@ redirect_from:
 
 ## 概述 {#m2arch-module-conventions-overview}
 
-Modules must conform to Magento conventions regarding code location and file names. Keep these conventions in mind when working with or developing modules.
+模块必须符合Magento习惯，涉及代码位置和文件名。工作和开发的时候请记住这些习惯.
 
-Be sure to research additional Magento conventions, beyond those applicable to modules. For  more information, see <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a>.
+务必要去研究附加的Magento的习惯，这超出了本文讨论可应用于模块的范围，更多信息请参考<a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a>.
 
-## Module location conventions {#m2arch-module-conventions-location}
+## 模块位置习惯 {#m2arch-module-conventions-location}
 
-The following table shows the *recommended* location within the Magento file system for specific components.
+下面的表格展示了 *推荐的* Magento文件系统内的指定组件的位置
 
-(A {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} must include a `registration.php` file in its root folder.)
+({% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}在其根目录下必须包含一个`registration.php`文件)
 
-We refer to a component's root directory as the top-level directory in which you develop component code. Typically, this directory is located in one of the following directories relative to the Magento root directory:
+我们提供组件根目录，作为你开发组件代码的最顶层目录。典型地，这些目录是以下Magento根目录下的目录之一:
 
-|Entity|Location|
+|实体|位置|
 |---|---|
-|Code base of your custom module|`/app/code/<Vendor>/<Module>`|
-|Custom theme files (storefront)|`/app/design/frontend/<Vendor>/<theme>`|
-|Custom theme files (modules)|`<Module>/<theme>`|
-|If you want to use a library|`/lib/<Vendor_Library>`|
+|你定义的模块代码目录|`/app/code/<Vendor>/<Module>`|
+|自定义主题文件(网店前台)|`/app/design/frontend/<Vendor>/<theme>`|
+|自定义主题文件(模块)|`<Module>/<theme>`|
+|如果你想使用一个库|`/lib/<Vendor_Library>`|

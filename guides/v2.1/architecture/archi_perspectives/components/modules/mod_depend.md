@@ -15,38 +15,38 @@ redirect_from:
 
 ## 概述 {#m2devgde-moddep-intro}
 
-A *software dependency* identifies  one software component's reliance on another for proper functioning. A core principle of Magento architecture is the **minimization of software dependencies**. Instead of being closely interrelated with other modules, modules are optimally designed to be <i>loosely coupled</i>. Loosely coupled modules require little or no knowledge of other modules to perform their tasks.
+*软件依赖* 表示一个软件组件为实现适当的功能依赖其它组件。Magento架构的一个核心原则是 **最小化软件依赖**. 并不是成为紧密地相互关联，而是被最佳地设计成<i>松藕合</i>。松藕合的模块执行它自身的任务时，需要更少或根本不需要知道其它模块的信息。
 
-Each Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is responsible for a unique feature. In practice, this means that:
+每一个Magento的{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}响应一个唯一的特性。实践中，这意味着：
 
-* Several modules cannot be responsible for one feature.
+* 多个模块不能响应同一个特性
 
-* One module cannot be responsible for several features.
+* 一个模块不能响应多个特性
 
-* 模块依赖 on other modules must be declared explicitly. You must also declare any dependency upon other components (for example, a theme, language package, or library).
+* 模块依赖其它模块必须明确声明. 也要声明任何依赖的其它组件(例如, 主题，语言包，或库).
 
-* Removing or disabling a module does not result in disabling other modules.
+* 移除或禁用模块不会导致禁用其它模块。
 
-## What components can modules depend upon?
+## 什么组件能被模块依赖？
 
-Although Magento architecture favors loosely coupled software components, modules can contain dependencies upon these software components:
+虽然Magento架构偏好松藕合的软件组件。但模块能包含这些的软件组件的依赖：
 
-* other modules
+* 其它模块
 
-* {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} extensions
+* {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %}扩展
 
-* libraries (either Magento框架 {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} or third party libraries)
+* 库(可以是Magento框架的{% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}或第三方库)
 
 <div class="bs-callout bs-callout-warning" id="warning">
-<p>Note: You can lose the historical information contained in a module if the module is removed or disabled. We recommend alternative storage of module information before you remove or disable a module.</p></div>
+<p>注意：如果模块被移除或禁用你可能会丢失模块包含的历史信息。我们建议您在禁用或移除模块前备份模块信息。</p></div>
 
-## Managing module dependencies
+## 管理模块依赖
 
-At a high level, there are three main steps for managing module dependencies:
+在高层，Magento模块依赖主要有三个步骤：
 
-1. Name and declare the module in the `module.xml` file.
+1. 在`module.xml`文件中命名和声明模块。
 
-2. Declare any dependencies that the module has (whether on other modules or on a different component) in the module's `composer.json` file.
+2. 在模块的`composer.json`文件中声明所有模块有的依赖(无论是其它模块还是不同的组件)
 
 3. (*Optional*) Define the desired load order of config files and `.css` files in the `module.xml` file.
 
@@ -57,3 +57,4 @@ Example: Module A declares a dependency upon Module B. Thus, in Module A's `modu
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend_types.html">Types of module dependencies</a>
+>

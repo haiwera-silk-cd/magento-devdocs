@@ -20,7 +20,7 @@ To use all the responsive approaches implemented in the Magento out-of-the-box B
 To create a mobile-specific theme:
 
 1. Create a theme as described in <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">Create a theme</a>, having specified Blank or Luma as a parent theme.
-2. Add a <code>&lt;theme_dir&gt;/Magento_Theme/layout/default_head_blocks.xml</code> {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} file with the following content:
+2. Add a <code>&lt;theme_dir&gt;/Magento_Theme/layout/default_head_blocks.xml</code> {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} file with the following content:
 
 {%highlight xml%}
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">

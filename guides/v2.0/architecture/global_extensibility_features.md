@@ -23,7 +23,7 @@ Essential qualities foster extensibility throughout the entire set of Magento组
 
 ### Modularity
 
-The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} development, and modular design of software 组件 (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module's external dependencies.
+The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} development, and modular design of software 组件 (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module's external dependencies.
 
 If a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software 组件 reduces the ripple effects throughout your code base of changing code.
 

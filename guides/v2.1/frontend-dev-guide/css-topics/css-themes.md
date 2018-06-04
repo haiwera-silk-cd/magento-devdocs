@@ -58,7 +58,7 @@ Contains the following:
 </li>
 <li><code>styles-l.less</code>: used to generate desktop-specific styles, includes <code>_styles.less</code>.
 </li>
-<li><code>/source</code>: this subdirectory contains LESS configuration files that invoke mixins from the Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}
+<li><code>/source</code>: this subdirectory contains LESS configuration files that invoke mixins from the Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}
 </li>
 <li>
 <code>/source/_theme.less</code>: overrides the default Magento UI库 variables values.
@@ -73,7 +73,7 @@ Contains the following:
 
 <h2 id="fedg_css-in-themes_xml">引入CSS</h2>
 
-<p>In the Magento application, the recommended way to include stylesheets is to specify them in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files. 
+<p>In the Magento application, the recommended way to include stylesheets is to specify them in {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} files. 
 
 <p>Usually, the stylesheets you include should be available for all store pages. To achieve this, include your CSS in <code>default_head_blocks.xml</code> of the <code>Magento_Theme</code> module, which defines the default <code>&lt;head&gt;</code> page section for all Magento pages. 
 The recommended way to do this is adding an <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">extending</a> <code>default_head_blocks.xml</code> in your theme, and including the required stylesheets in this file. </p>
@@ -101,7 +101,7 @@ For example, the following illustrates how stylesheets are included in the defau
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
- <p> If the system does not find the included CSS files, it searches for the same file names with a <code>.less</code> {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %}. This is part of the built-in preprocessing mechanism. You can find more information about it in the <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html" target="_blank">CSS Preprocessing</a> topic.
+ <p> If the system does not find the included CSS files, it searches for the same file names with a <code>.less</code> {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}. This is part of the built-in preprocessing mechanism. You can find more information about it in the <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html" target="_blank">CSS Preprocessing</a> topic.
 </p></span> 
 </div>
 

@@ -16,7 +16,7 @@ This information is stored in 支付令牌.
 
 The basic interface for 支付令牌 is [PaymentTokenInterface]({{ site.mage2100url }}/app/code/Magento/Vault/Api/Data/PaymentTokenInterface.php).
 
-To retrieve and store token details, you need to implement a [response handler]({{ page.baseurl }}/payments-integrations/payment-gateway/response-handler.html). In the response handler a 支付令牌 {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} is created and stored in the payment {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} attributes.
+To retrieve and store token details, you need to implement a [response handler]({{ page.baseurl }}/payments-integrations/payment-gateway/response-handler.html). In the response handler a 支付令牌 {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} is created and stored in the payment {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} attributes.
 
 Following sample is an example of the response handler implementation:
 

@@ -126,10 +126,10 @@ Continue with <a href="{{ page.baseurl }}/comp-mgr/module-man/compman-readiness.
 <h2 id="compman-access-types">Supported actions for each component type</h2>
 We define the following *组件*:
 
-*	`module` for a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} or {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} (that is, {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code that modifies Magento behavior)
+*	`module` for a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} or {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} (that is, {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code that modifies Magento behavior)
 *	`language` for a {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} used to translate the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}
 *	`theme` for a collection of styles that affect the look of the storefront or Admin
-*	`library` for a library&mdash;such as a shared third-party {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}
+*	`library` for a library&mdash;such as a shared third-party {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}
 *	`component` for any type of component that must be installed in the Magento root directory (this is a relatively uncommon type)
 
 We also use `metapackage` to group 组件; Magento Community Edition (CE) and Magento Enterprise Edition (EE) are examples of metapackages.

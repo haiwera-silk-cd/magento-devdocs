@@ -28,7 +28,7 @@ The `<container>` and `<component>` elements have no mandatory attributes. The f
 - `template`: link to component's `.html` template.
 - `provider`: link to component's data provider.
 - `sortOrder`: component's sort order
-- `displayArea`: the placeholder which defines the area for rendering the component in the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} file.
+- `displayArea`: the placeholder which defines the area for rendering the component in the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} file.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 

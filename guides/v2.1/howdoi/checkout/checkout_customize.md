@@ -17,7 +17,7 @@ This topic contains the basic information about how to customize the view of an 
 
 ## Change the component's .js implementation and template
 
-To change the `.js` implementation and template used for 组件 rendering, you need to declare the new files in the checkout page {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}. To do this, take the following steps:
+To change the `.js` implementation and template used for 组件 rendering, you need to declare the new files in the checkout page {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}. To do this, take the following steps:
 
 1. In your custom module directory, create the following new file: `<your_module_dir>/view/frontend/layout/checkout_index_index.xml`. (For your checkout customization to be applied correctly, your custom {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} should depend on the Magento_Checkout模块.)
 2. In this file, add the following:

@@ -19,7 +19,7 @@ functional_areas:
 <!-- This topic is referred to from Magento 2 code! Don't change the {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} without informing engineering! -->
 <!-- Referring file: README.md owned by core -->
 
-在这个手册中几乎所有的要完成的作务都必须远程地登录到你的Magento服务器 
+在这个手册中几乎所有的要完成的任务都必须远程地登录到你的Magento服务器 
 
 **先决条件**: 你必须有:
 

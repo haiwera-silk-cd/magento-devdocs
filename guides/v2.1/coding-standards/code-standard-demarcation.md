@@ -13,7 +13,7 @@ functional_areas:
 ---
 
 <p>Magento core developers must follow the Magento code demarcation standard.</p>
-<p>This standard is recommended for third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers.</p>
+<p>This standard is recommended for third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers.</p>
 <p>Some parts of Magento code might not comply with the standard, but we are working to gradually improve this.</p>
 <p>The standard was developed in the scope of our efforts to ensure the following:</p>
 <ul>

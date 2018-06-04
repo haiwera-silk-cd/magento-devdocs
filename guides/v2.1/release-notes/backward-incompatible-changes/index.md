@@ -84,11 +84,11 @@ The Staging modules introduce {% glossarytooltip 66b924b4-8097-4aea-93d9-05a81e6
 *	CMS Pages and Blocks
 * Cart and Catalog Price Rules
 
-These changes are applied only if Staging modules are installed. For {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} modules (e.g. DownloadableProduct, ConfigurableProduct, Bundle etc.), relations between main {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} tables were changed which may affect code that manages SQL queries directly.
+These changes are applied only if Staging modules are installed. For {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} modules (e.g. DownloadableProduct, ConfigurableProduct, Bundle etc.), relations between main {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} tables were changed which may affect code that manages SQL queries directly.
 
 ## Persistence management
 
-In Magento's 2.1 release, a new level of persistence management has been added, the [`EntityManager`]({{ site.mage2100url }}lib/internal/Magento/Framework/EntityManager/EntityManager.php){:target="_blank"} {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} component. It allows decoupling from Magento's persistence infrastructure and provide more flexibility for future development. At the same time, the entity manager supports all "Magento 1-style" model events in a backward compatible manner.
+In Magento's 2.1 release, a new level of persistence management has been added, the [`EntityManager`]({{ site.mage2100url }}lib/internal/Magento/Framework/EntityManager/EntityManager.php){:target="_blank"} {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} component. It allows decoupling from Magento's persistence infrastructure and provide more flexibility for future development. At the same time, the entity manager supports all "Magento 1-style" model events in a backward compatible manner.
 
 ### Data interfaces persistence
 

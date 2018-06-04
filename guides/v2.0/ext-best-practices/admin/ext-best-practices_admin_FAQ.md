@@ -15,7 +15,7 @@ This page is a compilation of frequently asked questions by the Magento Communit
 
 #### Where should my extension appear in the Admin?
 
-The appropriate place for your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} to appear in the Admin depends on what it does. For a list of extension types and their proper spot in the Admin, please consult the article: [Admin panel placement and design]({{ page.baseurl }}/ext-best-practices/admin/placement-and-design.html).
+The appropriate place for your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} to appear in the Admin depends on what it does. For a list of extension types and their proper spot in the Admin, please consult the article: [Admin panel placement and design]({{ page.baseurl }}/ext-best-practices/admin/placement-and-design.html).
 
 ____
 

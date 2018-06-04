@@ -194,7 +194,7 @@ In case of failure, it returns an error object. Example in REST:
 
 #### Extension points
 
-The service implementation contains {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} points marked with `@api` annotation. Extension developers can use APIs to extend service logic.
+The service implementation contains {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} points marked with `@api` annotation. Extension developers can use APIs to extend service logic.
 
 |Extension point | Description
 |---|---

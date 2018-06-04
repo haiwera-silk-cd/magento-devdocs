@@ -291,7 +291,7 @@ In this mode most of the data will be migrated. Before data migration the integr
 
 #### Map Step
 
-Map step is responsible for transferring most of data from Magento 1 to Magento 2. This step reads instructions from map.xml file (located in etc dir). The file describes differences between data structures of source (Magento 1) and destination (Magento 2). In case Magento 1 contains tables or fields that belong to some {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} that does not exist in Magento 2, then these entities can be placed here to ignore them by Map Step. Otherwise it will show an error message.
+Map step is responsible for transferring most of data from Magento 1 to Magento 2. This step reads instructions from map.xml file (located in etc dir). The file describes differences between data structures of source (Magento 1) and destination (Magento 2). In case Magento 1 contains tables or fields that belong to some {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} that does not exist in Magento 2, then these entities can be placed here to ignore them by Map Step. Otherwise it will show an error message.
 
 Map file has the next format:
 

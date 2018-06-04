@@ -13,7 +13,7 @@ redirect_from: /guides/v2.0/ui-library/ui-secondary-multi.html
 
 #### UI Multiselect Component
 
-The 多选框组件 is used to provide check box interface for a specific listing or a specific data set. The component is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} for 表格列组件 and allows selecting either a collection of items or all items from the given set.
+The 多选框组件 is used to provide check box interface for a specific listing or a specific data set. The component is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} for 表格列组件 and allows selecting either a collection of items or all items from the given set.
 
 The 多选框组件 which stores the information about the number of selected items in its template shares this data with the following 组件:
 

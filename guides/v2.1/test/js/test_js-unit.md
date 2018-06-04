@@ -21,7 +21,7 @@ To run the automated JavaScript unit tests, you run the [`run_js_tests.php` scri
 
 ### JsTestDriver test library {#test-library}
 
-Magento JavaScript unit tests use the external [JsTestDriver] library, which follows JUnit principles. The PHPUnit {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} also follows these principles.
+Magento JavaScript unit tests use the external [JsTestDriver] library, which follows JUnit principles. The PHPUnit {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} also follows these principles.
 
 ### JsTestDriver API {#jstestdriver-api}
 

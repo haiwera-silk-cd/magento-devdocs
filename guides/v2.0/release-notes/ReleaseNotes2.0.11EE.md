@@ -221,7 +221,7 @@ We address the following functional issues in this release.
 
 
 
-<!--- 57082-->* The Component Manager now shows a list of all available versions of an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} for installation. Previously, the Web Setup component manager showed only the latest version of the extension. 
+<!--- 57082-->* The Component Manager now shows a list of all available versions of an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} for installation. Previously, the Web Setup component manager showed only the latest version of the extension. 
 
 <!--- 57130-->* During upgrade, we now check directory permissions recursively except for the `var/session` directory. We skip that directory because the web server usually owns those files.
 

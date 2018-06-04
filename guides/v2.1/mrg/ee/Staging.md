@@ -26,7 +26,7 @@ You can work with the following entities out of the box:
 - {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} Block
 - CMS Page
 
-And you can extend the list adding your own {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} modules.
+And you can extend the list adding your own {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} modules.
 
 ## Glossary
 

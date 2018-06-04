@@ -61,7 +61,7 @@ Description
 </td>
 <td>
 
-The width of the user’s screen that causes your responsive {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} to change.
+The width of the user’s screen that causes your responsive {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} to change.
 
 </td>
 </tr>

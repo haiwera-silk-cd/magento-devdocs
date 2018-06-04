@@ -10,7 +10,7 @@ github_link: javascript-dev-guide/widgets/widget_confirm.md
 
 <h2>概述</h2>
 
-The Magento 确认弹窗小工具 implements a modal pop-up window with the cancel and confirmation button.It is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html">Magento 模态弹窗小工具</a>.
+The Magento 确认弹窗小工具 implements a modal pop-up window with the cancel and confirmation button.It is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_modal.html">Magento 模态弹窗小工具</a>.
 
 The confirmation {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/modal/confirm.js">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/modal/confirm.js</a>
 

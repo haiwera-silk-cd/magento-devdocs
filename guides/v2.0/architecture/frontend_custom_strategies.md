@@ -37,7 +37,7 @@ Using Magento standard coding and styling tools can help:
 * enforce for consistency in design across your storefronts
 * simplify (and speed up) the design process
 
-This component {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} contains standard reusable 组件 for form features, such as fields and buttons, and navigation elements. The Magento UI库 is a set of generic web 组件 and Magento-specific patterns, which simplifies the process of Magento theme creation and customization.
+This component {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} contains standard reusable 组件 for form features, such as fields and buttons, and navigation elements. The Magento UI库 is a set of generic web 组件 and Magento-specific patterns, which simplifies the process of Magento theme creation and customization.
 
 See <a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI Library 组件</a> for details about this library.
 
@@ -53,7 +53,7 @@ Form elements included in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c
 * tabs
 * sign-in form
 
-Users of the default Magento storefront encounter examples of these form elements throughout the product. These patterns provide a valuable language of software 组件 (and indirectly, user experiences) for {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers and administrators.
+Users of the default Magento storefront encounter examples of these form elements throughout the product. These patterns provide a valuable language of software 组件 (and indirectly, user experiences) for {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers and administrators.
 
 The Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} Pattern library is built on the LESS preprocessor and implemented as a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. You can download a free, current version of this module from [Magento Marketplace](https://marketplace.magento.com/){:target="_blank"}.
 

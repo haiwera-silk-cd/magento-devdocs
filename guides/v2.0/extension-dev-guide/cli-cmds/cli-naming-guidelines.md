@@ -16,7 +16,7 @@ redirect_from: /guides/v2.0/extension-dev-guide/cli-naming-guidelines.html
 <h2 id="cli-over">Naming guideline overview</h2>
 Magento 2 introduces a new command-line interface (CLI) that enables component developers to plug in commands provided by modules.
 
-As an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developer, you can now create and distribute your own commands for Magento applications. But as for any implementation, it's also important to follow some general conventions to keep your commands consistent with commands from other developers. Being consistent in this way reduces the user's learning curve.
+As an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developer, you can now create and distribute your own commands for Magento applications. But as for any implementation, it's also important to follow some general conventions to keep your commands consistent with commands from other developers. Being consistent in this way reduces the user's learning curve.
 
 This topic discusses our recommended naming conventions.
 

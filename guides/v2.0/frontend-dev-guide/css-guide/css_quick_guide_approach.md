@@ -36,7 +36,7 @@ Extending a theme using <code>_extend.less</code> is the simplest option when yo
 
 <h2 id="simple_override">Simplest way to override parent styles</h2>
 
-To override parent styles (that is, override default Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} variables):
+To override parent styles (that is, override default Magento UI {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} variables):
 <ol>
 <li>In your theme directory, create a <code>web/css/source</code> sub-directory. </li>
 <li>Create a <code>_theme.less</code> file here. The path to it then looks like following: 

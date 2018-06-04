@@ -13,7 +13,7 @@ redirect_from:
 
 <h2>概述</h2>
 
-Magento 手风琴菜单小工具 is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">Magento 标签页小工具</a>.
+Magento 手风琴菜单小工具 is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} of the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_tabs.html" target="_blank">Magento 标签页小工具</a>.
 
 Accordions are generally used to break content into multiple sections that can be swapped to save space.
 

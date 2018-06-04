@@ -16,7 +16,7 @@ We recommend using [Varnish]({{ page.baseurl }}/config-guide/varnish/config-varn
 -   [Redis]({{ page.baseurl }}/config-guide/redis/redis-pg-cache.html)
 
 ## Cacheable and uncacheable pages {#cache-over-cacheable}
-*Cacheable* and *uncacheable* are terms we use to indicate whether or not a page should be cached at all. (By default, all pages are cacheable.) If any block in a {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} is designated as uncacheable, the entire page is uncacheable.
+*Cacheable* and *uncacheable* are terms we use to indicate whether or not a page should be cached at all. (By default, all pages are cacheable.) If any block in a {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} is designated as uncacheable, the entire page is uncacheable.
 
 To create an uncacheable page, mark any block on that page as uncacheable in the layout using `cacheable="false"`.
 

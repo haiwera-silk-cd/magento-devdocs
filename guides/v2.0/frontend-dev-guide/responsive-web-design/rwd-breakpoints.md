@@ -21,7 +21,7 @@ Breakpoints are used in stylesheets to set up the screen width at which the desi
 To add a custom breakpoint in your theme, you need to do the following:
 
 1. Define a variable for the new breakpoint.
-2. Override the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %} `_responsive.less` file, and add the new rule for the new breakpoint. 
+2. Override the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} `_responsive.less` file, and add the new rule for the new breakpoint. 
 3. Implement the screen changes for the new breakpoint.
 
 ## Add a new breakpoint variable

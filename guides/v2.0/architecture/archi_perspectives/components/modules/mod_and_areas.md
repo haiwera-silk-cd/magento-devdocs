@@ -15,49 +15,49 @@ redirect_from:
 
 ## 概述 {#m2arch-module-areas-overview}
 
-An *area* is a logical component that organizes code for optimized request processing. Magento uses areas to streamline web service calls by loading only the dependent code for the specified area.  Each of the default areas defined by Magento can contain completely different code on how to process URLs and requests.
+*地区* 是一个为了优化请求处理而组织代码的逻辑组件，Magento  使用地区把web服务调用做流线型，仅载入指定地区相关的代码。Magento定义的每个默认地区可以包含完全不同的代码，来处理URL和用户请求
 
-For example, if you are invoking a REST web service call, rather than load all the code related to generating user {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} pages, you can specify a separate area that loads code whose scope is limited to answering  REST calls.
+例如,如果你正在调用一个REST的服务，而不加载所有关联到生成用户{% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %}页面的代码，你可以指定一个独立的地区来加载代码，这会使响应这个REST调用的范围被限制。
 
 ### Magento地区类型
 
-Magento is organized into these main areas:
+Magento被组织成以下几个主地区:
 
-* **Magento Admin** (`adminhtml`): entry point for this area is `index.php`或`pub/index.php`. The {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} panel area includes the code needed for store management. The /app/design/adminhtml directory contains all the code for components you'll see while working in the Admin panel.
+* **Magento 管理面板** (`adminhtml`): 地区的入口点是`index.php`或`public/index.php`。 {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}管理{% endglossarytooltip %}面板地区包含了网店管理所需的代码。 /app/design/adminhtml目录包含了所有你可以在管理面板看到的所有组件的代码
 
-* **Storefront** (`frontend`): entry point for this area is `index.php`或`pub/index.php`. The storefront (or `frontend`)  contains template and {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files that define the appearance of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+* **网店前台** (`frontend`): 地区的入口点是`index.php`或`public/index.php`。 网店前台(或`frontend`)包含模板及定义了你{% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网店前台{% endglossarytooltip %}展示的{% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}文件.
 
-* **Basic** (`base`): used as a fallback for files absent in `adminhtml` and `frontend` areas.
+* **基础** (`base`): 用于归并机制，当在`adminhtml`和`frontend`地区中没有找到文件时。归并机制会使用这个地区下的文件。
 
-You can also send requests to Magento using the SOAP and REST APIs. These two areas
+你也可以使用SOAP和REST API发送请求到Magento，如下两个地区：
 
-* **Web API REST** (`webapi_rest`): entry point for this area is `index.php`或`pub/index.php`. The REST area has a front controller that understands how to do {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} lookups for REST-based URLs.
+* **Web API REST** (`webapi_rest`): 地区的入口点是`index.php`或`public/index.php`。 REST地区有一个知道如何处理{% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %}的前端控制器,对REST基础URL进行查找.
 
-* **Web API SOAP** (`webapi_soap`): entry point for this area is `index.php`或`pub/index.php`.
+* **Web API SOAP** (`webapi_soap`): 地区的入口点是`index.php`或`public/index.php`。
 
-## How areas work with modules {#m2arch-module-using}
+## 地区如何与模块一起工作 {#m2arch-module-using}
 
-Modules define which resources are visible and accessible in an area, as well as an area's behavior. The same {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} can influence several areas. For instance, the RMA module is represented partly in the `adminhtml` area and partly in the `frontend` area.
+模块定义了一个地区的哪些资源是可见及可访问的，以及地区的行为，相同的{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}可以影响多个地区。比如，RMA模块的一部份表现在`adminhtml`地区，一部分表现在`frontend`地区。
 
-If your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} works in several different areas, ensure it has separate behavior and view components for each area.
+如果你的{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}工作在几个不同的地区，请确保每个地区分别拥有行为和视图组件。
 
-Each area declares itself within a module. All resources specific for an area are located within the same module as well.
+每个地区在模块中声明了自身，所有地区特定的资源位于相同的模块中。
 
-You can enable or disable an area within a module. If this module is enabled, it injects an area's routers into the general application's routing process. If this module is disabled, Magento will not load an area's routers and, as a result, an area's resources and specific functionality are not available.
+你可以启用或禁用模块的地区。如果这个模块是启用的，它注入一个地区路由到生成的应用程路由处理中。如果模块是禁用的，Magento将不会加载地区的路由，结果是你的地区的资源和特定的功能将不能访问。
 
-### Quick view of module/area interactions
+### 快速了解模块/地区的交互
 
-* Modules should not depend on other modules' areas.
+* 模块不应该依赖其它模块的地区。
 
-* Disabling an area does not result in disabling the modules related to it.
+* 禁用地区不会导致禁用它相关的模块。
 
-* Areas are registered in the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}Dependency Injection{% endglossarytooltip %} framework `di.xml` file.
+* 地区在{% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %}框架的`di.xml`中注册
 
-### Note about Magento request processing
+### 注意Magento的请求处理
 
-Magento processes a URL request by first stripping off the base URL. The first path segment of the remaining URL identifies the request area.
+Magento处理URL请求首先剥离基础URL,剩下的路径的第一段标识请求的地区。
 
-After the area name, the URI segment specifies the *full front name*. When an HTTP request arrives, the handle is extracted from the URL. Magento uses the handle to identify which controller (a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} class) and action (a PHP method in the class) to execute. A common action to display a HTML page is `index`, which returns an HTML page.
+在地区名之后，URI指定了*full front name*. 当一个HTTP请求到达时，这部分会从URL中拿出来. Magento使用这部分标识哪个控制器(一个{% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %}类)的哪个方法(一个PHP类的方法)将被执行。展示一个HTML页面的通常方法是`index`. 它将返回一个html页面。
 
 ## 相关主题 {#m2arch-module-related}
 

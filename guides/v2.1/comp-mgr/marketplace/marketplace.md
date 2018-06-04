@@ -26,7 +26,7 @@ If you don't have an account yet:
 	![Create a Marketplace account]({{ site.magentourl }}/common/images/marketplace_create-acct.png){:width="300px"}
 
 ### Find an extension or theme
-Browse Marketplace to find an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} or {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. For example, you can enter all or part of a name in the search field, you can scroll down the page, or you can select options from the filters.
+Browse Marketplace to find an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} or {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}. For example, you can enter all or part of a name in the search field, you can scroll down the page, or you can select options from the filters.
 
 ### Add to cart
 Supply any required information for the extension or theme and click **Add to Cart**.

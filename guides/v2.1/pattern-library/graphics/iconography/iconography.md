@@ -45,7 +45,7 @@ In the Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{%
 
 *	Icons should look like they are part of the "family" of icons.
 
-*	Line weights should be consistent with other icons in the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}library{% endglossarytooltip %}.
+*	Line weights should be consistent with other icons in the {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}.
 
 *	Elements within the icon should be consistent with these elements icons in the library (i.e. "Arrows").
 

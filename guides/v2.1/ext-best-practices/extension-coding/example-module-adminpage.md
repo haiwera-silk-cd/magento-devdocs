@@ -216,7 +216,7 @@ These files belong in the `view/adminhtml` directory because the Magento admin a
 #### `view/adminhtml/layout/exampleadminnewpage_helloworld_index.xml`
 {:.no_toc}
 
-This file defines the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} and structure of the index page for the HelloWorld controller. It sets the title to "Greetings" and instructs Magento to use the `helloworld.phtml` template as the content in a `Magento\Backend\Block\Template` block class.
+This file defines the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} and structure of the index page for the HelloWorld controller. It sets the title to "Greetings" and instructs Magento to use the `helloworld.phtml` template as the content in a `Magento\Backend\Block\Template` block class.
 
 The name of this file uses the following pattern: *frontName*\_*controller*\_*action*.xml
 

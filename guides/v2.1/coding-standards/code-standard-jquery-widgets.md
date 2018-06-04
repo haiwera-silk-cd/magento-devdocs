@@ -19,7 +19,7 @@ It is designed not only for plug-ins that are part of {% glossarytooltip 5bfa8a8
 
 For more information, see the [jQuery Widget API documentation][jquery-ui-api-doc]{:target="_blank"}.
 
-This standard is mandatory for Magento core developers and recommended for third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} developers.
+This standard is mandatory for Magento core developers and recommended for third-party {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers.
 Some parts of Magento code might not comply with the standard, but we are working to gradually improve this.
 
 Use [RFC 2119][rfc2119]{:target="_blank"} to interpret the "must," "must not," "required," "shall," "shall not," "should," "should not," "recommended," "may," and "optional" keywords.

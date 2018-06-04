@@ -96,6 +96,6 @@ Note that the test class has to inherit from `\PHPUnit_Framework_TestCase` for P
 
 First select the run configuration to execute in the run configuration drop-down menu above the main editor window, then click the **Play** icon beside it.  
 
-By clicking the **Debug** icon (of a bug) next to the **Play** icon, it is possible to step-debug code during test execution, if the xdebug PHP {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}extension{% endglossarytooltip %} is installed.
+By clicking the **Debug** icon (of a bug) next to the **Play** icon, it is possible to step-debug code during test execution, if the xdebug PHP {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} is installed.
 
 

@@ -16,7 +16,7 @@ Magento 导航栏小工具 is a customized <a href="http://api.jqueryui.com/menu
 <ul>
 <li>Expanding all layers of the menu tree past the second layer.</li>
 <li>Limiting the maximum number of list items contained within the main navigation (overflow items are placed into a secondary navigation level).</li>
-<li>Method for handling the responsive {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} of the menu.</li>
+<li>Method for handling the responsive {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} of the menu.</li>
 </ul>
 
 The navigation {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} source is <a href="{{ site.mage2000url }}lib/web/mage/menu.js" target="_blank">lib/web/mage/menu.js</a>

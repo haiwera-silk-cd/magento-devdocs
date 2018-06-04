@@ -45,7 +45,7 @@ __Component A__ introduces `gadgetlayout.xml`, which updates block `gadgetBlock`
 
 For each particular scenario, files of the same type are loaded from different 组件 taking into account the sequence information provided in each component's `module.xml` file.
 
-In another scenario, let's say you want to load all of the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} files with the name `default.xml`. __Component A__ specifies __component B__ in `<sequence>`. The files load in the following order:
+In another scenario, let's say you want to load all of the {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} files with the name `default.xml`. __Component A__ specifies __component B__ in `<sequence>`. The files load in the following order:
 
 42. `component X/view/frontend/layout/default.xml`&mdash;Either we don't care about when component X loads or perhaps component B requires it to be loaded before it.
 42. `component B/view/frontend/layout/default.xml`

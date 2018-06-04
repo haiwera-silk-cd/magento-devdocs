@@ -11,71 +11,71 @@ github_link: architecture/archi_perspectives/components/modules/mod_depend_types
 redirect_from: /guides/v1.0/architecture/modules/mod_depend_types.html
 ---
 
-## Two types of dependencies {#m2devgde-moddep-declare-dep}
+## 两类依赖 {#m2devgde-moddep-declare-dep}
 
-There are two types of Magento {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} dependencies: hard and soft dependencies.
+Magento{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}有两种依赖类型: 硬依赖和软依赖.
 
-## Hard dependencies
+## 硬依赖
 
-Modules with a *hard dependency* on another module cannot function without the module it depends on. Specifically:
+模块和另一个模块有 *硬依赖* ，在缺少另一个模块时这个模块是无法起做用的。特别地：
 
-* The module contains code that directly uses logic from another module  (for example, the latter module's instances, class constants, static methods, public class properties, interfaces, and traits).
+* 这个模块直接包含另一个模块的逻辑代码，(例如,后者的模块实例，类常量，静态方法，公共类属性，接口及特点)
 
-* The module contains strings that include class names, method names, class constants, class properties, interfaces, and traits from another module.
+* 模块包含另一个模块的类名，方法名，类常量，类属性，接口及特点的字符串。
 
-* The module deserializes an object declared in another module.
+* 模块反序列化另一个模块声明的类对像。
 
-* The module uses or modifies the database tables used by another module.
+* 模块使用或修改用于另一个模块的数据库表。
 
-## Soft dependencies
+## 软依赖
 
-Modules with a *soft dependency* on another module can function properly without the other module, even if it has a dependency upon it. Specifically:
+模块和另一个模块有 *软依赖* ，在缺少另一个模块时即使存在依赖可能也可以正常工作。
 
-* The module directly checks another module's availability.
+* 模块直接检查别一个模块的有效性。
 
-* The module extends another module's configuration.
+* 模块扩展另一个模块的配置。
 
-* The module extends another module's {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %}.
+* 模块扩展另一个模块的 {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %}。
 
 <div class="bs-callout bs-callout-warning" id="warning">
   <p>
-    Note: If a module uses code from another module, it should declare the dependency explicitly.
+    注意：一个模块使用另一个模块的代码，应该明确的声明依赖。
   </p>
 </div>
 
-Magento installs modules in the following order:
+Magento以下面的顺序安装模块：
 
-1) the module serving as a dependency for another module
+1) 作为另一个模块的依赖为其提供服务的模块
 
-2) the module dependent on it
+2) 依赖它的模块
 
-## Inappropriate dependencies {#m2devgde-moddep-inapp-dep}
+## 不恰当的依赖 {#m2devgde-moddep-inapp-dep}
 
-Avoid creating the following dependencies:
+避免创建以下类的依赖：
 
-* Circular (both direct and indirect)
+* 循环(包括直接的和间接的)
 
-* Undeclared
+* 未声明的
 
-* Incorrect
+* 错误的
 
-## Dependencies between modules in different product layers {#m2devgde-moddep-diff-layer}
+## 在不同产品层的模块间的依赖 {#m2devgde-moddep-diff-layer}
 
-You can build dependencies between the modules belonging to different layers.
+你可以在模块间的不同层构建依赖。
 
-## Dependencies in the Framework layer {#m2devgde-moddep-frmwk-layer}
+## 框架层的依赖 {#m2devgde-moddep-frmwk-layer}
 
-Modules belonging to the Magento框架 can be used in the application layer by an explicit dependency.
+Magento框架的模块可以通过显示依赖用于应用层。
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Note: In this case, using interfaces is preferable to using classes. </p>
-  <p>You can build dependencies between classes in the Magento框架 even if they belong to different modules.</p>
+  <p>注意：这种情况下，使用接口比直接用类更好。 </p>
+  <p>你可以在Magento的类之间构建依赖，即使他们属于不同模块。</p>
 </div>
 
-## Dependencies in the Application layer {#m2devgde-moddep-app-layer}
-Modules belonging to the application layer cannot be used in the Magento框架.
+## 应用层依赖 {#m2devgde-moddep-app-layer}
+属于应用层的模块不能被用在Magento框架上。
 
-You can build dependencies between classes in the application layer, but these classes must belong to the same module. Dependencies between the modules of the application layer should be built only by the {% glossarytooltip cdf644c4-bc99-4550-a954-dd5ae165785a %}service contract{% endglossarytooltip %} or the service provider interface (SPI).
+你可以应用层的类之间构建依赖，但是这些类必须属于相同的模块。模块间的应用层依赖只能被{% glossarytooltip cdf644c4-bc99-4550-a954-dd5ae165785a %}服务契约{% endglossarytooltip %}或服务提供器接口(SPI)构建。
 
 ## 相关主题 {#m2arch-module-related}
 

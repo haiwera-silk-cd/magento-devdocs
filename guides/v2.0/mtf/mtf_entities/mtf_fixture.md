@@ -186,7 +186,7 @@ To apply the changes, enter the following commands:
 
 ## Add a repository to the fixture field {#mtf_fixture_repositoy}
 
-Now we have a new fixture for Widget. All fields are defined and ready to take test data. Let's assume that we are not focused on {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} updates functionality and want to use pre-defined data.
+Now we have a new fixture for Widget. All fields are defined and ready to take test data. Let's assume that we are not focused on {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} updates functionality and want to use pre-defined data.
 
 For this goal, link to the repository where all test data has already been defined.
 

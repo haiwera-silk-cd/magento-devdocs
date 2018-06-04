@@ -12,7 +12,7 @@ functional_areas:
 
 <h2>这里有什么</h2>
 
-This article describes the following typical {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}layout{% endglossarytooltip %} customization tasks:
+This article describes the following typical {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}布局{% endglossarytooltip %} customization tasks:
 
 *	<a href="#layout_markup_columns">Set the page layout</a>
 *	<a href="#layout_markup_css">Include static resources (JavaScript, CSS, fonts) in &lt;head&gt;</a>
