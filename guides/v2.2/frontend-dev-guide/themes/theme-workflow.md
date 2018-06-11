@@ -27,7 +27,7 @@ In the Magento root directory, run:
 
 `php bin/magento deploy:mode:set developer`
 
-See
+
 
 * [关于Magento的模式]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html)
 * [命令行配置起步]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands.html)
@@ -136,7 +136,7 @@ See [使用自定义css预处理器]({{ page.baseurl }}/frontend-dev-guide/css-t
 
 <div class="flow-block" markdown="1">
 ### Create your styles
-See
+
 
 * [Quick start guide to working with styles]({{ page.baseurl }}/frontend-dev-guide/css-guide/css_quick_guide_overview.html)
 * [All about styles in Magento themes]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-overview.html)

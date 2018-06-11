@@ -15,15 +15,15 @@ redirect_from:
 
 ## 概述 {#m2arch-module-relationships-overview}
 
-Understanding how one {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} relates to another helps determine how it reacts to changes in that module.
+理解一个{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}如何与另一个模块连系，有助于确定模块中它是如何对改变起作用的
 
-A single module can have the following types of relationships with another module:
+简单的模块和其它模块可以有以下类型的关系:
 
-* **uses**: module A uses module B if it invokes behavior of module B
+* **使用**: 如果模块A调用了模块B的行为，则它使用了模块B
 
-* **reacts to**: module A reacts to module B if its behavior is triggered by an {% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %} in module B without module B knowing about module A
+* **起反应**: 模块A对模块B作出反应，当其行为它B的{% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %}触发，但模块B并不知道有模块A。
 
-* **customizes**: module A customizes module B if it modifies the behavior of module B
+* **定制**: 如果模块A修饰了模块B的行为，称A定制了B
 
 * **implements**: module A implements module B if it implements some, not necessarily all, behavior that is defined in module B
 

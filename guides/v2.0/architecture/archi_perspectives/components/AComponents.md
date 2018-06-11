@@ -12,7 +12,7 @@ redirect_from: /guides/v1.0/architecture/components/AComponents.html
 
 ## Magento组件
 
-Magento has several core 组件 that are used to build custom web sites, applications, and integrated systems. When you change the appearance or behavior of your Magento store, you are inevitably changing one or more of these <b>core Magento组件</b>, which include <b>modules</b>, <b>themes</b>, and <b>language packages</b>. Together, these core 组件 determine much of server-side and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} (frontend) appearance and behavior.
+Magento has several core 组件 that are used to build custom web sites, applications, and integrated systems. When you change the appearance or behavior of your Magento store, you are inevitably changing one or more of these <b>core Magento组件</b>, which include <b>modules</b>, <b>themes</b>,以及<b>language packages</b>. Together, these core 组件 determine much of server-side and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} (frontend) appearance and behavior.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Throughout the Magento documentation set, we also use the term <i>component</i> in its generic sense to mean element or part. However, the term <b>Magento component</b> explicitly refers to either a module, theme, or {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %}.</p>

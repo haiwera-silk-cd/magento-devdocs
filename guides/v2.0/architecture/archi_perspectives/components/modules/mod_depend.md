@@ -48,12 +48,12 @@ redirect_from:
 
 2. 在模块的`composer.json`文件中声明所有模块有的依赖(无论是其它模块还是不同的组件)
 
-3. (*Optional*) Define the desired load order of config files and `.css` files in the `module.xml` file.
+3. (*可选*) 在`module.xml`中定义期望的配置文件以及`css`文件加载顺序。
 
-Example: Module A declares a dependency upon Module B. Thus, in Module A's `module.xml` file, Module B is listed in the &lt;sequence> list, so that B's files are loaded before A's. Additionally, you must declare a dependency upon Module B in A's `composer.json` file. Furthermore, in the <a href="{{ page.baseurl }}/config-guide/config/config-php.html">部署配置</a>, Modules A and B must both be defined as enabled.
+例如:模块A声明要依赖模块B. 例如:模块A声明要依赖模块B.此时，在模块A的`module.xml`文件中，模块B要写到&lt;sequence>列表中，这样模块B的所有文件将在A加载完成后加载。 此外，你必须在模块A的`composer.json`文件中声明依赖B。同时，在<a href="{{ page.baseurl }}/config-guide/config/config-php.html">部署配置</a>中, 模块A和B必须同时被启用。
 
 ## 相关主题 {#m2arch-module-related}
 
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a>
 
-<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend_types.html">Types of module dependencies</a>
+<a href="{{ page.baseurl }}/architecture/archi_perspectives/components/modules/mod_depend_types.html">模块依赖的类型</a>

@@ -118,7 +118,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
          <p><code>AccountManagementInterface</code></p>
       </td>
       <td>
-         <p>Defines the <code>createAccount()</code>, <code>changePassword()</code>, <code>activate()</code>, and <code>isEmailAvailable()</code> functions.</p>
+         <p>Defines the <code>createAccount()</code>, <code>changePassword()</code>, <code>activate()</code>,以及<code>isEmailAvailable()</code> functions.</p>
       </td>
    </tr>
    <tr>

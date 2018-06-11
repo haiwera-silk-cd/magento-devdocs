@@ -141,12 +141,12 @@ For example, `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Catalog
 Use case: We want to assert widget availability in a widget grid.
 
 步骤1. What module does it belong?
-  
+ 
   Widget grid and widget fixture are related to the Magento_Widget模块.
   Thus, we need to create constraint in the Magento_Widget模块, in `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint`.
-  
+ 
 步骤2. What name should constraint have?
-  
+ 
   Using [constraint naming principle](#mtf_constraint_assert), the constraint should be named as `AssertWidgetInGrid`.
 
 步骤3. Create `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/Widget/Test/Constraint/AssertWidgetInGrid.php` with [required structure](#mtf_constraint_assert)
@@ -256,7 +256,7 @@ in the order that it must be performed.
             <data name="widget/data/parameters/dataset" xsi:type="string">cmsStaticBlock</data>
             <constraint name="Magento\Widget\Test\Constraint\AssertWidgetSuccessSaveMessage" />
             <constraint name="Magento\Widget\Test\Constraint\AssertWidgetInGrid" />
-            <constraint name="Magento\Widget\Test\Constraint\AssertWidgetOnFrontendInCatalog" />     
+            <constraint name="Magento\Widget\Test\Constraint\AssertWidgetOnFrontendInCatalog" /> 
         </variation>
     </testCase>
 </config>
