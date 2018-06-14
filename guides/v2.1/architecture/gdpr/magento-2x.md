@@ -5,65 +5,65 @@ version: 2.1
 github_link: architecture/gdpr/magento-2x.md
 ---
 
-The European Union (EU) enacted [General Data Protection Regulation](https://www.eugdpr.org/) (GDPR) to give its citizens more control over their personal data. GDPR applies to any organization operating within the EU. It also applies to organizations outside of the EU that offer goods or services to customers or businesses in the EU.
+欧盟颁布[通用数据保护规则](https://www.eugdpr.org/) (GDPR)来给他们公民的个人数据更多控制，GDPR应用到在欧盟内运转的任何组织。它也应用到一些欧盟之外的为欧盟的的客户或企业提供产品或服务的组织。
 
-We are publishing this GDPR compliance information to help our merchants and their system integrators with GDPR compliance. A system integrator can use the data flow diagrams and database information to build scripts to resolve use cases similar to the following:
+我们发布GDPR遵守信息来帮助我们的店主和系统集成人员遵守GDPR. 系统集成员可以使用数据流图和数据库信息来构建脚本以解决类似下面的问题：
 
-* A shopper asks for a copy of the data the merchant has stored about her
-* A shopper requests that all information about him be deleted
+* 客户询问店主要一份存储了他相关信息的数据的备份。
+* 客户要求删除关于他的所有信息
 
-See the corporate [Magento website](https://magento.com/gdpr) for more information about how Magento helps merchants comply with GDPR.
+参考[Magento官网](https://magento.com/gdpr)的描述来获取更多关于Magento如何帮助店主遵守GDPR的信息
 
-## Data flow diagrams
+## 数据流图
 
-The data flow diagrams show the types of data that customers and administrators can enter and retrieve on the storefront and in Admin.
+数据流图展示了这类数据，它们可以在网店前台或管理面板被客户和管理员接收和输入。
 
-### Frontend data entry points
+### 前台数据接口
 
-A user can enter customer, address, and payment information when registering for an account, during checkout, and similar events.
+用户注册后，用户可以在结算等类似的过程中为这个帐号输入客户、地址及支付信息。
 
-![Frontend data entry points](frontend-data-entry-points.svg)
+![前端数据接口](frontend-data-entry-points.svg)
 
-### Frontend data access points
+### 前端数据访问接口
 
-Magento loads customer information when the customer logs in and views several different pages or checks out.
+当客户登录并查看一些不同页面或结算的时修改，Magento会加载客户信息
 
-![Frontend data access points](frontend-data-access-points.svg)
+![前端数据访问接口](frontend-data-access-points.svg)
 
-### Backend data entry points
+### 后端数据访问接口
 
-A merchant can enter customer information, address data, and payment data when using Admin to create a customer or order.
+店主可以使用管理面板输入客户信息，地址及支付信息来创建一个客户或订单。
 
-![Backend data entry points](backend-data-entry-points.svg)
+![后端数据接口](backend-data-entry-points.svg)
 
-### Backend data access points
+### 后端数据访问接口
 
-Magento loads customer information when a merchant views several types of grids, clicks on a grid to see detailed information, and performs various other tasks.
+在店主查看一些表格数据，点击查看详细信息及执行其它任务时Magento加载客户信息。
 
-![Backend data access points](backend-data-access-points.svg)
+![后端数据访问接口](backend-data-access-points.svg)
 
-## Database entities
+## 数据库实体
 
-Magento 2 primarily stores customer-specific information in customer, address, order, quote, and payment tables. Other tables contain references to the customer ID.
+Magento2 主要存储客户相关的信息到客户、地址、订单、报价及支付表，其它的表包含引用到客户的ID。。
 
-### Customer data {#customer-data}
+### 客户的数据 {#customer-data}
 
-Magento 2 stores these customer attributes:
+Magento2存储以下客户属性：
 
-* Date of Birth
-* Email
-* First Name
-* Gender
-* Last Name
-* Middle Name/Initial
-* Name Prefix
-* Name Suffix
+* 出生日期
+* 邮箱
+* 姓氏
+* 性别
+* 名字
+* 中间名/首字母
+* 名字前缀
+* 名字后缀
 
-#### `customer_entity` and reference tables
+#### `customer_entity`及引用表
 
-The following columns in the `customer_entity`table contain customer information:
+`customer_entity`表的以下字段包含客户的信息：
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `email` | varchar(255)
 `prefix` | varchar(40)
@@ -74,9 +74,9 @@ Column | Data type
 `dob` | date
 `gender` | smallint(5)
 
-These tables reference `customer_entity` and can contain custom customer attributes:
+这些表引用`customer_entity`并且可能包含定制的客户属性：
 
-Table | Column | Data type
+表名 | 字段 | 数据类型
 --- | --- | ---
 `customer_entity_datetime` | `value` | datetime
 `customer_entity_decimal` | `value` | decimal(12,4)
@@ -84,11 +84,11 @@ Table | Column | Data type
 `customer_entity_text` | `value` | text
 `customer_entity_varchar` | `value` | varchar(255)
 
-#### `customer_grid_flat` table
+#### `customer_grid_flat`表
 
-The following columns in the `customer_grid_flat`table contain customer information:
+`customer_grid_flat`表的以下字段包含客户的信息：
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `name` |text
 `email` | varchar(255)
@@ -110,17 +110,17 @@ Column | Data type
 
 ### Address data
 
-Magento 2 stores these customer attributes:
+Magento2存储以下客户属性：
 
 * City
 * Company
 * Country
 * Fax
-* First Name
-* Last Name
-* Middle Name/Initial
-* Name Prefix
-* Name Suffix
+* 姓氏
+* 名字
+* 中间名/首字母
+* 名字前缀
+* 名字后缀
 * Phone Number
 * State/Province
 * State/Province ID
@@ -128,11 +128,11 @@ Magento 2 stores these customer attributes:
 * VAT Number
 * Zip/Postal Code
 
-#### `customer_address_entity` and reference tables
+#### `customer_address_entity`及引用表
 
-The following columns in the `customer_address_entity`table contain customer information:
+`customer_address_entity`表的以下字段包含客户的信息：
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `city` | varchar(255)
 `company` | varchar(255)
@@ -149,9 +149,9 @@ Column | Data type
 `telephone` | varchar(255)
 `vat_id` | varchar(255)
 
-These tables reference `customer_address_entity` and can contain custom customer attributes:
+这些表引用`customer_address_entity`并且可能包含定制的客户属性：
 
-Table | Column | Data type
+表名 | 字段 | 数据类型
 --- | --- | ---
 `customer_address_entity_datetime` | `value` | datetime
 `customer_address_entity_decimal` | `value` | decimal(12,4)
@@ -159,15 +159,15 @@ Table | Column | Data type
 `customer_address_entity_text` | `value` | text
 `customer_address_entity_varchar` | `value` | varchar(255)
 
-### Order data
+### 订单数据
 
-The `sales_order` and related tables contain the customer's name, billing and shipping addresses, and related data.
+`sales_order`表和相关的表包含客户的名字，帐单及物流地址与相关数据。
 
-#### `sales_order` table
+#### `sales_order`表
 
-The following columns in the `sales_order` table contain customer information:
+`sales_order`表的以下字段包含客户的信息:
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_dob` | datetime
 `customer_email` | varchar(128)
@@ -184,11 +184,11 @@ Column | Data type
 `remote_ip` | varchar(32)
 `x_forwarded_for` | varchar(32)
 
-#### `sales_order_address` table
+#### `sales_order_address`表
 
 The `sales_order_address` table contains the customer's address.
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_address_id` | int(11)
 `quote_address_id` | int(11)
@@ -207,11 +207,11 @@ Column | Data type
 `suffix` | varchar(255)
 `company` | varchar(255)
 
-#### `sales_order_grid` table
+#### `sales_order_grid`表
 
-The following columns in the `sales_order_grid` table contain customer information:
+`sales_order_grid`表的以下字段包含客户的信息:
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_id` | int(10)
 `shipping_name` | varchar(255)
@@ -222,15 +222,15 @@ Column | Data type
 `customer_email` | varchar(255)
 `customer_name` | varchar(255)
 
-### Quote data
+### 报价数据
 
-Quotes contain a customer's name, email, address, and related information.
+报价包含客户的名字，邮箱，地址及相关数据。
 
-#### `quote` table
+#### `quote`表
 
-The following columns in the `quote` table contain customer information:
+`quote`表的以下字段包含客户的信息:
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_id` | int(10)
 `customer_email` | varchar(255)
@@ -243,11 +243,11 @@ Column | Data type
 `customer_taxvat` | varchar(255)
 `customer_gender` | varchar(255)
 
-#### `quote_address` table
+#### `quote_address`表
 
-The following columns in the `quote_address` table contain customer information:
+`quote_address`表的以下字段包含客户的信息:
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_id` | int(10)
 `email` | varchar(255)
@@ -266,11 +266,11 @@ Column | Data type
 `telephone` | varchar(255)
 `fax` | varchar(255)
 
-### Payment data
+### 支付数据
 
-The `sales_order_payment` table includes credit card information and other transactional information.
+`sales_order_payment`表包含信用卡信息及其它的交易信息。
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `cc_exp_month` | varchar(12)
 `echeck_bank_name` | varchar(128)
@@ -284,32 +284,32 @@ Column | Data type
 `cc_number_enc` | varchar(128)
 `additional_information` | text
 
-### Invitation data
+### 发票数据
 
-Magento can be configured so that customers can send invitations to private sales and events.
+Magento可以被配置成客户可以发送发票到私人销售和事件
 
-#### `magento_invitation` table
+#### `magento_invitation`表
 
-The `magento_invitation` table contains the customer ID, email, and referral ID.
+`magento_invitation`表包含客户ID,邮箱，及referral ID
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `customer_id` | int(10)
 `email` | varchar(255)
 `referral_id` | int(10)
 
-#### `magento_invitation_track` table
+#### `magento_invitation_track`表
 
-The `magento_invitation_track` table also contains customer information.
+`magento_invitation_track`表也包含客户信息。
 
-Column | Data type
+字段 | 数据类型
 --- | ---
 `inviter_id` | int(10)
 `referral_id` | int(10)
 
-### Miscellaneous tables that reference customer
+### 其它引用客户信息的表
 
-The following tables contain a `customer_id` column:
+下面的表都包含`customer_id`字段：
 
 * `catalog_compare_item`
 * `catalog_product_frontend_action`

@@ -388,7 +388,7 @@ Prefix Dropdown Options | `customer/address/prefix_options` | <!-- ![Not EE-only
 Show Middle Name (initial) | `customer/address/middlename_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Show Suffix | `customer/address/suffix_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Suffix Dropdown Options | `customer/address/suffix_options` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Show Date of Birth | `customer/address/dob_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Show 出生日期 | `customer/address/dob_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Show Tax/VAT Number | `customer/address/taxvat_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Show Gender | `customer/address/gender_show` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enable Store Credit Functionality | `customer/magento_customerbalance/is_enabled` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) |

@@ -170,7 +170,7 @@ The service returns an identifier of the created Invoice.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Api/InvoiceOrderInterface.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Api/InvoiceOrderInterface.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -182,7 +182,7 @@ The service returns an identifier of the created Invoice.
 {% collapsible Click to show/hide included code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Model/InvoiceOrder.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Model/InvoiceOrder.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -226,7 +226,7 @@ With this service you can:
    * add details about refunded items to an Order
    * change status and state of an Order according to performed actions
    * notify a customer about performed refund operation
-   
+
 ### Service parameters
 
 <table>
@@ -480,7 +480,7 @@ The service returns an identifier of a created Credit Memo.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Api/RefundInvoiceInterface.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Api/RefundInvoiceInterface.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -492,7 +492,7 @@ The service returns an identifier of a created Credit Memo.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Model/RefundInvoice.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Model/RefundInvoice.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -759,7 +759,7 @@ The service returns an identifier of a created Credit Memo.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Api/RefundOrderInterface.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Api/RefundOrderInterface.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -771,7 +771,7 @@ The service returns an identifier of a created Credit Memo.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Model/RefundOrder.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Model/RefundOrder.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -876,7 +876,7 @@ With the ShipOrder service you can:
         interface.</td>
       <td>
       {% highlight json %}
-      {   
+      {
           "comment": "The first Invoice",
           "is_visible_on_front": true
       }
@@ -979,7 +979,7 @@ The service returns the identifier of a created shipment.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Api/ShipOrderInterface.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Api/ShipOrderInterface.php %}
 {% endhighlight %}
 
 {% endcollapsible %}
@@ -991,7 +991,7 @@ The service returns the identifier of a created shipment.
 {% collapsible Click to show/hide a code %}
 
 {% highlight php %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.1/app/code/Magento/Sales/Model/ShipOrder.php %}
+{% include magento/magento2/2.1/app/code/Magento/Sales/Model/ShipOrder.php %}
 {% endhighlight %}
 
 {% endcollapsible %}

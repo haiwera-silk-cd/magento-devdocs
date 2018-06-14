@@ -125,7 +125,7 @@ See an example for the Widget cURL handler (`<magento2_root_dir>/dev/tests/funct
 
 {%highlight xml%}
 
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/etc/curl/di.xml %}
+{% include magento/magento2/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/etc/curl/di.xml %}
 
 {%endhighlight%}
 
@@ -262,7 +262,7 @@ class Curl extends AbstractCurl
 
 {%highlight xml%}
 
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/etc/curl/di.xml %}
+{% include magento/magento2/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/etc/curl/di.xml %}
 
 {%endhighlight%}
 

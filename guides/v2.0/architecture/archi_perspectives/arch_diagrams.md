@@ -9,7 +9,7 @@ github_link: architecture/archi_perspectives/arch_diagrams.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/arch_diagrams.html
 ---
 
-## 人不同的视角看Magento的架构 {#m2arch-whatis-overview}
+## 从不同的视角看Magento的架构 {#m2arch-whatis-overview}
 
 Depending upon your role and purpose for learning more about Magento, there are several different ways to view the Magento architecture. For example, a developer who wants to create new modules or perhaps customize an existing {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} will want to understand the architecture of a module itself, and how it fits into the larger view, with the Magento framework and other 组件. However, a merchant who wants to quickly build an online store front wants to view the collection of 组件 from a higher level, and understand the 组件 that impact the look, feel, and user interaction 组件.
 

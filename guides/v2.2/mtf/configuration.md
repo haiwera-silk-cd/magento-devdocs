@@ -17,7 +17,7 @@ The `<magento2_root_dir>/dev/tests/functional/phpunit.xml` contains PHPUnit conf
 {% collapsible Show/hide the default phpunit.xml code %}
 
 {% highlight xml %}
-{% remote_markdown  https://raw.githubusercontent.com/magento/magento2/2.2/dev/tests/functional/phpunit.xml.dist %}
+{% include magento/magento2/2.2/dev/tests/functional/phpunit.xml.dist %}
 {% endhighlight %}
 {% endcollapsible %}
 
@@ -59,7 +59,7 @@ The `<magento2_root_dir>/dev/tests/functional/phpunit.xml` contains PHPUnit conf
     <td><code>log_directory</code></td>
     <td>Path to a directory with testing reports.</td>
     <td><code>"&lt;path to the reporting directory&gt;"</code></td>
-    <td><a href="http://localhost:4000/guides/v2.0/mtf/features/reporting.html#report-directory" target="_blank">Set a reporting directory</a></td>
+    <td><a href="/guides/v2.0/mtf/features/reporting.html#report-directory" target="_blank">Set a reporting directory</a></td>
 </tr>
 <tr>
     <td><code>events_preset</code></td>
@@ -115,7 +115,7 @@ The FTF configuration settings are declared and specified in two places:
 The file is located in `<magento2_root_dir>dev/tests/functional/vendor/magento/mtf/etc`
 
 {% highlight xml %}
-{% remote_markdown https://raw.githubusercontent.com/magento/mtf/develop/etc/config.xml.dist%}
+{% include magento/mtf/develop/etc/config.xml.dist%}
 {% endhighlight %}
 
 ![image]({{ site.baseurl }}/common/images/ftf/ftf_mtf-config-xsd-dia.svg)
@@ -129,7 +129,7 @@ Figure 1. - XML Schema for the `<magento2_root_dir>dev/tests/functional/vendor/m
 The file is located in `<magento2_root_dir>dev/tests/functional/`
 
 {% highlight xml %}
-{% remote_markdown https://raw.githubusercontent.com/magento/magento2/2.2/dev/tests/functional/etc/config.xml.dist %}
+{% include magento/magento2/2.2/dev/tests/functional/etc/config.xml.dist %}
 {% endhighlight %}
 
 ![image]({{ site.baseurl }}/common/images/ftf/ftf_config-xsd-dia.svg)

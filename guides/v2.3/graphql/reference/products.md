@@ -147,7 +147,7 @@ The `items` that are returned in a `ProductInterface` array can also contain att
 
 The following table defines the `ProductInterface` attributes and objects.
 
-Attribute | Data type | Description
+Attribute | 数据类型 | Description
 --- | --- | ---
 `attribute_set_id` | Int | The attribute set assigned to the product
 `categories` | [CategoryInterface] | The categories assigned to the product. See [categories endpoint]({{ page.baseurl }}/graphql/reference/categories.html) for more information

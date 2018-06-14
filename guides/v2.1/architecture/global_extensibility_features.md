@@ -35,7 +35,7 @@ Reliance on known architectural and programming structures helps {% glossarytool
 
 Design patterns are time-tested, widely recognized software architecture constructs. Magento product architecture incorporates many well known patterns, but Model-View-Controller (MVC) holds particular interest for extension developers.
 
-### Coding standards
+### 编码规范
 
 Magento developers should familiarize themselves with our coding standards, best practices, and conventions, especially standards for PHP file formatting, coding style, and file naming conventions. Magento standards are based on Zend Framework 编码规范.
 

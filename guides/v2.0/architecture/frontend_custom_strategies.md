@@ -11,39 +11,39 @@ github_link: architecture/frontend_custom_strategies.md
 
 ## 概述 {#m2arch-whatis-overview}
 
-The Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} is designed to optimize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} customization, with highly extensible <i>themes</i> being the central customization mechanism.
+Magento{% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %}被设计成用高度可扩展的主题做为核心定制机制来优化{% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}的定制。
 
-Merchants are encouraged to use Magento组件 and themes to extend and transform the appearance of their storefronts.
+推荐店主使用Magento组件和主题来扩展及改变网店的外观。
 
-## Storefront customization tools
+## 网店前台定制工具
 
-Magento provides several tools to help you significantly jumpstart the storefront customization process:
+Magento 提供了几个工具来明显地帮助你快速开始前端定制过程：
 
-* Magento Blank {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}
+* Magento空白{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}
 
-* <a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI Library 组件</a>
+* <a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI库组件</a>
 
 * <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>
 
-See the <a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a> for information on creating your themes.
+参考<a href="{{ page.baseurl }}/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a>了解更多关于创建主题的信息。
 
-### Magento Blank theme
+### Magento空白主题
 
-The Magento blank theme template provides a launchpad for storefront customization. You can use this boilerplate as a robust starting point for your own theme development.
+Magento空白主题模板为定制提供了一个跳板，你可以使用这个样板为一个稳健的起点开发你自己的主题
 
 ### Magento UI 组件
-Using Magento standard coding and styling tools can help:
+使用Magento标准代码和样式工具可以帮助我们：
 
-* enforce for consistency in design across your storefronts
-* simplify (and speed up) the design process
+* 增强你网店前台的设计风格的一致性
+* 简化(及加快)设置过程
 
-This component {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} contains standard reusable 组件 for form features, such as fields and buttons, and navigation elements. The Magento UI库 is a set of generic web 组件 and Magento-specific patterns, which simplifies the process of Magento theme creation and customization.
+组件{% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %}包含标准的可重用的表单特性的组件，如输入框和按钮以及导航元素。Magento UI库是一个通用Web组件集合并且是Magento特定的样板，这些样板简化主题创建和定制过程
 
-See <a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI Library 组件</a> for details about this library.
+参考<a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI库组件</a>了解更多相关信息
 
-### Magento Admin pattern library
+### Magento管理面板样板库
 
-A <i>pattern library</i> is a collection of user interface (UI) design patterns that can be re-used in locations throughout your product installation. The <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> defines examples of 组件 that administrators working with the storefront can use.
+<i>样版库</i>是一个用户界面设计样版的集合，它们始终能在你安装的产品中被重复使用。<a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>定义了一些管理员工作在网店前台能使用的组件的例子。
 
 Form elements included in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} pattern library include:
 
@@ -67,4 +67,4 @@ See <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理�
 
 <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>
 
-<a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI Library 组件</a>
+<a href="{{ page.baseurl }}/ui-components/ui-component.html">Magento UI库组件</a>

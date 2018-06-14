@@ -11,9 +11,9 @@ github_link: architecture/bk-architecture.md
 redirect_from: /guides/v1.0/architecture/bk-architecture.html
 ---
 
-The 架构指引 provides a high-level introduction and view of the Magento product. 
+架构指引提供了一个高层的Magento产品的介绍和视野
 
-The Magento platform and 组件 are explained from the perspective of several audiences: merchants, web store developers (frontend developers), {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers, system admins, installers, and integrators.
+从店主、网店开发人员(前端开发)、{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}开发者，系统管理员，安装者和集成者的角度解释了Magento平台和组件
 
-More detailed information about building online stores, using the Magento APIs, installing, configuring, and extending the platform is included in other books in our <a href="{{ site.baseurl }}/index.html">Magento library</a>.
+关于构建在线网店、使用Magento API、安装、配置及扩展平台的更信息可以在参考<a href="{{ site.baseurl }}/index.html">Magento文档库</a>的其它页面。
 

@@ -22,7 +22,7 @@ We welcome your participation in this process! Enterprise Edition customers can 
 
 * Commerce GitHub repository.  For more information on how to provide feedback and contribute on GitHub, see <a href="{{ page.baseurl }}/contributor-guide/contributing.html" target="_blank">Code contributions</a>. 
 
-* Email to DL-Magento-2.1-Feedback@magento.com.
+* 邮箱 to DL-Magento-2.1-Feedback@magento.com.
 
 
 This Release Candidate is available from `repo.magento.com` if you have a Commerce license or GitHub  if you have previously signed an agreement to access Magento Commerce 2.0 beta software on GitHub.

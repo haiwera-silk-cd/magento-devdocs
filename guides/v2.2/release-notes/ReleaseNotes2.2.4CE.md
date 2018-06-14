@@ -400,7 +400,7 @@ The dotmailer bundled extension features the following enhancements for this rel
 
 <!--- MAGETWO-84003 -->*  The `findAccessorMethodName()` method (`Magento\Framework\Reflection\NameFinder`) now provides a more helpful exception message. *Fix submitted by [Roman K.](https://github.com/RomaKis) in pull request 12303*. [GitHub-9764](https://github.com/magento/magento2/issues/9764)
 
-<!--- MAGETWO-84016 -->* Customers with an empty **Date of Birth** field can now be saved even when the field is not marked (or checked on the JavaScript side) as mandatory. *Fix submitted by [Vova Yatsyuk](https://github.com/vovayatsyuk) in pull request 12302*. [GitHub-12146](https://github.com/magento/magento2/issues/12146)
+<!--- MAGETWO-84016 -->* Customers with an empty **出生日期** field can now be saved even when the field is not marked (or checked on the JavaScript side) as mandatory. *Fix submitted by [Vova Yatsyuk](https://github.com/vovayatsyuk) in pull request 12302*. [GitHub-12146](https://github.com/magento/magento2/issues/12146)
 
 <!--- MAGETWO-84371 -->* You can now alter the transport variable in the `email_invoice_set_template_vars_before` event. *Fix submitted by [Roman K.](https://github.com/RomaKis) in pull request 12132*. [GitHub-10210](https://github.com/magento/magento2/issues/10210)
 

@@ -17,7 +17,7 @@ categories (
 
 ### Input attributes
 
-Attribute | Data type | Description
+Attribute | 数据类型 | Description
 --- | --- | ---
 `root_category_id` | Int | The ID in the category tree to use as the starting point of your category search.
 
@@ -25,7 +25,7 @@ Attribute | Data type | Description
 
 The query returns a `Categories` object. The top line of the response is `category_tree`.
 
-Attribute | Data type | Description
+Attribute | 数据类型 | Description
 --- | ---
 `id` | Int | An ID that uniquely identifies the category
 `description`| String | An optional description of the category

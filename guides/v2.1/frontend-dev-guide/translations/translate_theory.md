@@ -61,7 +61,7 @@ To ensure that the text you add in `.html` templates of UI 组件 is added to th
 - when a string is added as an attribute of an HTML element:
 
 {% highlight HTML%}
-    <input type="text" data-bind="attr: {placeholder: $t('First Name')}" />
+    <input type="text" data-bind="attr: {placeholder: $t('姓氏')}" />
 {% endhighlight HTML%}
 
 <h2 id="add_strings_ui_xml">Strings added in UI 组件 configuration files</h2>
