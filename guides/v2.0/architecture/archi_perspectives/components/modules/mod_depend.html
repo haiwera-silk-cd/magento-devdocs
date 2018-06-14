@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -718,17 +718,17 @@
     <p>在模块的<code class="highlighter-rouge">composer.json</code>文件中声明所有模块有的依赖(无论是其它模块还是不同的组件)</p>
   </li>
   <li>
-    <p>(<em>Optional</em>) Define the desired load order of config files and <code class="highlighter-rouge">.css</code> files in the <code class="highlighter-rouge">module.xml</code> file.</p>
+    <p>(<em>可选</em>) 在<code class="highlighter-rouge">module.xml</code>中定义期望的配置文件以及<code class="highlighter-rouge">css</code>文件加载顺序。</p>
   </li>
 </ol>
 
-<p>Example: Module A declares a dependency upon Module B. Thus, in Module A’s <code class="highlighter-rouge">module.xml</code> file, Module B is listed in the &lt;sequence&gt; list, so that B’s files are loaded before A’s. Additionally, you must declare a dependency upon Module B in A’s <code class="highlighter-rouge">composer.json</code> file. Furthermore, in the <a href="/guides/v2.0/config-guide/config/config-php.html">部署配置</a>, Modules A and B must both be defined as enabled.</p>
+<p>例如:模块A声明要依赖模块B. 例如:模块A声明要依赖模块B.此时，在模块A的<code class="highlighter-rouge">module.xml</code>文件中，模块B要写到&lt;sequence&gt;列表中，这样模块B的所有文件将在A加载完成后加载。 此外，你必须在模块A的<code class="highlighter-rouge">composer.json</code>文件中声明依赖B。同时，在<a href="/guides/v2.0/config-guide/config/config-php.html">部署配置</a>中, 模块A和B必须同时被启用。</p>
 
 <h2 id="m2arch-module-related">相关主题</h2>
 
 <p><a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_intro.html">模块概述</a></p>
 
-<p><a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend_types.html">Types of module dependencies</a></p>
+<p><a href="/guides/v2.0/architecture/archi_perspectives/components/modules/mod_depend_types.html">模块依赖的类型</a></p>
 
 			
 		</div>

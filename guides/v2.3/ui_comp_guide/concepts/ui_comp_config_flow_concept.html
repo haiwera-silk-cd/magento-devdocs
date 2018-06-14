@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.3/ui_comp_guide/concepts/ui_comp_config_flow_concept.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.3/ui_comp_guide/concepts/ui_comp_config_flow_concept.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -343,7 +343,7 @@
 
 </section>
 
-			<h2 id="overview">Overview</h2>
+			<h2 id="概述">概述</h2>
 <p>The following section covers the configuration flow of UI 组件 within the Magento system. Before a <span term-uuid="9bcc648c-bd08-4feb-906d-1e24c4f2f422" class="glossary-term" data-toggle="popover">UI component</span> is finally displayed on a web page, its configuration undergoes a series of modifications. Starting from the initial reading of the top-level component instance’s <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> declaration, all the way to the merging of module-specific options.</p>
 
 <p>When the server generates a page response, the configuration of these components in the <a href="/guides/v2.3/ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.html"><code class="highlighter-rouge">.xml</code> declaration files</a> is then modified by the <a href="/guides/v2.3/ui_comp_guide/concepts/ui_comp_modifier_concept.html"><code class="highlighter-rouge">.php</code> modifiers</a>, and then finally this combined configuration is packed into JSON format and added into the HTTP response body.</p>

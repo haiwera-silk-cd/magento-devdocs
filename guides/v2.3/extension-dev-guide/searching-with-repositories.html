@@ -789,12 +789,12 @@
         
         
         
-        <li class="nav-level2  " id="服务约定">
+        <li class="nav-level2  " id="服务契约">
 
             
 
             
-            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务契约</a>
             
 
             
@@ -1516,7 +1516,7 @@
 			<h3 id="m2devgde-repository-intro">What is a repository?</h3>
 
 <p>Repositories give service requestors the ability to perform create, read, update, and delete (CRUD) operations on entities or a list of entities.
-A repository is an example of a <a href="/guides/v2.3/extension-dev-guide/service-contracts/design-patterns.html">service contract</a>, and its implementation is part of the <span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">domain</span> layer.</p>
+A repository is an example of a <a href="/guides/v2.3/extension-dev-guide/service-contracts/design-patterns.html">service contract</a>, and its implementation is part of the <span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">领域</span> layer.</p>
 
 <h4 id="repository-state">Repository state</h4>
 
@@ -1663,7 +1663,7 @@ The method applies custom filters for some fields, otherwise it applies <code cl
 </div></div>
 
 <p>You can configure this class to use a specific custom field mapping and custom filter in the <code class="highlighter-rouge">di.xml</code> file.
-The example below uses <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">dependency injection</span> to create a <span term-uuid="058b2be4-3247-4cb0-860d-6292ce75d1f0" class="glossary-term" data-toggle="popover">virtual type</span> from a Filter Processor that applies the module-specific <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/Model/Api/SearchCriteria/CollectionProcessor/FilterProcessor/ProductCategoryFilter.php" target="_blank"><code class="highlighter-rouge">ProductCategoryFilter</code></a> on a particular field mapping.</p>
+The example below uses <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">依赖注入</span> to create a <span term-uuid="058b2be4-3247-4cb0-860d-6292ce75d1f0" class="glossary-term" data-toggle="popover">virtual type</span> from a Filter Processor that applies the module-specific <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Catalog/Model/Api/SearchCriteria/CollectionProcessor/FilterProcessor/ProductCategoryFilter.php" target="_blank"><code class="highlighter-rouge">ProductCategoryFilter</code></a> on a particular field mapping.</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;virtualType</span> <span class="na">name=</span><span class="s">"Magento\Customer\Model\Api\SearchCriteria\CollectionProcessor\GroupFilterProcessor"</span> <span class="na">type=</span><span class="s">"Magento\Framework\Api\SearchCriteria\CollectionProcessor\FilterProcessor"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;arguments&gt;</span>

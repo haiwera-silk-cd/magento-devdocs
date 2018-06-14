@@ -80,9 +80,9 @@
 +------------+----------------+------------------+---------+
 </pre>
 
-<p>Every product has a name, every product has a price, etc.  </p>
+<p>Every product has a name, every product has a price, 等.  </p>
 
-<p>In an EAV Model, each "entity" (product) being modeled has a <strong>different</strong> set of attributes.  EAV makes a lot of sense for a generic eCommerce solution.  A store that sells laptops (which have a CPU speed, color, ram amount, etc) is going to have a different set of needs than a store that sells yarn (yarn has a color, but no CPU speed, etc.).  Even within our hypothetical yarn store, some products will have length (balls of yarn), and others will have diameter (knitting needles). </p>
+<p>In an EAV Model, each "entity" (product) being modeled has a <strong>different</strong> set of attributes.  EAV makes a lot of sense for a generic eCommerce solution.  A store that sells laptops (which have a CPU speed, color, ram amount, etc) is going to have a different set of needs than a store that sells yarn (yarn has a color, but no CPU speed, 等.).  Even within our hypothetical yarn store, some products will have length (balls of yarn), and others will have diameter (knitting needles). </p>
 
 <p>There aren't many open source or commercial databases that use EAV by default.  There are none that are available on a wide variety of web hosting platforms.  Because of that, the Magento engineers have built an EAV system out of PHP objects that use MySQL as a data-store.  In other words, they've built an EAV database system <strong>on top of</strong> a traditional relational database.  </p>
 
@@ -268,7 +268,7 @@ default_attribute_set_id: 2
 
 <p>This illustrates the single most important Magento concept, one that many people struggle to learn.  </p>
 
-<p>Consider the computer in front of you.  The OS (Mac OS X, Windows, Linux, etc.) is the software system.  Your web browser (Firefox, Safari, IE, Opera) is the application.  Magento <strong>is a system</strong> first, and an application second.  You build eCommerce applications using the Magento system.  What gets confusing is, there's a lot of places in Magento where the system code is exposed in a really raw form to the application code.  The EAV system configuration living in the same database as your store's data is an example of this.</p>
+<p>Consider the computer in front of you.  The OS (Mac OS X, Windows, Linux, 等.) is the software system.  Your web browser (Firefox, Safari, IE, Opera) is the application.  Magento <strong>is a system</strong> first, and an application second.  You build eCommerce applications using the Magento system.  What gets confusing is, there's a lot of places in Magento where the system code is exposed in a really raw form to the application code.  The EAV system configuration living in the same database as your store's data is an example of this.</p>
 
 <p>If you're going to get deep into Magento, you need to treat it like it's an old <a href="http://en.wikipedia.org/wiki/IBM_650" target="_new">Type 650</a> machine.  That is to say, it's the kind of thing you can't effectively program applications in unless unless you have a deep understanding of the system itself.</p>
 
@@ -334,7 +334,7 @@ $installer->addEntityType('complexworld_eavblogpost', array(
 $installer->endSetup();
 </pre>
 
-<p>We're calling the <tt>addEntityType</tt> method on our installer object.  This method allows us to pass in the entity type (<tt>complexworld_eavblogpost</tt>) along with a list of parameters to set its default values.  If you've run this script, you'll notice new rows in the <tt>eav_attribute_group</tt>, <tt>eav_attribute_set</tt>, and <tt>eav_entity_type</tt> tables.</p>
+<p>We're calling the <tt>addEntityType</tt> method on our installer object.  This method allows us to pass in the entity type (<tt>complexworld_eavblogpost</tt>) along with a list of parameters to set its default values.  If you've run this script, you'll notice new rows in the <tt>eav_attribute_group</tt>, <tt>eav_attribute_set</tt>,以及<tt>eav_entity_type</tt> tables.</p>
 
 <p>So, with that in place, if we reload our complexworld page, we'll get a new error.</p>
 
@@ -453,7 +453,7 @@ eavblog_posts_text
 eavblog_posts_varchar
 </pre>
 
-<p>While these do not refer to the MySQL column types, (but instead the EAV attribute types), their names (varchar, datetime, etc.) are indicative of the values they'll hold.</p>
+<p>While these do not refer to the MySQL column types, (but instead the EAV attribute types), their names (varchar, datetime, 等.) are indicative of the values they'll hold.</p>
 
 <p>All of these attribute properties are optional, if we wouldn't have specified them, Magento would have used a default value. These default values are defined in the <tt>_prepareValues</tt> method of the <tt>Mage_Eav_Model_Entity_Setup</tt> class (inherited by our setup class).</p>
 

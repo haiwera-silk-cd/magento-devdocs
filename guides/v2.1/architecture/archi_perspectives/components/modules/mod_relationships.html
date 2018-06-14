@@ -717,53 +717,53 @@
 
 			<h2 id="m2arch-module-relationships-overview">概述</h2>
 
-<p>Understanding how one <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> relates to another helps determine how it reacts to changes in that module.</p>
+<p>理解一个<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>如何与另一个模块连系，有助于确定模块中它是如何对改变起作用的</p>
 
-<p>A single module can have the following types of relationships with another module:</p>
+<p>简单的模块和其它模块可以有以下类型的关系:</p>
 
 <ul>
   <li>
-    <p><strong>uses</strong>: module A uses module B if it invokes behavior of module B</p>
+    <p><strong>使用</strong>: 如果模块A调用了模块B的行为，则它使用了模块B</p>
   </li>
   <li>
-    <p><strong>reacts to</strong>: module A reacts to module B if its behavior is triggered by an <span term-uuid="c57aef7c-97b4-4b2b-a999-8001accef1fe" class="glossary-term" data-toggle="popover">event</span> in module B without module B knowing about module A</p>
+    <p><strong>起反应</strong>: 模块A对模块B作出反应，当其行为它B的<span term-uuid="c57aef7c-97b4-4b2b-a999-8001accef1fe" class="glossary-term" data-toggle="popover">event</span>触发，但模块B并不知道有模块A。</p>
   </li>
   <li>
-    <p><strong>customizes</strong>: module A customizes module B if it modifies the behavior of module B</p>
+    <p><strong>定制</strong>: 如果模块A修饰了模块B的行为，称A定制了B</p>
   </li>
   <li>
-    <p><strong>implements</strong>: module A implements module B if it implements some, not necessarily all, behavior that is defined in module B</p>
+    <p><strong>实现</strong>: 模块A实现了模块B中定义的一些行为，不必是所有行为。</p>
   </li>
   <li>
-    <p><strong>replaces</strong>: module A replaces module B if it provides its own version of the <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> exposed and implemented by module B</p>
+    <p><strong>替换</strong>: 模块A替换模块B，是说它为模块B暴露和实现的<span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span>提供了它自己的版本</p>
   </li>
 </ul>
 
-<h2 id="relationship-types-and-scenarios">Relationship types and scenarios</h2>
+<h2 id="关系类型和场景">关系类型和场景</h2>
 
-<h3 id="a-uses-b-c-customizes-b">A uses B, C customizes B</h3>
+<h3 id="a使用bc定制b">A使用B,C定制B</h3>
 
-<p>In a scenario where module A uses module B and module C customizes module B, the customizations in module C cannot break the API of module B so that module A still functions properly in the face of these customizations.</p>
+<p>在模块A使用模块B并且模块C定制模块B的场景下，模块C的定制不能打断模块B的API，如此模块A在定制后仍能正常起作用</p>
 
-<p><img src="http://devdocs.magento.com/common/images/archi_first_relate.png" alt="Module relationship scenarios: A uses B, C customizes B" /></p>
+<p><img src="http://devdocs.magento.com/common/images/archi_first_relate.png" alt="模块关系场景:A使用B,C定制B" /></p>
 
-<h3 id="a-reacts-to-b-c-customizes-b">A reacts to B, C customizes B</h3>
+<h3 id="a对起作出反应c定制b">A对起作出反应，C定制B</h3>
 
-<p>Similarly, in a case where module A reacts to module B and module C customizes module B, the customizations in module C must not interfere with the events in module B that module A depends on.</p>
+<p>类似地，在模块A对模块B起反应并且模块C定制模块B的情况下，模块C的定制不能干涉模块A依赖的模块B的事件。</p>
 
-<p><img src="http://devdocs.magento.com/common/images/archi_second_relate.png" alt="Module relationship scenarios: A reacts to B, C customizes B" /></p>
+<p><img src="http://devdocs.magento.com/common/images/archi_second_relate.png" alt="模块关系场景:A对起作出反应，C定制B" /></p>
 
-<h3 id="a-and-c-customize-b">A and C customize B</h3>
+<h3 id="a和c都定制b">A和C都定制B</h3>
 
-<p>If both module A and C customize module B, be careful about how these customizations are implemented so that you avoid conflicts (see below).</p>
+<p>如果模块A和C同时定制模块B,要当心它们的定制都被实现以避免冲突（参考如下）</p>
 
-<p><img src="http://devdocs.magento.com/common/images/archi_third_relate.png" alt="Module relationship scenarios: A and C customize B" /></p>
+<p><img src="http://devdocs.magento.com/common/images/archi_third_relate.png" alt="模块关系场景:A和C都定制B" /></p>
 
-<h3 id="a-replaces-b">A replaces B</h3>
+<h3 id="a替换b">A替换B</h3>
 
-<p>If module A replaces module B, it needs to be able to do so in such a way that other modules are not affected. That will mean not having direct hard dependencies on module B, but rather dependencies on a third module, module C, that both module A and B implement.</p>
+<p>如果模块A替换模块B，那么它须要能够以一种方式使其它模块不受影响，这意味着在模块B上没有直接的硬依赖，而是依赖于第三个模块，模块A和B都实现的模块C。</p>
 
-<p><img src="http://devdocs.magento.com/common/images/archi_fourth_relate.png" alt="Module relationship scenarios: A replaces B" /></p>
+<p><img src="http://devdocs.magento.com/common/images/archi_fourth_relate.png" alt="模块关系场景:A替换B" /></p>
 
 <h2 id="m2arch-module-related">相关主题</h2>
 

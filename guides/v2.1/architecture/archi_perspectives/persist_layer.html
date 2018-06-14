@@ -715,26 +715,26 @@
 
 </section>
 
-			<p>Magento uses an active record pattern strategy for persistence. In this system, the model object contains a <em>resource model</em> that maps an object to one or more database rows. A resource model is responsible for performing functions such as:</p>
+			<p>Magento使用活动记录模式生策略处理持久层。在系统中，模型对象包含一个映身对象到一个或多个数据库行记录的 <em>资源模型</em> 。一个资源模型可响应像下面这样执行的功能：</p>
 
 <ul>
   <li>
-    <p>Executing all CRUD (create, read, update, delete) requests. The resource model contains the SQL code for completing these requests.</p>
+    <p>执行所有的CRUD(增、删、改、查)请求。资源模型为完成这些请求包含SQL代码。</p>
   </li>
   <li>
-    <p>Performing additional business logic. For example, a resource model could perform data validation, start processes before or after data is saved, or perform other database operations.</p>
+    <p>执行附加业务逻辑。例如，一个资源模型可以执行数据校验，在数据被保存之前或之后开启进程，或执行另外的数据库操作。</p>
   </li>
 </ul>
 
-<p>If you expect to return multiple items from a database query, then you would implement a special type of resource model known as a <em>collection</em>. A collection is a class that loads multiple models into an array-like structure based on a set of rules. This is similar to a SQL <code class="highlighter-rouge">WHERE</code> clause.</p>
+<p>如果你期望从一个数据库请求返回多个数据项，你可以实现一个特殊类型的模型，这个模型叫作 <em>集合</em> ，一个集合是一个基于一系列规则加载多个模型到一个数组结构中的类。这类似于SQL中的<code class="highlighter-rouge">WHERE</code>子句。</p>
 
-<p>A simple resource model defines and interacts with a single table.</p>
+<p>一个简单的资源模型定义且与一个简单表交互。</p>
 
-<p>However, some objects have a vast number of attributes, or they could have a set related objects that have varying numbers of attributes. In these cases, the objects are constructed using <strong>Entity-Attribute-Value (EAV)</strong> models.</p>
+<p>然而，一些对象有大量的属性，或它们可能有许多关联对象，而这些关联对象有大量的属性。在这种情况下，这些对象是使用了 <strong>实体属性值 (EAV)</strong> 的模型构造的对象。</p>
 
-<p>Any model that uses an EAV resource has its attributes spread out over a number of MySQL tables.</p>
+<p>任何使用了EAV资源的模型有它自己的从某些MySQL表展开来的属性。</p>
 
-<p>The <code class="highlighter-rouge">Customer</code>,<code class="highlighter-rouge">Catalog</code> and <code class="highlighter-rouge">Order</code> resource models use EAV attributes.</p>
+<p><code class="highlighter-rouge">Customer</code>,<code class="highlighter-rouge">Catalog</code>和<code class="highlighter-rouge">Order</code>的资源模型都使用了EAV属性。</p>
 
 <h2 id="related">相关主题</h2>
 

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.0/frontend-dev-guide/translations/xlate.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.0/frontend-dev-guide/translations/xlate.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1195,7 +1195,7 @@
 <p>Changes made:</p>
 
 <ul>
-  <li>The <span term-uuid="9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f" class="glossary-term" data-toggle="popover">language package</span> (<code class="highlighter-rouge">i18n</code> directory) can now be moved and saved to any directory of your <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span>.</li>
+  <li>The <span term-uuid="9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f" class="glossary-term" data-toggle="popover">语言包</span> (<code class="highlighter-rouge">i18n</code> directory) can now be moved and saved to any directory of your <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span>.</li>
   <li>The phrases for translations are enabled in the <a href="https://github.com/magento/magento2/blob/2.0/lib/internal/Magento/Framework/Phrase.php" target="_blank">Phrase</a> class.</li>
 </ul>
 
@@ -1206,7 +1206,7 @@
   <li><a href="#m2devgde-xlate-themes">Why you might need to add a dictionary for a theme</a></li>
   <li><a href="#m2devgde-xlate-translating">Manually translate words and phrases</a></li>
   <li><a href="#m2devgde-xlate-dictionaries">Translation dictionaries</a></li>
-  <li><a href="#m2devgde-xlate-languagepack">Language packages</a></li>
+  <li><a href="#m2devgde-xlate-languagepack">语言包</a></li>
 </ul>
 
 <h2 id="m2devgde-xlate-themes">Why you might need to add a dictionary for a theme</h2>
@@ -1233,7 +1233,7 @@
   <p>Only one variant of translation can be used for a word or phrase in a package. Otherwise, Magento returns an error.</p>
 </div>
 
-<p>Anyone can submit translations on the <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span> using the Text Editor. Changes made in the Text Editor are not recorded in an instance’s dictionary; instead, they are stored in the database. In the storefront, an inline translation of a phrase overwrites the translation stated in a dictionary. However, inline translations are theme-specific and do not apply if another theme is assigned.</p>
+<p>Anyone can submit translations on the <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span> using the Text Editor. Changes made in the Text Editor are not recorded in an instance’s dictionary; instead, they are stored in the database. In the storefront, an inline translation of a phrase overwrites the translation stated in a dictionary. However, inline translations are theme-specific and do not apply if another theme is assigned.</p>
 
 <h2 id="m2devgde-xlate-dictionaries">Translation dictionaries</h2>
 <p>Magento translates words and phrases when all of the following conditions are met:</p>
@@ -1254,7 +1254,7 @@ app/design/frontend/Magento/demo/i18n/pt_BR.csv
 <h3 id="m2devgde-xlate-generatortool">The dictionary generator tool</h3>
 <p><a href="/guides/v2.0/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">More information about the dictionary generator tool</a>.</p>
 
-<h2 id="m2devgde-xlate-languagepack">Language packages</h2>
+<h2 id="m2devgde-xlate-languagepack">语言包</h2>
 <p>Magento enables you to create the following types of language packages:</p>
 
 <ul>

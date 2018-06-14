@@ -377,8 +377,8 @@
 
 </section>
 
-			<p>Magento收集Magento商业智能(<abbr title="Magento Business Analytics">MBI</abbr>)服务用于构建高级报表的数据。
-所有这些数据存储在一个可以安全传输到<abbr title="Magento Business Analytics">MBI</abbr>的加密的归档文件中
+			<p>Magento收集Magento商业智能(<abbr title="Magento商业分析">MBI</abbr>)服务用于构建高级报表的数据。
+所有这些数据存储在一个可以安全传输到<abbr title="Magento商业分析">MBI</abbr>的加密的归档文件中
 数据收集器声明在<code class="highlighter-rouge">etc/analytics.xml</code>配置文件中。 它声明了:</p>
 
 <ul>
@@ -389,7 +389,7 @@
 
 <div class="bs-callout bs-callout-warning">
   <p>这篇文章旨在提供更好的解释，关于数据收集器是如何工作。
-配置文件的作何改变都会导致问题，因为<abbr title="Magento Business Analytics">MBI</abbr>服务不希望在当前的版本中，配置文件有任何更改。</p>
+配置文件的作何改变都会导致问题，因为<abbr title="Magento商业分析">MBI</abbr>服务不希望在当前的版本中，配置文件有任何更改。</p>
 </div>
 
 <h2 id="例如">例如</h2>
@@ -429,7 +429,7 @@
 <p>上面的示例配置声明了以下内容:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">modules.csv</code>, <code class="highlighter-rouge">store_config.csv</code>, <code class="highlighter-rouge">stores.csv</code>报表文件必须被包含在准备给<abbr title="Magento Business Analytics">MBI</abbr>服务的归档文件中</li>
+  <li><code class="highlighter-rouge">modules.csv</code>, <code class="highlighter-rouge">store_config.csv</code>, <code class="highlighter-rouge">stores.csv</code>报表文件必须被包含在准备给<abbr title="Magento商业分析">MBI</abbr>服务的归档文件中</li>
   <li><code class="highlighter-rouge">modules.csv</code>必须包含数据提供器<code class="highlighter-rouge">\Magento\Analytics\ReportXml\ReportProvider</code>类提供的数据.
  提供的数据必根据在<code class="highlighter-rouge">modules</code>报表申明的在<code class="highlighter-rouge">etc/reports.xml</code>文件中定义的进行配置.</li>
   <li><code class="highlighter-rouge">store_config.csv</code>必须包含数据提供器<code class="highlighter-rouge">Magento\Analytics\Model\StoreConfigurationProvider</code>类提供的数据.</li>
@@ -743,14 +743,14 @@ T<code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code> �
     </tr>
     <tr>
       <td><code class="highlighter-rouge">class</code></td>
-      <td>完成的数据提供器的类名</td>
+      <td>完整的数据提供器的类名</td>
       <td><code class="highlighter-rouge">"Magento\Analytics\ReportXml\ReportProvider"</code></td>
       <td>必需</td>
     </tr>
   </tbody>
 </table>
 
-<p>Currently there is only one report provider is available that is <code class="highlighter-rouge">Magento\Analytics\ReportXml\ReportProvider</code>.</p>
+<p>当前仅支持一种有效的数据提供器<code class="highlighter-rouge">Magento\Analytics\ReportXml\ReportProvider</code>.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
     <span class="nt">&lt;providers&gt;</span>
@@ -764,8 +764,8 @@ T<code class="highlighter-rouge">\Magento\Analytics\Model\ReportWriter</code> �
 
 <h3 id="parameters"><code class="highlighter-rouge">&lt;parameters&gt;</code></h3>
 
-<p>Parameters used by <code class="highlighter-rouge">&lt;reportProvider&gt;</code>.
-Currently there is only one parameter is available. It is declared in <code class="highlighter-rouge">&lt;name&gt;</code>.</p>
+<p>用于<code class="highlighter-rouge">&lt;reportProvider&gt;</code>的参数。
+当前只有一个可用参数<code class="highlighter-rouge">&lt;name&gt;</code></p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
     <span class="nt">&lt;reportProvider</span> <span class="na">name=</span><span class="s">"stores"</span> <span class="na">class=</span><span class="s">"Magento\Analytics\ReportXml\ReportProvider"</span><span class="nt">&gt;</span>
@@ -777,12 +777,12 @@ Currently there is only one parameter is available. It is declared in <code clas
 ...
 </code></pre></div></div>
 
-<p>If <code class="highlighter-rouge">reportProvider class="Magento\Analytics\ReportXml\ReportProvider"</code>, then <code class="highlighter-rouge">&lt;name&gt;</code> references to the <code class="highlighter-rouge">&lt;report name /&gt;</code> in <code class="highlighter-rouge">reports.xml</code>.</p>
+<p>如果提供器是<code class="highlighter-rouge">reportProvider class="Magento\Analytics\ReportXml\ReportProvider"</code>，那么可以直接在<code class="highlighter-rouge">reports.xml</code>使用<code class="highlighter-rouge">&lt;report name /&gt;</code></p>
 
 <h3 id="customprovider"><code class="highlighter-rouge">&lt;customProvider&gt;</code></h3>
 
 <p>一个为报表文件提供数据的类.
-It cannot contain any parameters.</p>
+可以包含任何参数</p>
 
 <table>
   <thead>
@@ -802,7 +802,7 @@ It cannot contain any parameters.</p>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">class</code></td>
-      <td>完成的数据提供器的类名</td>
+      <td>完整的数据提供器的类名</td>
       <td><code class="highlighter-rouge">"Magento\Analytics\Model\StoreConfigurationProvider"</code></td>
       <td>必需</td>
     </tr>

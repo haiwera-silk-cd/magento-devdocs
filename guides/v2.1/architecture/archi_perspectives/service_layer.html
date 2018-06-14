@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.1/architecture/archi_perspectives/service_layer.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.1/architecture/archi_perspectives/service_layer.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -715,96 +715,96 @@
 
 </section>
 
-			<h2 id="what-is-a-服务层">What is a 服务层?</h2>
+			<h2 id="什么是服务层">什么是服务层?</h2>
 
-<p>The service layer provides a bridge between the presentation layer and the model layer of <span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">domain</span> logic and resource-specific data.
-This is implemented using <em>service contracts</em>, which are defined using <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> interfaces.</p>
+<p>服务层提供在表示层和<span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">领域</span>模型层逻辑和资源相关的数据之间一个桥梁。
+使用<em>服务契约</em>实现，服务契约以<span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span>接口的形式定义的。</p>
 
-<p>In general, the service layer:</p>
-
-<ul>
-  <li>
-    <p>Resides below the presentation layer and above the domain layer.</p>
-  </li>
-  <li>
-    <p>Contains service contracts, which define how the implementation will behave.</p>
-  </li>
-  <li>
-    <p>Provides an easy way to access the REST/SOAP <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> framework code (which also resides above the service contracts).
-You can bind service contracts to web service APIs in configuration files — no coding required.</p>
-  </li>
-  <li>
-    <p>Provides a stable API for other modules to call into.</p>
-  </li>
-</ul>
-
-<h2 id="who-accesses-the-service-layer">Who accesses the service layer?</h2>
-
-<p>All calls from web service interfaces, or users working with your <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span> (that is, controller-initiated requests), are typically routed through the service layer.
-We strongly encourage the use of service contracts to call business logic.</p>
-
-<p>External applications can make requests for business logic with simple SOAP and REST calls.
-With some simple <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> or JSON, you can expose the service layer’s PHP API and make it accessible to REST or SOAP web services.
-Once implemented, a web service can make a single API call and return an information-rich data structure.</p>
-
-<p><span term-uuid="cdf644c4-bc99-4550-a954-dd5ae165785a" class="glossary-term" data-toggle="popover">Service contract</span> clients include:</p>
+<p>通常，服务层:</p>
 
 <ul>
   <li>
-    <p>Controllers (initiated by actions of users of the storefront)</p>
+    <p>处在表示层下面而在领域层上面。</p>
   </li>
   <li>
-    <p>Web services (SOAP and REST API calls)</p>
+    <p>包含服务契约，契约定义了实现如何表现。</p>
   </li>
   <li>
-    <p>Other Magento modules through service contracts</p>
+    <p>提供一种简单的方式访问REST/SOAP<span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span>框架代码(它也处在服务契约上面)
+你可以通过配置绑定服务API到服务契约上 — 不需要写代码。</p>
+  </li>
+  <li>
+    <p>提供为其它的模块调用进来的稳定的API。</p>
   </li>
 </ul>
 
-<h2 id="service-contract-anatomy">Service contract anatomy</h2>
+<h2 id="谁调用服务层">谁调用服务层？</h2>
 
-<p>The service contract of a <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> is defined by the set of interfaces in the module’s <code class="highlighter-rouge">/Api</code> directory.</p>
+<p>所有服务接口的调用或和你<span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span>一起工作的用户(他们是启动控制器的请求),通常都是通过服务层路由的.
+我们非常鼓励使用服务契约的来调用业务逻辑。</p>
 
-<p>This directory contains:</p>
+<p>外部的应用程序为完成业务逻辑可以以简单的SOAP和REST调用发起请求。
+用一些简单的<span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span>或JSON，你可以暴露服务层的PHP API并使它可被REST或SOAP的web服务访问
+一旦被实现，网页服务能发起一个简单的 API调用并返回信息丰富的数据结构。</p>
+
+<p><span term-uuid="cdf644c4-bc99-4550-a954-dd5ae165785a" class="glossary-term" data-toggle="popover">服务契约</span>的客户端包含:</p>
 
 <ul>
   <li>
-    <p>Service interfaces in the <code class="highlighter-rouge">/Api</code> <span term-uuid="621ef86b-7314-4fbc-a80d-ab7fa45a27cb" class="glossary-term" data-toggle="popover">namespace</span> of the module (e.g <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Customer/Api">Catalog API</a>).</p>
+    <p>控制器 (被网店前台用户的动作启动的)</p>
   </li>
   <li>
-    <p>Data (or <em>entity</em>) interfaces in the <code class="highlighter-rouge">Api/Data</code> directory (e.g. <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Customer/Api/Data">Catalog API/Data</a>).
-Data entities* are data structures passed to and returned from service interfaces.</p>
-
-    <p>Files in the data directory contain <code class="highlighter-rouge">get()</code> and <code class="highlighter-rouge">set()</code> methods for entries in the entity table and extension attributes.</p>
+    <p>Web 服务(SOAP和REST调用)</p>
+  </li>
+  <li>
+    <p>其它经由服务契约的Magento模块。</p>
   </li>
 </ul>
 
-<p>Typically, service contracts provide three distinct types of interfaces:</p>
+<h2 id="服务契约剖析">服务契约剖析</h2>
+
+<p>一个<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>的服务契约由一系列的接口定义，它们放在模块的<code class="highlighter-rouge">/Api</code>目录下。</p>
+
+<p>目录包含:</p>
 
 <ul>
   <li>
-    <p>Repository interfaces</p>
+    <p>模块(比如<a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Customer/Api">Catalog API</a>)的<code class="highlighter-rouge">/Api</code> <span term-uuid="621ef86b-7314-4fbc-a80d-ab7fa45a27cb" class="glossary-term" data-toggle="popover">命名空间</span>下的服务接口</p>
   </li>
   <li>
-    <p>Management interfaces</p>
-  </li>
-  <li>
-    <p><span term-uuid="3f0f2ef1-ad38-41c6-bd1e-390daaa71d76" class="glossary-term" data-toggle="popover">Metadata</span> interfaces</p>
+    <p><code class="highlighter-rouge">Api/Data</code>目录下的数据(或 <em>实体</em>)接口(例如：<a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/Customer/Api/Data">Catalog API/Data</a>).
+<em>数据实体</em> 是服务接口传递和返回的数据结构</p>
+
+    <p>数据目录下的文件为实体表和扩展属性的项设有<code class="highlighter-rouge">get()</code>和<code class="highlighter-rouge">set()</code>方法</p>
   </li>
 </ul>
 
-<p>However, there is no requirement that service contracts conform to all three patterns.</p>
+<p>通常，服务契约提供三种不同类型的接口：</p>
 
-<h2 id="advantages-of-service-contracts">Advantages of service contracts</h2>
+<ul>
+  <li>
+    <p>仓库接口</p>
+  </li>
+  <li>
+    <p>管理接口</p>
+  </li>
+  <li>
+    <p><span term-uuid="3f0f2ef1-ad38-41c6-bd1e-390daaa71d76" class="glossary-term" data-toggle="popover">元数据</span>接口</p>
+  </li>
+</ul>
 
-<p>服务约定 allow you to add a new customer <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> that adds or changes business logic-level resource models without breaking the system.</p>
+<p>然而，服务契约不必都要符合这三种模式</p>
 
-<p>This is done using the <em>&lt;preference&gt;</em> element in a custom module’s <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">dependency injection</span> configuration file (<code class="highlighter-rouge">di.xml</code>) file.</p>
+<h2 id="服务契约的优势">服务契约的优势</h2>
 
-<p>The <code class="highlighter-rouge">di.xml</code> file specifies which PHP class to use for the interface <code class="highlighter-rouge">Magento\Customer\Api\CustomerRepositoryInterface</code>.</p>
+<p>服务契约允许你去添加一个定制的添加或修改了业务逻辑层资源模型的<span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span>而不破坏系统。</p>
 
-<p>Another module can change this interface file by specifying a different class name.
-However, if the client code uses the interface definition only, no class change is necessary.</p>
+<p>在定制的模块的<span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">依赖注入</span>配置文件(<code class="highlighter-rouge">di.xml</code>)中使用<em>&lt;preference&gt;</em>元素</p>
+
+<p><code class="highlighter-rouge">di.xml</code>文件指定了哪一个PHP类用于<code class="highlighter-rouge">Magento\Customer\Api\CustomerRepositoryInterface</code>接口.</p>
+
+<p>其它模块可以以指定不同类名的方式改变接口文件。
+然而，如果客户端代码仅使用了接口的定义，那么类修改就是不必要的。</p>
 
 <h2 id="related">相关主题</h2>
 

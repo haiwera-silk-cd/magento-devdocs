@@ -666,56 +666,56 @@
 
 </section>
 
-			<h2 id="what-is-magento-领域层">What is Magento 领域层?</h2>
+			<h2 id="什么是领域层">什么是领域层？</h2>
 
-<p>The <span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">domain</span> layer holds the business logic layer of a Magento <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>. It typically does not contain resource-specific or database-specific information. Its primary functions include:</p>
+<p><span term-uuid="41aee03b-a5d5-49c2-8839-894090ef4e86" class="glossary-term" data-toggle="popover">领域</span>层维护Magento<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>的业务逻辑。典型地，它不包含资源相关的或数据库相关的信息。它的主要功能包括：</p>
 
 <ul>
   <li>
-    <p>Defining the generic Magento data objects, or models, that contain business logic. This logic defines which operations can be performed on particular types of data, such as a Customer object. These models contain generic information only. Applications can also use SOAP or RESTful endpoints to request data from models.</p>
+    <p>定义一般的Magento数据对象，或模型，它们包含业务逻辑。这些逻辑定义了在特定类型的数据上（诸如一个客户对象）哪些操作可以被执行。模型则仅包含普通信息。应用程序也可以使用SOAP或REST风格的接口来请求模型的数据。</p>
   </li>
   <li>
-    <p>(Optionally) Including the implementation of service contracts, although not their definition.</p>
+    <p>(可选)包含服务契约的实现，虽然没有它们的定义。</p>
   </li>
 </ul>
 
 <div class="bs-callout bs-callout-tip">
-  <p><b>Best practice:</b> Use service contracts to communicate with the domain layer by passing data types through strongly typed objects. This helps you avoid the need to replace presentation layer code when replacing business layer logic.</p>
+  <p><b>最佳实践:</b> 使用服务契约通过强类型对象传递数据类型来和领域层通信。这会帮助你避免当替换业务层逻辑时替换表示层的代码的需要。</p>
 </div>
 
-<h2 id="models">Models</h2>
+<h2 id="模型">模型</h2>
 
-<p>Each domain-layer model contains a reference to a resource model, which it uses to retrieve data from the database with MySql calls. This resource model contains logic for connecting to the underlying database, typically MySQL. A model requires a resource model only if the model data must persist.</p>
+<p>每个领域层的模型包含一个资源模型的引用，这个引用用于通过MySQL调用来接收数据库的数据。资源模型包含连接到潜在数据库的逻辑，典型地像MySQL.一个模型只有在模型数据必须持久化的情况下才需要资源模型.</p>
 
-<h2 id="who-accesses-the-domain-layer">Who accesses the domain layer?</h2>
+<h2 id="谁访问领域层">谁访问领域层？</h2>
 
-<p>There are three primary ways of accessing a module’s domain-layer code:</p>
+<p>有三种主要的访问一个模块领域层代码方式：</p>
 
 <ul>
   <li>
-    <p>服务约定 are the recommended way for one module to access another module’s domain-level code. This loosely coupled solution is the optimal way for most modules to access another module.</p>
+    <p>服务契约是一个模块访问另一个模块领域层代码最推荐的方式。这样的松藕合情况也是多数模块访问其它模块最优的方式。</p>
   </li>
   <li>
-    <p>A module can directly call into another module. This tightly coupled solution is not recommended for most situations, but is sometimes unavoidable.</p>
+    <p>一个模块直接调用到另一个模块。这种紧藕合的情况在大多数情况下是不被推荐的，但有时可能又无法避免。</p>
   </li>
   <li>
-    <p>领域层 code in one module can also plug itself into another module by:</p>
+    <p>一个模块的领域层代码也能能过以下方式将自己插入到另一个模块：</p>
 
     <ul>
       <li>
-        <p>event hooks</p>
+        <p>事件钩子</p>
       </li>
       <li>
-        <p>plugins</p>
+        <p>插件</p>
       </li>
       <li>
-        <p><code class="highlighter-rouge">di.xml</code> files (with an SPI contract)</p>
+        <p><code class="highlighter-rouge">di.xml</code>文件(使用SPI契约)</p>
       </li>
     </ul>
   </li>
 </ul>
 
-<p>Your strategy for calling another module’s domain-layer code is highly dependent upon the unique configuration and needs of your system.</p>
+<p>你的调用另一个模块领域层代码的策略是相当依赖唯一配置和你系统需要的</p>
 
 <h2 id="related">相关主题</h2>
 

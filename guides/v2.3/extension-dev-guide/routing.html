@@ -789,12 +789,12 @@
         
         
         
-        <li class="nav-level2  " id="服务约定">
+        <li class="nav-level2  " id="服务契约">
 
             
 
             
-            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+            <a href="/guides/v2.3/extension-dev-guide/service-contracts/service-contracts.html">服务契约</a>
             
 
             
@@ -1539,7 +1539,7 @@ However, you must not customize the routers that are used in Magento core module
 
 <p>Configurations of the routes are stored in <code class="highlighter-rouge">routes.xml</code> in the scopes area.</p>
 
-<p>Only the standard <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> and <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">backend</span> routers use routes. Typically, the configuration for a route is in the following format:</p>
+<p>Only the standard <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> and <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">后端</span> routers use routes. Typically, the configuration for a route is in the following format:</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;config&gt;</span>
     <span class="nt">&lt;router</span> <span class="na">id=</span><span class="s">"%routerId%"</span><span class="nt">&gt;</span>
@@ -1569,7 +1569,7 @@ However, you must not customize the routers that are used in Magento core module
 <p>To remove the controller action, forward to <code class="highlighter-rouge">noroute</code>, for instance, in <code class="highlighter-rouge">app/code/Company/SomeExtension/Controller/Account/Create.php</code>:</p>
 
 <pre>
-<span term-uuid="621ef86b-7314-4fbc-a80d-ab7fa45a27cb" class="glossary-term" data-toggle="popover">namespace</span> Company\SomeExtension\Controller\Account;
+<span term-uuid="621ef86b-7314-4fbc-a80d-ab7fa45a27cb" class="glossary-term" data-toggle="popover">命名空间</span> Company\SomeExtension\Controller\Account;
 
 class Create extends \Magento\Framework\App\Action\Action
 {

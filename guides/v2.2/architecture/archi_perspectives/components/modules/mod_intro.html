@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.2/architecture/archi_perspectives/components/modules/mod_intro.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/architecture/archi_perspectives/components/modules/mod_intro.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -723,45 +723,44 @@
 
 </section>
 
-			<h2 id="arch-modules-overview">What is a Magento module?</h2>
+			<h2 id="arch-modules-overview">Magento模块是什么？</h2>
 
-<p>A <i>module</i> is a logical group – that is, a directory containing blocks, controllers, helpers, models – that are related to a specific business feature. In keeping with Magento’s commitment to optimal modularity, a <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> encapsulates one feature and has minimal dependencies on other modules.</p>
+<p><i>模块</i>是一个逻辑组–是一个包含了显示区块类、控制器、助手类、模型的目录 – 同一个特定业务特征相关的。为遵守Magento的规范达到最优模块化，<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>应囊括了一个特性且和其它模块有尽可能少的依赖</p>
 
-<p>Modules and themes are the units of customization in Magento. Modules provide business features, with supporting logic,  while themes strongly influence user experience and <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span> appearance. Both components have a life cycle that allows them to be installed, deleted, and disabled. From the perspective of both merchants and <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> developers, modules are the central unit of Magento organization.</p>
+<p>模块和主题都是Magento可定制化的单元。模块使用支撑逻辑提供了业务特性，而主题全方位的影响用户体验及<span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网店前台</span>的显示。这两个组件都有一个生命周期，允许它们被安装、删除、及禁用。从商人和<span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span>开发者的视角来看，模块是Magento组织的核心单元。</p>
 
-<p>The Magento框架 provides a set of core logic: <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> code, libraries, and the basic functions that are inherited by the modules and other components.</p>
+<p>Magento框架提供了一套核心逻辑: <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span>代码，库，以及可以被模块和其它逻辑继承的基本方法。</p>
 
-<h2 id="module-purpose">Module purpose</h2>
+<h2 id="模块的目的">模块的目的</h2>
 
-<p>The purpose of each module is to provide specific product features by implementing new functionality or extending the functionality of other modules. Each module is designed to function independently, so the inclusion or exclusion of a particular module does not typically affect the functionality of other modules.</p>
+<p>每个模块的目的是实现新的功能或扩展其它模块的功能以提供特定产品特性。每个模块被设计成独立的，如此，引入或排出一个特定模块不至于影响到其它模块的功能。</p>
 
-<h2 id="module-components">Module components</h2>
+<h2 id="模块组件">模块组件</h2>
 
-<p>A module is a directory that contains the PHP and <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> files (blocks, controllers, helpers, models) that are related to a specific business feature, such as Shipping. Specifically, a Magento module is composed of these software components: <a href="/guides/v2.2/frontend-dev-guide/themes/theme-overview.html">themes</a>, <a href="/guides/v2.2/architecture/archi_perspectives/third-party-libs.html">libraries</a>, and <a href="/guides/v2.2/frontend-dev-guide/translations/xlate.html#m2devgde-xlate-languagepack">language packages</a>.</p>
+<p>模块是一个目录，有某个业务特性相关的PHP和<span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span>文件(区块类，控制器，助手类，模型)，如Magento的Shipping模块，它由以下软件组件组成：<a href="/guides/v2.2/frontend-dev-guide/themes/theme-overview.html">themes</a>, <a href="/guides/v2.2/architecture/archi_perspectives/third-party-libs.html">libraries</a>,以及<a href="/guides/v2.2/frontend-dev-guide/translations/xlate.html#m2devgde-xlate-languagepack">language packages</a>.</p>
 
-<h2 id="where-do-modules-live">Where do modules live?</h2>
+<h2 id="模块存放在哪">模块存放在哪？</h2>
 
-<p>Modules typically live in the <code class="highlighter-rouge">vendor</code> directory of a Magento installation, in a directory with the following PSR-0 compliant format: <code class="highlighter-rouge">vendor/&lt;vendor&gt;/&lt;type&gt;-&lt;module-name&gt;</code>, where <code class="highlighter-rouge">&lt;type&gt;</code> can be one of the following values:</p>
+<p>典型地，存放在magento安装目录的<code class="highlighter-rouge">vendor</code>目录下，以以下的PSR-0规范的格式：<code class="highlighter-rouge">vendor/&lt;vendor&gt;/&lt;type&gt;-&lt;module-name&gt;</code>, <code class="highlighter-rouge">&lt;type&gt;</code>可以是以下值:</p>
 <ul>
-  <li><strong><code class="highlighter-rouge">module</code></strong> - for modules (<code class="highlighter-rouge">module-customer-import-export</code>)</li>
-  <li><strong><code class="highlighter-rouge">theme</code></strong> - for frontend and admin themes (<code class="highlighter-rouge">theme-frontend-luma</code>或<code class="highlighter-rouge">theme-adminhtml-backend</code>)</li>
-  <li><strong><code class="highlighter-rouge">language</code></strong> - for language packs (<code class="highlighter-rouge">language-de_de</code>)</li>
+  <li><strong><code class="highlighter-rouge">module</code></strong> - 表示模块 (<code class="highlighter-rouge">module-customer-import-export</code>)</li>
+  <li><strong><code class="highlighter-rouge">theme</code></strong> - 表示前台或管理面板的主题 (<code class="highlighter-rouge">theme-frontend-luma</code>或<code class="highlighter-rouge">theme-adminhtml-backend</code>)</li>
+  <li><strong><code class="highlighter-rouge">language</code></strong> - 表示语言包 (<code class="highlighter-rouge">language-de_de</code>)</li>
 </ul>
 
-<p>For example, the Customer Import/Export module of Magento can be found at <code class="highlighter-rouge">vendor/magento/module-customer-import-export</code>.</p>
+<p>例如，Magento客户导入/导出模块定义在 <code class="highlighter-rouge">vendor/magento/module-customer-import-export</code>.</p>
 
-<p>But if you are creating a new module for distribution, you can just create the <code class="highlighter-rouge">app/code/&lt;vendor&gt;/&lt;type&gt;-&lt;module-name&gt;</code> directory and the required directories within it.</p>
+<p>但如果你要创建一个新的模块，你仅能创建<code class="highlighter-rouge">app/code/&lt;vendor&gt;/&lt;type&gt;-&lt;module-name&gt;</code>目录和它里面的所需的目录。</p>
 
-<p>Inside this folder, you will find all the code related to this module, including the <code class="highlighter-rouge">etc/module.xml</code> file, which contains the name and version of the module, as well as any dependencies.</p>
+<p>在目录中，你可以找到所有这个模块的代码，包括定义此模块名称、版本以及所有依赖项的<code class="highlighter-rouge">etc/module.xml</code>文件。</p>
 
-<h2 id="working-with-modules">Working with modules</h2>
+<h2 id="使用模块开发">使用模块开发</h2>
 
-<p>Magento developers, administrators, and anyone building a Magento web site will want to review all relevant topics surrounding their particular goals and use cases.</p>
+<p>Magento开发者，管理员及任何构建了Magento站点的人，想要了解自已特定目的和用例所有相关的主题。</p>
 
-<p>See <a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for specific instructions on extending modules.</p>
+<p>参考<a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>了解扩展模块的特定用法说明。</p>
 
-<p>See
-<a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a> for information on implementing themes and other components.</p>
+<p>参考<a href="/guides/v2.2/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a>了解实现主题和其它组件的相关</p>
 
 <h2 id="arch-modules-related">相关主题</h2>
 
@@ -769,7 +768,7 @@
 
 <p><a href="/guides/v2.2/architecture/archi_perspectives/components/modules/mod_and_areas.html">模块和地区</a></p>
 
-<p><a href="/guides/v2.2/architecture/archi_perspectives/components/modules/mod_conventions.html">Module location and naming conventions</a></p>
+<p><a href="/guides/v2.2/architecture/archi_perspectives/components/modules/mod_conventions.html">模块位置和命名习惯</a></p>
 
 			
 		</div>

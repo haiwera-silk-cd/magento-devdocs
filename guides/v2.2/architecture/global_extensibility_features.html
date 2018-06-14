@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="/guides/v2.2/architecture/global_extensibility_features.html">
+	<link rel="canonical" href="http://localhost:4000/guides/v2.2/architecture/global_extensibility_features.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -723,17 +723,17 @@
 
 </section>
 
-			<h2 id="overview">Overview</h2>
+			<h2 id="概述">概述</h2>
 
 <p>Essential qualities foster extensibility throughout the entire set of Magento组件. This discussion focuses on:</p>
 
 <ul>
-  <li>Modularity</li>
+  <li>模块化</li>
   <li>Reliance on popular design patterns</li>
   <li>Coding standards</li>
   <li>Flexible attribute types</li>
   <li>Web APIs</li>
-  <li>服务约定 and <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">dependency injection</span></li>
+  <li>服务契约 and <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">依赖注入</span></li>
   <li>Plug-ins</li>
 </ul>
 
@@ -759,7 +759,7 @@
 
 <h3 id="rich-product-ecosystem">Rich product ecosystem</h3>
 
-<p>The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit <a href="https://marketplace.magento.com/">Magento Marketplace</a> for an overview of the many modules and themes available for download and to buy modules and <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> packages, which offer more possibilities for extending your <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">storefront</span>.</p>
+<p>The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit <a href="https://marketplace.magento.com/">Magento Marketplace</a> for an overview of the many modules and themes available for download and to buy modules and <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> packages, which offer more possibilities for extending your <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span>.</p>
 
 <h3 id="flexible-attribute-types">Flexible attribute types</h3>
 
@@ -815,11 +815,11 @@
 
 <p>See <a href="/guides/v2.2/get-started/bk-get-started-api.html">Magento web API起步</a> for more information.</p>
 
-<h3 id="服务约定-dependency-injection-and-dependency-inversion">服务约定, dependency injection, and dependency inversion</h3>
+<h3 id="服务契约-dependency-injection-and-dependency-inversion">服务契约, dependency injection, and dependency inversion</h3>
 
-<p><i>服务约定</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务约定 define the endpoints that function as a module’s public API. Defining these endpoints is an essential part of adding a module.</p>
+<p><i>服务契约</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务契约 define the endpoints that function as a module’s public API. Defining these endpoints is an essential part of adding a module.</p>
 
-<p>服务约定 are discussed throughout the Magento documentation set. See <a href="/guides/v2.2/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.</p>
+<p>服务契约 are discussed throughout the Magento documentation set. See <a href="/guides/v2.2/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="/guides/v2.2/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.</p>
 
 <p>Magento implements <i>dependency injection</i> along with service contracts. 依赖注入 provides a mechanism for changing a module’s behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept <em>dependency inversion</em> support Magento’s fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.</p>
 
