@@ -9,16 +9,16 @@ version: 2.0
 github_link: architecture/global_extensibility_features.md
 ---
 
-## Overview
+## 概述
 
 Essential qualities foster extensibility throughout the entire set of Magento组件. This discussion focuses on:
 
-* Modularity
+* 模块化
 * Reliance on popular design patterns
 * Coding standards
 * Flexible attribute types
 * Web APIs
-* 服务约定 and {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %}
+* 服务契约 and {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %}
 * Plug-ins
 
 ### Modularity
@@ -43,7 +43,7 @@ See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编�
 
 ### Rich product ecosystem
 
-The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit [Magento Marketplace](https://marketplace.magento.com/) for an overview of the many modules and themes available for download and to buy modules and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} packages, which offer more possibilities for extending your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit [Magento Marketplace](https://marketplace.magento.com/) for an overview of the many modules and themes available for download and to buy modules and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} packages, which offer more possibilities for extending your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 ### Flexible attribute types
 
@@ -93,11 +93,11 @@ Magento or third-party services can be configured as a web {% glossarytooltip 78
 
 See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Magento web API起步</a> for more information.
 
-### 服务约定, dependency injection, and dependency inversion
+### 服务契约, dependency injection, and dependency inversion
 
-<i>服务约定</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务约定 define the endpoints that function as a module's public API. Defining these endpoints is an essential part of adding a module.
+<i>服务契约</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务契约 define the endpoints that function as a module's public API. Defining these endpoints is an essential part of adding a module.
 
-服务约定 are discussed throughout the Magento documentation set. See <a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.
+服务契约 are discussed throughout the Magento documentation set. See <a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.
 
 Magento implements <i>dependency injection</i> along with service contracts. 依赖注入 provides a mechanism for changing a module's behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept *dependency inversion* support Magento's fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.
 

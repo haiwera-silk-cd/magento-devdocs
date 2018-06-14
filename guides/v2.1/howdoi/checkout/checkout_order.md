@@ -13,7 +13,7 @@ functional_areas:
 
 This topic describes how to add custom validations to be performed before the order is placed during {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. Namely, the validations which are performed after a shopper clicks the **Place Order** button. Writing the validation logic itself is not covered in this topic.
 
-## Overview
+## 概述
 To add custom validations before the order placement action, you must do the following:
 
 1. [Create the validator](#validator).

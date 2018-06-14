@@ -65,7 +65,7 @@ We address the following functional issues in this release.
 <!--- 52614 -->* The `setup:static-content:deploy` command now provides flags that you can use to exclude or include individual themes, areas, and locales. For more information, see <a href="https://github.com/magento/magento2/issues/4294" target="_blank">(GITHUB-4294)</a>. 
 
 
-<!--- 55300, 55620, 54682-->* We've improved {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} performance when creating 2500 or more product variants. 
+<!--- 55300, 55620, 54682-->* We've improved {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} performance when creating 2500 or more product variants. 
 
 
 

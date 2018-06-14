@@ -5,7 +5,7 @@ version: 2.1
 github_link: mtf/features/parallel_execution.md
 ---
 
-## Overview
+## 概述
 
 Parallel execution is applicable for [test suites] only. It decreases the time of testing due to distribution of test cases into multiple threads. A test case cannot be split between different threads. Parallel execution can use one or more copies of the Magento application under test (Magento instances).
 

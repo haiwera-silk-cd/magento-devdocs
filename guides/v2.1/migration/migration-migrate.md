@@ -22,7 +22,7 @@ During the migration process, **do not:**
 
 2. Alter any code
 
-3. Make changes in the Magento 2 Admin and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}
+3. Make changes in the Magento 2 Admin and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}
 
 <div class="bs-callout bs-callout-tip">
   <p>All operations in Magento 1 storefront are allowed at this time.</p>

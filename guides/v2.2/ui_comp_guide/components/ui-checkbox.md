@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-checkbox.md
 ---
 
-## Overview
+## 概述
 
 The 复选框组件 implements a form field that is an {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="checkbox">` element. It can also be displayed as a "toggle" handler or a radio button element.
 

@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_GiftCardNegotiableQuote` module enables gift cards to be displayed in a negotiable quote in an B2B environment. This module extends `Magento_NegotiableQuote` and `Magento_GiftCard` modules.
 

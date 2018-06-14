@@ -10,7 +10,7 @@ functional_areas:
   - Integration
 ---
 
-You can define whether the payment method is available for the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} in the [payment method configuration in `config.xml`]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html):
+You can define whether the payment method is available for the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} in the [payment method configuration in `config.xml`]({{ page.baseurl }}/payments-integrations/base-integration/payment-option-config.html):
 
 - `can_use_checkout`: whether {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} is available in storefront checkout
 - `can_use_internal`: whether payment method is available in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} order creation 

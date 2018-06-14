@@ -8,7 +8,7 @@ version: 2.2
 github_link: extension-dev-guide/build/di-xml-file.md
 ---
 
-## Overview
+## 概述
 
 The `di.xml` file configures which [dependencies]({{ page.baseurl }}/extension-dev-guide/depend-inj.html) to inject by the [object manager]({{ page.baseurl }}/extension-dev-guide/object-manager.html). You can also specify [sensitive configuration sensitive](#ext-di-sens) using `di.xml`.
 

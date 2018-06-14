@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-radioset.md
 ---
 
-## Overview
+## 概述
 
 The 单选组components is a shortcut for [Checkboxset]({{ page.baseurl }}/ui_comp_guide/components/ui-checkboxset.html), with the input type set to the radio button.
 

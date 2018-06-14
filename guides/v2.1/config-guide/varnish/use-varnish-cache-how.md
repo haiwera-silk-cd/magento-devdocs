@@ -40,7 +40,7 @@ The following figure shows an example using a browser inspector.
 
 <img src="{{ site.baseurl }}/common/images/varnish_apache_first_visit.png" alt="The first time a request is made for a cacheable object, Varnish delivers it to the browser">
 
-The preceding example shows a request for the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} main page (`m2_ce_my`). {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} and {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} assets are cached on the client browser.
+The preceding example shows a request for the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} main page (`m2_ce_my`). {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} and {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} assets are cached on the client browser.
 
 <div class="bs-callout bs-callout-info" id="info">
 	<p>Most static assets have an HTTP 200 (OK) status code, indicating the asset was retrieved from the server.</p>

@@ -98,7 +98,7 @@ During the build phase, the site is not in maintenance mode and will not be brou
 This phase builds the codebase and runs hooks in the `build` section of `.magento.app.yaml`. The default Magento build hook is the `php ./vendor/bin/m2-ece-build` command and performs the following:
 
 -  Applies patches located in `vendor/magento/ece-patches`, as well as optional, project-specific patches in `m2-hotfixes`
--  Regenerates code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration (that is, the Magento `generated/` directory, which includes `generated/code` and `generated/metapackage`) using `bin/magento setup:di:compile`.
+-  Regenerates code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configuration (that is, the Magento `generated/` directory, which includes `generated/code` and `generated/metapackage`) using `bin/magento setup:di:compile`.
 -  Checks if the [`app/etc/config.php`]({{ page.baseurl }}/cloud/live/sens-data-over.html) file exists in the codebase. Magento auto-generates this file it does not detect it during the build phase and includes a list of modules and extensions. If it exists, the build phase continues as normal, compresses static files using `gzip`, and deploys the files, which reduces downtime in the deployment phase. Refer to [Magento build options](http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#build) to learn about customizing or disabling file compression.
 
   <div class="bs-callout bs-callout-info" markdown="1">
@@ -127,7 +127,7 @@ The slug includes all files and folders **excluding the following** mounts confi
 -  `"pub/static": "shared:files/static"`
 
 ### Phase 4: Deploy slugs and cluster {#cloud-deploy-over-phases-slugclus}
-Now we provision your applications and all of the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} services you need:
+Now we provision your applications and all of the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} services you need:
 
 -  Mounts each service in a container (web server, Elasticsearch, RabbitMQ)
 -  Mounts the read-write file system (mounted on a highly available distributed storage grid)

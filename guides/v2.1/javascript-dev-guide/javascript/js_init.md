@@ -25,7 +25,7 @@ Depending on your task, you might want to use declarative or imperative notation
 
 ### Declarative notation
 
-Using the declarative notation to insert a JS component allows preparing all the configuration on the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} side and outputting it to the page source using standard tools. You should use declarative notation if your JavaScript component requires initialization.
+Using the declarative notation to insert a JS component allows preparing all the configuration on the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} side and outputting it to the page source using standard tools. You should use declarative notation if your JavaScript component requires initialization.
 
 In Magento 2 there are two ways of declarative notation:
 

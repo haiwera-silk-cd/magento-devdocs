@@ -58,7 +58,7 @@ The configuration of the component can include:
     
   * bulkConfig - in current implementation on cms_pages, includes Bulk Edit component as a plugin
     
-  * clientConfig - is responsible for editor communication with {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %}. Contains nodes with url's where requests for storing and validating data are sent:
+  * clientConfig - is responsible for editor communication with {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %}. Contains nodes with url's where requests for storing and validating data are sent:
 
     {% highlight XML%}
     <item name="clientConfig" xsi:type="array">

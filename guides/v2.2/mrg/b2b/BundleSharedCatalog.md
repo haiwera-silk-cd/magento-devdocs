@@ -10,7 +10,7 @@ functional_areas:
   - B2B
   - Catalog
 ---
-## Overview
+## 概述
 
 The `Magento_BundleSharedCatalog` module enables bundle products to be added to a shared catalog in an B2B environment. This module extends `Magento_SharedCatalog` module and `Magento_Bundle` module.
 

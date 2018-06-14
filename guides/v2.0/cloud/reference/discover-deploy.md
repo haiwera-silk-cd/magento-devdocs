@@ -90,7 +90,7 @@ This phase builds the codebase and runs hooks in the `build` section of `.magent
 
 * Applies patches located in `vendor/magento/magento-cloud-configuration/patches`, as well as optional project-specific patches in `m2-hotfixes`
 *	Enables all extensions. To best build all code for deployment, we enable all extensions, build, then disable extensions you had disabled in your configuration.
-*	Regenerates code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration (that is, the Magento `var/generation` and `var/di` directories) using `bin/magento setup:di:compile`.
+*	Regenerates code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configuration (that is, the Magento `var/generation` and `var/di` directories) using `bin/magento setup:di:compile`.
 
 **重要:** At this point the cluster has not been created yet. So you should not try to connect to a database or imagine anything was daemonized.
 
@@ -116,7 +116,7 @@ The slug includes all files and folders **excluding the following** mounts confi
 * `"pub/static": "shared:files/static"`
 
 ### Phase 4: Deploy slugs and cluster {#cloud-deploy-over-phases-slugclus}
-Now we provision your applications and all the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} services you need:
+Now we provision your applications and all the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} services you need:
 
 *	Mounts each service in its own container (web server, Elasticsearch, RabbitMQ and so on)
 *	Mounts the read-write file system (mounted on a highly available distributed storage grid)

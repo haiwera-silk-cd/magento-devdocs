@@ -50,7 +50,7 @@ See [Magento Security Center](https://magento.com/security/patches/magento-221-2
 <!--- 59406 -->*  The category/product indexer now successfully completes a full reindexing of all indexes on large profiles with 500,000 or more products. Previously, Magento successfully generated a large profile, but failed to complete the reindexing of the categories or products, and displayed the following error: `Error 1114: Table is full`.
 
 
-<!--- 58792 -->* The {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} now displays images that Magento resizes during product save operations, rather than resizing the product on the storefront. Previously, the image path contained `store_id`, and during save operations, Magento resized images for  the default store only. 
+<!--- 58792 -->* The {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} now displays images that Magento resizes during product save operations, rather than resizing the product on the storefront. Previously, the image path contained `store_id`, and during save operations, Magento resized images for  the default store only. 
 
 
 <!--- 61798 -->* When you delete an image in the Admin, Magento no longer deletes it on the server. Previously, Magento deleted it from the server as well, which caused errors for other products (example error message: `Cannot gather stats! Warning!stat(): stat failed for`).

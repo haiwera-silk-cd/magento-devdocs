@@ -11,7 +11,7 @@ github_link: ui_comp_guide/ui_comp_conceptual_template.md
 
 <!-- Содержание -->
 
-## Overview
+## 概述
 
 High-level, one or two sentences, describing the functionality.
 

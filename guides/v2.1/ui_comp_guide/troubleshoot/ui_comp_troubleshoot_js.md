@@ -8,7 +8,7 @@ version: 2.1
 github_link: ui_comp_guide/troubleshoot/ui_comp_troubleshoot_js.md
 ---
 
-## Overview
+## 概述
 
 This article describes how to define what UI 组件 are used on a particular page, their {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 and what data they use.
 

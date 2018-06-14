@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-dynamicrows.md
 ---
 
-## Overview
+## 概述
 
 The 动态行组件 is a dynamic collection of records. The user can edit the records, change their position, and navigate through the collection.
 

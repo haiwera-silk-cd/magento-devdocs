@@ -17,7 +17,7 @@ It extends the <a href="{{ page.baseurl }}/javascript-dev-guide/widgets/widget_m
 
 The 问询弹框小工具 source is <a href="{{ site.mage2000url }}app/code/Magento/Ui/view/base/web/js/modal/prompt.js">&lt;Magento_Ui_module_dir&gt;/view/base/web/js/modal/prompt.js</a>
 
-The widget can be used for implementing prompt windows for both, Admin and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. The design patterns for the modal pop-up windows in the Admin are described in the <a href="{{ page.baseurl }}/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html#modals">Magento管理面板用到的设计模式和库, the Slide-out Panels, Modal Windows, and Overlays topic.</a>
+The widget can be used for implementing prompt windows for both, Admin and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. The design patterns for the modal pop-up windows in the Admin are described in the <a href="{{ page.baseurl }}/pattern-library/containers/slideouts-modals-overlays/slideouts-modals-overalys.html#modals">Magento管理面板用到的设计模式和库, the Slide-out Panels, Modal Windows, and Overlays topic.</a>
 
 <h2 id="prompt_init">Initialize the 问询弹框小工具</h2>
 

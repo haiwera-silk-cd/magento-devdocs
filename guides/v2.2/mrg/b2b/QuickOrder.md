@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_QuickOrder` module allows customers to improve their user experience by creating a new order from a list of multiple SKUs.
 

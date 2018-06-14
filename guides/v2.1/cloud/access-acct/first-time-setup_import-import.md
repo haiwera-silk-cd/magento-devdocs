@@ -296,6 +296,6 @@ To verify everything imported properly, perform the following tasks in your loca
 
 1.  Log in to the Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} using the user name and password of your {{site.data.var.ee}} system.
 1.  Make sure settings in the Admin are the same as your {{site.data.var.ee}} system.
-1.  Access the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+1.  Access the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 1.  Make sure categories, products, and so on display as you expect.
 1.  Test everything thoroughly.

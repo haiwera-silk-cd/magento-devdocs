@@ -29,7 +29,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 
 #### Performance
 
-<!--- 54682 -->* We've improved {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} performance when you use many variations of a {% glossarytooltip 2fd4d100-28d2-45ca-bec1-128444ea98e6 %}configurable product{% endglossarytooltip %}.
+<!--- 54682 -->* We've improved {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} performance when you use many variations of a {% glossarytooltip 2fd4d100-28d2-45ca-bec1-128444ea98e6 %}configurable product{% endglossarytooltip %}.
 
 
 #### Miscellaneous

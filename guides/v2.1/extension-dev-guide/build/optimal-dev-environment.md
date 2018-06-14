@@ -10,7 +10,7 @@ redirect_from:
   - /guides/v2.0/extension-dev-guide/build/optimal-dev-environment.html
 ---
 
-## Overview
+## 概述
 
 A typical software development flow is as follows:
 

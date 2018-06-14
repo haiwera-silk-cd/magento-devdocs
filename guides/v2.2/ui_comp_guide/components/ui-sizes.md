@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-sizes.md
 ---
 
-## Overview
+## 概述
 
 The 表格显示数量控制组件 defines the maximum number of displayed records in a table (grid).
 

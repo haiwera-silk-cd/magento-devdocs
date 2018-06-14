@@ -7,7 +7,7 @@ menu_order: 5
 version: 2.0
 github_link: extension-dev-guide/object-manager.md
 ---
-## Overview
+## 概述
 
 Large applications, such as the Magento application, use an object manager to avoid boilerplate code when composing objects during instantiation.
 
@@ -18,7 +18,7 @@ Magento prohibits the direct use of the `ObjectManager` in your code because it 
 See [usage rules](#usage-rules).
 </div>
 
-## Responsibilities
+## 职责
 
 The object manager has the following responsibilities:
 

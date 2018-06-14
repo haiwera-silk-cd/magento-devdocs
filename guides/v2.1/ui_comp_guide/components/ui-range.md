@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-range.md
 ---
 
-## Overview
+## 概述
 
 The 范围筛选组件 implements the range for filtering rows in a grid. Visually, this component represents two input fields of `date`或`text` type, for entering the "from" and "to" range limits.
 

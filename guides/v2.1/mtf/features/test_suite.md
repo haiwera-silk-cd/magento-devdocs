@@ -111,7 +111,7 @@ This scope enables you to filter functional tests using the following criteria:
 | `<module>` | Apply a rule to all test cases from the specified module. Some test cases may refer to other modules using merging functionality of variations, fixtures etc. You can restrict such reference to other modules adding the `strict="1"` argument. The default value is `strict="0"`. |multiple|`<module value = "Magento_Tax" strict="1" />`
 | `<namespace>` | Apply a rule to all test cases with the specified namespace. | multiple | `<namespace value = "Magento\Catalog\Test\TestCase\Product" />`
 
-The {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} filter example:
+The {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} filter example:
 
 {% highlight xml %}
 <?xml version="1.0"?>

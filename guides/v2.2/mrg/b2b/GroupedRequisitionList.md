@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_GroupedRequisitionList` module enables grouped products to be displayed in a requisition list in an B2B environment. This module extends `Magento_RequisitionList` and `Magento_Grouped` modules.
 

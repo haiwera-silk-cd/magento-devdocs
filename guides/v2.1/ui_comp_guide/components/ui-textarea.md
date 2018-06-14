@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-textarea.md
 ---
 
-## Overview
+## 概述
 
 The 文本输入框组件 implements the `<textarea>` form field.
 

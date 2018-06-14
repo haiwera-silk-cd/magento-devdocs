@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-fieldset.md
 ---
 
-## Overview
+## 概述
 The Fieldset component implements a container for visually-grouped form elements, such as buttons and form fields.
 
 ## Fieldset options

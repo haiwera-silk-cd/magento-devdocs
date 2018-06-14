@@ -8,7 +8,7 @@ version: 2.1
 github_link: extension-dev-guide/adapters.md
 ---
 
-## Overview
+## 概述
 
 Adapter classes follow the [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern){:target="_blank"} and wrap around classes from third-party libraries.
 These classes allow you to use functionality from third-party libraries in your code by converting the third-party class interfaces into an interface that is expected by your native code.
@@ -145,7 +145,7 @@ class CiconiaParser implements AdapterInterface
 
 <br/>
 
-The following {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} entries belong in the `di.xml` file.
+The following {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} entries belong in the `di.xml` file.
 They describe to the ObjectManager how to create the third-party and adapter classes.
 
 {% highlight xml %}

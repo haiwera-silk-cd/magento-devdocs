@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_Company` module allows a merchant to create a company account and assign multiple members of the company to the account.
 

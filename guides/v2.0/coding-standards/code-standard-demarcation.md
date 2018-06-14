@@ -147,7 +147,7 @@ As the first option, you are required to use {% glossarytooltip a2aff425-07dd-4b
 
 <ul>
    <li>Enforces clean, strict separation between visual and business logic layers.</li>
-   <li>Allows {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} teams to work independently.</li>
+   <li>Allows {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} teams to work independently.</li>
    <li>Allows changing look and feel without affecting business functionality, and vice versa.</li>
    <li>Enables frontend teams to clean up old styles quickly and easily when refactoring.</li>
 </ul>

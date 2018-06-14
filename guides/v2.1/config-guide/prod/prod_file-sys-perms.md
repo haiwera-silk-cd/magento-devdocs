@@ -13,7 +13,7 @@ functional_areas:
   - Setup
 ---
 
-## Overview of development and production file system ownership and permissions {#mage-owner}
+## 概述 of development and production file system ownership and permissions {#mage-owner}
 This section discusses how to set up the owner or owners of the Magento file system for a development and production system. Before you continue, review the concepts discussed in [Overview of file system ownership and permissions]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 
 This topic focuses on Magento development and production systems. If you're installing Magento, see [安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html).

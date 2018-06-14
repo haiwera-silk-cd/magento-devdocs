@@ -154,7 +154,7 @@ For illustration, see the <a href="{{ site.mage2000url }}app/design/frontend/Mag
 
 ## Configure images {#fedg_create_theme_how-to-images}
 
-Product image sizes and other properties used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} are configured in a `view.xml` configuration file. It is required for a theme, but is optional if exists in the parent theme.
+Product image sizes and other properties used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} are configured in a `view.xml` configuration file. It is required for a theme, but is optional if exists in the parent theme.
 
 If the product image sizes of your theme differ from those of the parent theme, or if your theme does not inherit from any theme, add `view.xml` using the following steps:
 

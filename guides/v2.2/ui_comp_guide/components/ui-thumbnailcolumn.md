@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-thumbnailcolumn.md
 ---
 
-## Overview
+## 概述
 
 The 缩略图列组件 implements a column containing images associated with records of the table. Each field of this column contains an image preview. When a user click on the preview, a pop up window with the detailed view opens.
 

@@ -40,7 +40,7 @@ After the upgrade completes, restart Varnish if you use it for page caching.
 
 	service varnish restart
 
-Then access your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and verify everything is working properly.
+Then access your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and verify everything is working properly.
 
 ## Errors after upgrade
 After you finish your upgrade, errors might display.

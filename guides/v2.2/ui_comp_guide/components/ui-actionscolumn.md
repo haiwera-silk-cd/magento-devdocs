@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-actionscolumn.md
 ---
 
-## Overview
+## 概述
 
 The Actions多表格列组件 implements a table's column responsible for displaying and performing a list of record-related actions.
 

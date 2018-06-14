@@ -18,7 +18,7 @@ When you create a Magento theme, you might need to create override files for def
 
 ## Locate templates {#debug-theme-templ}
 
-To locate the template that is responsible for a specific part of the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} or Admin, you can use Magento built-in template hints.
+To locate the template that is responsible for a specific part of the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} or Admin, you can use Magento built-in template hints.
 
 To enable template hints:
 

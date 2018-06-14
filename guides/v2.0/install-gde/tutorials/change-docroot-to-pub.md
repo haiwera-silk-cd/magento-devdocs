@@ -114,7 +114,7 @@ Switching between modes is an important step in verifying that your server confi
 5.  Refresh your browser and verify that the storefront displays properly.
 
 ## 4. 验证网店
-Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in a web browser to verify that everything is working.
+Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} in a web browser to verify that everything is working.
 
 1.  Open a web browser and enter your server's hostname or IP address in the address bar. For example, http://192.168.33.10.
 

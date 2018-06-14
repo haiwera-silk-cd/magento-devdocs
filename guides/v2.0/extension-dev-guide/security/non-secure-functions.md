@@ -8,7 +8,7 @@ version: 2.2
 github_link: extension-dev-guide/security/non-secure-functions.md
 ---
 
-## Overview
+## 概述
 
 Using functions that are known to be exploitable or non-secure can lead to remote code execution or weak cryptography.
 As a developer, you should avoid using functions that introduce vulnerabilities in your code.

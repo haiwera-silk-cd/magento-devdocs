@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_ConfigurableSharedCatalog` module enables configurable products to be added to a shared catalog in an B2B environment. This module extends `Magento_SharedCatalog` and `Magento_Configurable` modules.
 

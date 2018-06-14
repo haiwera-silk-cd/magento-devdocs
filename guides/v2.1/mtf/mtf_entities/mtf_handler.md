@@ -270,7 +270,7 @@ class Curl extends AbstractCurl
 
 In the previously mentioned example of the <a href="#mtf_curl_script">Curl.php</a> code, authentication in the Admin is realized using the `BackendDecorator` class.
 
-The <a href="#mtf_handler_curl_frontdecor">FrontendDecorator class</a> manages authentication in the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+The <a href="#mtf_handler_curl_frontdecor">FrontendDecorator class</a> manages authentication in the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 #### BackendDecorator class {#mtf_handler_curl_backdecor}
 

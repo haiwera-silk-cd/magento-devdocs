@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-listing-grid.md
 ---
 
-## Overview
+## 概述
 Listing is a [basic component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure) that implements grids, lists, and tiles with filtering, pagination, sorting, and other features.
 
 ## 结构

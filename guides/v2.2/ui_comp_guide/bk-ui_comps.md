@@ -45,7 +45,7 @@ All other UI 组件 are secondary.
 
 Basic components are declared in the [page layout files]({{ page.baseurl }}/frontend-dev-guide/layouts/layout-types.html#layout-types-page); secondary 组件 are declared in the top-level 组件’ instances configuration files.
 
-All 组件 can be configured both for {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+All 组件 can be configured both for {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>You need to configure styles manually for 组件 on storefront.</p>

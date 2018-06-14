@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-form.md
 ---
 
-## Overview
+## 概述
 
 The 可插入表单components inserts the [表单components]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) into other 组件.
 

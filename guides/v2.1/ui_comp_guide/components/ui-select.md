@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-select.md
 ---
 
-## Overview
+## 概述
 
 The 单选框组件 provides the interface for a list or a data set. With this component, the user can select only one item.
 

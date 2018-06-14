@@ -51,7 +51,7 @@ To verify memcached works with Magento:
 
         rm -rf var/cache/* var/page_cache/* var/session/*
 
-2.  Go to any page on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+2.  Go to any page on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 3.  Log in to the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} and browse to several pages.
 

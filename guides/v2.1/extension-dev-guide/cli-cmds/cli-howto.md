@@ -28,7 +28,7 @@ Magento enables your component to add commands to our Symfony-like command-line 
 	*	<a href="#cli-autoload">添加命令行命令 using the Composer autoloader</a>
 
 <h2 id="cli-sample">添加命令行命令 using dependency injection</h2>
-The Magento 2 sample modules provide a demonstration of many programming techniques, including adding a CLI command using {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %}. Look at the <a href="https://github.com/magento/magento2-samples/tree/master/sample-module-command" target="_blank">`sample-module-command`</a> for an example. The module's <a href="https://github.com/magento/magento2-samples/blob/master/sample-module-command/README.md" target="_blank">README.md</a> discusses how to install it.
+The Magento 2 sample modules provide a demonstration of many programming techniques, including adding a CLI command using {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %}. Look at the <a href="https://github.com/magento/magento2-samples/tree/master/sample-module-command" target="_blank">`sample-module-command`</a> for an example. The module's <a href="https://github.com/magento/magento2-samples/blob/master/sample-module-command/README.md" target="_blank">README.md</a> discusses how to install it.
 
 Following is a summary of the process:
 

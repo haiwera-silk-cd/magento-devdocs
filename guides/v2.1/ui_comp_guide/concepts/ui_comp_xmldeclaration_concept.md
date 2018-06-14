@@ -8,7 +8,7 @@ version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_xmldeclaration_concept.md
 ---
 
-## Overview
+## 概述
 
 This topic discusses the {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} declaration of UI 组件.
 
@@ -30,7 +30,7 @@ A UI component is declared using the `<uiComponent/>` node. The `name` attribute
 
 ## About the basic component configuration file
 
-The instance configuration file name is the name of instance (`%instance_name%`). The {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} of the names is global; meaning that if the file names in different modules are the same, they are merged into a single configuration for the particular instance.
+The instance configuration file name is the name of instance (`%instance_name%`). The {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} of the names is global; meaning that if the file names in different modules are the same, they are merged into a single configuration for the particular instance.
 
 Following are the rules for the instance configuration files:
 

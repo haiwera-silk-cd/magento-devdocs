@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_CompanyPayment` module allows a merchant to configure which payment methods are available for B2B companies.
 

@@ -9,21 +9,21 @@ github_link: architecture/archi_perspectives/persist_layer.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/persist_layer.html
 ---
 
-Magento uses an active record pattern strategy for persistence. In this system, the model object contains a *resource model* that maps an object to one or more database rows. A resource model is responsible for performing functions such as:
+Magento使用活动记录模式生策略处理持久层。在系统中，模型对象包含一个映身对象到一个或多个数据库行记录的 *资源模型* 。一个资源模型可响应像下面这样执行的功能：
 
-* Executing all CRUD (create, read, update, delete) requests. The resource model contains the SQL code for completing these requests.
+* 执行所有的CRUD(增、删、改、查)请求。资源模型为完成这些请求包含SQL代码。
 
-* Performing additional business logic. For example, a resource model could perform data validation, start processes before or after data is saved, or perform other database operations.
+* 执行附加业务逻辑。例如，一个资源模型可以执行数据校验，在数据被保存之前或之后开启进程，或执行另外的数据库操作。
 
-If you expect to return multiple items from a database query, then you would implement a special type of resource model known as a *collection*. A collection is a class that loads multiple models into an array-like structure based on a set of rules. This is similar to a SQL `WHERE` clause.
+如果你期望从一个数据库请求返回多个数据项，你可以实现一个特殊类型的模型，这个模型叫作 *集合* ，一个集合是一个基于一系列规则加载多个模型到一个数组结构中的类。这类似于SQL中的`WHERE`子句。
 
-A simple resource model defines and interacts with a single table.
+一个简单的资源模型定义且与一个简单表交互。
 
-However, some objects have a vast number of attributes, or they could have a set related objects that have varying numbers of attributes. In these cases, the objects are constructed using **Entity-Attribute-Value (EAV)** models. 
+然而，一些对象有大量的属性，或它们可能有许多关联对象，而这些关联对象有大量的属性。在这种情况下，这些对象是使用了 **实体属性值 (EAV)** 的模型构造的对象。 
 
-Any model that uses an EAV resource has its attributes spread out over a number of MySQL tables.
+任何使用了EAV资源的模型有它自己的从某些MySQL表展开来的属性。
 
-The `Customer`,`Catalog` and `Order` resource models use EAV attributes.
+`Customer`,`Catalog`和`Order`的资源模型都使用了EAV属性。
 
 ## 相关主题 {#related}
 

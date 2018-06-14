@@ -13,7 +13,7 @@ functional_areas:
 
 ## 这里有什么 ##
 
-The properties of product images used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} are stored in the `view.xml` configuration file. This topic provides all details about what properties are available and how to configure them.
+The properties of product images used on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} are stored in the `view.xml` configuration file. This topic provides all details about what properties are available and how to configure them.
 
 The properties for the images displayed on the product pages are defined by the 相册小工具 options. The options of the widget can be configured in the {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} `view.xml` as well. For more details, view the [相册小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_gallery.html) topic.
 

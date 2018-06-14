@@ -14,7 +14,7 @@ functional_areas:
   - Setup
 ---
 
-## Overview of cron {#config-cli-cron-overview}
+## 概述 of cron {#config-cli-cron-overview}
 {% include config/cron-overview.md %}
 
 To run cron in a web browser, see <a href="{{ page.baseurl }}/config-guide/secy/secy-cron.html">确保cron.php文件在浏览器上的安全</a>

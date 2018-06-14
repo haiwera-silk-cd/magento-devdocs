@@ -13,8 +13,8 @@ functional_areas:
   - Setup
 ---
 
-## Overview
-To help prevent <a href="https://www.owasp.org/index.php/Clickjacking" target="_blank">clickjacking</a> exploits, we added an option to use the <a href="https://tools.ietf.org/html/rfc7034" target="_blank">X-Frame-Options</a> HTTP request header in requests to your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+## 概述
+To help prevent <a href="https://www.owasp.org/index.php/Clickjacking" target="_blank">clickjacking</a> exploits, we added an option to use the <a href="https://tools.ietf.org/html/rfc7034" target="_blank">X-Frame-Options</a> HTTP request header in requests to your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 The `X-Frame-Options` header enables you to specify whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, or `<object>` as follows:
 

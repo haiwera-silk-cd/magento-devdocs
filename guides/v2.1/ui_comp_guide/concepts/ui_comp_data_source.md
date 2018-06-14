@@ -10,7 +10,7 @@ version: 2.1
 github_link: ui_comp_guide/concepts/ui_comp_data_source.md
 ---
 
-## Overview
+## 概述
 Magento provides the DataSource object, which is designed to interact with data in your {% glossarytooltip 9bcc648c-bd08-4feb-906d-1e24c4f2f422 %}UI component{% endglossarytooltip %}. Many of the core UI 组件 use this DataSource component. Many UI 组件 require that this object is included. However, there are specific requirements it has in order for it to work correctly.
 
 In this topic, we will explain how to take advantage of the powerful functionality of the data provider in a UI Component.

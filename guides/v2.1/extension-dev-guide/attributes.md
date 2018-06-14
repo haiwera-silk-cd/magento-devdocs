@@ -124,7 +124,7 @@ where:
 <tbody>
 <tr>
 <td><p>for</p></td>
-<td><p>The fully-qualified type name with the {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} that processes the extensions. The value must be a type that implements `ExtensibleDataInterface`. The interface can be in a different module.</p> </td>
+<td><p>The fully-qualified type name with the {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} that processes the extensions. The value must be a type that implements `ExtensibleDataInterface`. The interface can be in a different module.</p> </td>
 <td><code>Magento\Quote\Api\Data\TotalsInterface</code></td>
 </tr>
 <tr>

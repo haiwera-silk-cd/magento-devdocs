@@ -10,13 +10,13 @@ github_link: architecture/archi_perspectives/ABasics_intro.md
 redirect_from: /guides/v1.0/architecture/archi_perspectives/ABasics_intro.html
 ---
 
-Magento incorporates the core architectural principles of object-oriented, PHP-based applications. Comprehensive discussions of these general principles exist both on-line and in printed form.
+Magento包含面像对象的、基于PHP应用的核心架构原则。这些一般原则的综合探讨存在于在线或打印形式中。
 
-The following discussion focuses on how these topics apply directly to Magento:
+以下探讨关注这些主题是如何直接应用在Magento上的:
 
-* Magento technology stack
-* Magento View Model
-* Extensibility
-* Modularity
-* Event-driven architecture
-* Security
+* Magento技术栈
+* Magento视图模型
+* 可扩展性
+* 模块化
+* 事件驱动架构
+* 安全

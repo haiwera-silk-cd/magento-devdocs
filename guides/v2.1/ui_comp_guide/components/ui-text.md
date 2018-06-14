@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-text.md
 ---
 
-## Overview
+## 概述
 
 The 文本components displays text data in the components like [Form]({{ page.baseurl }}/ui_comp_guide/components/ui-form.html) and [DynamicRows]({{ page.baseurl }}/ui_comp_guide/components/ui-dynamicrows.html).
 

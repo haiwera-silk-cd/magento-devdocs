@@ -20,7 +20,7 @@ redirect_from:
 *	<a href="{{ page.baseurl }}/extension-dev-guide/indexing-custom.html">添加自定义索引</a>
 
 <h2 id="m2devgde-indexing-intro">Introduction to indexing</h2>
-_Indexing_ is how Magento transforms data such as products, categories, and so on, to improve the performance of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. As data changes, the transformed data must be updated&mdash;or reindexed. Magento has a very sophisticated architecture that stores lots of merchant data (including {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}catalog{% endglossarytooltip %} data, prices, users, stores, and so on) in many database tables. To optimize storefront performance, Magento accumulates data into special tables using indexers.
+_Indexing_ is how Magento transforms data such as products, categories, and so on, to improve the performance of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. As data changes, the transformed data must be updated&mdash;or reindexed. Magento has a very sophisticated architecture that stores lots of merchant data (including {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}catalog{% endglossarytooltip %} data, prices, users, stores, and so on) in many database tables. To optimize storefront performance, Magento accumulates data into special tables using indexers.
 
 For example, suppose you change the price of an item from $4.99 to $3.99. Magento must _reindex_ the price change to display it on your storefront.
 

@@ -12,14 +12,14 @@ functional_areas:
   - Frontend
 ---
 
-## Overview
+## 概述
 
 Magento 2 incorporates <a href="http://lesscss.org/" target="_blank">LESS</a>, a {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} pre-processor that simplifies the management of complex CSS files.
 To define styles of a Magento store, you can use both - CSS and LESS stylesheets.
 
 Magento application provides a built-in LESS UI library, which you can optionally extend. 
 
-To customize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} styles, you need to <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">create a custom design theme</a>. Then you can use one of the following approaches:
+To customize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} styles, you need to <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-create.html" target="_blank">create a custom design theme</a>. Then you can use one of the following approaches:
 
 *	If your theme <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html" target="_blank">inherits</a> from the Magento out-of-the-box Blank or Luma theme, you can override the default LESS files; for example to <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html#fedg_using-ui-lib_predef-vars" target="_blank">change the values of the variables</a> used in the default files. 
 *	Create your own LESS files using the built-in LESS preprocessor. 

@@ -11,7 +11,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of setting Magento modes {#config-mode-over}
+## 概述 of setting Magento modes {#config-mode-over}
 To improve security and ease-of-use, we added a command that switches <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html">Magento modes</a> from developer to production and vice versa.
 
 Production mode also has better performance because static view files are populated in the `pub/static` directory and because of code compilation.

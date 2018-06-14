@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_GiftCardRequisitionList` module enables gift cards to be displayed in a requisition list in an B2B environment. This module extends the `Magento_RequisitionList` and `Magento_GiftCard` modules.
 

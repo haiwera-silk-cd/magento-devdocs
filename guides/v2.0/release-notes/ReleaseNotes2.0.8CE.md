@@ -40,7 +40,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 
 <!--- 53814 -->* Magento now sends email using a store's specific email address when an Admin sends email. Previously, Magento would send email from the default instance email address instead of the store address.
 
-<!--- 52448 -->* Magento now correctly displays the customer address on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. Previously,  when you selected a default billing address when creating a new customer account, Magento would not display the  address.
+<!--- 52448 -->* Magento now correctly displays the customer address on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. Previously,  when you selected a default billing address when creating a new customer account, Magento would not display the  address.
 
 
 

@@ -40,7 +40,7 @@ Magento 2.1.3 contains more than 90 bug fixes and enhancements, including these 
 	* Simplify the process of configuring payments for your store with a redesigned Payment Methods page in the Admin interface.
 
 
-* **Increased {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} performance** by removing excessive and slow SQL media queries.
+* **Increased {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} performance** by removing excessive and slow SQL media queries.
 
 * **Management of configurable products with many variations** in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface without degrading performance.
 

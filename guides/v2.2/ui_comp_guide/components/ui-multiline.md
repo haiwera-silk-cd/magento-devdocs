@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-multiline.md
 ---
 
-## Overview
+## 概述
 
 The 多输入组件 is a collection of form elements that displays multiple fields of the same type. For example, the **Street Address** fields.
 

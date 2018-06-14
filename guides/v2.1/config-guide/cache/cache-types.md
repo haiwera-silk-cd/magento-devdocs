@@ -51,7 +51,7 @@ The following example shows how to define it in `env.php` (which overrides `di.x
 where `<unique frontend id>` is a unique name to identify your frontend and `<cache options>` are options discussed in the topics specific to each type of caching (database, Redis, and so on).
 
 <h2 id="cache-mage-adv">步骤2. Configure the cache</h2>
-You can specify frontend and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} cache configuration options in `env.php`或`di.xml`. This task is optional.
+You can specify frontend and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} cache configuration options in `env.php`或`di.xml`. This task is optional.
 
 `env.php` example:
 

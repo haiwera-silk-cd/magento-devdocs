@@ -1,6 +1,6 @@
 <div markdown="1">
 
-## Overview of secure web server communication {#es-ws-secure-over}
+## 概述 of secure web server communication {#es-ws-secure-over}
 This topic discusses an example of securing communication between your web server and Elasticsearch using a combination of Transport Layer Security (TLS) encryption and <a href="http://tools.ietf.org/html/rfc2617" target="_blank">HTTP Basic</a> authentication. You can optionally configure other types of authentication as well; we provide references for that information.
 
 (An older term, Secure Sockets Layer (SSL), is frequently used interchangeably with TLS. In this topic, we refer to *TLS*.)

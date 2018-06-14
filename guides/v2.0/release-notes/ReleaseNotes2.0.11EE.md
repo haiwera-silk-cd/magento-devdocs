@@ -143,7 +143,7 @@ We address the following functional issues in this release.
 
 <!--- 59102-->* Customers can now continue shopping after selecting an unavailable {% glossarytooltip fbcfce51-68e2-482f-84d5-f28d84404cff %}bundle product{% endglossarytooltip %}. Previously, if a customer selected a bundle product that was no longer available, he encountered a fatal error. 
 
-<!--- 57331-->* The Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} now reflects changes in the swatch attribute properties as expected. 
+<!--- 57331-->* The Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} now reflects changes in the swatch attribute properties as expected. 
 
 
 <!--- 57326-->* The Sales Order object can now contain more than one `extension_attribute`.  <a href="https://github.com/magento/magento2/issues/3967" target="_blank">(GITHUB-3967)</a>

@@ -130,7 +130,7 @@ Where the following notation is used:
     f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{%
     endglossarytooltip %}. According to the jQuery widgets naming
     convention, must contain a {% glossarytooltip
-    621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{%
+    621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{%
     endglossarytooltip %} and name.
   </li>
   <li>

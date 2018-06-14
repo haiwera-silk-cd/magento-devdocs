@@ -117,5 +117,5 @@ $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 
 <h2 id="related">相关主题</h2>
 * <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>
-* <a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a>
+* <a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务契约</a>
 * <a href="{{ page.baseurl }}/soap/bk-soap.html">SOAP Reference</a>

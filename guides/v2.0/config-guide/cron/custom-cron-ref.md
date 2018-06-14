@@ -19,7 +19,7 @@ You can optionally set up a custom group, which among other things enables you t
 
 For a step-by-step tutorial, see [Configure custom cron jobs and cron groups (tutorial)]({{ page.baseurl }}/config-guide/cron/custom-cron-tut.html).
 
-## Overview of cron {#config-cli-cron-overview}
+## 概述 of cron {#config-cli-cron-overview}
 
 {% include config/cron-overview.md %}
 

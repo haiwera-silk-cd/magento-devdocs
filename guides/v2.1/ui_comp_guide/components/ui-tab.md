@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-tab.md
 ---
 
-## Overview
+## 概述
 
 The 标签页组件 implements a tab content area.
 

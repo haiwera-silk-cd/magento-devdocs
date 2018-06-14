@@ -15,7 +15,7 @@ redirect_from:
 <h2 id="general">UI组件概述</h2>
 Magento UI 组件 are designed for simple and flexible UI rendering. They allow you to configure the page manipulating the UI 组件.
 
-Magento UI 组件 are implemented as a standard {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and can be found under Magento\UI {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.
+Magento UI 组件 are implemented as a standard {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and can be found under Magento\UI {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %}.
 
 组件 are responsible for rendering result page fragments and providing/supporting further interactions of {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} 组件 and server.
 
@@ -34,7 +34,7 @@ Basic 组件 are:
 
 Secondary 组件 are extensions of basic 组件.  
 
-All 组件 can be configured both for {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+All 组件 can be configured both for {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>You need to configure styles manually for 组件 on storefront.</p>

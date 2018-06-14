@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_GiftCardSharedCatalog` module enables gift cards to be added to a shared catalog in an B2B environment. This module extends `Magento_SharedCatalog` and `Magento_GiftCard` modules.
 

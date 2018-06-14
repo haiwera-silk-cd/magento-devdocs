@@ -65,7 +65,7 @@ As you can see, we get the payment nonce from payment additional information. An
 In most cases, customers fill all required information (credit card, expiration date, billing address, etc) on {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} payment form.
 So our {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} implementation should provide the ability to display and process payment form on checkout step. 
 
-We can send to {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} any specific data, just need to override `getData()` method in
+We can send to {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} any specific data, just need to override `getData()` method in
 [payment UI component]({{ site.mage2100url }}app/code/Magento/Braintree/view/frontend/web/js/view/payment/method-renderer/cc-form.js):
  
 {% highlight javascript %}
@@ -109,7 +109,7 @@ define(
 {% endhighlight %}
  
 The `getData()` method returns data what we need and depending on payment integration the returned data can be more
-complicated. we need last step to retrieve data from {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} in the backend. Magento provides some
+complicated. we need last step to retrieve data from {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} in the backend. Magento provides some
 mechanisms called [Observers]({{ site.gdeurl21 }}extension-dev-guide/events-and-observers.html).
  
 #### Read additional data

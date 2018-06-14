@@ -62,7 +62,7 @@ The following sections discuss in detail what data we import.
 
 Magento directly uses values in the `system` array in the `config.php`或`env.php` files instead of importing them into the database because they require some pre- and post-processing actions.
 
-For example, the value of the configuration path `web/secure/base_url` must be validated with {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} models.
+For example, the value of the configuration path `web/secure/base_url` must be validated with {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} models.
 
 #### Backend models
 

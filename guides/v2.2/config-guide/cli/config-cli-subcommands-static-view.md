@@ -17,7 +17,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of static view files deployment {#config-cli-static-overview}
+## 概述 of static view files deployment {#config-cli-static-overview}
 The static view files deployment command enables you to write {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} to the Magento file system when the Magento software is set for <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#production-mode">production mode</a>.
 
 The term *static view file* refers to the following:

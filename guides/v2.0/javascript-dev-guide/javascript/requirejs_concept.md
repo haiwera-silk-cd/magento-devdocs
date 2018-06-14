@@ -10,7 +10,7 @@ functional_areas:
   - Tools
 ---
 
-## Overview
+## 概述
 
 This topic discusses {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} modules and describes the role which RequireJS plays in Magento.
 

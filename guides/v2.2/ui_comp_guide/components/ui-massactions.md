@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-massactions.md
 ---
 
-## Overview
+## 概述
 
 The 下拉操作components allows performing actions with multiple selected items. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
 

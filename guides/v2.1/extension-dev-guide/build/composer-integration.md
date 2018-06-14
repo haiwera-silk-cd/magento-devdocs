@@ -11,7 +11,7 @@ redirect_from:
   - /guides/v2.0/extension-dev-guide/composer-integration.html
 ---
 
-## Overview
+## 概述
 Magento 2 uses [Composer][0]{:target="\_blank"}, a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} dependency manager, to package 组件 and product editions.
 
 Composer reads a `composer.json` file in Magento's root directory to download third-party dependencies listed in the file.

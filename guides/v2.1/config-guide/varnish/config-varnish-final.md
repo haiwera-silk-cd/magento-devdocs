@@ -35,7 +35,7 @@ Important headers:
 </div>
 
 <h3 id="config-varnish-final-response">Check page load times</h3>
-If Varnish is working, any Magento page with cacheable blocks should load in less than 150ms. Examples of such pages are the front door and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} pages.
+If Varnish is working, any Magento page with cacheable blocks should load in less than 150ms. Examples of such pages are the front door and {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} pages.
 
 Use a browser inspector to measure page load times.
 

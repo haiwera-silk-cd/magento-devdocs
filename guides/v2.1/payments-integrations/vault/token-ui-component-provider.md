@@ -61,7 +61,7 @@ class TokenUiComponentProvider implements TokenUiComponentProviderInterface
 }
 ```
 
-This implementation allows to retrieve all available payment token details and specify the JS component for {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+This implementation allows to retrieve all available payment token details and specify the JS component for {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 Having created the component provider, you need to add it to the list of available vault config providers in `di.xml` - the DI configuration file. 
 

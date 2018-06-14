@@ -26,7 +26,7 @@ In Magento, the basic 组件 of page design are layouts, containers, and blocks.
 
 ## Basic layouts 
 
-The basic view of all Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} pages in defined in two page configuration layout files located in the Magento_Theme模块: 
+The basic view of all Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} pages in defined in two page configuration layout files located in the Magento_Theme模块: 
 
 * `<Magento_Theme_module_dir>/view/frontend/layout/default.xml`: defines the page layout. 
 * `<Magento_Theme_module_dir>/view/frontend/layout/default_head_blocks.xml`: defines the scripts, images, and meta data included in pages' `<head>` section. 

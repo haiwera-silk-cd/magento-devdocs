@@ -77,7 +77,7 @@ During the [build phase]({{ page.baseurl }}/cloud/reference/discover-deploy.html
 *	Apply patches distributed to all Magento企业版(云支持版) accounts
 *	Apply patches we provided specifically to you
 *	Enable all modules to build
-*	Compile code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration
+*	Compile code and the {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configuration
 
 The build also checks for a [configuration file](http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html). If the file exists, the static file deployment is also completed during the build stage. If not, it's completed in the deployment stage.
 

@@ -35,7 +35,7 @@ However, you must not customize the routers that are used in Magento core module
 
 Configurations of the routes are stored in `routes.xml` in the scopes area.
 
-Only the standard {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} routers use routes. Typically, the configuration for a route is in the following format:
+Only the standard {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} and {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} routers use routes. Typically, the configuration for a route is in the following format:
 
 {% highlight XML %}
 <config>
@@ -68,7 +68,7 @@ To remove the controller action, forward to `noroute`, for instance, in `app/cod
 
 
 <pre>
-{% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} Company\SomeExtension\Controller\Account;
+{% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} Company\SomeExtension\Controller\Account;
 
 class Create extends \Magento\Framework\App\Action\Action
 {

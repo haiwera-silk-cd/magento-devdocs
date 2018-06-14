@@ -119,7 +119,7 @@ pages:
       url: /extension-dev-guide/module-development.html
       children:
 
-        - label: 服务约定
+        - label: 服务契约
           url: /extension-dev-guide/service-contracts/service-contracts.html
 
         - label: Public interfaces &amp; APIs

@@ -34,7 +34,7 @@ The public method `getSectionData` must return an array with data for private bl
 
 [Example]({{ site.mage2000url }}app/code/Magento/Catalog/CustomerData/CompareProducts.php#L36-L45){:target=" &#95;blank"}
 
-Add the following to your component's {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configuration (`di.xml`):
+Add the following to your component's {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configuration (`di.xml`):
 
 ``` xml
 <type name="Magento\Customer\CustomerData\SectionPoolInterface">
@@ -66,7 +66,7 @@ Initialize the component as follows:
 [Example]({{ site.mage2000url }}app/code/Magento/Catalog/view/frontend/templates/product/compare/sidebar.phtml#L46-L48){:target="&#95;blank"}
 
 ## Configure a UI component {#config-cache-priv-how-ui}
-The UI component renders block data on the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. To initialize the UI component, you must call the initialization method `_super()`.
+The UI component renders block data on the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. To initialize the UI component, you must call the initialization method `_super()`.
 
 [Example]({{ site.mage2000url }}app/code/Magento/Catalog/view/frontend/web/js/view/compare-products.js){:target="&#95;blank"}
 

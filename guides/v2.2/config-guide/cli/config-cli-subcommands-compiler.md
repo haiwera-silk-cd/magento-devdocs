@@ -14,13 +14,13 @@ functional_areas:
 Code compilation includes the following (in no particular order):
 
 -   Application code generation (factories, proxies)
--   Area configuration aggregation (optimized {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} configurations per area)
+-   Area configuration aggregation (optimized {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configurations per area)
 -   Interceptor generation (optimized code generation of interceptors)
 -   Interception {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} generation
 -   Repositories code generation (generated code for APIs)
 -   Service data attributes generation (generated {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} classes for data objects)
 
-You can find code compilation classes in the <a href="{{ site.mage2000url }}setup/src/Magento/Setup/Module/Di/App/Task/Operation" target="\_blank">\Magento\Setup\Module\Di\App\Task\Operation</a> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.
+You can find code compilation classes in the <a href="{{ site.mage2000url }}setup/src/Magento/Setup/Module/Di/App/Task/Operation" target="\_blank">\Magento\Setup\Module\Di\App\Task\Operation</a> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %}.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 The Magento software does not support the multi-tenant compiler, which includes the `bin/magento setup:di:compile-multi-tenant` command.

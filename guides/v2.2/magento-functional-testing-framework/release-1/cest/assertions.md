@@ -14,7 +14,7 @@ _This topic was updated due to the {{page.mftf-release}} MFTF release._
 
 This topic contains general information about assertions in the MFTF and the reference list of available assertions.
 
-## Overview
+## 概述
 
 Assertions serve to pass or fail the test if a condition is not met. These assertions will look familiar to you if you've used any other framework like PHPUnit.
 

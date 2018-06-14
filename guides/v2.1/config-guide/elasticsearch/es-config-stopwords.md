@@ -63,7 +63,7 @@ To edit stopwords:
 	*	Command line: As the Magento文件系统所有者, enter the following command:
 
 			php <your Magento install dir>/bin/magento magento cache:clean config
-6.	Check the results by searching for terms on your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.x
+6.	Check the results by searching for terms on your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.x
 
 ### Create stopwords for a new locale {#config-create-stopwords}
 To add stopwords for a locale:

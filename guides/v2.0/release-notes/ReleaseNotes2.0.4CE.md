@@ -61,7 +61,7 @@ The following list provides an overview of the security issues fixed in this rel
 <!-- 50611 -->* APIs that previously granted access to anonymous users are now configured to require a higher permission level.  Default product behavior does not permit anonymous access to Catalog, Store and {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} APIs. However, if you would like to allow anonymous access, you can change this setting. 
 
 
-<!-- 48819 -->* Magento now prevents the arbitrary execution of {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code through the {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} {% glossarytooltip 6341499b-ead9-4836-9794-53d95eb48ea5 %}CSV{% endglossarytooltip %} file. 
+<!-- 48819 -->* Magento now prevents the arbitrary execution of {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} code through the {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}语言包{% endglossarytooltip %} {% glossarytooltip 6341499b-ead9-4836-9794-53d95eb48ea5 %}CSV{% endglossarytooltip %} file. 
 
 <!-- 47050 -->* The encryption keys that are generated in **System > Manage Encryption Key** have been strengthened. 
 

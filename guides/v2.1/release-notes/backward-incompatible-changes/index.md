@@ -8,7 +8,7 @@ redirect_from:
     - guides/v2.1/release-notes/backward-incompatible-changes.html
 ---
 
-## Overview
+## 概述
 
 Magento 2.1 introduces several major changes that may affect the correct functionality of already released external modules. The purpose of this document is to highlight major changes between Magento 2.0 and 2.1.
 

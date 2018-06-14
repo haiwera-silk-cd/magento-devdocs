@@ -11,7 +11,7 @@ github_link: architecture/frontend_custom_strategies.md
 
 ## 概述 {#m2arch-whatis-overview}
 
-The Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} is designed to optimize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} customization, with highly extensible <i>themes</i> being the central customization mechanism.
+The Magento {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} is designed to optimize {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} customization, with highly extensible <i>themes</i> being the central customization mechanism.
 
 Merchants are encouraged to use Magento组件 and themes to extend and transform the appearance of their storefronts.
 

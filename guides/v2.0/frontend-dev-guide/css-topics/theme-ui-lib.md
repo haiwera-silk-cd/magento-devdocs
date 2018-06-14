@@ -39,7 +39,7 @@ The Magento UI库 provides the ability to customize and reuse the following user
 *	typography
 *	list of theme variables
 
-The following illustration shows a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} product page containing some of the preceding elements:
+The following illustration shows a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} product page containing some of the preceding elements:
 
 <div style="border: 1px solid #ABABAB">
 <img src="{{ site.baseurl }}/common/images/ui_lib1.png" alt="A product page with user interface elements specified">

@@ -17,7 +17,7 @@ The following image is an illustration of the default view of the form on the **
 
 <img src="{{ site.baseurl }}/common/images/product_pmg.png" alt="The product creation page in Admin">
 
-## Overview
+## 概述
 
 In Magento version 2.1, the product creation form was completely refactored, and implemented using the [form UI component](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/components/ui-form.html). 
 

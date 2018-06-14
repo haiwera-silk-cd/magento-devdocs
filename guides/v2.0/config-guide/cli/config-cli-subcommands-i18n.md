@@ -16,7 +16,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of translations
+## 概述 of translations
 Magento translations enable you to customize and localize your store for multiple regions and markets. We improved the localization and customization of Magento instances by making translation dictionaries easier to update and maintain and reduced the amount of code coupling and duplication.
 
 This topic discusses how to generate:
@@ -27,7 +27,7 @@ This topic discusses how to generate:
 For more information, see <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html">Translation</a>.
 
 ## Generate a translation dictionary {#config-cli-subcommands-xlate-dict}
-You can generate a translation dictionary to use by itself (for example, to translate words and phrases in a custom module) or for use by a {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %}. See one of the following sections:
+You can generate a translation dictionary to use by itself (for example, to translate words and phrases in a custom module) or for use by a {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}语言包{% endglossarytooltip %}. See one of the following sections:
 
 -   <a href="{{ page.baseurl }}/frontend-dev-guide/translations/xlate.html#m2devgde-xlate-dictionaries">About translation dictionaries</a>
 -   <a href="#config-cli-subcommands-xlate-dict-dict">Work with translation dictionaries</a>

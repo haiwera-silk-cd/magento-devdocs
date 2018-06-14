@@ -9,7 +9,7 @@ version: 2.1
 github_link: pattern-library/graphics/iconography/iconography.md
 ---
 
-## Overview
+## 概述
 
 Icons are used throughout the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} interface, often as a controls to initiate a function (such as "Filter"), or to direct the user to section (such as "Account").
 

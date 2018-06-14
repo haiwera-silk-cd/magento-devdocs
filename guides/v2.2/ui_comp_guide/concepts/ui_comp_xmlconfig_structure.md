@@ -8,7 +8,7 @@ version: 2.2
 github_link: ui_comp_guide/concepts/ui_comp_xmlconfig_structure.md
 ---
 
-## Overview
+## 概述
 
 This topic describes the basic elements used in XML configuration files for declaring  UI 组件. These elements co structure is strict and third party developers must follow it when customizing existing UI 组件' configuration or declaring new ones.  
 

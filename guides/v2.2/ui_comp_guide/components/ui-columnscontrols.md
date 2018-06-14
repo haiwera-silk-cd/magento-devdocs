@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-columnscontrols.md
 ---
 
-## Overview
+## 概述
 
 The 可控多表格列组件 is a collection of columns. It provides an interface for showing and hiding columns. The interface contains the following information:
 

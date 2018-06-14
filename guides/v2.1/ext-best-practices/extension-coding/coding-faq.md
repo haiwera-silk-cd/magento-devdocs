@@ -28,7 +28,7 @@ The correct edition can be obtained through `\Magento\Framework\App\ProductMetad
 In {{site.data.var.ce}} that interface maps to the concrete implementation `Magento\Framework\AppInterface\ProductMetadata`.
 However, in {{site.data.var.ee}}, the Commerce {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} will override that mapping and the interface will be implemented by `\Magento\Enterprise\Model\ProductMetadata`.
 
-Just relying on the interface through {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}dependency injection{% endglossarytooltip %} will get you the right class, and calling "getEdition" will return the right answer.
+Just relying on the interface through {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} will get you the right class, and calling "getEdition" will return the right answer.
 
 ### How do I configure my module so that it appears in a specific place on the Admin?
 

@@ -207,7 +207,7 @@ To reindex using the command line:
 </div>
 
 <h2 id="solr-verify">Verify Solr is working</h2>
-To verify Solr works, go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and search for any term (including one that won't return results) and look for the search in the Solr command window.
+To verify Solr works, go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and search for any term (including one that won't return results) and look for the search in the Solr command window.
 
 The following figure shows an example of a storefront search.
 

@@ -12,7 +12,7 @@ functional_areas:
   - Tools
 ---
 
-## Overview
+## 概述
 
 The `Settings` mode migrates stores, websites, and system configuration like shipping, payment, tax settings, 等.
 According to our data migration [order]({{ page.baseurl }}/migration/migration-migrate.html#migration_order), you should migrate settings first.

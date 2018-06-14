@@ -22,7 +22,7 @@ functional_areas:
 
   (A *tag* is an identifier that classifies different types of Magento {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} objects.)
 
-* The TwoLevels {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} is more difficult to maintain because two services are required to make it work which makes it difficult to analyze cache content when necessary.
+* The TwoLevels {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} is more difficult to maintain because two services are required to make it work which makes it difficult to analyze cache content when necessary.
 Further, memcached itself has limitations such as a maximum object size and fixed bucket sizes which also contribute to difficult maintenance.
 
 * The <a href="http://framework.zend.com/manual/1.12/en/zend.cache.backends.html#zend.cache.backends.twolevels" target="_blank">Zend TwoLevels backend</a> does not scale well because using the database as part of the {% glossarytooltip 8f2067d1-4a39-4ed2-916d-7c9c58ccf30c %}cache backend{% endglossarytooltip %} adds additional load to the master database server. Additionally, there is no reliable method for `memcached` replication.

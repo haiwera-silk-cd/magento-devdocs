@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-date.md
 ---
 
-## Overview
+## 概述
 
 The 数据components implements a custom date input field. It uses a date picker implementation provided by the [日历小工具]({{ page.baseurl }}/javascript-dev-guide/widgets/widget_calendar.html).
 

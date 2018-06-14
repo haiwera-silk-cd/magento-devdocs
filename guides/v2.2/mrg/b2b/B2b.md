@@ -8,7 +8,7 @@ version: 2.2
 github_link: mrg/b2b/B2b.md
 ---
 
-## Overview
+## 概述
 
 The `Magento_b2b` module is the base module for B2B. It must be present on all B2B installations.
 

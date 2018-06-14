@@ -16,7 +16,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of dependency reports
+## 概述 of dependency reports
 You can run the following types of reports:
 
 -   {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}**Module**{% endglossarytooltip %} dependencies: Shows the total number of dependencies between modules and whether the dependencies are hard or soft.

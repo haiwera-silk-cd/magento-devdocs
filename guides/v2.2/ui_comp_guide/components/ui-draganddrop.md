@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-draganddrop.md
 ---
 
-## Overview
+## 概述
 
 The 可拖曳components is an {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} for [Columns]({{ page.baseurl }}/ui_comp_guide/components/ui-columns.html), allowing users to change columns position in the table.
 

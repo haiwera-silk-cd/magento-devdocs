@@ -20,7 +20,7 @@ Your custom payment integration module must have at least the following dependen
 
 - Magento_Sales模块: to be able to get order details
 - Magento_Payment模块: to use the Magento支付提供商网关 infrastructure
-- Magento_Checkout模块: to be able to add the new {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} to {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. If you do not plan to use it on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} checkout, this dependency is not required. 
+- Magento_Checkout模块: to be able to add the new {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} to {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. If you do not plan to use it on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} checkout, this dependency is not required. 
 
 
 Specify these dependencies in your `composer.json` and `module.xml` files. 

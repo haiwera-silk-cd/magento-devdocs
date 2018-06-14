@@ -52,7 +52,7 @@ This release includes enhancements to improve the security of your Magento appli
 
 <!--- 51327 -->* You don't need to have a `composer.json` to run Magento CLI commands.
 
-<!--- 50794 -->* Addressed an issue that caused the following error on the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} when optional sample data is installed: "We're sorry, an error has occurred while generating this email".
+<!--- 50794 -->* Addressed an issue that caused the following error on the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} when optional sample data is installed: "We're sorry, an error has occurred while generating this email".
 
 
 <!--- 53232 -->*  Resolved data loss issues during upgrade to version 2.0.4. <a href="https://github.com/magento/magento2/issues/4054" target="_blank"> (GITHUB-4054)</a>, <a href="https://github.com/magento/magento2/issues/3951" target="_blank"> (GITHUB-3951)</a>, <a href="https://github.com/magento/magento2/issues/3097" target="_blank"> (GITHUB-3097)</a>, <a href="https://github.com/magento/magento2/issues/3249" target="_blank"> (GITHUB-3249)</a>

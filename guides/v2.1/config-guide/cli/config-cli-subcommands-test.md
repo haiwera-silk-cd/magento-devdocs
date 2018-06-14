@@ -16,7 +16,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of tests
+## 概述 of tests
 This command runs a set of tests defined in the Magento 2 code base. You can either run all tests or tests you select. Whenever an unsupported type is specified, the program terminates and lists all available types. Following execution, a detailed report displays showing the test run and results.
 
 ### 先决条件

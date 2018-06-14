@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_GroupedSharedCatalog` module enables grouped products to be added to a shared catalog in an B2B environment. This module extends `Magento_SharedCatalog` and `Magento_Grouped` modules.
 

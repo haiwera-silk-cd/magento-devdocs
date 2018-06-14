@@ -12,7 +12,7 @@ functional_areas:
   - Tools
 ---
 
-## Overview of 数据迁移工具 configuration {#migration-configure-over}
+## 概述 of 数据迁移工具 configuration {#migration-configure-over}
 
 After you install the data migration tool, the following directory contains mapping and configuration files:
 

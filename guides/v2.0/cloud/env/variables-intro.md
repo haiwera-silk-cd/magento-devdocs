@@ -54,7 +54,7 @@ Environment variable names must use the characters `a-z`, `A-Z`, `0-9`, and `.`,
 
 Platform variables that are expressed as base64-encoded JSON object can be up to 4KB in size.
 
-环境变量 have an `env` {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.
+环境变量 have an `env` {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %}.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Variables are <em>hierarchical</em>, which means that if a variable is not overridden, it is inherited from the parent environment and is indicated as <code>inherited</code>.</p>

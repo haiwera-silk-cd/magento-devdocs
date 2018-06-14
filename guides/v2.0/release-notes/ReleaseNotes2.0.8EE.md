@@ -37,7 +37,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 
 #### Miscellaneous
 
-<!--- 52448 -->* Magento now correctly displays the customer address on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. Previously,  when you selected a default billing address when creating a new customer account, Magento would not display the  address.
+<!--- 52448 -->* Magento now correctly displays the customer address on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. Previously,  when you selected a default billing address when creating a new customer account, Magento would not display the  address.
 
 <!--- 50507 -->* You can now successfully reset the Product Attributes mass update {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} form.
 

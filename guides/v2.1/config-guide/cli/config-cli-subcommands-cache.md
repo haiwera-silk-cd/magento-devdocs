@@ -16,7 +16,7 @@ functional_areas:
 
 {% include config/cli-intro.md %}
 
-## Overview of cache types {#config-cli-subcommands-cache-clean-over}
+## 概述 of cache types {#config-cli-subcommands-cache-clean-over}
 Magento 2 has the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} types:
 
 <table>

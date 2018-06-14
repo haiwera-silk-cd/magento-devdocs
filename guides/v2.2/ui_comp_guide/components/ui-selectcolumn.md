@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-selectcolumn.md
 ---
 
-## Overview
+## 概述
 
 The 单选列组件 receives an array of values and displays the column with corresponding labels. The value-label correspondence is set in the component's configuration.
 

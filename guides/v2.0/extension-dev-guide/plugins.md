@@ -225,7 +225,7 @@ All plugins added for interfaces and inherited classes will be added to classes 
 
 Plugins defined in the global scope will be applied when the system is in a specific area (i.e. frontend, backend, etc). These global plugin configuration can also be extended or overridden via an area's `di.xml`.
 
-For example, the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
+For example, the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
 
 ### 相关主题s
 

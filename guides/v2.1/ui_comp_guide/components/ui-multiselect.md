@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-multiselect.md
 ---
 
-## Overview
+## 概述
 
 The 多选框组件 provides the interface for a list or a data set. Multiselect allows selecting multiple items.
 

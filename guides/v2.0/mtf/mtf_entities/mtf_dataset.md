@@ -124,7 +124,7 @@ The following table shows structure of the data set:
 <tr><th>Node </th><th>Semantics </th><th>Attributes </th></tr>
 <tr>
 <td><code>config</code> </td>
-<td>The root element that defines an XML {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} and an XML Schema. </td>
+<td>The root element that defines an XML {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} and an XML Schema. </td>
 <td><ul>
 <li><code> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</code></li>
 <li><code>xsi:noNamespaceSchemaLocation="../../../../../../vendor/magento/mtf/etc/variations.xsd"</code></li>

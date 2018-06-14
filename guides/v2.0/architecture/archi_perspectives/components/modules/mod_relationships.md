@@ -25,35 +25,35 @@ redirect_from:
 
 * **定制**: 如果模块A修饰了模块B的行为，称A定制了B
 
-* **implements**: module A implements module B if it implements some, not necessarily all, behavior that is defined in module B
+* **实现**: 模块A实现了模块B中定义的一些行为，不必是所有行为。
 
-* **replaces**: module A replaces module B if it provides its own version of the {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} exposed and implemented by module B
+* **替换**: 模块A替换模块B，是说它为模块B暴露和实现的{% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %}提供了它自己的版本
 
-## Relationship types and scenarios
+## 关系类型和场景
 
-### A uses B, C customizes B
+### A使用B,C定制B
 
-In a scenario where module A uses module B and module C customizes module B, the customizations in module C cannot break the API of module B so that module A still functions properly in the face of these customizations.
+在模块A使用模块B并且模块C定制模块B的场景下，模块C的定制不能打断模块B的API，如此模块A在定制后仍能正常起作用
 
-![Module relationship scenarios: A uses B, C customizes B]({{ site.magentourl }}/common/images/archi_first_relate.png)
+![模块关系场景:A使用B,C定制B]({{ site.magentourl }}/common/images/archi_first_relate.png)
 
-### A reacts to B, C customizes B
+### A对起作出反应，C定制B
 
-Similarly, in a case where module A reacts to module B and module C customizes module B, the customizations in module C must not interfere with the events in module B that module A depends on.
+类似地，在模块A对模块B起反应并且模块C定制模块B的情况下，模块C的定制不能干涉模块A依赖的模块B的事件。
 
-![Module relationship scenarios: A reacts to B, C customizes B]({{ site.magentourl }}/common/images/archi_second_relate.png)
+![模块关系场景:A对起作出反应，C定制B]({{ site.magentourl }}/common/images/archi_second_relate.png)
 
-### A and C customize B
+### A和C都定制B
 
-<p>If both module A and C customize module B, be careful about how these customizations are implemented so that you avoid conflicts (see below).</p>
+<p>如果模块A和C同时定制模块B,要当心它们的定制都被实现以避免冲突（参考如下）</p>
 
-![Module relationship scenarios: A and C customize B]({{ site.magentourl }}/common/images/archi_third_relate.png)
+![模块关系场景:A和C都定制B]({{ site.magentourl }}/common/images/archi_third_relate.png)
 
-### A replaces B
+### A替换B
 
-If module A replaces module B, it needs to be able to do so in such a way that other modules are not affected. That will mean not having direct hard dependencies on module B, but rather dependencies on a third module, module C, that both module A and B implement.
+如果模块A替换模块B，那么它须要能够以一种方式使其它模块不受影响，这意味着在模块B上没有直接的硬依赖，而是依赖于第三个模块，模块A和B都实现的模块C。
 
-![Module relationship scenarios: A replaces B]({{ site.magentourl }}/common/images/archi_fourth_relate.png)
+![模块关系场景:A替换B]({{ site.magentourl }}/common/images/archi_fourth_relate.png)
 
 ## 相关主题 {#m2arch-module-related}
 

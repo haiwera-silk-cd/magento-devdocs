@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-multiselectcolumn.md
 ---
 
-## Overview
+## 概述
 
 The 多选框列组件 implements a column with check boxes for selecting records. It also provides controls for selecting multiple records.
 

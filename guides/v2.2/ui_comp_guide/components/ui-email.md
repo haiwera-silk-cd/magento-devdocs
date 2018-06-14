@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-email.md
 ---
 
-## Overview
+## 概述
 
 The 邮件组件 implements the {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} `<input type="email">` form field.
 

@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_SharedCatalog` modules defines the visibility of products as well as product prices in the catalog and in B2B quotes for different company accounts.
 

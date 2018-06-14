@@ -8,7 +8,7 @@ github_link: ui_comp_guide/components/ui-form.md
 ---
 
 
-## Overview
+## 概述
 The 表单组件 is a collection of fields that can be grouped in tabs and fieldsets. It enables [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations.
 
 Form is a [basic component]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure).

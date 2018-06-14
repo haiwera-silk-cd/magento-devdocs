@@ -122,7 +122,7 @@ Also, staged entity displays the campaigns it has been assigned to. In preview m
 
 #### Preview a campaign
 
-You can preview scheduled elements on {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} (as if it were live website) in order to make sure that all planned updates are correct before publishing.
+You can preview scheduled elements on {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} (as if it were live website) in order to make sure that all planned updates are correct before publishing.
 
 Staging preview enables you to use the following functionality:
 
@@ -223,7 +223,7 @@ In this mode, the Magento_Staging模块 builds a view of a store for a specific 
 
 ### Different websites
 
-Preview mode is also available for a multi website store. Switching between different website views is available in scope of Admin {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}domain{% endglossarytooltip %}. Server builds a view of an open page only using its scheduled parameters. (Without redirection to another domain.)
+Preview mode is also available for a multi website store. Switching between different website views is available in scope of Admin {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}领域{% endglossarytooltip %}. Server builds a view of an open page only using its scheduled parameters. (Without redirection to another domain.)
 
 NOTE All websites must use the same type of the protocol: HTTP or HTTPS. You cannot mix HTTP and HTTPS websites.
 NOTE **Product in Websites** tab is inactive in the Schedule Update form and cannot be edit.

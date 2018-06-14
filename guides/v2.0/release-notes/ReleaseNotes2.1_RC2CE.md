@@ -150,7 +150,7 @@ Magento Open Source 2.1, Release Candidate 2 includes the following known issues
 
 <!--- 53119 --> * The Force Sign-in button now works as expected.
 
-<!--- 53019 --> * Magento no longer makes unexpected calls when you view a product in the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+<!--- 53019 --> * Magento no longer makes unexpected calls when you view a product in the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 
 <!--- 51903 --> * You can now reorder a product with a required custom option (type = file). Previously, if you tried to reorder a product under these conditions, you would encounter an error when opening the shopping cart.

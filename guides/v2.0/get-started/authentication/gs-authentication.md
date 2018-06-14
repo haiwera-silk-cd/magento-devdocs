@@ -176,6 +176,6 @@ Proceed to the authentication method for your preferred client:
 
 * Third-party application. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-oauth.html">基于OAuth的认证</a>.
 
-* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>.
+* JavaScript {% glossarytooltip f0dcf847-ce21-4b88-8b45-83e1cbf08100 %}小工具{% endglossarytooltip %} on the Magento Admin or {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}. <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication-session.html">基于Session的认证</a>.
 
 * <a href="{{ page.baseurl }}/extension-dev-guide/attributes.html">Extension attribute authentication</a>

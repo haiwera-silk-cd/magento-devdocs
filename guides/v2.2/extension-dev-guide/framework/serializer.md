@@ -8,7 +8,7 @@ version: 2.2
 github_link: extension-dev-guide/framework/serializer.md
 ---
 
-## Overview
+## 概述
 
 This {% glossarytooltip 08968dbb-2eeb-45c7-ae95-ffca228a7575 %}库{% endglossarytooltip %} provides a secure way of serializing and unserializing strings, integers, floats, booleans, and arrays.
 

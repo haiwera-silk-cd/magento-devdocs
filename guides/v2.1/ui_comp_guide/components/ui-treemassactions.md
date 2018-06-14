@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-treemassactions.md
 ---
 
-## Overview
+## 概述
 
 The 树形下拉操作components is a decorator for [MassActions]({{ page.baseurl }}/ui_comp_guide/components/ui-massactions.html) that adds the support of nested actions.
 

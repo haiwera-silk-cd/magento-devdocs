@@ -16,7 +16,7 @@ functional_areas:
   - Setup
 ---
 
-## Overview
+## 概述
 
 When [deploying static view files]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html), you can choose one of the three available strategies. Each of them provides optimal deployment results for different use cases:
 

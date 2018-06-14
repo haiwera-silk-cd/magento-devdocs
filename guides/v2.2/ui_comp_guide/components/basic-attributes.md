@@ -8,7 +8,7 @@ version: 2.2
 github_link: ui_comp_guide/components/basic-attributes.md
 ---
 
-## Overview
+## 概述
 
 This topic describes the general UI components configuration attributes. There's a set of attributes available for all UI components, and a set of attributes which are specific for [basic components]({{ page.baseurl }}/ui_comp_guide/bk-ui_comps.html#general-structure) only. 
 

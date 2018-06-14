@@ -12,7 +12,7 @@ mftf-release: 1.0.0
 _This topic was updated due to the {{page.mftf-release}} MFTF release._
 {: style="text-align: right"}
 
-## Overview
+## 概述
 
 In the MFTF, it is possible to re-use a group of actions declared in an XML file.
 It is handy when you need to repeat same sequence of actions over and over again.

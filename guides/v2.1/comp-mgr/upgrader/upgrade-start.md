@@ -19,7 +19,7 @@ Before continuing, complete all tasks discussed in <a href="{{ page.baseurl }}/c
 </div>
 
 ## Optional custom maintenance page
-During the time you're upgrading, your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} is partially available. Users can see a list of files and so on but cannot shop or check out.
+During the time you're upgrading, your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} is partially available. Users can see a list of files and so on but cannot shop or check out.
 
 To avoid the appearance of a disabled site and to set up a custom maintenance page that displays during the upgrade, see [维护模式下的升级选项]({{ page.baseurl }}/comp-mgr/trouble/cman/maint-mode.html).
 

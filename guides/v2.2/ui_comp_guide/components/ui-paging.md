@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-paging.md
 ---
 
-## Overview
+## 概述
 
 The 分页components implements pagination in grids implemented using [Listing]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html). It also creates an instance of the child 表格显示数量控制组件 which allows to define the number of records displayed in the associated table.
 

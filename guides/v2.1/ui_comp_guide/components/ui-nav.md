@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-nav.md
 ---
 
-## Overview
+## 概述
 
 The 导航栏组件 implements tabs navigation.
 

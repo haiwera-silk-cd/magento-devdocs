@@ -11,7 +11,7 @@ functional_areas:
   - Tools
 ---
 
-## Overview
+## 概述
 
 Some behaviour and logic of Magento 1 has been implemented differently in Magento 2. The 数据迁移工具 takes care of it. Although, there are some migration aspects you should know about, and sometimes you must take minor steps for some functionalities to work smoothly after migration.
 

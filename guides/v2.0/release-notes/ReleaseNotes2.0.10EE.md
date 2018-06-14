@@ -55,7 +55,7 @@ The following list provides an overview of the security issues fixed in this rel
 <!--- 57582/1488 -->* Fixed issue with using the Magento Enterprise Edition invitations feature to insert malicious {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} and subsequently execute it in the Admin context.
 
 
-<!--- 57566-->* You can no longer change or fake a product price from the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and then complete an order with that fake price.
+<!--- 57566-->* You can no longer change or fake a product price from the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and then complete an order with that fake price.
 
 
 <!--- 56902, 56834  -->* A user with lesser privileges can no longer use a JSON call to force an Admin user to add his private or public key.
@@ -68,7 +68,7 @@ The following list provides an overview of the security issues fixed in this rel
 
 <!--- 56542/1480 -->* Resolved issue with potential SQL injection through the use of the ordering or grouping parameters.
 
-<!--- 56905 -->* Fixed issue with retrieving potentially sensitive information through the use of {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} media.
+<!--- 56905 -->* Fixed issue with retrieving potentially sensitive information through the use of {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} media.
 
 
 

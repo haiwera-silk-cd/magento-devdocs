@@ -9,7 +9,7 @@ github_link: mrg/b2b/ConfigurableNegotiableQuote.md
 functional_areas:
   - B2B
 ---
-## Overview
+## 概述
 
 The `Magento_ConfigurableNegotiableQuote` module enables configurable products to be displayed in a negotiable quote in an B2B environment. This module extends `Magento_NegotiableQuote` and `Magento_Configurable` modules.
 

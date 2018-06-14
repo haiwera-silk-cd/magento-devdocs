@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-filters.md
 ---
 
-## Overview
+## 概述
 
 The 过滤器components renders UI controls for filtering and applies filtering. Must be a child of the [Listing component]({{ page.baseurl }}/ui_comp_guide/components/ui-listing-grid.html).
 

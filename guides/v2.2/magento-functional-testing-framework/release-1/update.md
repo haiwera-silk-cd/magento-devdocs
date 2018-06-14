@@ -18,7 +18,7 @@ _This topic was updated due to the {{page.mftf-release}} MFTF release._
 The Magento Functional Testing Framework is under rapid development and delivers changes to the [`develop`] branch biweekly.
 </div>
 
-## Overview
+## 概述
 
 Magento tests and the Framework are stored in different repositories.
 

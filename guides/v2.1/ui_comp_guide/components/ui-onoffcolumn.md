@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-onoffcolumn.md
 ---
 
-## Overview
+## 概述
 
 The 开关列components is a decorator for [MultiselectColumn]({{ page.baseurl }}/ui_comp_guide/components/ui-multiselectcolumn.html). It displays toggle switch elements instead of check boxes.
 

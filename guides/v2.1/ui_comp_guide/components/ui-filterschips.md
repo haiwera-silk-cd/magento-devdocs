@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-filterschips.md
 ---
 
-## Overview
+## 概述
 
 The 标签过滤器components provides UI controls that allows users to remove the previously-applied values of the [Filters]({{ page.baseurl }}/ui_comp_guide/components/ui-filters.html) and [Search]({{ page.baseurl }}/ui_comp_guide/components/ui-search.html) 组件.
 

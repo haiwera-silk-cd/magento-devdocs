@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-datecolumn.md
 ---
 
-## Overview
+## 概述
 
 The 数据列组件 implements a table column that displays dates.
 

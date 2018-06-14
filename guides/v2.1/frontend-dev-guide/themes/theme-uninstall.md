@@ -13,7 +13,7 @@ functional_areas:
 
 ## 这里有什么
 
-This topic describes how to uninstall a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} in Magento 2.
+This topic describes how to uninstall a {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} in Magento 2.
 
 The way a theme should be uninstalled is defined by two factors:
 

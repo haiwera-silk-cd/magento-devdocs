@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-linkcolumn.md
 ---
 
-## Overview
+## 概述
 
 The Link表格列组件 implements a column that can display the anchor elements instead of plain text.
 

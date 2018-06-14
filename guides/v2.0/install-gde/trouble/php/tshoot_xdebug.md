@@ -24,6 +24,6 @@ During the installation, a  message similar to the following displays:
 
 ### Solution
 
-<p>There is a known issue with <code>xdebug</code> that can affect Magento installations or access to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} or {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} after installation.</p>
+<p>There is a known issue with <code>xdebug</code> that can affect Magento installations or access to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} or {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} after installation.</p>
 <p>For details, see <a href="{{ page.baseurl }}/install-gde/trouble/tshoot_install-issues.html">已知的影响安装的问题</a>.</p>
 

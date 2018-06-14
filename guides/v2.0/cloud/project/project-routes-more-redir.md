@@ -14,7 +14,7 @@ functional_areas:
   - Setup
 ---
 
-## Overview of redirection {#cloud-route-redir}
+## 概述 of redirection {#cloud-route-redir}
 Managing redirection rules is a common requirement for web applications,
 especially in cases where you do not want to lose incoming links that have
 changed or been removed over time. This topic discusses how you can manage redirection rules on your

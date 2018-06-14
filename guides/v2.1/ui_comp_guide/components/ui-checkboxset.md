@@ -7,7 +7,7 @@ version: 2.1
 github_link: ui_comp_guide/components/ui-checkboxset.md
 ---
 
-## Overview
+## 概述
 
 The 单/复选框组组件 implements a group of `<input type="checkbox">`或`<input type="radio">` selection elements.
 

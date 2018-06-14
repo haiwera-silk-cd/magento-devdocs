@@ -13,7 +13,7 @@ functional_areas:
 This topic describes how to add shipping address validations for a custom {% glossarytooltip b51bd4e9-7174-4ca0-83a0-1a895c9fc9e8 %}shipping carrier{% endglossarytooltip %} to the Magento {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. This is an essential part of the bigger task of adding a custom shipping method to your Magento store.
 
 
-## Overview
+## 概述
 
 To add new shipping carrier validations to the Magento checkout, do the following:
 

@@ -16,7 +16,7 @@ Find `phpunit.xml` in `<magento2_root_dir>/dev/tests/functional`, and open it in
 #### Set URL for Magento storefront under test {#mtf_quickstart_config_phpunitxml_frontend}
 
 Find `<php>` element.
-For `name="app_frontend_url"` set `value` that is your actual {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} for Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} under test.
+For `name="app_frontend_url"` set `value` that is your actual {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} for Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} under test.
 
 Example:
 `<env name="app_frontend_url" value="http://example.com/magento2/"/>`

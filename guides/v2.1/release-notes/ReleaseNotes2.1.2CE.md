@@ -47,14 +47,14 @@ The following list provides an overview of the security issues fixed in this rel
 <!--- 56912/1488-->*  Fixed issue with using the Magento Enterprise Edition invitations feature to insert malicious {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} and subsequently execute it in the Admin context.  
 
 
-<!--- 57565-->* You can no longer change or fake a product price from the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and then complete an order with that faked price. 
+<!--- 57565-->* You can no longer change or fake a product price from the Magento {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and then complete an order with that faked price. 
 
 
 
 <!--- 56852/1484-->*  Fixed issue with arbitrary PHP code execution during {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %}. 
 
 
-<!--- 56594/1490-->*  Fixed issue with retrieving potentially sensitive information through the use of {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}backend{% endglossarytooltip %} media.
+<!--- 56594/1490-->*  Fixed issue with retrieving potentially sensitive information through the use of {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} media.
 
 
 <!--- 53971-->*  Fixed issue with running `cron` jobs less frequently than specified by the application `cron` setting. 

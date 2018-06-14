@@ -9,7 +9,7 @@ github_link: architecture/tech-stack.md
 redirect_from: /guides/v1.0/extension-dev-guide/tech-stack.html
 ---
 
-## Overview
+## 概述
 
 This page summarizes the technologies we use. For more detailed information, see the [系统要求]({{ page.baseurl }}/install-gde/system-requirements-tech.html).
 

@@ -1,8 +1,8 @@
 ---
 group: extension-dev-guide
 subgroup: 99_Module Development
-title: 服务约定
-menu_title: 服务约定
+title: 服务契约
+menu_title: 服务契约
 menu_order: 2
 version: 2.1
 github_link: extension-dev-guide/service-contracts/service-contracts.md
@@ -25,7 +25,7 @@ functional_areas:
 </p>
 <p><img src="{{ site.baseurl }}/common/images/msc.jpg"/></p>
 <h2 id="msc-benefits">Service contract benefits</h2>
-<p>服务约定 enhance the modularity of Magento. They enable Magento and third-party developers to report system dependencies through <b>composer.json</b> files and, consequently, guarantee compatibility among Magento versions. This compatibility ensures that merchants can easily upgrade Magento.</p>
+<p>服务契约 enhance the modularity of Magento. They enable Magento and third-party developers to report system dependencies through <b>composer.json</b> files and, consequently, guarantee compatibility among Magento versions. This compatibility ensures that merchants can easily upgrade Magento.</p>
 <p>These contracts ensure a well-defined, durable API that other modules and third-party extensions can implement. Also, these contracts make it easy to <a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">configure services as web APIs</a>.
 </p>
 <p>Data entities are a side benefit of service contracts.

@@ -225,7 +225,7 @@ Type names must be enclosed in curly braces. If the type is omitted, the compile
 &nbsp;*&nbsp;@param&nbsp;{string|number|null}&nbsp;term&nbsp;An&nbsp;itemName,
 &nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;itemId,&nbsp;or&nbsp;null&nbsp;to&nbsp;search&nbsp;everything.
 &nbsp;*/
-{% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %}.Storage.prototype.query&nbsp;=&nbsp;function(groupNum,&nbsp;term)&nbsp;{
+{% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %}.Storage.prototype.query&nbsp;=&nbsp;function(groupNum,&nbsp;term)&nbsp;{
 &nbsp;&nbsp;&nbsp;//&nbsp;...
 };
 </pre>

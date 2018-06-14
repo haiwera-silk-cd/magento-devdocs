@@ -7,7 +7,7 @@ version: 2.2
 github_link: ui_comp_guide/components/ui-search.md
 ---
 
-## Overview
+## 概述
 
 The 搜索组件 allows searching through the grid records. It is a generic tool for filtering content that aggregates all other filter elements.
 

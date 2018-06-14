@@ -14,7 +14,7 @@ Magento 2 is flexible and as a result has varied functionality, so developing a 
 
 
 * Compatibility (backward and forward)
-   * [服务约定]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html)
+   * [服务契约]({{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html)
    * [Design patterns]({{ page.baseurl }}/extension-dev-guide/service-contracts/design-patterns.html)
 
 * [Working with public interfaces and APIs]({{ page.baseurl }}/extension-dev-guide/api-concepts.html)

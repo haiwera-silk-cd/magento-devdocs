@@ -10,7 +10,7 @@ version: 2.0
 github_link: extension-dev-guide/factories.md
 ---
 
-## Overview
+## 概述
 
 Factories are service classes that instantiate non-injectable classes, that is, models that represent a database {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}.
 They create a layer of abstraction between the `ObjectManager` and business code.

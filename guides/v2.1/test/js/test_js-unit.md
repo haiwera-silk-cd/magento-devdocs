@@ -83,7 +83,7 @@ Parameters are the following:
 * **proxy**. Sets the JsTestDriver to behave as a proxy. The proxy parameter is an array of arrays that enables you to specify multiple matcher and server proxies.
 * **load**. Defines the list of files to load in the browser before any tests run.
 * **test**. Defines the list of test sources to run.
-* **serve**. Defines the list of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} to load by using the same {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}domain{% endglossarytooltip %} as the JsTestDriver.
+* **serve**. Defines the list of {% glossarytooltip 363662cb-73f1-4347-a15e-2d2adabeb0c2 %}static files{% endglossarytooltip %} to load by using the same {% glossarytooltip 41aee03b-a5d5-49c2-8839-894090ef4e86 %}领域{% endglossarytooltip %} as the JsTestDriver.
 
 ### `jsTestDriverOrder.php` file {#jstestdriverorderphp}
 

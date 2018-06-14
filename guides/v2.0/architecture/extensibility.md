@@ -9,7 +9,7 @@ version: 2.0
 github_link: architecture/extensibility.md
 ---
 
-## Overview
+## 概述
 
 Product <i>extensibility</i> describes how easy it is to expand a product's feature set. An extensible product has been designed from its earliest  stages for customization and enhancement. Extensible products are designed for ease in expanding your installation's feature set, enriching current features, and integrating with third-party software.
 
@@ -23,7 +23,7 @@ Below are the main factors affect extensibility.
 
 ### Architectural principles that guide product structure
 
-Central to the Magento model of software development is the practice of replacing or extending core code rather than editing it. This strategy supports your efforts to maintain the integrity of the tested code we provide while still extensively customizing your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %}.
+Central to the Magento model of software development is the practice of replacing or extending core code rather than editing it. This strategy supports your efforts to maintain the integrity of the tested code we provide while still extensively customizing your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
 
 ### Open-source software to create and manage extensions
 

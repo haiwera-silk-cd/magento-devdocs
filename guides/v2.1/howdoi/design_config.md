@@ -12,10 +12,10 @@ github_link: howdoi/design_config.md
 
 <h2>这里有什么</h2>
 
-This topic describes how to customize (add, delete, change) the configuration options available in {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} under **CONTENT** > **Design** > **Configuration**. These options define the various aspects of {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} design. In Magento 2.0.x and earlier these options were set under **STORES** > **Configuration** > **Design**. But starting from Magento 2.1.0 they were moved to the new location, and the configuration form was refactored.
+This topic describes how to customize (add, delete, change) the configuration options available in {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} under **CONTENT** > **Design** > **Configuration**. These options define the various aspects of {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} design. In Magento 2.0.x and earlier these options were set under **STORES** > **Configuration** > **Design**. But starting from Magento 2.1.0 they were moved to the new location, and the configuration form was refactored.
 
 
-## Overview
+## 概述
 
 In Magento out of the box, when you navigate to **CONTENT** > **Design** > **Configuration** in Admin, the first page that opens displays a grid with the available configuration scopes and assigned themes. It looks like following:
 

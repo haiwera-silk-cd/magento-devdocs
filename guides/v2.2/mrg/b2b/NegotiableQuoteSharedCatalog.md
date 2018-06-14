@@ -10,7 +10,7 @@ functional_areas:
   - B2B
 ---
 
-## Overview
+## 概述
 
 The `Magento_NegotiableQuoteSharedCatalog` module enables the `NegotiableQuote` module to interact with a `SharedCatalog` in an B2B environment. This module extends the `Magento_NegotiableQuote` module and `Magento_SharedCatalog` modules.
 

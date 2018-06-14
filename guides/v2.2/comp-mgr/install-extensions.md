@@ -12,7 +12,7 @@ github_link: comp-mgr/install-extensions.md
 Code that extends or customizes Magento behavior is called an extension. You can optionally package and distribute extensions on the [Magento Marketplace](https://marketplace.magento.com){:target="&#95;blank"} or another Magento extension distribution system. Extensions include:
 
 -   Modules (extend Magento capabilities)
--   Themes (change the look and feel of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} and Admin)
+-   Themes (change the look and feel of your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} and Admin)
 -   Language packages (localize the storefront and Admin)
 
 <div class="bs-callout bs-callout-tip" markdown="1">

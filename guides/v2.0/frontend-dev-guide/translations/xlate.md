@@ -52,7 +52,7 @@ Depending on your needs, you can use the existing <a href="#m2devgde-xlate-langu
 ### Changes in Magento 2
 Changes made:
 
-*	The {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}language package{% endglossarytooltip %} (`i18n` directory) can now be moved and saved to any directory of your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}.
+*	The {% glossarytooltip 9c4c7b9b-43f0-4454-8e8c-fb62ad40c35f %}语言包{% endglossarytooltip %} (`i18n` directory) can now be moved and saved to any directory of your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}.
 *	The phrases for translations are enabled in the <a href="{{ site.mage2000url }}lib/internal/Magento/Framework/Phrase.php" target="_blank">Phrase</a> class.
 
 ### More information
@@ -61,7 +61,7 @@ See one of the following sections for more information:
 * <a href="#m2devgde-xlate-themes">Why you might need to add a dictionary for a theme</a>
 *	<a href="#m2devgde-xlate-translating">Manually translate words and phrases</a>
 *	<a href="#m2devgde-xlate-dictionaries">Translation dictionaries</a>
-*	<a href="#m2devgde-xlate-languagepack">Language packages</a>
+*	<a href="#m2devgde-xlate-languagepack">语言包</a>
 
 <h2 id="m2devgde-xlate-themes">Why you might need to add a dictionary for a theme</h2>
 
@@ -83,7 +83,7 @@ Translating the names, titles and phrases used in Magento involves the following
   <p>Only one variant of translation can be used for a word or phrase in a package. Otherwise, Magento returns an error.</p>
 </div>
 
-Anyone can submit translations on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}storefront{% endglossarytooltip %} using the Text Editor. Changes made in the Text Editor are not recorded in an instance's dictionary; instead, they are stored in the database. In the storefront, an inline translation of a phrase overwrites the translation stated in a dictionary. However, inline translations are theme-specific and do not apply if another theme is assigned.
+Anyone can submit translations on the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} using the Text Editor. Changes made in the Text Editor are not recorded in an instance's dictionary; instead, they are stored in the database. In the storefront, an inline translation of a phrase overwrites the translation stated in a dictionary. However, inline translations are theme-specific and do not apply if another theme is assigned.
 
 <h2 id="m2devgde-xlate-dictionaries">Translation dictionaries</h2>
 Magento translates words and phrases when all of the following conditions are met:
@@ -101,7 +101,7 @@ Assembling the preceding `pt_BR.csv` files across all modules and the current th
 <h3 id="m2devgde-xlate-generatortool">The dictionary generator tool</h3>
 <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-i18n.html#config-cli-subcommands-xlate-dict">More information about the dictionary generator tool</a>.
 
-<h2 id="m2devgde-xlate-languagepack">Language packages</h2>
+<h2 id="m2devgde-xlate-languagepack">语言包</h2>
 Magento enables you to create the following types of language packages:
 
 *	A set of .csv files for modules and themes. These packages files are intended to be deployed in modules. 例如:

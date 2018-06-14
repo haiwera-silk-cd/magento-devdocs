@@ -30,7 +30,7 @@ A data model is a class that implements a data interface and contains data that 
 
 An example of a data model is the [`\Magento\Customer\Model\Data\Customer`]({{ site.mage2100url }}app/code/Magento/Customer/Model/Data/Customer.php){:target="_blank"} class.
 
-#### Models
+#### 模型
 
 Magento models extend the [`Magento\Framework\Model\AbstractModel`]({{ site.mage2100url }}lib/internal/Magento/Framework/Model/AbstractModel.php){:target="_blank"} class because it provides useful general functions. Models contain logic for validation, events, and caching. A model class might have a data interface implementation. To set or access data, they use `getData`, `setData` and magic methods. A model is not statically typed if it does not have a data interface implementation.
 

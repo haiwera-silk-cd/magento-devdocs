@@ -24,7 +24,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
    You must define the service interfaces for a service contract in the <b>Api</b> subdirectory for a module.<!--  You can substitute another implementation in this directory. -->
 </p>
 <!--
-   <p>For example, the interfaces in the <b>Magento\Customer\Api</b> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}namespace{% endglossarytooltip %} define agreements, or a contract, between clients and implementations of services for the Magento Customer module.
+   <p>For example, the interfaces in the <b>Magento\Customer\Api</b> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} define agreements, or a contract, between clients and implementations of services for the Magento Customer module.
                   </p>
     -->
 <h2 id="data-interfaces">Data interfaces</h2>
@@ -132,7 +132,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
 </table>
 <h3 id="related-topics">相关主题</h3>
 <ul>
-   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务约定</a></li>
+   <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-contracts.html">服务契约</a></li>
    <li><a href="{{ page.baseurl }}/extension-dev-guide/service-contracts/service-to-web-service.html">将服务配置成web API</a>
    </li>
 </ul>
