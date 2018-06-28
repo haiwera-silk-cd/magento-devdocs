@@ -43,7 +43,7 @@ You can 配置Magento应用 in any of the following ways:
 *	生产环境的Magento
 
 	*	[Deployment steps]({{ page.baseurl }}/config-guide/prod/prod_deploy.html)
-	*	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
+	*	[Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
 *	{{site.data.var.ee}} only
 

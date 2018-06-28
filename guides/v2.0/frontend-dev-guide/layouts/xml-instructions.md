@@ -61,7 +61,7 @@ Blocks employ templates to generate {% glossarytooltip a2aff425-07dd-4bd6-9671-2
          <td>class</td>
          <td>Name of a class that implements rendering of a particular block. An object of this class is responsible for actual rendering of block output.</td>
          <td>class name</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="odd">
          <td>name</td>
@@ -119,7 +119,7 @@ A structure without content that holds other layout elements such as blocks and 
          <td>name</td>
          <td>A name that can be used to address the container in which this attribute is assigned. The name must be unique per generated page.</td>
          <td>A-Z, a-z, 0-9, underscore (_), period (.), dash (-). Should start with a letter. Case-sensitive.</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="odd">
          <td>label</td>
@@ -294,7 +294,7 @@ Example:
          <td>method</td>
          <td>Name of the public method of the block class this tag is located in that is called during block generation.</td>
          <td>block method name</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
    </tbody>
 </table>
@@ -380,13 +380,13 @@ Sets the declared block or container element as a child of another element in th
          <td>element</td>
          <td>Name of the element to move.</td>
          <td>element name</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="odd">
          <td>destination</td>
          <td>Name of the target parent element.</td>
          <td>element name</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="even">
          <td>as</td>
@@ -452,13 +452,13 @@ Used to pass an argument. Must be always enclosed in<a href="#arguments"><code>&
          <td>name</td>
          <td>Argument name.</td>
          <td>unique</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="odd">
          <td>xsi:type</td>
          <td>Argument type.</td>
          <td>string|boolean|object|number|null|array</td>
-         <td>yes</td>
+         <td>是</td>
       </tr>
       <tr class="even">
          <td>translate</td>

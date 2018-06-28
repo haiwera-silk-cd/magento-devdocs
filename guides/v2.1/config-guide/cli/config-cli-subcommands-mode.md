@@ -26,7 +26,7 @@ Production mode also has better performance because static view files are popula
 -   <a href="{{ page.baseurl }}/cloud/bk-cloud.html">{{site.data.var.ece}}</a> supports production mode only.
 </div>
 
-Refer to [Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html) for more information.
+Refer to [Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html) for more information.
 
 When you change to developer or production mode, we clear the contents of following directories:
 

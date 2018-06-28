@@ -5,7 +5,7 @@ body {
 	 background-color: #ffffff;  margin: 0 auto; font-size:15px; font: 15px/22px Helvetica, Arial, sans-serif; color:#5A5A5A; font-weight:normal; width:1024px;
 	}
 
-/* containers */
+/* 容器s */
 #container { width:940px; margin:0; }
 #content { width:940px; margin:15px 45px 0 45px; }
 

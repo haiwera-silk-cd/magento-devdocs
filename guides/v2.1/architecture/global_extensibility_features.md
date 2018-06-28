@@ -11,49 +11,49 @@ github_link: architecture/global_extensibility_features.md
 
 ## 概述
 
-Essential qualities foster extensibility throughout the entire set of Magento组件. This discussion focuses on:
+必要的质量在完整的Magento组件中促进可扩展性，本节讨论关注：
 
 * 模块化
-* Reliance on popular design patterns
-* Coding standards
-* Flexible attribute types
+* 依赖流行的设计模式
+* 编码规范
+* 灵活的属性类型
 * Web APIs
-* 服务契约 and {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %}
-* Plug-ins
+* 服务契约和{% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %}
+* 插件
 
-### Modularity
+### 模块化
 
-The concept of the <i>module</i> is the heart of Magento {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} development, and modular design of software 组件 (in particular, modules, themes, and language packages) is a core architectural principle of the product. Self-contained modules of discrete code are organized by feature, thereby reducing each module's external dependencies.
+<i>模块</i>的概念是Magento{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}开发的核心，并且模块化的软件组件(特别地, 模块, 主题, 及语言包)设计是产品的核心架构原则，离散代码的独主的模块是以特征组织在一起的。由此减少每个模块外部的依赖。
 
-If a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} is self-contained, then you can modify or replace it without affecting other areas of the code. This <i>loose coupling</i> of software 组件 reduces the ripple effects throughout your code base of changing code.
+如果一个{% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}是独立的，你可以在不引响其它地方代码码的情况下修改和替换它。这种软件组件间的<i>松藕合</i>减少了你在基础代码上修改其间的影响
 
- See the <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for detailed instructions on how to create modules.
+ 参考<a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>了解更多关于如何创建模块的细节。
 
-### Reliance on popular design patterns
+### 依赖流行的设计模式
 
-Reliance on known architectural and programming structures helps {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} developers orient themselves to the specific development issues that affect coding in a particular product ecosystem. This can reduce the learning curve for new Magento developers.
+依赖于已知的架构和编程结构有助于{% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %}开发者在特定的产品生态中定位影响编码的特殊的产品问题。对于新的Magento开发都来说这可以减小学习曲线。
 
-Design patterns are time-tested, widely recognized software architecture constructs. Magento product architecture incorporates many well known patterns, but Model-View-Controller (MVC) holds particular interest for extension developers.
+设计模式是经的住时间考验的，广泛地识别了软件架构的结构。Magento产品架构由许多好的已知的模式组成，但扩展开发者应对模型-视图-控制器(MVC)模式有特别的兴趣。
 
 ### 编码规范
 
-Magento developers should familiarize themselves with our coding standards, best practices, and conventions, especially standards for PHP file formatting, coding style, and file naming conventions. Magento standards are based on Zend Framework 编码规范.
+Magento开发者应该使他们自己熟知我们的编码规范、最佳实践和习惯，特别是PHP文件的格式、编码风格和文件命名习惯的规范。Magento规范是基于Zend框架编码规范的。
 
-See <a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a> for guidelines and requirements.
+参考<a href="{{ page.baseurl }}/coding-standards/bk-coding-standards.html">编码规范</a>了解指南和要求
 
-### Rich product ecosystem
+### 丰富的产品生态
 
-The wider Magento ecosystem provides an extensive community and rich third-party marketplace for extensions. Visit [Magento Marketplace](https://marketplace.magento.com/) for an overview of the many modules and themes available for download and to buy modules and {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} packages, which offer more possibilities for extending your {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}.
+更广的Magento生态提供了一个扩展社区及丰富的第三方扩展市场，访问[Magento市场](https://marketplace.magento.com/)了解可以下载的模块和主题的概述及购买为你扩展{% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %}提供更多可能性的模块和{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %}
 
-### Flexible attribute types
+### 灵活的属性类型
 
-You can enhance your storefront by adding unique attributes to the default product attributes. For example, you might need to add a new attribute to describe a product, such as texture or an industry-specific rating. You can add these attributes from the Magento Admin, and the storefront  displays them.
+你可以增强你的网店前台通过添加惟一属性到默认产品属性中，你可能须要添加新的属性来描述一个产品，如材质或行业特定的评级。你可以Magento管理员添加这些属性，让前通台展示。
 
 <table>
    <tbody>
       <tr style="background-color: lightgray">
-         <th>Attribute type</th>
-         <th>Displayed by storefront?</th>
+         <th>属性类型</th>
+         <th>是否前台显示</th>
 
       </tr>
 <tr>
@@ -63,12 +63,12 @@ You can enhance your storefront by adding unique attributes to the default produ
          </tr>
 
          <tr>
-         <td>Custom
+         <td>自定义
          </td>
-         <td>yes</td>
+         <td>是</td>
          </tr>
          <tr>
-         <td>Extension
+         </td>扩展
          </td>
          <td>否</td>
          </tr>
@@ -77,39 +77,39 @@ You can enhance your storefront by adding unique attributes to the default produ
 </tbody>
 </table>
 
-Attribute types fall into three general categories:
+属性类型归于三大类:
 
-* <b>EAV (Entity-Attribute-Value) attributes</b> are site-specific attributes that you can define for a local site using the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}.
+* <b>EAV(实体属性值)属性</b>是站点特定的属性，你可以使用{% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}为你的本地站点定义它
 
-* <b>Custom attributes</b> are a subset of EAV attributes. Objects that use EAV attributes typically store values in several MySQL tables. The Customer and {% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}Catalog{% endglossarytooltip %} modules use EAV attributes.
+* <b>自定义属性</b>是一个EAV的子集，使用EAV属性的对象存储这些属性值在几个MySQL表中，顾客和{% glossarytooltip 8d40d668-4996-4856-9f81-b1386cf4b14f %}产品目录{% endglossarytooltip %}模块使用EAV属性
 
-* <b>Extension attributes</b> often use more {% glossarytooltip fd9ae55f-ccf5-480b-a7f3-bd2c80f0b2a4 %}complex data{% endglossarytooltip %} types than custom attributes. These attributes do not appear in the storefront. Extension attributes are introduced by modules.
+* <b>扩展属性</b>通常用比自定义属性更复杂的数据类型，这些属性不会出现在网店前台，扩展属性由模块引入。
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information about using attributes.
+参考<a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>了解更多关于使用属性的信息。
 
 ### Web APIs
 
-Magento or third-party services can be configured as a web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} (REST or SOAP) with some simple {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %}. You can use these services to integrate your Magento installation into third-party applications, such as CRM (Customer Relationship Management), ERP (Enterprise Resource Planning) back office systems, and {% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %} (Content Management Systems).
+Magento或第三方服务可被配置成一个象web{% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} (REST的SOAP)的一些简单的{% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %}。你可以使用这些服务来集成你的Magento到第三方应用中去，像CRM(客户关系管理系统)或ERP(企业资源规划系统)的后系统，以及{% glossarytooltip f3944faf-127e-4097-9918-a2e9c647d44f %}CMS{% endglossarytooltip %}（内容管理系统）.
 
-See <a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Magento web API起步</a> for more information.
+参考<a href="{{ page.baseurl }}/get-started/bk-get-started-api.html">Magento web API起步</a>了解更多
 
-### 服务契约, dependency injection, and dependency inversion
+### 服务契约, 依赖注入和依赖倒置
 
-<i>服务契约</i> provide a new way to access public API endpoints. These PHP interfaces offer robust, stable extension points to which clients can connect.  服务契约 define the endpoints that function as a module's public API. Defining these endpoints is an essential part of adding a module.
+<i>服务契约</i>提供了一个新的方式访问公共API接口。这些php接口提供健壮的、稳定的扩展点给到客户端来连接。服务契约定义了和模块公共API起相同作用的接口。定义这些接口是添加模块非常必要的一部分。
 
-服务契约 are discussed throughout the Magento documentation set. See <a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a> for a high-level introduction. See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for a more detailed discussion of service contracts and dependency injection.
+服务契约在整个Magento文档中被反复讨论。参考<a href="{{ page.baseurl }}/architecture/archi_perspectives/service_layer.html">服务层</a>了解高层介绍。参考<a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>了解服务契约和依赖注入更多细节的讨论。
 
-Magento implements <i>dependency injection</i> along with service contracts. 依赖注入 provides a mechanism for changing a module's behavior without altering the client or understanding nitty-gritty details of implementation. Both dependency injection and its related concept *dependency inversion* support Magento's fundamental architectural principles of modularity and ease-of-extensibility. They strongly encourage basic coding practices that support the loose coupling of software modules.
+Magento随关服务契约实现<i>依赖注入</i>，依赖注入提供一种机制，改变模块的行为而不须要修改客户端，也不须要理解实现的细节。依赖注入及相关的概念*依赖倒置*支撑Magento的基本架构原则，模块化和易于扩展。它们非常鼓励支持软件模块松藕合的基础代码实践。
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on both dependency injection and service contracts.
+参考<a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>了解更多关于依赖注入和服务契约的信息。
 
-### Plug-ins
+### 插件
 
-Plug-ins, like modules, are a mechanism for adding features to the core Magento product. Plug-ins enable you to make changes to the behavior of any public method in a Magento class. You can consider it a form of extension that uses the `Plugin` class.
+插件，类似模块，是一个为添加特性到Magento核心行为中的机制。插件允许你改变Magento类中任何公有方法的行为。你可以考虑它是一种使用`插件`类形式的扩展。
 
-Plug-ins are also called <i>interceptors</i>. Applications use the {% glossarytooltip 9fceecbe-31be-4e49-aac7-11d155a85382 %}plug-in{% endglossarytooltip %} pattern to change method behavior without modifying the actual class. Plug-ins can typically intercept method processing before or after the method runs, or only when the method throws an {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %}.
+插件也被称为<i>拦截器</i>。应用程序使用{% glossarytooltip 9fceecbe-31be-4e49-aac7-11d155a85382 %}插件{% endglossarytooltip %}模式来改变方法的形为，而不修改实际的类。插件或以在原方法执行过程的之前和之后插入要执行的方法，或仅在原方法抛异常时执行
 
-See <a href="{{ page.baseurl }}/extension-dev-guide/plugins.html">Plug-ins</a> in <a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a> for information on declaring and prioritizing plug-ins.
+参考<a href="{{ page.baseurl }}/extension-dev-guide/bk-extension-dev-guide.html">PHP开发文档</a>中的<a href="{{ page.baseurl }}/extension-dev-guide/plugins.html">插件</a>了解更多优先考虑插件和声明插件的信息
 
 ### 相关主题 {#m2arch-related}
 

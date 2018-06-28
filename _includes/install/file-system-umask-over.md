@@ -11,7 +11,7 @@ Even in a development environment, you want your Magento installation to be secu
 This topic provides some basic information about our ownership and permissions guidelines. For additional information, see:
 
 *	[安装前设置所有者和权限]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html)
-*	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
+*	[Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
 ### Magento文件系统所有者
 We refer to the *Magento文件系统所有者* as a user who owns and can write to files in the Magento file system.
@@ -62,4 +62,4 @@ For more information about `magento_umask`, see [可选地设置UMASK]({{ page.b
 ## Permissions, ownership, and Magento modes
 We recommend different permissions and ownership for default mode, developer mode, and production mode.
 
-We discuss these recommendations in [Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html).
+We discuss these recommendations in [Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html).

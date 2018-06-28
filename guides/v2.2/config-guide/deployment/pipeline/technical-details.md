@@ -289,7 +289,7 @@ File permissions and ownership must be consistent across development, build, and
 *   Change Magento file system permissions and ownership on each system as necessary using the following guidelines:
 
     *   Development and build: [安装前设置所有者和权限 (two users)]({{ page.baseurl }}/install-gde/prereq/file-system-perms.html#perms-private)
-    *   Production: [Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
+    *   Production: [Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 
     <div class="bs-callout bs-callout-info" id="info" markdown="1">
     If you choose this approach, you must set file system permissions and ownership every time you pull code from your build system (if the Magento文件系统所有者 or web server user are different on your build system).

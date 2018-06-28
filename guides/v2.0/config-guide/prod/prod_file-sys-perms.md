@@ -1,8 +1,8 @@
 ---
 group: config-guide
 subgroup: 999_prod
-title: Magento ownership and permissions in development and production
-menu_title: Magento ownership and permissions in development and production
+title: Magento开发环境和生产环境的所有者和权限
+menu_title: Magento开发环境和生产环境的所有者和权限
 menu_node:
 menu_order: 2
 version: 2.0

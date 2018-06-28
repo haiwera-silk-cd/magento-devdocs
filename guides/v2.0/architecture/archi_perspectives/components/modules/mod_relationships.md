@@ -21,7 +21,7 @@ redirect_from:
 
 * **使用**: 如果模块A调用了模块B的行为，则它使用了模块B
 
-* **起反应**: 模块A对模块B作出反应，当其行为它B的{% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %}触发，但模块B并不知道有模块A。
+* **起反应**: 模块A对模块B作出反应，当其行为被B的{% glossarytooltip c57aef7c-97b4-4b2b-a999-8001accef1fe %}event{% endglossarytooltip %}触发，但模块B并不知道有模块A。
 
 * **定制**: 如果模块A修饰了模块B的行为，称A定制了B
 

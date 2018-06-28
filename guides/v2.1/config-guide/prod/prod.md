@@ -20,5 +20,5 @@ If you have advice or experience to share, open an [issue](https://github.com/ma
 Current topics include:
 
 *	[Deployment steps]({{ page.baseurl }}/config-guide/prod/prod_deploy.html)
-*	[Magento ownership and permissions in development and production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
+*	[Magento开发环境和生产环境的所有者和权限]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html)
 * [Magento performance optimization for production deployments]({{ page.baseurl }}/config-guide/prod/prod_perf-optimize.html)

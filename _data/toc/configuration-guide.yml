@@ -361,7 +361,7 @@ pages:
       versions: ["2.0","2.1"]
       children:
 
-        - label: Magento ownership and permissions in development and production
+        - label: Magento开发环境和生产环境的所有者和权限
           url: /config-guide/prod/prod_file-sys-perms.html
 
         - label: 部署到生产环境

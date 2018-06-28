@@ -214,7 +214,7 @@ pages:
             - label: 卸载和重装Magento
               url: /install-gde/install/cli/install-cli-uninstall.html
 
-            - label: Display or change the Admin URI
+            - label: 显示和修改管理面板URI
               url: /install-gde/install/cli/install-cli-adminurl.html
 
             - label: 移除样本数据模块或更新样本数据

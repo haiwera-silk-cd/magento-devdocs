@@ -1,8 +1,8 @@
 ---
 group: install_cli
 subgroup: 05_Command-line installation
-title: Display or change the Admin URI
-menu_title: Display or change the Admin URI
+title: 显示和修改管理面板URI
+menu_title: 显示和修改管理面板URI
 menu_node:
 menu_order: 6
 version: 2.0

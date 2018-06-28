@@ -45,25 +45,25 @@ Magento空白主题模板为定制提供了一个跳板，你可以使用这个�
 
 <i>样版库</i>是一个用户界面设计样版的集合，它们始终能在你安装的产品中被重复使用。<a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>定义了一些管理员工作在网店前台能使用的组件的例子。
 
-Form elements included in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %} pattern library include:
+包含在{% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}表单元素模板包括：
 
-* address form
-* button bar
-* container
-* tabs
-* sign-in form
+* 地址表单
+* 按钮栏
+* 容器
+* 标签页
+* 注册表单
 
-Users of the default Magento storefront encounter examples of these form elements throughout the product. These patterns provide a valuable language of software 组件 (and indirectly, user experiences) for {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} developers and administrators.
+Magento默认网店前台的用户会看到这些表单元素样本，这些模板为{% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}开发者及管理员提供了一个非常有用的软件组件语言（间接地，用户体验）
 
-The Magento {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} Pattern library is built on the LESS preprocessor and implemented as a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. You can download a free, current version of this module from [Magento Marketplace](https://marketplace.magento.com/){:target="_blank"}.
+Magento{% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}管理面板{% endglossarytooltip %}模板库使用LESS预处理器构建并以模块的形式实现，你可以从[Magento Marketplace](https://marketplace.magento.com/){:target="_blank"}.免费下载当前这个版本的模块
 
-See <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> for more information on using this library.
+参考<a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> 了解更多使用这个库的信息
 
 ## 相关主题 {#m2arch-related}
 
 <a href="{{ page.baseurl }}/architecture/extensibility.html">可扩展和模块化</a>
 
-<a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">Global extensibility features</a>
+<a href="{{ page.baseurl }}/architecture/global_extensibility_features.html">全局扩性特征</a>
 
 <a href="{{ page.baseurl }}/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>
 
