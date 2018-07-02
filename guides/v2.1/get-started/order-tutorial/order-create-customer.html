@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/get-started/order-tutorial/order-create-customer.html">
+	<link rel="canonical" href="/guides/v2.1/get-started/order-tutorial/order-create-customer.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -412,7 +412,7 @@
 
 <p><code class="highlighter-rouge">Authorization</code> <code class="highlighter-rouge">Bearer &lt;admin token&gt;</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <p>It is recommended that you substitute the value of the <code class="highlighter-rouge">email</code> parameter with a real email address so that you receive all notifications.</p>
 
@@ -442,7 +442,7 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>Magento assigned this user <code class="highlighter-rouge">id</code> value of <code class="highlighter-rouge">2</code>.</p>
 
@@ -502,14 +502,14 @@
 
 <p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
 </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jdoe@example.com"</span><span class="p">,</span><span class="w">
 </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password1"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>Magento returns the customer’s access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.</p>
 

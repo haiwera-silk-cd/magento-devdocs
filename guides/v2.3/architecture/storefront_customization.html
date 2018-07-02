@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/architecture/storefront_customization.html">
+	<link rel="canonical" href="/guides/v2.3/architecture/storefront_customization.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -725,28 +725,28 @@
 
 			<h2 id="概述">概述</h2>
 
-<p>We can generalize about the range of <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span> customizations that the Magento supports. This range spans the simplest customizations, which involve only small additions to the default Magento storefront settings, to a complete replacement of Magento-provided <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> and <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span>.</p>
+<p>我们可以对Magento支持的<span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span>定制的范围进行概括。这个范围跨越最简单的定制，仅涉及一个小添加到Magento设置，到完全替换Magento提供的<span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span>和<span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span>.</p>
 
-<h2 id="storefront-customization-levels">Storefront customization levels</h2>
+<h2 id="网店前台定制级别">网店前台定制级别</h2>
 
-<p>These four levels of potential storefront customization are listed in order to increase complexity.</p>
+<p>以下依复杂性排序列出了四个级别的潜在的前端定制</p>
 
-<h3 id="extend-magento-provided-css">Extend Magento-Provided CSS</h3>
-<p>Magento supplies a default <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> and a LESS-based CSS. You can substantially change a storefront using CSS only. This uncomplicated strategy might suit projects with a limited budget, or might interest developers who create different skins for a site. A small business enter this process of storefront customization by buying a third-party developed theme from Magento Marketplace to extend the default values.</p>
+<h3 id="扩展magento提供的css">扩展Magento提供的CSS</h3>
+<p>Magento提供一套默认的<span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span>和基于LESS的CSS。你可以仅使用CSS基本上改变网店前台.这种不复杂的策略应该适合有限的项目预算，或应该引起为站点创建不同外观的开发者石感兴趣。小的业务可以走这个前端定制的过程，在Magento市场买一个第三方开发的主题来扩展默认的外观。</p>
 
-<h3 id="replace-phtml-template-files">Replace PHTML template files</h3>
-<p>In addition to extending the default CSS, you can generate different HTML <span term-uuid="8f407f13-4350-449b-9dc5-217dcf01bc42" class="glossary-term" data-toggle="popover">markup</span>. For example, you might need to add a missing CSS class name, or an add an extra <code class="highlighter-rouge">&lt;div&gt;</code> tag to achieve some visual effect. You might also need to tweak some <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> to cope with different HTML markup. This change is more demanding than simply extending Magento CSS, but is still within the grasp of smaller projects and leaner teams.</p>
+<h3 id="替换phtml模板文件">替换PHTML模板文件</h3>
+<p>除了扩展默认的CSS，你还可以生成不同的HTML<span term-uuid="8f407f13-4350-449b-9dc5-217dcf01bc42" class="glossary-term" data-toggle="popover">标签</span>.比如，你可能要添加一个缺失的CSS类名，或添加一个额外的<code class="highlighter-rouge">&lt;div&gt;</code>标签来达到一种可视的效果。你也可能须要稍稍调整一些<span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span>来处理不同的HTML标签。这种修改比只简单扩展Magento CSS要求更高，但仍是小项目和初级团队力所能及的。</p>
 
-<h3 id="replace-magento-provided-css">Replace Magento-Provided CSS</h3>
-<p>Rather than edit the default CSS provided by Magento, you might decide to replace all the default storefront CSS code with your own. This strategy avoids tying a project to the Magento-provided CSS, but puts a greater burden on project development and integration. It also allows use of different CSS tools or technologies not provided with Magento. Partners who build their own set of CSS libraries could reuse these libraries on different customer projects. (These unique CSS libraries may help differentiate a partner from others in the market.)</p>
+<h3 id="替换magento提供的css">替换Magento提供的CSS</h3>
+<p>相较于编辑Magento提供的默认的CSS，你可能决定要去替换所有的默认的前端CSS代码。这种策略避免把自己的项目和Magento提供的CSS捆到一起，但却使项目开发和集成面临更大的负担。它也允许使用Magento没有提供的不同的CSS工具和技术。构建他们自己CSS库的合作者可以在不同的额户项目中重用这些库。（这些单独的CSS库可以帮助区分合作者和市场上的其它人）</p>
 
-<p>In addition to replacing CSS files, you might need to replace small amounts of HTML and JavaScript.</p>
+<p>除了替换CSS文件，你可以须要替换少量HTML和Javascript.</p>
 
-<h3 id="replace-magento-provided-css-html-and-javascript">Replace Magento-Provided CSS, HTML, and JavaScript</h3>
-<p>Delivering a sharply different shopping experience than the default Magento installation provides is a more substantial task. However, the tradeoff might be a more complicated experience integrating additional extensions into your installation in the future.</p>
+<h3 id="替换magento提供的css-html-和javascript">替换Magento提供的CSS, HTML, 和JavaScript</h3>
+<p>交付一个与默认Magento完全不同的购物体验是一个更大的任务。然而，在未来集成附加的扩展到你的安装中，权衡是更加复杂的体验，</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Any customization of your storefront will work optimally, and provide the easiest path for later upgrades, if you follow the best practice of consistently compartmentalizing code by type. For example, keep all HTML in <span term-uuid="ae0f1f68-c466-4189-88fd-6cd8b23c804f" class="glossary-term" data-toggle="popover">PHTML</span> files; keep all JavaScript in JavaScript files.</p>
+  <p>如果你一直遵循最佳实践把代码按类区分任何网店前台的定制将最佳的工作且将为后面的升级提供最简单的途径。例如，保持所有HTML在<span term-uuid="ae0f1f68-c466-4189-88fd-6cd8b23c804f" class="glossary-term" data-toggle="popover">PHTML</span>文件中，所有的Javascript在Javascript文件上中。</p>
 </div>
 
 <h3 id="相关主题s">相关主题s</h3>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/b2b/bk-b2b.html">
+	<link rel="canonical" href="/guides/v2.2/b2b/bk-b2b.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -687,135 +687,135 @@
 
 </section>
 
-			<p>Unlike the standard business-to-consumer model, Magento Commerce for B2B (Business to Business) is designed to meet the needs of sellers (Magento merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.</p>
+			<p>不像标准的B2C模型，Magento Commerce for B2B (B2B)被设计成商议销售者所需的模式，他们的客户主要是公司，他们有着复杂的组织结构及多用户、多角色，不同权限级别</p>
 
-<p>There are two basic actors in B2B model:</p>
+<p>B2B模型中有两种基本的角色</p>
 
 <ul>
-  <li>A <strong>seller</strong> is an admin user that accesses the system from the Magento Admin panel.</li>
-  <li>A <strong>buyer</strong> is any customer associated with a company account who accesses the system from the storefront.</li>
+  <li><strong>销售者</strong> 是一个管理员用户，他可以访问Magento的管理面板。</li>
+  <li><strong>购买者</strong> 是任意一个关联到一个公司帐户的客户，它可以访问网店前台。</li>
 </ul>
 
-<p>The Company component is the key entity within B2B on which all other features are in some way dependent. It allows joining multiple buyers that belong to the same company into a single company account (or corporate account). The company admin is able to build the company structure (divisions, subdivisions and users) in the appropriate hierarchy and provide different user roles and permissions to the company members. Such a hierarchy allows the company admin to control user activity within an account: ordering, quoting, purchasing, access to company credit info or profile, 等. In addition, a seller can configure how the buying company operates at the website: including the payment methods, pricing levels, the ability to negotiate over prices, and the ability to create requisition lists.</p>
+<p>公司组件是B2B中关键的实体，所有其他的特征都在一些方面依赖了它。这允许加入多个同一公司的购买者到一个公司的帐户(或合作帐户)下。公司的管理员能够构建公司结构(分级部门，细分部门及用户)为一个适当的等级结构，并提拱不同的用户角色和权限到公司的成员。这样一个等级结构允许允许公司管理员控制帐户下的成员的活动：下单、报价、购买及访问信息卡帐户和其它帐号信息等。除此之外，一个销售可以配置如何与购买公司在站点上合作：包括支付方式、定价级别，议价能力和创建需求列表的能力。</p>
 
-<p>Companies have an option to Pay on Account, or in other words make purchases in credit. The seller allocates credit for a company account and manages credit settings for a company as well as credit reimbursement.</p>
+<p>公司有可选的支付帐户，换句话说，能使用信用购买。销售者分配信用额度到公司帐户并且管理它们的信用设置及信用报销。</p>
 
-<p>Shared catalogs are the pricing levels that allow setting custom prices per product for different companies on one or multiple websites. By using shared catalogs, a seller can sell this product with applying different pricing levels for different customer groups.</p>
+<p>共享的产品目录是分级定价的，允许在一个或多个站点为每个产品不同公司设置自定义的价格。使用共享产品目录，销售者可以为不同的客户群应用不同的价格级别来进行销售。</p>
 
-<p>The seller and a buyer representing a company can negotiate the price of an order prior to order placement. This functionality is supported within the Negotiable Quote module. It means that before making an order, the buyer can initiate negotiations with the seller on prices and discounts. Negotiations suggest that the created quote may be submitted, reviewed and modified several times before it is converted into order.</p>
+<p>销售者和代表一个公司的购买者能在定单确认前商议订单的价格。此功能在议价模块完成。这意味着在生成一个定单前，购买者可以对销售者的定价和折扣发起议价。商议暗示着创建的报价可能在转化成定单前被提交、审查和修改。</p>
 
-<h2 id="b2b-modules">B2B Modules</h2>
+<h2 id="b2b模块">B2B模块</h2>
 
-<p>Magento Commerce for B2B is a set of modules that is installed on top of Magento Commerce. The following table lists the modules provided with B2B.</p>
+<p>Magento Commerce for B2B是一个被安装在Magento Commerce之上的模块集。以面的表格列出了B2B担供的模块。</p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>WebAPI enabled?</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>能否使用WebAPI?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>B2b</td>
-      <td>The base module for B2B. It also provides branding elements.</td>
-      <td>No</td>
+      <td>B2B基础模块，也提供品牌元素。</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>BundleNegotiableQuote</td>
-      <td>Enables bundle products to be displayed in a negotiable quote in an B2B environment</td>
-      <td>No</td>
+      <td>允许在B2B环境中归拢产品展示在议价中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>BundleRequisitionList</td>
-      <td>Enables bundle products to be displayed in a requisition list</td>
-      <td>No</td>
+      <td>允许归拢产品展示在需求列表中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>BundleSharedCatalog</td>
-      <td>Enables bundle products to be added to a shared catalog in an B2B environment.</td>
-      <td>No</td>
+      <td>允许在B2B环境中归拢产品添加到共享产品目录中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>Company</td>
-      <td>Allows a seller to create a company account and assign multiple members of the company to the account.</td>
-      <td>Yes</td>
+      <td>允许销售者创建一个公司帐户和分配多个公司成员到这个帐户</td>
+      <td>是</td>
     </tr>
     <tr>
       <td>CompanyCredit</td>
-      <td>Adds the Payment on Account payment method for B2B companies.</td>
-      <td>Yes</td>
+      <td>为B2B的公司添加支付到帐户支付方式</td>
+      <td>是</td>
     </tr>
     <tr>
       <td>CompanyPayment</td>
-      <td>Allows a seller to configure which payment methods are available for B2B companies.</td>
-      <td>No</td>
+      <td>允许销售者配置哪一种支付方式对B2B公司是有效的</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>ConfigurableNegotiableQuote</td>
-      <td>Enables configurable products to be displayed in a negotiable quote in an B2B environment</td>
-      <td>No</td>
+      <td>允许在B2B环境中将可配置的产品显示到议价中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>ConfigurableRequisitionList</td>
-      <td>Enables configurable products to be displayed in a requisition list</td>
-      <td>No</td>
+      <td>允许可配置的产品显示到需求列表中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>ConfigurableSharedCatalog</td>
-      <td>Enables configurable products to be added to a shared catalog in an B2B environment.</td>
-      <td>No</td>
+      <td>允许在B2B环境中将可配置的产品添加到共享目录中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>GiftCardNegotiableQuote</td>
-      <td>Enables gift cards to be displayed in a negotiable quote in an B2B environment</td>
-      <td>No</td>
+      <td>允许在B2B环境中将礼品卡显示到议价中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>GiftCardRequisitionList</td>
-      <td>Enables gift cards to be displayed in a requisition list</td>
-      <td>No</td>
+      <td>允许将礼品卡显示到需求列表中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>GiftCardSharedCatalog</td>
-      <td>Enables gift cards to be added to a shared catalog in an B2B environment.</td>
-      <td>No</td>
+      <td>允许在B2B环境将礼品卡添加到共享产品目录中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>GroupedSharedCatalog</td>
-      <td>Enables grouped products to be added to a shared catalog in an B2B environment.</td>
-      <td>No</td>
+      <td>允许在B2B环境将分组的产品添加到共享目录中</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>NegotiableQuote</td>
-      <td>Allows a buyer and a seller (admin user) to negotiate product and/or shipping prices before the buyer places an order.</td>
-      <td>Yes</td>
+      <td>允许购买者和销售者(管理员用户)在定单确认前商议产品或物流价格</td>
+      <td>是</td>
     </tr>
     <tr>
       <td>NegotiableQuoteSharedCatalog</td>
-      <td>Enables the <code class="highlighter-rouge">NegotiableQuote</code> module to interact with a <code class="highlighter-rouge">SharedCatalog</code> in an B2B environment.</td>
-      <td>No</td>
+      <td>允许B2B环境中<code class="highlighter-rouge">NegotiableQuote</code>和<code class="highlighter-rouge">SharedCatalog</code>模块交互</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>QuickOrder</td>
-      <td>Allows buyers to create a new order from a list of multiple SKUs.</td>
-      <td>No</td>
+      <td>允许购买者用多个Sku的列表创建一个新的订单</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>RequisitionList</td>
-      <td>Allows a buyer to create multiple lists of frequently-purchased items and use those lists for order placement.</td>
-      <td>No</td>
+      <td>允许购买者创建经常购买项的多列表及使用这些列表来下单。</td>
+      <td>否</td>
     </tr>
     <tr>
       <td>SharedCatalog</td>
-      <td>Defines the visibility of products and prices in the catalog and in B2B quotes for different company accounts.</td>
-      <td>Yes</td>
+      <td>为不同公司的帐号定义产品及价格在产品目录和B2B报价中的可见性</td>
+      <td>是</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 <ul>
   <li><a href="/guides/v2.2/comp-mgr/install-extensions/b2b-installation.html">安装B2B扩展</a></li>
   <li><a href="http://docs.magento.com/m2/b2b/user_guide/getting-started.html">起步 with Magento Commerce for B2B</a></li>

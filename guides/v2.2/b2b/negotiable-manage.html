@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/b2b/negotiable-manage.html">
+	<link rel="canonical" href="/guides/v2.2/b2b/negotiable-manage.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -693,7 +693,7 @@
   <p>All negotiable quote calls require an admin authorization token.</p>
 </div>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">POST /V1/negotiableQuote/request
 POST /V1/negotiableQuote/submitToCustomer
@@ -705,15 +705,15 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 
 <p><strong>NegotiableQuoteManagementInterface Parameters</strong></p>
 
-<p>The following table lists the parameters defined in <code class="highlighter-rouge">CompanyInterface</code>.</p>
+<p>下面的表格列出了<code class="highlighter-rouge">CompanyInterface</code>的参数定义</p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -733,13 +733,13 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
       <td><code class="highlighter-rouge">comment</code></td>
       <td>The comment to add to the quote.</td>
       <td>string</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">files</code></td>
       <td>An array of files to add to the quote</td>
       <td>array</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
@@ -751,10 +751,10 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -768,7 +768,7 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
       <td><code class="highlighter-rouge">type</code></td>
       <td>Defines the type of file, such as <code class="highlighter-rouge">text/plain</code>或<code class="highlighter-rouge">application/pdf</code></td>
       <td>string</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
@@ -794,15 +794,15 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
   <p>Requesting a negotiable quote requires an admin authorization token.</p>
 </div>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteNegotiableQuoteManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST V1/negotiableQuote/request</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"quoteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
@@ -816,9 +816,9 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <p>Magento creates a negotiable quote in the <code class="highlighter-rouge">Created</code> state.</p>
 
@@ -842,24 +842,24 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
   <li>The quote state is changed to Submitted by admin.</li>
 </ul>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteNegotiableQuoteManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiableQuote/submitToCustomer</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"quoteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
   </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It'd be our pleasure. Please proceed with your order."</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <h3 id="update-a-quote">Update a quote</h3>
 
@@ -871,35 +871,35 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 
 <p>The request can be applied to one or more quotes at the same time.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiableQuote/pricesUpdated</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"quoteIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <h3 id="set-the-shipping-method">Set the shipping method</h3>
 
 <p>To set the shipping method, the quote must be in the <code class="highlighter-rouge">created</code>, <code class="highlighter-rouge">processing_by_admin</code>或<code class="highlighter-rouge">submitted_by_customer</code>. In addition, the quote must have a shipping address but no shipping method or shipping price.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/negotiableQuote/3/shippingMethod</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"shippingMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fixedrate"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <h3 id="decline-a-quote">Decline a quote</h3>
 
@@ -913,24 +913,24 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 
 <p>When you decline a quote, all custom pricing will be removed from the quote. The buyer will be able to place an order using their standard catalog prices and discounts.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteNegotiableQuoteManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiableQuote/decline</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"quoteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
   </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your order is too large. "</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <h2 id="miscellaneous-operations">Miscellaneous operations</h2>
 
@@ -940,15 +940,15 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 
 <p>Magento returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A <code class="highlighter-rouge">creator_type</code> value of <code class="highlighter-rouge">3</code> indicates the buyer made the comment. If the value is <code class="highlighter-rouge">2</code>, the seller commented.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/negotiableQuote/87/comments</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1033,15 +1033,15 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
 
 <p><code class="highlighter-rouge">negotiableQuoteAttachmentContentManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/negotiableQuote/attachmentContent</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"quoteId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -1054,7 +1054,7 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod</span></code></pre></figure>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.2/b2b/negotiable-quote.html">与NegotiableQuote模块集成</a></li>

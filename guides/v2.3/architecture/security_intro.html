@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/architecture/security_intro.html">
+	<link rel="canonical" href="/guides/v2.3/architecture/security_intro.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -723,31 +723,31 @@
 
 </section>
 
-			<h2 id="enhanced-password-management">Enhanced password management</h2>
+			<h2 id="增强的密码管理">增强的密码管理</h2>
 
-<p>Magento has strengthened the hashing algorithms (SHA-256) used in password management.</p>
+<p>Magento在密码管理中强化了哈希算法(SHA-256)</p>
 
-<h2 id="improved-prevention-of-cross-site-scripting-xss-attacks-by-making-escaped-data-the-default">Improved prevention of cross-site scripting (XSS) attacks by making escaped data the default</h2>
+<h2 id="提升了跨站脚本攻击的防护默认开启数据转义">提升了跨站脚本攻击的防护，默认开启数据转义。</h2>
 
-<p>The Magento框架 has adopted conventions that regulate the escaping of data in output. These conventions include the ability to escape  output for <span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span> pages (HTML, JSON, and JavaScript) and email. Where possible, escaping is transparent to client code. See <a href="/guides/v2.3/frontend-dev-guide/templates/template-security.html">Security measures against XSS attacks</a> in the <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> Developer Guide.</p>
+<p>Magento框架采用规定在输出时数据转义的习惯。这个习惯包括为<span term-uuid="a2aff425-07dd-4bd6-9671-29b7edefa871" class="glossary-term" data-toggle="popover">HTML</span>页面(HTML, JSON, 和JavaScript)及email转义输出的能力。在可能的地方，转义对客户端代码来说是透明的，参考<span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span>工程师手册中的<a href="/guides/v2.3/frontend-dev-guide/templates/template-security.html">防范XSS攻击的安全措施</a>了解更多</p>
 
-<h2 id="more-flexible-file-system-ownership-and-permissions">More flexible file system ownership and permissions</h2>
+<h2 id="更灵活的文件系统所有者和权限">更灵活的文件系统所有者和权限</h2>
 
-<p>Starting in version 2.0.6, Magento no longer explicitly sets file system permissions. Instead, we recommend that certain files and directories be writable in a development environment and read-only in a production environment.</p>
+<p>从2.0.6开始，Magento不再明确设置文件权限。相反地，我们推荐某些文件和目录在开发环境中能被写，而在生产环境中只读。</p>
 
-<p>To provide you with a simple way to restrict access to the file system in production, we provide the flexibility for you to further restrict those permissions using a <a href="http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html" target="_blank">umask</a>.</p>
+<p>要提供给你一个简单的方式限制在生产环境中访问文件系统，这们为你提供了使用<a href="http://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html" target="_blank">umask</a>去限制权限的灵活性。</p>
 
-<p>For an overview, see <a href="/guides/v2.3/install-gde/prereq/file-sys-perms-over.html">所有者和权限概述</a>.</p>
+<p>概述请参考所有者和权限概述](/guides/v2.3/install-gde/prereq/file-sys-perms-over.html)./install-gde/prereq/file-sys-perms-over.html).</p>
 
-<p>For details about ownership and permissions in development and production, see <a href="/guides/v2.3">Magento ownership and permissions in development and production</a>.</p>
+<p>更多关于生产环和开发环境的所有者和权限的细节请参考<a href="/guides/v2.3">Magento开发环境和生产环境的所有者和权限</a>.</p>
 
-<h2 id="improved-prevention-of-clickjacking-exploits">Improved prevention of clickjacking exploits</h2>
+<h2 id="提升点击劫持的防护">提升点击劫持的防护</h2>
 
-<p>Magento safeguards your store from clickjacking attacks by using an X-Frame-Options HTTP request header. For more information, see <a href="/guides/v2.3/config-guide/secy/secy-xframe.html"> X-Frame-Options头</a>.</p>
+<p>Magento使用X-Frame-Options HTTP请求头保护你的网店避免点击劫持攻击，参考<a href="/guides/v2.3/config-guide/secy/secy-xframe.html"> X-Frame-Options头</a>.</p>
 
-<h2 id="use-of-non-default-magento-admin-url">Use of non-default Magento Admin URL</h2>
+<h2 id="使用非默认的magento管理面板url">使用非默认的Magento管理面板URL</h2>
 
-<p>A simple <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> (like <code class="highlighter-rouge">admin</code>或<code class="highlighter-rouge">backend</code>) makes it easy to target attacks on specific locations using automated password guessing. To prevent against this type of attack, Magento by default creates a random Admin URI when you install the product. The CLI is provided so that you can  see the password if you forget it. You can also use the CLI to change this URI.  Although the use of a non-default admin URL will not secure the site, its use will help prevent large-scale automated attacks. See <a href="/guides/v2.3/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a> in 配置手册 for more information.</p>
+<p>一个简单的<span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> (像<code class="highlighter-rouge">admin</code>或<code class="highlighter-rouge">backend</code>)很容易使其成为攻击目标，用自动密码猜测软件进行攻击。要保护使网店不受这类攻击，Magento默认创建一个随机的管理面板的URI，在安装的时候。如果你忘记了命令行可以被用来查看这个URI，也可以用它来修改此URI。 虽然非默认的管理面板URI不能用于保护站点，但对大规模地自动攻击，是非常有效的。参考配置手册的<a href="/guides/v2.3/install-gde/install/cli/install-cli-adminurl.html">显示和修改管理面板URI</a>了解更多信息</p>
 
 <h2 id="相关主题">相关主题</h2>
 

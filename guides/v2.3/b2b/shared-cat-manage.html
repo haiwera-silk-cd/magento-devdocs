@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/b2b/shared-cat-manage.html">
+	<link rel="canonical" href="/guides/v2.3/b2b/shared-cat-manage.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -691,11 +691,11 @@
 
 <p>Magento Commerce for B2B provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.</p>
 
-<p><strong>Service name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">sharedCatalogSharedCatalogRepositoryV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog</span><span class="w">
 </span><span class="err">PUT</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id</span><span class="w">
@@ -708,10 +708,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -731,7 +731,7 @@
       <td><code class="highlighter-rouge">description</code></td>
       <td>Describes the shared catalog</td>
       <td>string</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">customer_group_id</code></td>
@@ -749,7 +749,7 @@
       <td><code class="highlighter-rouge">created_by</code></td>
       <td>The user ID of the admin who created the shared catalog</td>
       <td>integer</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">store_id</code></td>
@@ -770,11 +770,11 @@
 
 <p>When B2B is enabled, the system creates a public shared catalog named <code class="highlighter-rouge">Default (General)</code>. Magento allows only one public shared catalog at a time. You can create an unlimited number of custom shared catalogs.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"sharedCatalog"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -785,7 +785,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>The shared catalog <code class="highlighter-rouge">id</code>, such as <code class="highlighter-rouge">2</code>.</p>
 
@@ -793,7 +793,7 @@
 
 <p>You cannot change the <code class="highlighter-rouge">type</code> from public (<code class="highlighter-rouge">1</code>) to custom (<code class="highlighter-rouge">0</code>). If you need to replace the public shared catalog, create a custom catalog and change its type to public.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT  /V1/sharedCatalog/2</code></p>
 
@@ -808,7 +808,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>The shared catalog <code class="highlighter-rouge">id</code>, such as <code class="highlighter-rouge">2</code>.</p>
 
@@ -816,15 +816,15 @@
 
 <p>This call returns information about the specified shared catalog.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET  /V1/sharedCatalog/2</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -842,33 +842,33 @@
 
 <p>Only custom shared catalogs can be deleted. When a custom catalog is deleted, the assigned companies are re-assigned to the default public catalog.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">DELETE  /V1/sharedCatalog/2</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <h3 id="search-for-a-shared-catalog">Search for a shared catalog</h3>
 
 <p>The following search returns all the custom shared catalogs (<code class="highlighter-rouge">type = 0</code>) in the system.</p>
 
-<p>See <a href="/guides/v2.3/rest/performing-searches.html">Search using REST APIs</a> for information about constructing a search query.</p>
+<p>参考<a href="/guides/v2.3/rest/performing-searches.html">使用REST API搜索</a>了解更多关于构造查询的信息</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&amp;searchCriteria[filter_groups][0][filters][0][value]=0&amp;searchCriteria[filter_groups][0][filters][0][condition_type]=eq</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -900,7 +900,7 @@
     </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.3/b2b/shared-catalog.html">与ShareCatalog模块集成</a></li>

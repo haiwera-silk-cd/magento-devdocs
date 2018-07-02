@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/b2b/negotiable-checkout.html">
+	<link rel="canonical" href="/guides/v2.3/b2b/negotiable-checkout.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -701,7 +701,7 @@
 
 <p>A negotiated quote can be initiated without a shipping address. However, before the order can be placed, the shipping address must be provided.</p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/estimate-shipping-methods</span><span class="w">
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/estimate-shipping-methods-by-address-id</span><span class="w">
@@ -711,15 +711,15 @@
 
 <p>This call takes a full shipping address as input and estimates shipping fees. It returns a list of available shipping methods.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteShipmentEstimationV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/estimate-shipping-methods</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -737,7 +737,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -758,21 +758,21 @@
 
 <p>This call takes an address ID as input and estimates shipping fees. It returns a list of available shipping methods.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteShippingMethodManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/estimate-shipping-methods-by-address-id</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"addressId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -793,15 +793,15 @@
 
 <p>In this call, you specify the shipping and billing addresses, as well as the selected <code class="highlighter-rouge">shipping_carrier_code</code> and <code class="highlighter-rouge">shipping_method_code</code>. Magento returns a list of payment options and calculates the order totals.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteShippingMethodManagementV1</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/shipping-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  </span><span class="s2">"addressInformation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
 	  </span><span class="s2">"shipping_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -837,7 +837,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1003,11 +1003,11 @@
 
 <p>If the billing address isn’t provided through another call, use the <code class="highlighter-rouge">POST /V1/negotiable-carts/:cartId/billing-address</code> to specify it.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteBillingAddressManagementV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/billing-address</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/billing-address</span></code></pre></figure>
@@ -1016,11 +1016,11 @@
 
 <p>This call assigns a billing address to the specified negotiable quote.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/billing-address</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York"</span><span class="p">,</span><span class="w">
@@ -1041,7 +1041,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>[]</p>
 
@@ -1053,11 +1053,11 @@
 
 <p><code class="highlighter-rouge">GET /V1/negotiable-carts/86/billing-address</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="w">
@@ -1083,11 +1083,11 @@
 
 <p>B2B allows coupons to be used toward payment.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteCouponManagementV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/coupons/</span><span class="p">:</span><span class="err">couponCode</span><span class="w">
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/coupons</span></code></pre></figure>
@@ -1096,15 +1096,15 @@
 
 <p>If the initial quote applies a coupon to the totals, Magento ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p>PUT /V1/negotiable-carts/6/coupons/SAVE5</p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicting the request was successful</p>
 
@@ -1112,11 +1112,11 @@
 
 <p>B2B allows gift cards to be used as payment.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteGiftCardAccountManagementV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/giftCards</span><span class="w">
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/giftCards/</span><span class="p">:</span><span class="err">giftCardCode</span></code></pre></figure>
@@ -1125,11 +1125,11 @@
 
 <p>If the initial quote applies a gift card to the totals, Magento ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/6/giftCards</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"giftCardAccountData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1139,7 +1139,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code></p>
 
@@ -1147,27 +1147,27 @@
 
 <p>This call removes a gift card that has been applied to a negotiable quote.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">DELETE /V1/negotiable-carts/6/giftCards/00HELHQED6RV</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
 <h2 id="manage-payment-information">Manage payment information</h2>
 
 <p>When you submit payment information, Magento creates an order and sends an order confirmation to the buyer.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuotePaymentInformationManagementV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/payment-information</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/payment-information</span><span class="w">
@@ -1177,11 +1177,11 @@
 
 <p>This call sets payment information and the billing address for the negotiable quote. However, Magento does not create an order afterward.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/set-payment-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
    </span><span class="s2">"po_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A123456"</span><span class="p">,</span><span class="w">
@@ -1204,7 +1204,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the payment information was set</p>
 
@@ -1212,11 +1212,11 @@
 
 <p>This call sets payment information and the billing address for the negotiable quote, then creates an order.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiable-carts/86/payment-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">  </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"po_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A123456"</span><span class="p">,</span><span class="w">
@@ -1239,7 +1239,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>An order ID, such as <code class="highlighter-rouge">83</code></p>
 
@@ -1247,15 +1247,15 @@
 
 <p>This call returns returns payment information and all information from the <code class="highlighter-rouge">totals</code> object.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/negotiable-carts/86/payment-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1421,23 +1421,23 @@
 
 <p>This call is similar to <code class="highlighter-rouge">GET /V1/negotiable-carts/:cartId/payment-information</code>, except it does not return payment information.</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">negotiableQuoteCartTotalRepositoryV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/totals</span></code></pre></figure>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/negotiable-carts/86/totals</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"totals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1593,7 +1593,7 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.3/b2b/negotiable-quote.html">与NegotiableQuote模块集成</a></li>

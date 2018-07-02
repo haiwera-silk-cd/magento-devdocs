@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/architecture/tech-stack.html">
+	<link rel="canonical" href="/guides/v2.3/architecture/tech-stack.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -725,11 +725,11 @@
 
 			<h2 id="概述">概述</h2>
 
-<p>This page summarizes the technologies we use. For more detailed information, see the <a href="/guides/v2.3/install-gde/system-requirements-tech.html">系统要求</a>.</p>
+<p>本章总结了我们使用的技术，更多详细信息，请参考<a href="/guides/v2.3/install-gde/system-requirements-tech.html">系统要求</a>.</p>
 
-<p>Magento’s highly modular structure includes the following open-source technologies.</p>
+<p>Magento的高度模块化结构包含以下开源技术。</p>
 
-<h3 id="web-servers">Web servers</h3>
+<h3 id="web服务">Web服务</h3>
 
 <ul>
   <li>Apache</li>
@@ -749,13 +749,13 @@
   <li>MySQL Percona</li>
 </ul>
 
-<h3 id="http-accelerator">HTTP accelerator</h3>
+<h3 id="http加速器">HTTP加速器</h3>
 
 <ul>
   <li>Varnish</li>
 </ul>
 
-<h3 id="cache-storage">Cache Storage</h3>
+<h3 id="缓存存储">缓存存储</h3>
 
 <ul>
   <li>Redis</li>
@@ -765,39 +765,39 @@
 <h3 id="search">Search</h3>
 
 <ul>
-  <li>Solr (Magento Enterprise Edition only)</li>
-  <li>Elasticsearch (Magento Enterprise Edition version 2.1.x only)</li>
+  <li>Solr (仅Magento企业版)</li>
+  <li>Elasticsearch (仅Magento企业版2.1.x)</li>
 </ul>
 
-<h3 id="additional-technologies">Additional technologies</h3>
+<h3 id="其它技术">其它技术</h3>
 
 <ul>
   <li>HTML5</li>
   <li>CSS3 (LESS <span term-uuid="6c5cb4e9-9197-46f2-ba79-6147d9bfe66d" class="glossary-term" data-toggle="popover">CSS</span> pre-processor)</li>
   <li><span term-uuid="5bfa8a8e-6f3e-4fed-a43e-62339916f02e" class="glossary-term" data-toggle="popover">jQuery</span> (primary <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> library)</li>
-  <li>RequireJS (library that helps load JavaScript resources on demand)</li>
-  <li>Knockout.js (simplifies JavaScript UIs with the Model-View-View Model pattern)</li>
+  <li>RequireJS (帮助按需加载Javascript资源的库)</li>
+  <li>Knockout.js (简单的Javascript MVVM UI渲染库)</li>
   <li>第三方库 (Zend Framework 1, Zend Framework 2, Symfony)</li>
-  <li>Coding standards PSR-0 (autoloading standard), PSR-1 (basic coding standards), and PSR-2 (coding style guide), PSR-3, PSR-4</li>
+  <li>编码规范 PSR-0 (标准自动加载), PSR-1 (基础编码标准), and PSR-2 (编码风格指引), PSR-3, PSR-4</li>
 </ul>
 
-<h3 id="optional-stack-组件">Optional stack 组件</h3>
+<h3 id="可选栈组件">可选栈组件</h3>
 
 <ul>
-  <li>Varnish (caching)</li>
-  <li>Redis (used for page caching)</li>
-  <li>Solr (search engine)</li>
-  <li>Elasticsearch (search engine)</li>
+  <li>Varnish (缓存)</li>
+  <li>Redis (用于页面缓存)</li>
+  <li>Solr (搜索引擎)</li>
+  <li>Elasticsearch (搜索引擎)</li>
 </ul>
 
-<p>Magento 2.2 and above only supports PHP7+ and is no longer compatible with HipHop Virtual Machine(HHVM).</p>
+<p>Magento 2.2及以上仅支持PHP7+且不再兼容HHVM.</p>
 
-<h3 id="automated-testing">Automated testing</h3>
+<h3 id="自动测试">自动测试</h3>
 
-<p>Magento also provides automated testing suites that include unit, integration, functional and performance test scripts, as well as JavaScript tests and tools for static code analysis. 组件 include PHPUnit for the unit test framework and Selenium for the functional test framework.</p>
+<p>Magento也提供了自动测试的工具箱，包含单元测试、集成测试、功能测试和性能测试脚本，以及Javascript测试和静态代码分析工具。组件包括单元测试的PHPUnit和功能测试框架的Selenium.</p>
 
-<p>This framework is located in the <code class="highlighter-rouge">dev/tests</code> directory. The functional testing framework <code class="highlighter-rouge">mtf</code> can be found in a <a href="https://github.com/magento/mtf" target="_blank">separate repository</a>.
-For more information, see the <a href="/guides/v2.3/mtf/mtf_introduction.html">Functional Testing Framework</a> guide.</p>
+<p>这些框架位于<code class="highlighter-rouge">dev/tests</code>目录。功能测试框架<code class="highlighter-rouge">mtf</code>可以在<a href="https://github.com/magento/mtf" target="_blank">单独的仓库</a>中找到.
+更多信息，请参考<a href="/guides/v2.3/mtf/mtf_introduction.html">功能测试框架</a>手册.</p>
 
 <h2 id="相关主题">相关主题</h2>
 <p><a href="/guides/v2.3/architecture/archi_perspectives/ABasics_intro.html">架构基础</a></p>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/b2b/company-users.html">
+	<link rel="canonical" href="/guides/v2.3/b2b/company-users.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -687,83 +687,83 @@
 
 </section>
 
-			<p>A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the <code class="highlighter-rouge">POST /V1/customers</code> call, which is included with Magento Magento Open Source and Magento Commerce, and specify the <code class="highlighter-rouge">company_attributes</code> extended attributes to create a company user.</p>
+			<p>公司用户是一个被分配额外的指示用户所属公司属性的客户(购买者)。使用<code class="highlighter-rouge">POST /V1/customers</code>调用，此调用在Magento Open Source和Magento Commerce中都有，并指定<code class="highlighter-rouge">company_attributes</code>扩展属性来创建公司用户。</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>This topic discusses only the features of the <code class="highlighter-rouge">customerCustomerRepositoryV1</code> service that are specific to B2B. See <a href="/guides/v2.3/get-started/order-tutorial/order-create-customer.html">创建一个客户</a> for an example of creating a standard customer.</p>
+  <p>本节仅论讨B2B指定的<code class="highlighter-rouge">customerCustomerRepositoryV1</code>服务的特性。参考<a href="/guides/v2.3/get-started/order-tutorial/order-create-customer.html">创建一个客户</a>了解创建一个标准客户的例子。</p>
 </div>
 
 <h2 id="管理公司用户">管理公司用户</h2>
 
-<p>This section describes the REST endpoints used to manage company users.</p>
+<p>本节描述用于管理公司用户的REST接口</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">customerCustomerRepositoryV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/customers/</span><span class="w">
 </span><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/customers/</span><span class="p">:</span><span class="err">customerId</span></code></pre></figure>
 
-<p><strong>Company user parameters</strong></p>
+<p>** 公司用户的参数 **</p>
 
-<p>The following table lists the parameters that can be used to create a company user.</p>
+<p>下面的表格列出了能被用于创建公司客户的参数</p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">customer_id</code></td>
-      <td>System-generated customer ID.</td>
+      <td>系统生成的客户ID</td>
       <td>integer</td>
-      <td>Not applicable for create operations.</td>
+      <td>创建操作不可用</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">company_id</code></td>
-      <td>System-generated company ID.</td>
+      <td>系统生成的公司的ID</td>
       <td>integer</td>
-      <td>Required to create or update a company user.</td>
+      <td>创建和更新公司用户时必须</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">job_title</code></td>
-      <td>A string that describes the company user’s responsibilities.</td>
-      <td>Required to create or update a company.</td>
+      <td>描述公司用户职责的一个字符串</td>
+      <td>更新和创建公司时必须</td>
       <td> </td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">status</code></td>
-      <td>Indicates whether the company user is active or inactive</td>
+      <td>指示是否公司用户是活动的</td>
       <td>integer</td>
-      <td><code class="highlighter-rouge">0</code> - inactive; <code class="highlighter-rouge">1</code> - active</td>
+      <td><code class="highlighter-rouge">0</code> - 不活动的; <code class="highlighter-rouge">1</code> - 活动的</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">telephone</code></td>
-      <td>Telephone number</td>
+      <td>电话号码</td>
       <td>string</td>
-      <td>Required to create a company user.</td>
+      <td>创建公司用户时必须</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="create-a-company-user">Create a company user</h3>
+<h3 id="创建一个公司用户">创建一个公司用户</h3>
 
-<p>The <code class="highlighter-rouge">POST /V1/customers</code> call creates a Magento customer. B2B extends the <code class="highlighter-rouge">customerAccountManagementV1</code> service so that you can create a company user.</p>
+<p><code class="highlighter-rouge">POST /V1/customers</code>调用创建一个Magento的客户。B2B扩展<code class="highlighter-rouge">customerAccountManagementV1</code>服务以使你可以创建公司用户</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/customers</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Add the <code class="highlighter-rouge">company_attributes</code> code block to the payload that is required to create a standard customer.</p>
+<p>添加<code class="highlighter-rouge">company_attributes</code>代码块到创建一个标准用户所需参数的载荷中</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"extension_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
    </span><span class="s2">"company_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -774,7 +774,7 @@
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p>Full example:</p>
+<p>完整版:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
 	</span><span class="s2">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -792,7 +792,7 @@
 	</span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
@@ -818,17 +818,17 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="modify-a-company-user">Modify a company user</h3>
+<h3 id="修改公司用户">修改公司用户</h3>
 
-<p>The following example changes the status of a company user to inactive.</p>
+<p>下面的例子修改公司用户的状态到不活动。</p>
 
-<p>If you change the <code class="highlighter-rouge">status</code> to inactive, the account is locked. If the company user has child users, the system re-assigns the child users to the parent of the deactivated user.</p>
+<p>如果你修改状态到不活动，此帐户是锁定的，如果此公司用户有子用户，系统重新分配其子用户到被操作用户的父用户上。</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/customers/13</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -846,7 +846,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
@@ -870,25 +870,25 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="delete-a-company-user">Delete a company user</h3>
+<h3 id="删除公司用户">删除公司用户</h3>
 
-<p>If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Magento with all of its content, except quotes and orders. The user’s orders and quotes remain visible to the seller.</p>
+<p>如果指定公司用户有子用户，系统重新分配其子用户到被删用户的父用户。此用帐的帐号及其所有内容将从Magento上删除，除了报价和订单。此用户的订单和报价信息对销售者仍可见。</p>
 
-<p>Magento locks the deleted user’s quotes and changes their status to Closed. The system does not allow to make changes on such quotes.</p>
+<p>Magento锁定删除用户的报价并修改它们为关闭。系统不允许修改这类的报价。</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">DELETE /V1/customers/13</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.3/b2b/company.html">集成公司模块</a></li>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/rest/modules/catalog-pricing.html">
+	<link rel="canonical" href="/guides/v2.3/rest/modules/catalog-pricing.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -574,11 +574,11 @@
   <li>Downloadable</li>
 </ul>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">SpecialPriceStorageInterface</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /V1/products/special-price
 POST /V1/products/special-price-information
@@ -590,10 +590,10 @@ POST /V1/products/special-price-delete
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -631,7 +631,7 @@ POST /V1/products/special-price-delete
       <td><code class="highlighter-rouge">price_to</code></td>
       <td>The date and time the special price ends. The date/time format is <code class="highlighter-rouge">YYYY-MM-DD hh:mm:ss</code> If no value is specified, the special price does not expire.</td>
       <td>string</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
@@ -644,11 +644,11 @@ POST /V1/products/special-price-delete
 
 <p>You can set multiple special prices in a single call, as shown in the example below. The call sets special prices for a simple product, downloadable product, and bundle product for two days.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/special-price</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -676,19 +676,19 @@ POST /V1/products/special-price-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h3 id="get-special-prices">Get special prices</h3>
 
 <p>The following call returns the special price information for three SKU values.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/special-price-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"skus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -698,7 +698,7 @@ POST /V1/products/special-price-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -728,11 +728,11 @@ POST /V1/products/special-price-delete
 
 <p>If any item to be deleted has an invalid <code class="highlighter-rouge">price</code>, <code class="highlighter-rouge">store_id</code>, <code class="highlighter-rouge">sku</code> or date, Magento marks the item as failed and excludes it from the delete list. Valid items are deleted as requested.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/special-price-delete</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -760,9 +760,9 @@ POST /V1/products/special-price-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h2 id="manage-tier-prices">Manage tier prices</h2>
 
@@ -797,11 +797,11 @@ POST /V1/products/special-price-delete
   </tbody>
 </table>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">TierPriceStorageInterface</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /V1/products/tier-prices
 PUT /V1/products/tier-prices
@@ -814,10 +814,10 @@ POST /V1/products/tier-prices-delete
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -870,11 +870,11 @@ POST /V1/products/tier-prices-delete
 
 <p>The <code class="highlighter-rouge">POST /V1/products/tier-prices</code> call adds new tier prices or updates existing prices. You can specify tier prices for multiple products in the same call.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/tier-prices</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -905,9 +905,9 @@ POST /V1/products/tier-prices-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h3 id="replace-existing-tier-prices">Replace existing tier prices</h3>
 
@@ -915,11 +915,11 @@ POST /V1/products/tier-prices-delete
 
 <p>The following example removes the $10 tier price for <code class="highlighter-rouge">sku</code> 24-UG04 and changes the customer group for the <code class="highlighter-rouge">sku</code>’s other tier prices.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/products/tier-prices</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -942,19 +942,19 @@ POST /V1/products/tier-prices-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h3 id="get-tier-prices">Get tier prices</h3>
 
 <p>Magento returns all active tier prices for the specified list of <code class="highlighter-rouge">skus</code>.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">V1/products/tier-prices-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"skus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -963,7 +963,7 @@ POST /V1/products/tier-prices-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1004,11 +1004,11 @@ POST /V1/products/tier-prices-delete
 
 <p>You must specify each tier price that is to be deleted. You can delete multiple tier prices in a single call.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/tier-prices-delete</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1023,9 +1023,9 @@ POST /V1/products/tier-prices-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h2 id="manage-base-prices">Manage base prices</h2>
 
@@ -1035,7 +1035,7 @@ POST /V1/products/tier-prices-delete
   <p>You cannot delete a base price. It can only be changed to another value (0 or greater).</p>
 </div>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /V1/products/base-prices
 POST /V1/products/base-prices-information
@@ -1046,10 +1046,10 @@ POST /V1/products/base-prices-information
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -1093,11 +1093,11 @@ POST /V1/products/base-prices-information
 
 <p>The following example sets the base price for a simple and a downloadable product.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/base-prices</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1114,19 +1114,19 @@ POST /V1/products/base-prices-information
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h3 id="get-base-prices">Get base prices</h3>
 
 <p>The following example returns the base prices for a simple and a downloadable product.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/base-prices-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"skus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1135,7 +1135,7 @@ POST /V1/products/base-prices-information
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1154,7 +1154,7 @@ POST /V1/products/base-prices-information
 
 <p>The cost is the actual cost of a product. Tracking costs is optional, but having this information available can be helpful when you are setting discounts.</p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /V1/products/cost
 POST /V1/products/cost-information
@@ -1166,10 +1166,10 @@ POST /V1/products/cost-delete
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -1212,11 +1212,11 @@ POST /V1/products/cost-delete
 
 <p>The following example sets the cost value for a simple and a downloadable product.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/cost</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1233,19 +1233,19 @@ POST /V1/products/cost-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
 <h3 id="get-cost-values">Get cost values</h3>
 
 <p>The following example returns the cost values for a simple and a downloadable product.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/cost-information</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"skus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1254,7 +1254,7 @@ POST /V1/products/cost-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -1273,11 +1273,11 @@ POST /V1/products/cost-delete
 
 <p>The following example deletes the previously-defined cost values for a simple and a downloadable product.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/products/cost-delete</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"skus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1286,7 +1286,7 @@ POST /V1/products/cost-delete
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the cost values were deleted</p>
 

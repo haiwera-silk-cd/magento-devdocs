@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/b2b/shared-cat-product-assign.html">
+	<link rel="canonical" href="/guides/v2.2/b2b/shared-cat-product-assign.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -706,11 +706,11 @@
   <p>Products that are defined within a category are not included when you assign a category to a shared catalog. You must add products separately.</p>
 </div>
 
-<p><strong>Service name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">sharedCatalogCategoryManagementV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/assignCategories</span><span class="w">
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/unassignCategories</span><span class="w">
@@ -725,10 +725,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -749,7 +749,7 @@
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/assignCategories</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -768,7 +768,7 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
 
@@ -782,7 +782,7 @@
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/unassignCategories</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -796,7 +796,7 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
 
@@ -804,15 +804,15 @@
 
 <p>The <code class="highlighter-rouge">GET</code> call returns an array of catalog IDs.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET  /V1/sharedCatalog/2/categories</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="mi">3</span><span class="p">,</span><span class="w">
@@ -825,7 +825,7 @@
 
 <p>The <code class="highlighter-rouge">sharedCatalogProductManagementV1</code> service is based on <code class="highlighter-rouge">catalogProductManagementV1</code>. To return a list of products defined within a category, call <code class="highlighter-rouge">GET /V1/categories/:categoryId/products</code>.</p>
 
-<p><strong>Service name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">sharedCatalogProductManagementV1 </code></p>
 
@@ -844,10 +844,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
@@ -868,7 +868,7 @@
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/assignProducts</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
 	</span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -893,7 +893,7 @@
 	</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
 
@@ -905,7 +905,7 @@
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/unassignProducts</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -915,7 +915,7 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
 
@@ -923,15 +923,15 @@
 
 <p>The <code class="highlighter-rouge">GET</code> call returns an array of SKUs.</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET  /V1/sharedCatalog/2/products</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
     </span><span class="s2">"24-MB01"</span><span class="p">,</span><span class="w">
@@ -941,7 +941,7 @@
     </span><span class="s2">"24-MG04"</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.2/b2b/shared-catalog.html">与ShareCatalog模块集成</a></li>

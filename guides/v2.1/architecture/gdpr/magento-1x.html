@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/architecture/gdpr/magento-1x.html">
+	<link rel="canonical" href="/guides/v2.1/architecture/gdpr/magento-1x.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -715,62 +715,62 @@
 
 </section>
 
-			<p>The European Union (EU) enacted <a href="https://www.eugdpr.org/">General Data Protection Regulation</a> (GDPR) to give its citizens more control over their personal data. GDPR applies to any organization operating within the EU. It also applies to organizations outside of the EU that offer goods or services to customers or businesses in the EU.</p>
+			<p>欧盟颁布<a href="https://www.eugdpr.org/">通用数据保护规则</a> (GDPR)来给他们公民的个人数据更多控制，GDPR应用到在欧盟内运转的任何组织。它也应用到一些欧盟之外的为欧盟的的客户或企业提供产品或服务的组织。</p>
 
-<p>We are publishing this compliance information to help our merchants and their system integrators with GDPR compliance. A system integrator can use the data flow diagrams and database information to build scripts to resolve use cases similar to the following:</p>
+<p>我们发布这个遵守信息来帮助我们的店主和系统集成人员遵守GDPR，一个系统集成员可以使用数据流图和数据库信息来构建脚本以解决类似下面的情况：</p>
 
 <ul>
-  <li>A shopper asks for a copy of the data the merchant has stored about her</li>
-  <li>A shopper requests that all information about him be deleted</li>
+  <li>客户询问店主要一份存储了他相关信息的数据的备份。</li>
+  <li>客户要求删除关于他的所有信息</li>
 </ul>
 
-<p>See the corporate <a href="https://magento.com/gdpr">Magento website</a> for more information about how Magento helps merchants comply with GDPR.</p>
+<p>参考<a href="https://magento.com/gdpr">Magento官网</a>的描述来获取更多关于Magento如何帮助店主遵守GDPR的信息</p>
 
-<h2 id="dataflow-diagrams">Dataflow diagrams</h2>
+<h2 id="数据流图">数据流图</h2>
 
-<p>The data flow diagrams show the types of data that customers and administrators can enter and retrieve on the storefront and in Admin.</p>
+<p>数据流图展示了这类数据，它们可以在网店前台或管理面板被客户和管理员接收和输入。</p>
 
-<h3 id="frontend-data-entry-points">Frontend data entry points</h3>
+<h3 id="前台数据接口">前台数据接口</h3>
 
-<p>A user can enter customer, address, and payment information when registering for an account, during checkout, and similar events.</p>
+<p>用户注册后，用户可以在结算等类似的过程中为这个帐号输入客户、地址及支付信息。</p>
 
-<p><img src="frontend-data-entry-points.svg" alt="Frontend data entry points" /></p>
+<p><img src="frontend-data-entry-points.svg" alt="前端数据接口" /></p>
 
-<h3 id="frontend-data-access-points">Frontend data access points</h3>
+<h3 id="前端数据访问接口">前端数据访问接口</h3>
 
-<p>Magento loads customer information when the customer logs in and views several different pages or checks out.</p>
+<p>当客户登录并查看一些不同页面或结算的时修改，Magento会加载客户信息</p>
 
-<p><img src="frontend-data-access-points.svg" alt="Frontend data access points" /></p>
+<p><img src="frontend-data-access-points.svg" alt="前端数据访问接口" /></p>
 
-<h3 id="backend-data-entry-points">Backend data entry points</h3>
+<h3 id="后端数据访问接口">后端数据访问接口</h3>
 
-<p>A merchant can enter customer, address, and payment information when using Admin to create a customer or order.</p>
+<p>店主可以在使用管理面板时输入客户、地址及支付信息来创建客户或定单。</p>
 
-<p><img src="backend-data-entry-points.svg" alt="Backend data entry points" /></p>
+<p><img src="backend-data-entry-points.svg" alt="后端数据接口" /></p>
 
-<h3 id="backend-data-access-points">Backend data access points</h3>
+<h3 id="后端数据访问接口-1">后端数据访问接口</h3>
 
-<p>Magento loads customer information when a merchant views several types of grids, clicks on a grid to see detailed information, and performs various other tasks.</p>
+<p>在店主查看一些表格数据，点击查看详细信息及执行其它任务时Magento加载客户信息。</p>
 
-<p><img src="backend-data-access-points.svg" alt="Backend data access points" /></p>
+<p><img src="backend-data-access-points.svg" alt="后端数据访问接口" /></p>
 
-<h2 id="database-entities">Database entities</h2>
+<h2 id="数据库实体">数据库实体</h2>
 
-<p>Magento 1 stores customer information in customer, sales, and other database tables.</p>
+<p>Magento 1存储了客户的信息在客户、销售及其它数据库表中</p>
 
-<h3 id="customer-data">Customer data</h3>
+<h3 id="customer-data">客户的数据</h3>
 
-<p>Magento 1 stores customer information in the <code class="highlighter-rouge">customer_entity</code> and <code class="highlighter-rouge">customer_address_entity</code> tables. Both of these tables have several reference tables that can contain custom customer attributes.</p>
+<p>Magento 1 存储客户信息在<code class="highlighter-rouge">customer_entity</code>表及<code class="highlighter-rouge">customer_address_entity</code>表，这两者都有一些可能包含客户属性的引用表。</p>
 
-<h4 id="customer_entity-and-reference-tables"><code class="highlighter-rouge">customer_entity</code> and reference tables</h4>
+<h4 id="customer_entity及引用表"><code class="highlighter-rouge">customer_entity</code>及引用表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">customer_entity</code>table contain customer information:</p>
+<p><code class="highlighter-rouge">customer_entity</code>表的以下字段包含客户的信息：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -781,14 +781,14 @@
   </tbody>
 </table>
 
-<p>These tables reference <code class="highlighter-rouge">customer_entity</code> and can contain custom customer attributes:</p>
+<p>这些表引用<code class="highlighter-rouge">customer_entity</code>并且可能包含定制的客户属性：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -820,16 +820,16 @@
   </tbody>
 </table>
 
-<h4 id="customer_address_entity-and-reference-tables"><code class="highlighter-rouge">customer_address_entity</code> and reference tables</h4>
+<h4 id="customer_address_entity及引用表"><code class="highlighter-rouge">customer_address_entity</code>及引用表</h4>
 
-<p>The following tables reference <code class="highlighter-rouge">customer_address_entity</code> and can contain custom customer attributes:</p>
+<p>以下表引用了<code class="highlighter-rouge">customer_address_entity</code>且包含客户属性：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -861,19 +861,19 @@
   </tbody>
 </table>
 
-<h3 id="order-data">Order data</h3>
+<h3 id="订单数据">订单数据</h3>
 
-<p>The <code class="highlighter-rouge">sales_flat_order</code> and related tables contain the customer’s name, billing and shipping addresses, and related information.</p>
+<p><code class="highlighter-rouge">sales_flat_order</code>表和关联表包含了客户的名字、帐单及物流地址与相关信息</p>
 
-<h4 id="sales_flat_order-table"><code class="highlighter-rouge">sales_flat_order</code> table</h4>
+<h4 id="sales_flat_order表"><code class="highlighter-rouge">sales_flat_order</code>表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">sales_order</code> table contain customer information:</p>
+<p><code class="highlighter-rouge">sales_order</code>表的以下字段包含客户的信息:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -920,15 +920,15 @@
   </tbody>
 </table>
 
-<h4 id="sales_flat_order_address-table"><code class="highlighter-rouge">sales_flat_order_address</code> table</h4>
+<h4 id="sales_flat_order_address表"><code class="highlighter-rouge">sales_flat_order_address</code>表</h4>
 
-<p>The <code class="highlighter-rouge">sales_flat_order_address</code> table contains the customer’s address.</p>
+<p><code class="highlighter-rouge">sales_flat_order_address</code> 表包含客户地址</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -995,15 +995,15 @@
   </tbody>
 </table>
 
-<h4 id="sales_flat_order_grid-table"><code class="highlighter-rouge">sales_flat_order_grid</code> table</h4>
+<h4 id="sales_flat_order_grid表"><code class="highlighter-rouge">sales_flat_order_grid</code>表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">sales_flat_order_grid</code> table contain customer information:</p>
+<p><code class="highlighter-rouge">sales_flat_order_grid</code>表的以下字段包含客户的信息:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1022,15 +1022,15 @@
   </tbody>
 </table>
 
-<h4 id="sales_flat_order_payment-table"><code class="highlighter-rouge">sales_flat_order_payment</code> table</h4>
+<h4 id="sales_flat_order_payment表"><code class="highlighter-rouge">sales_flat_order_payment</code>表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">sales_flat_order_payment</code> table contain customer information:</p>
+<p><code class="highlighter-rouge">sales_flat_order_payment</code>表的以下字段包含客户的信息:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1073,19 +1073,19 @@
   </tbody>
 </table>
 
-<h3 id="quote-data">Quote data</h3>
+<h3 id="报价数据">报价数据</h3>
 
-<p>Quotes contain a customer’s name, email, address, and related information.</p>
+<p>报价包含客户的名字，邮箱，地址及相关数据。</p>
 
-<h4 id="sales_flat_quote-table"><code class="highlighter-rouge">sales_flat_quote</code> table</h4>
+<h4 id="sales_flat_quote表"><code class="highlighter-rouge">sales_flat_quote</code>表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">sales_flat_quote</code> table contain customer information:</p>
+<p><code class="highlighter-rouge">sales_flat_quote</code>表的以下字段包含客户的信息:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1144,15 +1144,15 @@
   </tbody>
 </table>
 
-<h4 id="sales_flat_quote_address-table"><code class="highlighter-rouge">sales_flat_quote_address</code> table</h4>
+<h4 id="sales_flat_quote_address表"><code class="highlighter-rouge">sales_flat_quote_address</code>表</h4>
 
-<p>The following columns in the <code class="highlighter-rouge">sales_flat_quote_address</code> table contain customer information:</p>
+<p><code class="highlighter-rouge">sales_flat_quote_address</code>表的以下字段包含客户的信息:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1207,15 +1207,15 @@
   </tbody>
 </table>
 
-<h4 id="sales_flat_quote_payment-table"><code class="highlighter-rouge">sales_flat_quote_payment</code> table</h4>
+<h4 id="sales_flat_quote_payment表"><code class="highlighter-rouge">sales_flat_quote_payment</code>表</h4>
 
-<p>The <code class="highlighter-rouge">sales_flat_quote_payment</code> table includes credit card information and other transactional information.</p>
+<p><code class="highlighter-rouge">sales_flat_quote_payment</code>表包含信用卡信息及其它交易信息</p>
 
 <table>
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1250,16 +1250,16 @@
   </tbody>
 </table>
 
-<h3 id="archive-data">Archive data</h3>
+<h3 id="归档数据">归档数据</h3>
 
-<p>The following tables and columns contain customer information:</p>
+<p>以下表和字段包含了客户信息：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1296,16 +1296,16 @@
   </tbody>
 </table>
 
-<h3 id="sales-data">Sales data</h3>
+<h3 id="销售数据">销售数据</h3>
 
-<p>The following tables and columns contain customer information:</p>
+<p>以下表和字段包含了客户信息：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1324,14 +1324,14 @@
 
 <h3 id="rma-data">RMA data</h3>
 
-<p>The following RMA tables and columns contain customer information:</p>
+<p>下面的RMA表及字段包含了客户信息：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1353,16 +1353,16 @@
   </tbody>
 </table>
 
-<h3 id="miscellaneous-data">Miscellaneous data</h3>
+<h3 id="其它数据">其它数据</h3>
 
-<p>The following tables and columns contain customer information:</p>
+<p>以下表和字段包含了客户信息：</p>
 
 <table>
   <thead>
     <tr>
-      <th>Table</th>
-      <th>Column</th>
-      <th>Data type</th>
+      <th>表名</th>
+      <th>字段</th>
+      <th>数据类型</th>
     </tr>
   </thead>
   <tbody>
@@ -1509,7 +1509,7 @@
   </tbody>
 </table>
 
-<p>Other tables that reference Customer:</p>
+<p>其它引用了客户的表</p>
 
 <ul>
   <li><code class="highlighter-rouge">catalog_compare_item</code></li>

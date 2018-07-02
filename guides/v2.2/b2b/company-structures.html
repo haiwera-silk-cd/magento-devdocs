@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/b2b/company-structures.html">
+	<link rel="canonical" href="/guides/v2.2/b2b/company-structures.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -687,17 +687,17 @@
 
 </section>
 
-			<p>Magento Commerce for B2B allows company users to be assigned to company teams and hierarchies.</p>
+			<p>Magento Commerce for B2B允许公司用户被分配到公司团队或等级结构中。</p>
 
-<h2 id="manage-company-teams">Manage company teams</h2>
+<h2 id="管理公司团队">管理公司团队</h2>
 
-<p>Company teams allow you to group company users by location, job responsibilities, or any criteria you choose. You can assign individual company users to a team with the company hierarchy endpoints.</p>
+<p>公司团队允许使用位置、工作职责或作何你选择的标准分组公司的用户。你可以使用公司等级结构接口分配自身的公司用户到团队中</p>
 
-<p><strong>Service name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">companyTeamRepositoryV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/team/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
 </span><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/team/</span><span class="p">:</span><span class="err">teamId</span><span class="w">
@@ -705,48 +705,48 @@
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/team/</span><span class="p">:</span><span class="err">teamId</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/team/</span></code></pre></figure>
 
-<p><strong>Company team parameters</strong></p>
+<p><strong>公司团队参数</strong></p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Format</th>
-      <th>Requirements</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>格式</th>
+      <th>要求</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>id</td>
-      <td>System-generated team ID</td>
+      <td>系统生成的团队ID</td>
       <td>integer</td>
-      <td>Not applicable for create operations.</td>
+      <td>创建操作不可用</td>
     </tr>
     <tr>
       <td>name</td>
-      <td>The displayed name of the team</td>
+      <td>团队的显示名称</td>
       <td>string</td>
       <td>Required to create or update a team.</td>
     </tr>
     <tr>
       <td>description</td>
-      <td>An optional description of the team.</td>
+      <td>团除的可选的描述</td>
       <td>string</td>
-      <td>Optional</td>
+      <td>可选</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="create-a-team">Create a team</h3>
+<h3 id="创建一个团队">创建一个团队</h3>
 
-<p>A newly-created team is placed under Company Admin in the company hierarchy.</p>
+<p>一个新创建的团队位于公司等级结构中的公司管理员下</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/team/2</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"team"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -755,19 +755,19 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p>The team ID, such as <code class="highlighter-rouge">4</code>.</p>
+<p>团队的ID,  比如<code class="highlighter-rouge">4</code></p>
 
-<h3 id="update-a-team">Update a team</h3>
+<h3 id="更新团队">更新团队</h3>
 
-<p>You can only change the name or description of a team.</p>
+<p>你仅能修改团队的名字或描述</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/team/4</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"team"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -776,23 +776,23 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
-<h3 id="return-all-information-about-a-team">Return all information about a team</h3>
+<h3 id="返回所有的团队信息">返回所有的团队信息</h3>
 
-<p>The <code class="highlighter-rouge">GET</code> call returns the team <code class="highlighter-rouge">id</code>, <code class="highlighter-rouge">name</code>, and <code class="highlighter-rouge">description</code>.</p>
+<p>此<code class="highlighter-rouge">GET</code>调用返回团队<code class="highlighter-rouge">id</code>,<code class="highlighter-rouge">name</code>及<code class="highlighter-rouge">description</code></p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/team/4</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
@@ -800,37 +800,37 @@
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buyers from the California office"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="delete-a-team">Delete a team</h3>
+<h3 id="删除团队">删除团队</h3>
 
-<p>You cannot delete a team if members are assigned to it.</p>
+<p>如果有成员分配，你不能删除此团队</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">DELETE /V1/team/4</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <p>An empty array</p>
 
-<h3 id="search-for-a-team">Search for a team</h3>
+<h3 id="搜索团队">搜索团队</h3>
 
-<p>The following query returns information about all teams (<code class="highlighter-rouge">team_id</code> ≥ <code class="highlighter-rouge">0</code>)</p>
+<p>下面的请求返回所有团队(<code class="highlighter-rouge">team_id</code> ≥ <code class="highlighter-rouge">0</code>)</p>
 
-<p>See <a href="/guides/v2.2/rest/performing-searches.html">Search using REST APIs</a> for information about constructing a search query.</p>
+<p>参考<a href="/guides/v2.2/rest/performing-searches.html">使用REST API搜索</a>了解更多关于构造查询的信息</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET V1/team?searchCriteria[filter_groups][0][filters][0][field]=team_id&amp;searchCriteria[filter_groups][0][filters][0][value]=0&amp;searchCriteria[filter_groups][0][filters][0][condition_type]=gteq</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -861,24 +861,24 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="company-hierarchies">Company hierarchies</h2>
+<h2 id="公司的等级结构">公司的等级结构</h2>
 
-<p>In the B2B storefront, a buyer can view the company structure represented as a hierarchy tree. The tree can display multiple levels of company subdivisions (teams) as well as company users. The company hierarchy can have any number of items and levels.</p>
+<p>在B2B网店前台，购买者可以看见表示成一棵等级结构树的公司结构。这棵树显示公司细分的多个层级及公司用户。公司的等级结构可以有任意数量的团队和层级。</p>
 
-<p>You can use REST endpoints to retrieve the current structure and move teams and buyers within the hierarchy. You cannot delete teams or buyers.</p>
+<p>你可以使用REST接口来在当前等级结构中接收当前结构和移动团队及购买者</p>
 
-<p><strong>Service name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">companyHierarchyV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/hierarchy/</span><span class="p">:</span><span class="err">id</span><span class="w">
 </span><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/hierarchy/move/</span><span class="p">:</span><span class="err">id</span></code></pre></figure>
 
-<h3 id="return-all-information-about-the-company-hierarchy">Return all information about the company hierarchy</h3>
+<h3 id="返回所有的公司等级的信息">返回所有的公司等级的信息</h3>
 
-<p>In the following example, the following company hierarchy has already been established:</p>
+<p>下面的例子，以下的公司等级已经建立</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Admin (structure_id = 2)
 |-- East (team, structure_id = 8)
@@ -890,15 +890,15 @@
 |   |-- Teresa Gomez (customer, structure_id = 5)
 </code></pre></div></div>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/heirarchy/2</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
-<p>Not applicable</p>
+<p>不适用</p>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -945,25 +945,25 @@
   </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h3 id="assign-a-new-parent-to-teams-and-company-users">Assign a new parent to teams and company users</h3>
+<h3 id="分配一个新的父节点到团队和公司用户上">分配一个新的父节点到团队和公司用户上</h3>
 
-<p>The following example moves Bryce Martin (<code class="highlighter-rouge">structure_id = 4</code>) to the West team (<code class="highlighter-rouge">structure_id = 7</code>)</p>
+<p>下面的例子移动Bryce Martin (<code class="highlighter-rouge">structure_id = 4</code>)到West团队</p>
 
-<p><strong>Sample Usage</strong></p>
+<p><strong>样例用法</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/hierarchy/move/5</code></p>
 
-<p><strong>Payload</strong></p>
+<p><strong>载荷</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"newParentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+<p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">[]</code> (an empty array)</p>
+<p><code class="highlighter-rouge">[]</code> (一个空数组)</p>
 
-<h2 id="related-information">Related information</h2>
+<h2 id="相关信息">相关信息</h2>
 
 <ul>
   <li><a href="/guides/v2.2/b2b/company.html">集成公司模块</a></li>

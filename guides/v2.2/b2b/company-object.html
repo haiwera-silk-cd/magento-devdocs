@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/b2b/company-object.html">
+	<link rel="canonical" href="/guides/v2.2/b2b/company-object.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -689,13 +689,13 @@
 
 			<h2 id="管理公司对像">管理公司对像</h2>
 
-<p>This section describes the REST endpoints used to manage <code class="highlighter-rouge">Company</code> objects.</p>
+<p>本节描述用于管理<code class="highlighter-rouge">Company</code>对象的REST接口</p>
 
-<p><strong>Service Name</strong></p>
+<p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">companyCompanyRepositoryV1</code></p>
 
-<p><strong>REST Endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="w">
 </span><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
@@ -703,64 +703,66 @@
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/company/</span></code></pre></figure>
 
-<p><strong>CompanyInterface Parameters</strong></p>
+<p><strong>CompanyInterface 参数</strong></p>
 
-<p>The following table lists the parameters defined in <code class="highlighter-rouge">CompanyInterface</code>.</p>
+<p>下面的表格列出了<code class="highlighter-rouge">CompanyInterface</code>的参数定义</p>
 
 <table>
 <tr>
-<th>名称</th><th>描述</th><th>Format</th><th>Requirements</th></tr>
+<th>名称</th><th>描述</th><th>格式</th><th>要求</th></tr>
 <tr>
-<td><code>id</code></td><td>System-generated company ID </td><td>integer </td><td>Required for updates and deletes. </td></tr>
+<td><code>id</code></td><td>系统生成的公司ID </td><td>integer </td><td>更新和删除时需要</td></tr>
 <tr>
-<td><code>status</code></td><td>0 - Pending approval<br />1 - Approved<br />2 - Rejected<br />3 - Blocked </td><td>integer </td><td>Optional </td></tr>
+<td><code>status</code></td><td>0 - 待审核<br />1 - 已审核<br />2 - 已拒绝<br />3 - Blocked </td><td>integer </td><td>可选</td></tr>
 <tr>
-<td><code>company_name </code></td><td>Company name </td><td>string </td><td>Required to create or update a company. </td></tr>
+<td><code>company_name </code></td><td>公司名称</td><td>string </td><td>创建和更新公司时需要</td></tr>
 <tr>
-<td><code>legal_name </code></td><td>Legal name </td><td>string </td><td>Optional </td></tr>
+<td><code>legal_name </code></td><td>法人名字 </td><td>string </td><td>可选</td></tr>
 <tr>
-<td><code>company_email </code></td><td>Official e-mail address of the company. It does not have to be unique. </td><td>string</td><td>Required to create or update a company.</td></tr>
+<td><code>company_email </code></td><td>公司官方邮箱地址，不一定要唯一</td><td>string</td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>vat_tax_id </code></td><td>The company's Value Added Tax ID </td><td>string </td><td>Optional </td></tr>
+<td><code>vat_tax_id </code></td><td>公司的增值税号</td><td>string </td><td>可选</td></tr>
 <tr>
-<td><code>reseller_id </code></td><td>Unique ID of the company reseller </td><td>string </td><td>Optional </td></tr>
+<td><code>reseller_id </code></td><td>公司分销商的唯一ID</td><td>string </td><td>可选</td></tr>
 <tr>
-<td><code>comment </code></td><td>Additional details about the company</td><td>string</td><td>Optional </td></tr>
+<td><code>comment </code></td><td>公司的更多细节信息</td><td>string</td><td>可选</td></tr>
 <tr>
-<td><code>street</code></td><td>Street address where the company is registered. The array can contain one or two lines.</td><td>Array[string]</td><td>Required to create or update a company.</td></tr>
+<td><code>street</code></td><td>公司注册的街道地址，可以包含一行或两行。/td&gt;<td>Array[string]</td><td>更新和创建公司时需要</td>&lt;/tr&gt;
 <tr>
-<td><code>city</code></td><td>The company's city </td><td>string </td><td>Required to create or update a company.</td></tr>
+<td><code>city</code></td><td>公司所在城市</td><td>string </td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>country_id</code></td><td>The country where the company is registered.</td><td>string </td><td>Required to create or update a company. </td></tr>
+<td><code>country_id</code></td><td>公司注册的国家</td><td>string </td><td>创建和更新公司时需要</td></tr>
 <tr>
-<td><code>region</code></td><td>State or province</td><td>string</td><td>Required to create or update a company.</td></tr>
+<td><code>region</code></td><td>州或省</td><td>string</td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>region_id</code></td><td>An ID assigned to a state or province</td><td>string </td><td>Optional</td></tr>
+<td><code>region_id</code></td><td>分配给州或省的ID</td><td>string </td><td>可选</td></tr>
 <tr>
-<td><code>postcode</code></td><td>The company's ZIP or postal code</td><td>string </td><td>Required to create or update a company.</td></tr>
+<td><code>postcode</code></td><td>公司的邮政编码</td><td>string </td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>telephone</code></td><td>The company contact's phone number</td><td>string</td><td>Required to create or update a company.</td></tr>
+<td><code>telephone</code></td><td>公司的联系电话</td><td>string</td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>customer_group_id </code></td><td>Defines the company's shared catalog. A value of `1` assigns the default shared catalog.</td><td>integer</td><td>Required to create or update a company.</td></tr>
+<td><code>customer_group_id </code></td><td>定义公司的共享产品目录。值`1`分配给默认共享产品目录</td><td>integer</td><td>更新和创建公司时需要</td></tr>
 <tr>
-<td><code>sales_representative_id</code></td><td>User ID of the Sales Representative for the company</td><td>integer</td><td>Optional</td></tr>
+<td><code>sales_representative_id</code></td><td>公司销售代表的用户ID</td><td>integer</td><td>可选</td></tr>
 <tr>
-<td><code>reject_reason</code></td><td>Specifies why a company's request to be a B2B customer is rejected</td><td>string</td><td>Optional </td></tr>
+<td><code>reject_reason</code></td><td>指定为什么公司请求成为B2B客户被拒</td><td>string</td><td>可选</td></tr>
 <tr>
-<td><code>rejected_at</code></td><td>A timestamp incdicating when the company was rejected.</td><td>string</td><td>Optional</td></tr>
+<td><code>rejected_at</code></td><td>指示公司被拒的时间截</td><td>string</td><td>可选</td></tr>
 <tr>
-<td><code>super_user_id</code></td><td>The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist. </td><td>integer</td><td>Required to create or update a company.</td></tr>
-</table>
+<td><code>super_user_id</code></td><td>公司管理员的`customer_id`，当创建一个公司时，`customer_id`必须已经存在</td><td>integer</td><td>更新和创建公司时需要</td></tr>
+&lt;/table&gt;
 
-<h3 id="create-a-company">Create a company</h3>
 
-<p>The following example creates a company and assigns the default shared catalog (<code class="highlighter-rouge">customer_group_id</code>). The company admin (<code class="highlighter-rouge">super_user_id</code>) must be a previously-defined <code class="highlighter-rouge">customer_id</code>.</p>
+### 创建一个公司
 
-<p><strong>Sample Usage</strong></p>
+以下是创建公司并分配默认共享产品目录(`customer_group_id`)的一个例子。此公司管理员(`super_user_id`)必须是先前定义的一个`customer_id`
 
-<p><code class="highlighter-rouge">POST /V1/company/</code></p>
+**样例用法**
 
-<p><strong>Payload</strong></p>
+`POST /V1/company/`
+
+**载荷**
+
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -780,7 +782,9 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+
+**响应**
+
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -808,15 +812,17 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="update-the-company">Update the company</h3>
 
-<p>The following call changes the company status to Rejected (<code class="highlighter-rouge">2</code>) and explains why.</p>
+### 更新公司
 
-<p><strong>Sample Usage</strong></p>
+下面的调用改变了公司的状态到拒绝状态(`2`),并解释了原因
 
-<p><code class="highlighter-rouge">PUT /V1/company/2</code></p>
+**样例用法**
 
-<p><strong>Payload</strong></p>
+`PUT /V1/company/2`
+
+**载荷**
+
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -840,7 +846,9 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response</strong></p>
+
+**响应**
+
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -868,18 +876,20 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="return-all-information-about-a-company">Return all information about a company</h3>
 
-<p>This call returns detailed information about the specified company.
-<strong>Sample Usage</strong></p>
+### 返回公司的所有信息
 
-<p><code class="highlighter-rouge">GET /V1/company/2</code></p>
+此调用返回了指定公司的详细信息
+**样例用法**
 
-<p><strong>Payload</strong></p>
+`GET /V1/company/2`
 
-<p>None</p>
+**载荷**
 
-<p><strong>Response</strong></p>
+无
+
+**响应**
+
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -908,37 +918,39 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="delete-a-company">Delete a company</h3>
 
-<p>When you delete a company, Magento assigns the “Inactive” status to all company members. The system also removes company ID from the customer profile of all company members.</p>
 
-<p><strong>Sample Usage</strong></p>
+### 删除公司
 
-<p><code class="highlighter-rouge">DELETE /V1/company/2</code></p>
+当你删除一个公司，Magento分配"不活动"状态给所有的公司成员。系统也将从所有公司成员的客户信息中移除公司ID
 
-<p><strong>Payload</strong></p>
+**样例用法**
 
-<p>None</p>
+`DELETE /V1/company/2`
 
-<p><strong>Response</strong></p>
+**载荷**
 
-<p><code class="highlighter-rouge">true</code>, indicating the request was successful</p>
+无
 
-<h3 id="search-for-companies">Search for companies</h3>
+**响应**
 
-<p>The following call returns all companies that are located in California (<code class="highlighter-rouge">region_id</code> = <code class="highlighter-rouge">12</code>)</p>
+`true`,指示请求成功
 
-<p>See <a href="/guides/v2.2/rest/performing-searches.html">Search using REST APIs</a> for information about constructing a search query.</p>
+### 搜索公司
 
-<p><strong>Sample Usage</strong></p>
+下面的调用返回所有位于加利福尼亚的公司(`region_id` = `12`)
 
-<p><code class="highlighter-rouge">GET /V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&amp;searchCriteria[filter_groups][0][filters][0][value]=12&amp;searchCriteria[filter_groups][0][filters][0][condition_type]=eq</code></p>
+参考[使用REST API搜索](/guides/v2.2/rest/performing-searches.html)了解更多关于构造查询的信息
 
-<p><strong>Payload</strong></p>
+**样例用法**
 
-<p>None</p>
+`GET /V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&amp;searchCriteria[filter_groups][0][filters][0][value]=12&amp;searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-<p><strong>Response</strong></p>
+**载荷**
+
+无
+
+**响应**
 
 <div class="collapsible"><b class="collapsible-title">Show code sample </b><div class="collapsible-content"><figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1019,14 +1031,13 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="related-information">Related information</h2>
+## 相关信息
 
-<ul>
-  <li><a href="/guides/v2.2/b2b/company.html">集成公司模块</a></li>
-  <li><a href="/guides/v2.2/b2b/company-users.html">管理公司用户</a></li>
-  <li><a href="/guides/v2.2/b2b/roles.html">管理公司角色</a></li>
-  <li><a href="/guides/v2.2/b2b/company-structures.html">管理公司结构</a></li>
-</ul>
+* [集成公司模块](/guides/v2.2/b2b/company.html)
+* [管理公司用户](/guides/v2.2/b2b/company-users.html)
+* [管理公司角色](/guides/v2.2/b2b/roles.html)
+* [管理公司结构](/guides/v2.2/b2b/company-structures.html)
+</td></tr></table>
 
 			
 		</div>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/architecture/frontend_custom_strategies.html">
+	<link rel="canonical" href="/guides/v2.0/architecture/frontend_custom_strategies.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -668,73 +668,73 @@
 
 			<h2 id="m2arch-whatis-overview">概述</h2>
 
-<p>The Magento <span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span> is designed to optimize <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span> customization, with highly extensible <i>themes</i> being the central customization mechanism.</p>
+<p>Magento<span term-uuid="b00459e5-a793-44dd-98d5-852ab33fc344" class="glossary-term" data-toggle="popover">前端</span>被设计成用高度可扩展的主题做为核心定制机制来优化<span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span>的定制。</p>
 
-<p>Merchants are encouraged to use Magento组件 and themes to extend and transform the appearance of their storefronts.</p>
+<p>推荐店主使用Magento组件和主题来扩展及改变网店的外观。</p>
 
-<h2 id="storefront-customization-tools">Storefront customization tools</h2>
+<h2 id="网店前台定制工具">网店前台定制工具</h2>
 
-<p>Magento provides several tools to help you significantly jumpstart the storefront customization process:</p>
+<p>Magento 提供了几个工具来明显地帮助你快速开始前端定制过程：</p>
 
 <ul>
   <li>
-    <p>Magento Blank <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span></p>
+    <p>Magento空白<span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span></p>
   </li>
   <li>
-    <p><a href="/guides/v2.0/ui-components/ui-component.html">Magento UI Library 组件</a></p>
+    <p><a href="/guides/v2.0/ui-components/ui-component.html">Magento UI库组件</a></p>
   </li>
   <li>
     <p><a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a></p>
   </li>
 </ul>
 
-<p>See the <a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a> for information on creating your themes.</p>
+<p>参考<a href="/guides/v2.0/frontend-dev-guide/bk-frontend-dev-guide.html">前端工程师手册</a>了解更多关于创建主题的信息。</p>
 
-<h3 id="magento-blank-theme">Magento Blank theme</h3>
+<h3 id="magento空白主题">Magento空白主题</h3>
 
-<p>The Magento blank theme template provides a launchpad for storefront customization. You can use this boilerplate as a robust starting point for your own theme development.</p>
+<p>Magento空白主题模板为定制提供了一个跳板，你可以使用这个样板为一个稳健的起点开发你自己的主题</p>
 
 <h3 id="magento-ui-组件">Magento UI 组件</h3>
-<p>Using Magento standard coding and styling tools can help:</p>
+<p>使用Magento标准代码和样式工具可以帮助我们：</p>
 
 <ul>
-  <li>enforce for consistency in design across your storefronts</li>
-  <li>simplify (and speed up) the design process</li>
+  <li>增强你网店前台的设计风格的一致性</li>
+  <li>简化(及加快)设置过程</li>
 </ul>
 
-<p>This component <span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">库</span> contains standard reusable 组件 for form features, such as fields and buttons, and navigation elements. The Magento UI库 is a set of generic web 组件 and Magento-specific patterns, which simplifies the process of Magento theme creation and customization.</p>
+<p>组件<span term-uuid="08968dbb-2eeb-45c7-ae95-ffca228a7575" class="glossary-term" data-toggle="popover">库</span>包含标准的可重用的表单特性的组件，如输入框和按钮以及导航元素。Magento UI库是一个通用Web组件集合并且是Magento特定的样板，这些样板简化主题创建和定制过程</p>
 
-<p>See <a href="/guides/v2.0/ui-components/ui-component.html">Magento UI Library 组件</a> for details about this library.</p>
+<p>参考<a href="/guides/v2.0/ui-components/ui-component.html">Magento UI库组件</a>了解更多相关信息</p>
 
-<h3 id="magento-admin-pattern-library">Magento Admin pattern library</h3>
+<h3 id="magento管理面板样板库">Magento管理面板样板库</h3>
 
-<p>A <i>pattern library</i> is a collection of user interface (UI) design patterns that can be re-used in locations throughout your product installation. The <a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> defines examples of 组件 that administrators working with the storefront can use.</p>
+<p><i>样版库</i>是一个用户界面设计样版的集合，它们始终能在你安装的产品中被重复使用。<a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a>定义了一些管理员工作在网店前台能使用的组件的例子。</p>
 
-<p>Form elements included in the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span> pattern library include:</p>
+<p>包含在<span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span>表单元素模板包括：</p>
 
 <ul>
-  <li>address form</li>
-  <li>button bar</li>
-  <li>container</li>
-  <li>tabs</li>
-  <li>sign-in form</li>
+  <li>地址表单</li>
+  <li>按钮栏</li>
+  <li>容器</li>
+  <li>标签页</li>
+  <li>注册表单</li>
 </ul>
 
-<p>Users of the default Magento storefront encounter examples of these form elements throughout the product. These patterns provide a valuable language of software 组件 (and indirectly, user experiences) for <span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span> developers and administrators.</p>
+<p>Magento默认网店前台的用户会看到这些表单元素样本，这些模板为<span term-uuid="55774db9-bf9d-40f3-83db-b10cc5ae3b68" class="glossary-term" data-toggle="popover">扩展</span>开发者及管理员提供了一个非常有用的软件组件语言（间接地，用户体验）</p>
 
-<p>The Magento <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span> Pattern library is built on the LESS preprocessor and implemented as a <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>. You can download a free, current version of this module from <a href="https://marketplace.magento.com/" target="_blank">Magento Marketplace</a>.</p>
+<p>Magento<span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">管理面板</span>模板库使用LESS预处理器构建并以模块的形式实现，你可以从<a href="https://marketplace.magento.com/" target="_blank">Magento Marketplace</a>.免费下载当前这个版本的模块</p>
 
-<p>See <a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> for more information on using this library.</p>
+<p>参考<a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a> 了解更多使用这个库的信息</p>
 
 <h2 id="m2arch-related">相关主题</h2>
 
 <p><a href="/guides/v2.0/architecture/extensibility.html">可扩展和模块化</a></p>
 
-<p><a href="/guides/v2.0/architecture/global_extensibility_features.html">Global extensibility features</a></p>
+<p><a href="/guides/v2.0/architecture/global_extensibility_features.html">全局扩性特征</a></p>
 
 <p><a href="/guides/v2.0/pattern-library/bk-pattern.html">Magento管理面板用到的设计模式和库</a></p>
 
-<p><a href="/guides/v2.0/ui-components/ui-component.html">Magento UI Library 组件</a></p>
+<p><a href="/guides/v2.0/ui-components/ui-component.html">Magento UI库组件</a></p>
 
 			
 		</div>

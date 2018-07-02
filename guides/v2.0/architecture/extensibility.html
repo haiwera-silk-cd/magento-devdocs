@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/architecture/extensibility.html">
+	<link rel="canonical" href="/guides/v2.0/architecture/extensibility.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -668,31 +668,31 @@
 
 			<h2 id="概述">概述</h2>
 
-<p>Product <i>extensibility</i> describes how easy it is to expand a product’s feature set. An extensible product has been designed from its earliest  stages for customization and enhancement. Extensible products are designed for ease in expanding your installation’s feature set, enriching current features, and integrating with third-party software.</p>
+<p>产品<i>可扩展性</i>描述扩展产品特征是否简单，一个可扩展的产品是以最简单定制和增强的策略设计的。可扩展的产品设计成扩展特征简单、丰富当前特征简单及集成三方软件简单。</p>
 
-<p>Maximizing extensibility has been our goal through all aspects of Magento development. Core tasks such as shipping are packaged as discrete modules, and you expand your features by installing modules that you either buy from third-party vendors or create yourself. While logic specific to each <span term-uuid="b51bd4e9-7174-4ca0-83a0-1a895c9fc9e8" class="glossary-term" data-toggle="popover">shipping carrier</span> is packaged in a discrete module, you can easily add or delete shipping providers by simply adding or deleting modules. The Magento框架 provides common logic to control routing and other core application functions.</p>
+<p>通过所有Magento开发的方面最大化可扩展性是我们的目标。核心任务，像物流，被打包成一个分离的模块，并且你可以通过安装买来的或自己开发的三方模块或库来扩展你的特性。甚至每个逻辑相关的<span term-uuid="b51bd4e9-7174-4ca0-83a0-1a895c9fc9e8" class="glossary-term" data-toggle="popover">shipping carrier</span>也被打包成分离的模块，你可以以简单的添加或删除模块的形式非常方便地添加或删除物流提供商。Magento框架提供公用的逻辑来控制路由和其它核心应用程序的功能</p>
 
-<h2 id="what-makes-a-product-extensible">What makes a product extensible?</h2>
+<h2 id="什么使得产品可扩展">什么使得产品可扩展？</h2>
 
-<p><i>Magento extensibility</i> describes the product’s built-in ability for developers and merchants to routinely extend their storefront’s capabilities as their business grows.</p>
+<p><i>Magento可扩展性</i>描述了产品的内在的能力，这种能力表现为随着业务的增长，开发者和店主能常规地扩展他们网店的兼容性</p>
 
-<p>Below are the main factors affect extensibility.</p>
+<p>以下是影响可扩展性的主要因素。</p>
 
-<h3 id="architectural-principles-that-guide-product-structure">Architectural principles that guide product structure</h3>
+<h3 id="指导产品结构的架构原则">指导产品结构的架构原则</h3>
 
-<p>Central to the Magento model of software development is the practice of replacing or extending core code rather than editing it. This strategy supports your efforts to maintain the integrity of the tested code we provide while still extensively customizing your <span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网站前台</span>.</p>
+<p>Magento软件开发的模式的核心是替换和扩展核心代码而不直接修改它们。这种策略支持你在维持我们提供的已测代码完整性的同时，仍能广泛地定制你的<span term-uuid="1a70d3ac-6bd9-475a-8937-5f80ca785c14" class="glossary-term" data-toggle="popover">网店</span></p>
 
-<h3 id="open-source-software-to-create-and-manage-extensions">Open-source software to create and manage extensions</h3>
+<h3 id="开源软件来创建和管理扩展">开源软件来创建和管理扩展</h3>
 
-<p>Magento is built on open-source technologies, created for the development community. For example, it uses <span term-uuid="d85e2d0a-221f-4d03-aa43-0cda9f50809e" class="glossary-term" data-toggle="popover">Composer</span> to manage dependencies. See <a href="/guides/v2.0/architecture/tech-stack.html">Technology Stack</a> for a complete list of technologies used.</p>
+<p>Magento在有开发社区的开源技术上构建，例如，它使用了<span term-uuid="d85e2d0a-221f-4d03-aa43-0cda9f50809e" class="glossary-term" data-toggle="popover">Composer</span>来管理依赖，参考<a href="/guides/v2.0/architecture/tech-stack.html">技术栈</a>了解完整的用到的技术。</p>
 
-<h3 id="coding-standards">Coding standards</h3>
+<h3 id="编码规范">编码规范</h3>
 
-<p>Adherence to standard best practices for <span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span> and <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span> code ensures that the code base is sound. Magento has adopted most of the Zend Framework 编码规范 for PHP. See <a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a> for more information.</p>
+<p>遵守<span term-uuid="bf703ab1-ca4b-48f9-b2b7-16a81fd46e02" class="glossary-term" data-toggle="popover">PHP</span>和<span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">JavaScript</span>代码的标准最佳实现确何代码基础是合理的。Magento的PHP代码采用了大量的Zend框架的编码规范，更多信息请参考<a href="/guides/v2.0/coding-standards/bk-coding-standards.html">编码规范</a></p>
 
-<h3 id="upgrade-and-versioning-strategies">Upgrade and versioning strategies</h3>
+<h3 id="升级和版本控制策略">升级和版本控制策略</h3>
 
-<p>Magento has well-defined upgrade and versioning strategies that can help you avoid any problems with software component dependencies. Add modules after confirming that the <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> version is compatible with the Magento框架 version.</p>
+<p>Magento定义了良好的升级和版本控制策略能帮你避免软件组件依赖的任何问题。添加模块是在确认<span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span>版本与Magento框架版本之后</p>
 
 <h2 id="m2arch-related">相关主题</h2>
 
