@@ -28,10 +28,10 @@ Magento提供一套默认的{% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158
 除了替换CSS文件，你可以须要替换少量HTML和Javascript.
 
 ### 替换Magento提供的CSS, HTML, 和JavaScript
-Delivering a sharply different shopping experience than the default Magento installation provides is a more substantial task. However, the tradeoff might be a more complicated experience integrating additional extensions into your installation in the future.
+交付一个与默认Magento完全不同的购物体验是一个更大的任务。然而，在未来集成附加的扩展到你的安装中，权衡是更加复杂的体验，
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Any customization of your storefront will work optimally, and provide the easiest path for later upgrades, if you follow the best practice of consistently compartmentalizing code by type. For example, keep all HTML in {% glossarytooltip ae0f1f68-c466-4189-88fd-6cd8b23c804f %}PHTML{% endglossarytooltip %} files; keep all JavaScript in JavaScript files.</p>
+  <p>如果你一直遵循最佳实践把代码按类区分任何网店前台的定制将最佳的工作且将为后面的升级提供最简单的途径。例如，保持所有HTML在{% glossarytooltip ae0f1f68-c466-4189-88fd-6cd8b23c804f %}PHTML{% endglossarytooltip %}文件中，所有的Javascript在Javascript文件上中。</p>
 </div>
 
 ### 相关主题s

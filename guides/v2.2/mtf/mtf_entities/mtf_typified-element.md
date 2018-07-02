@@ -33,7 +33,7 @@ Default testing typified elements are stored in the `<magento2_root_dir>/dev/tes
 
 A root class for a typified element is the [`\Magento\Mtf\Client\Element\SimpleElement`] class. This class implements [`ElementInterface`] which contains methods such as `click()`, `doubleClick()`, `isVisible()`, `setValue()`, `getValue()`, `getText()`, `find()`, `dragAndDrop()`, `getElements()` etc.
 
-| Magento UI element | FTF class | Notes|
+| Magento UI element | FTF class | 否tes|
 |---|---|---|
 | `<input type="checkbox" />`  |[`\Magento\Mtf\Client\Element\CheckboxElement`]| Extends [SimpleElement].  |
 | `<select multiple />`  |[`\Magento\Mtf\Client\Element\MultiselectElement`]| Extends [SelectElement].  |
@@ -47,7 +47,7 @@ A root class for a typified element is the [`\Magento\Mtf\Client\Element\SimpleE
 
 Testing typified elements for Magento custom elements are stored in the `<magento2_root_dir>/dev/tests/functional/lib/Magento/Mtf/Client/Element` directory.
 
-| Magento UI element | FTF class | Notes|
+| Magento UI element | FTF class | 否tes|
 |---|---|---|
 | `<div class="rule-tree" />`  | [`\Magento\Mtf\Client\Element\ConditionsElement`]| Extends [SimpleElement]. |
 | `<div id="ui-datepicker-div" />` | [`\Magento\Mtf\Client\Element\DatepickerElement`]   | Extends [SimpleElement].   |
@@ -62,7 +62,7 @@ Testing typified elements for Magento custom elements are stored in the `<magent
 | `<select>` <br/>  &nbsp;&nbsp;&nbsp;&nbsp;`<option />` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<optgroup />` <br/>  `</select>` | [`\Magento\Mtf\Client\Element\SelectstoreElement`]   | Extends [SelectElement]. Contains `option` and `optgroup` elements.  |
 | `<select class="admin__control-select">`  <br/> &nbsp;&nbsp;&nbsp;&nbsp;`<optgroup>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option data-title/>` <br/> &nbsp;&nbsp;&nbsp;&nbsp;`</optgroup>` <br/> `</select>`| [`\Magento\Mtf\Client\Element\SimplifiedselectElement`]   | Extends [SelectElement]. Contains `option` and `optgroup` elements. `option` has a `data-title` attribute. |
 | `<div class="mage-suggest" />` | [`\Magento\Mtf\Client\Element\SuggestElement`]   | Extends [SimpleElement].   |
-| Not available | [`\Magento\Mtf\Client\Element\Tree`]   | Abstract class  |
+| 否t available | [`\Magento\Mtf\Client\Element\Tree`]   | Abstract class  |
 | `<div class="tree x-tree" />` | [`\Magento\Mtf\Client\Element\TreeElement`]   | Extends [Tree].   |
 
 ## HowTos

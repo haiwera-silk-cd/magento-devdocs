@@ -43,7 +43,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 `Authorization` `Bearer <admin token>`
 
-**Payload**
+**载荷**
 
 It is recommended that you substitute the value of the `email` parameter with a real email address so that you receive all notifications.
 
@@ -76,7 +76,7 @@ It is recommended that you substitute the value of the `email` parameter with a 
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 Magento assigned this user `id` value of `2`.
 
@@ -140,7 +140,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 
 `Content-Type` `application/json`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -149,7 +149,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 Magento returns the customer's access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.
 

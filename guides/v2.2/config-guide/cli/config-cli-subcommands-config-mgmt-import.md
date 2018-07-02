@@ -104,7 +104,7 @@ For example, `frontend/Magento/luma`.
 
 The value of array is data about theme: code, title, path, parent id and etc.
 
-Full example:
+完整版:
 
 ```php?start_inline=1
 'frontend/Magento/luma' =>

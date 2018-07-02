@@ -77,13 +77,13 @@ Extends <code>Collapsible</code> configuration with the following options:
     <td><code>callback</code></td>
     <td></td>
     <td><a href="{{ page.baseurl }}/ui_comp_guide/components/ui-column.html#column_action">ColumnAction</a></td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
   <tr>
     <td><code>confirm</code></td>
     <td>Confirmation message displayed before applying the action.</td>
     <td>{<br>title: string;<br>message: string;<br>}</td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
   <tr>
     <td><code>label</code></td>
@@ -101,7 +101,7 @@ Extends <code>Collapsible</code> configuration with the following options:
     <td><code>url</code></td>
     <td>Path to the controller responsible for action handling.</td>
     <td>String</td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
 </table>
 

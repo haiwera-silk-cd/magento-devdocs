@@ -37,7 +37,7 @@ Magento calculates shipping costs for each shipping method that can be applied t
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 The payload contains the shipping address.
 
@@ -64,7 +64,7 @@ The payload contains the shipping address.
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
 
@@ -117,7 +117,7 @@ Magento returns a list of payment options and calculates the order totals.
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -160,7 +160,7 @@ Magento returns a list of payment options and calculates the order totals.
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 The subtotal of the order is $160, and shipping charges are $5. The grand total is $165.
 

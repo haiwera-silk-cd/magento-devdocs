@@ -29,11 +29,11 @@ The `sharedCatalogCategoryManagementV1` service is based on `catalogCategoryMana
 Products that are defined within a category are not included when you assign a category to a shared catalog. You must add products separately.
 </div>
 
-**Service name**
+**服务名称**
 
 `sharedCatalogCategoryManagementV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/sharedCatalog/:id/assignCategories
@@ -47,7 +47,7 @@ GET  /V1/sharedCatalog/:id/categories
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 </div>
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `id` | The category ID number | integer | Required to assign or unassign a category
 
@@ -59,7 +59,7 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 
 `POST /V1/sharedCatalog/2/assignCategories`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -80,7 +80,7 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -94,7 +94,7 @@ The following example removes two categories from the shared catalog.
 
 `POST /V1/sharedCatalog/2/unassignCategories`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -110,7 +110,7 @@ The following example removes two categories from the shared catalog.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -118,15 +118,15 @@ The following example removes two categories from the shared catalog.
 
 The `GET` call returns an array of catalog IDs.
 
-**Sample Usage**
+**样例用法**
 
 `GET  /V1/sharedCatalog/2/categories`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -141,7 +141,7 @@ Not applicable
 
 The `sharedCatalogProductManagementV1` service is based on `catalogProductManagementV1`. To return a list of products defined within a category, call `GET /V1/categories/:categoryId/products`.
 
-**Service name**
+**服务名称**
 
 `sharedCatalogProductManagementV1 `
 
@@ -159,7 +159,7 @@ GET  /V1/sharedCatalog/:id/products
 Although you can specify other parameters defined within a `products` object, the `sku` is the only one used to assign or unassign a product to a shared catalog.
 </div>
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `sku` | The product's SKU identifier | string | Required to assign or unassign a product to a shared catalog
 
@@ -171,7 +171,7 @@ The following example adds two products each in the Bags, Fitness Equipment, and
 
 `POST /V1/sharedCatalog/2/assignProducts`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -198,7 +198,7 @@ The following example adds two products each in the Bags, Fitness Equipment, and
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -210,7 +210,7 @@ Unassigning a product does not remove it from its category or categories.
 
 `POST /V1/sharedCatalog/2/unassignProducts`
 
-**Payload**
+**载荷**
 {% highlight json %}
 {
   "products": [
@@ -221,7 +221,7 @@ Unassigning a product does not remove it from its category or categories.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -229,15 +229,15 @@ Unassigning a product does not remove it from its category or categories.
 
 The `GET` call returns an array of SKUs.
 
-**Sample Usage**
+**样例用法**
 
 `GET  /V1/sharedCatalog/2/products`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -249,7 +249,7 @@ Not applicable
 ]
 {% endhighlight %}
 
-## Related information
+## 相关信息
 
 * [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
 * [管理共享类目录]({{ page.baseurl }}/b2b/shared-cat-manage.html)

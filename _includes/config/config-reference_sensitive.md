@@ -28,7 +28,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Currency setup sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **Currency setup**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Error Email Recipient | `currency/import/error_email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
@@ -37,15 +37,15 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 
 | Name  | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
-| Sender Name | `trans_email/ident_general/name` | | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Sender 名称 | `trans_email/ident_general/name` | | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Sender Email | `trans_email/ident_general/email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
-| Sender Name | `trans_email/ident_sales/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Sender 名称 | `trans_email/ident_sales/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Sender Email | `trans_email/ident_sales/email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
-| Sender Name | `trans_email/ident_support/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Sender 名称 | `trans_email/ident_support/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Sender Email | `trans_email/ident_support/email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
-| Sender Name | `trans_email/ident_custom1/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Sender 名称 | `trans_email/ident_custom1/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Sender Email | `trans_email/ident_custom1/email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
-| Sender Name | `trans_email/ident_custom2/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Sender 名称 | `trans_email/ident_custom2/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Sender Email | `trans_email/ident_custom2/email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
 ### Contacts sensitive and system-specific paths
@@ -83,7 +83,7 @@ This section lists variable names and config paths available for options in the 
 ### Catalog sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Catalog** > **Catalog**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Error Email Recipient | `catalog/productalert_cron/error_email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | YouTube API Key | `catalog/product_video/youtube_api_key` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -103,7 +103,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### XML sitemap sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Catalog** > **XML Sitemap**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Error Email Recipient | `sitemap/generate/error_email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
@@ -113,7 +113,7 @@ This section lists variable names and config paths available for options in the 
 ### Shipping settings sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Settings**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Country | `shipping/origin/country_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Region/State | `shipping/origin/region_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -127,7 +127,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Sales emails sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales Emails**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Send Order Email Copy To | `sales_email/order/copy_to` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Send Order Comment Email Copy To | `sales_email/order_comment/copy_to` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -141,21 +141,21 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Checkout sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Checkout**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Send Payment Failed Email Copy To | `checkout/payment_failed/copy_to` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
 ### Google API sensitive and system-specific paths 
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Google API**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Container Id | `google/analytics/container_id` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
 ### Shipping methods sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Shipping Methods**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Gateway URL | `carriers/usps/gateway_url` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Secure Gateway URL | `carriers/usps/gateway_secure_url` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -184,9 +184,9 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Sales sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
-| Contact Name | `sales/magento_rma/store_name` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Contact 名称 | `sales/magento_rma/store_name` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Street Address | `sales/magento_rma/address` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Street Address | `sales/magento_rma/address1` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | City | `sales/magento_rma/city` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -212,7 +212,7 @@ This section lists variable names and config paths available for options in the 
 ### Admin sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Admin**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Custom Admin URL | `admin/url/custom` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Custom Admin Path | `admin/url/custom_path` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -220,7 +220,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### System sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Error Email Recipient | `system/magento_scheduled_import_export_log/error_email` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Access list | `system/full_page_cache/varnish/access_list` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |  | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -230,7 +230,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Developer sensitive and system-specific paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **Developer**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? | 
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? | 
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Allowed IPs (comma separated) | `dev/restrict/allow_ips` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png)
 
@@ -240,7 +240,7 @@ This section lists variable names and config paths available for options in the 
 ### System paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Advanced** > **System**.
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Host | `system/smtp/host` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Port (25) | `system/smtp/port` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -261,7 +261,7 @@ This section lists variable names and config paths available for options in the 
 
 ### General variable {#vars-merch-country}
 
-| Name | Config path | EE only? | Encrypted? |
+| 名称 | Config path | EE only? | Encrypted? |
 |--------------|--------------|--------------|--------------|
 | Merchant Country | `paypal/general/merchant_country` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 
@@ -271,7 +271,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### PayPal sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Email Associated with PayPal Merchant Account (Optional) | `paypal/general/business_account` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Merchant Account ID | `payment/paypal_express/merchant_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -303,7 +303,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### PayPal Payflow Link sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | User | `payment/payflow_link/user` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Password | `payment/payflow_link/pwd` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -319,7 +319,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### PayPal Payments Pro sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | API Username | `paypal/wpp/api_username` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | API Password | `paypal/wpp/api_password` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -332,7 +332,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### PayPal Payments Pro Hosted sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Debug Mode | `payment/hosted_pro/debug` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) |
 | SFTP Credentials | `payment_all_paypal/payments_pro_hosted_solution/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_sftp` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -340,20 +340,20 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### Braintree sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Merchant ID | `payment/braintree/merchant_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Public Key | `payment/braintree/public_key` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Private Key | `payment/braintree/private_key` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Merchant Account ID | `payment/braintree/merchant_account_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Kount Merchant ID | `payment/braintree/kount_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
-| Override Merchant Name | `payment/braintree_paypal/merchant_name_override` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
+| Override Merchant 名称 | `payment/braintree_paypal/merchant_name_override` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | URL | `payment/braintree/descriptor_url` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) |
 
 
 ### Worldpay sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Installation ID | `payment/worldpay/installation_id` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Payment Response Password | `payment/worldpay/response_password` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -379,7 +379,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### eWAY sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Live API Key | `payment/eway/live_api_key` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Live API Password | `payment/eway/live_api_password` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -391,7 +391,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### Cybersource sensitive and system-specific paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Merchant ID | `payment/cybersource/merchant_id` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Transaction Key | `payment/cybersource/transaction_key` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -402,7 +402,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### Check / Money Order paths
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Send Check to | `payment/checkmo/mailing_address` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Send Check to | `payment_us/checkmo/mailing_address` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
@@ -411,7 +411,7 @@ Your choice for this variable determines which [International paths](#vars-intl-
 
 ### International paths {#vars-intl-list}
 
-| Name | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | EE only? | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Transaction Key | `payment_au/authorizenet_directpost/trans_key` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | ![Encrypted]({{ site.magentourl }}/common/images/cloud_enc.png) | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png) |
 | Test Mode | `payment_au/authorizenet_directpost/test` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | | ![Sys-specific]({{ site.magentourl }}/common/images/cloud_env.png) |

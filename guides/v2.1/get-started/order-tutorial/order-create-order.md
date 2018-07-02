@@ -33,7 +33,7 @@ When you submit payment information, Magento creates an order and sends an order
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -59,7 +59,7 @@ When you submit payment information, Magento creates an order and sends an order
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 An `orderID`, such as `3`.
 
@@ -79,11 +79,11 @@ where `3` is the `orderid`
 
 `Authorization` `Bearer <administrator token>`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}

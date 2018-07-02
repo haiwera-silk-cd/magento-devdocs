@@ -218,7 +218,7 @@ Issues that are not related to the 2.2 release are not part of this report.
 | Module/ WeeeStaging                | <span class="status green">Green</span>                   |
 | Module/ Worldpay                   | <span class="status green">Green</span>                   |
 
-## B2B Modules
+## B2B模块
 
 | Name                      | Status                                  |
 | ------------------------- | --------------------------------------- |

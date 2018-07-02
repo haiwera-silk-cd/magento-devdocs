@@ -187,5 +187,5 @@ You must perform this step last because after it's done, you'll lose access to t
 *	[Tutorial&mdash;设置多站和多店 with nginx]({{ page.baseurl }}/config-guide/multi-site/ms_nginx.html)
 *	[Tutorial&mdash;Set up multiple websites with Apache]({{ page.baseurl }}/config-guide/multi-site/ms_apache.html)
 
-#### Related information
+#### 相关信息
 [Add content to your websites](http://docs.magento.com/m2/ce/user_guide/cms/content-menu.html){:target="_blank"}

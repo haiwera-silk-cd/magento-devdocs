@@ -11,11 +11,11 @@ redirect_from: /guides/v1.0/extension-dev-guide/tech-stack.html
 
 ## 概述
 
-This page summarizes the technologies we use. For more detailed information, see the [系统要求]({{ page.baseurl }}/install-gde/system-requirements-tech.html).
+ 本章总结了我们使用的技术，更多详细信息，请参考[系统要求]({{ page.baseurl }}/install-gde/system-requirements-tech.html).
 
-Magento's highly modular structure includes the following open-source technologies.
+Magento的高度模块化结构包含以下开源技术。
 
-### Web servers
+### Web服务
 
 *	Apache
 *	{% glossarytooltip b14ef3d8-51fd-48fe-94df-ed069afb2cdc %}nginx{% endglossarytooltip %}
@@ -29,47 +29,47 @@ Magento's highly modular structure includes the following open-source technologi
 *	MySQL
 *	MySQL Percona
 
-### HTTP accelerator
+### HTTP加速器
 
 *	Varnish
 
-### Cache Storage
+### 缓存存储
 
 *	Redis
 *	Memcache
 
 ### Search
 
-* Solr (Magento Enterprise Edition only)
-* Elasticsearch (Magento Enterprise Edition version 2.1.x only)
+* Solr (仅Magento企业版)
+* Elasticsearch (仅Magento企业版2.1.x)
 
-### Additional technologies
+### 其它技术
 
 *	HTML5
 *	CSS3 (LESS {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} pre-processor)
 *	{% glossarytooltip 5bfa8a8e-6f3e-4fed-a43e-62339916f02e %}jQuery{% endglossarytooltip %} (primary {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} library)
-*	RequireJS (library that helps load JavaScript resources on demand)
-*	Knockout.js (simplifies JavaScript UIs with the Model-View-View Model pattern)
+*	RequireJS (帮助按需加载Javascript资源的库)
+*	Knockout.js (简单的Javascript MVVM UI渲染库)
 *	第三方库 (Zend Framework 1, Zend Framework 2, Symfony)
-*	Coding standards PSR-0 (autoloading standard), PSR-1 (basic coding standards), and PSR-2 (coding style guide), PSR-3, PSR-4
+*	编码规范 PSR-0 (标准自动加载), PSR-1 (基础编码标准), and PSR-2 (编码风格指引), PSR-3, PSR-4
 
-### Optional stack 组件
+### 可选栈组件
 
-*	Varnish (caching)
-*	Redis (used for page caching)
-*	Solr (search engine)
-*	Elasticsearch (search engine)
+*	Varnish (缓存)
+*	Redis (用于页面缓存)
+*	Solr (搜索引擎)
+*	Elasticsearch (搜索引擎)
 
 Magento is *compatible with but not supported* for:
 
 *	HHVM 3.9 {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} interpreter
 
-### Automated testing
+### 自动测试
 
-Magento also provides automated testing suites that include unit, integration, functional and performance test scripts, as well as JavaScript tests and tools for static code analysis. 组件 include PHPUnit for the unit test framework and Selenium for the functional test framework.
+Magento也提供了自动测试的工具箱，包含单元测试、集成测试、功能测试和性能测试脚本，以及Javascript测试和静态代码分析工具。组件包括单元测试的PHPUnit和功能测试框架的Selenium.
 
-This framework is located in the `dev/tests` directory. The functional testing framework `mtf` can be found in a [separate repository](https://github.com/magento/mtf){:target="_blank"}.
-For more information, see the [Functional Testing Framework]({{ page.baseurl }}/mtf/mtf_introduction.html) guide.
+这些框架位于`dev/tests`目录。功能测试框架`mtf`可以在[单独的仓库](https://github.com/magento/mtf){:target="_blank"}中找到.
+更多信息，请参考[功能测试框架]({{ page.baseurl }}/mtf/mtf_introduction.html)手册.
 
 ## 相关主题
 <a href="{{ page.baseurl }}/architecture/archi_perspectives/ABasics_intro.html">架构基础</a>

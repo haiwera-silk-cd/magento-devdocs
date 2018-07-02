@@ -23,7 +23,7 @@ Custom shared catalogs can be assigned to companies only. They cannot be set for
 
 {{site.data.var.b2b}} provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users, though a company can be assigned the public catalog. The seller assigns a custom shared catalog to specific companies. There can only be one public catalog, and it cannot be deleted.
 
-## Related information
+## 相关信息
 
 * [管理共享类目录]({{ page.baseurl }}/b2b/shared-cat-manage.html)
 * [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)

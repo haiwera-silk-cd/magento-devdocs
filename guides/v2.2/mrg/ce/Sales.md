@@ -43,7 +43,7 @@ With this service you can:
     <tr>
       <th>名称</th>
       <th>描述</th>
-      <th>Format</th>
+      <th>格式</th>
       <th>Example</th>
       <th>Required / Optional</th>
       <th>Default value</th>
@@ -84,7 +84,7 @@ With this service you can:
       <td>Flag that sets whether the customer’s payment can be captured using an online payments system (for example, PayPal). <strong>IMPORTANT: If you created Invoice with the flag set to default value (<code>false</code>), you will not be able to capture money in Magento on the corresponding Invoice.</strong></td>
       <td>Boolean</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>false</code></td>
     </tr>
     <tr>
@@ -92,7 +92,7 @@ With this service you can:
       <td>Flag that activates e-mail notification about new invoice for a customer. If <code>true</code>, the service will notify a customer. If <code>false</code>, the service won’t notify a customer.</td>
       <td>Boolean</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>false</code></td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ With this service you can:
       <td>Flag that determines whether a <code>comment</code> argument must be included in an e-mail notification. If <code>true</code>, the service adds the comment.</td>
       <td>Boolean</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>false</code></td>
     </tr>
     <tr>
@@ -115,7 +115,7 @@ With this service you can:
       }
       {% endhighlight %}
       </td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>null</code></td>
     </tr>
     <tr>
@@ -123,7 +123,7 @@ With this service you can:
       <td>Additional arguments. Reserved for use by extension modules.</td>
       <td>A format according to <a href="{{ site.mage2200url }}app/code/Magento/Sales/Api/Data/InvoiceCreationArgumentsInterface.php"><code>\Magento\Sales\Api\Data\InvoiceCreationArgumentsInterface</code></a>.</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>null</code></td>
     </tr>
   </tbody>
@@ -811,7 +811,7 @@ With the ShipOrder service you can:
     <tr>
       <th>名称</th>
       <th>描述</th>
-      <th>Format</th>
+      <th>格式</th>
       <th>Example</th>
       <th>Required/Optional</th>
       <th>Default value</th>
@@ -852,7 +852,7 @@ With the ShipOrder service you can:
       <td>Flag that activates e-mail notification about shipment details. If <code>true</code>, the service notifies a customer; if <code>false</code>, it doesn't.</td>
       <td>Boolean</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>false</code></td>
     </tr>
     <tr>
@@ -860,7 +860,7 @@ With the ShipOrder service you can:
       <td>Flag that activates addition of a <code>comment</code> argument to the e-mail notification. If <code>true</code>和<code>comment</code> contains data, the service will add the comment to an e-mail notification.</td>
       <td>Boolean</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>false</code></td>
     </tr>
     <tr>
@@ -921,7 +921,7 @@ With the ShipOrder service you can:
       ]
       {% endhighlight %}
       </td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>[]</code></td>
     </tr>
     <tr>
@@ -932,7 +932,7 @@ With the ShipOrder service you can:
         <a href="{{ site.mage2200url }}app/code/Magento/Sales/Api/Data/CreditmemoCreationArgumentsInterface.php"><code>\Magento\Sales\Api\Data\CreditmemoCreationArgumentsInterface</code></a>
         interface.</td>
       <td>&nbsp;</td>
-      <td>Optional</td>
+      <td>可选</td>
       <td><code>null</code></td>
     </tr>
   </tbody>

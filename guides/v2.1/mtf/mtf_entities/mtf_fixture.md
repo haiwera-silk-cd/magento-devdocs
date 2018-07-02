@@ -46,7 +46,7 @@ Magento has a tool, `generateFixtureXml.php,`, to automatically generate fixture
 
 In the following table see `generateFixtureXml` arguments.
 
-| Argument        | Semantics                                                    | Value from command above                                                           | Note                                      |
+| Argument        | Semantics                                                    | Value from command above                                                           | 否te                                      |
 |:----------------|:-------------------------------------------------------------|:-----------------------------------------------------------------|:------------------------------------------|
 | `--name`        | Name of fixture.                                              | `widget`                                                         | Required                                  |
 | `--type`        | Table type for the entity. Can be `eav`, `flat`, `composite`. | `flat`                                                           | Default value: `flat`.                     |

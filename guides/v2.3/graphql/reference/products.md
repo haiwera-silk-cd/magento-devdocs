@@ -276,11 +276,11 @@ Field | Type | Description
 Field | Type | Description
 --- | --- | ---
 `media_type` | String | Must be `external-video`
-`video_provider` | String | Optionally describes the video source
+`video_provider` | String | 可选ly describes the video source
 `video_url` | String | Required. The URL to the video
 `video_title` | String | Required. The title of the video
 `video_description` | String | A description of the video
-`video_metadata` | String | Optional data about the video
+`video_metadata` | String | 可选 data about the video
 
 ### ProductTierPrices object {#ProductTier}
 

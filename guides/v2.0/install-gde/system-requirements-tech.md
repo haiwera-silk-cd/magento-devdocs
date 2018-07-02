@@ -26,7 +26,7 @@ Upgrading the Magento applications and extensions you obtain from Magento Market
 ### Composer (latest stable version)
 {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} is required for developers who wish to contribute to the Magento 2 codebase or anyone who wishes to develop Magento extensions
 
-### Web servers
+### Web服务
 *	<a href="http://httpd.apache.org/download.cgi" target="_blank">Apache 2.2 or 2.4</a>
 
 	In addition, the apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see <a href="{{ page.baseurl }}/install-gde/prereq/apache.html">our Apache documentation</a>.

@@ -36,7 +36,7 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -48,7 +48,7 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -77,7 +77,7 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -89,7 +89,7 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -147,7 +147,7 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -174,7 +174,7 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -329,7 +329,7 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -371,7 +371,7 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}

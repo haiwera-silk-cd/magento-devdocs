@@ -2,7 +2,7 @@
 
 group: rest
 subgroup: Web APIs
-title: Search using REST APIs
+title: 使用REST API搜索
 menu_title: Search using REST
 menu_order: 2
 version: 2.2
@@ -27,7 +27,7 @@ where:
 * `value` specifies the value to search for.
 * `condition_type` is one of the following values:
 
-Condition | Notes
+Condition | 否tes
 --- | ---
 `eq` | Equals.
 `finset` | A value within a set of values
@@ -39,9 +39,9 @@ Condition | Notes
 `lt` | Less than
 `lteq` | Less than or equal
 `moreq` | More or equal
-`neq` | Not equal
-`nin` | Not in. The `value` can contain a comma-separated list of values.
-`notnull` | Not null
+`neq` | 否t equal
+`nin` | 否t in. The `value` can contain a comma-separated list of values.
+`notnull` | 否t null
 `null` | Null
 `to` | The end of a range. Must be used with `from`
 

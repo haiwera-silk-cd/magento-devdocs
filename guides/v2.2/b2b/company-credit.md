@@ -14,12 +14,12 @@ functional_areas:
   - Integration
 ---
 
-公司信用帐户 allows company members to purchase items on credit. This is a feature specific to {{site.data.var.b2b}} that is used only for transactions between companies. The seller allocates an amount (or the credit limit) to a company and then company members can purchase items using this amount with the Payment on Account method. The credit amount used by a company is sent to the seller offline. Then the seller creates a Reimburse transaction in the system to adjust the company balance.
+公司信用帐户允许公司成员使用信用购买产品。这是{{site.data.var.b2b}}特有的特性，仅用于公司间的业务。销售者分配金额(或信用度)到一个公司，然后公司成员可以使用这个金额作为支付来购买产品。信用额用于公司线下寄送给销售者。然后销售者在系统中创建一个报销事务来调整该公司的余额。
 
-The following diagram illustrates the process flow of orders using the Payment on Account method.
+下面的图示说明了在帐号方式上使用这种支付方式的订单的流程
 
-![Payment on credit]({{ page.baseurl }}/b2b/images/payment-on-credit.png)
+![信用支付]({{ page.baseurl }}/b2b/images/payment-on-credit.png)
 
-## Related information
+## 相关信息
 
 [管理公司信用帐户]({{ page.baseurl }}/b2b/credit-manage.html)

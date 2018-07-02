@@ -283,7 +283,7 @@ For example, the developer can disable a global plugin in the {% glossarytooltip
 *  [依赖注入]({{ page.baseurl }}/extension-dev-guide/depend-inj.html)
 *  [事件和观查者]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html)
 
-### Related information
+### 相关信息
 
 * [The Plugin Integration Test Kata](http://vinaikopp.com/2016/03/07/04_the_plugin_integration_test_kata){:target="_blank"} by Magento contributor [Vinai Kopp](http://vinaikopp.com/blog/list){:target="_blank"}
 * [The Around Interceptor Kata](http://vinaikopp.com/2016/02/22/03_the_around_interceptor_kata){:target="_blank"} by Magento contributor [Vinai Kopp](http://vinaikopp.com/blog/list){:target="_blank"}

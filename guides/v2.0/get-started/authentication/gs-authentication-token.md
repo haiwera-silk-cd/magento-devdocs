@@ -15,7 +15,7 @@ To make a web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% en
 
 Magento issues the following types of access tokens:
 
-Token type | Description | Default lifetime
+Token type | 描述 | Default lifetime
 --- | --- | ---
 Integration | The merchant determines which Magento resources the integration has access to. | Indefinite. It lasts until it is manually revoked.
 Admin | The merchant determines which Magento resources an admin user has access to. | 4 hours

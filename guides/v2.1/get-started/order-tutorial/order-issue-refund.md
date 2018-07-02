@@ -44,7 +44,7 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 `Authorization` `Bearer <administrator token>`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -68,7 +68,7 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 A {% glossarytooltip 6a9783a3-cdec-4fed-843d-8eda12819804 %}credit memo{% endglossarytooltip %} id, such as `3`.
 

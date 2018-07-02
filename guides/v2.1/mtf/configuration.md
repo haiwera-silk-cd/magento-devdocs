@@ -155,7 +155,7 @@ Settings are grouped into the following blocks:
 
 **Description:** Application configuration settings.
 
-|Parameter|Description |
+|Parameter|描述 |
 |---|---|
 |`<reopenBrowser>`|Determines that a browser is to be restarted after each `test`或`testCase`.|
 |`<backendLogin>`|Magento Admin username that is used during functional testing.|
@@ -189,7 +189,7 @@ Values description:
 
 **Description:** Selenium server settings.
 
-|Parameter|Description |Values|
+|Parameter|描述 |Values|
 |---|---|---|
 |`name`|Name of an item.|`"selenium"`|
 |`type`|Required Selenium setting. The FTF doesn't use it.|`"default"`|
@@ -208,7 +208,7 @@ Values description:
 
 Specifies priorities for different types of handlers. The lower the value, the higher the priority. The highest priority has value 0. `token` contains access token (used by WebAPI handlers only). [Learn more about handlers.][handler]
 
-|Parameter|Description |Values|
+|Parameter|描述 |Values|
 |---|---|---|
 |`<webapi>`|`priority` value of a WebAPI handler.|Integer|
 |`<curl>`|`priority` value of a curl handler priority.|Integer|

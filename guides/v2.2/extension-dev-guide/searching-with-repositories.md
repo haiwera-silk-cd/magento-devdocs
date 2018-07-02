@@ -224,7 +224,7 @@ class ProductCategoryFilter implements CustomFilterInterface
 {% endhighlight %}
 {% endcollapsible %}
 
-| Argument | Description |
+| Argument | 描述 |
 | --- | --- |
 | `customFilters` | An array of filters implementing the [`CustomFilterInterface`](https://github.com/magento/magento2/blob/2.2/lib/internal/Magento/Framework/Api/SearchCriteria/CollectionProcessor/FilterProcessor/CustomFilterInterface.php){:target="_blank"}. These filters allow you to apply custom logic to a particular abstract database collection. |
 | `fieldMapping` | Maps field names defined in the search Criteria to the names in an abstract database collection |
@@ -250,7 +250,7 @@ Below is an example of how you can configure a Sorting Processor virtual type in
     </virtualType>
 {% endhighlight %}
 
-| Argument | Description |
+| Argument | 描述 |
 |--- | --- |
 | `fieldMapping` | Maps field names defined in the search Criteria to the names in an abstract database collection |
 | `defaultOrders`| The ordering applied when there are none defined in a search criteria. |

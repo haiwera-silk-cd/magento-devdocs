@@ -47,9 +47,9 @@ The following results provides an example of variables:
 	+----------------+---------------+-----------+------+
 	| ID             | Value         | Inherited | JSON |
 	+----------------+---------------+-----------+------+
-	| ADMIN_PASSWORD | admin_A456    | Yes       | No   |
-	| ADMIN_URL      | magento_A8v10 | Yes       | No   |
-	| ADMIN_USERNAME | admin_A456    | Yes       | No   |
+	| ADMIN_PASSWORD | admin_A456    | 是       | 否   |
+	| ADMIN_URL      | magento_A8v10 | 是       | 否   |
+	| ADMIN_USERNAME | admin_A456    | 是       | 否   |
 	+----------------+---------------+-----------+------+
 
 ### Get Magento authentication keys {#keys}

@@ -50,7 +50,7 @@ Create a synonym group (synonyms are a way to expand the scope of eligible match
 6. Click the "Save Synonym Group" button.
 7. Verify the synonym group saved successfully
 
-### Automated testing scenario {#auto-test}
+### 自动测试 scenario {#auto-test}
 
 1. Log in to Admin.
 2. Open the Search Synonym page.

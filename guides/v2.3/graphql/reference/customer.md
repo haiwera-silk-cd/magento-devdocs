@@ -91,7 +91,7 @@ The following call returns information about the logged-in customer.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 ``` json
 {

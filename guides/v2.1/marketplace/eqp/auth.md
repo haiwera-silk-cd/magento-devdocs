@@ -54,7 +54,7 @@ curl -X POST \
      https://developer-api.magento.com/rest/v1/apps/session/token
 ```
 
-**Response**
+**响应**
 
 A successful HTTP 200 OK response will be sent for a valid application ID and secret:
 

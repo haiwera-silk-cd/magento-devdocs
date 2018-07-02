@@ -46,11 +46,11 @@ This tutorial manages a the cart of a logged-in customer. Unless otherwise noted
 
 `Authorization` `Bearer <customer token>`
 
-**Payload**
+**载荷**
 
-None
+无
 
-**Response**
+**响应**
 
 The response is the `quoteId`: `4`
 

@@ -97,7 +97,7 @@ The `queue_consumer.xml` file contains one or more `consumer` elements:
 #### `consumer` element ####
 {:.no_toc}
 
-| Attribute        | Description |
+| Attribute        | 描述 |
 | ---------------- | ----------- |
 | name (required)  | The name of the consumer.  |
 | queue (required) | Defines the queue name to send the message to.  |
@@ -144,7 +144,7 @@ The `queue_topology.xml` file defines the message routing rules and declares que
 #### `exchange` element ####
 {:.no_toc}
 
-| Attribute      | Description |
+| Attribute      | 描述 |
 | -------------- | ----------- |
  name (required) | A unique ID for the exchange.
  type (required) | Specifies the type of exchange. Must be `topic`.
@@ -158,7 +158,7 @@ The `queue_topology.xml` file defines the message routing rules and declares que
 
 The `binding` element is a subnode of the `exchange` element.
 
-| Attribute      | Description |
+| Attribute      | 描述 |
 | -------------- | ----------- |
 | id (required)  | A unique ID for this binding. |
 | topic (required)  | The name of a topic. You can specify an asterisk (*) or pound sign (#) as wildcards. These are described below the table.|
@@ -168,10 +168,10 @@ The `binding` element is a subnode of the `exchange` element.
 
 Example topic names that include wildcards:
 
-| Pattern | Description | Example matching topics | Example non-matching topics
+| Pattern | 描述 | Example matching topics | Example non-matching topics
 | --- | --- | --- | ---
 `*.*.*` | Matches any topic that contains exactly two periods. | `mytopic.createOrder.success`, `mytopic.updatePrice.item1` | `mytopic.createOrder`, `mytopic.createOrder.success.true`
-`#`| Matches any topic name.  | `mytopic`, `mytopic.createOrder.success`, `this.is.a.long.topic.name` | Not applicable
+`#`| Matches any topic name.  | `mytopic`, `mytopic.createOrder.success`, `this.is.a.long.topic.name` | 否t applicable
 `mytopic.#` | Matches any topic name that begins with `mytopic` and has a period afterward. |  `mytopic.success`, `mytopic.createOrder.error` | `new.mytopic.success`,
 `*.Order.#` | There must be one string before __.Order__. There can be any number of strings (including 0) after that.  | `mytopic.Order`, `mytopic.Order.Create`, `newtopic.Order.delete.success` |
 
@@ -182,7 +182,7 @@ The `arguments` element is an optional element that contains one or more `argume
 
 Each `argument` definition must have the following parameters:
 
-| Attribute      | Description |
+| Attribute      | 描述 |
 | --------------- | ----------- |
 | name | The parameter name |
 | type | The data type of the value |
@@ -221,7 +221,7 @@ The `queue_publisher.xml` file defines which connection and exchange to use to p
 #### `publisher` element
 {:.no_toc}
 
-| Attribute            | Description |
+| Attribute            | 描述 |
 | -------------------- | ----------- |
 | topic (required)     | The name of the topic. |
 | disabled             | Determines whether this queue is disabled. The default value is `false`. |
@@ -231,7 +231,7 @@ The `queue_publisher.xml` file defines which connection and exchange to use to p
 
 The `connection` element is a subnode of the `publisher` element. There must not be more than one enabled active connection to a pushlisher defined at a time. If you omit the `connection` element, the default connection of `amqp` and exchange `magento` will be used.
 
-| Attribute            | Description |
+| Attribute            | 描述 |
 | -------------------- | ----------- |
 | name (required)      | For AMQP connections, the connection name must match the `connection` attribute in the `queue_topology.xml` file. Otherwise, the connection name must be `db`. |
 | exchange             | The name of the exchange to publish to. The default system exchange name is `magento`. |

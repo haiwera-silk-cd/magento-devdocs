@@ -14,50 +14,50 @@ functional_areas:
   - Integration
 ---
 
-A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with Magento {{site.data.var.ce}} and {{site.data.var.ee}}, and specify the `company_attributes` extended attributes to create a company user.
+公司用户是一个被分配额外的指示用户所属公司属性的客户(购买者)。使用`POST /V1/customers`调用，此调用在{{site.data.var.ce}}和{{site.data.var.ee}}中都有，并指定`company_attributes`扩展属性来创建公司用户。
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-This topic discusses only the features of the `customerCustomerRepositoryV1` service that are specific to B2B. See [创建一个客户]({{ page.baseurl }}/get-started/order-tutorial/order-create-customer.html) for an example of creating a standard customer.
+本节仅论讨B2B指定的`customerCustomerRepositoryV1`服务的特性。参考[创建一个客户]({{ page.baseurl }}/get-started/order-tutorial/order-create-customer.html)了解创建一个标准客户的例子。
 </div>
 
 ## 管理公司用户
 
-This section describes the REST endpoints used to manage company users.
+本节描述用于管理公司用户的REST接口
 
-**Service Name**
+**服务名称**
 
 `customerCustomerRepositoryV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/customers/
 PUT /V1/customers/:customerId
 {% endhighlight %}
 
-**Company user parameters**
+** 公司用户的参数 **
 
-The following table lists the parameters that can be used to create a company user.
+下面的表格列出了能被用于创建公司客户的参数
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`customer_id` | System-generated customer ID. | integer | Not applicable for create operations.
-`company_id` | System-generated company ID. | integer | Required to create or update a company user.
-`job_title` | A string that describes the company user's responsibilities. | Required to create or update a company.
-`status` | Indicates whether the company user is active or inactive | integer | `0` - inactive; `1` - active
-`telephone`  |  Telephone number | string | Required to create a company user.
+`customer_id` | 系统生成的客户ID | integer | 创建操作不可用
+`company_id` | 系统生成的公司的ID | integer | 创建和更新公司用户时必须
+`job_title` | 描述公司用户职责的一个字符串 | 更新和创建公司时必须
+`status` | 指示是否公司用户是活动的 | integer | `0` - 不活动的; `1` - 活动的
+`telephone`  |  电话号码 | string | 创建公司用户时必须
 
-### Create a company user
+### 创建一个公司用户
 
-The `POST /V1/customers` call creates a Magento customer. B2B extends the `customerAccountManagementV1` service so that you can create a company user.
+`POST /V1/customers`调用创建一个Magento的客户。B2B扩展`customerAccountManagementV1`服务以使你可以创建公司用户
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/customers`
 
-**Payload**
+**载荷**
 
-Add the `company_attributes` code block to the payload that is required to create a standard customer.
+添加`company_attributes`代码块到创建一个标准用户所需参数的载荷中
 
 {% highlight json %}
 
@@ -71,7 +71,7 @@ Add the `company_attributes` code block to the payload that is required to creat
 }
 {% endhighlight %}
 
-Full example:
+完整版:
 
 {% highlight json %}
 {
@@ -91,7 +91,7 @@ Full example:
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -119,18 +119,18 @@ Full example:
 }
 {% endhighlight %}
 
-### Modify a company user
+### 修改公司用户
 
-The following example changes the status of a company user to inactive.
+下面的例子修改公司用户的状态到不活动。
 
-If you change the `status` to inactive, the account is locked. If the company user has child users, the system re-assigns the child users to the parent of the deactivated user.
+如果你修改状态到不活动，此帐户是锁定的，如果此公司用户有子用户，系统重新分配其子用户到被操作用户的父用户上。
 
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/customers/13`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -150,7 +150,7 @@ If you change the `status` to inactive, the account is locked. If the company us
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -176,25 +176,25 @@ If you change the `status` to inactive, the account is locked. If the company us
 }
 {% endhighlight %}
 
-### Delete a company user
+### 删除公司用户
 
-If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Magento with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
+如果指定公司用户有子用户，系统重新分配其子用户到被删用户的父用户。此用帐的帐号及其所有内容将从Magento上删除，除了报价和订单。此用户的订单和报价信息对销售者仍可见。
 
-Magento locks the deleted user's quotes and changes their status to Closed. The system does not allow to make changes on such quotes.
+Magento锁定删除用户的报价并修改它们为关闭。系统不允许修改这类的报价。
 
-**Sample Usage**
+**样例用法**
 
 `DELETE /V1/customers/13`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
-## Related information
+## 相关信息
 
 * [集成公司模块]({{ page.baseurl }}/b2b/company.html)
 * [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)

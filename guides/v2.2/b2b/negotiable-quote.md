@@ -117,7 +117,7 @@ The following diagram shows the negotiable quote lifecycle from the perspective 
 
 ![Negotiable quote status]({{ page.baseurl }}/b2b/images/quote-statuses.png)
 
-## Related information
+## 相关信息
 
 * [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)
 * [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)

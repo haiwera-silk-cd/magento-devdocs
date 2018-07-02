@@ -37,11 +37,11 @@ Element | Description
 
 This section indicates which key/value pairs you must specify in the HTTP headers. All calls require one or more HTTP headers.
 
-**Payload**
+**载荷**
 
 This section lists the information that is sent to Magento. All payload samples are valid and can be copied and pasted into your calls, but you might need to change the `id` values that Magento returns.
 
-**Response**
+**响应**
 
 This section lists the information that Magento sends to the REST client. These values are often referenced in other steps in the tutorial. The values Magento returns might be different than the values listed in the examples provided in this tutorial.
 
@@ -61,7 +61,7 @@ See [基于访问令牌的认证]({{ page.baseurl }}/get-started/authentication/
 
 `Content-Type` `application/json`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -70,7 +70,7 @@ See [基于访问令牌的认证]({{ page.baseurl }}/get-started/authentication/
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 Magento returns the admin's access token.
 

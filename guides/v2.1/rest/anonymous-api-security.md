@@ -30,7 +30,7 @@ The following table lists the APIs that are no longer available to an anonymous 
 | CE | Catalog | /V1/products/attribute-sets/:attributeSetId/attributes | GET |
 | CE | Catalog | /V1/products/attribute-sets/groups/list | GET |
 | CE | Catalog | /V1/products/attributes/:attributeCode/options | GET |
-| CE | Catalog | /V1/products/media/types/:attributeSetName | GET |
+| CE | Catalog | /V1/products/media/types/:attributeSet名称 | GET |
 | CE | Catalog | /V1/products/:sku/media/:entryId | GET |
 | CE | Catalog | /V1/products/:sku/media | GET |
 | CE | Catalog | /V1/products/:sku/group-prices/:customerGroupId/tiers | GET |

@@ -29,7 +29,7 @@ The following table lists the general characteristics of men's t-shirt we're cre
 Characteristic | Description
 --- | ---
 Attribute Set | Top
-Product Name | Champ Tee
+Product 名称 | Champ Tee
 SKU | MS-Champ
 Price | 25.00
 Tax Class | Taxable Goods
@@ -40,7 +40,7 @@ Material | LumaTech
 Pattern | Graphic Print
 Color | Gray
 Size | Configurable in small, medium, or large
-Description | The Champ Tee keeps you cool and dry while you do your thing. Let everyone know who you are by adding your name on the back for only $10.
+描述 | The Champ Tee keeps you cool and dry while you do your thing. Let everyone know who you are by adding your name on the back for only $10.
 
 A merchant typically provides the product name, SKU, price, weight, and description. The other characteristics are are defined by the system.
 
@@ -63,7 +63,7 @@ searchCriteria[filter_groups][0][filters][0][value]=Top&
 searchCriteria[filter_groups][0][filters][0][condition_type]=eq
 ```
 
-**Response**
+**响应**
 
 The `attribute_set_id` for the Top attribute set is `9`.
 
@@ -102,7 +102,7 @@ Use the `GET V1/products/attribute-sets/:attributeSetId/attributes` call to retu
 
 `GET <host>/V1/products/attribute-sets/9/attributes`
 
-**Response**
+**响应**
 
 The response contains almost 3,000 lines. The following table provides a summary of the attributes that are relevant in this tutorial.
 
@@ -113,7 +113,7 @@ Visibility | Catalog, Search | 99 | `visibility` | 4
 Material | LumaTech  | 136 | `material` | 148
 Pattern | Graphic Print | 152 | `pattern` | 196
 Color | Gray | 93 | `color` | 52
-Size | Not applicable | 141 | `size` | 168 (small), 169 (medium), 170 (large)
+Size | 否t applicable | 141 | `size` | 168 (small), 169 (medium), 170 (large)
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 The attribute ID and value numbers might be different on your installation. Check the values carefully before using them in your calls.

@@ -20,30 +20,30 @@ Sellers and buyers can edit a negotiable quote at various times during the quote
 
 The `quote` object now contains a set of `negotiable_quote` extension attributes that can be used to update a quote.
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `quote_id` | Negotiable quote ID | integer | Required to create or update a negotiable quote
-`is_regular_quote` | Flag for the negotiable quote | boolean | Optional
-`status` | One of `created`, `submitted_by_customer`, `submitted_by_admin`, `processing_by_customer`, `processing_by_admin`, `ordered`, `expired`, `declined`, `closed` | string | Optional
+`is_regular_quote` | Flag for the negotiable quote | boolean | 可选
+`status` | One of `created`, `submitted_by_customer`, `submitted_by_admin`, `processing_by_customer`, `processing_by_admin`, `ordered`, `expired`, `declined`, `closed` | string | 可选
 `negotiated_price_type` | 1 - Percentage discount; 2 - Fixed price; 3 - proposed total | integer | Required to set a negotiated price
 `negotiated_price_value` | Discount amount defined by the seller | number | Required to set a negotiated price
-`shipping_price` | Custom price for shipping defined by the seller | number | Optional
-`quote_name` | Name assigned to the negotiable quote | string | Optional
-`expiration_period` | Expiration date for the quote. The format must be `YYYY-MM-DD`. | string | Optional
-`email_notification_status`  | Recent notifications that have been sent | integer | Optional
-`has_unconfirmed_changes`  | Indicates there are some changes that the Admin has not seen yet | boolean | Optional
-`is_shipping_tax_changed`  | Indicates whether shipping taxes have changed | boolean | Optional
-`is_customer_price_changed`  | Indicates whether the price for the product has changed | boolean | Optional
-`notifications`  | Binary mask where the current notifications are stored | integer | Optional
-`applied_rule_ids`  | Applied shopping cart rules | string | Optional
-`is_address_draft`  | Drop the address if the checkout is not completed. | boolean | Optional
-`deleted_sku`  | The SKUs of any deleted products | string | Optional
-`creator_id`  | Quote creator ID | integer | Optional
-`creator_type`  | 1 - Integration; 2 - Admin; 3 - Customer; 4 - Guest | integer | Optional
-`original_total_price`  | Original total price | number | Optional
-`base_original_total_price`  | Base original total price | number | Optional
-`negotiated_total_price`  | Negotiated total price | number | Optional
-`base_negotiated_total_price`  | Base negotiated total price | number | Optional
+`shipping_price` | Custom price for shipping defined by the seller | number | 可选
+`quote_name` | Name assigned to the negotiable quote | string | 可选
+`expiration_period` | Expiration date for the quote. The format must be `YYYY-MM-DD`. | string | 可选
+`email_notification_status`  | Recent notifications that have been sent | integer | 可选
+`has_unconfirmed_changes`  | Indicates there are some changes that the Admin has not seen yet | boolean | 可选
+`is_shipping_tax_changed`  | Indicates whether shipping taxes have changed | boolean | 可选
+`is_customer_price_changed`  | Indicates whether the price for the product has changed | boolean | 可选
+`notifications`  | Binary mask where the current notifications are stored | integer | 可选
+`applied_rule_ids`  | Applied shopping cart rules | string | 可选
+`is_address_draft`  | Drop the address if the checkout is not completed. | boolean | 可选
+`deleted_sku`  | The SKUs of any deleted products | string | 可选
+`creator_id`  | Quote creator ID | integer | 可选
+`creator_type`  | 1 - Integration; 2 - Admin; 3 - Customer; 4 - Guest | integer | 可选
+`original_total_price`  | Original total price | number | 可选
+`base_original_total_price`  | Base original total price | number | 可选
+`negotiated_total_price`  | Negotiated total price | number | 可选
+`base_negotiated_total_price`  | Base negotiated total price | number | 可选
 
 ### Set a negotiated price
 
@@ -57,15 +57,15 @@ The `negotiated_price_type` can have one of the following values:
 
 `3` - Set a proposed price for the entire quote. The `negotiated_price_value`parameter specifies the proposed price.
 
-**Service Name**
+**服务名称**
 
 `quoteCartRepositoryV1`
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/negotiableQuote/6`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -88,11 +88,11 @@ The buyer can add, update, or delete items from the quote under the following co
 * The quote is in one of the following system states: `created`, `processing_by_admin`, or `submitted_by_customer`.
 * The quote doesn't have a negotiated price.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/carts/mine/items`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -104,7 +104,7 @@ The buyer can add, update, or delete items from the quote under the following co
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -129,11 +129,11 @@ The buyer can add, update, or delete items from the quote under the following co
 
 ### Change the quote expiration date
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/negotiableQuote/6`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -148,11 +148,11 @@ The buyer can add, update, or delete items from the quote under the following co
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `[]`
 
-## Related information
+## 相关信息
 
 * [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
 * [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)

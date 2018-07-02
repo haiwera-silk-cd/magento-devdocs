@@ -84,10 +84,10 @@ Go to the Admin in default of developer mode and change the following settings f
 | Settings Group      | Setting                    | Value  |
 | ------------------- | -------------------------- | ------ |
 | Grid Settings       | Asynchronous indexing      | Enable |
-| CSS Settings        | Minify CSS Files           | Yes    |
-| Javascript Settings | Minify JavaScript Files    | Yes    |
-| Javascript Settings | Enable js打包 | Yes    |
-| Template Settings   | Minify HTML                | Yes    |
+| CSS Settings        | Minify CSS Files           | 是    |
+| Javascript Settings | Minify JavaScript Files    | 是    |
+| Javascript Settings | Enable js打包 | 是    |
+| Template Settings   | Minify HTML                | 是    |
 
 #### Stores -> Configuration -> Sales -> Sales Emails
 

@@ -24,9 +24,9 @@ HTTP code | Meaning | Description
 400 | Bad Request | If service implementation throws either `Magento_Service_Exception` or its derivative, the framework returns a HTTP 400 with a error response including the service-specific error code and message. This error code could indicate a problem such as a missing required parameter or the supplied data didn't pass validation.
 401 | Unauthorized | The caller was not authorized to perform the request. For example, the request included an invalid token or a user with customer permissions attempted to access an object that requires administrator permissions.
 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401.
-404 | Not found | The specified REST endpoint does not exist. The caller can try again.
-405 | Not allowed | A request was made of a resource using a method that is not supported by that resource. For example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
-406 | Not acceptable | The requested resource is only capable of generating content that is not acceptable according to the Accept headers sent in the request.
+404 | 否t found | The specified REST endpoint does not exist. The caller can try again.
+405 | 否t allowed | A request was made of a resource using a method that is not supported by that resource. For example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
+406 | 否t acceptable | The requested resource is only capable of generating content that is not acceptable according to the Accept headers sent in the request.
 500 | System Errors | If service implementation throws any other {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %} like network errors, database communication, framework returns HTTP 500.
 
 
@@ -78,7 +78,7 @@ Part | Description
 --- | --- | ---
 `code` | The status code representing the error.
 `message` | The message explaining the error.
-`parameters` | Optional. An array of attributes used to generate a different and/or localized error message for the client.
+`parameters` | 可选. An array of attributes used to generate a different and/or localized error message for the client.
 
 As an example, Magento returns a `code` of `400` and the following `message` when an invalid `sku` value is specified in the call `PUT V1/products/:sku`.
 

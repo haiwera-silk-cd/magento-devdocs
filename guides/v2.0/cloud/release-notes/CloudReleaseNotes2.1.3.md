@@ -180,9 +180,9 @@ This section discusses how to get connection information for Elasticsearch so yo
         +----------------+---------------+-----------+------+
         | ID             | Value         | Inherited | JSON |
         +----------------+---------------+-----------+------+
-        | ADMIN_PASSWORD | admin_A456    | Yes       | No   |
-        | ADMIN_URL      | magento_A8v10 | Yes       | No   |
-        | ADMIN_USERNAME | meister_x2U8  | Yes       | No   |
+        | ADMIN_PASSWORD | admin_A456    | 是       | 否   |
+        | ADMIN_URL      | magento_A8v10 | 是       | 否   |
+        | ADMIN_USERNAME | meister_x2U8  | 是       | 否   |
         +----------------+---------------+-----------+------+
 
 5.  Continue with the next section.

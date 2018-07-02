@@ -111,6 +111,6 @@ Button-specific configuration:
     <td><code>params</code></td>
     <td>A list of arguments that will be passed to the method.</td>
     <td>Array</td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
 </table>

@@ -28,7 +28,7 @@ The following table lists the APIs that are no longer available to an anonymous 
 | Open Source | Catalog | /V1/products/attribute-sets/:attributeSetId/attributes | GET |
 | Open Source | Catalog | /V1/products/attribute-sets/groups/list | GET |
 | Open Source | Catalog | /V1/products/attributes/:attributeCode/options | GET |
-| Open Source | Catalog | /V1/products/media/types/:attributeSetName | GET |
+| Open Source | Catalog | /V1/products/media/types/:attributeSet名称 | GET |
 | Open Source | Catalog | /V1/products/:sku/media/:entryId | GET |
 | Open Source | Catalog | /V1/products/:sku/media | GET |
 | Open Source | Catalog | /V1/products/:sku/group-prices/:customerGroupId/tiers | GET |

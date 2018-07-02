@@ -500,18 +500,18 @@ Description  | Versions applied to  | New or Updated | Date
 | [Upgrade the Magento data migration tool]({{ page.baseurl }}/migration/migration-tool-upgrade.html){:target="_blank"} |  2.x | Updated  | Dec 2  |
 | [Add REST APIs for Magento Enterprise Edition]({{ page.baseurl }}/rest/list.html){:target="_blank"} | 2.x  | Updated  |  Dec 2 |
 | [Add REST API endpoints for Magento EE]({{ page.baseurl }}/rest/rest_endpoints.html){:target="_blank"} | 2.x  |  Updated |  Dec 2 |
-| [Use Jasmine for JavaScript unit testing]({{ page.baseurl }}/test/js/jasmine.html){:target="_blank"} | 2.x | New | Nov 25 |
-| [Use adapters with third-party libraries]({{ page.baseurl }}/extension-dev-guide/adapters.html){:target="_blank"} | 2.x | New | Nov 25 |
-| [Debug the Fastly extension with {{site.data.var.ece}}]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html){:target="_blank"} | 2.x | New | Nov 25 |
-| [{{site.data.var.ece}} requirements]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html){:target="_blank"} |  2.x  |   Updated | Nov 18 |
-| [Data migration toolkit directory structure]({{ page.baseurl }}/migration/migration-tool-internal-spec.html){:target="_blank"}  |  2.x | Updated  | Nov 18 |
+| [Use Jasmine for JavaScript unit testing]({{ page.baseurl }}/test/js/jasmine.html){:target="_blank"} | 2.x | New | 否v 25 |
+| [Use adapters with third-party libraries]({{ page.baseurl }}/extension-dev-guide/adapters.html){:target="_blank"} | 2.x | New | 否v 25 |
+| [Debug the Fastly extension with {{site.data.var.ece}}]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html){:target="_blank"} | 2.x | New | 否v 25 |
+| [{{site.data.var.ece}} requirements]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html){:target="_blank"} |  2.x  |   Updated | 否v 18 |
+| [Data migration toolkit directory structure]({{ page.baseurl }}/migration/migration-tool-internal-spec.html){:target="_blank"}  |  2.x | Updated  | 否v 18 |
 | [Added information about the `@import` directive and usage]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html){:target="_blank"}  |  2.x | Updated  |  Nov 18 |
 | [How to use adapters with third-party libraries]({{ page.baseurl }}/extension-dev-guide/adapters.html){:target="_blank"}   |  2.x  |   New |Nov 11 |
 | [Added detail about {{site.data.var.ece}} (MECE) deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"}   |  2.x  |   Updated |Nov 4 |
 | [Where MECE logs are located]({{ page.baseurl }}/cloud/env/environments-logs.html)  |  2.x  |  New  |Nov 4 |
 | [Tutorial on setting up a custom cron job and cron group]({{ page.baseurl }}/config-guide/cron/custom-cron-tut.html){:target="_blank"}  |  2.x  |  New  |Nov 4 |
 | [Troubleshoot OPcache-related error]({{ page.baseurl }}/install-gde/trouble/php/tshoot_opcache.html)  |  2.x  |  New  |Nov 4 |
-| [UI components linking properties]({{ site.gdeurl21 }}ui_comp_guide/concepts/ui_comp_linking_concept.html){:target="_blank"}  |  2.1.x  |  New  | Nov 4 |
+| [UI components linking properties]({{ site.gdeurl21 }}ui_comp_guide/concepts/ui_comp_linking_concept.html){:target="_blank"}  |  2.1.x  |  New  | 否v 4 |
 
 {% endcollapsibleh2 %}
 

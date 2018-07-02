@@ -36,7 +36,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/users/MAG123456789
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -141,7 +141,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/users/MAG123456789?style=summary
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -234,7 +234,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/users/MAG123456789/keys
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -304,7 +304,7 @@ curl -X POST \
      https://developer-api.magento.com/rest/v1/users/MAG123456789/keys
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -354,7 +354,7 @@ curl -X PUT \
      https://developer-api.magento.com/rest/v1/users/MAG123456789/keys/key_for_bob
 ```
 
-**Response**
+**响应**
 
 ```json
 {

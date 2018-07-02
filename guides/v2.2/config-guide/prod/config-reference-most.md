@@ -49,7 +49,7 @@ Restriction Mode | `general/restriction/mode` | ![EE-only]({{ site.magentourl }}
 Startup Page | `general/restriction/http_redirect` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | |
 Landing Page | `general/restriction/cms_page` | ![Not EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | |
 HTTP Response | `general/restriction/http_status` | ![Not EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) | |
-Store Name | `general/store_information/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | |
+Store 名称 | `general/store_information/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | |
 Store Phone Number | `general/store_information/phone` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | |
 Store Hours of Operation | `general/store_information/hours` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | |
 Country | `general/store_information/country_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> | |
@@ -146,7 +146,7 @@ These configuration values are available in the Magento Admin in **Stores** > Se
 Name  | Config path | EE only? |
 |--------------|--------------|--------------|
 Enable New Relic Integration | `newrelicreporting/general/enable` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-New Relic Application Name | `newrelicreporting/general/app_name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+New Relic Application 名称 | `newrelicreporting/general/app_name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enable Cron | `newrelicreporting/cron/enable_cron` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 
 ## Catalog category
@@ -160,7 +160,7 @@ Name  | Config path | EE only? |
 Mask for SKU | `catalog/fields_masks/sku` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Mask for Meta Title | `catalog/fields_masks/meta_title` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Mask for Meta Keywords | `catalog/fields_masks/meta_keyword` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Mask for Meta Description | `catalog/fields_masks/meta_description` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Mask for Meta 描述 | `catalog/fields_masks/meta_description` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 List Mode | `catalog/frontend/list_mode` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Products per Page on Grid Allowed Values | `catalog/frontend/grid_per_page_values` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Products per Page on Grid Default Value | `catalog/frontend/grid_per_page` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -235,7 +235,7 @@ Use Content-Disposition | `catalog/downloadable/content_disposition` | <!-- ![No
 Disable Guest Checkout if Cart Contains Downloadable Items | `catalog/downloadable/disable_guest_checkout` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Use JavaScript Calendar | `catalog/custom_options/use_calendar` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Date Fields Order | `catalog/custom_options/date_fields_order` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Time Format | `catalog/custom_options/time_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Time 格式 | `catalog/custom_options/time_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Year Range | `catalog/custom_options/year_range` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enable Catalog Events Functionality | `catalog/magento_catalogevent/enabled` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) |
 Enable Catalog Event Widget on Storefront | `catalog/magento_catalogevent/lister_output` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) |
@@ -485,7 +485,7 @@ Maximum Emails per One Run | `promo/magento_reminder/limit` | ![EE-only]({{ site
 Email Send Failure Threshold | `promo/magento_reminder/threshold` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) |
 Reminder Email Sender | `promo/magento_reminder/identity` | ![EE-only]({{ site.magentourl }}/common/images/cloud_ee.png) |
 Code Length | `promo/auto_generated_coupon_codes/length` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Code Format | `promo/auto_generated_coupon_codes/format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Code 格式 | `promo/auto_generated_coupon_codes/format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Code Prefix | `promo/auto_generated_coupon_codes/prefix` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Code Suffix | `promo/auto_generated_coupon_codes/suffix` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Dash Every X Characters | `promo/auto_generated_coupon_codes/dash` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -736,7 +736,7 @@ Name  | Config path | EE only? |
 |--------------|--------------|--------------|
 Enabled | `carriers/flatrate/active` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Title | `carriers/flatrate/title` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Method Name | `carriers/flatrate/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Method 名称 | `carriers/flatrate/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Type | `carriers/flatrate/type` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Price | `carriers/flatrate/price` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Calculate Handling Fee | `carriers/flatrate/handling_type` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -748,7 +748,7 @@ Show Method if Not Applicable | `carriers/flatrate/showmethod` | <!-- ![Not EE-o
 Sort Order | `carriers/flatrate/sort_order` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enabled | `carriers/freeshipping/active` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Title | `carriers/freeshipping/title` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Method Name | `carriers/freeshipping/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Method 名称 | `carriers/freeshipping/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Minimum Order Amount | `carriers/freeshipping/free_shipping_subtotal` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Displayed Error Message | `carriers/freeshipping/specificerrmsg` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Ship to Applicable Countries | `carriers/freeshipping/sallowspecific` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -757,7 +757,7 @@ Show Method if Not Applicable | `carriers/freeshipping/showmethod` | <!-- ![Not 
 Sort Order | `carriers/freeshipping/sort_order` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Enabled | `carriers/tablerate/active` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Title | `carriers/tablerate/title` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Method Name | `carriers/tablerate/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Method 名称 | `carriers/tablerate/name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Condition | `carriers/tablerate/condition_name` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Include Virtual Products in Price Calculation | `carriers/tablerate/include_virtual_price` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Export | `carriers/tablerate/export` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -889,7 +889,7 @@ List property for the search results page | `google/analytics/search_page_list_v
 Enable | `google/adwords/active` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Conversion ID | `google/adwords/conversion_id` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Conversion Language | `google/adwords/conversion_language` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Conversion Format | `google/adwords/conversion_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Conversion 格式 | `google/adwords/conversion_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Conversion Color | `google/adwords/conversion_color` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Conversion Label | `google/adwords/conversion_label` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Conversion Value Type | `google/adwords/conversion_value_type` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
@@ -918,7 +918,7 @@ Generate Gift Card Account when Order Item is | `giftcard/general/order_item_sta
 Gift Card Email Sender | `giftcard/giftcardaccount_email/identity` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Gift Card Template | `giftcard/giftcardaccount_email/template` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Code Length | `giftcard/giftcardaccount_general/code_length` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
-Code Format | `giftcard/giftcardaccount_general/code_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
+Code 格式 | `giftcard/giftcardaccount_general/code_format` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Code Prefix | `giftcard/giftcardaccount_general/code_prefix` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Code Suffix | `giftcard/giftcardaccount_general/code_suffix` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |
 Dash Every X Characters | `giftcard/giftcardaccount_general/code_split` | <!-- ![Not EE-only]({{ site.magentourl }}/common/images/red-x.png) --> |

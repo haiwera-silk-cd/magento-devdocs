@@ -147,7 +147,7 @@ Use this table to understand what changes Magento can make and which version num
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | -------------- |
 | **Schema of configuration types introduced by module**      | Schema file or configuration type renamed/removed                                                    | MAJOR          |
 |                                                             | Obligatory node/attribute added                                                                      | MAJOR          |
-|                                                             | Node/attribute removed                                                                               | MAJOR          |
+|                                                             | 否de/attribute removed                                                                               | MAJOR          |
 |                                                             | New optional node/attribute added                                                                    | MINOR          |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | -------------- |
 | **Structure of System Configuration fields used by module** | Config path removed/renamed                                                                          | MAJOR          |

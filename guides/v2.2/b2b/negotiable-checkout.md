@@ -28,7 +28,7 @@ The following diagram illustrates the workflow for {{site.data.var.b2b}} negotia
 
 A negotiated quote can be initiated without a shipping address. However, before the order can be placed, the shipping address must be provided.
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/negotiable-carts/:cartId/estimate-shipping-methods
@@ -40,15 +40,15 @@ POST /V1/negotiable-carts/:cartId/shipping-information
 
 This call takes a full shipping address as input and estimates shipping fees. It returns a list of available shipping methods.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteShipmentEstimationV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/estimate-shipping-methods`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -68,7 +68,7 @@ This call takes a full shipping address as input and estimates shipping fees. It
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -92,15 +92,15 @@ This call takes a full shipping address as input and estimates shipping fees. It
 
 This call takes an address ID as input and estimates shipping fees. It returns a list of available shipping methods.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteShippingMethodManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/estimate-shipping-methods-by-address-id`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -108,7 +108,7 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -132,15 +132,15 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 
 In this call, you specify the shipping and billing addresses, as well as the selected `shipping_carrier_code` and `shipping_method_code`. Magento returns a list of payment options and calculates the order totals.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteShippingMethodManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/shipping-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "addressInformation": {
@@ -178,7 +178,7 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -347,11 +347,11 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 
 If the billing address isn't provided through another call, use the `POST /V1/negotiable-carts/:cartId/billing-address` to specify it.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteBillingAddressManagementV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/negotiable-carts/:cartId/billing-address
@@ -362,11 +362,11 @@ GET /V1/negotiable-carts/:cartId/billing-address
 
 This call assigns a billing address to the specified negotiable quote.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/billing-address`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "address": {
@@ -389,7 +389,7 @@ This call assigns a billing address to the specified negotiable quote.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 []
 
@@ -401,11 +401,11 @@ This call returns the billing address for the specified negotiable quote.
 
 `GET /V1/negotiable-carts/86/billing-address`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -433,11 +433,11 @@ Not applicable
 
 B2B allows coupons to be used toward payment.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteCouponManagementV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 PUT /V1/negotiable-carts/:cartId/coupons/:couponCode
@@ -448,15 +448,15 @@ DELETE /V1/negotiable-carts/:cartId/coupons
 
 If the initial quote applies a coupon to the totals, Magento ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.
 
-**Sample Usage**
+**样例用法**
 
 PUT /V1/negotiable-carts/6/coupons/SAVE5
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 `true`, indicting the request was successful
 
@@ -464,11 +464,11 @@ Not applicable
 
 B2B allows gift cards to be used as payment.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteGiftCardAccountManagementV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/negotiable-carts/:cartId/giftCards
@@ -479,11 +479,11 @@ DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode
 
 If the initial quote applies a gift card to the totals, Magento ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/6/giftCards`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -495,7 +495,7 @@ If the initial quote applies a gift card to the totals, Magento ignores the gift
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`
 
@@ -503,27 +503,27 @@ If the initial quote applies a gift card to the totals, Magento ignores the gift
 
 This call removes a gift card that has been applied to a negotiable quote.
 
-**Sample Usage**
+**样例用法**
 
 `DELETE /V1/negotiable-carts/6/giftCards/00HELHQED6RV`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
 ## Manage payment information
 
 When you submit payment information, Magento creates an order and sends an order confirmation to the buyer.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuotePaymentInformationManagementV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/negotiable-carts/:cartId/payment-information
@@ -535,11 +535,11 @@ POST /V1/negotiable-carts/:cartId/set-payment-information
 
 This call sets payment information and the billing address for the negotiable quote. However, Magento does not create an order afterward.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/set-payment-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "paymentMethod": {
@@ -564,7 +564,7 @@ This call sets payment information and the billing address for the negotiable qu
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the payment information was set
 
@@ -572,11 +572,11 @@ This call sets payment information and the billing address for the negotiable qu
 
 This call sets payment information and the billing address for the negotiable quote, then creates an order.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiable-carts/86/payment-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "paymentMethod": {
@@ -601,7 +601,7 @@ This call sets payment information and the billing address for the negotiable qu
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 An order ID, such as `83`
 
@@ -609,15 +609,15 @@ An order ID, such as `83`
 
 This call returns returns payment information and all information from the `totals` object.
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/negotiable-carts/86/payment-information`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -786,25 +786,25 @@ Not applicable
 
 This call is similar to `GET /V1/negotiable-carts/:cartId/payment-information`, except it does not return payment information.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteCartTotalRepositoryV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 GET /V1/negotiable-carts/:cartId/totals
 {% endhighlight %}
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/negotiable-carts/86/totals`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -964,7 +964,7 @@ Not applicable
 {% endhighlight %}
 {% endcollapsible %}
 
-## Related information
+## 相关信息
 
 * [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
 * [管理协商报价]({{ page.baseurl }}/b2b/negotiable-manage.html)

@@ -25,7 +25,7 @@ Before you using this code sample, verify that the attribute values are the same
 
 `POST <host>/rest/default/V1/products`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -80,7 +80,7 @@ Before you using this code sample, verify that the attribute values are the same
 
 {% endhighlight  %}
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}

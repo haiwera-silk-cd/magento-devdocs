@@ -199,7 +199,7 @@
             rejected = contributor.rejected,
             rejected_url = contributor.rejected_url;
 
-        var stats = '<ul class="' + plugin.options.contributorStatsClass + '"><li><span>Accepted</span> <a href="'+ accepted_url +'">' + accepted + '</a></li><li><span>Created</span> <a href="'+ created_url +'">'+ created +'</a></li><li><span>Rejected</span> <a href="'+ rejected_url +'">'+ rejected +'</a></li></ul>';
+        var stats = '<ul class="' + plugin.options.contributorStatsClass + '"><li><span>Accepted</span> <a href="'+ accepted_url +'">' + accepted + '</a></li><li><span>Created</span> <a href="'+ created_url +'">'+ created +'</a></li><li><span>已拒绝</span> <a href="'+ rejected_url +'">'+ rejected +'</a></li></ul>';
 
         return '<div class="' + plugin.options.contributorClass + '"><a href="'+ url +'"><div class="' + plugin.options.contributorAvatarClass + '"><img data-src="'+ avatar + '" alt="' + name + '" /></div><h5 class="' + plugin.options.contributorNameClass + '">' + name + '</h5></a>'+ stats +'</div>';
     }

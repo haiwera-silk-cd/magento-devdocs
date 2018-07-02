@@ -107,7 +107,7 @@ The only attribute of a rule node is the `scope`, which enables you to use the f
 
 This scope enables you to filter functional tests using the following criteria:
 
-| Option | Description | Occurrence | Example
+| Option | 描述 | Occurrence | Example
 |---|---|---|---
 | `<class>` | Apply a rule to the test case with the specified class name. | multiple |`<class value = "Magento\Catalog\Test\TestCase\Product\CreateSimpleProductEntityTest" />`
 | `<module>` | Apply a rule to all test cases from the specified module. Some test cases may refer to other modules using merging functionality of variations, fixtures etc. You can restrict such reference to other modules adding the `strict="1"` argument. The default value is `strict="0"`. |multiple|`<module value = "Magento_Tax" strict="1" />`

@@ -24,11 +24,11 @@ Since the Luma store is for demonstration purposes only, it is not set up to han
 
 Payment type | Configuration name | Enabled by default?
 --- | --- | ---
-Check/Money Order | `checkmo` | Yes
-Bank Transfer Payment | `banktransfer` | No
-Cash on Delivery | `cashondelivery` | No
-Purchase Order | `purchaseorder` | No
-Zero Subtotal {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} | `free` | Yes
+Check/Money Order | `checkmo` | 是
+Bank Transfer Payment | `banktransfer` | 否
+Cash on Delivery | `cashondelivery` | 否
+Purchase Order | `purchaseorder` | 否
+Zero Subtotal {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} | `free` | 是
 
 In this tutorial, configure Magento to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method, log in to {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} and select **Stores > Configuration > Sales > Payment Methods**. Then enable the {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} and click **Save**.
 
@@ -48,9 +48,9 @@ Since we are not actually shipping any products in this tutorial, we do not need
 
 Shipping type | Configuration name | Enabled by default?
 --- | --- | ---
-Flat rate | `flatrate` | Yes
-Table rate | `tablerate` | Yes
-Free shipping | `freeshipping` | No
+Flat rate | `flatrate` | 是
+Table rate | `tablerate` | 是
+Free shipping | `freeshipping` | 否
 
 If you want to change which offline shipping methods are available, select **Stores > Configuration > Sales > Shipping Methods** in Admin. Enable or disable the shipping methods as desired, then click **Save**.
 

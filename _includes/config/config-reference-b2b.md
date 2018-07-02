@@ -8,7 +8,7 @@ This section lists variable names and configuration paths available for options 
 ### B2B Features paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **General** > **B2B Features**.
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? | 
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? | 
 | -------------- | -------------- | -------------- | -------------- | -------------- | 
 | Enable Company | `btob/website_configuration/company_active` | | | |
 | Enable 共享类目录 | `btob/website_configuration/sharedcatalog_active` | | | |
@@ -24,7 +24,7 @@ This section lists variable names and config paths available for options in the 
 ### Company configuration paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Customers** > **Company Configuration**.
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? |
 |--------------|--------------|--------------|--------------|--------------|
 | Allow Company Registration from the Storefront | `company/general/allow_company_registration` | | | |
 | Company Registration Email Recipient | `company/email/company_registration` | | | ![Sensitive]({{ site.magentourl }}/common/images/cloud_sens.png)
@@ -61,7 +61,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Requisition lists paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Customers** > **Requisition Lists**.
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? | 
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? | 
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Number of Requisition Lists | `requisitionlist/general/number_requisition_lists` | | | |
 
@@ -71,7 +71,7 @@ This section lists variable names and config paths available for options in the 
 ### Sales Emails paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Sales Emails**.
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? | 
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? | 
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Enabled | `sales_email/quote/enabled` | | | |
 | Updated Quote Template (to Buyer) | `sales_email/quote/updated_buyer_template` | | | |
@@ -87,7 +87,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 ### Quotes paths
 These configuration values are availabe in the Magento Admin in **Stores** > Settings > **Configuration** > **Sales** > **Quotes**.
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Minimum Amount | `quote/general/minimum_amount` | | | |
 | Minimum Amount Message | `quote/general/minimum_amount_message` | | | |
@@ -107,7 +107,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 The available paths are determined by your choice of Merchant country.
 </div>
 
-| Name | Config path | Encrypted? | System-specific? | Sensitive? |
+| 名称 | Config path | Encrypted? | System-specific? | Sensitive? |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Enabled | `payment/au/companycredit/active` | | | |
 | Title | `payment/au/companycredit/title` | | | |

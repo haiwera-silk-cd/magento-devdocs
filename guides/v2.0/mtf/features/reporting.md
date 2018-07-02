@@ -102,7 +102,7 @@ An observer is a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{%
 
 The list of ready-to-use observers is the following:
 
-|Observer full class name | Description |
+|Observer full class name | 描述 |
 |---|---|
 |[`\Magento\Mtf\System\Observer\ClientError`][ClientError] | Collects information about JavaScript errors on a web page under test. Uses an instance of the [`BrowserInterface`] to collect exceptions from a web page. Saves collected errors to `<reporting_directory>/magento/client-error.log`. |
 |[`\Magento\Mtf\System\Observer\CurlResponse`][CurlResponse] | Saves response into HTML file in `<reporting_directory>/magento/<module>/<test_case>/<variation>/curl-response` directory. |

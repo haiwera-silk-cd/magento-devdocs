@@ -223,6 +223,6 @@ A step-by-step example is shown in [设置配置值 using environment variables]
 ![Environment variable example]({{ site.magentourl }}/common/images/cloud_env_var_example.png)
 </div>
 
-#### Related information
+#### 相关信息
 *	[Magento User Guide discussion of scope](http://docs.magento.com/m2/ce/user_guide/configuration/scope.html){:target="_blank"}
 *	[Magento User Guide scope quick reference](http://docs.magento.com/m2/ce/user_guide/stores/store-scope-reference.html){:target="_blank"}

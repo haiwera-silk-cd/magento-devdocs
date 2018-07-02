@@ -45,7 +45,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/files/uploads/dhsiXjdksW17623
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -135,7 +135,7 @@ curl -X POST \
      https://developer-api.magento.com/rest/v1/files/uploads
 ```
 
-**Response**
+**响应**
 
 ```json
 [
@@ -209,7 +209,7 @@ curl -X DELETE \
      https://developer-api.magento.com/rest/v1/files/uploads/fur7284XcgdcV
 ```
 
-**Response**
+**响应**
 
 ```json
 [

@@ -22,7 +22,7 @@ If you are interested in working on one of these projects, open a [在此页提�
       <tr>
          <th>Project</th>
          <th>Size</th>
-         <th>Requirements</th>
+         <th>要求</th>
          <th>Contributor</th>
       </tr>
    </thead>

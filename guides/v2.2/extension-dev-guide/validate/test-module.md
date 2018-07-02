@@ -20,7 +20,7 @@ For more information see the <a href="{{ page.baseurl }}/test/testing.html">Mage
 
 ## Functional testing {#test-functional}
 For further testing with the Magento functional testing frameworks, see
-[Functional Testing Framework]({{ page.baseurl }}/mtf/mtf_introduction.html).
+[功能测试框架]({{ page.baseurl }}/mtf/mtf_introduction.html).
 
 ## Test using Community Edition {#test-comm}
 测试你的组件 by deploying Magento Community Edition and adding the component to the project's <code>composer.json</code>.

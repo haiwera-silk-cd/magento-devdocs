@@ -14,17 +14,17 @@ functional_areas:
   - Integration
 ---
 
-{{site.data.var.b2b}} allows company users to be assigned to company teams and hierarchies.
+{{site.data.var.b2b}}允许公司用户被分配到公司团队或等级结构中。
 
-## Manage company teams
+## 管理公司团队
 
-Company teams allow you to group company users by location, job responsibilities, or any criteria you choose. You can assign individual company users to a team with the company hierarchy endpoints.
+公司团队允许使用位置、工作职责或作何你选择的标准分组公司的用户。你可以使用公司等级结构接口分配自身的公司用户到团队中
 
-**Service name**
+**服务名称**
 
 `companyTeamRepositoryV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/team/:companyId
@@ -35,23 +35,23 @@ GET /V1/team/
 {% endhighlight %}
 
 
-**Company team parameters**
+**公司团队参数**
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-id | System-generated team ID | integer | Not applicable for create operations.
-name | The displayed name of the team | string | Required to create or update a team.
-description | An optional description of the team. | string | Optional
+id | 系统生成的团队ID | integer | 创建操作不可用
+name | 团队的显示名称 | string | Required to create or update a team.
+description | 团除的可选的描述 | string | 可选
 
-### Create a team
+### 创建一个团队
 
-A newly-created team is placed under Company Admin in the company hierarchy.
+一个新创建的团队位于公司等级结构中的公司管理员下
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/team/2`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -62,19 +62,19 @@ A newly-created team is placed under Company Admin in the company hierarchy.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-The team ID, such as `4`.
+团队的ID,  比如`4`
 
-### Update a team
+### 更新团队
 
-You can only change the name or description of a team.
+你仅能修改团队的名字或描述
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/team/4`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -85,23 +85,23 @@ You can only change the name or description of a team.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
-### Return all information about a team
+### 返回所有的团队信息
 
-The `GET` call returns the team `id`, `name`, and `description`.
+此`GET`调用返回团队`id`,`name`及`description`
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/team/4`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -111,37 +111,37 @@ Not applicable
 }
 {% endhighlight %}
 
-### Delete a team
+### 删除团队
 
-You cannot delete a team if members are assigned to it.
+如果有成员分配，你不能删除此团队
 
-**Sample Usage**
+**样例用法**
 
 `DELETE /V1/team/4`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 An empty array
 
-### Search for a team
+### 搜索团队
 
-The following query returns information about all teams (`team_id` &ge; `0`)
+下面的请求返回所有团队(`team_id` &ge; `0`)
 
-See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) for information about constructing a search query.
+参考[使用REST API搜索]({{ page.baseurl }}/rest/performing-searches.html)了解更多关于构造查询的信息
 
-**Sample Usage**
+**样例用法**
 
 `GET V1/team?searchCriteria[filter_groups][0][filters][0][field]=team_id&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=gteq`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 {% collapsible Show code sample %}
 {% highlight json %}
 {
@@ -175,26 +175,26 @@ Not applicable
 {% endhighlight %}
 {% endcollapsible %}
 
-## Company hierarchies
+## 公司的等级结构
 
-In the B2B storefront, a buyer can view the company structure represented as a hierarchy tree. The tree can display multiple levels of company subdivisions (teams) as well as company users. The company hierarchy can have any number of items and levels.
+在B2B网店前台，购买者可以看见表示成一棵等级结构树的公司结构。这棵树显示公司细分的多个层级及公司用户。公司的等级结构可以有任意数量的团队和层级。
 
-You can use REST endpoints to retrieve the current structure and move teams and buyers within the hierarchy. You cannot delete teams or buyers.
+你可以使用REST接口来在当前等级结构中接收当前结构和移动团队及购买者
 
-**Service name**
+**服务名称**
 
 `companyHierarchyV1`
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight json %}
 GET /V1/hierarchy/:id
 PUT /V1/hierarchy/move/:id
 {% endhighlight %}
 
-### Return all information about the company hierarchy
+### 返回所有的公司等级的信息
 
-In the following example, the following company hierarchy has already been established:
+下面的例子，以下的公司等级已经建立
 
 ```
 Admin (structure_id = 2)
@@ -207,15 +207,15 @@ Admin (structure_id = 2)
 |   |-- Teresa Gomez (customer, structure_id = 5)
 ```
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/heirarchy/2`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -267,15 +267,15 @@ Not applicable
 {% endhighlight %}
 {% endcollapsible %}
 
-### Assign a new parent to teams and company users
+### 分配一个新的父节点到团队和公司用户上
 
-The following example moves Bryce Martin (`structure_id = 4`) to the West team (`structure_id = 7`)
+下面的例子移动Bryce Martin (`structure_id = 4`)到West团队
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/hierarchy/move/5`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -283,12 +283,12 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 
-## Related information
+## 相关信息
 
 * [集成公司模块]({{ page.baseurl }}/b2b/company.html)
 * [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)

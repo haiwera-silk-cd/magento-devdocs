@@ -36,7 +36,7 @@ where `3` is the order id.
 
 `Authorization` `Bearer <administrator token>`
 
-**Payload**
+**载荷**
 
 The `tracks` array optionally allows you to include one or more tracking numbers for the {% glossarytooltip c8f00e9d-7f70-4561-9773-60da604ba5c9 %}shipment{% endglossarytooltip %}.
 
@@ -70,7 +70,7 @@ The `tracks` array optionally allows you to include one or more tracking numbers
 {% endhighlight %}
 {% endcollapsible %}
 
-**Response**
+**响应**
 
 A shipment ID, such as `3`.
 

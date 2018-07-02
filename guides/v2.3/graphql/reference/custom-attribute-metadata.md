@@ -52,7 +52,7 @@ The following query returns the attribute type for various custom and EAV attrib
  {% endhighlight %}
 
 The key you're storing EAV attributes under
-**Response**
+**响应**
 
 {% highlight json %}
 {

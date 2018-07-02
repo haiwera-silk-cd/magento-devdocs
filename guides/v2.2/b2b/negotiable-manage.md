@@ -20,7 +20,7 @@ This topic describes the calls required to initiate a negotiable quote and to pr
 All negotiable quote calls require an admin authorization token.
 </div>
 
-**REST Endpoints**
+**REST接口**
 
 {% highlight http %}
 POST /V1/negotiableQuote/request
@@ -34,23 +34,23 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod
 
 **NegotiableQuoteManagementInterface Parameters**
 
-The following table lists the parameters defined in `CompanyInterface`.
+下面的表格列出了`CompanyInterface`的参数定义
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- |---
 `quoteId`	| Identifies the target quote for the operation.	| integer	| Required
 `quoteName`	| The name of the quote to be created.	| string	| Required
-`comment`	| The comment to add to the quote.	| string | Optional
-`files` | An array of files to add to the quote | array | Optional
+`comment`	| The comment to add to the quote.	| string | 可选
+`files` | An array of files to add to the quote | array | 可选
 
 The buyer or the seller can optinally attach up to 10 files to provide details about the quote. Each file must be converted into base64.
 
 The `files` array contains the following parameters
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- |---
 `base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required
-`type` | Defines the type of file, such as `text/plain`或`application/pdf`| string | Optional
+`type` | Defines the type of file, such as `text/plain`或`application/pdf`| string | 可选
 `name` | The name of the file to be uploaded, such as `quote.txt`或`quote.pdf`. | string | Required
 
 
@@ -67,15 +67,15 @@ If the negotiable quote requires a shipping address (for negotiation or tax calc
 Requesting a negotiable quote requires an admin authorization token.
 </div>
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteNegotiableQuoteManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST V1/negotiableQuote/request`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -91,9 +91,9 @@ Requesting a negotiable quote requires an admin authorization token.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
 Magento creates a negotiable quote in the `Created` state.
 
@@ -113,15 +113,15 @@ When the quote is submitted to the buyer:
 * Items that are no longer active or available for this buyer are removed from quote and prices are recalculated.
 * The quote state is changed to Submitted by admin.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteNegotiableQuoteManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiableQuote/submitToCustomer`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -130,9 +130,9 @@ When the quote is submitted to the buyer:
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
 ### Update a quote
 
@@ -144,11 +144,11 @@ The process of completing a negotiable quote can take days, or even longer. Duri
 
 The request can be applied to one or more quotes at the same time.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiableQuote/pricesUpdated`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -156,19 +156,19 @@ The request can be applied to one or more quotes at the same time.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
 ### Set the shipping method
 
 To set the shipping method, the quote must be in the `created`, `processing_by_admin`或`submitted_by_customer`. In addition, the quote must have a shipping address but no shipping method or shipping price.
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/negotiableQuote/3/shippingMethod`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -176,7 +176,7 @@ To set the shipping method, the quote must be in the `created`, `processing_by_a
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 
 ### Decline a quote
@@ -189,15 +189,15 @@ The seller can send a request to decline the quote. The request can be submitted
 
 When you decline a quote, all custom pricing will be removed from the quote. The buyer will be able to place an order using their standard catalog prices and discounts.
 
-**Service Name**
+**服务名称**
 
 `negotiableQuoteNegotiableQuoteManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/negotiableQuote/decline`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -206,9 +206,9 @@ When you decline a quote, all custom pricing will be removed from the quote. The
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`true`, indicating the request was successful
+`true`,指示请求成功
 
 ## Miscellaneous operations
 
@@ -218,15 +218,15 @@ These tasks are not essential for completing a negotiable quote, but might be us
 
 Magento returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A `creator_type` value of `3` indicates the buyer made the comment. If the value is `2`, the seller commented.
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/negotiableQuote/87/comments`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -314,15 +314,15 @@ Use the `attachmentContent` call to retrieve the files (in base64 format) attach
 
 `negotiableQuoteAttachmentContentManagementV1`
 
-**Sample Usage**
+**样例用法**
 
 `GET /V1/negotiableQuote/attachmentContent`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 {% highlight json %}
 {
@@ -336,7 +336,7 @@ Not applicable
   ]
 }
 {% endhighlight %}
-## Related information
+## 相关信息
 
 * [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)
 * [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)

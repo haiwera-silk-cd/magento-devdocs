@@ -2,7 +2,7 @@
 
 See the `block` node attributes details in the following table:
 
-|`block` attribute | Description | Is required|Values| Example|
+|`block` attribute | 描述 | Is required|Values| Example|
 |---|---|---|---|---|
 |`name`| Name of the block| Required|Unique in the page. The method to get the block class instance is generated using this value.|`widgetGrid`|
 |`class`| Full name of the block class |必需| Class name |`Magento\Widget\Test\Block\Adminhtml\Widget\WidgetGrid` |

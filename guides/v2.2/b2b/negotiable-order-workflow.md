@@ -38,11 +38,11 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload**
+**载荷**
 
-None
+无
 
-**Response**
+**响应**
 
 The response is the `quoteId`: `5`
 
@@ -128,7 +128,7 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "address": {
@@ -151,7 +151,7 @@ Authorization Bearer <customer token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -190,7 +190,7 @@ You can also set shipping and billing information after initiating a negotiable 
 
 `POST /V1/carts/mine/shipping-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -231,7 +231,7 @@ You can also set shipping and billing information after initiating a negotiable 
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -398,11 +398,11 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload**
+**载荷**
 
-None
+无
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -614,7 +614,7 @@ Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -624,7 +624,7 @@ Authorization Bearer <admin token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`
 
@@ -643,7 +643,7 @@ Authorization Bearer <admin token>
 
 `PUT /V1/negotiableQuote/5`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -659,7 +659,7 @@ Authorization Bearer <admin token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `[]`
 
@@ -680,7 +680,7 @@ Authorization Bearer <admin token>
 
 `POST /V1/negotiableQuote/submitToCustomer`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -689,7 +689,7 @@ Authorization Bearer <admin token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`
 
@@ -708,11 +708,11 @@ Authorization Bearer <admin token>
 
 `GET` /V1/carts/5
 
-**Payload**
+**载荷**
 
-None
+无
 
-**Response**
+**响应**
 
 {% collapsible Show code sample %}
 {% highlight json %}
@@ -949,7 +949,7 @@ Authorization Bearer <admin token>
 
 `/V1/negotiable-carts/3/payment-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {  "paymentMethod": {
@@ -959,7 +959,7 @@ Authorization Bearer <admin token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 The response is the order `id`: `4`
 
@@ -981,7 +981,7 @@ Authorization Bearer <admin token>
 
 `POST /V1/companyCredits/1/increaseBalance`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -992,11 +992,11 @@ Authorization Bearer <admin token>
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.
 
-## Related information
+## 相关信息
 
 * [使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)
 * [与NegotiableQuote模块集成]({{ page.baseurl }}/b2b/negotiable-quote.html)

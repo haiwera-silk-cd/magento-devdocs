@@ -93,9 +93,9 @@ To get the access information you need to log in to the Magento Admin:
 		+----------------+---------------+-----------+------+
 		| ID             | Value         | Inherited | JSON |
 		+----------------+---------------+-----------+------+
-		| ADMIN_PASSWORD | admin_A456    | Yes       | No   |
-		| ADMIN_URL      | magento_A8v10 | Yes       | No   |
-		| ADMIN_USERNAME | meister_x2U8  | Yes       | No   |
+		| ADMIN_PASSWORD | admin_A456    | 是       | 否   |
+		| ADMIN_URL      | magento_A8v10 | 是       | 否   |
+		| ADMIN_USERNAME | meister_x2U8  | 是       | 否   |
 		+----------------+---------------+-----------+------+
 
 #### Configure websites, stores, and store views

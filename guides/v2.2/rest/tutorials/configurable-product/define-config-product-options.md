@@ -23,7 +23,7 @@ The value assigned to the `value_index` must be unique within the system.
 
 `POST <host>/rest/default/V1/configurable-products/MS-Champ/options`
 
-**Payload**
+**载荷**
 
 ``` json
 {
@@ -41,7 +41,7 @@ The value assigned to the `value_index` must be unique within the system.
 }
 ```
 
-**Response**
+**响应**
 
 A configurable option ID number, such as `"335"`.
 
@@ -53,7 +53,7 @@ The call to link a simple (child) product to the configurable product accepts on
 
 `POST <host>/V1/configurable-products/MS-Champ/child`
 
-**Payload**
+**载荷**
 
 ``` json
 {
@@ -61,7 +61,7 @@ The call to link a simple (child) product to the configurable product accepts on
 }
 ```
 
-**Response**
+**响应**
 
 `true`
 

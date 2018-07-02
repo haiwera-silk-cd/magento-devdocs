@@ -206,4 +206,4 @@ The following query returns only the `sku` and `name` parameters for product ite
 
 ## 相关主题
 {:.no_toc}
-* [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html)
+* [使用REST API搜索]({{ page.baseurl }}/rest/performing-searches.html)

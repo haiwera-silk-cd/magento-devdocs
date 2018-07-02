@@ -19,7 +19,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 `POST V1/products/options`
 
-**Payload**
+**载荷**
 ``` json
 {
   "option": {
@@ -37,7 +37,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 ```
 
-**Response**
+**响应**
 
 ``` json
 {

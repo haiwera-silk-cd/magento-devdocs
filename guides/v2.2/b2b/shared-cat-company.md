@@ -17,7 +17,7 @@ functional_areas:
 
 A shared catalog must be assigned to one or more companies before it can be accessed by the company users.
 
-**Service name**
+**服务名称**
 
 `sharedCatalogCompanyManagementV1`
 
@@ -36,7 +36,7 @@ GET  /V1/sharedCatalog/:sharedCatalogId/companies
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 </div>
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `id` | The company ID number | integer | Required to assign or unassign a company to a shared catalog
 
@@ -50,7 +50,7 @@ If a specified company is already assigned to a different shared catalog, this r
 
 `POST /V1/sharedCatalog/2/assignCompanies`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 
@@ -66,7 +66,7 @@ If a specified company is already assigned to a different shared catalog, this r
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -78,7 +78,7 @@ When you unassign a company from a custom catalog, the system automatically assi
 
 `POST /V1/sharedCatalog/2/unassignCompanies`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -90,7 +90,7 @@ When you unassign a company from a custom catalog, the system automatically assi
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the operation was successful
 
@@ -98,19 +98,19 @@ When you unassign a company from a custom catalog, the system automatically assi
 
 The `GET` call returns an array of company IDs.
 
-**Sample Usage**
+**样例用法**
 
 `GET  /V1/sharedCatalog/2/companies`
 
-**Payload**
+**载荷**
 
-Not applicable
+不适用
 
-**Response**
+**响应**
 
 `"[\"1\",\"2\"]"`
 
-## Related information
+## 相关信息
 
 * [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
 * [管理共享类目录]({{ page.baseurl }}/b2b/shared-cat-manage.html)

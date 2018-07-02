@@ -14,9 +14,9 @@ functional_areas:
   - Integration
 ---
 
-The `Company` module allows multiple buyers that belong to the same company to view product prices and make purchases based on the shared catalog assigned to this company. A company can contain a hierarchy of users and teams, with roles and permisions assigned at any level.
+`Company`模块允许同一个公司的多个购买者浏览产品价格并且基于分配到此公司上的产品目录进行购买。公司可以包含用户和团队的等级结构，角色和权限被分配到它们的任何层级上
 
-## Related information
+## 相关信息
 
 * [管理公司对像]({{ page.baseurl }}/b2b/company-object.html)
 * [管理公司用户]({{ page.baseurl }}/b2b/company-users.html)

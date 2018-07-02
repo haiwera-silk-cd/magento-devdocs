@@ -35,7 +35,7 @@ Attribute |  Data Type | Description
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 {

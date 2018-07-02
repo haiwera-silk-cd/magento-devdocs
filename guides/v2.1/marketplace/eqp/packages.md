@@ -494,7 +494,7 @@ curl -X POST \
      https://developer-api.magento.com/rest/v1/products/packages
 ```
 
-**Response**
+**响应**
 
 ```json
 [
@@ -642,7 +642,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/products/packages
 ```
 
-**Response**
+**响应**
 
 ```json
 [
@@ -803,7 +803,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/products/packages/f4eacd72be/status
 ```
 
-**Response**
+**响应**
 
 ```json
 {
@@ -892,7 +892,7 @@ curl -X GET \
      https://developer-api.magento.com/rest/v1/products/packages?type=theme&sort=+platform,-created_time
 ```
 
-**Response**
+**响应**
 
 A list of theme packages can be returned in the same way as described in [Get package details](#get-package-details).
 

@@ -24,11 +24,11 @@ The `POST /V1/products/special-price` call sets special prices for the following
 * Virtual
 * Downloadable
 
-**Service Name**
+**服务名称**
 
 `SpecialPriceStorageInterface`
 
-**REST Endpoints**
+**REST接口**
 
 ```
 POST /V1/products/special-price
@@ -38,14 +38,14 @@ POST /V1/products/special-price-delete
 
 **SpecialPriceStorageInterface Parameters**
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `price` | The special price of the product | float | Required for setting or deleting a special price
 `store_id` | The store ID  to apply the special price | integer | Required for setting or deleting a special price
 `sku` | The SKU of the product | string | Required for setting or deleting a special price
 `skus` | An array of SKU values that is specified when retrieving a list of special prices | array | Required for retrievals
 `price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in {{site.data.var.ee}}. Optional in {{site.data.var.ce}}.
-`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Optional
+`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | 可选
 
 ### Set special prices
 
@@ -55,11 +55,11 @@ For bundled products, the value of the `price` parameter must be expressed as a 
 
 You can set multiple special prices in a single call, as shown in the example below. The call sets special prices for a simple product, downloadable product, and bundle product for two days.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/special-price`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -90,19 +90,19 @@ You can set multiple special prices in a single call, as shown in the example be
 
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ### Get special prices
 
 The following call returns the special price information for three SKU values.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/special-price-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -114,7 +114,7 @@ The following call returns the special price information for three SKU values.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -146,11 +146,11 @@ The following call returns the special price information for three SKU values.
 
 If any item to be deleted has an invalid `price`, `store_id`, `sku` or date, Magento marks the item as failed and excludes it from the delete list. Valid items are deleted as requested.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/special-price-delete`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -180,9 +180,9 @@ If any item to be deleted has an invalid `price`, `store_id`, `sku` or date, Mag
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ## Manage tier prices
 
@@ -197,11 +197,11 @@ Bundle | discount
 Virtual | fixed, discount
 Downloadable | fixed, discount
 
-**Service Name**
+**服务名称**
 
 `TierPriceStorageInterface`
 
-**REST Endpoints**
+**REST接口**
 
 ```
 POST /V1/products/tier-prices
@@ -212,7 +212,7 @@ POST /V1/products/tier-prices-delete
 
 **TierPriceStorageInterface Parameters**
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `price` | The discounted product price for the quantity purchased | float | Required to set, update, or delete a tier price
 `price_type` | Must be `fixed` (the set price) or `discount` (percent discount) | string | Required to set, update, or delete a tier price
@@ -226,11 +226,11 @@ Name | Description | Format | Requirements
 
 The `POST /V1/products/tier-prices` call adds new tier prices or updates existing prices. You can specify tier prices for multiple products in the same call.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/tier-prices`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 
@@ -264,9 +264,9 @@ The `POST /V1/products/tier-prices` call adds new tier prices or updates existin
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ### Replace existing tier prices
 
@@ -274,11 +274,11 @@ The replace request removes all existing tier prices for a specified product and
 
 The following example removes the $10 tier price for `sku` 24-UG04 and changes the customer group for the `sku`'s other tier prices.
 
-**Sample Usage**
+**样例用法**
 
 `PUT /V1/products/tier-prices`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -303,19 +303,19 @@ The following example removes the $10 tier price for `sku` 24-UG04 and changes t
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ### Get tier prices
 
 Magento returns all active tier prices for the specified list of `skus`.
 
-**Sample Usage**
+**样例用法**
 
 `V1/products/tier-prices-information`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -326,7 +326,7 @@ Magento returns all active tier prices for the specified list of `skus`.
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -369,11 +369,11 @@ Magento returns all active tier prices for the specified list of `skus`.
 
 You must specify each tier price that is to be deleted. You can delete multiple tier prices in a single call.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/tier-prices-delete`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -390,9 +390,9 @@ You must specify each tier price that is to be deleted. You can delete multiple 
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ## Manage base prices
 
@@ -402,7 +402,7 @@ A base price is the price of a product, before any discounts or extra costs (suc
 You cannot delete a base price. It can only be changed to another value (0 or greater).
 </div>
 
-**REST Endpoints**
+**REST接口**
 
 ```
 POST /V1/products/base-prices
@@ -411,7 +411,7 @@ POST /V1/products/base-prices-information
 
 **BasePriceStorageInterface Parameters**
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `price` | The base price of the item | float | Required to set a base price
 `store_id` | The store ID  to apply the base price | integer | Required to set a base price
@@ -429,11 +429,11 @@ The `POST /V1/products/base-price` call can set base prices for the following ty
 
 The following example sets the base price for a simple and a downloadable product.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/base-prices`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -452,19 +452,19 @@ The following example sets the base price for a simple and a downloadable produc
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ### Get base prices
 
 The following example returns the base prices for a simple and a downloadable product.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/base-prices-information`
 
-**Payload**
+**载荷**
 {% highlight json %}
 {
   "skus": [
@@ -474,7 +474,7 @@ The following example returns the base prices for a simple and a downloadable pr
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -495,7 +495,7 @@ The following example returns the base prices for a simple and a downloadable pr
 
 The cost is the actual cost of a product. Tracking costs is optional, but having this information available can be helpful when you are setting discounts.
 
-**REST Endpoints**
+**REST接口**
 
 ```
 POST /V1/products/cost
@@ -505,7 +505,7 @@ POST /V1/products/cost-delete
 
 **CostStorageInterface Parameters**
 
-Name | Description | Format | Requirements
+名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
 `cost` | The amount the item costs | float | Required to set or delete a cost value
 `store_id` | The store ID  to apply the cost value | integer | Required to set or delete a cost value
@@ -522,11 +522,11 @@ The `POST /V1/products/cost` call can set the cost values for the following type
 
 The following example sets the cost value for a simple and a downloadable product.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/cost`
 
-**Payload**
+**载荷**
 
 {% highlight json %}
 {
@@ -545,19 +545,19 @@ The following example sets the cost value for a simple and a downloadable produc
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
-`[]` (an empty array)
+`[]` (一个空数组)
 
 ### Get cost values
 
 The following example returns the cost values for a simple and a downloadable product.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/cost-information`
 
-**Payload**
+**载荷**
 {% highlight json %}
 {
   "skus": [
@@ -567,7 +567,7 @@ The following example returns the cost values for a simple and a downloadable pr
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 {% highlight json %}
 [
@@ -588,11 +588,11 @@ The following example returns the cost values for a simple and a downloadable pr
 
 The following example deletes the previously-defined cost values for a simple and a downloadable product.
 
-**Sample Usage**
+**样例用法**
 
 `POST /V1/products/cost-delete`
 
-**Payload**
+**载荷**
 {% highlight json %}
 {
   "skus": [
@@ -602,6 +602,6 @@ The following example deletes the previously-defined cost values for a simple an
 }
 {% endhighlight %}
 
-**Response**
+**响应**
 
 `true`, indicating the cost values were deleted

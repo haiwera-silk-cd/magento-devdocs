@@ -71,19 +71,19 @@ ActionsColumn-specific configuration:
     <td><code>callback</code></td>
     <td>Custom action's handler.</td>
     <td><a href="{{ page.baseurl }}/ui_comp_guide/components/ui-column.html#column_action">ColumnAction</a> | Array &lt;ColumnAction&gt;  </td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
   <tr>
     <td><code>confirm</code></td>
     <td>Confirmation message shown before applying the action.</td>
     <td><br>{<br>title: string;<br>message: string<br>}<br></td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
   <tr>
     <td><code>href</code></td>
     <td>The link to open on when the column's element is clicked.</td>
     <td>String</td>
-    <td>Optional</td>
+    <td>可选</td>
   </tr>
   <tr>
     <td><code>index</code></td>
