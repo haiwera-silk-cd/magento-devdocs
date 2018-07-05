@@ -2,7 +2,7 @@
 group: mrg
 version: 2.0
 title: Magento模块介绍参考手册
-landing-page: Module Reference Guide
+landing-page: 模块参考手册
 github_link: mrg/intro.md
 ---
 

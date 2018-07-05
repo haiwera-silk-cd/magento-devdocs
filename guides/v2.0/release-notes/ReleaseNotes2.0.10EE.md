@@ -21,7 +21,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 
 * Patch 2.0.10 is now <i>compatible with MySQL 5.7</i>.
 
-* Patch 2.0.10 introduces <i>two new web APIs (or service contracts) for the Sales module</i> that incorporate functionality into the Sales API that is currently available in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface. After you install this patch, you’ll be able to use the Sales API `ShipOrder` and `InvoiceOrder` methods to capture payment and ship product. For more information on these API enhancements, see the <a href="{{ page.baseurl }}/mrg/ce/Sales.html#invoiceorder" target="_blank">Sales API</a> discussion in the <a href="{{ page.baseurl }}/mrg/intro.html" target="_blank">Module Reference Guide</a>.
+* Patch 2.0.10 introduces <i>two new web APIs (or service contracts) for the Sales module</i> that incorporate functionality into the Sales API that is currently available in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface. After you install this patch, you’ll be able to use the Sales API `ShipOrder` and `InvoiceOrder` methods to capture payment and ship product. For more information on these API enhancements, see the <a href="{{ page.baseurl }}/mrg/ce/Sales.html#invoiceorder" target="_blank">Sales API</a> discussion in the <a href="{{ page.baseurl }}/mrg/intro.html" target="_blank">模块参考手册</a>.
 
 #### Why are we adding new APIs in a patch release?
 {:.no_toc}

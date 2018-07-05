@@ -52,24 +52,24 @@ TreeMassActions-specific configuration:
     <th>Option</th>
     <th>描述</th>
     <th>Type</th>
-    <th>Required</th>
+    <th>必需</th>
   </tr>
   <tr>
     <td><code>label</code></td>
     <td>Action's label displayed in the list of actions.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>type</code></td>
     <td>Action's identifier.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>actions</code></td>
     <td>A list of child elements that may contain both MassActionContainer and MassAction instances.</td>
     <td>(MassActionContainer | MassAction)[]</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
 </table>

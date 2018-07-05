@@ -21,7 +21,7 @@ This topic discusses how Varnish caching works with Magento using:
 *	`default.vcl` configuration for Varnish generated using the <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish-magento.html">Magento Admin</a>
 
 <div class="bs-callout bs-callout-info" id="info">
-	<p>This topic covers only the default options in the preceding list. There are many other ways to configure caching in complex scenarios (for example, using a Content Delivery Network); those methods are beyond the scope of this guide.</p>
+	<p>This topic covers only the default options in the preceding list. There are many other ways to configure caching in complex scenarios (for example, using a 内容分发网络); those methods are beyond the scope of this guide.</p>
 </div>
 
 On the first browser request, cacheable assets are delivered to the client browser from Varnish and cached on the browser.  

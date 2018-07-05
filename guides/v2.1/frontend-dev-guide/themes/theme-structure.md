@@ -60,7 +60,7 @@ Let's have a closer look at each particular sub-directory.
   <tbody>
     <tr>
       <th>Directory</th>
-      <th colspan="1">Required</th>
+      <th colspan="1">必需</th>
       <th>描述</th>
     </tr>
     <tr>

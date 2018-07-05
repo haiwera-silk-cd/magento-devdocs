@@ -23,13 +23,13 @@ You create an {% glossarytooltip 631b9627-a367-4a56-b3b1-0f6ca8fe6e02 %}invoice{
 
 This example creates a full invoice. You can create a partial invoice by adding to the payload an array of items to be invoiced.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/order/3/invoice`
 
 where `3` is the `orderid`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -51,11 +51,11 @@ An invoice `id`, such as `3`.
 
 An invoice is structurally similar to an order, but an order contains more details.
 
-**Endpoint**
+**接口**
 
 `GET http://<host>/rest/default/V1/invoices/3`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

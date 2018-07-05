@@ -1,8 +1,8 @@
 ---
 group: rest
 subgroup: A_rest
-title: List of REST endpoints by module
-menu_title: List of REST endpoints by module
+title: 模块REST接口列表
+menu_title: 模块REST接口列表
 menu_order: 3
 version: 2.1
 github_link: rest/list.md

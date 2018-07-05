@@ -27,7 +27,7 @@ Although it's not required, the simple product payload also includes `stock_item
 Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria]({{ page.baseurl }}/rest/tutorials/configurable-product/plan-product.html#get-attributes) for more information.
 </div>
 
-**Endpoint**
+**接口**
 
 `POST <host>/rest/default/V1/products`
 

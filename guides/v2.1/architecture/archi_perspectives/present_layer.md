@@ -2,7 +2,7 @@
 group: arch-guide
 subgroup: Architectural Layers
 title: 表示层
-menu_title: Presentation layer
+menu_title: 表示层
 menu_order: 1
 version: 2.1
 github_link: architecture/archi_perspectives/present_layer.md

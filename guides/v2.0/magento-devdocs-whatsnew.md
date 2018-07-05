@@ -47,8 +47,8 @@ Release Notes 2.2.3 [Open Source](http://devdocs.magento.com/guides/v2.2/release
 Added supported MySQL technologies to the [MySQL](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/mysql.html) topic.|2.2.x|Updated|Feb 27
 Updated the [DevDocs contributions](http://devdocs.magento.com/guides/v2.2/contributor-guide/contributing_docs.html) topic and published a new list of suggested topics for community contributions.|2.x|Updated|Feb 27
 Formatting to improve consistency in the [配置手册](http://devdocs.magento.com/guides/v2.0/config-guide/bootstrap/magento-modes.html).||Updated|Feb 26
-Added upgrade path for Magento Cloud metapackage. | 2.1.x, 2.2.x | Updated | Feb 23
-Added reference and [examples](http://devdocs.magento.com/guides/v2.2/cloud/env/working-with-variables.html#redis) for two, new [environment variables](http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#deploy)—`CACHE_CONFIGURATION` and `SESSION_CONFIGURATION`—that help with customizing Redis storage and default caching configuration. | 2.1.x, 2.2.x | Updated | Feb 20
+Added upgrade path for Magento Cloud metapackage. | 2.1.x, 2.2.x | 已更新 | Feb 23
+Added reference and [examples](http://devdocs.magento.com/guides/v2.2/cloud/env/working-with-variables.html#redis) for two, new [environment variables](http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html#deploy)—`CACHE_CONFIGURATION` and `SESSION_CONFIGURATION`—that help with customizing Redis storage and default caching configuration. | 2.1.x, 2.2.x | 已更新 | Feb 20
 Listed the `adminhtml` option in the [观察者最佳实践](http://devdocs.magento.com/guides/v2.0/ext-best-practices/extension-coding/observers-bp.html) topic.|2.x|Updated|Feb 09
 The [MFTF-2 Guide](http://devdocs.magento.com/guides/v2.2/magento-functional-testing-framework/release-2/introduction.html) has been added to Magento 2.2 documentation|2.2.x|Updated|Feb 09
 Learn how to customize and extend the acceptance functional tests using [Merging](http://devdocs.magento.com/guides/v2.3/magento-functional-testing-framework/release-2/merging.html) in the MFTF 2.|2.3 pre-release|New|Feb 07
@@ -262,9 +262,9 @@ Description  | Versions applied to  | New or Updated | Date
 | [管道部署](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/index.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [单机部署](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/single-machine.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Configure 2.2 message queues](http://devdocs.magento.com/guides/v2.2/config-guide/mq/config-mq.html){:target="_blank"} | 2.2 |  New | June 23  |
-| [迁移消息队列配置](http://devdocs.magento.com/guides/v2.2/config-guide/mq/queue-migration.html) | 2.2 | Updated | June 23 |
+| [迁移消息队列配置](http://devdocs.magento.com/guides/v2.2/config-guide/mq/queue-migration.html) | 2.2 | 已更新 | June 23 |
 | [Magento Optimization Guide](http://devdocs.magento.com/guides/v2.2/config-guide/prod/prod_perf-optimize.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [配置Magento使用Varnish](http://devdocs.magento.com/guides/v2.2/config-guide/varnish/config-varnish-magento.html) | 2.2 | Updated | June 23 |
+| [配置Magento使用Varnish](http://devdocs.magento.com/guides/v2.2/config-guide/varnish/config-varnish-magento.html) | 2.2 | 已更新 | June 23 |
 | [Varnish高级配置](http://devdocs.magento.com/guides/v2.2/config-guide/varnish/config-varnish-advanced.html){:target="_blank"} | 2.2 |  New | June 23  |
 
 ### Magento Cloud updates
@@ -305,7 +305,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [UI components XML configuration structure](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/concepts/ui_comp_xmlconfig_structure.html){:target="_blank"} | 2.2 |  New | June 23  |
 | [Declare a custom UI component](http://devdocs.magento.com/guides/v2.2/ui_comp_guide/howto/new_component_declaration.html){:target="_blank"} | 2.2 |  New | June 23  |
 
-### Module Reference Guide
+### 模块参考手册
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
@@ -335,7 +335,7 @@ Description  | Versions applied to  | New or Updated | Date
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
 | [Swagger documentation](http://devdocs.magento.com/swagger/index_22.html){:target="_blank"} | 2.2 |  Updated | June 23  |
-| [List of REST endpoints by module](http://devdocs.magento.com/guides/v2.2/rest/list.html){:target="_blank"} | 2.2 |  Updated | June 23  |
+| [模块REST接口列表](http://devdocs.magento.com/guides/v2.2/rest/list.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 | [List of service names per module](http://devdocs.magento.com/guides/v2.2/rest/rest_endpoints.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 | [SOAP Reference](http://devdocs.magento.com/guides/v2.2/soap/bk-soap.html){:target="_blank"} | 2.2 |  Updated | June 23  |
 
@@ -401,7 +401,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [Description and configuration options of the mostly used Magento UI components](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/components/components-intro.html){:target="_blank"} | 2.1  |  New | Apr 28  |
 | [安装第三方前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-install.html){:target="_blank"} | 2.x  |  New | Apr 27  |
 | [卸载前台主题]({{ page.baseurl }}/frontend-dev-guide/themes/theme-uninstall.html){:target="_blank"} | 2.x  |  New | Apr 27  |
-| Payments integrations: [response validators]({{ page.gdeurl }}payments-integrations/payment-gateway/response-validator.html){:target="_blank"} and [payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html){:target="_blank"}| 2.0, 2.1.x | Updated | Apr 27  |
+| Payments integrations: [response validators]({{ page.gdeurl }}payments-integrations/payment-gateway/response-validator.html){:target="_blank"} and [payment method facade]({{ page.baseurl }}/payments-integrations/base-integration/facade-configuration.html){:target="_blank"}| 2.0, 2.1.x | 已更新 | Apr 27  |
 | [技术指南 for working with Events]({{ page.baseurl }}/coding-standards/technical-guidelines/technical-guidelines.html#events){:target="_blank"} | 2.1.x |  New | Apr 19  |
 | [Migration: Follow-up after running the 数据迁移工具]({{ page.baseurl }}/migration/migration-migrate-follow-up.html){:target="_blank"} | 2.x  |  Updated | Apr 14  |
 
@@ -413,19 +413,19 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [Coding standards technical guidelines]({{ site.gdeurl21 }}coding-standards/technical-guidelines.html){:target="_blank"} | 2.1.x  |  New | Apr 1  |
 | [Update sample contribution template]({{ page.baseurl }}/contributor-guide/templates/basic_template.html){:target="_blank"} | 2.x  |  Updated |  Apr 1 |
-| [Update performance test data]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-perf-data.html){:target="_blank"} | 2.x  | Updated  | Mar 21  |
+| [Update performance test data]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-perf-data.html){:target="_blank"} | 2.x  | 已更新  | Mar 21  |
 | [Versioning and compatibility]({{ page.baseurl }}/extension-dev-guide/versioning/index.html){:target="_blank"} | 2.x  |  New |  Mar 31 |
 | [How to test a block]({{ page.baseurl }}/mtf/mtf_entities/mtf_block.html){:target="_blank"}  | 2.x  |  Updated | Mar 24  |
 | [Tutorial: Order processing with REST APIs]({{ site.gdeurl21 }}get-started/order-tutorial/order-intro.html){:target="_blank"}  |  2.1.x | New  | Mar 23  |
 | [Magento U video tutorials](http://devdocs.magento.com/videos){:target="_blank"}  | 2.x  | New  |  Mar 15 |
-| [Top quarterly devdocs contributors]({{ page.baseurl }}/contributor-guide/quarterly-contributors.html){:target="_blank"}  |  2.x | Updated  | Mar 15  |
+| [Top quarterly devdocs contributors]({{ page.baseurl }}/contributor-guide/quarterly-contributors.html){:target="_blank"}  |  2.x | 已更新  | Mar 15  |
 |  [Community contribution to adding attributes to an entity]({{ page.baseurl }}/extension-dev-guide/extension_attributes/adding-attributes.html){:target="_blank"} | 2.x  |  Updated | March 15  |
 | [Tutorial on copying fieldsets](ext-best-practices/tutorials/copy-fieldsets.html){:target="_blank"} | 2.x | New | Mar 9 |
 |  [Backward incompatible changes now includes Magento 2.0.x, added tables]({{ page.baseurl }}/release-notes/backward-incompatible-changes/index.html){:target="_blank"} |  2.x |  Updated |  Mar 9 |
 | [Import a Magento EE project into {{site.data.var.ece}} (MECE)]({{ page.baseurl }}/cloud/access-acct/first-time-setup_import-first-steps.html){:target="_blank"}  | 2.x  |  New | Mar 1  |
 | [MECE configuration management]({{ site.gdeurl21 }}cloud/live/sens-data-over.html){:target="_blank"}  | 2.1.x  |  New |  Mar 3 |
 | [Reorganize and update how to get started with an MECE environment]({{ page.baseurl }}/cloud/before/before-setup-env-1_get-start.html){:target="_blank"}  | 2.x  |  Updated |  Mar 3 |
-| [Reorganize and correct issues with MECE workspace]({{ page.baseurl }}/cloud/before/before-workspace.html){:target="_blank"} | 2.x  | Updated  |  Mar 2 |
+| [Reorganize and correct issues with MECE workspace]({{ page.baseurl }}/cloud/before/before-workspace.html){:target="_blank"} | 2.x  | 已更新  |  Mar 2 |
 |  [Magento Functional Test Framework scenario test]({{ page.baseurl }}/mtf/mtf_entities/mtf_scenariotest.html) | 2.x  | New  |  Mar 3 |
 
 {% endcollapsibleh2 %}
@@ -435,9 +435,9 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
-| [{{site.data.var.ece}} (MECE) deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"} | 2.x | Updated | Feb 23 |
+| [{{site.data.var.ece}} (MECE) deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"} | 2.x | 已更新 | Feb 23 |
 | [How to use logs to troubleshoot MECE]({{ page.baseurl }}/cloud/trouble/environments-logs.html){:target="_blank"} | 2.x | New | Feb 23 |
-| [How to SSH in to an MECE integration, staging, or production system]({{ page.baseurl }}/cloud/env/environments-ssh.html){:target="_blank"} | 2.x | Updated | Feb 23 |
+| [How to SSH in to an MECE integration, staging, or production system]({{ page.baseurl }}/cloud/env/environments-ssh.html){:target="_blank"} | 2.x | 已更新 | Feb 23 |
 | [Set up multiple MECE database users]({{ page.baseurl }}/cloud/project/project-conf-files_services-mysql.html#cloud-appyaml-mysqlusers){:target="_blank"} | 2.x | New | Feb 21 |
 | [MECE 2.1.5 and 2.0.13 Release Notes]({{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes2.1.5.html){:target="_blank"} | 2.1.5 | New | Feb 21 |
 | [Magento Community Edition (CE) 2.1.5 Release Notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.5CE.html){:target="_blank"} | 2.1.5 | New | Feb 21 |
@@ -453,8 +453,8 @@ Description  | Versions applied to  | New or Updated | Date
 | [Magento CE 2.1.4 Release Notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.4CE.html){:target="_blank"}  | 2.1.x  | New  |  Feb 7 |
 | [Magento EE 2.1.4 Release Notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.4EE.html){:target="_blank"}  |  2.1.x |  New | Feb 7  |
 |  [Use PhpStorm, PHPUnit, and Xdebug with DevBox]({{ page.baseurl }}/install-gde/docker/docker-phpstorm-parent.html){:target="_blank"} | 2.x  | New  | Feb 8  |
-| [Clarify file system permissions for production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html){:target="_blank"}  | 2.x  | Updated  | Jan 27  |
-| [Corrected instructions to set up multiple websites or stores on {{site.data.var.ece}}]({{ page.baseurl }}/cloud/project/project-multi-sites.html){:target="_blank"} | 2.x  | Updated  | Jan 31  |
+| [Clarify file system permissions for production]({{ page.baseurl }}/config-guide/prod/prod_file-sys-perms.html){:target="_blank"}  | 2.x  | 已更新  | Jan 27  |
+| [Corrected instructions to set up multiple websites or stores on {{site.data.var.ece}}]({{ page.baseurl }}/cloud/project/project-multi-sites.html){:target="_blank"} | 2.x  | 已更新  | Jan 31  |
 
 {% endcollapsibleh2 %}
 
@@ -464,15 +464,15 @@ Description  | Versions applied to  | New or Updated | Date
 | Description  | Versions applied to  | New or Updated | Date |
 |--------------|--------------|----------------------|--------|
 | [Asynchronous module definition and RequireJS concepts]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html){:target="_blank"} | 2.1.x | New | Jan 25 |
-| [Added information about the RequireJS library]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html){:target="_blank"} | 2.x | Updated | Jan 26 |
+| [Added information about the RequireJS library]({{ page.baseurl }}/javascript-dev-guide/javascript/js-resources.html){:target="_blank"} | 2.x | 已更新 | Jan 26 |
 | [数据迁移 Guide troubleshooting]({{ page.baseurl }}/migration/migration-troubleshooting.html){:target="_blank"}  | 2.x  | New  |  Jan 20 |
-| [Updated `@deprecated` tag and added requirements for `@inheritdoc`]({{ page.baseurl }}/coding-standards/docblock-standard-general.html){:target="_blank"}  |  2.x | Updated  |  Jan 20 |
+| [Updated `@deprecated` tag and added requirements for `@inheritdoc`]({{ page.baseurl }}/coding-standards/docblock-standard-general.html){:target="_blank"}  |  2.x | 已更新  |  Jan 20 |
 | [How to install and use Magento DevBox (easy developer installation)]({{ page.baseurl }}/install-gde/docker/docker-over.html){:target="_blank"}  | 2.x  | New  | Jan 19  |
 |  [Functional Testing Framework isolation management tutorial]({{ page.baseurl }}/mtf/features/isolation.html){:target="_blank"} | 2.x  | New  | Jan 18  |
 | [How to test a patch on {{site.data.var.ece}}]({{ page.baseurl }}/cloud/howtos/patch-magento.html)  | 2.x  |  Updated  |  Jan 10 |
 |  [Add `type` prefixes and product, project in description of `composer.json`]({{ page.baseurl }}/extension-dev-guide/build/composer-integration.html){:target="_blank"} |  2.x |  Updated  | Jan 9  |
-| [Docblock coding standard]({{ page.baseurl }}/coding-standards/docblock-standard-general.html){:target="_blank"} | 2.x | Updated | Jan 6 |
-| [Use payment vault in the Admin]({{ site.gdeurl21 }}payments-integrations/vault/admin-integration.html){:target="_blank"} | 2.1.x | Updated | Jan 6 |
+| [Docblock coding standard]({{ page.baseurl }}/coding-standards/docblock-standard-general.html){:target="_blank"} | 2.x | 已更新 | Jan 6 |
+| [Use payment vault in the Admin]({{ site.gdeurl21 }}payments-integrations/vault/admin-integration.html){:target="_blank"} | 2.1.x | 已更新 | Jan 6 |
 
 {% endcollapsibleh2 %}
 
@@ -496,16 +496,16 @@ Description  | Versions applied to  | New or Updated | Date
 |--------------|--------------|----------------------|--------|
 | [Set up the Magento application to use multiple stores]({{ page.baseurl }}/config-guide/multi-site/ms_over.html){:target="_blank"}  | 2.x  |  Updated | Dec 2  |
 | [Set up multiple Magento stores on {{site.data.var.ece}}]({{ page.baseurl }}/cloud/project/project-multi-sites.html){:target="_blank"} | 2.x  |  New | Dec 2  |
-| [Install the Magento data migration tool]({{ page.baseurl }}/migration/migration-tool-install.html){:target="_blank"} | 2.x  | Updated  |  Dec 2 |
-| [Upgrade the Magento data migration tool]({{ page.baseurl }}/migration/migration-tool-upgrade.html){:target="_blank"} |  2.x | Updated  | Dec 2  |
-| [Add REST APIs for Magento Enterprise Edition]({{ page.baseurl }}/rest/list.html){:target="_blank"} | 2.x  | Updated  |  Dec 2 |
+| [Install the Magento data migration tool]({{ page.baseurl }}/migration/migration-tool-install.html){:target="_blank"} | 2.x  | 已更新  |  Dec 2 |
+| [Upgrade the Magento data migration tool]({{ page.baseurl }}/migration/migration-tool-upgrade.html){:target="_blank"} |  2.x | 已更新  | Dec 2  |
+| [Add REST APIs for Magento Enterprise Edition]({{ page.baseurl }}/rest/list.html){:target="_blank"} | 2.x  | 已更新  |  Dec 2 |
 | [Add REST API endpoints for Magento EE]({{ page.baseurl }}/rest/rest_endpoints.html){:target="_blank"} | 2.x  |  Updated |  Dec 2 |
 | [Use Jasmine for JavaScript unit testing]({{ page.baseurl }}/test/js/jasmine.html){:target="_blank"} | 2.x | New | 否v 25 |
 | [Use adapters with third-party libraries]({{ page.baseurl }}/extension-dev-guide/adapters.html){:target="_blank"} | 2.x | New | 否v 25 |
 | [Debug the Fastly extension with {{site.data.var.ece}}]({{ page.baseurl }}/cloud/trouble/trouble_fastly.html){:target="_blank"} | 2.x | New | 否v 25 |
 | [{{site.data.var.ece}} requirements]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html){:target="_blank"} |  2.x  |   Updated | 否v 18 |
-| [Data migration toolkit directory structure]({{ page.baseurl }}/migration/migration-tool-internal-spec.html){:target="_blank"}  |  2.x | Updated  | 否v 18 |
-| [Added information about the `@import` directive and usage]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html){:target="_blank"}  |  2.x | Updated  |  Nov 18 |
+| [Data migration toolkit directory structure]({{ page.baseurl }}/migration/migration-tool-internal-spec.html){:target="_blank"}  |  2.x | 已更新  | 否v 18 |
+| [Added information about the `@import` directive and usage]({{ page.baseurl }}/frontend-dev-guide/css-topics/css-preprocess.html){:target="_blank"}  |  2.x | 已更新  |  Nov 18 |
 | [How to use adapters with third-party libraries]({{ page.baseurl }}/extension-dev-guide/adapters.html){:target="_blank"}   |  2.x  |   New |Nov 11 |
 | [Added detail about {{site.data.var.ece}} (MECE) deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"}   |  2.x  |   Updated |Nov 4 |
 | [Where MECE logs are located]({{ page.baseurl }}/cloud/env/environments-logs.html)  |  2.x  |  New  |Nov 4 |
@@ -519,8 +519,8 @@ Description  | Versions applied to  | New or Updated | Date
 
 | Description  | Versions applied to  | New or Updated | Week ending |
 |--------------|--------------|----------------------|--------|
-| {{site.data.var.ece}} (MECE) [added descriptions of build and deployment scripts and other improvements to deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"} | 2.x | Updated |Oct 28 |
-| [MECE added description of build and deployment logs in staging and production]({{ page.baseurl }}/cloud/env/environments-logs.html){:target="_blank"} | 2.x | Updated | Oct 28 |
+| {{site.data.var.ece}} (MECE) [added descriptions of build and deployment scripts and other improvements to deployment]({{ page.baseurl }}/cloud/reference/discover-deploy.html){:target="_blank"} | 2.x | 已更新 |Oct 28 |
+| [MECE added description of build and deployment logs in staging and production]({{ page.baseurl }}/cloud/env/environments-logs.html){:target="_blank"} | 2.x | 已更新 | Oct 28 |
 | [MECE how to patch the Magento software]({{ page.baseurl }}/cloud/howtos/patch-magento.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [MECE how to upgrade the Magento software]({{ page.baseurl }}/cloud/howtos/upgrade-magento.html){:target="_blank"} | 2.x | New | Oct 28 |
 | [Magento Functional Test Framework (FTF) create a report]({{ page.baseurl }}/mtf/features/reporting.html){:target="_blank"} | 2.x | New | Oct 28 |
@@ -534,7 +534,7 @@ Description  | Versions applied to  | New or Updated | Date
 | [MECE 2.1.2 and 2.0.10 Release Notes]({{ page.baseurl }}/cloud/release-notes/CloudReleaseNotes2.1.2.html){:target="_blank"}  | 2.0.10, 2.1.2  |  New | Oct 21 |
 | [Added HTTP response codes to Web API topic]({{ page.baseurl }}/get-started/gs-web-api-response.html){:target="_blank"}  | 2.x |  Updated | Oct 21 |
 | [System requirements home page]({{ site.baseurl }}/magento-system-requirements.html){:target="_blank"} | 2.x  | New  | Oct 21 |
-| [How to apply the SUPEE-8788 security patch]({{ site.m1xgdeurl }}other/ht_install-patches.html#apply-8788) | 1.x  | Updated  |Oct 21 |
+| [How to apply the SUPEE-8788 security patch]({{ site.m1xgdeurl }}other/ht_install-patches.html#apply-8788) | 1.x  | 已更新  |Oct 21 |
 | [Magento CE 2.0.10 release notes]({{ site.gdeurl }}release-notes/ReleaseNotes2.0.10CE.html){:target="_blank"}  | 2.0.x  | New| Oct 14 |
 | [Magento EE 2.0.10 release notes]({{ site.gdeurl }}release-notes/ReleaseNotes2.0.10EE.html){:target="_blank"} | 2.0.x  | New| Oct 14 |
 | [Magento CE 2.1.2 release notes]({{ site.gdeurl21 }}release-notes/ReleaseNotes2.1.2CE.html){:target="_blank"} | 2.1.x  | New| Oct 14 |
@@ -547,16 +547,16 @@ Description  | Versions applied to  | New or Updated | Date
 | [Magento CE 1.9.3 release notes]({{ site.m1xgdeurl }}ce19-ee114/ce1.9_release-notes.html){:target="_blank"} | 1.x  |New| Oct 14 |
 | [Magento EE 1.14.3 release notes]({{ site.m1xgdeurl }}ce19-ee114/ee1.14_release-notes.html){:target="_blank"}  | 1.x  |New|  Oct 14 |
 | [Updated system requirements]({{ site.m1xgdeurl }}system-requirements.html){:target="_blank"}  | 1.x |Updated| Oct 14 |
-| [Indexing]({{ page.baseurl }}/extension-dev-guide/indexing-custom.html){:target="_blank"} (add information about improving indexing performance)  | 2.x  | Updated| Oct 7 |
+| [Indexing]({{ page.baseurl }}/extension-dev-guide/indexing-custom.html){:target="_blank"} (add information about improving indexing performance)  | 2.x  | 已更新| Oct 7 |
 | [Magento 2 documentation resources for {{site.data.var.ece}} (MECE)]({{ page.baseurl }}/cloud/access-acct/resources.html){:target="_blank"} |  2.x |New| Oct 7 |
 | [MECE environment variables]({{ page.baseurl }}/cloud/env/environment-vars_magento.html){:target="_blank"}  | 2.x  |  Updated | Oct 7 |
-| [MECE add more information about project directory structure]({{ page.baseurl }}/cloud/access-acct/first-time-setup_dir-structure.html){:target="_blank"}  | 2.x  | Updated  |  Oct 7 |
+| [MECE add more information about project directory structure]({{ page.baseurl }}/cloud/access-acct/first-time-setup_dir-structure.html){:target="_blank"}  | 2.x  | 已更新  |  Oct 7 |
 | [MECE completely revise new environment setup]({{ page.baseurl }}/cloud/before/before-setup-env-1_get-start.html){:target="_blank"} | 2.x  |  Updated | Oct 7 |
 | [MECE responsibilities of the account owner]({{ page.baseurl }}/cloud/before/before-project-owner.html){:target="_blank"}  | 2.x  |  New |  Oct 7 |
 | [MECE Magento文件系统所有者 for local development]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html){:target="_blank"}| 2.x  | New  | Oct 7 |
 | [MECE setting MySQL `auto_increment_increment=3`]({{ page.baseurl }}/cloud/before/before-workspace-php.html){:target="_blank"}  |  2.x | New  | Oct 7 |
 | [MECE moving from integration to staging and production]({{ page.baseurl }}/cloud/live/stage-prod-over.html){:target="_blank"} (see also associated topics)  | 2.x  |  New | Oct 7 |
-| [Added info about using tokens in authentication requests]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html){:target="_blank"}| 2.x | Updated | Oct 7 |
+| [Added info about using tokens in authentication requests]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html){:target="_blank"}| 2.x | 已更新 | Oct 7 |
 | [How to programmatically create a category with custom attributes]({{ page.baseurl }}/rest/catalog-notes.html){:target="_blank"} | 2.x | New | Oct 7 |
 
 

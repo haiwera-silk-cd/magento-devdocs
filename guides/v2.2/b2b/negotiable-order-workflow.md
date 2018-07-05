@@ -11,27 +11,27 @@ level3_subgroup: nq
 github_link: b2b/negotiable-order-workflow.md
 ---
 
-This topic describes how REST calls can be used to place items in a shopping cart, initiate and complete the process of negotiating a quote, and reimbursing the buyer's credit upon receipt of payment.
+本节描述如何如用REST调用能将产品项放入购物车，启动和完成此议价过程及在收到支付后报销购买者的信用额
 
 ## 先决条件
 
-* You have [installed and enabled]({{ page.baseurl }}/comp-mgr/install-extensions/b2b-installation.html) {{site.data.var.b2b}}.
-* You have [created a company]({{ page.baseurl }}/b2b/company-object.html) and a [company user]({{ page.baseurl }}/b2b/company-object.html).
-* You have an integration or [admin authorization token]({{ page.baseurl }}/get-started/order-tutorial/order-admin-token.html) to make calls on behalf of seller, and a [customer token]({{ page.baseurl }}/get-started/order-tutorial/order-create-customer.html#get-token) to make calls on behalf of the company user.
+* 你已经[安装并启用了]({{ page.baseurl }}/comp-mgr/install-extensions/b2b-installation.html) {{site.data.var.b2b}}.
+* 你已经[创建了一个公司]({{ page.baseurl }}/b2b/company-object.html)及一个[公司用户]({{ page.baseurl }}/b2b/company-object.html).
+* 你有一个集成或[管理员授权令牌]({{ page.baseurl }}/get-started/order-tutorial/order-admin-token.html)来发起代表销售者的调用，以及[客户令牌]({{ page.baseurl }}/get-started/order-tutorial/order-create-customer.html#get-token)发起代表公司用户的调用
 
-## Prepare the order
+## 准备定单
 
-The steps in this section are similar to those [使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html), except that different products are added to the cart.
+本节这些步骤与[使用REST API的订单处理教程]({{ page.baseurl }}/get-started/order-tutorial/order-intro.html)类似，除了不同产品被添加到购物车之外。
 
-### Create a shopping cart
+### 创建购物车
 
-In this example, the customer is a company user (buyer).
+在本例中，客户是一个公司用户(购买者)
 
-**Endpoint**
+**接口**
 
 `POST /V1/carts/mine`
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
@@ -44,24 +44,24 @@ Authorization Bearer <customer token>
 
 **响应**
 
-The response is the `quoteId`: `5`
+响应是`quoteId`,这里是`5`
 
-### Add items
+### 添加产品项
 
-This example adds 15 Pursuit Lumaflex Tone Bands and 10 Harmony Lumaflex Strength Band Kits to the cart. You must make two calls to add these products.
+本例添加15个Pursuit Lumaflex Tone Bands和10个 Harmony Lumaflex Strength Band Kits到购物车，你要发起两次调用来添加这些产品。
 
-**Endpoint**
+**接口**
 
 `POST V1/carts/mine`
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload 1**
+**载荷 1**
 {% highlight json %}
 {
   "cartItem": {
@@ -72,7 +72,7 @@ Authorization Bearer <customer token>
 }
 {% endhighlight %}
 
-**Response 1**
+**响应1**
 
 {% highlight json %}
 {
@@ -86,7 +86,7 @@ Authorization Bearer <customer token>
 }
 {% endhighlight %}
 
-**Payload 2**
+**载荷 2**
 
 {% highlight json %}
 {
@@ -99,7 +99,7 @@ Authorization Bearer <customer token>
 {% endhighlight %}
 
 
-**Response 2**
+**响应2**
 
 {% highlight json %}
 {
@@ -113,15 +113,15 @@ Authorization Bearer <customer token>
 }
 {% endhighlight %}
 
-### Set the shipping address
+### 设置物流地址
 
-You can determine shipping costs after initiating a negotiable quote, but doing it now provides a more detailed picture of the final costs to the buyer. If you want to defer setting the shipping address until after the negotiable quote has been created, use the `/V1/negotiable-carts/:cartId/estimate-shipping-methods` call.
+你可以在启动议价后决定物流花费，但现在要提供更多最终花费的细节图片给购买者。如果你延后到议价创建之后设置物流地址，请调用`/V1/negotiable-carts/:cartId/estimate-shipping-methods`
 
-**Endpoint**
+**接口**
 
 `POST V1/carts/mine/estimate-shipping-methods`
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
@@ -182,11 +182,11 @@ Authorization Bearer <customer token>
 ]
 {% endhighlight %}
 
-### Set shipping and billing information
+### 设置物流和账单信息
 
-You can also set shipping and billing information after initiating a negotiable quote by calling  `POST /V1/negotiable-carts/:cartId/shipping-information`.
+你也可以在启动报价后设置物流和帐单信息，使用`POST /V1/negotiable-carts/:cartId/shipping-information`接口.
 
-**Endpoint**
+**接口**
 
 `POST /V1/carts/mine/shipping-information`
 
@@ -383,15 +383,15 @@ You can also set shipping and billing information after initiating a negotiable 
 {% endhighlight %}
 {% endcollapsible %}
 
-### View the cart
+### 浏览购物车
 
-This is an optional step to show the status of the cart before you begin the negotiable quote process.
+这是一个可选的步骤，在你开始议价过程之前查看购物车状态
 
-**Endpoint**
+**接口**
 
 `GET /V1/carts/mine`
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
@@ -589,25 +589,25 @@ Authorization Bearer <customer token>
 {% endcollapsible %}
 
 
-## Complete a Negotiable Quote
+## 完成议价
 
-In this example, the buyer requests a negotiable quote. The seller applies a discount to the quote and returns the quote to the buyer. The buyer accepts the discount and completes the order.
+在本例中，购买者请求一个可商议的报价单。销售者应用折扣到报价单上并将其返回给购买者。购买者接受折扣并完成此订单。
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-All negotiable quote calls require an admin authorization token.
+所有的议价调用需要一个管理员授权令牌。
 </div>
 
-### Initiate a negotiable quote
+### 启动议价
 
-In this example, the buyer initiates a negotiable quote, asking for a 2.5% discount.
+在本例中，购买者启动议价，请求2.5%的折扣。
 
-Initiating a negotiable quote places it in the `processing_by_admin` state.
+启动议价其状态为`processing_by_admin`
 
-**Endpoint**
+**接口**
 
 `POST V1/negotiableQuote/request`
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
@@ -628,18 +628,18 @@ Authorization Bearer <admin token>
 
 `true`
 
-### Adjust the negotiable quote
+### 调整议价
 
-The seller accepts the buyer's request for a 2.5% discount. The `negotiated_price_type` value of `1` indicates a percentage discount.
+销售者接受购买者的2.5%折扣的请求。`negotiated_price_type`状态的值为`1`指示是一个百分比的折扣。
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Endpoint**
+**接口**
 
 `PUT /V1/negotiableQuote/5`
 
@@ -663,20 +663,20 @@ Authorization Bearer <admin token>
 
 `[]`
 
-### Return the negotiable quote to the buyer
+### 返回议价给购买者
 
-Now that the seller has updated the quote, it must be returned to the buyer. The buyer will then be able to either accept the offer and begin the checkout process, or request further negotiations.
+现在销售者已经更新了报价，它必须被返回到购买者。购买者然后能接受此提议并开始结算过程，也能请求更进一步的议价。
 
-This call places the quote in the `submitted_by_admin` state.
+此调用报价会置为`submitted_by_admin`状态
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Endpoint**
+**接口**
 
 `POST /V1/negotiableQuote/submitToCustomer`
 
@@ -693,18 +693,18 @@ Authorization Bearer <admin token>
 
 `true`
 
-### Get the quote with the new amounts
+### 获取新的价格的报价
 
-The price of each item has been reduced by 2.5 percent. In addition, the `negotiable_quote` section of the response has been updated.
+每一项的价格都已经减少了2.5个百份点，此外响应中的`negotiable_quote`里的值已经被更新
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Endpoint**
+**接口**
 
 `GET` /V1/carts/5
 
@@ -934,18 +934,18 @@ Authorization Bearer <admin token>
 {% endhighlight %}
 {% endcollapsible %}
 
-### Set the payment information and place the order
+### 设置支付信息并确认订单
 
-The buyer is now ready to complete the purchase. Since the buyer has already specified the billing address, only the `paymentMethod` information must be included.
+购买者现在已经完成了购买。因为购买者已经指定了账单地址，只有`paymentMethod`信息必须要被包含：
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Endpoint**
+**接口**
 
 `/V1/negotiable-carts/3/payment-information`
 
@@ -961,15 +961,15 @@ Authorization Bearer <admin token>
 
 **响应**
 
-The response is the order `id`: `4`
+响应是订单`id`: `4`
 
-## Reimburse company credit
+## 报销公司信用额
 
-Now that the negotiable quote has been converted into an order, you can issue an invoice and create a shipment in the same manner as a standard B2C order. However, when the company pays for the order, the company's outstanding balance must be credited.
+现在，议价已经被转化为了订单，你以和标准B2C订单一样的方式为其可以发布发票及创建物流。然而，当公司支付了订单，公司的未结余额必须在授信额之内。
 
-In this example, the `companyId` is `1`.
+在本例中，`companyId`是`1`.
 
-**Headers**
+**请求头**
 
 ```
 Content-Type application/json
@@ -977,7 +977,7 @@ Authorization Bearer <admin token>
 ```
 
 
-**Endpoint**
+**接口**
 
 `POST /V1/companyCredits/1/increaseBalance`
 
@@ -994,7 +994,7 @@ Authorization Bearer <admin token>
 
 **响应**
 
-`true`, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.
+`true`,指示报销成功应用，Magento会发送邮件到购买者。
 
 ## 相关信息
 

@@ -176,13 +176,13 @@ vendor/bin/robo allure2:report
 #### allure1
 
 `allure1:generate`  | Generate the HTML for the Allure report based on the test XML output - Allure v1.4.X.
-`allure1:open`    | Open the HTML Allure report - Allure v1.4.xX.
+`allure1:open`    | 已打开 the HTML Allure report - Allure v1.4.xX.
 `allure1:report`   | Generate and open the HTML Allure report - Allure v1.4.X.
 
 #### allure2
 
 `allure2:generate` | Generate the HTML for the Allure report based on the test XML output - Allure .v2.3.X
-`allure2:open`      | Open the HTML Allure report - Allure v2.3.X.
+`allure2:open`      | 已打开 the HTML Allure report - Allure v2.3.X.
 `allure2:report`   | Generate and open the HTML Allure report - Allure v2.3.X.
   
 #### build

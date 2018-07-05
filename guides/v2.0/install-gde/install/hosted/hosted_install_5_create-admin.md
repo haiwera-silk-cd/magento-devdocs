@@ -1,8 +1,8 @@
 ---
 group: install_hosted
 subgroup: 03_install
-title: 步骤 5.创建管理员帐户
-menu_title: 步骤 5.创建管理员帐户
+title: 步骤 5.创建管理员账户
+menu_title: 步骤 5.创建管理员账户
 menu_order: 10
 menu_node:
 version: 2.0

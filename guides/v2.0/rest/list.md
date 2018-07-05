@@ -1,8 +1,8 @@
 ---
 group: rest
 subgroup: A_rest
-title: List of REST APIs by module
-menu_title: List of REST APIs by module
+title: 模块REST API列表
+menu_title: 模块REST API列表
 menu_order: 3
 version: 2.0
 github_link: rest/list.md

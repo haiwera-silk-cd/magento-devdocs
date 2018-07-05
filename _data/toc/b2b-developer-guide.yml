@@ -26,13 +26,13 @@ pages:
                 - label: 管理公司结构
                   url: /b2b/company-structures.html
 
-            - label: 公司信用帐户
+            - label: 公司信用账户
               children:
 
                 - label: 与CompanyCredit模块集成
                   url: /b2b/company-credit.html
 
-                - label: 管理公司信用帐户
+                - label: 管理公司信用账户
                   url: /b2b/credit-manage.html
 
             - label: 共享类目录
@@ -44,10 +44,10 @@ pages:
                 - label: 管理共享类目录
                   url: /b2b/shared-cat-manage.html
 
-                - label: Assign categories and products
+                - label: 分配分类和产品
                   url: /b2b/shared-cat-product-assign.html
 
-                - label: Assign companies
+                - label: 分配公司
                   url: /b2b/shared-cat-company.html
 
             - label: 协商报价

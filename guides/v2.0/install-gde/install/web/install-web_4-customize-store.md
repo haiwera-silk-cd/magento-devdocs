@@ -16,4 +16,4 @@ functional_areas:
 {% include install/web/install-web_4-customize-store.md %}
 
 #### 下一步
-<a href="{{ page.baseurl }}/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员帐户</a>
+<a href="{{ page.baseurl }}/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员账户</a>

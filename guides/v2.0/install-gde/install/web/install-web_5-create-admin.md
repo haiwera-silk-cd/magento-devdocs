@@ -1,8 +1,8 @@
 ---
 group: install_wiz
 subgroup: Wizard
-title: 步骤 5.创建管理员帐户
-menu_title: 步骤 5.创建管理员帐户
+title: 步骤 5.创建管理员账户
+menu_title: 步骤 5.创建管理员账户
 menu_node:
 menu_order: 6
 version: 2.0

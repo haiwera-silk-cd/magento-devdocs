@@ -14,48 +14,46 @@ functional_areas:
   - Integration
 ---
 
-Sellers and buyers can edit a negotiable quote at various times during the quote's lifecycle. Both use the `PUT /V1/negotiableQuote/:quoteId` call to update the quote. This call is defined in the
-`quoteCartRepositoryV1` service and is functionally similar to the
-`PUT /V1/carts/mine` call.
+销售者和购买者可以在其周期中的不同的时间修改议价。可以使用`PUT /V1/negotiableQuote/:quoteId`调用更新报价，此接口定义在`quoteCartRepositoryV1`服务中，其功能与`PUT /V1/carts/mine`调用相似
 
-The `quote` object now contains a set of `negotiable_quote` extension attributes that can be used to update a quote.
+`quote`对像现在包含一些`negotiable_quote`的扩展属性，它们可以被用于更新报价。
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`quote_id` | Negotiable quote ID | integer | Required to create or update a negotiable quote
-`is_regular_quote` | Flag for the negotiable quote | boolean | 可选
-`status` | One of `created`, `submitted_by_customer`, `submitted_by_admin`, `processing_by_customer`, `processing_by_admin`, `ordered`, `expired`, `declined`, `closed` | string | 可选
-`negotiated_price_type` | 1 - Percentage discount; 2 - Fixed price; 3 - proposed total | integer | Required to set a negotiated price
-`negotiated_price_value` | Discount amount defined by the seller | number | Required to set a negotiated price
-`shipping_price` | Custom price for shipping defined by the seller | number | 可选
-`quote_name` | Name assigned to the negotiable quote | string | 可选
-`expiration_period` | Expiration date for the quote. The format must be `YYYY-MM-DD`. | string | 可选
-`email_notification_status`  | Recent notifications that have been sent | integer | 可选
-`has_unconfirmed_changes`  | Indicates there are some changes that the Admin has not seen yet | boolean | 可选
-`is_shipping_tax_changed`  | Indicates whether shipping taxes have changed | boolean | 可选
-`is_customer_price_changed`  | Indicates whether the price for the product has changed | boolean | 可选
-`notifications`  | Binary mask where the current notifications are stored | integer | 可选
-`applied_rule_ids`  | Applied shopping cart rules | string | 可选
-`is_address_draft`  | Drop the address if the checkout is not completed. | boolean | 可选
-`deleted_sku`  | The SKUs of any deleted products | string | 可选
-`creator_id`  | Quote creator ID | integer | 可选
-`creator_type`  | 1 - Integration; 2 - Admin; 3 - Customer; 4 - Guest | integer | 可选
-`original_total_price`  | Original total price | number | 可选
-`base_original_total_price`  | Base original total price | number | 可选
-`negotiated_total_price`  | Negotiated total price | number | 可选
-`base_negotiated_total_price`  | Base negotiated total price | number | 可选
+`quote_id` | 议价ID | integer | Required to create or update a negotiable quote
+`is_regular_quote` | 议价标志 | boolean | 可选
+`status` | 可以是`created`, `submitted_by_customer`, `submitted_by_admin`, `processing_by_customer`, `processing_by_admin`, `ordered`, `expired`之一 `declined`, `closed` | string | 可选
+`negotiated_price_type` | 1-百分比折扣；2-固定价格；3-提议总价 | integer | 必须设置一个商议的价格
+`negotiated_price_value` | 销售者定义的折扣总额 | number | 必须设置一个商议的价格
+`shipping_price` | 销售者定义的自定义物流价格 | number | 可选
+`quote_name` | 分配给议价名的称 | string | 可选
+`expiration_period` | 报价的过期日期，格式必须是`YYYY-MM-DD`. | string | 可选
+`email_notification_status`  | 最近已发送的通知 | integer | 可选
+`has_unconfirmed_changes`  | 指示管理员现在有还没看到的修改 | boolean | 可选
+`is_shipping_tax_changed`  | 指示物流税额是否发生改变 | boolean | 可选
+`is_customer_price_changed`  | 指是产品的价格是否发生改变 | boolean | 可选
+`notifications`  | 当前通知被保存的二进制掩码 | integer | 可选
+`applied_rule_ids`  | 已应用的购物车规则 | string | 可选
+`is_address_draft`  | 是否在结算未完成时移除地址 | boolean | 可选
+`deleted_sku`  | 被删除产品的sku | string | 可选
+`creator_id`  | 报价创建人的ID | integer | 可选
+`creator_type`  | 1-集成者；2-管理员；3-客户；4-游客 | integer | 可选
+`original_total_price`  | 原始总价 | number | 可选
+`base_original_total_price`  | 基础原始总价 | number | 可选
+`negotiated_total_price`  | 商议的总价 | number | 可选
+`base_negotiated_total_price`  | 基础商议的总价 | number | 可选
 
-### Set a negotiated price
+### 设置商议的价格
 
-In every successful negotiate quote, the seller must set the negotiated price.
+在每一个成功的议价中，销售者必须设置商议价格。
 
-The `negotiated_price_type` can have one of the following values:
+`negotiated_price_type`可以是以面的值之一
 
-`1` - Apply a percentage discount to the quote. The `negotiated_price_value`parameter indicates the percentage.
+`1`- 在报价上应用一个百分比折扣，`negotiated_price_value`参数指示这个百分比。
 
-`2` - Apply a fixed amount as a discount for the quote. The `negotiated_price_value`parameter specifies the amount of the discount.
+`2` - 在报价上应用一个固定的折扣价。`negotiated_price_value`参数指定这个折扣价
 
-`3` - Set a proposed price for the entire quote. The `negotiated_price_value`parameter specifies the proposed price.
+`3` - 设置整个报价单的提议价，`negotiated_price_value`参数指示这个价格
 
 **服务名称**
 
@@ -81,12 +79,12 @@ The `negotiated_price_type` can have one of the following values:
 }
 {% endhighlight %}
 
-### Add a new quote item to the negotiable quote
+### 添加一个报价项到议价中
 
-The buyer can add, update, or delete items from the quote under the following conditions:
+在以下条件下，购买者可以从报价中添加，更新或删除项
 
-* The quote is in one of the following system states: `created`, `processing_by_admin`, or `submitted_by_customer`.
-* The quote doesn't have a negotiated price.
+* 报价处于以下的系统状态中：`created`, `processing_by_admin`, 或 `submitted_by_customer`.
+* 报价还没有商议的价格
 
 **样例用法**
 
@@ -127,7 +125,7 @@ The buyer can add, update, or delete items from the quote under the following co
 {% endhighlight %}
 
 
-### Change the quote expiration date
+### 修改报价的过期日期
 
 **样例用法**
 

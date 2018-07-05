@@ -65,7 +65,7 @@ ActionsColumn-specific configuration:
     <th>Option</th>
     <th>描述</th>
     <th>Type</th>
-    <th>Required</th>
+    <th>必需</th>
   </tr>
   <tr>
     <td><code>callback</code></td>
@@ -89,12 +89,12 @@ ActionsColumn-specific configuration:
     <td><code>index</code></td>
     <td>Action's identifier.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>label</code></td>
     <td>Label to be displayed in the field.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
 </table>

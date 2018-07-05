@@ -14,19 +14,19 @@ functional_areas:
   - Integration
 ---
 
-When the seller and buyer user agree on the quoted products and their prices, the negotiated quote is ready to be converted to an order.
+当销售者和购买者用户接受报价产品和它们的价格时，商议报价即准备好转成订单。
 
-During the standard checkout process, Magento refreshes and recalculates all product and shipping prices as well as taxes. This process is different for the quote that has a negotiated price (discounted offer from the seller). The system keeps the quoted price, but checks the tax amounts. If the tax amounts are outdated, Magento recalculates them and updatesnthe quote totals. These tax adjustments can change the order grand total. The order and invoice are created with the recalculated taxes and new grand total. All other prices in the quote remain unchanged.
+在标准结算过程中，Magento刷新并重新计算所有产品和物流的价格以及税费。此过程与有商议价格(销售者提供折扣)的报价不同，系统保持报价，但检查税额。如果税额过期，Magento重新计算它们更新总报价。税额调整可以改变订单的总价。订单和发票随重新计算而创建。所有其它价格保持不变。
 
-The same rule is applied when the quote has the proposed shipping price and the shipping taxes change on the checkout. The buyer pays the updated price, but this does not affect the other quote amounts.
+相同的规则也被应用于当报价有提供物流价格并且物流价格在结算时发生了改变时。购买者支付更新后的价格，但这并不会影响其的报价金额。
 
-The following diagram illustrates the workflow for {{site.data.var.b2b}} negotiable quote checkouts:
+下图说明了{{site.data.var.b2b}}商议报价结算的工作流程：
 
-![Checkout process]({{ page.baseurl }}/b2b/images/quote-checkout-process.png)
+![结算过程]({{ page.baseurl }}/b2b/images/quote-checkout-process.png)
 
-## Manage shipping addresses
+## 管理物流地址
 
-A negotiated quote can be initiated without a shipping address. However, before the order can be placed, the shipping address must be provided.
+议价可以在没有物流地址的情况下启动。然而在定单被确认前，物流地址必须提供。
 
 **REST接口**
 
@@ -36,9 +36,9 @@ POST /V1/negotiable-carts/:cartId/estimate-shipping-methods-by-address-id
 POST /V1/negotiable-carts/:cartId/shipping-information
 {% endhighlight %}
 
-### Estimate shipping costs specifying an address
+### 估计物流指定地址的花费
 
-This call takes a full shipping address as input and estimates shipping fees. It returns a list of available shipping methods.
+此调用拿一个完整的物流地址作为输入来估算运费。它返回一个物流方式的列表。
 
 **服务名称**
 
@@ -88,9 +88,9 @@ This call takes a full shipping address as input and estimates shipping fees. It
 
 {% endhighlight %}
 
-### Estimate shipping costs specifying an address ID
+### 估计指定地址ID物流花费
 
-This call takes an address ID as input and estimates shipping fees. It returns a list of available shipping methods.
+此调用拿一个地址ID作为输入估算运费。它返回一个物流方式的列表。
 
 **服务名称**
 
@@ -128,9 +128,9 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 
 {% endhighlight %}
 
-### Set the shipping and billing information
+### 设置物流和账单信息
 
-In this call, you specify the shipping and billing addresses, as well as the selected `shipping_carrier_code` and `shipping_method_code`. Magento returns a list of payment options and calculates the order totals.
+在此调用中，指定物流和账单地址及选择`shipping_carrier_code` 和 `shipping_method_code`。Magento返回一个支付选项列表和算出的订单总价。
 
 **服务名称**
 
@@ -343,9 +343,9 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 {% endhighlight %}
 {% endcollapsible %}
 
-## Manage billing addresses
+## 管理账单地址
 
-If the billing address isn't provided through another call, use the `POST /V1/negotiable-carts/:cartId/billing-address` to specify it.
+如果账单地址没有通过其它调用提供，可以使用`POST /V1/negotiable-carts/:cartId/billing-address`调用来指定。
 
 **服务名称**
 
@@ -358,9 +358,9 @@ POST /V1/negotiable-carts/:cartId/billing-address
 GET /V1/negotiable-carts/:cartId/billing-address
 {% endhighlight %}
 
-### Set the billing address
+### 设置账单地址
 
-This call assigns a billing address to the specified negotiable quote.
+此调用分配账单地址到指定的议价中。
 
 **样例用法**
 
@@ -393,11 +393,11 @@ This call assigns a billing address to the specified negotiable quote.
 
 []
 
-### Return the billing address
+### 返回账单地址
 
-This call returns the billing address for the specified negotiable quote.
+此调用返回指定议价的账单地址
 
-**Sample usage**
+**示例用法**
 
 `GET /V1/negotiable-carts/86/billing-address`
 
@@ -429,9 +429,9 @@ This call returns the billing address for the specified negotiable quote.
 }
 {% endhighlight %}
 
-## Manage cart coupons
+## 管理优惠券
 
-B2B allows coupons to be used toward payment.
+B2B允许在支付时使用优惠券
 
 **服务名称**
 
@@ -444,9 +444,9 @@ PUT /V1/negotiable-carts/:cartId/coupons/:couponCode
 DELETE /V1/negotiable-carts/:cartId/coupons
 {% endhighlight %}
 
-### Apply a coupon to a negotiable quote
+### 在议价中应用优惠券
 
-If the initial quote applies a coupon to the totals, Magento ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.
+如果初始的报价应用了一个优惠券到总价上，在转化报价到议价时Magento忽略此优惠券。然而你可以在结算的时候应用优惠券。
 
 **样例用法**
 
@@ -458,11 +458,11 @@ PUT /V1/negotiable-carts/6/coupons/SAVE5
 
 **响应**
 
-`true`, indicting the request was successful
+`true`,指示请求成功
 
-## Manage gift cards
+## 管理礼品卡
 
-B2B allows gift cards to be used as payment.
+B2B允许支付时使用礼品卡
 
 **服务名称**
 
@@ -475,9 +475,9 @@ POST /V1/negotiable-carts/:cartId/giftCards
 DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode
 {% endhighlight %}
 
-### Apply a gift card to a negotiable quote
+### 应用礼品卡到议价中
 
-If the initial quote applies a gift card to the totals, Magento ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.
+如果报价初始在总价上有礼品卡，在报价转化为议价时Magento会忽略它。然而你可以在结算的时候应用礼品卡。
 
 **样例用法**
 
@@ -499,9 +499,9 @@ If the initial quote applies a gift card to the totals, Magento ignores the gift
 
 `true`
 
-### Delete a gift card from at checkout
+### 结算时删除礼品卡
 
-This call removes a gift card that has been applied to a negotiable quote.
+此调用移除已经应用在议价上的礼品卡。
 
 **样例用法**
 
@@ -515,9 +515,9 @@ This call removes a gift card that has been applied to a negotiable quote.
 
 `true`,指示请求成功
 
-## Manage payment information
+## 管理支付信息
 
-When you submit payment information, Magento creates an order and sends an order confirmation to the buyer.
+当你提交支付信息时，Magento创建一个定单并发送订单确认给购买者。
 
 **服务名称**
 
@@ -531,9 +531,9 @@ GET /V1/negotiable-carts/:cartId/payment-information
 POST /V1/negotiable-carts/:cartId/set-payment-information
 {% endhighlight %}
 
-### Set payment information without placing the order
+### 不确认定单设置支付信息
 
-This call sets payment information and the billing address for the negotiable quote. However, Magento does not create an order afterward.
+此调用设置议价的支付信息及账单地址。然而,完成之后Magento不一并创建订单。
 
 **样例用法**
 
@@ -566,11 +566,11 @@ This call sets payment information and the billing address for the negotiable qu
 
 **响应**
 
-`true`, indicating the payment information was set
+`true`, 指示支付信息设置成功
 
-### Set payment information and place the order
+### 设置支付信息并确认订单
 
-This call sets payment information and the billing address for the negotiable quote, then creates an order.
+此调用为议价设置支付信息及账单地址并一并创建订单。
 
 **样例用法**
 
@@ -603,11 +603,11 @@ This call sets payment information and the billing address for the negotiable qu
 
 **响应**
 
-An order ID, such as `83`
+订单ID，比如`83`
 
-### Return payment information
+### 返回支付信息
 
-This call returns returns payment information and all information from the `totals` object.
+此调用返回支付信息及`totals`对象的所有信息
 
 **样例用法**
 
@@ -782,9 +782,9 @@ This call returns returns payment information and all information from the `tota
 {% endhighlight %}
 {% endcollapsible %}
 
-## Review cart totals
+## 浏览购物车总价
 
-This call is similar to `GET /V1/negotiable-carts/:cartId/payment-information`, except it does not return payment information.
+此调用与`GET /V1/negotiable-carts/:cartId/payment-information`类似，但不返回支付信息
 
 **服务名称**
 

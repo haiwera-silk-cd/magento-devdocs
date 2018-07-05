@@ -65,18 +65,18 @@ Sizes-specific configuration:
     <th>Option</th>
     <th>描述</th>
     <th>Type</th>
-    <th>Required</th>
+    <th>必需</th>
   </tr>
   <tr>
     <td><code>label</code></td>
     <td>Label displayed in the rendered options list. This label is usually equal to the corresponding <code>value</code> property.</td>
     <td>String | Number</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>value</code></td>
     <td>Options identifier which represents the table size.</td>
     <td>Number</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
 </table>

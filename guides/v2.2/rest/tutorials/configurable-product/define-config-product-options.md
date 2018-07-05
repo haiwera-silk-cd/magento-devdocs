@@ -19,7 +19,7 @@ The `POST V1/configurable-products/:sku/options` call assigns the specified `att
 
 The value assigned to the `value_index` must be unique within the system.
 
-**Endpoint**
+**接口**
 
 `POST <host>/rest/default/V1/configurable-products/MS-Champ/options`
 
@@ -49,7 +49,7 @@ A configurable option ID number, such as `"335"`.
 
 The call to link a simple (child) product to the configurable product accepts only one `childSku` value. You must repeat this call for the `MS-Champ-M` and `MS-Champ-L` products.
 
-**Endpoint**
+**接口**
 
 `POST <host>/V1/configurable-products/MS-Champ/child`
 

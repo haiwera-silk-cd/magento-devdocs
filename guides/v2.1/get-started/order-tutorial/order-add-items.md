@@ -26,11 +26,11 @@ To add a {% glossarytooltip f85f36ad-2942-446e-b711-39f2a16f6364 %}simple produc
 
 The following example adds an orange medium-sized Radiant women's t-shirt (`sku`: `WS12-M-Orange`) to the cart.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/items`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -67,11 +67,11 @@ The requirements for adding a {% glossarytooltip 38fc3629-ee25-4de5-ac7a-72db8e8
 
 The following example adds the downloadable product Advanced Pilates & Yoga (`sku`: 240-LV08)
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/items`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -137,11 +137,11 @@ The `GET /V1/configurable-products/:sku/children` call returns information about
 
 We now know the values for `option_value` for `size` and `color` are `168` and `52`, so we're ready to add the product to the cart.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/items`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -319,11 +319,11 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 * 8 ft Sprite Yoga strap (`id`: `6`)
 * Sprite Foam Roller (`id`: `8`)
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/items`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

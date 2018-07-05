@@ -14,10 +14,10 @@ functional_areas:
   - Integration
 ---
 
-This topic describes the calls required to initiate a negotiable quote and to prepare it to be converted to an order.
+本节描述启动议价及准备将其转化为订单须要的调用。
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-All negotiable quote calls require an admin authorization token.
+所有的议价调用需要一个管理员授权令牌。
 </div>
 
 **REST接口**
@@ -38,33 +38,33 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- |---
-`quoteId`	| Identifies the target quote for the operation.	| integer	| Required
-`quoteName`	| The name of the quote to be created.	| string	| Required
-`comment`	| The comment to add to the quote.	| string | 可选
-`files` | An array of files to add to the quote | array | 可选
+`quoteId`	| 指操作的目标报价	| integer	| 必需
+`quoteName`	| 要创建的报价的名称	| string	| 必需
+`comment`	| 添加到报价的说明	| string | 可选
+`files` | 添加到报价的文件数组 | array | 可选
 
-The buyer or the seller can optinally attach up to 10 files to provide details about the quote. Each file must be converted into base64.
+购买者或销售者可以选择最多关联10个文件来提供报价的细节。每个文件必须被转为base64
 
-The `files` array contains the following parameters
+`文件`数组包含下面的参数
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- |---
-`base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required
-`type` | Defines the type of file, such as `text/plain`或`application/pdf`| string | 可选
-`name` | The name of the file to be uploaded, such as `quote.txt`或`quote.pdf`. | string | Required
+`base64_encoded_data` | 定义了添加文件内容的base64字符串。| string | 必需
+`type` | 定义文件类型，像`text/plain`或`application/pdf`| string | 可选
+`name` | 将被上传的文件名，像 `quote.txt`或`quote.pdf`. | string | 必需
 
 
-### Request a negotiable quote
+### 请求议价
 
-Before negotiable quote can begin, the following conditions must be met:
+在议价能被开始前，以下的条件必须具备：
 
-* A regular Magento quote has been created (`POST /V1/customers/:customerId/carts`或`POST /V1/customers/carts/mine`)
-* The quote contains items (`POST /V1/carts/:quoteId/items`)
+* 一个正确的Magento报价已经创建(`POST /V1/customers/:customerId/carts`或`POST /V1/customers/carts/mine`)
+* 报价包含了项(`POST /V1/carts/:quoteId/items`)
 
-If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can add it to the standard quote before initiating the negotiable quote (`POST /V1/carts/:cartId/shipping-information`)
+如果议价需要一个物流地址(为商议和税额计算)，你可以在启动议价前添加它到标准报价中 (`POST /V1/carts/:cartId/shipping-information`)
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Requesting a negotiable quote requires an admin authorization token.
+请求一个议价需要管理员令牌。
 </div>
 
 **服务名称**
@@ -95,23 +95,23 @@ Requesting a negotiable quote requires an admin authorization token.
 
 `true`,指示请求成功
 
-Magento creates a negotiable quote in the `Created` state.
+Magento创建议价为`Created`状态。
 
-### Submit a negotiable quote to a buyer
+### 提交议价到购买者
 
-When you submit a negotiable quote to the buyer, the status for the buyer changes to "Updated". The buyer can subsequently edit or update the quote.
+当你提交一个议价到购买者时，对于购买者此状态改为"Updated"。购买者随后可以编辑和修改这个报价。
 
-The seller can send a request to submit the quote to the buyer. The request can be submitted only for quotes in the following system states:
+销售者可以发送一个请求来提交报价到购买者。请求仅可以在报价是以下系统状态时被提交
 
-* Created
-* Processing by admin
-* Submitted by customer
+* 已创建
+* 管理员处理中
+* 管理员已提交
 
-When the quote is submitted to the buyer:
+当报价被提交到购买者时：
 
-* Magento checks catalog prices (price per item), cart rules, and discounts then recalculates the prices and taxes. The shipping price and the negotiated price are not affected (if they are entered into the quote).
-* Items that are no longer active or available for this buyer are removed from quote and prices are recalculated.
-* The quote state is changed to Submitted by admin.
+* Magento检查产品目录的价格(每项的价格)，购物车规则及折扣然后重新计算价格和税额。物流价格和商议价格不受影响(如果它们在报价中).
+* 对于此购买者不活动或不再有效的项会被从报价中移除并重新计算价格。
+* 报价状态改为"管理员已提交"
 
 **服务名称**
 
@@ -134,15 +134,15 @@ When the quote is submitted to the buyer:
 
 `true`,指示请求成功
 
-### Update a quote
+### 更新报价
 
-Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html) for use cases.
+使用`PUT /V1/negotiableQuote/:quoteId`调用来更新报价。参考[更新协商报价]({{ page.baseurl }}/b2b/negotiable-update.html)了解使用方法
 
-### Recalculate prices
+### 重新计算价格
 
-The process of completing a negotiable quote can take days, or even longer. During that time, the prices for the items in the quote may have changed directly or indirectly.  For example, someone could have changed prices in the shared catalogs or adjusted price rules, and the prices in the negotiable quote are stale. This call refreshes item prices, taxes, discounts, cart rules in the negotiable quote. Quotes that are locked for the seller will not be updated.
+完成议价的过程可能要几天或更长时间。在这期间，报价中每项的价格可能会直接或间接地发生变化。例如，有人修改了共享产品目录的价格或调整了价格规则，这样，报价中的价格就不再适用了。此调用更新议价中的项的价格、税额、折扣、购物车规则。锁定的报价对销售者来说是不可更改的。
 
-The request can be applied to one or more quotes at the same time.
+此请求能在同一时间被应用在一个或多个报价中
 
 **样例用法**
 
@@ -160,9 +160,9 @@ The request can be applied to one or more quotes at the same time.
 
 `true`,指示请求成功
 
-### Set the shipping method
+### 设置物流方式
 
-To set the shipping method, the quote must be in the `created`, `processing_by_admin`或`submitted_by_customer`. In addition, the quote must have a shipping address but no shipping method or shipping price.
+要设置物流方式，报价必须在`created`、`processing_by_admin`或`submitted_by_customer`.状态，此外，报价必须拥有物流地址但没有物流方式和物流价格。
 
 **样例用法**
 
@@ -179,15 +179,15 @@ To set the shipping method, the quote must be in the `created`, `processing_by_a
 **响应**
 
 
-### Decline a quote
+### 拒绝一个报价
 
-The seller can send a request to decline the quote. The request can be submitted only for quotes in the following system states:
+销售者可以发送一个请求来拒绝此报价。这个请求仅能在报价在以下状态时被提交：
 
-* Created
-* Processing by admin
-* Submitted by customer
+* 已创建
+* 管理员处理中
+* 管理员已提交
 
-When you decline a quote, all custom pricing will be removed from the quote. The buyer will be able to place an order using their standard catalog prices and discounts.
+当你拒绝一个报价时，报价的所有的客户出价将被移除。购买者仍可以使用标准产品目录价格和折扣确认定单。
 
 **服务名称**
 
@@ -210,13 +210,13 @@ When you decline a quote, all custom pricing will be removed from the quote. The
 
 `true`,指示请求成功
 
-## Miscellaneous operations
+## 杂项操作
 
-These tasks are not essential for completing a negotiable quote, but might be useful
+这些工作对完成议价来说不是必要的，但可能有用。
 
-### List all comments for a quote
+### 列出报价的所有评论信息
 
-Magento returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A `creator_type` value of `3` indicates the buyer made the comment. If the value is `2`, the seller commented.
+Magento列出所有的与指定报价ID相关的评论信息。评论按时间排序，最老的列在最前面。`creator_type`值为3表示是购买者发表的评论；为2表示是销售者发表的。
 
 **样例用法**
 
@@ -308,9 +308,9 @@ Magento returns all the comments associated with the specified quote ID. The com
 {% endhighlight %}
 
 
-### Retrieve a negotiable quote attachment
+### 接收议价附件
 
-Use the `attachmentContent` call to retrieve the files (in base64 format) attached to a negotiable quote.
+使用`attachmentContent`调用来接收关联到议价的(base64编码了的)文件。
 
 `negotiableQuoteAttachmentContentManagementV1`
 

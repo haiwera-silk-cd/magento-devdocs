@@ -19,7 +19,7 @@ pages:
           versions: ["2.3"]
           url: http://devdocs.magento.com/swagger/index_23.html
 
-        - label: List of REST endpoints by module
+        - label: 模块REST接口列表
           url: /rest/list.html
 
         - label: List of service names per module
@@ -55,6 +55,6 @@ pages:
             - label: General notes
               url: /rest/modules/catalog.html
 
-            - label: Manage prices for multiple products
+            - label: 管理多产品价格
               url: /rest/modules/catalog-pricing.html
               versions: ["2.2", "2.3"]

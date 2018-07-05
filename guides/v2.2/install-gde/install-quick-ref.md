@@ -150,7 +150,7 @@ functional_areas:
 6.	第四步: 用户配置页允许你配置默认货币、时区和语言.
 
 	![配置默认货币、时区和语言]({{ site.magentourl }}/common/images/install_qr_store.png){:width="400px"}
-7.	第五步: 创页管理帐号页允许你创建Magento管理员. 这个管理员有Magento的所有权限.
+7.	第五步: 创页管理账号页允许你创建Magento管理员. 这个管理员有Magento的所有权限.
 
 	![创建Magento管理员]({{ site.magentourl }}/common/images/install_qr_admin.png){:width="400px"}
 8.	第六步: 开始安装，点击**现在安装**开始安装.

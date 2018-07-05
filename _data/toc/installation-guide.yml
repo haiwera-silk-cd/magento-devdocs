@@ -176,7 +176,7 @@ pages:
             - label: 步骤4. 定制你的网店
               url: /install-gde/install/web/install-web_4-customize-store.html
 
-            - label: 步骤 5.创建管理员帐户
+            - label: 步骤 5.创建管理员账户
               url: /install-gde/install/web/install-web_5-create-admin.html
 
             - label: 步骤 6. 安装
@@ -241,7 +241,7 @@ pages:
             - label: 配置网店
               url: /install-gde/install/cli/install-cli-subcommands-store.html
 
-            - label: 创建、编辑或解锁 Magento管理员帐号
+            - label: 创建、编辑或解锁 Magento管理员账号
               url: /install-gde/install/cli/install-cli-subcommands-admin.html
 
             - label: 备份和还原文件系统，媒体文件和数据库

@@ -49,25 +49,25 @@ ExportButton-specific configuration:
     <th>Option</th>
     <th>描述</th>
     <th>Type</th>
-    <th>Required</th>
+    <th>必需</th>
   </tr>
   <tr>
     <td><code>label</code></td>
     <td>Option's label.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>url</code></td>
     <td>Path to controller that will process the request.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
   <tr>
     <td><code>value</code></td>
     <td>Identifier of the export option.</td>
     <td>String</td>
-    <td>Required</td>
+    <td>必需</td>
   </tr>
 </table>
 

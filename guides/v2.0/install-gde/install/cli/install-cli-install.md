@@ -398,7 +398,7 @@ See also <a href="{{ page.baseurl }}/install-gde/install/cli/install-cli-uninsta
 </div>
 
 #### 下一步
-*	如果你有一个访问Magento服务器的帐户, 请参考[可选地设置UMASK]({{ page.baseurl }}/install-gde/install/post-install-umask.html).
+*	如果你有一个访问Magento服务器的账户, 请参考[可选地设置UMASK]({{ page.baseurl }}/install-gde/install/post-install-umask.html).
 
 	这是一种在共享主机上安装的典型的类型
 *	[验证安装]({{ page.baseurl }}/install-gde/install/verify.html).

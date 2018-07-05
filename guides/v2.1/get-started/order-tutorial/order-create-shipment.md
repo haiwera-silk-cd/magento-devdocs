@@ -24,13 +24,13 @@ To create a partial shipment, specify only those `order_item_id`s that are to be
 
 If the call is successful on a full shipment, Magento changes the status of an order to Complete.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/order/3/ship`
 
 where `3` is the order id.
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

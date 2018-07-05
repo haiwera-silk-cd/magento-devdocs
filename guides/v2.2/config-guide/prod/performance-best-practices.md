@@ -342,7 +342,7 @@ Magento does not provide any specific integration to serve and deliver media con
 
 The easiest way of serving media content is delivering and caching it on a Varnish server. This approach assumes either a shared file system for storing media content or a dedicated server pointing to Varnish.
 
-For medium and high load environments, we recommend to use Content Delivery Network (CDN) services like Fastly, Akamai, and others. When working with these services, Magento uses the classic pull approach for content updates. You must configure Magento URLs to work with the corresponding CDN service. By moving media content to a CDN, you will significantly lessen the load on your instances.
+For medium and high load environments, we recommend to use 内容分发网络 (CDN) services like Fastly, Akamai, and others. When working with these services, Magento uses the classic pull approach for content updates. You must configure Magento URLs to work with the corresponding CDN service. By moving media content to a CDN, you will significantly lessen the load on your instances.
 
 ### Log storage
 

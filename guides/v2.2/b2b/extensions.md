@@ -12,4 +12,4 @@ functional_areas:
   - B2B
 ---
 
-See [Module Reference Guide]({{ page.baseurl }}/mrg/intro.html) for information about each {{site.data.var.b2b}} module.
+参考 [模块参考手册]({{ page.baseurl }}/mrg/intro.html)了解更多关于每个{{site.data.var.b2b}}模块的信息

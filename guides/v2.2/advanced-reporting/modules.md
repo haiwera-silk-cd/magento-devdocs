@@ -12,7 +12,7 @@ functional_areas:
 [Analytics] 模快实现以下的功能:
 
   * 允许订阅Magento商业智能(MBI)和自动重新订阅
-  * 修改其础URL而不改变MBI帐号
+  * 修改其础URL而不改变MBI账号
   * 为[报表数据集]声明配置方案
   * 为MBI收集Magento的报表数据
   * 采用提供收集的数据的API

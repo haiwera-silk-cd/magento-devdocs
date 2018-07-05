@@ -18,7 +18,7 @@ functional_areas:
 
 Each step in this tutorial provides the following information:
 
-**Endpoint**
+**接口**
 
 This section lists the HTTP verb and full path to the endpoint. The basic structure of a REST call in Magento is
 
@@ -53,11 +53,11 @@ By default, an admin token is valid for 4 hours. To change this value, log in to
 
 See [基于访问令牌的认证]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html) for more information about authorization tokens.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/integration/admin/token`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

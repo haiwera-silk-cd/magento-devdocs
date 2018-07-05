@@ -34,11 +34,11 @@ If the customer had selected the `flatrate` shipping method ($5 per item), we wo
 
 The `return_to_stock_items` array specifies which `order_item_id`s can be returned to stock and be resold.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/order/5/refund`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

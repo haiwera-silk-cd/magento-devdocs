@@ -14,51 +14,51 @@ functional_areas:
 ---
 
 
-Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. {{site.data.var.b2b}} defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
+在一个公司中，客户可能有多个不同的工作角色，职责层级，以及访问他们公司信息权限。{{site.data.var.b2b}}定义了几个类型的系统资源，并且公司管理员(或一个代表公司管理员的操作集成)使用公司角色授权或阻止这些资源的访问，公司管理员拥有所有资源的访问权限。
 
-{{site.data.var.b2b}} defines the following types of resources:
+{{site.data.var.b2b}} 定义了以下类型的资源：
 
-* Sales
-* Negotiable quotes
-* Company profile
-* Company user management
-* 公司信用帐户
+* 销售
+* 可商议的报价
+* 公司信息
+* 公司用户管理
+* 公司信用账户
 
-Each of these resources contains a hierarchy of other resources. When a Company Admin grants or blocks access to a resource from the store UI, the action applies to all sub-resources, unless explicitly overridden. However, if you grant or block accesss using web APIs, you must specify each resource individually.
+其中的每一个资源都包含了其它资源的一个等级结构，当公司管理员从网店UI上授权或阻止一个资源的访问时，此动作会应用到所有的子资源，除非明确地覆盖。然面，如果你使用web API授权或阻止访问，你必须逐一地指定每一个资源
 
-The following table lists all the resources that are available to the customers defined with a company. To visualize the resource hierarchy, log in to a store as the Company Admin and select **Roles and Permissions**, then click the **Edit** action next to the Default User role.
+以下的表格列出了所有对客户可用的，与公司一起定义的资源。要可视化这些资源的等级结构，可以以公司管理员的身份登录到网店，选择**角色和权限**然后点击编辑，下一步到默认用户角色。
 
-Resource name | Display name | Hierarchy level
+资源名称 | 显示名称 | 层等级
 --- | --- | ---
-Magento_Company::index | All | 1
-Magento_Sales::all | Sales | 2
-Magento_Sales::place_order | Checkout (place order) | 3
-Magento_Sales::payment_account | Use Pay On Account method | 4
-Magento_Sales::view_orders | View orders | 3
-Magento_Sales::view_orders_sub | View orders of subordinate users | 4
-Magento_NegotiableQuote::all | Quotes | 2
-Magento_NegotiableQuote::view_quotes | View | 3
-Magento_NegotiableQuote::manage | Request, Edit, Delete | 4
-Magento_NegotiableQuote::checkout | Checkout with Quote | 4
-Magento_NegotiableQuote::view_quotes_sub | View quotes of subordinate users | 4
-Magento_Company::view | Company Profile | 2
-Magento_Company::view_account | Account Information (View) | 3
-Magento_Company::edit_account | Edit | 4
-Magento_Company::view_address | Legal Address (View) | 3
-Magento_Company::edit_address | Edit | 4
-Magento_Company::contacts | Contacts (View) | 3
-Magento_Company::payment_information| Payment Information (View) | 3
-Magento_Company::user_management | Company User Management | 2
-Magento_Company::roles_view | View roles and permissions | 3
-Magento_Company::roles_edit | Manage roles and permissions | 4
-Magento_Company::users_view | View users and teams | 3
-Magento_Company::users_edit | Manage users and teams |  4
-Magento_Company::credit | 公司信用帐户 | 2
-Magento_Company::credit_history | view | 3
+Magento_Company::index | 全部 | 1
+Magento_Sales::all | 销售 | 2
+Magento_Sales::place_order | 结算(确认订单) | 3
+Magento_Sales::payment_account | 使用记帐方式 | 4
+Magento_Sales::view_orders | 查看订单 | 3
+Magento_Sales::view_orders_sub | 查看下级用户的订单 | 4
+Magento_NegotiableQuote::all | 报价 | 2
+Magento_NegotiableQuote::view_quotes | 查看 | 3
+Magento_NegotiableQuote::manage | 请求，编辑，删除 | 4
+Magento_NegotiableQuote::checkout | 结算报价 | 4
+Magento_NegotiableQuote::view_quotes_sub | 查看下级用户的报价 | 4
+Magento_Company::view | 公司信息 | 2
+Magento_Company::view_account | 帐号信息(查看) | 3
+Magento_Company::edit_account | 编辑 | 4
+Magento_Company::view_address | 法人地址(查看) |3
+Magento_Company::edit_address | 编辑 | 4
+Magento_Company::contacts | 联系人(查看) | 3
+Magento_Company::payment_information| 支付信息(查看) | 3
+Magento_Company::user_management | 公司用户管理 | 2
+Magento_Company::roles_view | 查看角色和权限 | 3
+Magento_Company::roles_edit | 管理角色和权限 | 4
+Magento_Company::users_view | 查看用户和团队 | 3
+Magento_Company::users_edit | 管理用户和团队 |  4
+Magento_Company::credit | 公司信用账户 | 2
+Magento_Company::credit_history | 查看 | 3
 
 ## 管理公司角色
 
-The Company Admin controls the possible actions for each customer within the company by creating common roles with embedded permissions and then assigning them to company users. In most cases, a few roles will be sufficient to cover all the different possible combinations of permissions needed for a company.
+公司管理员创建公共的角色及为角色绑定权限，然后将它们分配给用户，用以控制公司内每个客户可能的动作，在大多数情况下，少量的角色就足以覆盖公司所需的不同可能的权限组合
 
 **服务名称**
 
@@ -74,21 +74,21 @@ DELETE /V1/company/role/:roleId
 GET /V1/company/role/
 {% endhighlight %}
 
-**RoleInterface Parameters**
+ **RoleInterface参数**
 
-The following table lists the parameters defined in `RoleInterface`.
+下面的表格列出了`RoleInterface`接口定义的参数
 
 <table>
 <tr>
 <th>名称</th><th>描述</th><th>格式</th><th>要求</th></tr>
 <tr>
-<td><code>id</code></td><td>The role ID</td><td>integer </td><td>Required for updates and deletes</td></tr>
+<td><code>id</code></td><td>角色 ID</td><td>integer </td><td>更新和删除时必需</td></tr>
 <tr>
-<td><code>role_name</code></td><td>The label assigned to the role</td><td>string</td><td>Required to create a role</td></tr>
+<td><code>role_name</code></td><td>分配给角色的名字</td><td>string</td><td>创建角色时必需</td></tr>
 <tr>
-<td><code>permissions</code></td><td>A list of resources and permissions granted to the role. See the Permissions array table below for details.</td><td>Array[string]</td><td> Required to create a role</td></tr>
+<td><code>permissions</code></td><td>一个授予给角色的资源及权限的列表，请情参考下面的权限数组表</td><td>Array[string]</td><td> 创建角色时必需</td></tr>
 <tr>
-<td><code>company_id</code></td><td>The company associated with this role </td><td>integer</td><td>Required to create a role</td></tr>
+<td><code>company_id</code></td><td>角色关联的公司 </td><td>integer</td><td>创建角色时必需</td></tr>
 </table>
 
 **Permissions array**
@@ -97,21 +97,21 @@ The following table lists the parameters defined in `RoleInterface`.
 <tr>
 <th>名称</th><th>描述</th><th>格式</th><th>要求</th></tr>
 <tr>
-<td><code>id</code></td><td>The permission ID generated by Magento.</td><td>integer</td><td>Required for updates and deletes</td></tr>
+<td><code>id</code></td><td>Magento生成的权限的ID</td><td>integer</td><td>更新和删除时必需</td></tr>
 <tr>
-<td><code>role_id</code></td><td>The role ID to which the permission applies. </td><td>integer</td><td>Required to create a role</td></tr>
+<td><code>role_id</code></td><td>权限要应用在的角色ID </td><td>integer</td><td>创建角色时必需</td></tr>
 <tr>
-<td><code>resource_id</code></td><td>The internal name of a Magento resource, such as <code>Magento_Sales::place_order</code>.</td><td>string</td><td>Required</td></tr>
+<td><code>resource_id</code></td><td>Magento资源的内部名称，比如 <code>Magento_Sales::place_order</code>.</td><td>string</td><td>必需</td></tr>
 <tr>
-<td><code>permission</code></td><td>Either <code>allow</code>或<code>deny</code>.</td><td>string</td><td>Required</td></tr>
+<td><code>permission</code></td><td>Either <code>allow</code>或<code>deny</code>.</td><td>string</td><td>必需</td></tr>
 </table>
 
 
-### Create a role
+### 创建一个角色
 
-This example creates a role named "Junior Buyer". It allows the assignee to access to all Sales resources except "View orders of subordinate users".
+本例创建一个名为"Junior Buyer"我角色，它允许分配人访问所有销售的资源，除了"查看下级用户的订单"
 
-All resouces that are not explicitly allowed are denied. You must specify the `Magento_Company::index` resource in all calls.
+所有不明确分配的资源都是被阻止的，你必须在所有调用中指定`Magento_Company::index`资源
 
 **样例用法**
 
@@ -301,11 +301,11 @@ All resouces that are not explicitly allowed are denied. You must specify the `M
 {% endhighlight %}
 {% endcollapsible %}
 
-### Update a role
+### 更新角色
 
-Each update call must include all resources the assignee will have access to.
+每个更新调用必须包含分配人将会访问的所有资源
 
-This example call adds access to all Negotiable Quote resources except "View quotes of subordinate users" to the Junior Buyer role.
+本调用例子添加所有除了"查看下级用户报价"的议价资源到Junior Buyer角色
 
 **样例用法**
 
@@ -500,9 +500,9 @@ This example call adds access to all Negotiable Quote resources except "View quo
 {% endhighlight %}
 {% endcollapsible %}
 
-### Return all information about a role
+### 返回角色的所有信息
 
-This call returns the `id`, role name, and set of permissions defined within the specified `role_id`.
+此调用返回`id`，角色名，和指定`role_id`定义的权限集
 
 **样例用法**
 
@@ -677,9 +677,9 @@ This call returns the `id`, role name, and set of permissions defined within the
 {% endhighlight %}
 {% endcollapsible %}
 
-### Delete a role
+### 删除角色
 
-You cannot delete a role if it is the only role defined within the company.
+如果此角色是公司唯一的角色，则你不能删除它
 
 **样例用法**
 
@@ -693,9 +693,9 @@ You cannot delete a role if it is the only role defined within the company.
 
 `true`,指示请求成功
 
-### Search for a role
+### 查找一个角色
 
-The following call returns all roles that have been created for a company  (`company_id` = `2`).
+下面的调用返回所有的被一个公司创建的(`company_id` = `2`)角色
 
 参考[使用REST API搜索]({{ page.baseurl }}/rest/performing-searches.html)了解更多关于构造查询的信息
 

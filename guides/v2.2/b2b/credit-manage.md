@@ -1,8 +1,8 @@
 ---
 group: b2b
 subgroup: 10_REST
-title: 管理公司信用帐户
-menu_title: 管理公司信用帐户
+title: 管理公司信用账户
+menu_title: 管理公司信用账户
 menu_order: 18
 level3_menu_node: level3child
 level3_subgroup: credit
@@ -35,22 +35,22 @@ GET /V1/companyCredits/company/:companyId
 GET /V1/companyCredits/
 {% endhighlight %}
 
-**公司信用帐户参数**
+**公司信用账户参数**
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`id` | 系统生成的信用ID| integer | Required
-`company_id` | 公司ID| integer | Required
-`credit_limit` | 授予公司的信用总额| Number | Required
+`id` | 系统生成的信用ID| integer | 必需
+`company_id` | 公司ID| integer | 必需
+`credit_limit` | 授予公司的信用总额| Number | 必需
 `balance` | 公司当前欠销售者的总金额| Number | 可选
-`currency_code` | 公司信用的货币代码，比如USD| String | Required
+`currency_code` | 公司信用的货币代码，比如USD| String | 必需
 `exceed_limit` | 指示公司是否能超过信用限额 | Boolean  | 可选
 `available_limit` | 公司当前可用的信用总额 | Number | 可选
 `credit_comment` | 描述产生的改变 | String | 可选
 
 ### 更新公司信用限额
 
-此调用修改了公司信用额度到$1000. `available_limit`参数是计算出来的，所以你不通指定它的值。
+此调用修改了公司信用额度到$1000. `available_limit`参数是计算出来的，所以你不用指定它的值。
 
 **服务名称**
 
@@ -231,9 +231,9 @@ POST /V1/companyCredits/:creditId/increaseBalance
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`value` | 指示公司信用余额操作涉及的金额数量 | Nuumber | Required
-`currency` |交易的货币代码，如USD | String | Required
-`operationType` | 必须是以下值之一 1 - 已分配; 2 - 已更新; 3 - 已购买; 4 - 已报销; 5 - 已退款; 6 - 已归还 | Integer | Required
+`value` | 指示公司信用余额操作涉及的金额数量 | Nuumber | 必需
+`currency` |交易的货币代码，如USD | String | 必需
+`operationType` | 必须是以下值之一 1 - 已分配; 2 - 已更新; 3 - 已购买; 4 - 已报销; 5 - 已退款; 6 - 已归还 | Integer | 必需
 `comment` | 操作描述 | String | 可选
 `options` | 一个为增加和减少信用余额提供附加信息的对象 | Object | 可选
 
@@ -307,7 +307,7 @@ PUT /V1/companyCredits/history/:historyId
 
 ### 保存信用额历史
 
-此调用更新食用额历史指定一个购买的订单号
+此调用更新信用额历史指定一个购买的订单号
 
 **样例用法**
 
@@ -326,7 +326,7 @@ PUT /V1/companyCredits/history/:historyId
 
 `true`,指示调用成功
 
-### 搜索食用额历史ID
+### 搜索信用额历史ID
 
 下面的调用返回一个实例列表，它们的限额都被设置为$500以上
 

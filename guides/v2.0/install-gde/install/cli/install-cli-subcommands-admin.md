@@ -1,6 +1,6 @@
 ---
 group: install_cli
-title: 创建、编辑或解锁 Magento管理员帐号
+title: 创建、编辑或解锁 Magento管理员账号
 version: 2.0
 github_link: install-gde/install/cli/install-cli-subcommands-admin.md
 redirect_from: /guides/v2.0/install-gde/install/install-cli-subcommands-admin.html
@@ -105,8 +105,8 @@ functional_areas:
   </tbody>
 </table>
 
-## 解锁管理员帐号
-使用命令来解锁一个被锁定的帐号，典型地，因为多次输错密码而被锁的帐号。
+## 解锁管理员账号
+使用命令来解锁一个被锁定的账号，典型地，因为多次输错密码而被锁的账号。
 
 	magento admin:user:unlock {user name}
 
@@ -119,9 +119,9 @@ functional_areas:
 
 	The user account "admin" was not locked or could not be unlocked
 
-搞清楚这个帐户是不是管理员，是不是激活的，是不是被锁了。要想在管理面板看到被锁的用户，用管理员登录到管理面板，点击**System** > **Permissions** > **Locked Users**.
+搞清楚这个账户是不是管理员，是不是激活的，是不是被锁了。要想在管理面板看到被锁的用户，用管理员登录到管理面板，点击**System** > **Permissions** > **Locked Users**.
 
-如果帐户不存在，将显示下面的信息:
+如果账户不存在，将显示下面的信息:
 
 	Couldn't find the user account "bob"
 

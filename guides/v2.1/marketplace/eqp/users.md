@@ -218,7 +218,7 @@ GET /rest/v1/users/:mage_id/keys
 
 The following table lists available query parameters, all of which are optional:
 
-| Parameter |  Type  | Required | Description                            |
+| Parameter |  Type  | 必需 | Description                            |
 |-----------|--------|----------|----------------------------------------|
 | type      | string |   no     | Type of keys requested: 'm1'  - Magento 1 product keys, 'm2'  - Magento 2 composer repo keys, 'all' - Both M1 and M2 keys (默认) |
 | label     | string |   no     | The url encoded value of the key label; only valid for 'm2' type.|

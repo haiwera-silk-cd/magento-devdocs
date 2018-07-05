@@ -25,7 +25,7 @@ Magento 2.1.2 contains multiple bug fixes and enhancements, including
 * Compatible with <i>MySQL 5.7</i>.
 
 
-* <i>Two new web APIs (or service contracts) for the Sales module</i> that incorporate functionality into the Sales {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} that is currently available in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface. After you install this patch, you’ll be able to use the Sales API `ShipOrder` and `InvoiceOrder` methods to capture payment and ship product. See <a href="{{ page.baseurl }}/mrg/intro.html" target="_blank">Module Reference Guide</a> for information on using the `ShipOrder` and `InvoiceOrder` interfaces.
+* <i>Two new web APIs (or service contracts) for the Sales module</i> that incorporate functionality into the Sales {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} that is currently available in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} interface. After you install this patch, you’ll be able to use the Sales API `ShipOrder` and `InvoiceOrder` methods to capture payment and ship product. See <a href="{{ page.baseurl }}/mrg/intro.html" target="_blank">模块参考手册</a> for information on using the `ShipOrder` and `InvoiceOrder` interfaces.
 
 ### Why are we adding new APIs in a patch release?
 {:.no_toc} 

@@ -13,11 +13,11 @@ functional_areas:
   - Configuration
 ---
 
-[Fastly]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html) is required for {{site.data.var.ece}}, and is used in Staging and Production environments. It works with Varnish to provide fast caching capabilities and a {% glossarytooltip f83f1fa7-7a64-467b-b629-c2d0c25d2e7f %}Content Delivery Network{% endglossarytooltip %} (CDN) for static assets. Fastly is not available in Integration environments.
+[Fastly]({{ page.baseurl }}/cloud/basic-information/cloud-fastly.html)需要是{{site.data.var.ece}}，并且是适用于准生产环境和生产环境。它以Varnish来提升缓存性能，及以{% glossarytooltip f83f1fa7-7a64-467b-b629-c2d0c25d2e7f %}内容分发网络{% endglossarytooltip %}(CDN)提供静态资源加速，Fastly不能在集成环境中运行。
 
-This information gets you started with installing and configuring Fastly. We provide additional information for backends and Origin shields, and error/maintenance page, and VCL snippets.
+这些信息帮助你开始安装和配置Fastly。我们为后台和Origin shields(一种安全产品)提供附加的信息和错误/维护页面及VCL代码片段
 
-For VCL snippets, experience developing that code is required for advanced configurations.
+对于VCL代码片段，高级的配置经历写代码的开发是必要的
 
 The process for configuring Fastly includes:
 

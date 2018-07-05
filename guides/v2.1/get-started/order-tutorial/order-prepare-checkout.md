@@ -27,11 +27,11 @@ Now that all the items have been added to the cart, we can prepare the order for
 
 Magento calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/estimate-shipping-methods`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -101,17 +101,17 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
 {% endcollapsible %}
 
 
-### Set shipping and billing information {#set-addresses}
+### 设置物流和账单信息 {#set-addresses}
 
 In this call, you specify the shipping and billing addresses, as well as the selected `carrier_code` and `method_code`. Since the Table Rate shipping method costs only $5, the customer selected this option.
 
 Magento returns a list of payment options and calculates the order totals.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/shipping-information`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

@@ -1,6 +1,6 @@
 ---
 group: rest
-title: Manage prices for multiple products
+title: 管理多产品价格
 version: 2.2
 github_link: rest/modules/catalog-pricing.md
 functional_areas:

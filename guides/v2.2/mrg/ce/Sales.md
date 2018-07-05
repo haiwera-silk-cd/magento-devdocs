@@ -55,7 +55,7 @@ With this service you can:
       <td>An identifier of a target order for operation.</td>
       <td>Integer</td>
       <td>&nbsp;</td>
-      <td>Required</td>
+      <td>必需</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -823,7 +823,7 @@ With the ShipOrder service you can:
       <td>An identifier of a target order for operation.</td>
       <td>Integer</td>
       <td>&nbsp;</td>
-      <td>Required</td>
+      <td>必需</td>
       <td>&nbsp;</td>
     </tr>
     <tr>

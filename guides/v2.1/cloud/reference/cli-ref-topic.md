@@ -121,7 +121,7 @@ Command | Description
 `list` | List all available commands in the Magento Cloud CLI.
 `multi` | Executes a command on multiple projects. Use the `-p` option to provide a list of project IDs.
 `redeploy` | Redeploys the application.
-`web` | Opens a web UI based on the parameters you enter.
+`web` | 已打开s a web UI based on the parameters you enter.
 
 #### To see a comprehensive list of commands with descriptions:
 

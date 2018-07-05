@@ -14,108 +14,108 @@ functional_areas:
   - Integration
 ---
 
-Negotiable quotes are a mechanism that allows a company user (buyer) and a seller (admin user) to negotiate product and/or shipping prices before the company user places an order. Its functionality is available for companies only.
+议价是一种允许公司用户(购买者)在发起订单前和销售者(管理员用户)商议产品和物流价格的一种机制，它的功能只对公司有效。
 
-The negotiable quote lifecycle includes a number of stages, as shown on the diagram below.
+议价的生命周期包含几个阶段，如下图所示
 
-![Negotiable quote workflow]({{ page.baseurl }}/b2b/images/quote-workflow.jpg)
+![议价工作流程]({{ page.baseurl }}/b2b/images/quote-workflow.jpg)
 
-The quoting process itself can be a continuous process, with a number of repeating cycles until the agreement is reached.
+议价处理自身可以是一个持续的过程，过程中有几个流程可重复，一直到接受为止。
 
-* The buyer creates and submits a negotiable quote
-* The seller reviews and modifies or declines the quote
-* The buyer reviews the seller's counteroffer
-* Upon agreement, the buyer begins the checkout process and the system converts the negotiable quote into an order
+* 购买者创建并提交议价
+* 销售者浏览并修改或拒绝此报价。
+* 购买者查看销售者给的实际折扣
+* 经同意，购买者开始结算过程并且系统将议价转换为订单
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-You cannot negotiate prices on individual items.
+你不能商议自身产品项的价格。
 </div>
 
-## Quote statuses
+## 报价状态
 
-The quote life cycle is managed via quote statuses. The quoting interface allows both a seller and a buyer to manage items in the quote (add, delete, change quantity) as well as make an offer (or request a quote) for items and/or for shipping.
+报价的生命周期由报价的状态管理，报价接口允许销售者和购买者管理管理报价中的产品项(添加、删除、修改数量)以及给定产品项及物流的可卖价(或可买价)
 
-The negotiated price set in the negotiable quote is exactly the price that will be applied on a quote during checkout, order generation, and invoice generation.
+被商议的价格设置在议价中，是准确的价格，在结算、订单生成和发票生成期间它将作为报价
 
 <table>
 <tr>
-<th>Status</th><th>描述</th><th>Available actions to seller</th></tr>
+<th>状态</th><th>描述</th><th>销售者可用的动作</th></tr>
 <tr>
-<td>New </td>
-<td><p>The buyer submitted the quote, but the seller has not opened it yet. The buyer can edit the quote.</p>
-<p>The system creates a new quote record with its own ID.</p>
+<td>已创建</td>
+<td><p>购买者提交了一个报价，但销售者还没有打开它，购买者仍能修改</p>
+<p>系统创建一条他的报价记录</p>
  </td>
-<td>View</td>
+<td>查看</td>
 </tr>
 
 <tr>
 <td>Open </td>
-<td>The seller has opened the submitted quote and is reviewing/modifying it. The seller can edit the quote, but the buyer cannot.	 </td>
-<td><p>View, submit, decline, save as draft.</p>
-<p>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.</p> </td>
+<td>购买者已经打开了提交的报价，并审查/修改了它，此时销售者能修改，但购买者不能	 </td>
+<td><p>浏览、提交、拒绝，保存为草案</p>
+<p>修改过期日期，产品项的数量，添加/移除产品项，输入一个想要的价格，添加物流方式和物流价格及添加评论。</p> </td>
 </tr>
 
 <tr>
-<td>Submitted </td>
-<td>The seller has reviewed the quote and has sent it back to buyer. The seller cannot edit the quote. </td>
-<td>View </td>
+<td>已提交<td>
+<td>销售者已经审查了报价并将其发送回给了购买者。此时销售者不能修改。</td>
+<td>查看</td>
 </tr>
 
 <tr>
-<td>Client reviewed </td>
-<td>The buyer has opened the quote submitted by seller and is modifying it, by changing items or adding a shipping address. The seller cannot edit the quote. </td>
-<td>View </td>
+<td>客户已查看 </td>
+<td>购买者已经打开了销售者提交报价，并正在修改它，修改项或添加物流地址。此时销售者不能修改此报价 </td>
+<td>查看</td>
 </tr>
 
 <tr>
-<td>Updated </td>
-<td>The buyer has re-submitted the quote to seller. The seller can edit the quote, but the buyer cannot. </td>
-<td><p>View, submit, decline, save as draft.</p>
-<p>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.</p></td>
+<td>已更新<td>
+<td>购买者重新提交报价到销售者，此时销售者可以修改，但购买者不能</td>
+<td><p>浏览、提交、拒绝，保存为草案</p>
+<p>修改过期日期，产品项的数量，添加/移除产品项，输入一个想要的价格，添加物流方式和物流价格及添加评论。</p></td>
 </tr>
 
 <tr>
-<td>Ordered </td>
-<td>The buyer has purchased the quote, and Magento converts the quote to an order. Neither the seller nor the buyer can edit the quote. </td>
-<td>View </td>
+<td>已下单</td>
+<td>购买者已经购买了报价，并且Magento将此报价转换为了订单 </td>
+<td>查看</td>
 </tr>
 
 <tr>
-<td>Closed </td>
-<td><p>The buyer has cancelled the quote and thus stopped the negotiation process. Neither the seller nor the buyer can edit the quote.</p><p>The buyer clicks the <b>Close</b> button from the Quote details page. (Not available using Web API) </p></td>
-<td>View </td>
+<td>已关闭</td>
+<td><p>购买者取消了报价且他们停止了商议过程，此时双方者不能再修改此报价。</p><p>购买者在报价详情页点击 <b>Close</b> 按钮(不能用Web API) </p></td>
+<td>查看</td>
 </tr>
 
 <tr>
-<td>Declined </td>
-<td>The seller has declined the quote. All custom pricing (if any) is removed from the quote. In admin panel, the quote is locked for editing. </td>
-<td>View </td>
+<td>已拒绝</td>
+<td>销售者拒绝了报价，所有的客户出价从报价中移除。在管理面板，报价被编辑锁锁定 </td>
+<td>查看</td>
 </tr>
 
 <tr>
-<td>Expired </td>
-<td>The quote is on the buyer's side, and the quote's expiration date has passed. </td>
-<td>View </td>
+<td>已过期</td>
+<td>报价处在购买者方，并且报价超过了过期时间</td>
+<td>查看</td>
 </tr>
 </table>
 
-The following table maps the internal Magento system state to the statuses displayed on the Storefront and Admin.
+下面的表格映射了Magento系统的内部状态和前台与管理面板显示状态的对应关系
 
-System state | Buyer status | Seller status
+系统状态 |购买者状态 | 销售者状态
 --- | --- | ---
-Created | Submitted | New
-Processing by customer | Open | Client Reviewed
-Processing by admin | Pending | Open
-Submitted by customer | Submitted | Updated
-Submitted by admin | Updated | Submitted
-Ordered | Ordered | Ordered
-Expired | Expired | Expired
-Declined | Declined | Declined
-Closed | Closed | Closed
+已创建 | 已提交 | New
+客户处理中 | 已打开 | 客户已查看
+管理员处理中 | Pending | 已打开
+客户已提交 | 已提交 | 已更新
+管理员已提交 | 已更新 | 已提交
+已下单 | 已下单 | Ordered
+已过期 | 已过期 | 已过期 
+已拒绝 | 已拒绝 | 已拒绝
+已关闭 | 已关闭 | 已关闭
 
-The following diagram shows the negotiable quote lifecycle from the perspective of statuses.
+下面的图从状态的角度展示了议价的生命周期
 
-![Negotiable quote status]({{ page.baseurl }}/b2b/images/quote-statuses.png)
+![议价状态]({{ page.baseurl }}/b2b/images/quote-statuses.png)
 
 ## 相关信息
 

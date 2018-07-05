@@ -59,6 +59,6 @@ To return information about all services:
 
 [基于访问令牌的认证]({{ page.baseurl }}/get-started/authentication/gs-authentication-token.html)
 
-[List of REST APIs by module]({{ page.baseurl }}/rest/list.html)
+[模块REST API列表]({{ page.baseurl }}/rest/list.html)
 
 [List of service names permodule]({{ page.baseurl }}/rest/rest_endpoints.html)

@@ -443,9 +443,9 @@ class View extends Template
 
 3.2. The `app/etc/di.xml` file MUST contain only framework-level {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} (DI) settings.
 
-3.3. All modular DI settings (except for Presentation layer configuration) SHOULD be stored in `<module_dir>/etc/di.xml`.
+3.3. All modular DI settings (except for 表示层 configuration) SHOULD be stored in `<module_dir>/etc/di.xml`.
 
-3.4. All modular Presentation layer DI settings SHOULD be stored in `<module_dir>/etc/<area_code>/di.xml`.
+3.4. All modular 表示层 DI settings SHOULD be stored in `<module_dir>/etc/<area_code>/di.xml`.
 
 ## 4. Interception
 
@@ -498,7 +498,7 @@ class View extends Template
 
 5.16. If a method uses system resources (such as files, sockets, streams, 等.), the code MUST be wrapped with a `try` block and the corresponding `finally` block. In the `finally` sections, all resources SHOULD be properly released.
 
-5.17. `LocalizedException` SHOULD only be thrown in the Presentation layer (Controllers, Blocks).
+5.17. `LocalizedException` SHOULD only be thrown in the 表示层 (Controllers, Blocks).
 
 ## 6. Application layers
 
@@ -508,15 +508,15 @@ class View extends Template
 
 6.1.2. Every application layer (Presentation, Service Contracts, Data Access) MUST process (handle or re-throw) exceptions of the underlying layer.
 
-### 6.2. Presentation layer
+### 6.2. 表示层
 
-6.2.1. According to CQRS, the Presentation layer hosts the Command and the Query Infrastructures:
+6.2.1. According to CQRS, the 表示层 hosts the Command and the Query Infrastructures:
 
 * **Command** for Actions
 
 * **Query** for {% glossarytooltip 73ab5daa-5857-4039-97df-11269b626134 %}Layout{% endglossarytooltip %} and its elements (Blocks and UI 组件)
 
-6.2.2. Request, Response, Session, Store Manager and Cookie objects MUST be used only in the Presentation layer.
+6.2.2. Request, Response, Session, Store Manager and Cookie objects MUST be used only in the 表示层.
 
 6.2.3. All actions MUST return the `ResultInterface` implementation.
 

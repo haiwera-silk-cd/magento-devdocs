@@ -24,7 +24,7 @@ Blackfire includes the following [environments](https://blackfire.io/docs/refere
 
 **For Pro**:
 -  You must enter a Support ticket with your Blackfire credentials to configure your Staging and Production environments with Blackfire.
--  You must bypass the Fastly service in your Production environment when profiling with Blackfire. See [Bypassing Reverse Proxy, Cache, and Content Delivery Networks (CDN)](https://blackfire.io/docs/reference-guide/configuration#bypassing-reverse-proxy-cache-and-content-delivery-networks-cdn){:target="_blank"}.
+-  You must bypass the Fastly service in your Production environment when profiling with Blackfire. See [Bypassing Reverse Proxy, Cache, and 内容分发网络s (CDN)](https://blackfire.io/docs/reference-guide/configuration#bypassing-reverse-proxy-cache-and-content-delivery-networks-cdn){:target="_blank"}.
 
 ## Get your Blackfire credentials
 The Project Owner is the account owner, and their e-mail address is part of the credentials required for accessing Blackfire for your project. You can only use the Project Owner credentials to integrate Blackfire with {{site.data.var.ece}} and to log in to the Blackfire website. An invitation email is sent to the Project Owner's e-mail address to complete activation.

@@ -2,7 +2,7 @@
 group: b2b
 subgroup: 10_REST
 title: 分配公司到共享类目录
-menu_title: Assign companies
+menu_title: 分配公司
 menu_order: 24
 version: 2.2
 ee_only: True
@@ -15,14 +15,14 @@ functional_areas:
   - Integration
 ---
 
-A shared catalog must be assigned to one or more companies before it can be accessed by the company users.
+一个共享产品目录在它能被公司用户访问之前必须被分配到一个或多个公司
 
 **服务名称**
 
 `sharedCatalogCompanyManagementV1`
 
 
-**REST endpoints**
+**REST接口**
 
 {% highlight json %}
 POST /V1/sharedCatalog/:sharedCatalogId/assignCompanies
@@ -33,20 +33,20 @@ GET  /V1/sharedCatalog/:sharedCatalogId/companies
 **Company parameters**
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
+虽然你可以指定其它在`categories`对象中定义的参数，但`id`是唯一用于绑定或解绑分类到共享产品目录的参数。
 </div>
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`id` | The company ID number | integer | Required to assign or unassign a company to a shared catalog
+`id` | 公司ID号 | integer | 绑定或解绑一个公司到到一个共享目录时必须
 
-## Assign categories to shared catalog
+## 分配(绑定)分类和共享产品目录
 
-This action works as an update. It does not replace companies that have already been assigned.
+此动作类似于更新方式的工作。它不会替换已经分配的公司
 
-If a specified company is already assigned to a different shared catalog, this request unassigns the company from the previous catalog and assigns to the new one.
+如果指定的公司已经关联了一个不同的共享产品目录，此调求会解绑先前的产品目录并分配新的。
 
-**Sample usage**
+**示例用法**
 
 `POST /V1/sharedCatalog/2/assignCompanies`
 
@@ -68,13 +68,13 @@ If a specified company is already assigned to a different shared catalog, this r
 
 **响应**
 
-`true`, indicating the operation was successful
+`true`, 指示操作成功
 
-## Unassign categories from a shared catalog
+## 从共享产品目录中解绑分类
 
-When you unassign a company from a custom catalog, the system automatically assigns this company to the public shared catalog. You cannot unassign a company from the public catalog.
+当你从一个自定义的产品目录解绑公司时，系统自动分配公司到公共共享产品目录，你不能从公共产品目录解绑公司。
 
-**Sample usage**
+**示例用法**
 
 `POST /V1/sharedCatalog/2/unassignCompanies`
 
@@ -92,11 +92,11 @@ When you unassign a company from a custom catalog, the system automatically assi
 
 **响应**
 
-`true`, indicating the operation was successful
+`true`, 指示操作成功
 
-## List the shared catalog companies
+## 列出共享产品目录的公司
 
-The `GET` call returns an array of company IDs.
+`GET`调用返回一个公司ID的数组。
 
 **样例用法**
 
@@ -114,4 +114,4 @@ The `GET` call returns an array of company IDs.
 
 * [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
 * [管理共享类目录]({{ page.baseurl }}/b2b/shared-cat-manage.html)
-* [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
+* [分配分类和产品]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)

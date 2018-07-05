@@ -20,7 +20,7 @@ github_link: architecture/gdpr/magento-2x.md
 
 ### 前台数据接口
 
-用户注册后，用户可以在结算等类似的过程中为这个帐号输入客户、地址及支付信息。
+用户注册后，用户可以在结算等类似的过程中为这个账号输入客户、地址及支付信息。
 
 ![前端数据接口](frontend-data-entry-points.svg)
 
@@ -161,7 +161,7 @@ Magento2存储以下客户属性：
 
 ### 订单数据
 
-`sales_order`表和相关的表包含客户的名字，帐单及物流地址与相关数据。
+`sales_order`表和相关的表包含客户的名字，账单及物流地址与相关数据。
 
 #### `sales_order`表
 

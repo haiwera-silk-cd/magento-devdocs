@@ -41,7 +41,7 @@ github_link: cloud/basic-information/cloud-plans.md
         <ul>
           <li>Platform-as-a-service (PaaS) based Production, Staging, and development environments (4 total active environments) optimized for Magento</li>
           <li>Continuous cloud integration tools with unlimited users</li>
-          <li>Fastly Content Delivery Network (CDN) and DDoS protection with generous bandwidth allowances</li>
+          <li>Fastly 内容分发网络 (CDN) and DDoS protection with generous bandwidth allowances</li>
           <li>
             <a href="{{ page.baseurl }}/cloud/project/new-relic.html">New Relic APM</a> (Performance Monitoring) on 3 branches: <code>master</code> and 2 of your choice
           </li>
@@ -55,7 +55,7 @@ github_link: cloud/basic-information/cloud-plans.md
           <li>Platform-as-a-service (PaaS) based Integration development environments (8 total active environments) optimized for Magento</li>
           <li>Infrastructure-as-a-Service (IaaS) dedicated for Production and Staging</li>
           <li>Continuous cloud integration tools with unlimited users</li>
-          <li>Fastly Content Delivery Network (CDN) and DDoS protection with generous bandwidth allowances</li>
+          <li>Fastly 内容分发网络 (CDN) and DDoS protection with generous bandwidth allowances</li>
           <li>
             <a href="{{ page.baseurl }}/cloud/project/new-relic.html">New Relic APM</a> (Performance Monitoring) on 3 branches: Integration <code>master</code>, Staging, and Production
           </li>

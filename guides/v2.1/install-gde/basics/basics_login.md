@@ -51,6 +51,6 @@ functional_areas:
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
-  <p><a href="http://en.wikipedia.org/wiki/Secure_Shell" target="_blank">Secure Shell (ssh)</a>是一种可以不通可用户名和密码安全连接到你的服务器的协议，它防止了在网络上直接传输你的用户名和密码。</p></span>
+  <p><a href="http://en.wikipedia.org/wiki/Secure_Shell" target="_blank">Secure Shell (ssh)</a>是一种可以不通过用户名和密码安全连接到你的服务器的协议，它防止了在网络上直接传输你的用户名和密码。</p></span>
 </div>
 	

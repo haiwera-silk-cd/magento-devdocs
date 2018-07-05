@@ -15,9 +15,9 @@ functional_areas:
   - Integration
 ---
 
-## Manage custom shared catalogs
+## Magento自定义共享产品目录
 
-{{site.data.var.b2b}} provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
+{{site.data.var.b2b}}提供了两种类型的共享产品目录：公共的和自定义的。公共的共享产品目录就是默认的共享产品目录。它自动展示给所有不是公司用户的游客及登录客户。销售者通过管理面板配置来分配一个自定义的共享产品目录到指定的公司。只能有一个公共产品目录且不能被删除。
 
 **服务名称**
 
@@ -33,23 +33,23 @@ DELETE  /V1/sharedCatalog/:sharedCatalogId
 GET  /V1/sharedCatalog/
 {% endhighlight %}
 
-**Shared catalog parameters**
+**共享产品目录参数**
 
 名称 | 描述 | 格式 | 要求
 --- | --- | --- | ---
-`id` | The system-generated shared catalog ID number | integer | Required to update a shared catalog. Not applicable for create operations.
-`name` | The display name of the shared catalog. Must be unique | string | Required to create or update a shared catalog.
-`description` | Describes the shared catalog | string | 可选
-`customer_group_id` | A system-generated ID. It cannot be changed. | integer |  0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer
-`type` | Indicates whether this is a custom or public shared catalog. | integer | Required to create or update a shared catalog. 0 - Custom; 1 - Public
+`id` | 系统生成的共享产品目录的ID号| integer | 更新共享产品目录时必须 ，创建操作是不可用的
+`name` | 此共享产品目录的显示名称，必须唯一 | string | 创建和更新共享产品目录时必需
+`description` | 共享产品目录的描述 | string | 可选
+`customer_group_id` | 系统生成的ID,不通修改| integer |  0-未登录；1-正常；2-整体销售；3-零售
+`type` | 指示是否是自定义共享产品目录，或是公共共享产品目录 | integer | 创建和更新共享产品目录时必需 0 - 自定义; 1 - 公共
 `created_by` | The user ID of the admin who created the shared catalog | integer | 可选
-`store_id`  | The store ID the shared catalog is assigned to | integer | Required to create or update a shared catalog.
-`tax_class_id`  | | integer |  Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer
+`store_id`  | 共享目录分配到的网站ID | integer | 创建和更新共享产品目录时必需
+`tax_class_id`  | | integer |  创建共享产品目录时必需。1-应纳税商品。2-零售顾客
 
 
-### Create a custom shared catalog
+### 创建一个自定义的共享产品目录
 
-When B2B is enabled, the system creates a public shared catalog named `Default (General)`. Magento allows only one public shared catalog at a time. You can create an unlimited number of custom shared catalogs.
+当启用B2B，系统会创建一个公共的共享产品目录，名字叫`Defalut(General)`。Magento只允许同一时间只有一个公共共享产品目录。你可以创建无限多个自定义共享产品目录。
 
 **样例用法**
 
@@ -70,11 +70,11 @@ When B2B is enabled, the system creates a public shared catalog named `Default (
 
 **响应**
 
-The shared catalog `id`, such as `2`.
+共享产品目录的`id`,如`2`
 
-### Update a characteristics of a shared catalog
+### 更新共享产品目录的特点
 
-You cannot change the `type` from public (`1`) to custom (`0`). If you need to replace the public shared catalog, create a custom catalog and change its type to public.
+你不能修改`type`的值，从公共(`1`)改为自定义(`0`),如果你需要替换公共产品目录，可以创建一个自定义共享产品目录并将其类型改为公共的。
 
 **样例用法**
 
@@ -96,11 +96,11 @@ You cannot change the `type` from public (`1`) to custom (`0`). If you need to r
 
 **响应**
 
-The shared catalog `id`, such as `2`.
+共享产品目录的`id`,如`2`
 
-### Retrieve general information about a shared catalog
+### 接收共享产品目录的一般信息
 
-This call returns information about the specified shared catalog.
+此调用返回指定共享产品目录的信息
 
 **样例用法**
 
@@ -126,9 +126,9 @@ This call returns information about the specified shared catalog.
 }
 {% endhighlight %}
 
-### Delete a shared catalog
+### 删除共享产品目录
 
-Only custom shared catalogs can be deleted. When a custom catalog is deleted, the assigned companies are re-assigned to the default public catalog.
+仅有自定义的共享产品目录可以被删除，当一个自定义的产品目录被删除时，被分配在此上的公司将被重新分配到公共产品目录中。
 
 **样例用法**
 
@@ -142,9 +142,9 @@ Only custom shared catalogs can be deleted. When a custom catalog is deleted, th
 
 `true`,指示请求成功
 
-### Search for a shared catalog
+### 查找共享产品目录
 
-The following search returns all the custom shared catalogs (`type = 0`) in the system.
+下面的查询返回了系统中所有的自定义(`type = 0`)目录
 
 参考[使用REST API搜索]({{ page.baseurl }}/rest/performing-searches.html)了解更多关于构造查询的信息
 
@@ -195,5 +195,5 @@ The following search returns all the custom shared catalogs (`type = 0`) in the 
 ## 相关信息
 
 * [与ShareCatalog模块集成]({{ page.baseurl }}/b2b/shared-catalog.html)
-* [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
-* [Assign companies]({{ page.baseurl }}/b2b/shared-cat-company.html)
+* [分配分类和产品]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
+* [分配公司]({{ page.baseurl }}/b2b/shared-cat-company.html)

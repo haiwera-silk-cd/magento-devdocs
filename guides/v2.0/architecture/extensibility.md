@@ -27,7 +27,7 @@ Magento软件开发的模式的核心是替换和扩展核心代码而不直接�
 
 ### 开源软件来创建和管理扩展
 
-Magento在有开发社区的开源技术上构建，例如，它使用了% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %}来管理依赖，参考<a href="{{ page.baseurl }}/architecture/tech-stack.html">技术栈</a>了解完整的用到的技术。
+Magento在有开发社区的开源技术上构建，例如，它使用了{% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %}来管理依赖，参考<a href="{{ page.baseurl }}/architecture/tech-stack.html">技术栈</a>了解完整的用到的技术。
 
 ### 编码规范
 

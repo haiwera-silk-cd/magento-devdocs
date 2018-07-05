@@ -33,11 +33,11 @@ Creating a customer account requires {% glossarytooltip 29ddb393-ca22-4df9-a8d4-
 This example shows a simplified way of creating a customer account. Typically, you would not define a customer password using plain text. Instead, you would specify the payload without the `password` parameter. By default if the call is successful, Magento sends a "Welcome" email to the customer that includes a request to set the password. You could also initiate a password reset email by calling `PUT /V1/customers/password`.
 </div>
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/customers`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -132,11 +132,11 @@ To get a customer's access token, you must specify the customer's username and p
 By default, a customer token is valid for 1 hour. To change this value, log in to Admin and go to **Configuration > Services > OAuth > Access Token Expiration**.
 
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/integration/customer/token`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

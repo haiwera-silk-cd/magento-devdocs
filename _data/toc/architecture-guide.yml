@@ -32,7 +32,7 @@ pages:
       url: /architecture/archi_perspectives/ALayers_intro.html
       children:
 
-        - label: Presentation layer
+        - label: 表示层
           url: /architecture/archi_perspectives/present_layer.html
 
         - label: 服务层

@@ -23,11 +23,11 @@ The {% glossarytooltip c7ecb18d-cefe-452d-83e2-3c4d5e355db9 %}shopping cart{% en
 
 When you submit payment information, Magento creates an order and sends an order confirmation to the customer. Since we are using an offline {% glossarytooltip 422b0fa8-b181-4c7c-93a2-c553abb34efd %}payment method{% endglossarytooltip %} in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
 
-**Endpoint**
+**接口**
 
 `POST http://<host>/rest/default/V1/carts/mine/payment-information`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 
@@ -67,13 +67,13 @@ An `orderID`, such as `3`.
 
 When you request an order object, the response contains full details about the order, including customer information, payment details, as well as totals and subtotals for the order and each individual item.
 
-**Endpoint**
+**接口**
 
 `GET http://<host>/rest/default/V1/orders/3`
 
 where `3` is the `orderid`
 
-**Headers**
+**请求头**
 
 `Content-Type` `application/json`
 

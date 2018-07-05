@@ -53,7 +53,7 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 | Send Company Credit Change Email Copy To | `company/email/company_credit_change_copy` | | | |
 | Send Email Copy Method | `company/email/company_credit_copy_method` | | | |
 | Allocated Email Template | `company/email/credit_allocated_email_template` | | | |
-| Updated Email Template | `company/email/credit_updated_email_template` | | | |
+| 已更新 Email Template | `company/email/credit_updated_email_template` | | | |
 | Reimbursed Email Template | `company/email/credit_reimbursed_email_template` | | | |
 | Refunded Email Template | `company/email/credit_refunded_email_template` | | | |
 | Reverted Email Template | `company/email/credit_reverted_email_template` | | | |
@@ -74,10 +74,10 @@ These configuration values are availabe in the Magento Admin in **Stores** > Set
 | 名称 | Config path | Encrypted? | System-specific? | Sensitive? | 
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Enabled | `sales_email/quote/enabled` | | | |
-| Updated Quote Template (to Buyer) | `sales_email/quote/updated_buyer_template` | | | |
-| Declined Quote Template (to Buyer) | `sales_email/quote/declined_buyer_template` | | | |
+| 已更新 Quote Template (to Buyer) | `sales_email/quote/updated_buyer_template` | | | |
+| 已拒绝 Quote Template (to Buyer) | `sales_email/quote/declined_buyer_template` | | | |
 | New Quote Template (to Seller) | `sales_email/quote/new_seller_template` | | | |
-| Updated Quote Template (to Seller) | `sales_email/quote/updated_seller_template` | | | |
+| 已更新 Quote Template (to Seller) | `sales_email/quote/updated_seller_template` | | | |
 | Quote Expiration (in 48 hrs) | `sales_email/quote/expire_two_days_template` | | | |
 | Quote Expiration (in 24 hrs) | `sales_email/quote/expire_one_day_template` | | | |
 | Expiration Date Reset | `sales_email/quote/expire_reset_template` | | | |

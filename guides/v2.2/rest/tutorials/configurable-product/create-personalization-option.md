@@ -15,7 +15,7 @@ Let's add a text box to the product page that allows the customer to add his nam
 
 The `product_sku` is the `sku` of the configurable product. The `sku` specified in the payload is a string that is appended to the `product_sku` when a customer decides to purchase this option. Likewise, the `price` supplied in the payload is added to the configurable product price.
 
-**Endpoint**
+**接口**
 
 `POST V1/products/options`
 

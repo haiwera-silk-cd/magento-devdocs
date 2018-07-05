@@ -13,9 +13,9 @@ functional_areas:
   - Integration
 ---
 
-This topic lists the REST endpoints and services that are provided with {{site.data.var.b2b}}. See [List of REST endpoints by module]({{ page.baseurl }}/rest/list.html) and [List of service names by module]({{ page.baseurl }}/rest/rest_endpoints.html) for the endpoints and services that Magento {{site.data.var.ee}} and {{site.data.var.ce}}.
+本节列出了{{site.data.var.b2b}}提供的REST接口和服务。参考[模块REST接口列表]({{ page.baseurl }}/rest/list.html)和[模块服务名称列表]({{ page.baseurl }}/rest/rest_endpoints.html)了解Magento {{site.data.var.ee}} 和 {{site.data.var.ce}} 的接口及服务
 
-## List of REST endpoints by module
+## 模块REST接口列表
 
 ### Company
 
@@ -99,7 +99,7 @@ This topic lists the REST endpoints and services that are provided with {{site.d
     POST   /V1/sharedCatalog/:id/unassignCategories
 ```
 
-## List of service names per Module
+## 每个模块的服务名称
 
 ### Company
 
@@ -112,7 +112,7 @@ companyTeamRepositoryV1
 configurableProductConfigurableProductManagementV1
 ```
 
-### 公司信用帐户
+### 公司信用账户
 
 ```
 companyCreditCreditBalanceManagementV1
@@ -148,7 +148,7 @@ sharedCatalogProductManagementV1
 sharedCatalogSharedCatalogRepositoryV1
 ```
 
-## Related Information
-[List of REST APIs by module]({{ page.baseurl }}/rest/list.html)
+## 相关信息
+[模块REST API列表]({{ page.baseurl }}/rest/list.html)
 
-[List of service names by module]({{ page.baseurl }}/rest/rest_endpoints.html)
+[模块服务名称列表]({{ page.baseurl }}/rest/rest_endpoints.html)

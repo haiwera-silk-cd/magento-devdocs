@@ -54,7 +54,7 @@ The sample data provides multiple attribute sets, including Default, Top, and Bo
 
 Use the following call to search for the attribute set named `Top`.
 
-**Endpoint**
+**接口**
 
 ``` html
 GET <host>/index.php/rest/V1/eav/attribute-sets/list?
@@ -98,7 +98,7 @@ The `attribute_set_id` for the Top attribute set is `9`.
 
 Use the `GET V1/products/attribute-sets/:attributeSetId/attributes` call to return information about the attributes defined in the Top attribute set.
 
-**Endpoint**
+**接口**
 
 `GET <host>/V1/products/attribute-sets/9/attributes`
 
