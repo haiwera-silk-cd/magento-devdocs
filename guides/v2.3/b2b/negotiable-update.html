@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,11 +687,9 @@
 
 </section>
 
-			<p>Sellers and buyers can edit a negotiable quote at various times during the quote’s lifecycle. Both use the <code class="highlighter-rouge">PUT /V1/negotiableQuote/:quoteId</code> call to update the quote. This call is defined in the
-<code class="highlighter-rouge">quoteCartRepositoryV1</code> service and is functionally similar to the
-<code class="highlighter-rouge">PUT /V1/carts/mine</code> call.</p>
+			<p>销售者和购买者可以在其周期中的不同的时间修改议价。可以使用<code class="highlighter-rouge">PUT /V1/negotiableQuote/:quoteId</code>调用更新报价，此接口定义在<code class="highlighter-rouge">quoteCartRepositoryV1</code>服务中，其功能与<code class="highlighter-rouge">PUT /V1/carts/mine</code>调用相似</p>
 
-<p>The <code class="highlighter-rouge">quote</code> object now contains a set of <code class="highlighter-rouge">negotiable_quote</code> extension attributes that can be used to update a quote.</p>
+<p><code class="highlighter-rouge">quote</code>对像现在包含一些<code class="highlighter-rouge">negotiable_quote</code>的扩展属性，它们可以被用于更新报价。</p>
 
 <table>
   <thead>
@@ -705,150 +703,150 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">quote_id</code></td>
-      <td>Negotiable quote ID</td>
+      <td>议价ID</td>
       <td>integer</td>
       <td>Required to create or update a negotiable quote</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">is_regular_quote</code></td>
-      <td>Flag for the negotiable quote</td>
+      <td>议价标志</td>
       <td>boolean</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">status</code></td>
-      <td>One of <code class="highlighter-rouge">created</code>, <code class="highlighter-rouge">submitted_by_customer</code>, <code class="highlighter-rouge">submitted_by_admin</code>, <code class="highlighter-rouge">processing_by_customer</code>, <code class="highlighter-rouge">processing_by_admin</code>, <code class="highlighter-rouge">ordered</code>, <code class="highlighter-rouge">expired</code>, <code class="highlighter-rouge">declined</code>, <code class="highlighter-rouge">closed</code></td>
+      <td>可以是<code class="highlighter-rouge">created</code>, <code class="highlighter-rouge">submitted_by_customer</code>, <code class="highlighter-rouge">submitted_by_admin</code>, <code class="highlighter-rouge">processing_by_customer</code>, <code class="highlighter-rouge">processing_by_admin</code>, <code class="highlighter-rouge">ordered</code>, <code class="highlighter-rouge">expired</code>之一 <code class="highlighter-rouge">declined</code>, <code class="highlighter-rouge">closed</code></td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">negotiated_price_type</code></td>
-      <td>1 - Percentage discount; 2 - Fixed price; 3 - proposed total</td>
+      <td>1-百分比折扣；2-固定价格；3-提议总价</td>
       <td>integer</td>
-      <td>Required to set a negotiated price</td>
+      <td>必须设置一个商议的价格</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">negotiated_price_value</code></td>
-      <td>Discount amount defined by the seller</td>
+      <td>销售者定义的折扣总额</td>
       <td>number</td>
-      <td>Required to set a negotiated price</td>
+      <td>必须设置一个商议的价格</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">shipping_price</code></td>
-      <td>Custom price for shipping defined by the seller</td>
+      <td>销售者定义的自定义物流价格</td>
       <td>number</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">quote_name</code></td>
-      <td>Name assigned to the negotiable quote</td>
+      <td>分配给议价名的称</td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">expiration_period</code></td>
-      <td>Expiration date for the quote. The format must be <code class="highlighter-rouge">YYYY-MM-DD</code>.</td>
+      <td>报价的过期日期，格式必须是<code class="highlighter-rouge">YYYY-MM-DD</code>.</td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">email_notification_status</code></td>
-      <td>Recent notifications that have been sent</td>
+      <td>最近已发送的通知</td>
       <td>integer</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">has_unconfirmed_changes</code></td>
-      <td>Indicates there are some changes that the Admin has not seen yet</td>
+      <td>指示管理员现在有还没看到的修改</td>
       <td>boolean</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">is_shipping_tax_changed</code></td>
-      <td>Indicates whether shipping taxes have changed</td>
+      <td>指示物流税额是否发生改变</td>
       <td>boolean</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">is_customer_price_changed</code></td>
-      <td>Indicates whether the price for the product has changed</td>
+      <td>指是产品的价格是否发生改变</td>
       <td>boolean</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">notifications</code></td>
-      <td>Binary mask where the current notifications are stored</td>
+      <td>当前通知被保存的二进制掩码</td>
       <td>integer</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">applied_rule_ids</code></td>
-      <td>Applied shopping cart rules</td>
+      <td>已应用的购物车规则</td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">is_address_draft</code></td>
-      <td>Drop the address if the checkout is not completed.</td>
+      <td>是否在结算未完成时移除地址</td>
       <td>boolean</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">deleted_sku</code></td>
-      <td>The SKUs of any deleted products</td>
+      <td>被删除产品的sku</td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">creator_id</code></td>
-      <td>Quote creator ID</td>
+      <td>报价创建人的ID</td>
       <td>integer</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">creator_type</code></td>
-      <td>1 - Integration; 2 - Admin; 3 - Customer; 4 - Guest</td>
+      <td>1-集成者；2-管理员；3-客户；4-游客</td>
       <td>integer</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">original_total_price</code></td>
-      <td>Original total price</td>
+      <td>原始总价</td>
       <td>number</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">base_original_total_price</code></td>
-      <td>Base original total price</td>
+      <td>基础原始总价</td>
       <td>number</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">negotiated_total_price</code></td>
-      <td>Negotiated total price</td>
+      <td>商议的总价</td>
       <td>number</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">base_negotiated_total_price</code></td>
-      <td>Base negotiated total price</td>
+      <td>基础商议的总价</td>
       <td>number</td>
       <td>可选</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="set-a-negotiated-price">Set a negotiated price</h3>
+<h3 id="设置商议的价格">设置商议的价格</h3>
 
-<p>In every successful negotiate quote, the seller must set the negotiated price.</p>
+<p>在每一个成功的议价中，销售者必须设置商议价格。</p>
 
-<p>The <code class="highlighter-rouge">negotiated_price_type</code> can have one of the following values:</p>
+<p><code class="highlighter-rouge">negotiated_price_type</code>可以是以面的值之一</p>
 
-<p><code class="highlighter-rouge">1</code> - Apply a percentage discount to the quote. The <code class="highlighter-rouge">negotiated_price_value</code>parameter indicates the percentage.</p>
+<p><code class="highlighter-rouge">1</code>- 在报价上应用一个百分比折扣，<code class="highlighter-rouge">negotiated_price_value</code>参数指示这个百分比。</p>
 
-<p><code class="highlighter-rouge">2</code> - Apply a fixed amount as a discount for the quote. The <code class="highlighter-rouge">negotiated_price_value</code>parameter specifies the amount of the discount.</p>
+<p><code class="highlighter-rouge">2</code> - 在报价上应用一个固定的折扣价。<code class="highlighter-rouge">negotiated_price_value</code>参数指定这个折扣价</p>
 
-<p><code class="highlighter-rouge">3</code> - Set a proposed price for the entire quote. The <code class="highlighter-rouge">negotiated_price_value</code>parameter specifies the proposed price.</p>
+<p><code class="highlighter-rouge">3</code> - 设置整个报价单的提议价，<code class="highlighter-rouge">negotiated_price_value</code>参数指示这个价格</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -872,13 +870,13 @@
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="add-a-new-quote-item-to-the-negotiable-quote">Add a new quote item to the negotiable quote</h3>
+<h3 id="添加一个报价项到议价中">添加一个报价项到议价中</h3>
 
-<p>The buyer can add, update, or delete items from the quote under the following conditions:</p>
+<p>在以下条件下，购买者可以从报价中添加，更新或删除项</p>
 
 <ul>
-  <li>The quote is in one of the following system states: <code class="highlighter-rouge">created</code>, <code class="highlighter-rouge">processing_by_admin</code>, or <code class="highlighter-rouge">submitted_by_customer</code>.</li>
-  <li>The quote doesn’t have a negotiated price.</li>
+  <li>报价处于以下的系统状态中：<code class="highlighter-rouge">created</code>, <code class="highlighter-rouge">processing_by_admin</code>, 或 <code class="highlighter-rouge">submitted_by_customer</code>.</li>
+  <li>报价还没有商议的价格</li>
 </ul>
 
 <p><strong>样例用法</strong></p>
@@ -915,7 +913,7 @@
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="change-the-quote-expiration-date">Change the quote expiration date</h3>
+<h3 id="修改报价的过期日期">修改报价的过期日期</h3>
 
 <p><strong>样例用法</strong></p>
 

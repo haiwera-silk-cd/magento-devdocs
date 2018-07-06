@@ -395,11 +395,11 @@
 
 <p>Magento calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the <code class="highlighter-rouge">flatrate</code> ($5 per item) and <code class="highlighter-rouge">tablerate</code> shipping methods are active.</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST http://&lt;host&gt;/rest/default/V1/carts/mine/estimate-shipping-methods</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
 
@@ -461,17 +461,17 @@
 </span><span class="p">]</span></code></pre></figure>
 </div></div>
 
-<h3 id="set-addresses">Set shipping and billing information</h3>
+<h3 id="set-addresses">设置物流和账单信息</h3>
 
 <p>In this call, you specify the shipping and billing addresses, as well as the selected <code class="highlighter-rouge">carrier_code</code> and <code class="highlighter-rouge">method_code</code>. Since the Table Rate shipping method costs only $5, the customer selected this option.</p>
 
 <p>Magento returns a list of payment options and calculates the order totals.</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST http://&lt;host&gt;/rest/default/V1/carts/mine/shipping-information</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
 

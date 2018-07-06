@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,29 +687,29 @@
 
 </section>
 
-			<p>This topic describes how REST calls can be used to place items in a shopping cart, initiate and complete the process of negotiating a quote, and reimbursing the buyer’s credit upon receipt of payment.</p>
+			<p>本节描述如何如用REST调用能将产品项放入购物车，启动和完成此议价过程及在收到支付后报销购买者的信用额</p>
 
 <h2 id="先决条件">先决条件</h2>
 
 <ul>
-  <li>You have <a href="/guides/v2.2/comp-mgr/install-extensions/b2b-installation.html">installed and enabled</a> Magento Commerce for B2B.</li>
-  <li>You have <a href="/guides/v2.2/b2b/company-object.html">created a company</a> and a <a href="/guides/v2.2/b2b/company-object.html">company user</a>.</li>
-  <li>You have an integration or <a href="/guides/v2.2/get-started/order-tutorial/order-admin-token.html">admin authorization token</a> to make calls on behalf of seller, and a <a href="/guides/v2.2/get-started/order-tutorial/order-create-customer.html#get-token">customer token</a> to make calls on behalf of the company user.</li>
+  <li>你已经<a href="/guides/v2.2/comp-mgr/install-extensions/b2b-installation.html">安装并启用了</a> Magento Commerce for B2B.</li>
+  <li>你已经<a href="/guides/v2.2/b2b/company-object.html">创建了一个公司</a>及一个<a href="/guides/v2.2/b2b/company-object.html">公司用户</a>.</li>
+  <li>你有一个集成或<a href="/guides/v2.2/get-started/order-tutorial/order-admin-token.html">管理员授权令牌</a>来发起代表销售者的调用，以及<a href="/guides/v2.2/get-started/order-tutorial/order-create-customer.html#get-token">客户令牌</a>发起代表公司用户的调用</li>
 </ul>
 
-<h2 id="prepare-the-order">Prepare the order</h2>
+<h2 id="准备定单">准备定单</h2>
 
-<p>The steps in this section are similar to those <a href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用REST API的订单处理教程</a>, except that different products are added to the cart.</p>
+<p>本节这些步骤与<a href="/guides/v2.2/get-started/order-tutorial/order-intro.html">使用REST API的订单处理教程</a>类似，除了不同产品被添加到购物车之外。</p>
 
-<h3 id="create-a-shopping-cart">Create a shopping cart</h3>
+<h3 id="创建购物车">创建购物车</h3>
 
-<p>In this example, the customer is a company user (buyer).</p>
+<p>在本例中，客户是一个公司用户(购买者)</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/carts/mine</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;customer token&gt;
@@ -721,23 +721,23 @@ Authorization Bearer &lt;customer token&gt;
 
 <p><strong>响应</strong></p>
 
-<p>The response is the <code class="highlighter-rouge">quoteId</code>: <code class="highlighter-rouge">5</code></p>
+<p>响应是<code class="highlighter-rouge">quoteId</code>,这里是<code class="highlighter-rouge">5</code></p>
 
-<h3 id="add-items">Add items</h3>
+<h3 id="添加产品项">添加产品项</h3>
 
-<p>This example adds 15 Pursuit Lumaflex Tone Bands and 10 Harmony Lumaflex Strength Band Kits to the cart. You must make two calls to add these products.</p>
+<p>本例添加15个Pursuit Lumaflex Tone Bands和10个 Harmony Lumaflex Strength Band Kits到购物车，你要发起两次调用来添加这些产品。</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST V1/carts/mine</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;customer token&gt;
 </code></pre></div></div>
 
-<p><strong>Payload 1</strong></p>
+<p><strong>载荷 1</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"cartItem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -747,7 +747,7 @@ Authorization Bearer &lt;customer token&gt;
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response 1</strong></p>
+<p><strong>响应1</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
@@ -759,7 +759,7 @@ Authorization Bearer &lt;customer token&gt;
     </span><span class="s2">"quote_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Payload 2</strong></p>
+<p><strong>载荷 2</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="s2">"cartItem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -769,7 +769,7 @@ Authorization Bearer &lt;customer token&gt;
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<p><strong>Response 2</strong></p>
+<p><strong>响应2</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
@@ -781,15 +781,15 @@ Authorization Bearer &lt;customer token&gt;
     </span><span class="s2">"quote_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="set-the-shipping-address">Set the shipping address</h3>
+<h3 id="设置物流地址">设置物流地址</h3>
 
-<p>You can determine shipping costs after initiating a negotiable quote, but doing it now provides a more detailed picture of the final costs to the buyer. If you want to defer setting the shipping address until after the negotiable quote has been created, use the <code class="highlighter-rouge">/V1/negotiable-carts/:cartId/estimate-shipping-methods</code> call.</p>
+<p>你可以在启动议价后决定物流花费，但现在要提供更多最终花费的细节图片给购买者。如果你延后到议价创建之后设置物流地址，请调用<code class="highlighter-rouge">/V1/negotiable-carts/:cartId/estimate-shipping-methods</code></p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST V1/carts/mine/estimate-shipping-methods</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;customer token&gt;
@@ -845,11 +845,11 @@ Authorization Bearer &lt;customer token&gt;
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h3 id="set-shipping-and-billing-information">Set shipping and billing information</h3>
+<h3 id="设置物流和账单信息">设置物流和账单信息</h3>
 
-<p>You can also set shipping and billing information after initiating a negotiable quote by calling  <code class="highlighter-rouge">POST /V1/negotiable-carts/:cartId/shipping-information</code>.</p>
+<p>你也可以在启动报价后设置物流和帐单信息，使用<code class="highlighter-rouge">POST /V1/negotiable-carts/:cartId/shipping-information</code>接口.</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/carts/mine/shipping-information</code></p>
 
@@ -1041,15 +1041,15 @@ Authorization Bearer &lt;customer token&gt;
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h3 id="view-the-cart">View the cart</h3>
+<h3 id="浏览购物车">浏览购物车</h3>
 
-<p>This is an optional step to show the status of the cart before you begin the negotiable quote process.</p>
+<p>这是一个可选的步骤，在你开始议价过程之前查看购物车状态</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/carts/mine</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;customer token&gt;
@@ -1240,25 +1240,25 @@ Authorization Bearer &lt;customer token&gt;
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="complete-a-negotiable-quote">Complete a Negotiable Quote</h2>
+<h2 id="完成议价">完成议价</h2>
 
-<p>In this example, the buyer requests a negotiable quote. The seller applies a discount to the quote and returns the quote to the buyer. The buyer accepts the discount and completes the order.</p>
+<p>在本例中，购买者请求一个可商议的报价单。销售者应用折扣到报价单上并将其返回给购买者。购买者接受折扣并完成此订单。</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>All negotiable quote calls require an admin authorization token.</p>
+  <p>所有的议价调用需要一个管理员授权令牌。</p>
 </div>
 
-<h3 id="initiate-a-negotiable-quote">Initiate a negotiable quote</h3>
+<h3 id="启动议价">启动议价</h3>
 
-<p>In this example, the buyer initiates a negotiable quote, asking for a 2.5% discount.</p>
+<p>在本例中，购买者启动议价，请求2.5%的折扣。</p>
 
-<p>Initiating a negotiable quote places it in the <code class="highlighter-rouge">processing_by_admin</code> state.</p>
+<p>启动议价其状态为<code class="highlighter-rouge">processing_by_admin</code></p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST V1/negotiableQuote/request</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
@@ -1276,17 +1276,17 @@ Authorization Bearer &lt;admin token&gt;
 
 <p><code class="highlighter-rouge">true</code></p>
 
-<h3 id="adjust-the-negotiable-quote">Adjust the negotiable quote</h3>
+<h3 id="调整议价">调整议价</h3>
 
-<p>The seller accepts the buyer’s request for a 2.5% discount. The <code class="highlighter-rouge">negotiated_price_type</code> value of <code class="highlighter-rouge">1</code> indicates a percentage discount.</p>
+<p>销售者接受购买者的2.5%折扣的请求。<code class="highlighter-rouge">negotiated_price_type</code>状态的值为<code class="highlighter-rouge">1</code>指示是一个百分比的折扣。</p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
 </code></pre></div></div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">PUT /V1/negotiableQuote/5</code></p>
 
@@ -1308,19 +1308,19 @@ Authorization Bearer &lt;admin token&gt;
 
 <p><code class="highlighter-rouge">[]</code></p>
 
-<h3 id="return-the-negotiable-quote-to-the-buyer">Return the negotiable quote to the buyer</h3>
+<h3 id="返回议价给购买者">返回议价给购买者</h3>
 
-<p>Now that the seller has updated the quote, it must be returned to the buyer. The buyer will then be able to either accept the offer and begin the checkout process, or request further negotiations.</p>
+<p>现在销售者已经更新了报价，它必须被返回到购买者。购买者然后能接受此提议并开始结算过程，也能请求更进一步的议价。</p>
 
-<p>This call places the quote in the <code class="highlighter-rouge">submitted_by_admin</code> state.</p>
+<p>此调用报价会置为<code class="highlighter-rouge">submitted_by_admin</code>状态</p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
 </code></pre></div></div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/negotiableQuote/submitToCustomer</code></p>
 
@@ -1335,17 +1335,17 @@ Authorization Bearer &lt;admin token&gt;
 
 <p><code class="highlighter-rouge">true</code></p>
 
-<h3 id="get-the-quote-with-the-new-amounts">Get the quote with the new amounts</h3>
+<h3 id="获取新的价格的报价">获取新的价格的报价</h3>
 
-<p>The price of each item has been reduced by 2.5 percent. In addition, the <code class="highlighter-rouge">negotiable_quote</code> section of the response has been updated.</p>
+<p>每一项的价格都已经减少了2.5个百份点，此外响应中的<code class="highlighter-rouge">negotiable_quote</code>里的值已经被更新</p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
 </code></pre></div></div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">GET</code> /V1/carts/5</p>
 
@@ -1570,17 +1570,17 @@ Authorization Bearer &lt;admin token&gt;
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h3 id="set-the-payment-information-and-place-the-order">Set the payment information and place the order</h3>
+<h3 id="设置支付信息并确认订单">设置支付信息并确认订单</h3>
 
-<p>The buyer is now ready to complete the purchase. Since the buyer has already specified the billing address, only the <code class="highlighter-rouge">paymentMethod</code> information must be included.</p>
+<p>购买者现在已经完成了购买。因为购买者已经指定了账单地址，只有<code class="highlighter-rouge">paymentMethod</code>信息必须要被包含：</p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
 </code></pre></div></div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">/V1/negotiable-carts/3/payment-information</code></p>
 
@@ -1594,21 +1594,21 @@ Authorization Bearer &lt;admin token&gt;
 
 <p><strong>响应</strong></p>
 
-<p>The response is the order <code class="highlighter-rouge">id</code>: <code class="highlighter-rouge">4</code></p>
+<p>响应是订单<code class="highlighter-rouge">id</code>: <code class="highlighter-rouge">4</code></p>
 
-<h2 id="reimburse-company-credit">Reimburse company credit</h2>
+<h2 id="报销公司信用额">报销公司信用额</h2>
 
-<p>Now that the negotiable quote has been converted into an order, you can issue an invoice and create a shipment in the same manner as a standard B2C order. However, when the company pays for the order, the company’s outstanding balance must be credited.</p>
+<p>现在，议价已经被转化为了订单，你以和标准B2C订单一样的方式为其可以发布发票及创建物流。然而，当公司支付了订单，公司的未结余额必须在授信额之内。</p>
 
-<p>In this example, the <code class="highlighter-rouge">companyId</code> is <code class="highlighter-rouge">1</code>.</p>
+<p>在本例中，<code class="highlighter-rouge">companyId</code>是<code class="highlighter-rouge">1</code>.</p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Content-Type application/json
 Authorization Bearer &lt;admin token&gt;
 </code></pre></div></div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/companyCredits/1/increaseBalance</code></p>
 
@@ -1623,7 +1623,7 @@ Authorization Bearer &lt;admin token&gt;
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.</p>
+<p><code class="highlighter-rouge">true</code>,指示报销成功应用，Magento会发送邮件到购买者。</p>
 
 <h2 id="相关信息">相关信息</h2>
 

@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3 active " id="assign-companies">
+                <li class="nav-level3 active " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,13 +687,13 @@
 
 </section>
 
-			<p>A shared catalog must be assigned to one or more companies before it can be accessed by the company users.</p>
+			<p>一个共享产品目录在它能被公司用户访问之前必须被分配到一个或多个公司</p>
 
 <p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">sharedCatalogCompanyManagementV1</code></p>
 
-<p><strong>REST endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">sharedCatalogId/assignCompanies</span><span class="w">
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">sharedCatalogId/unassignCompanies</span><span class="w">
@@ -702,7 +702,7 @@
 <p><strong>Company parameters</strong></p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Although you can specify other parameters defined within a <code class="highlighter-rouge">categories</code> object, the <code class="highlighter-rouge">id</code> is the only one used to assign or unassign a category to a shared catalog.</p>
+  <p>虽然你可以指定其它在<code class="highlighter-rouge">categories</code>对象中定义的参数，但<code class="highlighter-rouge">id</code>是唯一用于绑定或解绑分类到共享产品目录的参数。</p>
 </div>
 
 <table>
@@ -717,20 +717,20 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">id</code></td>
-      <td>The company ID number</td>
+      <td>公司ID号</td>
       <td>integer</td>
-      <td>Required to assign or unassign a company to a shared catalog</td>
+      <td>绑定或解绑一个公司到到一个共享目录时必须</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="assign-categories-to-shared-catalog">Assign categories to shared catalog</h2>
+<h2 id="分配绑定分类和共享产品目录">分配(绑定)分类和共享产品目录</h2>
 
-<p>This action works as an update. It does not replace companies that have already been assigned.</p>
+<p>此动作类似于更新方式的工作。它不会替换已经分配的公司</p>
 
-<p>If a specified company is already assigned to a different shared catalog, this request unassigns the company from the previous catalog and assigns to the new one.</p>
+<p>如果指定的公司已经关联了一个不同的共享产品目录，此调求会解绑先前的产品目录并分配新的。</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/assignCompanies</code></p>
 
@@ -749,13 +749,13 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h2 id="unassign-categories-from-a-shared-catalog">Unassign categories from a shared catalog</h2>
+<h2 id="从共享产品目录中解绑分类">从共享产品目录中解绑分类</h2>
 
-<p>When you unassign a company from a custom catalog, the system automatically assigns this company to the public shared catalog. You cannot unassign a company from the public catalog.</p>
+<p>当你从一个自定义的产品目录解绑公司时，系统自动分配公司到公共共享产品目录，你不能从公共产品目录解绑公司。</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/unassignCompanies</code></p>
 
@@ -771,11 +771,11 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h2 id="list-the-shared-catalog-companies">List the shared catalog companies</h2>
+<h2 id="列出共享产品目录的公司">列出共享产品目录的公司</h2>
 
-<p>The <code class="highlighter-rouge">GET</code> call returns an array of company IDs.</p>
+<p><code class="highlighter-rouge">GET</code>调用返回一个公司ID的数组。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -794,7 +794,7 @@
 <ul>
   <li><a href="/guides/v2.2/b2b/shared-catalog.html">与ShareCatalog模块集成</a></li>
   <li><a href="/guides/v2.2/b2b/shared-cat-manage.html">管理共享类目录</a></li>
-  <li><a href="/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a></li>
+  <li><a href="/guides/v2.2/b2b/shared-cat-product-assign.html">分配分类和产品</a></li>
 </ul>
 
 			

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>管理公司信用帐户 | Magento 2 Developer Documentation</title>
+	<title>管理公司信用账户 | Magento 2 Developer Documentation</title>
 	<meta name="description" content="Magento 2 Developer Documentation.
 ">
 
@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3 active " id="管理公司信用帐户">
+                <li class="nav-level3 active " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -659,7 +659,7 @@
 
           
 
-          <span property="name">管理公司信用帐户</span>
+          <span property="name">管理公司信用账户</span>
 
         
 
@@ -680,7 +680,7 @@
 
 	
 
-	<h1 class="page-heading">管理公司信用帐户</h1>
+	<h1 class="page-heading">管理公司信用账户</h1>
 
   
 
@@ -708,7 +708,7 @@
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/companyCredits/company/</span><span class="p">:</span><span class="err">companyId</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/companyCredits/</span></code></pre></figure>
 
-<p><strong>公司信用帐户参数</strong></p>
+<p><strong>公司信用账户参数</strong></p>
 
 <table>
   <thead>
@@ -724,19 +724,19 @@
       <td><code class="highlighter-rouge">id</code></td>
       <td>系统生成的信用ID</td>
       <td>integer</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">company_id</code></td>
       <td>公司ID</td>
       <td>integer</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">credit_limit</code></td>
       <td>授予公司的信用总额</td>
       <td>Number</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">balance</code></td>
@@ -748,7 +748,7 @@
       <td><code class="highlighter-rouge">currency_code</code></td>
       <td>公司信用的货币代码，比如USD</td>
       <td>String</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">exceed_limit</code></td>
@@ -773,7 +773,7 @@
 
 <h3 id="更新公司信用限额">更新公司信用限额</h3>
 
-<p>此调用修改了公司信用额度到$1000. <code class="highlighter-rouge">available_limit</code>参数是计算出来的，所以你不通指定它的值。</p>
+<p>此调用修改了公司信用额度到$1000. <code class="highlighter-rouge">available_limit</code>参数是计算出来的，所以你不用指定它的值。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -953,19 +953,19 @@
       <td><code class="highlighter-rouge">value</code></td>
       <td>指示公司信用余额操作涉及的金额数量</td>
       <td>Nuumber</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">currency</code></td>
       <td>交易的货币代码，如USD</td>
       <td>String</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">operationType</code></td>
       <td>必须是以下值之一 1 - 已分配; 2 - 已更新; 3 - 已购买; 4 - 已报销; 5 - 已退款; 6 - 已归还</td>
       <td>Integer</td>
-      <td>Required</td>
+      <td>必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">comment</code></td>
@@ -1077,7 +1077,7 @@
 
 <h3 id="保存信用额历史">保存信用额历史</h3>
 
-<p>此调用更新食用额历史指定一个购买的订单号</p>
+<p>此调用更新信用额历史指定一个购买的订单号</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1094,7 +1094,7 @@
 
 <p><code class="highlighter-rouge">true</code>,指示调用成功</p>
 
-<h3 id="搜索食用额历史id">搜索食用额历史ID</h3>
+<h3 id="搜索信用额历史id">搜索信用额历史ID</h3>
 
 <p>下面的调用返回一个实例列表，它们的限额都被设置为$500以上</p>
 

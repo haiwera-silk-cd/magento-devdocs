@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,19 +687,19 @@
 
 </section>
 
-			<p>When the seller and buyer user agree on the quoted products and their prices, the negotiated quote is ready to be converted to an order.</p>
+			<p>当销售者和购买者用户接受报价产品和它们的价格时，商议报价即准备好转成订单。</p>
 
-<p>During the standard checkout process, Magento refreshes and recalculates all product and shipping prices as well as taxes. This process is different for the quote that has a negotiated price (discounted offer from the seller). The system keeps the quoted price, but checks the tax amounts. If the tax amounts are outdated, Magento recalculates them and updatesnthe quote totals. These tax adjustments can change the order grand total. The order and invoice are created with the recalculated taxes and new grand total. All other prices in the quote remain unchanged.</p>
+<p>在标准结算过程中，Magento刷新并重新计算所有产品和物流的价格以及税费。此过程与有商议价格(销售者提供折扣)的报价不同，系统保持报价，但检查税额。如果税额过期，Magento重新计算它们更新总报价。税额调整可以改变订单的总价。订单和发票随重新计算而创建。所有其它价格保持不变。</p>
 
-<p>The same rule is applied when the quote has the proposed shipping price and the shipping taxes change on the checkout. The buyer pays the updated price, but this does not affect the other quote amounts.</p>
+<p>相同的规则也被应用于当报价有提供物流价格并且物流价格在结算时发生了改变时。购买者支付更新后的价格，但这并不会影响其的报价金额。</p>
 
-<p>The following diagram illustrates the workflow for Magento Commerce for B2B negotiable quote checkouts:</p>
+<p>下图说明了Magento Commerce for B2B商议报价结算的工作流程：</p>
 
-<p><img src="/guides/v2.3/b2b/images/quote-checkout-process.png" alt="Checkout process" /></p>
+<p><img src="/guides/v2.3/b2b/images/quote-checkout-process.png" alt="结算过程" /></p>
 
-<h2 id="manage-shipping-addresses">Manage shipping addresses</h2>
+<h2 id="管理物流地址">管理物流地址</h2>
 
-<p>A negotiated quote can be initiated without a shipping address. However, before the order can be placed, the shipping address must be provided.</p>
+<p>议价可以在没有物流地址的情况下启动。然而在定单被确认前，物流地址必须提供。</p>
 
 <p><strong>REST接口</strong></p>
 
@@ -707,9 +707,9 @@
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/estimate-shipping-methods-by-address-id</span><span class="w">
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/shipping-information</span></code></pre></figure>
 
-<h3 id="estimate-shipping-costs-specifying-an-address">Estimate shipping costs specifying an address</h3>
+<h3 id="估计物流指定地址的花费">估计物流指定地址的花费</h3>
 
-<p>This call takes a full shipping address as input and estimates shipping fees. It returns a list of available shipping methods.</p>
+<p>此调用拿一个完整的物流地址作为输入来估算运费。它返回一个物流方式的列表。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -754,9 +754,9 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h3 id="estimate-shipping-costs-specifying-an-address-id">Estimate shipping costs specifying an address ID</h3>
+<h3 id="估计指定地址id物流花费">估计指定地址ID物流花费</h3>
 
-<p>This call takes an address ID as input and estimates shipping fees. It returns a list of available shipping methods.</p>
+<p>此调用拿一个地址ID作为输入估算运费。它返回一个物流方式的列表。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -789,9 +789,9 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h3 id="set-the-shipping-and-billing-information">Set the shipping and billing information</h3>
+<h3 id="设置物流和账单信息">设置物流和账单信息</h3>
 
-<p>In this call, you specify the shipping and billing addresses, as well as the selected <code class="highlighter-rouge">shipping_carrier_code</code> and <code class="highlighter-rouge">shipping_method_code</code>. Magento returns a list of payment options and calculates the order totals.</p>
+<p>在此调用中，指定物流和账单地址及选择<code class="highlighter-rouge">shipping_carrier_code</code> 和 <code class="highlighter-rouge">shipping_method_code</code>。Magento返回一个支付选项列表和算出的订单总价。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -999,9 +999,9 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="manage-billing-addresses">Manage billing addresses</h2>
+<h2 id="管理账单地址">管理账单地址</h2>
 
-<p>If the billing address isn’t provided through another call, use the <code class="highlighter-rouge">POST /V1/negotiable-carts/:cartId/billing-address</code> to specify it.</p>
+<p>如果账单地址没有通过其它调用提供，可以使用<code class="highlighter-rouge">POST /V1/negotiable-carts/:cartId/billing-address</code>调用来指定。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -1012,9 +1012,9 @@
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/billing-address</span><span class="w">
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/billing-address</span></code></pre></figure>
 
-<h3 id="set-the-billing-address">Set the billing address</h3>
+<h3 id="设置账单地址">设置账单地址</h3>
 
-<p>This call assigns a billing address to the specified negotiable quote.</p>
+<p>此调用分配账单地址到指定的议价中。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1045,11 +1045,11 @@
 
 <p>[]</p>
 
-<h3 id="return-the-billing-address">Return the billing address</h3>
+<h3 id="返回账单地址">返回账单地址</h3>
 
-<p>This call returns the billing address for the specified negotiable quote.</p>
+<p>此调用返回指定议价的账单地址</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">GET /V1/negotiable-carts/86/billing-address</code></p>
 
@@ -1079,9 +1079,9 @@
   </span><span class="s2">"save_in_address_book"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2 id="manage-cart-coupons">Manage cart coupons</h2>
+<h2 id="管理优惠券">管理优惠券</h2>
 
-<p>B2B allows coupons to be used toward payment.</p>
+<p>B2B允许在支付时使用优惠券</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -1092,9 +1092,9 @@
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">PUT</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/coupons/</span><span class="p">:</span><span class="err">couponCode</span><span class="w">
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/coupons</span></code></pre></figure>
 
-<h3 id="apply-a-coupon-to-a-negotiable-quote">Apply a coupon to a negotiable quote</h3>
+<h3 id="在议价中应用优惠券">在议价中应用优惠券</h3>
 
-<p>If the initial quote applies a coupon to the totals, Magento ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.</p>
+<p>如果初始的报价应用了一个优惠券到总价上，在转化报价到议价时Magento忽略此优惠券。然而你可以在结算的时候应用优惠券。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1106,11 +1106,11 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicting the request was successful</p>
+<p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
-<h2 id="manage-gift-cards">Manage gift cards</h2>
+<h2 id="管理礼品卡">管理礼品卡</h2>
 
-<p>B2B allows gift cards to be used as payment.</p>
+<p>B2B允许支付时使用礼品卡</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -1121,9 +1121,9 @@
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/giftCards</span><span class="w">
 </span><span class="err">DELETE</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/giftCards/</span><span class="p">:</span><span class="err">giftCardCode</span></code></pre></figure>
 
-<h3 id="apply-a-gift-card-to-a-negotiable-quote">Apply a gift card to a negotiable quote</h3>
+<h3 id="应用礼品卡到议价中">应用礼品卡到议价中</h3>
 
-<p>If the initial quote applies a gift card to the totals, Magento ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.</p>
+<p>如果报价初始在总价上有礼品卡，在报价转化为议价时Magento会忽略它。然而你可以在结算的时候应用礼品卡。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1143,9 +1143,9 @@
 
 <p><code class="highlighter-rouge">true</code></p>
 
-<h3 id="delete-a-gift-card-from-at-checkout">Delete a gift card from at checkout</h3>
+<h3 id="结算时删除礼品卡">结算时删除礼品卡</h3>
 
-<p>This call removes a gift card that has been applied to a negotiable quote.</p>
+<p>此调用移除已经应用在议价上的礼品卡。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1159,9 +1159,9 @@
 
 <p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
-<h2 id="manage-payment-information">Manage payment information</h2>
+<h2 id="管理支付信息">管理支付信息</h2>
 
-<p>When you submit payment information, Magento creates an order and sends an order confirmation to the buyer.</p>
+<p>当你提交支付信息时，Magento创建一个定单并发送订单确认给购买者。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -1173,9 +1173,9 @@
 </span><span class="err">GET</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/payment-information</span><span class="w">
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/negotiable-carts/</span><span class="p">:</span><span class="err">cartId/set-payment-information</span></code></pre></figure>
 
-<h3 id="set-payment-information-without-placing-the-order">Set payment information without placing the order</h3>
+<h3 id="不确认定单设置支付信息">不确认定单设置支付信息</h3>
 
-<p>This call sets payment information and the billing address for the negotiable quote. However, Magento does not create an order afterward.</p>
+<p>此调用设置议价的支付信息及账单地址。然而,完成之后Magento不一并创建订单。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1206,11 +1206,11 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the payment information was set</p>
+<p><code class="highlighter-rouge">true</code>, 指示支付信息设置成功</p>
 
-<h3 id="set-payment-information-and-place-the-order">Set payment information and place the order</h3>
+<h3 id="设置支付信息并确认订单">设置支付信息并确认订单</h3>
 
-<p>This call sets payment information and the billing address for the negotiable quote, then creates an order.</p>
+<p>此调用为议价设置支付信息及账单地址并一并创建订单。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1241,11 +1241,11 @@
 
 <p><strong>响应</strong></p>
 
-<p>An order ID, such as <code class="highlighter-rouge">83</code></p>
+<p>订单ID，比如<code class="highlighter-rouge">83</code></p>
 
-<h3 id="return-payment-information">Return payment information</h3>
+<h3 id="返回支付信息">返回支付信息</h3>
 
-<p>This call returns returns payment information and all information from the <code class="highlighter-rouge">totals</code> object.</p>
+<p>此调用返回支付信息及<code class="highlighter-rouge">totals</code>对象的所有信息</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -1417,9 +1417,9 @@
 </span><span class="p">}</span></code></pre></figure>
 </div></div>
 
-<h2 id="review-cart-totals">Review cart totals</h2>
+<h2 id="浏览购物车总价">浏览购物车总价</h2>
 
-<p>This call is similar to <code class="highlighter-rouge">GET /V1/negotiable-carts/:cartId/payment-information</code>, except it does not return payment information.</p>
+<p>此调用与<code class="highlighter-rouge">GET /V1/negotiable-carts/:cartId/payment-information</code>类似，但不返回支付信息</p>
 
 <p><strong>服务名称</strong></p>
 

@@ -410,11 +410,11 @@
   <p>This example shows a simplified way of creating a customer account. Typically, you would not define a customer password using plain text. Instead, you would specify the payload without the <code class="highlighter-rouge">password</code> parameter. By default if the call is successful, Magento sends a “Welcome” email to the customer that includes a request to set the password. You could also initiate a password reset email by calling <code class="highlighter-rouge">PUT /V1/customers/password</code>.</p>
 </div>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST http://&lt;host&gt;/rest/default/V1/customers</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
 
@@ -502,11 +502,11 @@
 
 <p>By default, a customer token is valid for 1 hour. To change this value, log in to Admin and go to <strong>Configuration &gt; Services &gt; OAuth &gt; Access Token Expiration</strong>.</p>
 
-<p><strong>Endpoint</strong></p>
+<p><strong>接口</strong></p>
 
 <p><code class="highlighter-rouge">POST http://&lt;host&gt;/rest/default/V1/integration/customer/token</code></p>
 
-<p><strong>Headers</strong></p>
+<p><strong>请求头</strong></p>
 
 <p><code class="highlighter-rouge">Content-Type</code> <code class="highlighter-rouge">application/json</code></p>
 

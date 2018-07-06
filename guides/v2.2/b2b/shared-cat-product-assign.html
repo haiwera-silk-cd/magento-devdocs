@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.2/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3 active " id="assign-categories-and-products">
+                <li class="nav-level3 active " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.2/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,23 +687,23 @@
 
 </section>
 
-			<p>The shared catalog configuration process includes assigning categories and products to the shared catalog. To assign these items to a shared catalog, the following conditions must be met:</p>
+			<p>共享产品目录配置过程包含分配分类和产品到共享产品目录。要分配这些项到共享产品目录，首先要满足以下条件：</p>
 
 <ul>
   <li>
-    <p>The category structure must already be defined. You cannot create a new category to be included in a shared catalog. Use endpoints like <code class="highlighter-rouge">POST /V1/categories</code> to create a new category.</p>
+    <p>分类结构必须已经被定义。你不能创建一个新的分类来放到共享产品目录。使用像<code class="highlighter-rouge">POST /V1/categories</code>接口来创建一个新的分类。</p>
   </li>
   <li>
-    <p>Each category must already be populated with products. You cannot add a new product to a category to be included in a shared catalog. Use endpoints like <code class="highlighter-rouge">POST /V1/products</code> to create a new product.</p>
+    <p>每个分类下必须已经有产品，你不能分配一个新的产品到已经被包含在共享产品目录中的分类下。使用像<code class="highlighter-rouge">POST /V1/products</code>的接口来创建一个新的产品。</p>
   </li>
 </ul>
 
-<h2 id="assign-categories">Assign categories</h2>
+<h2 id="分配分类">分配分类</h2>
 
-<p>The <code class="highlighter-rouge">sharedCatalogCategoryManagementV1</code> service is based on <code class="highlighter-rouge">catalogCategoryManagementV1</code>. To view a store’s category structure, call <code class="highlighter-rouge">GET /V1/categories</code>.</p>
+<p><code class="highlighter-rouge">sharedCatalogCategoryManagementV1</code>服务基于<code class="highlighter-rouge">catalogCategoryManagementV1</code>。要查看一个商店下的分类结构，可以调用<code class="highlighter-rouge">GET /V1/categories</code>接口</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Products that are defined within a category are not included when you assign a category to a shared catalog. You must add products separately.</p>
+  <p>当你分配一个分类到共享产品目录时，在分类下定义的产品都不会被包含，你必须单独地分配产品。</p>
 </div>
 
 <p><strong>服务名称</strong></p>
@@ -716,10 +716,10 @@
 </span><span class="err">POST</span><span class="w"> </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/unassignCategories</span><span class="w">
 </span><span class="err">GET</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/categories</span></code></pre></figure>
 
-<p><strong>Category parameters</strong></p>
+<p><strong>分类参数</strong></p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Although you can specify other parameters defined within a <code class="highlighter-rouge">categories</code> object, the <code class="highlighter-rouge">id</code> is the only one used to assign or unassign a category to a shared catalog.</p>
+  <p>虽然你可以指定其它在<code class="highlighter-rouge">categories</code>对象中定义的参数，但<code class="highlighter-rouge">id</code>是唯一用于绑定或解绑分类到共享产品目录的参数。</p>
 </div>
 
 <table>
@@ -734,18 +734,18 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">id</code></td>
-      <td>The category ID number</td>
+      <td>分类的ID号</td>
       <td>integer</td>
       <td>Required to assign or unassign a category</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="assign-categories-to-shared-catalog">Assign categories to shared catalog</h3>
+<h3 id="分配绑定分类和共享产品目录">分配(绑定)分类和共享产品目录</h3>
 
-<p>The following example adds the Luma Gear category (<code class="highlighter-rouge">id=3</code>) as well as its subcategories (<code class="highlighter-rouge">id=4,5,6</code>) to a custom shared catalog.</p>
+<p>下面的例子添加Luma Gear分类(<code class="highlighter-rouge">id=3</code>)及它的子类(<code class="highlighter-rouge">id=4,5,6</code>) 到一个自定义的共享产品目录。</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/assignCategories</code></p>
 
@@ -770,15 +770,15 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h3 id="unassign-categories-from-a-shared-catalog">Unassign categories from a shared catalog</h3>
+<h3 id="从共享产品目录中解绑分类">从共享产品目录中解绑分类</h3>
 
-<p>When you unassign a category from a shared catalog, Magento also removes its products from the shared catalog. If a product is assigned to multiple categories, then Magento removes the product from the unassigned category only.</p>
+<p>当你从共享产品目录解绑分类时，Magento也会同时移除它在共享产品目录下的产品。如果产品被分配到了多个分类，Magento只移除当前解绑分类下的这个。</p>
 
-<p>The following example removes two categories from the shared catalog.</p>
+<p>下面的例子从共享产品目录中移除了两个分类</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/unassignCategories</code></p>
 
@@ -798,11 +798,11 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h3 id="list-the-shared-catalog-categories">List the shared catalog categories</h3>
+<h3 id="列出所有共享产品目录的分类">列出所有共享产品目录的分类</h3>
 
-<p>The <code class="highlighter-rouge">GET</code> call returns an array of catalog IDs.</p>
+<p><code class="highlighter-rouge">GET</code>调用返回产品目录的ID数组</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -821,24 +821,24 @@
   </span><span class="mi">6</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h2 id="assign-products">Assign products</h2>
+<h2 id="分配产品">分配产品</h2>
 
-<p>The <code class="highlighter-rouge">sharedCatalogProductManagementV1</code> service is based on <code class="highlighter-rouge">catalogProductManagementV1</code>. To return a list of products defined within a category, call <code class="highlighter-rouge">GET /V1/categories/:categoryId/products</code>.</p>
+<p><code class="highlighter-rouge">sharedCatalogProductManagementV1</code>服务基于<code class="highlighter-rouge">catalogProductManagementV1</code>. 要返回一个分类下定义的产品列表，可以调用<code class="highlighter-rouge">GET /V1/categories/:categoryId/products</code>.</p>
 
 <p><strong>服务名称</strong></p>
 
 <p><code class="highlighter-rouge">sharedCatalogProductManagementV1 </code></p>
 
-<p><strong>REST endpoints</strong></p>
+<p><strong>REST接口</strong></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">POST</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/assignProducts</span><span class="w">
 </span><span class="err">POST</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/unassignProducts</span><span class="w">
 </span><span class="err">GET</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">id/products</span></code></pre></figure>
 
-<p><strong>Category parameters</strong></p>
+<p><strong>分类参数</strong></p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Although you can specify other parameters defined within a <code class="highlighter-rouge">products</code> object, the <code class="highlighter-rouge">sku</code> is the only one used to assign or unassign a product to a shared catalog.</p>
+  <p>虽然你可以指定其它<code class="highlighter-rouge">products</code>对象定义的其它参数，但<code class="highlighter-rouge">sku</code>是唯一用于分配和解绑产品到共享产品目录的参数。</p>
 </div>
 
 <table>
@@ -853,18 +853,18 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">sku</code></td>
-      <td>The product’s SKU identifier</td>
+      <td>产品的sku标识</td>
       <td>string</td>
-      <td>Required to assign or unassign a product to a shared catalog</td>
+      <td>分配和解绑产品到共享产品目录时必需</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="assign-products-to-shared-catalog">Assign products to shared catalog</h3>
+<h3 id="分配产品到共享产品目录">分配产品到共享产品目录</h3>
 
-<p>The following example adds two products each in the Bags, Fitness Equipment, and Watches categories to a custom shared catalog. The specified products do not have to be in the same category.</p>
+<p>下面的例子添加了Bags, Fitness Equipment及Watches分类下各两个产品到一个自定义的共享产品目录。指定的目录不须要在同一个分类下。</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/assignProducts</code></p>
 
@@ -895,13 +895,13 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h3 id="unassign-products-from-the-shared-catalog">Unassign products from the shared catalog</h3>
+<h3 id="从共享产品目录解绑产品">从共享产品目录解绑产品</h3>
 
-<p>Unassigning a product does not remove it from its category or categories.</p>
+<p>解绑产品不会移除它所对应的分类</p>
 
-<p><strong>Sample usage</strong></p>
+<p><strong>示例用法</strong></p>
 
 <p><code class="highlighter-rouge">POST /V1/sharedCatalog/2/unassignProducts</code></p>
 
@@ -917,11 +917,11 @@
 
 <p><strong>响应</strong></p>
 
-<p><code class="highlighter-rouge">true</code>, indicating the operation was successful</p>
+<p><code class="highlighter-rouge">true</code>, 指示操作成功</p>
 
-<h3 id="list-the-shared-catalog-categories-1">List the shared catalog categories</h3>
+<h3 id="列出所有共享产品目录的产品">列出所有共享产品目录的产品</h3>
 
-<p>The <code class="highlighter-rouge">GET</code> call returns an array of SKUs.</p>
+<p><code class="highlighter-rouge">GET</code>调用返回一个sku的数组</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -946,7 +946,7 @@
 <ul>
   <li><a href="/guides/v2.2/b2b/shared-catalog.html">与ShareCatalog模块集成</a></li>
   <li><a href="/guides/v2.2/b2b/shared-cat-manage.html">管理共享类目录</a></li>
-  <li><a href="/guides/v2.2/b2b/shared-cat-company.html">Assign companies</a></li>
+  <li><a href="/guides/v2.2/b2b/shared-cat-company.html">分配公司</a></li>
 </ul>
 
 			

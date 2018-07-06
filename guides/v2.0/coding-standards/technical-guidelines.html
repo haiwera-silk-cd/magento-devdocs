@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/coding-standards/technical-guidelines.html">
+	<link rel="canonical" href="/guides/v2.0/coding-standards/technical-guidelines.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -937,9 +937,9 @@
 
 <p>3.2. The <code class="highlighter-rouge">app/etc/di.xml</code> file MUST contain only framework-level <span term-uuid="2be50595-c5c7-4b9d-911c-3bf2cd3f7beb" class="glossary-term" data-toggle="popover">依赖注入</span> (DI) settings.</p>
 
-<p>3.3. All modular DI settings (except for Presentation layer configuration) SHOULD be stored in <code class="highlighter-rouge">&lt;module_dir&gt;/etc/di.xml</code>.</p>
+<p>3.3. All modular DI settings (except for 表示层 configuration) SHOULD be stored in <code class="highlighter-rouge">&lt;module_dir&gt;/etc/di.xml</code>.</p>
 
-<p>3.4. All modular Presentation layer DI settings SHOULD be stored in <code class="highlighter-rouge">&lt;module_dir&gt;/etc/&lt;area_code&gt;/di.xml</code>.</p>
+<p>3.4. All modular 表示层 DI settings SHOULD be stored in <code class="highlighter-rouge">&lt;module_dir&gt;/etc/&lt;area_code&gt;/di.xml</code>.</p>
 
 <h2 id="4-interception">4. Interception</h2>
 
@@ -997,7 +997,7 @@
 
 <p>5.16. If a method uses system resources (such as files, sockets, streams, 等.), the code MUST be wrapped with a <code class="highlighter-rouge">try</code> block and the corresponding <code class="highlighter-rouge">finally</code> block. In the <code class="highlighter-rouge">finally</code> sections, all resources SHOULD be properly released.</p>
 
-<p>5.17. <code class="highlighter-rouge">LocalizedException</code> SHOULD only be thrown in the Presentation layer (Controllers, Blocks).</p>
+<p>5.17. <code class="highlighter-rouge">LocalizedException</code> SHOULD only be thrown in the 表示层 (Controllers, Blocks).</p>
 
 <h2 id="6-application-layers">6. Application layers</h2>
 
@@ -1007,9 +1007,9 @@
 
 <p>6.1.2. Every application layer (Presentation, Service Contracts, Data Access) MUST process (handle or re-throw) exceptions of the underlying layer.</p>
 
-<h3 id="62-presentation-layer">6.2. Presentation layer</h3>
+<h3 id="62-表示层">6.2. 表示层</h3>
 
-<p>6.2.1. According to CQRS, the Presentation layer hosts the Command and the Query Infrastructures:</p>
+<p>6.2.1. According to CQRS, the 表示层 hosts the Command and the Query Infrastructures:</p>
 
 <ul>
   <li>
@@ -1020,7 +1020,7 @@
   </li>
 </ul>
 
-<p>6.2.2. Request, Response, Session, Store Manager and Cookie objects MUST be used only in the Presentation layer.</p>
+<p>6.2.2. Request, Response, Session, Store Manager and Cookie objects MUST be used only in the 表示层.</p>
 
 <p>6.2.3. All actions MUST return the <code class="highlighter-rouge">ResultInterface</code> implementation.</p>
 

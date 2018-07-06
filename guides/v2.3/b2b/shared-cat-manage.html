@@ -369,12 +369,12 @@
         
         
         
-        <li class="nav-level2  " id="公司信用帐户">
+        <li class="nav-level2  " id="公司信用账户">
 
             
 
             
-            <span>公司信用帐户</span>
+            <span>公司信用账户</span>
             
 
             
@@ -397,11 +397,11 @@
 
                 
                 
-                <li class="nav-level3  " id="管理公司信用帐户">
+                <li class="nav-level3  " id="管理公司信用账户">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用帐户</a>
+                    <a  href="/guides/v2.3/b2b/credit-manage.html">管理公司信用账户</a>
                     
 
                     
@@ -457,11 +457,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-categories-and-products">
+                <li class="nav-level3  " id="分配分类和产品">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">Assign categories and products</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-product-assign.html">分配分类和产品</a>
                     
 
                     
@@ -471,11 +471,11 @@
 
                 
                 
-                <li class="nav-level3  " id="assign-companies">
+                <li class="nav-level3  " id="分配公司">
                     
 
                     
-                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">Assign companies</a>
+                    <a  href="/guides/v2.3/b2b/shared-cat-company.html">分配公司</a>
                     
 
                     
@@ -687,9 +687,9 @@
 
 </section>
 
-			<h2 id="manage-custom-shared-catalogs">Manage custom shared catalogs</h2>
+			<h2 id="magento自定义共享产品目录">Magento自定义共享产品目录</h2>
 
-<p>Magento Commerce for B2B provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.</p>
+<p>Magento Commerce for B2B提供了两种类型的共享产品目录：公共的和自定义的。公共的共享产品目录就是默认的共享产品目录。它自动展示给所有不是公司用户的游客及登录客户。销售者通过管理面板配置来分配一个自定义的共享产品目录到指定的公司。只能有一个公共产品目录且不能被删除。</p>
 
 <p><strong>服务名称</strong></p>
 
@@ -703,7 +703,7 @@
 </span><span class="err">DELETE</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span><span class="p">:</span><span class="err">sharedCatalogId</span><span class="w">
 </span><span class="err">GET</span><span class="w">  </span><span class="err">/V</span><span class="mi">1</span><span class="err">/sharedCatalog/</span></code></pre></figure>
 
-<p><strong>Shared catalog parameters</strong></p>
+<p><strong>共享产品目录参数</strong></p>
 
 <table>
   <thead>
@@ -717,33 +717,33 @@
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">id</code></td>
-      <td>The system-generated shared catalog ID number</td>
+      <td>系统生成的共享产品目录的ID号</td>
       <td>integer</td>
-      <td>Required to update a shared catalog. Not applicable for create operations.</td>
+      <td>更新共享产品目录时必须 ，创建操作是不可用的</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">name</code></td>
-      <td>The display name of the shared catalog. Must be unique</td>
+      <td>此共享产品目录的显示名称，必须唯一</td>
       <td>string</td>
-      <td>Required to create or update a shared catalog.</td>
+      <td>创建和更新共享产品目录时必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">description</code></td>
-      <td>Describes the shared catalog</td>
+      <td>共享产品目录的描述</td>
       <td>string</td>
       <td>可选</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">customer_group_id</code></td>
-      <td>A system-generated ID. It cannot be changed.</td>
+      <td>系统生成的ID,不通修改</td>
       <td>integer</td>
-      <td>0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer</td>
+      <td>0-未登录；1-正常；2-整体销售；3-零售</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">type</code></td>
-      <td>Indicates whether this is a custom or public shared catalog.</td>
+      <td>指示是否是自定义共享产品目录，或是公共共享产品目录</td>
       <td>integer</td>
-      <td>Required to create or update a shared catalog. 0 - Custom; 1 - Public</td>
+      <td>创建和更新共享产品目录时必需 0 - 自定义; 1 - 公共</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">created_by</code></td>
@@ -753,22 +753,22 @@
     </tr>
     <tr>
       <td><code class="highlighter-rouge">store_id</code></td>
-      <td>The store ID the shared catalog is assigned to</td>
+      <td>共享目录分配到的网站ID</td>
       <td>integer</td>
-      <td>Required to create or update a shared catalog.</td>
+      <td>创建和更新共享产品目录时必需</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">tax_class_id</code></td>
       <td> </td>
       <td>integer</td>
-      <td>Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer</td>
+      <td>创建共享产品目录时必需。1-应纳税商品。2-零售顾客</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="create-a-custom-shared-catalog">Create a custom shared catalog</h3>
+<h3 id="创建一个自定义的共享产品目录">创建一个自定义的共享产品目录</h3>
 
-<p>When B2B is enabled, the system creates a public shared catalog named <code class="highlighter-rouge">Default (General)</code>. Magento allows only one public shared catalog at a time. You can create an unlimited number of custom shared catalogs.</p>
+<p>当启用B2B，系统会创建一个公共的共享产品目录，名字叫<code class="highlighter-rouge">Defalut(General)</code>。Magento只允许同一时间只有一个公共共享产品目录。你可以创建无限多个自定义共享产品目录。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -787,11 +787,11 @@
 
 <p><strong>响应</strong></p>
 
-<p>The shared catalog <code class="highlighter-rouge">id</code>, such as <code class="highlighter-rouge">2</code>.</p>
+<p>共享产品目录的<code class="highlighter-rouge">id</code>,如<code class="highlighter-rouge">2</code></p>
 
-<h3 id="update-a-characteristics-of-a-shared-catalog">Update a characteristics of a shared catalog</h3>
+<h3 id="更新共享产品目录的特点">更新共享产品目录的特点</h3>
 
-<p>You cannot change the <code class="highlighter-rouge">type</code> from public (<code class="highlighter-rouge">1</code>) to custom (<code class="highlighter-rouge">0</code>). If you need to replace the public shared catalog, create a custom catalog and change its type to public.</p>
+<p>你不能修改<code class="highlighter-rouge">type</code>的值，从公共(<code class="highlighter-rouge">1</code>)改为自定义(<code class="highlighter-rouge">0</code>),如果你需要替换公共产品目录，可以创建一个自定义共享产品目录并将其类型改为公共的。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -810,11 +810,11 @@
 
 <p><strong>响应</strong></p>
 
-<p>The shared catalog <code class="highlighter-rouge">id</code>, such as <code class="highlighter-rouge">2</code>.</p>
+<p>共享产品目录的<code class="highlighter-rouge">id</code>,如<code class="highlighter-rouge">2</code></p>
 
-<h3 id="retrieve-general-information-about-a-shared-catalog">Retrieve general information about a shared catalog</h3>
+<h3 id="接收共享产品目录的一般信息">接收共享产品目录的一般信息</h3>
 
-<p>This call returns information about the specified shared catalog.</p>
+<p>此调用返回指定共享产品目录的信息</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -838,9 +838,9 @@
     </span><span class="s2">"tax_class_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h3 id="delete-a-shared-catalog">Delete a shared catalog</h3>
+<h3 id="删除共享产品目录">删除共享产品目录</h3>
 
-<p>Only custom shared catalogs can be deleted. When a custom catalog is deleted, the assigned companies are re-assigned to the default public catalog.</p>
+<p>仅有自定义的共享产品目录可以被删除，当一个自定义的产品目录被删除时，被分配在此上的公司将被重新分配到公共产品目录中。</p>
 
 <p><strong>样例用法</strong></p>
 
@@ -854,9 +854,9 @@
 
 <p><code class="highlighter-rouge">true</code>,指示请求成功</p>
 
-<h3 id="search-for-a-shared-catalog">Search for a shared catalog</h3>
+<h3 id="查找共享产品目录">查找共享产品目录</h3>
 
-<p>The following search returns all the custom shared catalogs (<code class="highlighter-rouge">type = 0</code>) in the system.</p>
+<p>下面的查询返回了系统中所有的自定义(<code class="highlighter-rouge">type = 0</code>)目录</p>
 
 <p>参考<a href="/guides/v2.3/rest/performing-searches.html">使用REST API搜索</a>了解更多关于构造查询的信息</p>
 
@@ -904,8 +904,8 @@
 
 <ul>
   <li><a href="/guides/v2.3/b2b/shared-catalog.html">与ShareCatalog模块集成</a></li>
-  <li><a href="/guides/v2.3/b2b/shared-cat-product-assign.html">Assign categories and products</a></li>
-  <li><a href="/guides/v2.3/b2b/shared-cat-company.html">Assign companies</a></li>
+  <li><a href="/guides/v2.3/b2b/shared-cat-product-assign.html">分配分类和产品</a></li>
+  <li><a href="/guides/v2.3/b2b/shared-cat-company.html">分配公司</a></li>
 </ul>
 
 			
