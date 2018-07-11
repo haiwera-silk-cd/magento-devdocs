@@ -66,7 +66,7 @@ To export a Varnish configuration file from the Admin panel:
 
 1.	Click one of the export buttons to create a <code>default.vcl</code> you can use with Varnish.
 
-	For example, if you have Varnish 4, click **Export VCL for Varnish 4**
+	例如， if you have Varnish 4, click **Export VCL for Varnish 4**
 
 	The following figure shows an example.<br><br>
 	<img src="{{ site.baseurl }}/common/images/config_varnish_admin.png" alt="配置Magento使用Varnish in the Admin">
@@ -74,7 +74,7 @@ To export a Varnish configuration file from the Admin panel:
 2.	Replace your existing <code>default.vcl</code> with the one you just exported.
 3.	We recommend you open `default.vcl` and change the value of `acl purge` to the IP address of the Varnish host. (You can specify multiple hosts on separate lines or you can use CIDR notation as well.)
 
-	For example,
+	例如，
 
 		acl purge {
 		   "localhost";

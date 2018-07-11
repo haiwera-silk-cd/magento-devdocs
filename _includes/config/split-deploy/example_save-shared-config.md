@@ -6,7 +6,7 @@
 		cd <Magento root dir>
 		php bin/magento app:config:dump
 
-	For example, if Magento is installed in `/var/www/html/magento2`, enter:
+	例如， if Magento is installed in `/var/www/html/magento2`, enter:
 
 		cd /var/www/html/magento2
 		php bin/magento app:config:dump

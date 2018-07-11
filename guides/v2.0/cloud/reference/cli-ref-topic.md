@@ -29,7 +29,7 @@ You must install the Magento Cloud CLI to your local workspace to issue commands
 
 The following Magento Cloud CLI commands can be run from any directory and run best from a project directory. When run from a project directory, you can omit the `-p <project ID>` parameter. These commands are meant to be used to manage Integration environments.
 
-You may notice these commands are similar to Git commands. The `magento-cloud` Git commands directly connect with Magento Git, the Magento ECE project, with additional features. For example, when you push a Git branch, it is not activated until you access GitHub. The Magento CLI command includes activation.
+You may notice these commands are similar to Git commands. The `magento-cloud` Git commands directly connect with Magento Git, the Magento ECE project, with additional features. 例如， when you push a Git branch, it is not activated until you access GitHub. The Magento CLI command includes activation.
 
 All listed commands include only the required information and options. These commands may include additional options. To see all options and help, append `--help` with any `magento-cloud` command .
 
@@ -204,7 +204,7 @@ The following table lists all commands for interacting with your environments an
 	 				<td>Removes old project builds. When using local:build in a separate location from your code, use this command to clear those builds. By default, your latest five builds are not deleted.</td>
 	 				</tr>
 					<td>db:dump</td>
-					<td>Creates a local dump of the remote database data. You can push the dump to another remote database. For example, you could pull data from the Production environment (products, catalogs, etc) and push it into Staging for testing.</td>
+					<td>Creates a local dump of the remote database data. You can push the dump to another remote database. 例如， you could pull data from the Production environment (products, catalogs, etc) and push it into Staging for testing.</td>
 					</tr>
 					<tr>
 					<td>db:size</td>
@@ -212,7 +212,7 @@ The following table lists all commands for interacting with your environments an
 					</tr>
 					<tr>
 					<td>db:sql (sql)</td>
-					<td>Opens an SQL console on the remote database. You can view tables and dump data from a local to the remote database. For example, you could push a data dump from Production into Staging for testing.</td>
+					<td>Opens an SQL console on the remote database. You can view tables and dump data from a local to the remote database. 例如， you could push a data dump from Production into Staging for testing.</td>
 					</tr>
 	 				<tr>
 	 				<td>domain:add</td>

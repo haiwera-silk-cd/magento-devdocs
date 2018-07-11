@@ -35,7 +35,7 @@ To reinstall the Magento software as a contributing developer:
 	(The product version is in the format `2.0.x`)
 <!-- is the `magento/product-community-edition` version from -->.
 5.	Save your changes to `composer.json` and exit the text editor.
-6.	Enter the following command:
+6.	输入下面的命令：
 
 		composer update
 

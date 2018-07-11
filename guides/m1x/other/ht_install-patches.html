@@ -85,7 +85,7 @@ The following figure shows an example.</br>
 <ol><li>Transfer the patch <code>.sh</code> file to your Magento installation root directory.<br />
 <div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: This article assumes your patch file name ends in <code>.sh</code>. If your patch file name ends in <code>.patch</code> or something else, <a href="http://support.magentocommerce.com/" target="_blank">contact Magento Support</a> before proceeding.</div>
 
-For example, <code>/var/www/html/magento</code>.</li>
+例如， <code>/var/www/html/magento</code>.</li>
 <li>Enter the following commands as a user with sufficient privileges to write to Magento files (typically, the web server user or <code>root</code>):
 	<pre>chmod +x &lt;patch-file-name>.sh
 ./&lt;patch-file-name>.sh</pre>
@@ -97,11 +97,11 @@ The value in the USER column is the web server user name.<br />
 Typically, the Apache web server user on CentOS is <code>apache</code> and the Apache web server user on Ubuntu is <code>www-data</code>.</li>
 <li>As a user with <code>root</code> privileges, enter the following command from the Magento installation directory:
 <pre>chown -R <em>web-server-user-name</em> .</pre>
-For example, on Ubuntu where Apache usually runs as <code>www-data</code>, enter
+例如， on Ubuntu where Apache usually runs as <code>www-data</code>, enter
 <pre>chown -R www-data .</pre></li></ol> 
  </li>
 <li>Perform any other tasks as instructed by Magento Support.<br />
-(For example, some patches require you to stop external services, such as the Solr search engine.)</li></ol>
+(例如， some patches require you to stop external services, such as the Solr search engine.)</li></ol>
 
 <h2 id="apply-8788">How to Apply the SUPEE-8788 Patch</h2>
 <p>We released a <a href="https://magento.com/security/patches/supee-8788" target="_blank">security patch</a> in October, 2016 that might cause issues for some users. This section applies to you if any of the following is true:</p>

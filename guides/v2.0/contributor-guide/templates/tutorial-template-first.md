@@ -27,7 +27,7 @@ Parameter | Description
 `group:` | The group, or book, to which the topic belongs.
 `subgroup:`| First page only. Places a link with the specified text to the {% glossarytooltip 31751771-8163-434b-88bc-c5f94d859fc3 %}sidebar{% endglossarytooltip %}
 `level3_subgroup:` | A group name that binds the tutorial topics together. This value must be specified on each topic in the tutorial.
-`title:` | The title of the tutorial.  On the first pageFor all other topics in the tutorial, this value should be in the form _Step X. Perform this task_. (For example, `步骤1. 配置网店`)
+`title:` | The title of the tutorial.  On the first pageFor all other topics in the tutorial, this value should be in the form _Step X. Perform this task_. (例如， `步骤1. 配置网店`)
 `subtitle` | Displays the tutorial name. The value must be specified on each topic in the tutorial.
 `menu_title:` | On the first page of the tutorial, specify `初始化工作`. Otherwise, leave this line blank.
 `menu_order:` | The sequence number of the topic. If the topic is an intro topic in a multi-step tutorial, set this 0. Otherwise set it to the step number.

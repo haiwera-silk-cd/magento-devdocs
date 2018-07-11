@@ -160,7 +160,7 @@ Most websites have eliminated personal pronouns because using pronouns like “y
 
 The tone in UI content – including navigation, tables, forms, and calls to action – is usually more focused on accuracy and conciseness, but the same standards apply: Use clear, plain language and consult global conventions to ensure content is understood by all.
 
-Consistency is critical. For example, wherever content is displayed in [数据表格s]({{ page.baseurl }}/pattern-library/displaying-data/datatable/datatable.html) or [Form Elements]({{ page.baseurl }}/pattern-library/getting-user-input/form_elements/form_elements.html), it should use Magento standard or global conventions.
+Consistency is critical. 例如， wherever content is displayed in [数据表格s]({{ page.baseurl }}/pattern-library/displaying-data/datatable/datatable.html) or [Form Elements]({{ page.baseurl }}/pattern-library/getting-user-input/form_elements/form_elements.html), it should use Magento standard or global conventions.
 <br>
 
 *Correct example of button-label consistency, in a task flow:*

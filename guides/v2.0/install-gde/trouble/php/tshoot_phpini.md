@@ -27,7 +27,7 @@ This is commonly caused by a different instance of {% glossarytooltip bf703ab1-c
 To determine whether or not you're using one instance of PHP:
 
 1.	Log in to your Magento server.
-2.	Enter the following command:
+2.	输入下面的命令：
 
 		php -i | grep 'php.ini'
 	

@@ -185,7 +185,7 @@ A data set should be placed in the same directory with a corresponding test case
 
 ## Data set merging {#merge}
 
-The FTF enables you to merge data sets from different modules. For example, if you create a new {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} that adds a menu option to an existing module, the FTF allows you to merge the new data with the existing data sets. As a result, you don't have to edit the existing module to include the new information, and your tests continue to work. If you decide to later remove the same new module, you don't need to clean the data sets in other modules.
+The FTF enables you to merge data sets from different modules. 例如， if you create a new {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} that adds a menu option to an existing module, the FTF allows you to merge the new data with the existing data sets. As a result, you don't have to edit the existing module to include the new information, and your tests continue to work. If you decide to later remove the same new module, you don't need to clean the data sets in other modules.
    
 There are two options to merge data sets in the FTF:
  
@@ -249,7 +249,7 @@ Also, in similar cases you can use array type in a data set, like:
 
 ### Set a simple variable {#simple_var}
 
-For example, if a [test case] or constraint has an argument `$price`, then the test case takes from the data set all the `<data>` nodes with a name `price`. Assume a method with the `$price` argument.
+例如， if a [test case] or constraint has an argument `$price`, then the test case takes from the data set all the `<data>` nodes with a name `price`. Assume a method with the `$price` argument.
 
 {%highlight php inline=true %}
 public function testCreate($price)
@@ -275,7 +275,7 @@ public function testCreate(\Magento\Catalog\Test\Fixture\CatalogProductSimple $p
 }
 {%endhighlight php%}
 
-In this case, the ObjectManager sends data to the [InjectableFixture] constructor. It declares that your data can be passed to the fixture in `$data` variable as an array. For example, to assign the existing fixture field `weight` with `50` you can use the following notation:
+In this case, the ObjectManager sends data to the [InjectableFixture] constructor. It declares that your data can be passed to the fixture in `$data` variable as an array. 例如， to assign the existing fixture field `weight` with `50` you can use the following notation:
 
 {%highlight xml%}
  <data name="product/data/weight" xsi:type="string">50</data>
@@ -283,7 +283,7 @@ In this case, the ObjectManager sends data to the [InjectableFixture] constructo
 
 ### Set data to a fixture from a repository {#fixture_repository}
 
-The [InjectableFixture] class enables you to use a [fixture repository][repository]. It can be injected in a `$dataset` variable. For example, to use `dataset = product_with_special_symbols_in_name` from the repository assigned in the [fixture], you can use:
+The [InjectableFixture] class enables you to use a [fixture repository][repository]. It can be injected in a `$dataset` variable. 例如， to use `dataset = product_with_special_symbols_in_name` from the repository assigned in the [fixture], you can use:
 
 {%highlight xml%}
 <data name="product/dataset" xsi:type="string">product_with_special_symbols_in_name</data>
@@ -313,7 +313,7 @@ The `checkout_data` doesn't contain source and is assigned with values from the 
 
 ### Add a new variation {#add_variation}
 
-To add a new variation using [merging], you should simply use the name of a [test case] that you want to merge with. For example, you want to add a new variations from the Magento_ProductVideo模块 to the `Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest` that is placed in the Magento_Catalog模块. You can create data set in the Magento_ProductVideo模块, containing variations you need, and paste the test case name that you want to merge with:
+To add a new variation using [merging], you should simply use the name of a [test case] that you want to merge with. 例如， you want to add a new variations from the Magento_ProductVideo模块 to the `Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest` that is placed in the Magento_Catalog模块. You can create data set in the Magento_ProductVideo模块, containing variations you need, and paste the test case name that you want to merge with:
  
  * Create `<magento2_root_dir>/dev/tests/functional/tests/app/Magento/ProductVideo/Test/TestCase/Product/UpdateSimpleProductEntityTest.xml` with the following code:
 
@@ -355,7 +355,7 @@ Variations `DeleteVideoFromPCFTestVariation1` and `DeleteVideoFromPCFTestVariati
 
 If you want to extend variation in another module using [merging], you should use a [test case] name that you want to merge with and a variation name that you want to extend.
  
-For example, see how in `Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml`
+例如， see how in `Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml`
 
  {%highlight xml%}
  {%remote_markdown https://raw.githubusercontent.com/magento/magento2/2.0/dev/tests/functional/tests/app/Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml%}

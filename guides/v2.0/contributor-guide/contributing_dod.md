@@ -126,7 +126,7 @@ Expected code coverage:
 * Should cover 100% of occurrences
 
 Not all changes can be covered.
-For example, it is possible to scan a file for literals, but it is unfeasible to analyze string concatenation or any other dynamic way of building variable.
+例如， it is possible to scan a file for literals, but it is unfeasible to analyze string concatenation or any other dynamic way of building variable.
 
 #### Functional Manual Tests
 Must cover new or changed application behavior (functional).

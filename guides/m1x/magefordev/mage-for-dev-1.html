@@ -75,7 +75,7 @@
 <p>Magento organizes its code into individual Modules. In a typical PHP <a href="http://en.wikipedia.org/wiki/Model–view–controller" target="_new"><b>Model-View-Controller (MVC)</b></a> application, all the Controllers will be in one folder, all the Models in another, 等.  In Magento, files are grouped together based on functionality, which are called <b>modules</b> in Magento.
 
 <h4>Magento's Code</h4>
-<p>For example, you'll find Controllers, Models, Helpers, Blocks, 等. related to Magento's checkout functionality in
+<p>例如， you'll find Controllers, Models, Helpers, Blocks, 等. related to Magento's checkout functionality in
 <pre>app/code/core/Mage/Checkout</pre>
 
 <p>You'll find Controllers, Models, Helpers, Blocks, 等. related to Magento's Google Checkout functionality in
@@ -105,7 +105,7 @@
 
 <p>In a configuration-based system, like Magento, in addition to adding the new file/class to the codebase, you often need to explicitly tell the system about the new class, or new group of classes. In Magento, each Module has a file named <tt>config.xml</tt>. This file contains all the relevant configuration for a Magento Module.  At runtime, all these files are loaded into one large configuration tree.</p>
 
-<p>For example, want to use Models in your custom Module?  You'll need to add some code to <tt>config.xml</tt> that tells Magento you want to use Models, as well as what the base class name for all your Models should be.</p>
+<p>例如， want to use Models in your custom Module?  You'll need to add some code to <tt>config.xml</tt> that tells Magento you want to use Models, as well as what the base class name for all your Models should be.</p>
 
 <pre>
     &lt;models>
@@ -201,7 +201,7 @@ class Mage_Catalog_CategoryController extends Mage_Core_Controller_Front_Action
 
 <p>The CMS Controller checks Magento's content Management system to see if there's any content that should be loaded.  If it finds some, it loads it, otherwise the user will be presented with a 404 page.  </p>
 
-<p>For example, the main magento "index" page is one that uses the CMS Controller, which can often throw newcomers for a loop.</p>
+<p>例如， the main magento "index" page is one that uses the CMS Controller, which can often throw newcomers for a loop.</p>
 
 <a name="4"></a>
 <h2>Context-Based URI Model Loading</h2>
@@ -343,7 +343,7 @@ $this-&gt;renderLayout();
 
 <p>Blocks objects are meant to interact with the Magento system to retrieve data from Models, while the phtml template files will produce the HTML needed for a page.</p>
 
-<p>For example, the page header Block <tt>app/code/core/Mage/Page/Block/Html/Head.php</tt> uses the head.phtml file <tt>page/html/head.phtml</tt>.
+<p>例如， the page header Block <tt>app/code/core/Mage/Page/Block/Html/Head.php</tt> uses the head.phtml file <tt>page/html/head.phtml</tt>.
 
 <p>Another way of thinking about it is the Block classes are almost like little mini-controllers, and the .phtml files are the view.</p>
 
@@ -380,7 +380,7 @@ public function indexAction()
 
 <p>but more commonly (at least in the frontend cart application), is use of the XML Layout system.</p>
 
-<p>The Layout XML files in a theme allow you, on a per Controller basis, to remove Blocks that would normally be rendered, or add Blocks to that default skeleton areas. For example, consider this Layout XML file: </p>
+<p>The Layout XML files in a theme allow you, on a per Controller basis, to remove Blocks that would normally be rendered, or add Blocks to that default skeleton areas. 例如， consider this Layout XML file: </p>
 
 <pre>
 &lt;catalog_category_default>

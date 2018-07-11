@@ -27,7 +27,7 @@ Permissions required to access particular resource are configured in the `webapi
 
 
 User type | Accessible resources (defined in webapi.xml)
-Administrator or Integration | Resources for which administrators or integrators are authorized. For example, if administrators are authorized for the `Magento_Customer::group` resource, they can make a `GET /V1/customerGroups/:id` call.
+Administrator or Integration | Resources for which administrators or integrators are authorized. 例如， if administrators are authorized for the `Magento_Customer::group` resource, they can make a `GET /V1/customerGroups/:id` call.
 Customer | Resources with `anonymous`或`self` permission.
 Guest user | Resources with `anonymous` permission.
 
@@ -37,7 +37,7 @@ The <code>acl.xml</code> file defines the access control list (ACL) for a given 
 `acl.xml` files across all Magento modules are consolidated to build an ACL tree which is used to select allowed {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} role resources or third party Integration's access (System > {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension{% endglossarytooltip %} > Integration > Add New Integration > Available APIs).
 
 <h4 id="acl-webapi-relation">Sample customer acl.xml</h4>
-For example, account management, customer configuration, and customer group resource permissions are defined in the Customer module's <code><a href="{{ site.mage2000url }}app/code/Magento/Customer/etc/acl.xml" target="_blank">acl.xml</a></code>.
+例如， account management, customer configuration, and customer group resource permissions are defined in the Customer module's <code><a href="{{ site.mage2000url }}app/code/Magento/Customer/etc/acl.xml" target="_blank">acl.xml</a></code>.
 
 When a developer creates the Web API configuration file (<code>webapi.xml</code>), the permissions defined in acl.xml are referenced to create access rights for each API resource.
 
@@ -89,14 +89,14 @@ When a developer creates the Web API configuration file (<code>webapi.xml</code>
 ...
 {% endhighlight %}
 
-For example, in the preceding `webapi.xml` for the customerGroups resource, only a user with `Magento_Customer::group` authorization can `GET /V1/customerGroups/:id`. On the other hand, you can create a customer using `POST /V1/customers` anonymously (or by a guest).
+例如， in the preceding `webapi.xml` for the customerGroups resource, only a user with `Magento_Customer::group` authorization can `GET /V1/customerGroups/:id`. On the other hand, you can create a customer using `POST /V1/customers` anonymously (or by a guest).
 
 {% glossarytooltip 34ecb0ab-b8a3-42d9-a728-0b893e8c0417 %}Authorization{% endglossarytooltip %} is granted to either an administrator (or an integration) defined in the Magento Admin with the customer group selected as one of the resources in the ACL tree.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 A guest or anonymous is a special permission that doesn't need to be defined in `acl.xml` (and will not show up in the permissions tree in the Magento Admin). It just indicates that the current resource in `webapi.xml` can be accessed without the need for authentication.
 
-Similarly, self is a special access used if you already have an authenticated session with the system. Self access enables a user to access resources they own. For example, `GET /V1/customers/me` fetches the logged-in customer's details. This is typically useful for JavaScript-based widgets.
+Similarly, self is a special access used if you already have an authenticated session with the system. Self access enables a user to access resources they own. 例如， `GET /V1/customers/me` fetches the logged-in customer's details. This is typically useful for JavaScript-based widgets.
 </div>
 
 <h3 id="webapi-clients">Web API clients and authentication methods</h3>

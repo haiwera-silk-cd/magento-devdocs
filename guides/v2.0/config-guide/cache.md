@@ -15,7 +15,7 @@ functional_areas:
 
 Magento enables you to configure alternatives to the default file system caching. This guide discusses some of those alternatives; namely,
 
-*   Set up the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} mechanisms in the Magento configuration:
+*   Set up the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} mechanisms in the Magento configuration:
 
     *   <a href="{{ page.baseurl }}/extension-dev-guide/cache/partial-caching/database-caching.html">数据库</a>
     *   <a href="{{ page.baseurl }}/config-guide/redis/config-redis.html">Redis</a>

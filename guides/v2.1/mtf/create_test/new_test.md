@@ -13,7 +13,7 @@ You can extend a test by adding or replacing a [test entity][]. Test entities fo
 
 #### Usage {#ext-usage}
 
-This approach is useful when the Magento functionality was extended. For example, the minor changes were made in the existing functionality of a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. Also you can extend an out-of-the-box test to extend the current test coverage if the target functionality is not completely covered by the out-of-the-box test.
+This approach is useful when the Magento functionality was extended. 例如， the minor changes were made in the existing functionality of a {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}. Also you can extend an out-of-the-box test to extend the current test coverage if the target functionality is not completely covered by the out-of-the-box test.
 
 Example use cases:
 

@@ -79,7 +79,7 @@ Configuring the `topic` element defines the interface that processes the message
 </tr>
 <tr>
 <td>schema</td>
-<td><p>The interface that describes the structure of the message. It should be in the format of a Data Interface from the Service Contracts. For example, <code>Magento\Customer\Api\Data\CustomerInterface</code>.
+<td><p>The interface that describes the structure of the message. It should be in the format of a Data Interface from the Service Contracts. 例如， <code>Magento\Customer\Api\Data\CustomerInterface</code>.
 </p>
 <p>You can also specify a service method signature, such as <code>Magento\Customer\Api\CustomerRepositoryInterface::save</code>. In this case, format the message as an array of all service method parameters, like for a <code>call_user_func_array</code> call. The consumer's callback should expect each message part to be passed as a separate parameter.
 </p></td>

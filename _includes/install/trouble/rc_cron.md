@@ -17,7 +17,7 @@ To verify whether or not your crontab is set up:
 
 		crontab -u <Magento文件系统所有者 name> -l
 
-	For example, on CentOS
+	例如， on CentOS
 
 		crontab -u magento_user -l
 

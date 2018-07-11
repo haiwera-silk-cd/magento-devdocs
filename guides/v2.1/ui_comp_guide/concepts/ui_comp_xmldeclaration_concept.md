@@ -39,7 +39,7 @@ Following are the rules for the instance configuration files:
 
 In the top node, there can be an `<argument/>` node. The `<argument/>` node contains the configuration for that basic UI component. The `<argument/>` node's `name` attribute value must be `data`. The child nodes of the `<argument>` node will be the argument properties that will be passed in to the component.
 
-The top node can have nested nodes. Every nested node is regarded as a separate UI component (i.e. the toolbar). For example, if you want your listing to have a toolbar, then the top node is for the listing and a nested node represents a toolbar. Nested nodes can also contain the `<argument>` node.
+The top node can have nested nodes. Every nested node is regarded as a separate UI component (i.e. the toolbar). 例如， if you want your listing to have a toolbar, then the top node is for the listing and a nested node represents a toolbar. Nested nodes can also contain the `<argument>` node.
 
 
 ## 例如 of a basic component's configuration file
@@ -109,7 +109,7 @@ In the above example, within the top-level `<form>` node the `<fieldset>` node i
 
 The `name` attribute value must be a unique among the other 组件 on the same hierarchical level of the same parent node. Look at the `<argument>` node which `name` attribute has `data` value. The child nodes of this node are the arguments that will be passed in to the component.
 
-All other child nodes are declared as items. `<item name="config"> ...</item>` contains the children nodes that describe the configuration of the current UI component. Please note that although configuration for all components is different, there are base properties that are mostly the same for different components. For example, we can use `<item name="component">...</item>` to define which JS file will be used as the Model for the  Fieldset UI component in the above example. Reference to this JS file can be either be the full path to this file or the alias which is defined in [`require.js` configuration]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html).
+All other child nodes are declared as items. `<item name="config"> ...</item>` contains the children nodes that describe the configuration of the current UI component. Please note that although configuration for all components is different, there are base properties that are mostly the same for different components. 例如， we can use `<item name="component">...</item>` to define which JS file will be used as the Model for the  Fieldset UI component in the above example. Reference to this JS file can be either be the full path to this file or the alias which is defined in [`require.js` configuration]({{ page.baseurl }}/javascript-dev-guide/javascript/requirejs_concept.html).
 
 In our example, the `<item name="component">...</item>` node within `<fieldset>` is omitted, because this property of the Fieldset UI component is already defined in `definition.xml`.
 

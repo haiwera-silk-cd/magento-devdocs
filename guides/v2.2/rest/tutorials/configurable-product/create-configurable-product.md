@@ -82,7 +82,7 @@ Before you using this code sample, verify that the attribute values are the same
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
     "id": 2078,

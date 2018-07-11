@@ -15,7 +15,7 @@ If you are new to Magento theme development, see [Create a theme]({{ page.baseur
 
 To ensure the stability of your customizations and prevent upgrades from overwriting your customizations, do not change the default Magento theme files. You must include custom fonts in the your theme's stylesheet.
 
-1. Add font files to your local theme directory. For example, `app/design/frontend/<your_vendor_name>/<your_theme_name>/web/fonts`.
+1. Add font files to your local theme directory. 例如， `app/design/frontend/<your_vendor_name>/<your_theme_name>/web/fonts`.
 
     {:.bs-callout .bs-callout-info}
     To add _external_ fonts, add font references to the page configuration file as described in [Include static resources (JavaScript, CSS, fonts)]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-manage.html#layout_markup_css).
@@ -34,7 +34,7 @@ To ensure the stability of your customizations and prevent upgrades from overwri
     Where:
 
     * `{@baseDir}` stands for the `app/design/frontend/<you_vendor_name>/<your_theme_name>/web` directory.
-    * `<path_to_font_file>` includes the font file name, but without the extension. For example, `@font-path: '@{baseDir}fonts/Luma-Icons'` for the font stored in `web/fonts/Luma-Icons.woff`.
+    * `<path_to_font_file>` includes the font file name, but without the extension. 例如， `@font-path: '@{baseDir}fonts/Luma-Icons'` for the font stored in `web/fonts/Luma-Icons.woff`.
 
     The mixin generates the CSS, which includes the font. The following example shows how to generate CSS for the Open Sans font in the Blank theme:
 

@@ -67,7 +67,7 @@ The <code>mediaCheck</code> call looks as follows:
 {%endhighlight js%}
 
 
-For example, <code>responsive.js</code> changes the view of the {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} progress block on the checkout page:
+例如， <code>responsive.js</code> changes the view of the {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}checkout{% endglossarytooltip %} progress block on the checkout page:
 <ul>
  <li>For the desktop view, the checkout progress block is permanently displayed on the left-hand side.</li>
 <li>For the mobile view, it is moved by {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} to be displayed under the checkout steps. <code>responsive.js</code> makes it a toggled block: by default, the checkout progress information is hidden in the <b>Your Checkout Progress</b> section and it is visible after you click it.</li>

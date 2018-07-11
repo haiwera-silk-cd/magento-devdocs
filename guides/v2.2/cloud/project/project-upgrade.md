@@ -25,9 +25,9 @@ You can directly upgrade to {{site.data.var.ece}} 2.2 from the following version
 
 We have heavily tested and verified upgrades to 2.2 from the latest three versions of 2.0.X and 2.1.X.
 
-You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. For example, you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
+You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. 例如， you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
 
-If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. For example, you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.
+If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. 例如， you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.
 
 When upgrading from any version to 2.2, please review the following sections to update your settings, make changes, and upgrade required software prior to upgrading Magento.
 
@@ -106,16 +106,16 @@ If you are upgrading from 2.0.X or 2.1.X to 2.2.X, you need to also update your 
     Do not commit or push changes to your branch yet. You still need to [Verify other changes](#verify-changes) and [Complete the upgrade](#upgrade).
     </div>
 
-**For Pro plan merchants:** When you are ready to deploy to Pro Staging and Production environments, you must enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated for {{site.data.var.ece}} 2.2.
+**For Pro plan merchants:** When you are ready to deploy to Pro Staging and Production environments, you must enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated for {{site.data.var.ece}} 2.2.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
-**For Pro:** You may encounter deployment errors for Pro to your Staging and Production environments if the hooks are not updated. Please enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated in Staging and Production for {{site.data.var.ece}} 2.2.
+**For Pro:** You may encounter deployment errors for Pro to your Staging and Production environments if the hooks are not updated. Please enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated in Staging and Production for {{site.data.var.ece}} 2.2.
 </div>
 
 ### Verify or set the ADMIN_EMAIL variable {#variable}
 The environment variable `ADMIN_EMAIL` is required for upgrading and patching. This email is used for sending password reset requests and verified during when updating {{site.data.var.ece}}. See [Set environment and project variables]({{ page.baseurl }}/cloud/project/project-webint-basic.html#project-conf-env-var).
 
-### Upgrade Fastly {#fastly}
+### 升级Fastly {#fastly}
 If you have not upgraded to the latest supported version of Fastly, you should do so. Check [Supported software versions]({{ page.baseurl }}/cloud/requirements/cloud-requirements.html#cloud-arch-software) for the latest version of Fastly we recommend. For instructions, see [Upgrade Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html#upgrade).
 
 If you do not upgrade your Fastly module, you will be missing vitual updates for Fastly and Magento services. You may also need to update the JSON format. This is already included in Fastly module v1.2.33 and later. For full details, see [Fastly upgrade documentation](https://github.com/fastly/fastly-magento2/blob/00f2bf042e5f708a1c3e7f49ae4f0fe71a658a76/Documentation/Guides/MAGENTO-UPGRADES.md){:target="\_blank"}.
@@ -134,7 +134,7 @@ With {{site.data.var.ece}} 2.2.X, the generated folders `var/generation` and `va
 Verify other changes you're going to submit to source control before you start the upgrade:
 
 1.  If you haven't done so already, change to your project root directory.
-2.  Enter the following command:
+2.  输入下面的命令：
 
         git status
 3.  If there are changes you do *not* want to submit to source control, branch or stash them now.
@@ -146,7 +146,7 @@ Verify other changes you're going to submit to source control before you start t
         composer require magento/magento-cloud-metapackage <requiredversion> --no-update
         composer update
 
-    For example, to upgrade to version 2.2:
+    例如， to upgrade to version 2.2:
 
         composer require magento/magento-cloud-metapackage 2.2.0 --no-update
         composer update
@@ -243,9 +243,9 @@ To resolve the error:
 2.  [Examine the logs]({{ page.baseurl }}/cloud/trouble/environments-logs.html) to determine the source of the issue.
 3.  After you fix the source of the issue, push the change to the server, which causes the upgrade to restart.
 
-    For example, on a local branch, enter the following commands:
+    例如， on a local branch, enter the following commands:
 
         git add -A && git commit -m "fixed deployment failure" && git push origin <branch name>
 
 ### Deployment error {#deploy-error}
-If you encounter a deployment error to Pro Staging and Production environments, you need to have us update your `.magento.app.yaml` hooks. Please enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated in Staging and Production for {{site.data.var.ece}} 2.2.
+If you encounter a deployment error to Pro Staging and Production environments, you need to have us update your `.magento.app.yaml` hooks. Please enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) advising you need your hooks updated in Staging and Production for {{site.data.var.ece}} 2.2.

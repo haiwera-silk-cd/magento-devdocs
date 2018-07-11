@@ -29,7 +29,7 @@ The following sections discuss properties in `.magento.app.yaml`.
 
 `name` can consist only of lower case alphanumeric characters; that is, `a`&ndash;`z` and `0`&ndash;`9`. `name` is used in the [`routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html) to define the HTTP upstream (by default, `php:php`).
 
-For example, if the value of `name` is `app`, you must use `app:php` in the upstream field. You can also use this name in multi-application relationships.
+例如， if the value of `name` is `app`, you must use `app:php` in the upstream field. You can also use this name in multi-application relationships.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 If you change the name you should think about updating your other configuration files (`routes.yaml` or the different `.magento.app.yaml`, you will have in a multi-application project. Changing the name has no effect on your different services (such as databases)
@@ -93,7 +93,7 @@ See also [`services.yaml` documentation]({{ page.baseurl }}/cloud/project/projec
 
 * `document_root`: The path relative to the root of the application that is exposed on the web. Typical values include `/public` and `/web`.
 * `passthru`: The URL used in the event a static file or PHP file could not be found. This would typically be your applications front controller, often `/index.php`或`/app.php`.
-* `index_files`: To use a static file (for example, `index.html`) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. For example, to use a file named `index.html` as an index file, your whitelist should include an element that matches the filename, like `- \.html$`.
+* `index_files`: To use a static file (for example, `index.html`) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. 例如， to use a file named `index.html` as an index file, your whitelist should include an element that matches the filename, like `- \.html$`.
 * `blacklist`: A list of files that should never be executed. Has no effect on static files.
 * `whitelist`: A list of static files (as regular expressions) that can be served. Dynamic files (for example, PHP files) are treated as static files and have their source code served, but they are not executed.
 * `expires`: The number of seconds whitelisted (that is, static) content should be cached by the browser. This enables the cache-control and expires headers for static content. The `expires` directive and resulting headers are left out entirely if this isn't set.
@@ -200,7 +200,7 @@ nodejs:
 ```
 
 ## `hooks` {#cloud-yaml-platform-hooks}
-Use the `hooks` section to specify which shell commands to run during the build and deploy phases. For example, you may want to run a CLI command provided by a custom extension during the build phase.
+Use the `hooks` section to specify which shell commands to run during the build and deploy phases. 例如， you may want to run a CLI command provided by a custom extension during the build phase.
 
 -   **`build`**—Execute commands _before_ packaging your application. Services, such as the database or Redis, are not available at this time since the application has not been deployed yet. You must add custom commands _before_ the default `php ./vendor/bin/m2-ece-build` command to make sure custom-generated content makes it to the deployment phase.
 -   **`deploy`**—Execute commands _after_ packaging and deploying your application. You can access other services at this point. Since the default `php ./vendor/bin/m2-ece-deploy` command copies the `app/etc` directory to correct location, you must add custom commands _after_ the deploy command to prevent custom commands from failing.
@@ -224,7 +224,7 @@ The home directory, where your application is mounted, is `/app`, and that is th
 The hooks fail if the final command in them fails. To cause them to fail on the first failed command, add `set -e` to the beginning of the hook.
 
 #### [Example] Compile SASS files using grunt
-For example, to compile SASS files using grunt:
+例如， to compile SASS files using grunt:
 
 ```yaml
 dependencies:
@@ -357,7 +357,7 @@ In your repository, the `php.ini` file should be added to the root of the applic
 Configuring PHP settings improperly can cause issues. We recommend only advanced administrators set these options.
 </div>
 
-For example, if you need to increase the PHP memory limit:
+例如， if you need to increase the PHP memory limit:
 
 	memory_limit = 756M
 

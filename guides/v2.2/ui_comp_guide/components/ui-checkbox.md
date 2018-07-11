@@ -42,7 +42,7 @@ Extends all `abstract` configuration.
   </tr>
   <tr>
     <td><code>valueMap</code></td>
-    <td>Convert the component's value to the expected type. For example, you can set to convert '0' to 'false', this would look like following:<code><br>{<br>'0': false<br>}</code></td>
+    <td>Convert the component's value to the expected type. 例如， you can set to convert '0' to 'false', this would look like following:<code><br>{<br>'0': false<br>}</code></td>
     <td>Object</td>
     <td><code>{}</code></td>
   </tr>

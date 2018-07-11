@@ -61,11 +61,11 @@ Review the following values for the code to determine if you need to make change
 * `content`: The snippet of VCL code to run, which verifies the client IP. The following occurs in this code:
 
   * If the IP is in the Edge ACL, it is allowed access. If not, they receive a 403 Forbidden error.
-  * If your URL for your Magento Admin was changed, make sure to edit `/admin` with the new URL. For example, `/company-admin`.
+  * If your URL for your Magento Admin was changed, make sure to edit `/admin` with the new URL. 例如， `/company-admin`.
   * In the code sample, the condition `!req.http.Fastly-FF` is important when using Origin Shielding. Do not remove or edit this code.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-The default VCL snippets you uploaded included a prepended name of `magentomodule_` with a priority of 50. For your custom VCL snippets, **do not use the `magentomodule_` name**. Also consider the priority of your custom snippets if they should override the default snippets.
+The default VCL snippets you uploaded included a prepended name of `magentomodule_` with a priority of 50. For your 自定义VCL代码片段, **do not use the `magentomodule_` name**. Also consider the priority of your custom snippets if they should override the default snippets.
 </div>
 
 ## Finish adding the VCL {#complete}

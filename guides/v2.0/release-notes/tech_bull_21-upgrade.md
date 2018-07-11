@@ -20,7 +20,7 @@ See one of the following sections for more information:
 *	[Enterprise Edition only: 网页安装向导 upgrade to Magento Commerce version 2.1 with sample data](#tb-upgr-samp-wiz)
 
 ### Upgrade to Magento Open Source or Commerce version 2.1 *without* sample data {#tb-upgr-nosamp}
-Upgrades to version 2.1 without sample data can fail because of an issue with the Magento `composer-installer` component. It doesn't correctly detect code changes and therefore doesn't update the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and compiled code directories properly. As a result, fatal errors display during the upgrade.
+Upgrades to version 2.1 without sample data can fail because of an issue with the Magento `composer-installer` component. It doesn't correctly detect code changes and therefore doesn't update the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} and compiled code directories properly. As a result, fatal errors display during the upgrade.
 
 To address the issue, you must apply a patch.
 
@@ -40,7 +40,7 @@ As the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file
 
 {% include install/patch/apply-patch.md %}
 
-For example, to change to the `magento_user` and extract `MDVA-532.zip` into `/var/www/magento2`, enter:
+例如， to change to the `magento_user` and extract `MDVA-532.zip` into `/var/www/magento2`, enter:
 
 	su magento_user && cd /var/www/magento2 && unzip -o MDVA-532.zip
 
@@ -83,7 +83,7 @@ As the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file
 
 {% include install/patch/apply-patch.md %}
 
-For example, to change to the `magento_user` and extract `MDVA-532.zip` into `/var/www/magento2`, enter:
+例如， to change to the `magento_user` and extract `MDVA-532.zip` into `/var/www/magento2`, enter:
 
 	su magento_user && cd /var/www/magento2 && unzip MDVA-532.zip
 

@@ -37,7 +37,7 @@ To add a custom favicon in the Magento Admin, do the following:
 
 5. Click **Save Config** in the upper right corner to save the changes.
 
-If caching is enabled in your Admin, you get a notification that refreshing certain {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} types is required. Click the link provided in the notification, and then click **Flush Magento Cache**.
+If caching is enabled in your Admin, you get a notification that refreshing certain {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} types is required. Click the link provided in the notification, and then click **Flush Magento Cache**.
 
 
 ## Add custom favicons manually
@@ -49,7 +49,7 @@ To add favicon icons of other sizes, take the following steps:
 1. Add your icons in the `<your_theme_dir>/Magento_Theme/web/` directory.
 2. In the `<your_theme_dir>/Magento_Theme/layout/default_head_blocks.xml` layout file specify the paths to the icons and their sizes. 
 
-For example, if you added a `favicon-32x32.png` icon and want it to be used as a 32x32 favicon, your `default_head_blocks.xml` would be like following:
+例如， if you added a `favicon-32x32.png` icon and want it to be used as a 32x32 favicon, your `default_head_blocks.xml` would be like following:
 
 {%highlight xml%}
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">

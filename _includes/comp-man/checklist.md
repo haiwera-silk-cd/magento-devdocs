@@ -20,7 +20,7 @@ To verify your cron jobs are set up properly, enter the following command as a u
 
 	crontab -u <magento file system owner> -l
 
-For example, if your Magento文件系统所有者 is named `magento_user`, enter:
+例如， if your Magento文件系统所有者 is named `magento_user`, enter:
 
 	crontab -u magento_user -l
 
@@ -47,7 +47,7 @@ Directories in the Magento file system must be writable by the [Magento文件系
 
 To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider's file manager application.
 
-For example, enter the following commands on a Linux system if the Magento application is installed in `/var/www/html/magento2`:
+例如， enter the following commands on a Linux system if the Magento application is installed in `/var/www/html/magento2`:
 
 	ls -al /var/www/html/magento2
 

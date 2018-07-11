@@ -69,7 +69,7 @@ A access token request contains three basic elements:
       <td>Endpoint</td>
       <td>
          <p>A combination of the <i>server</i> that fulfills the request, the web service, and the <i>resource</i> against which the request is being made.</p>
-         <p>For example, in the <code>POST https://magento.host/index.php/rest/V1/integration/customer/token</code> endpoint:</p>
+         <p>例如， in the <code>POST https://magento.host/index.php/rest/V1/integration/customer/token</code> endpoint:</p>
          <p>The server is <code>magento.host/index.php/</code></p>
          <p>the web service is <code>rest</code></p>
           the resource is <code>/V1/integration/customer/token</code>.</p>
@@ -130,14 +130,14 @@ Any web API call that accesses a resource that requires a permission level highe
 ### Admin access {#admin-access}
 Admins can access any resources for which they are authorized.
 
-For example, to make a web API call with an admin token:
+例如， to make a web API call with an admin token:
 
 `curl -X GET "http://magento.ll/index.php/rest/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
 
 ### Customer access
 Customers can access only resources with `self` permissions.
 
-For example, to make a web API call with a customer token:
+例如， to make a web API call with a customer token:
 `curl -X GET "http://magento.ll/index.php/rest/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
 
 <h2>相关主题</h2>

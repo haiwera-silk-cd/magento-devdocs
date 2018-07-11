@@ -40,7 +40,7 @@ For more information, see the <a href="https://varnish-cache.org/docs/4.1/users-
 
 ## Grace mode {#grace}
 
-Grace mode enables Varnish to keep an object in {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} beyond its TTL value. Varnish can then serve the expired (stale) content while it fetches a new version. This improves the flow of traffic and decreases load times. It's used in the following situations:
+Grace mode enables Varnish to keep an object in {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} beyond its TTL value. Varnish can then serve the expired (stale) content while it fetches a new version. This improves the flow of traffic and decreases load times. It's used in the following situations:
 
 * When the Magento backend is healthy, but a request is taking longer than normal
 * When the Magento backend is not healthy.
@@ -64,7 +64,7 @@ If the Magento backend is not responsive, Varnish serves stale content from cach
 
 ## Saint mode {#saint}
 
-Saint mode blacklists unhealthy backends for a configurable amount of time. As a result, unhealthy backends cannot serve traffic when using Varnish as a load balancer. Saint mode can be used in conjunction with grace mode to allow for complex handling of unhealthy backend servers. For example, if one backend server is unhealthy, retries can be routed to another server. If all other servers are down, then serve stale cached objects. The saint mode backend hosts and blackout periods are defined in the `default.vcl` file.
+Saint mode blacklists unhealthy backends for a configurable amount of time. As a result, unhealthy backends cannot serve traffic when using Varnish as a load balancer. Saint mode can be used in conjunction with grace mode to allow for complex handling of unhealthy backend servers. 例如， if one backend server is unhealthy, retries can be routed to another server. If all other servers are down, then serve stale cached objects. The saint mode backend hosts and blackout periods are defined in the `default.vcl` file.
 
 Saint mode can also be used when Magento instances are individually taken offline to perform maintenance and upgrade tasks without affecting the availability of the Magento site.
 

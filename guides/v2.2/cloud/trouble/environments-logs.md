@@ -20,8 +20,8 @@ You may need to SSH into the environments to locate and view logs. To locate the
 * Pro:
 
   * Integration: Copy the link for the SSH command per environment through the Project Web Interface
-  *	Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-  *	Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+  *	准生产环境: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
+  *	生产环境: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
 
 <div class="bs-callout bs-callout-tip" markdown="1">
 You can also [set up log-based Slack and email notifications]({{ page.baseurl }}/cloud/env/setup-notifications.html).
@@ -40,12 +40,12 @@ For 2.1.9 and later and 2.2.X, we include a `var/log/cloud.log` file inside the 
 Logs from the deploy hook are located on the server in the following locations:
 
 *	Integration: `/var/log/deploy.log`
-*	Staging: `/var/log/platform/<project ID>_stg/post_deploy.log`
-*	Production: `/var/log/platform/<project ID>/post_deploy.log`
+*	准生产环境: `/var/log/platform/<project ID>_stg/post_deploy.log`
+*	生产环境: `/var/log/platform/<project ID>/post_deploy.log`
 
-The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. For example, with a project ID of `yw1unoukjcawe`, the Staging environment user is `yw1unoukjcawe_stg` and the Production environment user is `yw1unoukjcawe`.
+The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. 例如， with a project ID of `yw1unoukjcawe`, the Staging environment user is `yw1unoukjcawe_stg` and the Production environment user is `yw1unoukjcawe`.
 
-For example, on the Staging environment for project `yw1unoukjcawe`, the deploy log is located at `/var/log/platform/yw1unoukjcawe_stg/post_deploy.log`.
+例如， on the Staging environment for project `yw1unoukjcawe`, the deploy log is located at `/var/log/platform/yw1unoukjcawe_stg/post_deploy.log`.
 
 Logs for all deployments that have occurred on this environment are appended to this file. Check the timestamps on log entries to verify and locate the logs you want for a specific deployment.
 
@@ -70,6 +70,6 @@ The deploy log contains start and stop messages for each of the two hooks:
 ## Application logs {#app-log}
 To review other application logs in Staging or Production, you can access and review those logs in `/var/log/platform/<project ID>`.
 
-For Staging, the project ID has `_stg` at the end. For example, if you receive 500 errors in Staging and want to review the nginx logs, you can SSH to the Staging environment and locate the logs in `/var/log/platform/<project ID>_stg`.
+For Staging, the project ID has `_stg` at the end. 例如， if you receive 500 errors in Staging and want to review the nginx logs, you can SSH to the Staging environment and locate the logs in `/var/log/platform/<project ID>_stg`.
 
 Remember, when viewing the logs for Production, you have three nodes to check.

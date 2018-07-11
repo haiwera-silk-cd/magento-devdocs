@@ -180,7 +180,7 @@ POST /V1/negotiable-carts/:cartId/shipping-information
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "payment_methods": [
@@ -619,7 +619,7 @@ POST /V1/negotiable-carts/:cartId/set-payment-information
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "payment_methods": [
@@ -806,7 +806,7 @@ GET /V1/negotiable-carts/:cartId/totals
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "totals": {

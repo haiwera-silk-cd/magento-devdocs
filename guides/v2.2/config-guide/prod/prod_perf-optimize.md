@@ -105,7 +105,7 @@ In Magento 2.2.0, you can tune indexers performance by adjusting the index batch
 This controls how many entities are processed at a time by the indexer.
 In some situations we've seen significant decreases in indexing time.
 
-For example, if you are running a profile similar to B2B Medium, you can override the configuration value `batchRowsCount` in `app/code/Magento/catalog/etc/di.xml` and override the default value of 5000 to 1000.
+例如， if you are running a profile similar to B2B Medium, you can override the configuration value `batchRowsCount` in `app/code/Magento/catalog/etc/di.xml` and override the default value of 5000 to 1000.
 This reduces the full indexing time from 4 hours down to 2 hours with a default MySQL configuration!
 
 Please note that we have not enabled batching for the catalog rules indexer.

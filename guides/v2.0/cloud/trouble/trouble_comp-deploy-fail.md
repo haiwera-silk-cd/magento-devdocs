@@ -45,7 +45,7 @@ To clean up from the previous deployment, you must SSH to the environment and ma
 To remove the component:
 
 1.  Change to your environment's root directory if you haven't already done so.
-3.  Enter the following command:
+3.  输入下面的命令：
 
         composer remove <component-name>:<version>
 

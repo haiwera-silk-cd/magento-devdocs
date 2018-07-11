@@ -223,7 +223,7 @@ We address the following functional issues in this release.
 <!---60616-->* **Issue**: Magento fails to validate a customer address or customer attributes as expected during checkout. 
 
 
-<!---60781-->* **Issue**: Installing with Varnish can result in products not appearing on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} even after you purge the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}. 
+<!---60781-->* **Issue**: Installing with Varnish can result in products not appearing on the {% glossarytooltip b00459e5-a793-44dd-98d5-852ab33fc344 %}前端{% endglossarytooltip %} even after you purge the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}. 
 
 
 <!---60553-->* **Issue**: When editing a product, you cannot edit customizable options on the storeview level. Consequently, a change to one option affects products on all stores. Also, the **Use Default Value** check box for the option title does not work. Clearing this check box, and then changing the option title affects all storeviews. 

@@ -12,7 +12,7 @@ github_link: mrg/b2b/B2b.md
 
 The `Magento_b2b` module is the base module for B2B. It must be present on all B2B installations.
 
-This module also provides several B2B branding elements. For example, it adds a link to B2B customer support in Admin, and it displays "B2B Edition" at the bottom of the site. Also, the module adds the configuration page for B2B settings where an admin user can enable or disable a B2B feature. Disabling a B2B feature in store configurations disables this feature for the storefront only, and it is still available in the admin panel.
+This module also provides several B2B branding elements. 例如， it adds a link to B2B customer support in Admin, and it displays "B2B Edition" at the bottom of the site. Also, the module adds the configuration page for B2B settings where an admin user can enable or disable a B2B feature. Disabling a B2B feature in store configurations disables this feature for the storefront only, and it is still available in the admin panel.
 
 ## Installation details
 

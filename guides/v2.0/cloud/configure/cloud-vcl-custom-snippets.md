@@ -24,7 +24,7 @@ Gather the following information:
 Review the following sections:
 
 -   [Understand VCL snippet values](#vcl-curl)—Provides an overview of values for Fastly VCL JSON.
--   [The custom VCL snippet process](#process)—Walks you through the entire process, including links to custom VCL snippets you can create with ease.
+-   [The custom VCL snippet process](#process)—Walks you through the entire process, including links to 自定义VCL代码片段 you can create with ease.
 
 ## Understand VCL snippet values {#vcl-curl}
 You can use the following key/value pairs in JSON snippets in VCL files and in `cURL` commands.
@@ -36,7 +36,7 @@ You can use the following key/value pairs in JSON snippets in VCL files and in `
   </tr>
   <tr>
     <td>service_id</td>
-    <td>The ID of a specific Staging or Production environment. We provide this value. Add the <code>SERVICE_ID</code> key to set up your bash script for custom VCL snippets.</td>
+    <td>The ID of a specific Staging or Production environment. We provide this value. Add the <code>SERVICE_ID</code> key to set up your bash script for 自定义VCL代码片段.</td>
   </tr>
   <tr>
     <td>API_KEY</td>
@@ -94,7 +94,7 @@ The following is an example of a returned JSON for a customer VCL snippet:
 ```
 
 ## The custom VCL snippet process {#process}
-To create custom VCL snippets, prepare the VCL configurations, save them to files, and continue with the following:
+To create 自定义VCL代码片段, prepare the VCL configurations, save them to files, and continue with the following:
 
 1.  [Locate the active VCL version](#list). Use this version to clone.
 1.  [Clone the active VCL version](#clone). All changes save to this new version. It remains _inactive_ until you _activate_ it.
@@ -104,7 +104,7 @@ To create custom VCL snippets, prepare the VCL configurations, save them to file
 
 The following are **best practices and recommendations**:
 
--   The default VCL snippets you uploaded include a prepended name of `magentomodule_` with a priority of `50`. For your custom VCL snippets, **do not use the `magentomodule_` name**. Also, consider the priority of your custom snippets and whether they should override the default snippets.
+-   The default VCL snippets you uploaded include a prepended name of `magentomodule_` with a priority of `50`. For your 自定义VCL代码片段, **do not use the `magentomodule_` name**. Also, consider the priority of your custom snippets and whether they should override the default snippets.
 -   Do not forget to _always_ locate and clone the active version, and edit the bash script with the new version! _Version_ is not part of your VCL snippet files.
 -   If you want to override values and settings from the [default Fastly VCL snippets](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets){:target="\_blank"}, we recommend creating a new snippet with updated values and code with a higher priority value of `100`. You should not try to override default VCLs. We provide an example for [VCL自定义延长管理员超时]({{ page.baseurl }}/cloud/configure/fastly-vcl-extend-timeout.html).
 
@@ -138,7 +138,7 @@ You can save the new version into a bash environment variable for use in cURL co
 
 For more information on this Fastly API, see this [clone command](https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709){:target="\_blank"}.
 
-### Create custom VCL snippets {#create-snippet}
+### 创建自定义VCL代码片段 {#create-snippet}
 Create a JSON file with the following content and format:
 
 ```json

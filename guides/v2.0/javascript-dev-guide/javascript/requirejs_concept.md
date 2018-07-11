@@ -52,7 +52,7 @@ var config = {
 {%endhighlight%}
 
 
-The `config` variable contains properties with the `map` and `deps` keys. These properties are equivalent to the native RequireJS properties. For example, in this case  the `map` property contains an object with the keys that are aliases to files and values that are real paths to files.
+The `config` variable contains properties with the `map` and `deps` keys. These properties are equivalent to the native RequireJS properties. 例如， in this case  the `map` property contains an object with the keys that are aliases to files and values that are real paths to files.
 
 For a particular area, all modules and themes `requirejs-config.js` files are merged into a single file. This file is written to the `pub/static/requirejs` directory. This occurs during the first launch of Magento in [develop or default mode]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html) or during static files generation using the [bin/magento setup:static-content:deploy]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html) console command.
 

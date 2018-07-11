@@ -128,7 +128,7 @@ class ProductPlugin
 
 When you wrap a method which accepts arguments, your plugin must also accept those arguments and you must forward them when you invoke the <code>proceed</code> callable. You must be careful to match the original signature of the method with regards to default parameters and type hints.
 
-For example, the following code defines a parameter of type <code>SomeType</code> which is nullable:
+例如， the following code defines a parameter of type <code>SomeType</code> which is nullable:
 
 {% highlight PHP inline=true %}
 namespace My\Module\Model;
@@ -225,7 +225,7 @@ All plugins added for interfaces and inherited classes will be added to classes 
 
 Plugins defined in the global scope will be applied when the system is in a specific area (i.e. frontend, backend, etc). These global plugin configuration can also be extended or overridden via an area's `di.xml`.
 
-For example, the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
+例如， the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
 
 ### 相关主题s
 

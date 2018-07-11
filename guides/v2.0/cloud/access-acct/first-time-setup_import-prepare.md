@@ -58,7 +58,7 @@ You need to add these files to your {{site.data.var.ee}} code:
     *   `<Magento Commerce install dir>/.magento/services.yaml`
     *   `<Magento Commerce install dir>/.magento/routes.yaml`
 
-    For example, to create `<Magento Commerce install dir>/.magento.app.yaml` from the 2.1.4 branch:
+    例如， to create `<Magento Commerce install dir>/.magento.app.yaml` from the 2.1.4 branch:
 
     1.  In the  {{site.data.var.ece}} GitHub, click [**.magento.app.yaml**](https://github.com/magento/magento-cloud/blob/2.1.4/.magento.app.yaml){:target="\_blank"}.
     2.  In the upper right, click **Raw**, as the following figure shows.
@@ -118,7 +118,7 @@ To edit `composer.json`:
         "magento/magento-cloud-metapackage": "<version>",
 
     <div class="bs-callout bs-callout-info" id="info" markdown="1">
-    Both `<version>` values _must be the same_. For example, if your current {{site.data.var.ee}} version is 2.1.9, your `magento-cloud-metapackage` version must also be 2.1.9.
+    Both `<version>` values _must be the same_. 例如， if your current {{site.data.var.ee}} version is 2.1.9, your `magento-cloud-metapackage` version must also be 2.1.9.
     </div>
 
 4.  Update the `"files"` directive in the `autoload` section to refer to `app/etc/NonComposerComponentRegistration.php` as follows:
@@ -155,7 +155,7 @@ Use the command [`magento setup:backup --media`]({{ page.baseurl }}/install-gde/
 
         rsync <Magento Commerce install dir>/var/backups/<backup file name> <cloud ssh url>:var/media.tgz
 
-    For example,
+    例如，
 
         rsync /var/www/html/magento2/var/backups/1487962699_filesystem_media.tgz 43bkopvkhelhy-master-l8uv4kp@ssh.us.magentosite.cloud:var/media.tgz
 
@@ -177,7 +177,7 @@ The following command example compresses the dump so it doesn't significantly in
 
         mysqldump -h <db-host> -P <db-port> -p -u <db-user> <db-name> --single-transaction --no-autocommit --quick | gzip > ~/db.sql.tgz
 
-  For example, if your database is on localhost with the default port (3306), database user name is `magento`, and database name is also `magento`:
+  例如， if your database is on localhost with the default port (3306), database user name is `magento`, and database name is also `magento`:
 
         mysqldump -p -u magento magento --single-transaction --no-autocommit --quick | gzip > ~/db.sql.tgz
 

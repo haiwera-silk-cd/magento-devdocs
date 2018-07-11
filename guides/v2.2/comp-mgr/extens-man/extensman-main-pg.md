@@ -27,11 +27,11 @@ To start the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}Extension
 
 	![Install or upgrade extensions]({{ site.magentourl }}/common/images/extens_mgr_login.png){:width="400px"}
 
-6.	Enter your authentication keys in the provided fields.
+6.	输入认证密钥 in the provided fields.
 2.	Click **Submit**.
 
 <div class="bs-callout bs-callout-warning">
-   	<p>You must use the same authentication keys you used to install the Magento software. For example, you <em>cannot</em> use {{site.data.var.ce}} authentication keys to update or upgrade {{site.data.var.ee}} or vice versa. You also <em>cannot</em> use:</p>
+   	<p>You must use the same authentication keys you used to install the Magento software. 例如， you <em>cannot</em> use {{site.data.var.ce}} authentication keys to update or upgrade {{site.data.var.ee}} or vice versa. You also <em>cannot</em> use:</p>
    	<ul><li>Another user's authentication keys</li>
    	<li><a href="http://docs.magento.com/m2/ce/user_guide/magento/magento-account-share.html" target="_blank">Shared account</a> authentication keys</li></ul>   
 </div>
@@ -121,7 +121,7 @@ The following table shows which actions are supported for each non-metapackage.
 
 
 #### Actions available for metapackages {#extensman-access-types-meta}
-A metapackage is an installable package that includes more than one type. For example, we require a package that contains a module and a theme to be packaged as a metapackage.
+A metapackage is an installable package that includes more than one type. 例如， we require a package that contains a module and a theme to be packaged as a metapackage.
 
 The following table shows which actions are available for a metapackage.
 

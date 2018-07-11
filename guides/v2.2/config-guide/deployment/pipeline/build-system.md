@@ -67,7 +67,7 @@ To set up the build system:
 
 		chown -R <magento file system owner name>:<web server user name> .
 
-	For example,
+	例如，
 
 		chown -R magento_user:apache .
 4.	If you use Git, open `.gitignore` in a text editor.

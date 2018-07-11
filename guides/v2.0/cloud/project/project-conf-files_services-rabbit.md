@@ -72,11 +72,11 @@ The response includes all relationships for services and configuration data for 
 ## Connect to RabbitMQ for debugging {#connect}
 For debugging purposes, it's sometimes useful to directly connect to a service instance in one of the following ways:
 
-*   [Connect from your local development environment](#cloud-rabbitmq-conn-loc)
+*   [Connect from your 本地开发环境](#cloud-rabbitmq-conn-loc)
 *   [Connect from the application](#cloud-rabbitmq-conn-cont)
 *   [Connect from your PHP application](#cloud-rabbitmq-conn-php)
 
-### Connect from your local development environment {#cloud-rabbitmq-conn-loc}
+### Connect from your 本地开发环境 {#cloud-rabbitmq-conn-loc}
 You can do this using [SSH tunneling]({{ page.baseurl }}/cloud/env/environments-start.html#env-start-tunn):
 
 1. SSH into the Integration environment with RabbitMQ installed and configured.
@@ -95,7 +95,7 @@ You can do this using [SSH tunneling]({{ page.baseurl }}/cloud/env/environments-
 ### Connect from the application {#cloud-rabbitmq-conn-cont}
 To connect to RabbitMQ running in an application, you should install a client like [amqp-utils](https://github.com/dougbarth/amqp-utils){:target="_blank"} as a project dependency in your `.magento.app.yaml` file.
 
-For example,
+例如，
 
 {% highlight yaml %}
 dependencies:

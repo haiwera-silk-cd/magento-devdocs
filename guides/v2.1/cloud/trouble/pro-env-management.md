@@ -57,7 +57,7 @@ To prepare, verify that your settings and environment variables are correct.
 -  Prepare variables
 
 ### Verify code
-We strongly recommend working in your local development environment, deploying to Integration, deploying to Staging, and, finally, deploying to Production. All code should match 100% across each of these environments. Before submitting a ticket, make sure you sync your code. This process creates a new branch of code for Staging and Production environments.
+We strongly recommend working in your 本地开发环境, deploying to Integration, deploying to Staging, and, finally, deploying to Production. All code should match 100% across each of these environments. Before submitting a ticket, make sure you sync your code. This process creates a new branch of code for Staging and Production environments.
 
 If you have additional code, such as new extensions in your Production environment without following this workflow, then deployments from Integration or Staging **overwrite** your Production code.
 
@@ -83,7 +83,7 @@ When we convert your project to the new Project Web Interface, we add variables 
 For environment-specific variables, including sensitive data and values, you can add those variables after we update your Project Web Interface. If you have environment variables in an `env.php` file, the file continues working after converting. You can add and manage these variables via SSH and CLI commands directly into the Staging and Production environments.
 
 ## Enter a ticket for updating the Project Web Interface {#enable}
-Enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) with the suggested title "Connect Stg / Prod to Project's UI". In the ticket, request to have your project enabled with Staging and Production in the UI.
+Enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) with the suggested title "Connect Stg / Prod to Project's UI". In the ticket, request to have your project enabled with Staging and Production in the UI.
 
 We will review the infrastructure and settings, create user and environment variables for Staging and Production environments, and update the ticket with results.
 
@@ -111,7 +111,7 @@ When accessing the Project Web Interface, you should see a hierarchy of branches
 You can add environment-specific variables, including sensitive data and values, after we update your Project Web Interface. If you have environment variables in an `env.php` file, the file continues working after converting. See [配置环境]({{ page.baseurl }}/cloud/env/environments.html).
 
 ## Request an upgrade
-Enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) with the suggested title "Connect Stg / Prod to Project's UI", and request to enable your project with Staging and Production in the UI.
+Enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) with the suggested title "Connect Stg / Prod to Project's UI", and request to enable your project with Staging and Production in the UI.
 
 We review the infrastructure and settings, create user and environment variables for Staging and Production environments, and communicate updates in the ticket. When complete, access and review your project through the [Project Web Interface]({{ page.baseurl }}/cloud/project/projects.html).
 

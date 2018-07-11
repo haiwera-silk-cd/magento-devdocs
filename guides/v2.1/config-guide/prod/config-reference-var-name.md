@@ -15,7 +15,7 @@ functional_areas:
   - Setup
 ---
 
-This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. For example, you can override the value of a payment processor's live URL on your production system.
+This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. 例如， you can override the value of a payment processor's live URL on your production system.
 
 You can override the value of _any_ configuration setting using environment variables; however, we recommend you maintain consistent settings using the shared configuration file, `config.php`, and the system-specific configuration file, `env.php`, as discussed in [Deployment general overview](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/pipeline/).
 
@@ -110,7 +110,7 @@ The following table summarizes how to find website or store view value in the Ad
 | Create, edit, delete store views | **Stores** > **All Stores** | `CONFIG__STORES__<STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>`  |
 | Create, edit, delete websites | **Stores** > **All Stores**  | `CONFIG__WEBSITE__<WEBSITE_CODE>__<SYSTEM__VARIABLE__NAME>` |
 
-For example, to find a website or store view scope value in the Admin:
+例如， to find a website or store view scope value in the Admin:
 
 1.	Log in to the Magento Admin as a user authorized to view websites.
 2.	Click **Stores** > **All Stores**.
@@ -126,7 +126,7 @@ For example, to find a website or store view scope value in the Admin:
 To get these values from the database:
 
 1.	If you haven't done so already, log in to your development system as the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
-2.	Enter the following command:
+2.	输入下面的命令：
 
 		mysql -u <magento database user name> -p
 3.	At the `mysql>` prompt, enter the following commands in the order shown:
@@ -150,7 +150,7 @@ To get these values from the database:
 
 5.	Use the value from the `code` column as the scope name, not the `name` value.
 
-	For example, to set a configuration variable for Test Website, use the following format:
+	例如， to set a configuration variable for Test Website, use the following format:
 
 		CONFIG__WEBSITES__TEST1__<SYSTEM__VARIABLE__NAME>
 
@@ -200,7 +200,7 @@ To find the variable name for the shipping country origin:
 
 	Find the scope in the [database](#deploy-system-vars-scopes) as discussed in 步骤1. Find the website or store view scope value. (You can also find the value in the Admin as shown in the the [table in 步骤2. Set global, website, or store view variables](#cloud-system-vars-sys).
 
-	For example, the scope might be `CONFIG__WEBSITE__DEFAULT`.
+	例如， the scope might be `CONFIG__WEBSITE__DEFAULT`.
 2.	The rest of the variable name is `SHIPPING__ORIGIN__COUNTRY_ID`.
 
 **Result**: The variable name is `CONFIG__WEBSITE__DEFAULT__SHIPPING__ORIGIN__COUNTRY_ID`

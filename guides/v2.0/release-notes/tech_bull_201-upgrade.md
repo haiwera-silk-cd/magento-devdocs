@@ -196,7 +196,7 @@ To resolve the issue:
 1.	Log in to your Magento server as the <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">Magento文件系统所有者</a>.
 2.	Change to your Magento installation directory.
 4.	If prompted, enter your <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">authentication keys</a>.
-5.	Enter the following command:
+5.	输入下面的命令：
 
 		composer update
 4.	Make sure `magento/magento-composer-installer` is version 0.1.6

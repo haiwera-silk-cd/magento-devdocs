@@ -16,7 +16,7 @@ This software is available from `repo.magento.com`. Before installing the Magent
 
 where `<version>` matches the version you want (for example, `2.0.10`)
 
-For example, to install 2.0.10 in the `magento2` directory:
+例如， to install 2.0.10 in the `magento2` directory:
 
 	composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.0.10 magento2
 

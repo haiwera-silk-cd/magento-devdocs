@@ -20,7 +20,7 @@ functional_areas:
 
 * The `core_cache_tag` table constantly grows. If a Magento instance has multiple web sites and web stores with large catalogs, the table can grow to 15 million records in less than a day. Insertion into `core_cache_tag` leads to issues with MySQL server, including performance degradation. 
 
-  (A *tag* is an identifier that classifies different types of Magento {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} objects.)
+  (A *tag* is an identifier that classifies different types of Magento {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} objects.)
 
 * The TwoLevels {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} is more difficult to maintain because two services are required to make it work which makes it difficult to analyze cache content when necessary.  
 Further, memcached itself has limitations such as a maximum object size and fixed bucket sizes which also contribute to difficult maintenance.

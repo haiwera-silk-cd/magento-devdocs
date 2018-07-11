@@ -33,7 +33,7 @@ To create a cron job for the Magento文件系统所有者, enter the following c
 
 	crontab -u <Magento文件系统所有者 user name> -e
 
-For example,
+例如，
 
 	crontab -u magento_user -e
 
@@ -57,7 +57,7 @@ The first command (`magento cron:run`) reindexes indexers, sends automated e-mai
 
 **Example 1:** Everyone except contributing developers
 
-For example, if the PHP binary is located in `/usr/bin`, you installed Magento in `/var/www/magento2`, enter
+例如， if the PHP binary is located in `/usr/bin`, you installed Magento in `/var/www/magento2`, enter
 
 Example:
 

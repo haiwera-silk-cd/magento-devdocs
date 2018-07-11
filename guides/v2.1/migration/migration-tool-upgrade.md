@@ -43,7 +43,7 @@ You can also back up the entire Magento codebase and database using the followin
 
 ### Make sure versions match
 
-The versions of the 数据迁移工具 and your Magento software must match exactly. For example, Magento 2.1.2 requires version 2.1.2 of the 数据迁移工具.
+The versions of the 数据迁移工具 and your Magento software must match exactly. 例如， Magento 2.1.2 requires version 2.1.2 of the 数据迁移工具.
 
 See the [安装数据迁移工具]({{ page.baseurl }}/migration/migration-tool-install.html) topic to know how to:
 
@@ -57,13 +57,13 @@ See the [安装数据迁移工具]({{ page.baseurl }}/migration/migration-tool-i
 
 1.	Log in to your Magento server as, or switch to, <a href="{{ page.baseurl }}/install-gde/prereq/apache-user.html">the Magento文件系统所有者</a>.
 2.	Change to Magento 2 root directory.
-3. 	Enter the following command:
+3. 	输入下面的命令：
 
 	`composer require magento/data-migration-tool:<version>`
 
 	where `<version>` must match the version of the Magento 2 codebase.
 
-	For example, for version 2.1.2, enter:
+	例如， for version 2.1.2, enter:
 
 	`composer require magento/data-migration-tool:2.1.2`
 4.	Wait while the command completes.

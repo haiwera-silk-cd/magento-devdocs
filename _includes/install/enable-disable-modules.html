@@ -8,7 +8,7 @@
 
 <p>Dependencies are declared in the <code>require</code> field in Magento's <code>composer.json</code> file for each module. Conflicts are declared in the <code>conflict</code> field in modules' <code>composer.json</code> files. We use that information to build a dependency graph:</p>
 <ul><li><code>A->B</code> means module A depends on module B.</li>
-	<li>A <em>dependency chain</em> is the path from a module to another one. For example, if module A depends on module B and module B depends on module C, then the dependency chain is <code>A->B->C</code>.</li></ul>
+	<li>A <em>dependency chain</em> is the path from a module to another one. 例如， if module A depends on module B and module B depends on module C, then the dependency chain is <code>A->B->C</code>.</li></ul>
 <p>If you attempt to enable or disable a module that depends on other modules, the dependency graph displays in the error message.</p>
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">

@@ -12,7 +12,7 @@
 
 		magento-cloud project:get <project ID>
 
-4.	Change to a project directory. For example, `cd /var/www/html/magento2`
+4.	Change to a project directory. 例如， `cd /var/www/html/magento2`
 4.	List environments in the project. Every environment includes an active Git branch of your code, database, environment variables, configurations, and services.
 
 		magento-cloud environment:list

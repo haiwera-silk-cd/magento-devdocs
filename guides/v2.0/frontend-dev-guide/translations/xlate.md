@@ -67,7 +67,7 @@ See one of the following sections for more information:
 
 You might need to add a dictionary for the default language (en_US) in the following cases:
 
-- if you want to replace certain strings from the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html">parent theme</a>. For example, use "Compare" instead of "Add to Compare".
+- if you want to replace certain strings from the <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-inherit.html">parent theme</a>. 例如， use "Compare" instead of "Add to Compare".
 - if you want your {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} to be ready for localization. 
 
 For practical illustration of creating a dictionary for a theme for both cases, see the <a href="{{ page.baseurl }}/frontend-dev-guide/translations/translate_practice.html">为主题创建一个翻译字典</a> topic.
@@ -91,7 +91,7 @@ Magento translates words and phrases when all of the following conditions are me
 *	The Magento code base has the necessary translation dictionaries for a language
 *	This language is configured by the store administrator to be used in specified scope (that is, storefront)
 
-The Magento application automatically assembles translation dictionaries located in modules' `i18n` directory into a dictionary per language. For example, Brazilian Portuguese (`pt_BR`) translation dictionaries might be located in {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and theme directories similar to the following:
+The Magento application automatically assembles translation dictionaries located in modules' `i18n` directory into a dictionary per language. 例如， Brazilian Portuguese (`pt_BR`) translation dictionaries might be located in {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} and theme directories similar to the following:
 
 	app/code/Magento/Checkout/i18n/pt_BR.csv
 	app/design/frontend/Magento/demo/i18n/pt_BR.csv

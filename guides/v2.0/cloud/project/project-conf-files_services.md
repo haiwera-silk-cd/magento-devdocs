@@ -13,7 +13,7 @@ We provide a `services.yaml` file to configure all of your services supported an
 This file is located at `.magento/services.yaml` in your project.
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>When you push your Git branch, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory. After deployment, the script deletes the directory and its contents. Your local development environment isn't affected.</p>
+  <p>When you push your Git branch, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory. After deployment, the script deletes the directory and its contents. Your 本地开发环境 isn't affected.</p>
 </div>
 
 To see an example, see this [sample `services.yaml` file](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml){:target="_blank"}.
@@ -30,7 +30,7 @@ This affects the following environments:
 * All Starter environments including Production `master`
 * Pro Integration environments
 
-To install and update services in Pro Staging and Production environments (IaaS), you must enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html). Indicate the service changes needed and your updated `.magento.app.yaml` and `services.yaml` files in the ticket.
+To install and update services in Pro Staging and Production environments (IaaS), you must enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html). Indicate the service changes needed and your updated `.magento.app.yaml` and `services.yaml` files in the ticket.
 
 ## Default services {#cloud-yaml-services-default}
 Your Git branch includes the following default `services.yaml` file:
@@ -62,9 +62,9 @@ To add a service, you add the following data to services.yaml:
      disk: 2048
 
 ### `name` {#cloud-yaml-services-name}
-`name` identifies the service in the project. The `name` can consist only of lower case alphanumeric characters: `a`&ndash;`z` and `0`&ndash;`9`. For example, Redis is entered as redis.
+`name` identifies the service in the project. The `name` can consist only of lower case alphanumeric characters: `a`&ndash;`z` and `0`&ndash;`9`. 例如， Redis is entered as redis.
 
-You can have multiple instances of each service type. For example, you could have multiple Redis instances. For example, we use multiple Redis instances, one for session and one for cache.
+You can have multiple instances of each service type. 例如， you could have multiple Redis instances. 例如， we use multiple Redis instances, one for session and one for cache.
 
   redis:
      type: redis:3.0
@@ -91,7 +91,7 @@ We support and deploy the following services for you:
 
 `disk` specifies the size of the persistent disk storage in MB allocated to the service.
 
-For example, the current default storage amount per project is 5GB, or 5120MB. You can distribute this amount between your application and each of its services. See [`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#cloud-yaml-platform-rel).
+例如， the current default storage amount per project is 5GB, or 5120MB. You can distribute this amount between your application and each of its services. See [`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#cloud-yaml-platform-rel).
 
 ## Using the services
 For services to be available to an application in your project, you must specify [*relationships*]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#cloud-yaml-platform-rel) between applications and services in `.magento.app.yaml`.

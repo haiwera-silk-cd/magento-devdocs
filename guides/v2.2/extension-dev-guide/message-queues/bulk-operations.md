@@ -52,9 +52,9 @@ The `BulkManagementInterface::scheduleBulk` is responsible for publishing bulk o
 <li><p>serialized_data - An array of serialized data with the following required keys:</p></li>
   <ul><li><p>entity_id - Your {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %} ID</p></li>
   <li><p>entity_link - Link to your entity</p></li>
-  <li><p>meta_info - String that describes your entity. For example, "SKU: Simple_Product"</p></li></ul>
+  <li><p>meta_info - String that describes your entity. 例如， "SKU: Simple_Product"</p></li></ul>
 <p>This data is required to display the results of operations couldn't be executed for any non-recoverable reason. These results are displayed in the failed operations grid.</p>
-<p>You also can add any data needed to execute operations. For example, if you are conducting a mass price update, you can add price data.</p>
+<p>You also can add any data needed to execute operations. 例如， if you are conducting a mass price update, you can add price data.</p>
 </ul>
 </td></tr>
 <tr><td>$bulkDescription</td>

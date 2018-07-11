@@ -16,7 +16,7 @@ If you're accustomed to using the 网页安装向导 during development, be awar
 <div class="bs-callout bs-callout-tip" markdown="1">
 If you're using [nginx]({{ page.baseurl }}/install-gde/prereq/nginx.html) and the [`nginx.conf.sample`]({{ site.mage2200url }}nginx.conf.sample){:target="\_blank"} file included in the Magento installation directory, you're probably already serving files from the `pub/` directory.
 
-The sample configuration overrides your server's docroot settings to serve files from Magento's `pub/` directory; assuming you've referenced the `nginx.conf.sample` in the server block that defines your site. For example, see the last line in the following configuration:
+The sample configuration overrides your server's docroot settings to serve files from Magento's `pub/` directory; assuming you've referenced the `nginx.conf.sample` in the server block that defines your site. 例如， see the last line in the following configuration:
 
     # /etc/nginx/sites-available/magento
 
@@ -116,7 +116,7 @@ Switching between modes is an important step in verifying that your server confi
 ## 4. 验证网店
 Go to the {% glossarytooltip 1a70d3ac-6bd9-475a-8937-5f80ca785c14 %}网站前台{% endglossarytooltip %} in a web browser to verify that everything is working.
 
-1.  Open a web browser and enter your server's hostname or IP address in the address bar. For example, http://192.168.33.10.
+1.  Open a web browser and enter your server's hostname or IP address in the address bar. 例如， http://192.168.33.10.
 
     The following figure shows a sample storefront page. If it displays as follows, your installation was a success!
 

@@ -116,7 +116,7 @@ Define these three elements and reference them by name in the tests.
 
 When setting a [merging] order for a test step, do not depend on steps from Magento modules that could be disabled by an application.
 
-For example, when you write a test step to create a gift card product, set your test step **after** simple product creation and let the MFTF handle the merge order.
+例如， when you write a test step to create a gift card product, set your test step **after** simple product creation and let the MFTF handle the merge order.
 Since the configurable product module could be disabled, this approach is more reliable than setting the test step **before** creating a configurable product.
 
 <!-- Link definitions -->

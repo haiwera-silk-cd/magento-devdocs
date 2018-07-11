@@ -24,7 +24,7 @@ All users | `<module>/etc`
 Merchants | `<module>/adminhtml`
 Customers | `<module>/frontend`
 
-The files placed in the `adminhtml` and `frontend` directories ensure that customers and store administrators see only audience-specific messages. For example, a customer should see error messages when a credit card fails verfication due to mis-entered data and similar reasons. The store's administrator should have more detailed descriptions of why an attempt to create an invoice or refund failed.
+The files placed in the `adminhtml` and `frontend` directories ensure that customers and store administrators see only audience-specific messages. 例如， a customer should see error messages when a credit card fails verfication due to mis-entered data and similar reasons. The store's administrator should have more detailed descriptions of why an attempt to create an invoice or refund failed.
 
 The  [braintree_error_mapping.xml]({{ site.mage2200url }}app/code/Magento/Braintree/etc/braintree_error_mapping.xml) file provides an example  collection:
 
@@ -104,7 +104,7 @@ It has different responsibilities and should not map messages, because it works 
 It is the responsibility of a gateway command to call an appropriate service.
 
 
-For example, Magento provides a response validator for Braintree: [`\Magento\Braintree\Gateway\Validator\GeneralResponseValidator`]({{ site.mage2200url }}app/code/Magento/Braintree/Gateway/Validator/GeneralResponseValidator.php).
+例如， Magento provides a response validator for Braintree: [`\Magento\Braintree\Gateway\Validator\GeneralResponseValidator`]({{ site.mage2200url }}app/code/Magento/Braintree/Gateway/Validator/GeneralResponseValidator.php).
 Its implementation allows to add additional validators.
 
 First, create a new validator. It can be a simple class with the `__invoke` method, because `GeneralResponseValidator` calls the validator as a function:

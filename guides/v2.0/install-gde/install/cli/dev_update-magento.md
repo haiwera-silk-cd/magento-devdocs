@@ -34,7 +34,7 @@ To update the Magento software if you're a contributing developer:
 	</div>
 				
 3.	Diff and merge your `composer.json.old` with `composer.json` installed with the Magento software.
-4.	Enter the following command:
+4.	输入下面的命令：
 
 		composer update
 

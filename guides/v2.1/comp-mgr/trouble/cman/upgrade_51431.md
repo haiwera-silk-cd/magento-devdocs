@@ -56,7 +56,7 @@ To verify whether or not sessions are stored in `<your Magento install dir>/var/
 
 	ls <your Magento file install dir>/var/session
 
-For example, if Magento is installed in `/var/www/magento2`, enter:
+例如， if Magento is installed in `/var/www/magento2`, enter:
 
 	ls /var/www/magento2/var/session
 
@@ -82,7 +82,7 @@ To set file system permissions before upgrade:
 			find var -type d -exec chmod g+ws {} \;
 			chown -R :<web server group> .
 
-		For example, on CentOS where the web server group is typically `apache`:
+		例如， on CentOS where the web server group is typically `apache`:
 
 			cd /var/www/html/magento2
 			find var -type f -exec chmod g+w {} \;

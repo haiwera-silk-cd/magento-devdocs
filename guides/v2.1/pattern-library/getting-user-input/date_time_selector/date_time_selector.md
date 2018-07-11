@@ -148,7 +148,7 @@ Within the 日历小工具, the following will apply to time fields:
 MM/DD/YYYY can be confused with DD/MM/YYYY, so please assume the following:
 * 	If either MM or DD is above 12, then we can tell which one is the date vs month.
 
-* 	If both slots are below 12, make a guess based on the region. For example, if the user is in the US, guess MM/DD/YYYY format. If the user is in the London, guess DD/MM/YYYY. The more commonly used ones are DD/MM/YYYY. 
+* 	If both slots are below 12, make a guess based on the region. 例如， if the user is in the US, guess MM/DD/YYYY format. If the user is in the London, guess DD/MM/YYYY. The more commonly used ones are DD/MM/YYYY. 
 
 Field selection works the same as a typical text field with
 
@@ -237,7 +237,7 @@ Keyboard navigation on days that are not included the currently displayed month 
 
 *	Esc closes a DatePicker that is opened as a Popup.
 
-Do not implement keyboard navigation schemes that would place more than one calendar day in the tab order at any time as this impacts the {% glossarytooltip f583cac1-8ed5-4305-8195-2d5630e72ba8 %}usability{% endglossarytooltip %} of keyboard navigation. For example, using HTML anchors for the gridcells places them all in the tab order impacting the usability of keyboard navigation.
+Do not implement keyboard navigation schemes that would place more than one calendar day in the tab order at any time as this impacts the {% glossarytooltip f583cac1-8ed5-4305-8195-2d5630e72ba8 %}usability{% endglossarytooltip %} of keyboard navigation. 例如， using HTML anchors for the gridcells places them all in the tab order impacting the usability of keyboard navigation.
 <br>
 
 **WAI-ARIA Roles, States, and Properties**

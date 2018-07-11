@@ -11,7 +11,7 @@ functional_areas:
 
 By default, {{site.data.var.ece}} writes build and deploy actions to the `app/var/log/cloud.log` file inside the Magento root application directory. Optionally, you can send logs to a messaging system, such as Slack and email, to receive real-time notifications.
 
-For example, you could send a Slack message to alert a group of people when a deployment fails, and prompt an investigation into what went wrong.
+例如， you could send a Slack message to alert a group of people when a deployment fails, and prompt an investigation into what went wrong.
 
 ## Plan your notifications
 Before you configure notifications, consider the following:
@@ -20,7 +20,7 @@ Before you configure notifications, consider the following:
 -   How much detail do you want to see in the logs (see [Log levels](#log-levels))?
 -   Where do you want to set up notifications (Integration, Staging, Production)?
 
-For example, during initial development you may prefer email notifications that show detailed logs about your Integration environment to help you debug issues before deploying to the Staging environment. When you are ready to deploy to the Staging or Production environment, you may prefer a Slack message that contains less detailed information.
+例如， during initial development you may prefer email notifications that show detailed logs about your Integration environment to help you debug issues before deploying to the Staging environment. When you are ready to deploy to the Staging or Production environment, you may prefer a Slack message that contains less detailed information.
 
 {% include note.html type="info" content="The configuration file used to set up notifications is at the root of your project directory, so it applies when you push changes to any environment. If you want to customize notifications per environment, you must modify the configuration file before pushing it to that environment." %}
 
@@ -31,7 +31,7 @@ To configure notifications:
 1.  Locate the `.magento.env.yaml.sample` file in your project root and rename it `.magento.env.yaml`. The code in this file is commented out by default.
 1.  Remove the code comments and add your messaging system settings, including preferred notification [log level](#log-levels).
 
-    For example, to configure both Slack _and_ email configurations, use the following:
+    例如， to configure both Slack _and_ email configurations, use the following:
 
     ```yaml
     log:
@@ -100,10 +100,10 @@ log:
 Log levels determine the level of detail your notification messages contain. You can choose from the following options:
 
 -   **debug**—Detailed debug information.
--   **info**—Interesting events. For example, a user logs in, SQL logs, 等.
+-   **info**—Interesting events. 例如， a user logs in, SQL logs, 等.
 -   **notice**—Normal but significant events.
--   **warning**—Exceptional occurrences that are not errors. For example, use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.
+-   **warning**—Exceptional occurrences that are not errors. 例如， use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.
 -   **error**—Runtime errors that don't require immediate action but should be logged and monitored.
--   **critical**—Critical conditions. For example, an unavailable application component, unexpected exceptions.
--   **alert**—Action must be taken immediately. For example, your website is down, the database is unavailable, 等. This should trigger SMS alerts and wake you up.
+-   **critical**—Critical conditions. 例如， an unavailable application component, unexpected exceptions.
+-   **alert**—Action must be taken immediately. 例如， your website is down, the database is unavailable, 等. This should trigger SMS alerts and wake you up.
 -   **emergency**—The system is unusable.

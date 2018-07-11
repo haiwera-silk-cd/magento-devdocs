@@ -102,7 +102,7 @@ If you have more than one `opcache.ini`, modify all of them.
 5.	Add the time zone setting you found in step 2.
 6.	Change the value of `memory_limit` to one of the values at the beginning of this section.
 
-	For example,
+	例如，
 
 		memory_limit=2G
 7.	_Required for PHP 5.6, recommended for PHP 5.5_. Locate `always_populate_raw_post_data`, uncomment it if necessary, and set it as follows:

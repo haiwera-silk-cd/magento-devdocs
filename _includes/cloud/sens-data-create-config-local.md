@@ -7,7 +7,7 @@
 
 		ssh <SSH URL> "php bin/magento magento-cloud:scd-dump"
 
-	For example,
+	例如，
 
 		ssh itnu84v4m4e5k-master-ouhx5wq@ssh.us.magentosite.cloud "php bin/magento magento-cloud:scd-dump"
 

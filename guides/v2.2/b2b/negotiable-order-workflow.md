@@ -233,7 +233,7 @@ Authorization Bearer <customer token>
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
     "payment_methods": [
@@ -404,7 +404,7 @@ Authorization Bearer <customer token>
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {
@@ -714,7 +714,7 @@ Authorization Bearer <admin token>
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {

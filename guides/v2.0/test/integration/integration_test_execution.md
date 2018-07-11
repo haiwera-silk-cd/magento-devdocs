@@ -127,7 +127,7 @@ Default value:
 
 If this constant is set to `enabled`, the integration test framework will clean the test database and re-install Magento on every test run.
 That way any new modules will be automatically picked up, and any cruft that might have been left over from previous test runs will be removed.
-It also causes the test framework to flush the test Magento configuration, the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and the code generation before executing any tests.
+It also causes the test framework to flush the test Magento configuration, the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} and the code generation before executing any tests.
 
 The downside of setting `TEST_CLEANUP` to `enabled` is that the re-installation of Magento takes time (the exact time depends on the host you are using to run the integration tests and the Magento version.)
 
@@ -220,7 +220,7 @@ Note the path to the `phpunit` executable installed by {% glossarytooltip d85e2d
 ### Running only a custom testsuite
 
 PHPUnit offers several ways to only execute a subset of tests.
-For example, it is common to only execute a single testsuite from the `phpunit.xml` configuration.
+例如， it is common to only execute a single testsuite from the `phpunit.xml` configuration.
 
 ```bash
 cd dev/tests/integration

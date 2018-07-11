@@ -72,7 +72,7 @@ The following table summarizes what you need to do.
 
 	<your Magento install dir>/update/composer.json
 
-3. Look for the value of `"version"`. If the value of `"version"` is `"10.0.1"`, and you're using PHP 5.5.x, you must make the changes discussed in this bulletin. For example,
+3. Look for the value of `"version"`. If the value of `"version"` is `"10.0.1"`, and you're using PHP 5.5.x, you must make the changes discussed in this bulletin. 例如，
 
 	"version": "10.0.1"
 

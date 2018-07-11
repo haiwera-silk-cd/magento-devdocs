@@ -43,7 +43,7 @@ To merge an environment:
 
 		magento-cloud environment:merge <environment ID>
 
-	For example,
+	例如，
 
 		magento-cloud environment:merge master
 
@@ -74,7 +74,7 @@ To delete a environment:
 
 		magento-cloud environment:delete <environment ID>
 
-	For example, to delete the `deleteme` environment:
+	例如， to delete the `deleteme` environment:
 
 		magento-cloud environment:delete deleteme
 

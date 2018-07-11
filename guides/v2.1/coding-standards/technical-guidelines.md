@@ -588,7 +588,7 @@ We are reviewing this section and will publish it soon.
 
 9.1. All Client-Server calls must follow the [HTTP Protocol].
 
-9.2. All customer-agnostic data (Products, Categories, CMS Pages) MUST be rendered on a server and cached in a public {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} server (Varnish).
+9.2. All customer-agnostic data (Products, Categories, CMS Pages) MUST be rendered on a server and cached in a public {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} server (Varnish).
 
 9.3. All customer-specific data MUST be rendered on the browser side using a {% glossarytooltip 312b4baf-15f7-4968-944e-c814d53de218 %}JavaScript{% endglossarytooltip %} (JS) application.
 

@@ -165,7 +165,7 @@ If the product image sizes of your theme differ from those of the parent theme, 
 2.	Copy `view.xml` from the `etc` directory of an existing theme (for example, from the Blank theme) to your theme's `etc` directory.
 
 3.	Configure all storefront product image sizes in `view.xml`.
-For example, you can make the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} grid view product images square by specifying a size of 250 x 250 pixels, here is how the corresponding configuration would look like:
+例如， you can make the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} grid view product images square by specifying a size of 250 x 250 pixels, here is how the corresponding configuration would look like:
 
 {% highlight XML%}
 ...
@@ -192,7 +192,7 @@ app/design/&lt;area&gt;/&lt;Vendor&gt;/&lt;theme&gt;/
 │&nbsp;├──&nbsp;js/
 </pre>
 
-In the <code>.../&lt;theme&gt;/web/images</code> you store the general theme related static files. For example, a theme logo is stored in <code>...&lt;theme&gt;/web/images</code>.
+In the <code>.../&lt;theme&gt;/web/images</code> you store the general theme related static files. 例如， a theme logo is stored in <code>...&lt;theme&gt;/web/images</code>.
 It is likely that your theme will also contain module-specific files, which are stored in the corresponding sub-directories, like <code>.../&lt;theme&gt;/&lt;Namespace_Module&gt;/web/css</code> and similar. Managing the module-specific theme files is discussed in the following sections of this Guide.
 
 <div class="bs-callout bs-callout-info" id="info">
@@ -251,7 +251,7 @@ Your theme does not have a parent theme:
 
 To declare a theme logo, add an <a href="{{ page.baseurl }}/frontend-dev-guide/layouts/layout-extend.html" target="_blank">extending</a> `<theme_dir>/Magento_Theme/layout/default.xml` layout.
 
-For example, if your logo file is `my_logo.png` sized 300x300px, you need to declare it as follows:
+例如， if your logo file is `my_logo.png` sized 300x300px, you need to declare it as follows:
 
 {% highlight xml %}
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">

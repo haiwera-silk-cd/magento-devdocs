@@ -207,7 +207,7 @@ The following example uses `curl`. You can enter this command from any machine t
 
 	curl -I -v --location-trusted '<your Magento base URL>'
 
-For example,
+例如，
 
 	curl -I -v --location-trusted 'http://192.0.2.55/magento2'
 

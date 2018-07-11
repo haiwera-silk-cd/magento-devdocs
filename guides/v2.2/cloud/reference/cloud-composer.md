@@ -27,7 +27,7 @@ For {{site.data.var.ece}} 2.2, the `magento/magento-cloud-configuration (MCC)` h
 ## Your project's Composer files {#files}
 Your project root directory contains `composer.json` and `composer.lock`.
 
-You edit `composer.json` to specify dependencies for your {{site.data.var.ece}} project. For example, when you [install an extension or module]({{ page.baseurl }}/cloud/howtos/install-components.html), you update `composer.json` to add the extension to the list. You can either edit it manually or the [Component Manager]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html) can do it for you.
+You edit `composer.json` to specify dependencies for your {{site.data.var.ece}} project. 例如， when you [install an extension or module]({{ page.baseurl }}/cloud/howtos/install-components.html), you update `composer.json` to add the extension to the list. You can either edit it manually or the [Component Manager]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html) can do it for you.
 
 The file `composer.lock` stores a set of exact version dependencies that satisfy all of the version constraints of every requirement for every package in the dependency tree of the project.
 
@@ -38,7 +38,7 @@ The following commands determine what's in `composer.lock`:
 
 The workflow is as follows:
 
-1.	Make a change to `composer.json`. For example, edit this file when installing an extension or module.
+1.	Make a change to `composer.json`. 例如， edit this file when installing an extension or module.
 2.	Run `composer update`.
 3.	Add `composer.lock` to or update it in your Cloud Git repository.
 4.	Push the changes to the Cloud environment, which causes Cloud to build and deploy the environment.
@@ -66,7 +66,7 @@ Refer to [Composer package updates](http://devdocs.magento.com/guides/v2.2/cloud
 ### magento/magento-cloud-metapackage {#cloud-composer-cloudmeta}
 `vendor/magento/magento-cloud-metapackage` should be the only package in the `require` section of your `composer.json`. This is a [_metapackage_](https://getcomposer.org/doc/04-schema.md#type){:target="\_blank"} and does not contain any code.
 
-The metapackage depends on the appropriate versions of [`vendor/magento/ece-patches`](#ece-patches), [`vendor/magento/ece-tools`](#ece-tools), and [`vendor/magento/product-enterprise-edition`](#cloud-composer-prodee). At any given version, this package requires the same version of `magento/product-enterprise-edition`. For example, to use {{site.data.var.ee}} version 2.2.0, for example, `composer.json` must specify a requirement for `magento/magento-cloud-metapackage` version 2.2.0.
+The metapackage depends on the appropriate versions of [`vendor/magento/ece-patches`](#ece-patches), [`vendor/magento/ece-tools`](#ece-tools), and [`vendor/magento/product-enterprise-edition`](#cloud-composer-prodee). At any given version, this package requires the same version of `magento/product-enterprise-edition`. 例如， to use {{site.data.var.ee}} version 2.2.0, for example, `composer.json` must specify a requirement for `magento/magento-cloud-metapackage` version 2.2.0.
 
 This package depends on a floating version of `vendor/magento/magento-cloud-configuration` (abbreviated _MCC_). It depends on the major and minor version of MCC that correspond to the specified {{site.data.var.ee}} version, and floats on the patch version so that compatible updates to this packages can be automatically pulled by running `composer update`.
 

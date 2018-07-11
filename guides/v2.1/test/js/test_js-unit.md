@@ -35,7 +35,7 @@ These modules actively call the global `define()` function just upon loading rat
 
 This organization enables testing of `RequireJS` modules without any additional Magento test framework (MTF) support. `jsunit.requirejsUtil` intercepts all `define()` calls and can pass `RequireJS` modules to their corresponding tests.
 
-For example, `<magento2_root_dir>/dev/tests/js/testsuite/mage/requirejs/plugin/id-normalizer-test.js`:
+例如， `<magento2_root_dir>/dev/tests/js/testsuite/mage/requirejs/plugin/id-normalizer-test.js`:
 
 {% highlight JavaScript %}
 var IdNormalizerTest = TestCase('IdNormalizerTest');

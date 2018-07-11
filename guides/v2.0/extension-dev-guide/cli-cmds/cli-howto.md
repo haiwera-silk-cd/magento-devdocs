@@ -36,7 +36,7 @@ Following is a summary of the process:
 
 	See `app/code/Magento/CommandExample/Console/Command` for examples.
 2.	Declare your Command class in `Magento\Framework\Console\CommandListInterface` using dependency injection (`<your component root dir>/etc/di.xml`).
-3.	Clean the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and compiled code directories:
+3.	Clean the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} and compiled code directories:
 
 		cd <your Magento install dir>/var
 		rm -rf cache/* page_cache/* di/* generation/* 

@@ -277,7 +277,7 @@ The general structure of the form mapping file:
 You can use mapping for the forms on tabs (a form tab) that enables you to automate switching between tabs and entering the data.
 To get the block class with form tab mapping, extend your class from <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Backend/Test/Block/Widget/FormTabs.php" ><code>Magento\Backend\Test\Block\Widget\FormTabs</code> </a>. If you want to use custom tab logic you can extend your class from <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Backend/Test/Block/Widget/Tab.php"><code>Magento\Backend\Test\Block\Widget\Tab</code></a> class.
 
-For example, let's see tabs for the Magento Widget: **Settings**, **Storefront properties**, **Frontend App Options**, **Layout Updates** .
+例如， let's see tabs for the Magento Widget: **Settings**, **Storefront properties**, **Frontend App Options**, **Layout Updates** .
 
 <img src="{{ site.baseurl }}/common/images/ftf/mtf_block_tabs_ui.png" />
 
@@ -401,7 +401,7 @@ A basic flow is the following:
 #### How to determine a block name and a path {#mtf_block_path}
 
 The block name and path in the Magento functional tests (`<magento2_root_dir>/dev/tests/functional/tests/app`) should reflect a corresponding block in the Magento code base for your convenience.
-For example, you develop a functional test for the {% glossarytooltip fbcfce51-68e2-482f-84d5-f28d84404cff %}bundle product{% endglossarytooltip %} creation, that uses the Bundle Items section. In the Magento code base, the block, which is responsible for the bundle option, is the `.../Magento/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php`, so in the Magento functional tests you can create a new file `.../Magento/Bundle/Block/Test/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php`.
+例如， you develop a functional test for the {% glossarytooltip fbcfce51-68e2-482f-84d5-f28d84404cff %}bundle product{% endglossarytooltip %} creation, that uses the Bundle Items section. In the Magento code base, the block, which is responsible for the bundle option, is the `.../Magento/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php`, so in the Magento functional tests you can create a new file `.../Magento/Bundle/Block/Test/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php`.
 
 Magento can show you a full class name of the block and path to the {% glossarytooltip ae0f1f68-c466-4189-88fd-6cd8b23c804f %}PHTML{% endglossarytooltip %} template on the Magento page (changes web page design) or implicitly in the HTML code of the page.
 
@@ -475,7 +475,7 @@ Now you can inspect any element in a browser, and find which block contains it.
 
 Blocks are tested as part of the [page][] object. To add the block to the page you must add a corresponding node to the XML file of the page object.
 
-For example, the <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Widget/Test/Block/Adminhtml/Widget/WidgetGrid.php">WidgetGrid.php</a> is a part of the page that is defined in <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Widget/Test/Page/Adminhtml/WidgetInstanceIndex.xml"><code>WidgetInstanceIndex.xml</code></a>.
+例如， the <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Widget/Test/Block/Adminhtml/Widget/WidgetGrid.php">WidgetGrid.php</a> is a part of the page that is defined in <a href="{{ site.mage2000url }}dev/tests/functional/tests/app/Magento/Widget/Test/Page/Adminhtml/WidgetInstanceIndex.xml"><code>WidgetInstanceIndex.xml</code></a>.
 
 `block` is the node that adds the block to the page:
 

@@ -99,7 +99,7 @@ All parameters shown in the following table are required.
 </tr>
 <tr>
   <td>&lt;your Solr install dir></td>
-  <td>The absolute file system path to your Solr installation. (For example, <code>/etc/solr/apache-solr-3.6.2</code></td>
+  <td>The absolute file system path to your Solr installation. (例如， <code>/etc/solr/apache-solr-3.6.2</code></td>
 </tr>
 <tr>
   <td>&lt;jetty-stop-port><br />
@@ -115,11 +115,11 @@ All parameters shown in the following table are required.
 </tr>
 <tr>
   <td>&lt;path-to-solr-log-file></td>
-  <td>Absolute file system path to the Solr log file. (For example, <code>/var/log/solr.log</code>)</td>
+  <td>Absolute file system path to the Solr log file. (例如， <code>/var/log/solr.log</code>)</td>
 </tr>
 <tr>
   <td>&lt;java_home></td>
-  <td>Absolute file system path to your Java executable. (For example, <code>/usr/bin/java</code>)</td>
+  <td>Absolute file system path to your Java executable. (例如， <code>/usr/bin/java</code>)</td>
 </tr>
 </tbody>
 </table>

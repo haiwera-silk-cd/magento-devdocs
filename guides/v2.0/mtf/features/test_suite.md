@@ -231,7 +231,7 @@ You can use `group` and `value` parameters in the variation scope. In a variatio
 </variation>
 {% endhighlight %}
 
-For example, you have a data set with the following variation:
+例如， you have a data set with the following variation:
 
 {% highlight xml %}
 <variation name="CreateSimpleProductEntityTestVariation3" summary="Create product with special price and custom options(fixed price)">

@@ -52,7 +52,7 @@ When the integration is created, Magento generates a consumer key and a consumer
 
 Activating the integration submits the credentials to the endpoint specified when creating the Integration. An HTTP POST from Magento to the Integration endpoint will contain these attributes:
 
-* `store_base_url` For example, `http://my-magento-store.com/`.
+* `store_base_url` 例如， `http://my-magento-store.com/`.
 * `oauth_verifier`
 * `oauth_consumer_key`
 * `oauth_consumer_key_secret`

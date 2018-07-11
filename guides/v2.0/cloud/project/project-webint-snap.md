@@ -91,8 +91,8 @@ To create a copy of your database, you dump the data from the database to a file
 
 1.	SSH into the environment you want to create a database dump from:
 
-	*	Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-	*	Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+	*	准生产环境: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
+	*	生产环境: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
 	* To SSH into the `master` branch of your Integration environment:
 
 			magento-cloud environment:ssh

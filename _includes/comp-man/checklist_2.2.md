@@ -22,7 +22,7 @@ To set the variable, before the upgrade starts enter the following command as th
 
 	export DATA_CONVERTER_BATCH_SIZE <value>
 
-For example,
+例如，
 
 	export DATA_CONVERTER_BATCH_SIZE 100000
 
@@ -67,7 +67,7 @@ Directories in the Magento file system must be writable by the [Magento文件系
 
 To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider's file manager application.
 
-For example, enter the following commands on a Linux system if the Magento application is installed in `/var/www/html/magento2`:
+例如， enter the following commands on a Linux system if the Magento application is installed in `/var/www/html/magento2`:
 
 	ls -al /var/www/html/magento2
 

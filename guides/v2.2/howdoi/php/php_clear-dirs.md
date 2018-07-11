@@ -45,7 +45,7 @@ When you're developing Magento组件 (modules, themes, and language packages), t
 	<tr>
 		<td>var/composer_home</td>
 		<td><p>Home directory for the Setup Wizard artifacts. Typically, you shouldn't touch this directory; clear it only if you're an experienced developer and are familiar with the Magento plug-in.</p>
-			<p>For example, if the Component Manager or System Upgrade web-based utilities cannot find the correct 组件 you can try clearing this directory; however, doing so adversely affects the performance of those utilities.</p></td>
+			<p>例如， if the Component Manager or System Upgrade web-based utilities cannot find the correct 组件 you can try clearing this directory; however, doing so adversely affects the performance of those utilities.</p></td>
 	</tr>
 	<tr>
 		<td>generated/code</td>

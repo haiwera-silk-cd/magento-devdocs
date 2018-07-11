@@ -65,7 +65,7 @@ To verify memcached is recognized by the web server:
 
 2.  Go to that page in your web browser.
 
-    For example, `http://192.0.2.1/phpinfo.php`
+    例如， `http://192.0.2.1/phpinfo.php`
 
 2.  Make sure memcached displays as follows:
 
@@ -76,7 +76,7 @@ To verify memcached is recognized by the web server:
     If memcache does not display, restart the web server and refresh the browser page. If it still does not display, verify you installed the `php-pecl-memcache` extension.
 
 ### Verify memcached can cache data
-This test uses a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} script to verify that memcached can store and retrieve {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} data.
+This test uses a {% glossarytooltip bf703ab1-ca4b-48f9-b2b7-16a81fd46e02 %}PHP{% endglossarytooltip %} script to verify that memcached can store and retrieve {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} data.
 
 For more information about this test, see <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04" target="_blank">this digitalocean tutorial</a>.
 
@@ -105,7 +105,7 @@ where `<memcache host name or ip>` is either `localhost`, `127.0.0.1`, or the me
 
 Go to that page in a web browser.
 
-For example, `http://192.0.2.1/cache-test.php`
+例如， `http://192.0.2.1/cache-test.php`
 
 The first time you go to the page, the following displays: `No matching key found. Refresh the browser to add it!`
 

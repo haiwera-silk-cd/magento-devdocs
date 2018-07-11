@@ -155,7 +155,7 @@ To verify cron is secure:
 
 1.  Log in to your Magento database as either the Magento database user or as `root`.
 
-	For example,
+	例如，
 
 		mysql -u magento -p
 
@@ -163,7 +163,7 @@ To verify cron is secure:
 
 		use <magento database name>;
 
-	For example,
+	例如，
 
 		use magento;
 3.	Delete all rows from the `cron_schedule` database table:
@@ -173,7 +173,7 @@ To verify cron is secure:
 
 		http[s]://<magento host name or ip>/cron.php?group=default
 
-	For example,
+	例如，
 
 		http://magento.example.com/cron.php?group=default
 
@@ -231,7 +231,7 @@ If you're using an Apache web server, you must remove the restriction from the `
         	deny from all
     	</Files>
 
-    For example,
+    例如，
 
     	## Deny access  to cron.php
     	#<Files cron.php>
@@ -253,7 +253,7 @@ Where:
 	The exact URL you use to run the Magento application depends on how you configured your web server and virtual host.
 *	`<group name>` is any valid cron group name (optional)
 
-For example,
+例如，
 
 	http://magento.example.com/magento2/pub/cron.php?group=index
 

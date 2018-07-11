@@ -98,7 +98,7 @@ OrangeCo <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-apply.html"
 
 (See [app/code/Magento/Theme/view/frontend/layout/default.xml](https://github.com/magento/magento2/blob/2.1/app/code/Magento/Theme/view/frontend/layout/default.xml#L43-L47) on github).
 
-Other modules use this block to add their specific links to the header using the [referenceBlock]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_ref) instruction. For example, see how links are added in the Customer module: [app/code/Magento/Customer/view/frontend/layout/default.xml#L10-L23](https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/view/frontend/layout/default.xml#L10-L23) 
+Other modules use this block to add their specific links to the header using the [referenceBlock]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_ref) instruction. 例如， see how links are added in the Customer module: [app/code/Magento/Customer/view/frontend/layout/default.xml#L10-L23](https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/view/frontend/layout/default.xml#L10-L23) 
 
 The Luma theme [moves]({{ page.baseurl }}/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_mv) the `top.links` block to the new `customer` block in the extending layout file.  
 

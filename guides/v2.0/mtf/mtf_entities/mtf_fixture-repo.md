@@ -485,7 +485,7 @@ During the test run these fields are filled with values from `credentials.xml`.
 
 ### 示例 with replacement by <code>replace</code> {#mtf_repo_credent_replace}
 
-For example, you have the following credentials in `credentials.xml`:
+例如， you have the following credentials in `credentials.xml`:
 
 {%highlight xml%}
 

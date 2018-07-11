@@ -85,7 +85,7 @@ This section discusses an optional step of changing to the `/var/www/magento2` d
 To set the user's bash profile:
 
 1.	Open a DOS command prompt (Windows) or Terminal (Mac OS) window.
-2.	Enter the following command:
+2.	输入下面的命令：
 
 		docker-compose exec --user=magento2 web /bin/bash
 

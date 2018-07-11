@@ -45,7 +45,7 @@ Magento has built-in Grunt tasks configured, but there are still several steps y
 
 ## Grunt configuration file {#grunt_config}
 
-If installed as described above, Grunt will use the default configuration files located in the `dev/tools/grunt/configs/` directory. For example, the default configuration file for working with themes is `dev/tools/grunt/configs/themes.js`.
+If installed as described above, Grunt will use the default configuration files located in the `dev/tools/grunt/configs/` directory. 例如， the default configuration file for working with themes is `dev/tools/grunt/configs/themes.js`.
 
 The problem with using the default configuration files is that they can get overwritten during code updates, together with your changes in them. To avoid this, you can use custom configuration files. The ability to use custom configuration files is implemented by the file router mechanism added by Magento.
 
@@ -74,13 +74,13 @@ This path is also added to your .gitignore by default
 
 You can also use the other way to declare a custom config file:
 
-1. In your Grunt related scripts, in the file router set the alias and path to the default configuration file. For example, for the `themes.js` configuration file this would look like following:
+1. In your Grunt related scripts, in the file router set the alias and path to the default configuration file. 例如， for the `themes.js` configuration file this would look like following:
 
        filesRouter.set('themes', 'dev/tools/grunt/configs/themes');
 
    It must be added earlier, than the `get()` method with  this alias is called.
 
-2. In the `dev/tools/grunt/configs/` directory, create a copy of the default configuration file. Change its name by adding the ".loc" suffix. For example, your copy of `themes.js` will be `themes.loc.js`.
+2. In the `dev/tools/grunt/configs/` directory, create a copy of the default configuration file. Change its name by adding the ".loc" suffix. 例如， your copy of `themes.js` will be `themes.loc.js`.
 
 
 ### How to use custom configuration file

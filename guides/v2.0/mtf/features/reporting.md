@@ -155,7 +155,7 @@ $this->eventManager->dispatchEvent(['your_event_tag'], [$your_input_parameters])
 It has two arguments:
 
 - Array of event tags. Event tags specify the name of event that is dispatched. It is used as a [tag] in [event preset].
-- Input parameters. The parameters used by observers as input parameters. For example, a cURL response.
+- Input parameters. The parameters used by observers as input parameters. 例如， a cURL response.
 
 Example of use:
 

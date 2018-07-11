@@ -45,7 +45,7 @@ relationships:
 Merge and deploy the code to set the configurations for Elasticsearch. For information on how these changes affect your environments, see [`services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html).
 
 ### Add Elasticsearch plugins {#addplugins}
-Optionally, you can add the plugins through the `.magento/services.yaml` file. For example, to enable ICU analysis plugin and Python script support plugins, add the configuration plugins section with the listed plugin codes:
+Optionally, you can add the plugins through the `.magento/services.yaml` file. 例如， to enable ICU analysis plugin and Python script support plugins, add the configuration plugins section with the listed plugin codes:
 
 {% highlight yaml %}
 elasticsearch:
@@ -57,7 +57,7 @@ elasticsearch:
       - lang-python
 {% endhighlight %}
 
-For example, if you are using [Smile ElasticSuite](https://github.com/Smile-SA/elasticsuite){:target="\_blank"}, you should add the following plugins:
+例如， if you are using [Smile ElasticSuite](https://github.com/Smile-SA/elasticsuite){:target="\_blank"}, you should add the following plugins:
 
 {% highlight yaml %}
 elasticsearch:

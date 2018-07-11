@@ -44,7 +44,7 @@ To change versions after cloning:
 
 		git checkout tags/<tag name>  [-b <branch name>]
 
-	For example, to check out the 2.0.6 release tag in a new branch named `2.0.6`, enter
+	例如， to check out the 2.0.6 release tag in a new branch named `2.0.6`, enter
 
 		git checkout tags/2.0.6 -b 2.0.6
 
@@ -63,7 +63,7 @@ To change versions after cloning:
 
 		git checkout tags/<tag name>  [-b <branch name>]
 
-	For example, to check out the 2.0.2 release tag in a new branch named `2.0.2`, enter
+	例如， to check out the 2.0.2 release tag in a new branch named `2.0.2`, enter
 
 		git checkout tags/2.0.2 -b 2.0.2
 

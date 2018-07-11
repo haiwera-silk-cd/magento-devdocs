@@ -28,7 +28,7 @@ Look for the following {{site.data.var.ece}} highlights in this release:
 
 * **Staging and Production environments in the UI for Pro projects**. Starting October 23, 2017, all projects created using the free 30-day trial or provisioned for new accounts includes Staging and Production environments in the Project Web Interface. Existing accounts created before October 23, 2017 can enter a ticket to be updated. For more information, see [Add Staging and Production to Pro projects UI](http://devdocs.magento.com/guides/v2.2/cloud/trouble/pro-env-management.html).
 
-* **Onboarding Portal for new accounts helps merchants new to Magento企业版(云支持版) get started with their project**. Quickly ramp up and get started with your project with our [Onboarding Portal](http://devdocs.magento.com/guides/v2.2/cloud/onboarding/onboarding-portal.html): assign a Technical Admin, preview your store, plan your local development environment, walk-through UAT tests, and prep for launching.
+* **Onboarding Portal for new accounts helps merchants new to Magento企业版(云支持版) get started with their project**. Quickly ramp up and get started with your project with our [Onboarding Portal](http://devdocs.magento.com/guides/v2.2/cloud/onboarding/onboarding-portal.html): assign a Technical Admin, preview your store, plan your 本地开发环境, walk-through UAT tests, and prep for launching.
 
 
 Looking for more information on these new features as well as many others? Check out [Magento 2.2 Developer Documentation](http://devdocs.magento.com/guides/v2.2/).
@@ -105,6 +105,6 @@ You can directly upgrade to {{site.data.var.ece}} 2.2 from the following version
 
 We have heavily tested and verified upgrades to 2.2 from the latest three versions of 2.0.x and 2.1.x.
 
-You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. For example, you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
+You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. 例如， you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
 
-If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. For example, you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.
+If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. 例如， you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.

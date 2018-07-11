@@ -25,7 +25,7 @@ This example shows how to use the [recommended procedure]({{ page.baseurl }}/clo
 This example shows how you can set and lock configuration values for everything _except_ sensitive settings. You must set sensitive settings either as configuration variables or in the {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}. For more information, see [敏感的和系统特定的]({{ page.baseurl }}/config-guide/prod/config-reference-sens.html).
 </div> -->
 
-For example, you may want to set the following settings:
+例如， you may want to set the following settings:
 
 * Disable {% glossarytooltip 05099dbb-d491-4e33-a065-16035cb2d4d9 %}locale{% endglossarytooltip %} and static file optimization settings in your Integration environment
 * Enable static file optimization in Staging and Production environments
@@ -196,7 +196,7 @@ To generate a new file:
 
 		ssh <SSH URL> "php bin/magento magento-cloud:scd-dump"
 
-	For example,
+	例如，
 
 		ssh itnu84v4m4e5k-master-ouhx5wq@ssh.us.magentosite.cloud "php bin/magento magento-cloud:scd-dump"
 5.	If you haven't done so already, change to the project root directory.

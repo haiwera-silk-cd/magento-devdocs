@@ -16,7 +16,7 @@ functional_areas:
 <h2 id="config-files-extend-create">Extend configuration types</h2>
 To extend an existing configuration type, you need only create a configuration file in your {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %}.
 
-For example, to add an event observer, you create `app/etc/events.xml` and declare a new observer.
+例如， to add an event observer, you create `app/etc/events.xml` and declare a new observer.
 
 Because the event configuration type already exists in Magento, the loader and the `events.xsd` validating schema are already present and functional.
    
@@ -29,12 +29,12 @@ To create new configuration type, you must add at minimum:
 *  XSD validation schema 
 *  A loader
 
-For example, to introduce an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for a new search server that enables extensions to configure how its entities are indexed in that server, create:
+例如， to introduce an {% glossarytooltip edb42858-1ff8-41f9-80a6-edf0d86d7e10 %}adapter{% endglossarytooltip %} for a new search server that enables extensions to configure how its entities are indexed in that server, create:
 
 *  A loader.
 *  An XSD schema.
 *  Any other classes required for your new type to work.
-*  An appropriately named configuration file. For example, `search.xml`. This file is read and validated against your schema.
+*  An appropriately named configuration file. 例如， `search.xml`. This file is read and validated against your schema.
 
    If other modules have a `search.xml` file, they are merged with your file when it loads.
 
@@ -47,7 +47,7 @@ To create a new configuration type, extend the `\Magento\Framework\Config\Reader
 *  `$fileName`. Name of a configuration file. The Reader looks for the file names specified by this parameter in modules' `etc` directories.
 *  `$idAttributes`. Array of node attribute IDs.
 
-    For example, to merge the XML files:
+    例如， to merge the XML files:
 
        array(
          '</path/to/node>' => '<identifierAttributeName>',

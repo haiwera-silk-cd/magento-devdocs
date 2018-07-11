@@ -27,7 +27,7 @@ You should use the `--http-cache-hosts` parameter to specify a comma-separated l
 
 The parameter format must be `<hostname or ip>:<listen port>`, where you can omit `<listen port>` if it's port 80. 
 
-For example, 
+例如， 
 
 	magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 

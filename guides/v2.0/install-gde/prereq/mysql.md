@@ -55,7 +55,7 @@ This section discusses how to install MySQL 5.7 on Ubuntu 16.
 
 To install MySQL 5.7 on Ubuntu 16:
 
-1.	Enter the following command:
+1.	输入下面的命令：
 
 		sudo apt install -y mysql-server mysql-client
 
@@ -92,7 +92,7 @@ To install MySQL 5.7 on Ubuntu 16:
 ### Installing MySQL 5.6 on Ubuntu 14 {#instgde-prereq-mysql56ubu14}
 To install MySQL 5.6 on Ubuntu 14:
 
-1.	Enter the following command:
+1.	输入下面的命令：
 
 		apt-get -y install mysql-server-5.6 mysql-client-5.6
 

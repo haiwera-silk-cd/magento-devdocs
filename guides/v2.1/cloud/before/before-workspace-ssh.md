@@ -16,7 +16,7 @@ functional_areas:
   - Setup
 ---
 
-#### Previous step:
+#### 前提:
 [安装Magento所需的必要软件]({{ page.baseurl }}/cloud/before/before-workspace-magento-prereqs.html)
 
 The [SSH protocol ](https://en.wikipedia.org/wiki/Secure_Shell){:target="_blank"} is designed to maintain a secure connection between two systems&mdash;in this case, your local working environment and your {{site.data.var.ece}} Git project.

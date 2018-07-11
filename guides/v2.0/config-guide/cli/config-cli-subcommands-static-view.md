@@ -78,7 +78,7 @@ The following table explains this command's parameters and values.
 	</tbody>
 </table>
 
-For example, to deploy static view files for the `pt_BR` language:
+例如， to deploy static view files for the `pt_BR` language:
 
 	magento --ansi setup:static-content:deploy pt_BR
 

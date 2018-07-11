@@ -75,7 +75,7 @@ If you are interested in working on one of these projects, open a [在此页提�
           <p><strong>Acceptance criteria:</strong></p>
             <ul>
               <li>Provide an extended explanation of the parameters <code>(key => value)</code> for the <code>addAttribute</code> function.
-              <p>For example, <code>'type' => 'int'</code> and a list of all possible keys and their corresponding possible values.</p></li>
+              <p>例如， <code>'type' => 'int'</code> and a list of all possible keys and their corresponding possible values.</p></li>
               <li>Provide an extended explanation of the XML tags inside the tag. 例如:
                 <ul>
                   <li>What basic structure should always be applied?</li>

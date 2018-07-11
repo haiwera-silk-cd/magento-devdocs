@@ -110,7 +110,7 @@ These files override the following layouts:
 Although the layout overriding mechanism provides great customization flexibility, it's possible to use it to add logically irrelevant changes. We strongly recommend you not make the following changes:
 
 *	Changing block name or alias. The name of a block should not be changed, and neither should the alias of a block remaining in the same parent element.
-*	Changing handle inheritance. For example, you should not change the page type parent handle.
+*	Changing handle inheritance. 例如， you should not change the page type parent handle.
 
 #### 相关主题:
 

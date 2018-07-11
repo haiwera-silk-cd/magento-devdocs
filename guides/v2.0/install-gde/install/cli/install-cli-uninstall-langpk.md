@@ -40,9 +40,9 @@ The language package uninstall command performs the following tasks:
 	To work around this, you can either uninstall all dependent language packages at the same time or you can uninstall the depending language packages first.
 2.	If `--backup code` is specified, backs up the Magento file system (excluding <code>var</code>和<code>pub/static</code> directories) to `var/backups/<timestamp>_filesystem.tgz`
 3.	Removes language packages files from the codebase using `composer remove`.
-4.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}.
+4.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}.
 
-For example, if you attempt to uninstall a language package that another language package depends on, the following message displays:
+例如， if you attempt to uninstall a language package that another language package depends on, the following message displays:
 
 	Cannot uninstall vendorname/language-en_us because the following package(s) depend on it:
         vendorname/language-en_gb

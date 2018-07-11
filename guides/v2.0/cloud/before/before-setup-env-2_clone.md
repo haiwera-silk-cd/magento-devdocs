@@ -19,7 +19,7 @@ functional_areas:
   - Setup
 ---
 
-#### Previous step:
+#### 前提:
 [设置Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html)
 
 The Magento Commerce project is a Git repository of Magento code with a master origin. Develop your custom code and add extensions in one of eight active Git branches in your local. Each active environment includes a database and services to fully access the Magento site and store in the Integration environment.
@@ -142,7 +142,7 @@ To set variables using the Project Web Interface:
 1. Log in to [your {{site.data.var.ece}} account](https://accounts.magento.cloud){:target="\_blank"}.
 2. Click the Configure environment gear icon ![Configure your environment]({{ site.magentourl }}/common/images/cloud_edit-project.png) next to the Project name. If you are asked to create the project, click **Continue Later**.
 
-	![Project without code]({{ site.magentourl }}/common/images/cloud_project_empty.png)
+	![没有代码的项目]({{ site.magentourl }}/common/images/cloud_project_empty.png)
 
 4. Select the **Variables** tab.
 5. Click **Add Variable**.
@@ -175,7 +175,7 @@ To branch from master:
 
 			magento-cloud environment:checkout
 
-	For example, to create a new branch named `sprint1` from master, enter:
+	例如， to create a new branch named `sprint1` from master, enter:
 
 		magento-cloud environment:branch sprint1 master
 

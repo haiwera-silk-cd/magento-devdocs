@@ -50,7 +50,7 @@ The easiest way to do that is to run this command as the <a href="{{ page.baseur
 bin/magento deploy:mode:show
 ```
 
-A message similar to the following displays:
+类似下面的消息会显示：
 
 ```
 Current application mode: developer.

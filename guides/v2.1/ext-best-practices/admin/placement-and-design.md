@@ -61,7 +61,7 @@ settings displayed under specific entries in the **Store > Settings > Configurat
 
 The settings for these extensions should be displayed under its respective parent section under the **Store > Settings > Configuration** section.
 
-For example, if the extension is for Shipping, then you can place it under **Store > Settings > Configuration > Sales > Shipping Settings**.
+例如， if the extension is for Shipping, then you can place it under **Store > Settings > Configuration > Sales > Shipping Settings**.
 
 ![Store Feature Connector placement]({{ site.magentourl }}/common/images/ext-best-practices/store-feature-connector-placement.png)
 
@@ -74,7 +74,7 @@ These extensions are responsible for integrating with different systems and need
 
 If all the settings for an extension can be consolidated into one section, then the extension can be added to one of the primary navigation's submenu as links under the appropriate parent item. Avoid placing extension settings in multiple sections, such as the Configuration section and another related section.
 
-For example, if your extension is related to the "Reports" functionality then its settings should appear as a link under the Report Section in the Primary navigation.
+例如， if your extension is related to the "Reports" functionality then its settings should appear as a link under the Report Section in the Primary navigation.
 
 ![Connector with additional features placement]({{ site.magentourl }}/common/images/ext-best-practices/additional-feature-placement.png)
 

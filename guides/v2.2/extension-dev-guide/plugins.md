@@ -179,7 +179,7 @@ class ProductAttributesUpdater
 
 When you wrap a method which accepts arguments, your plugin must also accept those arguments and you must forward them when you invoke the <code>proceed</code> callable. You must be careful to match the default parameters and type hints of the original signature of the method.
 
-For example, the following code defines a parameter of type <code>SomeType</code> which is nullable:
+例如， the following code defines a parameter of type <code>SomeType</code> which is nullable:
 
 {% highlight PHP inline=true %}
 namespace My\Module\Model;
@@ -276,7 +276,7 @@ Classes and interfaces that are implementations of or inherit from classes that 
 
 Magento uses plugins defined in the global scope when the system is in a specific area (i.e. frontend, backend, etc). You can also extend or override these global plugin configuration via an area's `di.xml`.
 
-For example, the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
+例如， the developer can disable a global plugin in the {% glossarytooltip 74d6d228-34bd-4475-a6f8-0c0f4d6d0d61 %}后端{% endglossarytooltip %} area by disabling it in the specific `di.xml` file for the backend area.
 
 ### 相关主题s
 

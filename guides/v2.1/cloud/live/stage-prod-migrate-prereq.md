@@ -13,7 +13,7 @@ functional_areas:
   - Deploy
 ---
 
-#### Previous step:
+#### 前提:
 [在本地构建和部署]({{ page.baseurl }}/cloud/live/live-sanity-check.html)
 
 When you are ready to deploy your store, you need to complete deployment and testing in Staging first, then deploy to Production. The Staging environment provides a near-production environment with full services (including Fastly, New Relic, and Blackfire), database, web server, and more.
@@ -66,20 +66,20 @@ For Pro projects created **after October 23, 2017**, you can locate your URLs th
 
 For Pro projects created **before October 23, 2017**, you would need to access the information we provided when creating your account. This information is typically provided in a OneDrive onboarding document that contains your Git, SSH, and project URLs for Staging and Production. You'll use this information for accessing the environments.
 
-*	Git URL format:
+*	Git URL格式:
 
-	*	Staging: `git@git.ent.magento.cloud:<project ID>_stg.git`
-	*	Production: `git@git.ent.magento.cloud:<project ID>.git`
+	*	准生产环境: `git@git.ent.magento.cloud:<project ID>_stg.git`
+	*	生产环境: `git@git.ent.magento.cloud:<project ID>.git`
 
-*	SSH URL format:
+*	SSH URL格式:
 
-	*	Staging: `<project ID>_stg@<project ID>.ent.magento.cloud`
-	*	Production: `<project ID>@<project ID>.ent.magento.cloud`
+	*	准生产环境: `<project ID>_stg@<project ID>.ent.magento.cloud`
+	*	生产环境: `<project ID>@<project ID>.ent.magento.cloud`
 
 *	Web URL format:
 
-	*	Staging: `http[s]://staging.<your domain>.c.<project ID>.ent.magento.cloud`
-	*	Production: `http[s]://<your domain>.c.<project ID>.ent.magento.cloud`
+	*	准生产环境: `http[s]://staging.<your domain>.c.<project ID>.ent.magento.cloud`
+	*	生产环境: `http[s]://<your domain>.c.<project ID>.ent.magento.cloud`
 
 ### Set up Pro remote Git repositories {#pro-remote}
 For Pro projects created **after October 23, 2017**, you do not need to complete this step. Your Staging and Production environments are branches of `master` with configured deployment targets. You can simply merge code to these environments from Integration `master`. You can also use the Project Web Interface to merge your code without SSH or Git commands.
@@ -99,21 +99,21 @@ The following commands are examples for setting up remotes on Staging and Produc
 	git remote add staging git@git.ent.magento.cloud:dr5q6no7mhqip_stg.git
 	git remote add prod git@git.ent.magento.cloud:dr5q6no7mhqip.git
 
-## Set up your SSH agent and add the SSH key {#ssh-agent}
+## 设置你的SSH代理 and add the SSH key {#ssh-agent}
 You only need to set up your SSH agent on these servers once. SSH agent helps contain is a background program that handles passwords for your SSH private keys.
 
 **How it works!** After you configure the agent and settings, you can migrate files easier using SSH or `scp` between servers. The SSH agent forwards authentication requests from Staging or Production environments to your local with a working Magento system, helping you connect using your local private SSH key. After you push your Git code, you can SSH into Staging and Production and update code, data, and files with this set up.
 
 You can use any terminal client you prefer for SSH access, or see our [Recommendeds tools]({{ page.baseurl }}/cloud/before/before-workspace.html#recommended-tools). For these examples, we use the OpenSSH client.
 
-To set up an SSH agent:
+设置SSH代理：
 
 1.	In a terminal client, log in to your local system.
 2.	Enter the following command to check if the SSH agent is running and list fingerprints of all identities currently represented by the agent:
 
 		ssh-add -l
 
-	One of the following messages displays:
+	会显示下面的信息之一：
 
 	*	Displays a working and running SSH agent: `2048 ab:de:56:94:e3:1e:71:c3:4f:df:e1:62:8d:29:a5:c0 /home/magento_user/.ssh/id_rsa (RSA)`
 
@@ -122,7 +122,7 @@ To set up an SSH agent:
 
 		Continue with 步骤3.
 
-3.	To start the SSH agent, enter the following command:
+3.	要开启动SSH代理，输入下面的命令：
 
 		eval $(ssh-agent -s)
 
@@ -131,11 +131,11 @@ To set up an SSH agent:
 
 		ssh-add ~/.ssh/id_rsa
 
-	A message similar to the following displays:
+	类似下面的消息会显示：
 
 		Identity added: /home/magento_user/.ssh/id_rsa (/home/magento_user/.ssh/id_rsa)
 
-For more information on setting up SSH, see [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html) as part of your local setup. For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.
+更多关于设置SSH的信息，请参考[启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)作为本地设置的一部分。 For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.
 
 If you have a Pro project created **before October 23, 2017**, you need to enter a ticket with your public key to have it added to Staging and Production.
 

@@ -32,7 +32,7 @@ To remove the Magento crontab:
 
 1.  Log in as or switch to the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html).
 2.  Change to the Magento installation directory.
-3.  Enter the following command:
+3.  输入下面的命令：
 
       php bin/magento cron:remove
 

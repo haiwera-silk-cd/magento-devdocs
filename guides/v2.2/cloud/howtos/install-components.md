@@ -102,7 +102,7 @@ To enable or disable extensions, you must begin those changes on your local in a
 Trying to enable and disable extensions not following this method can lead to permissions and 其它问题.
 
 1.  [Work in a branch](#getstarted) to update `config.php`.
-1.  In a terminal, access your local development environment.
+1.  In a terminal, access your 本地开发环境.
 1.  List all module.
 
     ```bash

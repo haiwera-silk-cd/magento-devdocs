@@ -107,7 +107,7 @@ A returned array is available in constraints within current variation.
 
 When [constraints][] of the variation have been performed, you can use the `tearDown()` method to get back the testing application to the initial state to be ready for the next variation execution (for example, logging out, clearing data, clearing cache).
 
-For example, the following code deletes a sales rule after each variation:
+例如， the following code deletes a sales rule after each variation:
 
 ``` php?start_inline=1
 public function tearDown()

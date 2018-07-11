@@ -105,7 +105,7 @@ interface AdapterInterface
 
 	`extension=php_soap.dll`
 
-2. Before running the functional tests you need to clear your {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}.
+2. Before running the functional tests you need to clear your {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}.
 Now you are ready to run the tests.
 
 <h3 id="running">Running the Tests</h3>

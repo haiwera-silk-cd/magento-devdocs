@@ -28,7 +28,7 @@ You should make sure that your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5
   MySQL offers a range of numeric, string, and time data types. If you are storing a date, use a DATE or DATETIME field. Using an INTEGER or STRING can make SQL queries more complicated, if not impossible. It is often tempting to invent your own data formats; for example, storing serialized PHP objects in string. Database management may be easier, but MySQL will become a dumb data store and it may lead to problems later.
 
 ### Get the correct data from the correct object
-  Be sure to retrieve data from the correct object. For example, get {% glossarytooltip fd4bed67-7130-4415-8a6f-ad8d8ef8f25e %}SKU{% endglossarytooltip %} data from the Product instead of the Order object.
+  Be sure to retrieve data from the correct object. 例如， get {% glossarytooltip fd4bed67-7130-4415-8a6f-ad8d8ef8f25e %}SKU{% endglossarytooltip %} data from the Product instead of the Order object.
 
 ### Avoid raw SQL queries
   Raw SQL queries can lead to potential security vulnerabilities and database portability issues. Use data adapter capabilities ([`Magento\Framework\DB\Adapter\Pdo\Mysql`]({{ site.mage2000url }}lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php){:target="_blank"} by default) to build and execute queries and move all data access code to a resource model. Use prepared statements to make sure that queries are safe to execute.
@@ -36,7 +36,7 @@ You should make sure that your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5
 ### Use well-defined indexes
   Foreign keys should have indexes. If you're using a field in a WHERE clause of an SQL query you should have an index on it. Such indexes should cover multiple columns based on the queries needed. As a general rule of thumb, indexes should be applied to any column named in the WHERE clause of a SELECT query.
 
-  For example, assume we have a user table with a numeric ID (the primary key) and an email address. During log on, MySQL must locate the correct ID by searching for an email. With an index, MySQL can use a fast search algorithm to locate the email almost instantly. Without an index, MySQL must check every record in sequence until the address is found.
+  例如， assume we have a user table with a numeric ID (the primary key) and an email address. During log on, MySQL must locate the correct ID by searching for an email. With an index, MySQL can use a fast search algorithm to locate the email almost instantly. Without an index, MySQL must check every record in sequence until the address is found.
 
   It's tempting to add indexes to every column, however, they are regenerated during every table INSERT or UPDATE. That can hit  performance; only add indexes when necessary.
 
@@ -49,7 +49,7 @@ You should make sure that your {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5
 ### Validate input and properly encode or escape output
   Remember to always validate data from non-trusted data sources. Sanitizing data coming into your extension and produced by it will improve overall security.
 
-  For example, to prevent XSS vulnerability, avoid creating methods that output non-validated user-supplied data without proper {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} encoding.
+  例如， to prevent XSS vulnerability, avoid creating methods that output non-validated user-supplied data without proper {% glossarytooltip a2aff425-07dd-4bd6-9671-29b7edefa871 %}HTML{% endglossarytooltip %} encoding.
 
 ### Always encrypt sensitive data or configurations
   Never store sensitive information in clear text within a resource that might be accessible to another control sphere. This type of information should be encrypted or otherwise protected.

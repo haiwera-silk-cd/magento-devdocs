@@ -77,7 +77,7 @@ A successful HTTP 200 OK response will be sent for a valid application ID and se
 
 After obtaining a valid session token, you must use it as a bearer token in all subsequent API calls.
 
-For example, to access a user profile with a session token:
+例如， to access a user profile with a session token:
 
 ```shell
 curl -X GET \

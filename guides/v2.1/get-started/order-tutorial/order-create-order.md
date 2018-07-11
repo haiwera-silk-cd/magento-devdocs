@@ -35,7 +35,7 @@ When you submit payment information, Magento creates an order and sends an order
 
 **载荷**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {
@@ -85,7 +85,7 @@ where `3` is the `orderid`
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {

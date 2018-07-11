@@ -150,7 +150,7 @@ Using the Composer naming convention helps distinguish packages from different v
 ### vendor-name
 
 All letters in the vendor name must be in lowercase.
-For example, the vendor name format for extensions released by Magento Inc is `magento`.
+例如， the vendor name format for extensions released by Magento Inc is `magento`.
 
 #### Magento Marketplace Extensions
 

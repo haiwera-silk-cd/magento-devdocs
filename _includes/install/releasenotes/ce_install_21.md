@@ -19,7 +19,7 @@ The Open Source software is available from `repo.magento.com`. Before getting th
 
 where `<version>` is `2.1.0`, `2.1.1`, and so on
 
-For example, to install Magento Open Source 2.1.1 in the `magento2` directory:
+例如， to install Magento Open Source 2.1.1 in the `magento2` directory:
 
 	composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.1.1 magento2
 

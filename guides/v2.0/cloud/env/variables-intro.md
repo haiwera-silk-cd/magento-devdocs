@@ -41,7 +41,7 @@ To use a configuration path as a variable:
 *	Replace `/` characters in the configuration path with two underscore characters.
 
 ## 环境变量 {#cloud-env-set-vars}
-{{site.data.var.ece}} enables you to create environment variables that override configuration options. For example, we strongly recommend you *immediately* change your Magento Admin URI and administrative user's password to prevent someone guessing your login and changing settings without your knowledge.
+{{site.data.var.ece}} enables you to create environment variables that override configuration options. 例如， we strongly recommend you *immediately* change your Magento Admin URI and administrative user's password to prevent someone guessing your login and changing settings without your knowledge.
 
 We support the following types of variables:
 
@@ -82,7 +82,7 @@ To list current environment variables using SSH:
 
 		echo $<variable name> | base64 --decode
 
-	For example,
+	例如，
 
 		echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 --decode
 
@@ -102,9 +102,9 @@ Everytime you add or modify a variable using the Project Web Interface or the CL
 To create a variable using the command line:
 
 1. Login to the Magento Cloud CLI. Enter the command `magento-cloud login` and provide your credentials.
-2. To set a variable for the project, use the command `magento-cloud project:variable:set <name> <value>`. The alias for this command is also `pvset`. For example, `magento-cloud pvset example 123` creates a variable example with a string value of 123 for the project.
+2. To set a variable for the project, use the command `magento-cloud project:variable:set <name> <value>`. The alias for this command is also `pvset`. 例如， `magento-cloud pvset example 123` creates a variable example with a string value of 123 for the project.
 3. After creating these variables, you can list all project variables with the command `magento-cloud project:variable:get`或`magento-cloud pvget`.
-4. To set a variable for the branch, use the command `magento-cloud variable:set <name> <value>`. The alias for this command is also `vset`. For example, `magento-cloud vset example2 abc` creates a variable example2 with a string value of abc for the branch.
+4. To set a variable for the branch, use the command `magento-cloud variable:set <name> <value>`. The alias for this command is also `vset`. 例如， `magento-cloud vset example2 abc` creates a variable example2 with a string value of abc for the branch.
 5. After creating these variables, you can list all project variables with the command `magento-cloud variable:get`或`magento-cloud vget`.
 
 ## Project Web Interface: Add environment variables {#projectweb}

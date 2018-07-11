@@ -103,7 +103,7 @@ Use the following guidelines when translating words and phrases:
     	->
     	Product 'Multimeter-2000' has been added to shopping cart.
 
-    The resulting phrase must contain at least one of each placeholder. For example, suppose there are placeholders from `%1` to `%3` in the original phrase. The translation can have as many of these placeholders in any order, but there must be at least one occurrence of `%1`, `%2`, or `%3`. The translation cannot contain placeholder values not present in the original value (for example, `%4`, `%5`, and so on).
+    The resulting phrase must contain at least one of each placeholder. 例如， suppose there are placeholders from `%1` to `%3` in the original phrase. The translation can have as many of these placeholders in any order, but there must be at least one occurrence of `%1`, `%2`, or `%3`. The translation cannot contain placeholder values not present in the original value (for example, `%4`, `%5`, and so on).
 
     An example of translating a phrase:
 
@@ -190,7 +190,7 @@ To create these files:
 
 1.  Create a directory under `app/i18n`.
 
-	For example, Magento language packages are located in `app/i18n/magento`
+	例如， Magento language packages are located in `app/i18n/magento`
 
 2.  Add any license files you require.
 3.  Add <a href="{{ page.baseurl }}/extension-dev-guide/build/composer-integration.html">`composer.json`</a> that specifies dependencies for your language package.
@@ -298,7 +298,7 @@ Similar to the preceding example, generate a .csv file, but instead of specifyin
 
 4.  Create a directory for the language package.
 
-	For example, `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
+	例如， `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
 
 5.  In that directory, add all of the following:
 

@@ -42,7 +42,7 @@ filter: {
 
 See [Searches and pagination in GraphQL]({{ page.baseurl }}/graphql/search-pagination.html) for more information about the operators.
 
-Magento processes the attribute values specified in  a `ProductFilterInput` as  simple data types (strings, integers, booleans). However, returned attributes can be a different, complex, data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
+Magento processes the attribute values specified in  a `ProductFilterInput` as  simple data types (strings, integers, booleans). However, returned attributes can be a different, complex, data type. 例如， in a response, `price` is an object that contains a monetary value and a currency code.
 
 The following attributes can be used to create filters. See the [Response](#Response) section for information about each attribute.
 

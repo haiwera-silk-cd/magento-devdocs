@@ -13,7 +13,7 @@ functional_areas:
   - Deploy
 ---
 
-#### Previous step:
+#### 前提:
 [迁移数据和静态文件]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html)
 
 When your code, files, and data is successfully migrated to Staging or Production, use the environment URLs to test your site(s) and store(s). For a list of your URLs, see [Starter]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#starter-urls) and [Pro]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html#pro-urls) access information.
@@ -23,7 +23,7 @@ The following information provides information on verifying logs, testing Fastly
 ## Log files {#logs}
 If you encounter errors on deployment or 其它问题 when testing, check the log files. Log files are located under the `var/log` directory.
 
-The deployment log is located in `/var/log/platform/<prodject ID>/post_deploy.log`. The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. For example, with a project ID of `yw1unoukjcawe`, the Staging user is `yw1unoukjcawe_stg` and the Production user is `yw1unoukjcawe`.
+The deployment log is located in `/var/log/platform/<prodject ID>/post_deploy.log`. The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. 例如， with a project ID of `yw1unoukjcawe`, the Staging user is `yw1unoukjcawe_stg` and the Production user is `yw1unoukjcawe`.
 
 When accessing logs in Production, you may need to SSH into each of the three nodes to locate the logs.
 
@@ -43,7 +43,7 @@ First, check for headers with a dig command to the URL. In a terminal applicatio
 The following examples use Pro URLs. You can use any URL with the `dig` command.
 
 * Staging: `dig http[s]://staging.<your domain>.c.<instanceid>.ent.magento.cloud`
-* Production: `dig http[s]://<your domain>.{1|2|3}.<project ID>.ent.magento.cloud`
+* 生产环境: `dig http[s]://<your domain>.{1|2|3}.<project ID>.ent.magento.cloud`
 
 Next, use a `curl` command to verify X-Magento-Tags exist and additional header information. The format for the command is:
 
@@ -54,7 +54,7 @@ For Starter, enter the full site URL from your environment [Access info]({{ page
 For Pro Staging and Production, the command differs per server:
 
 * Staging: `curl http[s]://staging.<your domain>.c.<instanceid>.ent.magento.cloud -H "host: <url>" -k -vo /dev/null -HFastly-Debug:1`
-* Production:
+* 生产环境:
 
 	* The load balancer: `curl http[s]://<your domain>.c.<project ID>.ent.magento.cloud -H "host: <url>" -k -vo /dev/null -HFastly-Debug:1`
 	* A direct Origin node: `curl http[s]://<your domain>.{1|2|3}.<project ID>.ent.magento.cloud -H "host: <url>" -k -vo /dev/null -HFastly-Debug:1`

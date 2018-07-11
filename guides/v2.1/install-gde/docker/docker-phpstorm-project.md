@@ -52,7 +52,7 @@ To set up a new PhpStorm project to work with Magento DevBox:
 	The following figure shows an example.
 
 	![Locate your project root directory]({{ site.magentourl }}/common/images/install_docker_php-storm_new-project-root.png){:width="500px"}
-5.	Click **Project Root** and click **Finish**.
+5.	Click **Project Root** and click **完成**.
 7.	Wait while PhpStorm indexes the project.
 
 ### Add a remote PHP CLI interpreter

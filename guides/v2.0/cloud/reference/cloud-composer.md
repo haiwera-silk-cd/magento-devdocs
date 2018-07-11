@@ -26,7 +26,7 @@ For information on what files should and shouldn't be in source control, see [�
 ## Your project's Composer files
 Your project root directory contains `composer.json` and `composer.lock`.
 
-You edit `composer.json` to specify dependencies for your {{site.data.var.ece}} project. For example, when you [install an extension or module]({{ page.baseurl }}/cloud/howtos/install-components.html), you update `composer.json` to add the extension to the list. You can either edit it manually or the [Component Manager]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html) can do it for you.
+You edit `composer.json` to specify dependencies for your {{site.data.var.ece}} project. 例如， when you [install an extension or module]({{ page.baseurl }}/cloud/howtos/install-components.html), you update `composer.json` to add the extension to the list. You can either edit it manually or the [Component Manager]({{ page.baseurl }}/comp-mgr/bk-compman-upgrade-guide.html) can do it for you.
 
 The file `composer.lock` stores a set of exact version dependencies that satisfy all of the version constraints of every requirement for every package in the dependency tree of the project.
 
@@ -37,7 +37,7 @@ The following commands determine what's in `composer.lock`:
 
 The workflow is as follows:
 
-1.	Make a change to `composer.json`. For example, edit this file when installing an extension or module.
+1.	Make a change to `composer.json`. 例如， edit this file when installing an extension or module.
 2.	Run `composer update`.
 3.	Add `composer.lock` to or update it in your Cloud Git repository.
 4.	Push the changes to the Cloud environment, which causes Cloud to build and deploy the environment.
@@ -77,7 +77,7 @@ There is a many-to-one relationship between the MCC version and Magento versions
 
 For {{site.data.var.ee}}, versions are specified as `2.<x>.<y>`.
 
-MCC versions are specified as: `<100 + x>.<y>.*`. For example, {{site.data.var.ee}} 2.1.4 is associated with MCC 101.4.0. Subsequently, a new version of MCC could be released that corresponds to the same {{site.data.var.ee}} version, and it would be 101.4.1.
+MCC versions are specified as: `<100 + x>.<y>.*`. 例如， {{site.data.var.ee}} 2.1.4 is associated with MCC 101.4.0. Subsequently, a new version of MCC could be released that corresponds to the same {{site.data.var.ee}} version, and it would be 101.4.1.
 
 We release updated MCC code to add a new patch or to improve the build and deploy hooks.
 

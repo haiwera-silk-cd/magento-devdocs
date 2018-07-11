@@ -20,7 +20,7 @@ To update components if you're *not* a contributing developer, see <a href="{{ p
 You can either add a `require` section to `composer.json` or you can use the `composer require` command as follows:
 
 1.	Log in to the Magento server, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
-2.	Change to the directory to which you cloned the Magento application. For example,
+2.	Change to the directory to which you cloned the Magento application. 例如，
 
 		cd /var/www/magento2
 
@@ -31,7 +31,7 @@ You have the following options:
 
 	composer require <vendor>/<name>:<version>
 
-For example,
+例如，
 
 	composer require example/module:1.0.0
 

@@ -12,7 +12,7 @@ functional_areas:
   - Deploy
 ---
 
-#### Previous step:
+#### 前提:
 [准备部署准生产和生产环境]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html)
 
 To migrate your database and static files to Staging and Production:
@@ -31,26 +31,26 @@ The Project Web Interface provides full features to create, manage, and deploy c
 
 For Pro projects created **after October 23, 2017** or [updated]({{ page.baseurl }}/cloud/trouble/pro-env-management.html), deploy the Integration `master` branch you created to Staging and Production:
 
-1. [Log in](https://accounts.magento.cloud) to your project.
+1. [登录](https://accounts.magento.cloud)到你的项目.
 2. Select the Integration branch.
-3. Select the **Merge** option to deploy to Staging. Complete all testing.
-4. Select the Staging branch.
-5. Select the **Merge** option to deploy to Production.
+3. 选择 **合并** 选项部署到准生产环境。 Complete all testing.
+4. 选项准生产环境的分支。
+5. 选择 **合并** 选项部署到生产环境。
 
 {% include cloud/wings-management.md %}
 
 For Starter, deploy your development branch you created to Staging and Production:
 
-1. [Log in](https://accounts.magento.cloud) to your project.
+1. [登录](https://accounts.magento.cloud)到你的项目.
 2. Select the prepared code branch.
-3. Select the **Merge** option to deploy to Staging. Complete all testing.
-4. Select the Staging branch.
-5. Select the **Merge** option to deploy to Production.
+3. 选择 **合并** 选项部署到准生产环境。 Complete all testing.
+4. 选项准生产环境的分支。
+5. 选择 **合并** 选项部署到生产环境。
 
-![Use the merge option to deploy]({{ site.magentourl }}/common/images/cloud_project-merge.png)
+![使用合并选项部署]({{ site.magentourl }}/common/images/cloud_project-merge.png)
 
 ### Deploy code with SSH and CLI {#ssh}
-If you prefer to use CLI for deploying, you will need to configure additional SSH settings and Git remotes to use commands. You can SSH into the Staging and Production environments to push the `master` branch.
+如果你更喜欢使用命令行来部署，你将必须配置附加的SSH设置和Git仓库来使用命令。你可以SSH登录到准生产环境和生产环境来推送`master`分支。
 
 You'll need the SSH and Git access information for your project.
 
@@ -58,15 +58,15 @@ You'll need the SSH and Git access information for your project.
 * For Pro projects created **after October 23, 2017** or [updated]({{ page.baseurl }}/cloud/trouble/pro-env-management.html), locate the SSH and Git information through the Project Web Interface.
 * For Pro projects created **before October 23, 2017**, the formats are as follows:
 
-  *	Git URL format:
+  *	Git URL格式:
 
-  	*	Staging: `git@git.ent.magento.cloud:<project ID>_stg.git`
-  	*	Production: `git@git.ent.magento.cloud:<project ID>.git`
+  	*	准生产环境: `git@git.ent.magento.cloud:<project ID>_stg.git`
+  	*	生产环境: `git@git.ent.magento.cloud:<project ID>.git`
 
-  *	SSH URL format:
+  *	SSH URL格式:
 
-  	*	Staging: `<project ID>_stg@<project ID>.ent.magento.cloud`
-  	*	Production: `<project ID>@<project ID>.ent.magento.cloud`
+  	*	准生产环境: `<project ID>_stg@<project ID>.ent.magento.cloud`
+  	*	生产环境: `<project ID>@<project ID>.ent.magento.cloud`
 
 #### Deploy to Pro: updated or created after October 23, 2017 {#classic}
 To deploy to Pro projects **created after October 23, 2017** or [updated]({{ page.baseurl }}/cloud/trouble/pro-env-management.html):
@@ -74,8 +74,8 @@ To deploy to Pro projects **created after October 23, 2017** or [updated]({{ pag
 1. Open an SSH connection to your Staging or Production environment using the SSH command.
 2. Checkout your Staging or Production branch:
 
-    * Staging: `git checkout staging`
-    * Production: `git checkout production`
+    * 准生产环境: `git checkout staging`
+    * 生产环境: `git checkout production`
 3. Pull the `master` branch from Integration. Remember, a pull performs a fetch and a merge in one step.
 
           git pull origin master
@@ -90,14 +90,14 @@ To deploy to Pro projects **created after October 23, 2017** or [updated]({{ pag
 For these environments, you are pushing code from repository to repository: Integration `master` to Staging or Production `master`. Due to these being `master` branches in different repositories, you cannot merge as if branch to branch. You should have completed all [prerequisites]({{ page.baseurl }}/cloud/live/stage-prod-migrate-prereq.html) prior to deployment.
 
 1. Open an SSH connection to your Staging or Production environment using the SSH command.
-2. Pull the `master` branch to the server.
+2. 拉取`master`分支到服务器。
 
           git pull origin master
 
 3. Merge changes to Staging or Production:
 
-    * Staging: `git push staging master:master`
-    * Production: `git push production master:master`
+    * 准生产环境: `git push staging master:master`
+    * 生产环境: `git push production master:master`
 
     You must force push for these branches as they are separate repositories with a `master` branch.
 
@@ -123,8 +123,8 @@ To migrate static files:
 
 1.	Open an SSH connection to your Staging or Production environment:
 
-			*	Staging: ssh -A <project ID>_stg@<project ID>.ent.magento.cloud
-			*	Production: ssh -A <project ID>@<project ID>.ent.magento.cloud
+			*	准生产环境: ssh -A <project ID>_stg@<project ID>.ent.magento.cloud
+			*	生产环境: ssh -A <project ID>@<project ID>.ent.magento.cloud
 2.	rsync the `pub/media` directory from your local Magento server to staging or production:
 
 		rsync -azvP pub/media/ <developmemt machine user name>@<development machine host or IP>:pub/media/
@@ -145,8 +145,8 @@ To migrate a database:
 
 1.	SSH into the environment you want to create a database dump from:
 
-	*	Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-	*	Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+	*	准生产环境: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
+	*	生产环境: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
 	* To SSH into the `master` branch of your Integration environment:
 
 			magento-cloud environment:ssh
@@ -165,13 +165,13 @@ To migrate a database:
 
 4.	Transfer the database dump to Staging or Production with an `rsync` command:
 
-	*	Staging: `rsync -azvP /tmp/database.sql.gz <project ID>_stg@<project ID>.ent.magento.cloud:/tmp`
-	*	Production: `rsync -azvP /tmp/database.sql.gz <project ID>@<project ID>.ent.magento.cloud:/tmp`
+	*	准生产环境: `rsync -azvP /tmp/database.sql.gz <project ID>_stg@<project ID>.ent.magento.cloud:/tmp`
+	*	生产环境: `rsync -azvP /tmp/database.sql.gz <project ID>@<project ID>.ent.magento.cloud:/tmp`
 8.	Enter `exit` to terminate the SSH connection.
 9.	Open an SSH connection to the environment you want to migrate the database into:
 
-	*	Staging: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
-	*	Production: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
+	*	准生产环境: `ssh -A <project ID>_stg@<project ID>.ent.magento.cloud`
+	*	生产环境: `ssh -A <project ID>@<project ID>.ent.magento.cloud`
 	* To SSH into the `master` branch of your Integration environment:
 
 			magento-cloud environment:ssh

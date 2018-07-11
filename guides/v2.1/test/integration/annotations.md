@@ -13,7 +13,7 @@ The following annotations are available in integration tests:
 
 Name|Annotation|Format|Description
 ---|---|---|---
-Application Isolation|`@magentoAppIsolation`|`@magentoAppIsolation enabled|disabled`|Enables or disables application isolation when you run tests. When enabled, an application state after a test run will be the same as before the test run. For example, you should enable it, when you want to create sessions in a test, but you don't want them to affect other tests.
+Application Isolation|`@magentoAppIsolation`|`@magentoAppIsolation enabled|disabled`|Enables or disables application isolation when you run tests. When enabled, an application state after a test run will be the same as before the test run. 例如， you should enable it, when you want to create sessions in a test, but you don't want them to affect other tests.
 Configuration Fixture|`@magentoConfigFixture`|`@magentoConfigFixture [<store_code>_store] <config_path> <config_value>`|Sets up configuration settings for a particular test. The list of settings is stored in the `core_config_data` database table. After the test execution, the settings revert to their original state.
 Database Isolation|`@magentoDbIsolation`|`@magentoDbIsolation enabled|disabled`|Enables or disables database isolation. Disabled by default, unless you are using `@magentoDataFixture`, in which case it is enabled by default. All data, required for a test, live during transaction only. Any test results won't be written in a database.
 Data Fixture|`@magentoDataFixture`|`@magentoDataFixture <script_filename>|<method_name>`|Points to a class or a method which creates testing entities (fixtures) for test execution.

@@ -109,7 +109,7 @@ To build your site:
 
 		git apply <path to patch>
 
-	For example, to apply hot fixes:
+	例如， to apply hot fixes:
 
 		git apply m2-hotfixes/<patch file name>
 
@@ -149,14 +149,14 @@ We highly recommend having Magento already installed prior to deployment. During
 
 *	Install the Magento application if needed
 *	If the Magento application is installed, upgrade 组件
-*	Clear the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}
+*	Clear the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}
 *	Set the Magento application for [`production`]({{ page.baseurl }}/config-guide/bootstrap/magento-modes.html#production-mode) mode
 
 To deploy your site:
 
 1.	If you haven't already, log in as or switch to the [Magento文件系统所有者]({{ page.baseurl }}/cloud/before/before-workspace-file-sys-owner.html).
 2.	Change to your project root directory.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		php bin/magento setup:upgrade
 

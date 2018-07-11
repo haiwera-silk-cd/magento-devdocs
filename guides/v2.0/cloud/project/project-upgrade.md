@@ -58,7 +58,7 @@ Back up your staging or production system database:
 Verify other changes you're going to submit to source control before you start the upgrade:
 
 1.  If you haven't done so already, change to your project root directory.
-2.  Enter the following command:
+2.  输入下面的命令：
 
         git status
 3.  If there are changes you do *not* want to submit to source control, branch or stash them now.
@@ -70,7 +70,7 @@ Verify other changes you're going to submit to source control before you start t
         composer require magento/magento-cloud-metapackage <requiredversion> --no-update
         composer update
 
-    For example, to upgrade to version 2.1.4:
+    例如， to upgrade to version 2.1.4:
 
         composer require magento/magento-cloud-metapackage 2.1.4 --no-update
         composer update
@@ -139,12 +139,12 @@ To resolve the error:
 2.  [Examine the logs]({{ page.baseurl }}/cloud/trouble/environments-logs.html) to determine the source of the issue.
 3.  After you fix the source of the issue, push the change to the server, which causes the upgrade to restart.
 
-    For example, on a local branch, enter the following commands:
+    例如， on a local branch, enter the following commands:
 
         git add -A && git commit -m "fixed deployment failure" && git push origin <branch name>
 
 #### 相关主题
 * [Composer]({{ page.baseurl }}/cloud/reference/cloud-composer.html)
-* [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
+* [安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html)
 * [Install optional sample data]({{ page.baseurl }}/cloud/howtos/sample-data.html)
 * [Merge and delete an environment]({{ page.baseurl }}/cloud/howtos/environment-tutorial-env-merge.html)

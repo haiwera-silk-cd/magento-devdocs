@@ -90,7 +90,7 @@ There is more than one way to install PHP 7.0.2或更新; the following is a sug
 
 		yum install -y http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-1.0-14.ius.centos7.noarch.rpm
 		yum -y update
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		yum -y install php70u php70u-pdo php70u-mysqlnd php70u-opcache php70u-xml php70u-mcrypt php70u-gd php70u-devel php70u-mysql php70u-intl php70u-mbstring php70u-bcmath php70u-json php70u-iconv php70u-soap
 

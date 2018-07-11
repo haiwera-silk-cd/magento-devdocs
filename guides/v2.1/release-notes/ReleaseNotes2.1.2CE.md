@@ -85,7 +85,7 @@ The following list provides an overview of the security issues fixed in this rel
 
 <!--- 46026/57463-->* The Guest order view protection code is no longer vulnerable to brute force attacks.
 
-<!--- 57302/1338-->*  You can no longer manipulate the full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} to store incorrect pages under regular page {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} entries.
+<!--- 57302/1338-->*  You can no longer manipulate the full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} to store incorrect pages under regular page {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} entries.
 
 
 

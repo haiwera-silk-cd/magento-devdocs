@@ -62,7 +62,7 @@ The `.html` template of the bookmarks component is [Magento/Ui/view/base/web/tem
  - children: is a general name for the nested 组件 of a certain component. Children can be specified in the `.xml` configuration of the parent component (all nodes except `<argument/>` and `<dataSource/>` are considered children) and in the Knockout JS templates: children are the keys of the `elems` property.
 
  - `name`: the name of the component specified in the `.xml` configuration file of the parent UI component. In the run-time in a browser this value is transformed to a complex string. This string represents hierarchy of 组件 in the run-time.
-For example, [`app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml:57`]({{ site.mage2000url }}app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml#L57):
+例如， [`app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml:57`]({{ site.mage2000url }}app/code/Magento/Cms/view/adminhtml/ui_component/cms_block_listing.xml#L57):
 
 {%highlight xml%} 
 <component name="columns_controls">

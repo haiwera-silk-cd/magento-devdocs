@@ -16,7 +16,7 @@ _This topic was updated due to the {{page.mftf-release}} MFTF release._
 
 In the MFTF, it is possible to re-use a group of actions declared in an XML file.
 It is handy when you need to repeat same sequence of actions over and over again.
-For example, to log in as an admin or a customer.
+例如， to log in as an admin or a customer.
 
 The following diagram demonstrates XML structure of an action group:
 

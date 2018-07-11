@@ -47,7 +47,7 @@ Collaborator instances should be passed into the class using [constructor inject
 
 Whenever your code requires access to some part of the environment, try to use a collaborator class that can easily be replaced by a test double (also referred to as a *mock*) instead.
 
-For example, if you...
+例如， if you...
 
 * ...need file system access?  
 

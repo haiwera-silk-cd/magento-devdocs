@@ -18,7 +18,7 @@ The build and deploy process is slightly different for each plan:
 -  **Pro plans**—For the Integration environment, every _active_ branch builds and deploys to a full environment for access and testing. You must merge your code to the `integration` branch before you can merge to the Staging environment and then the Production environment. You can only merge to Staging and Production using CLI commands with SSH or using the Project Web Interface. If you do not see the Staging or Production environments in your Project Web Interface, then you need to [Add Staging and Production to Pro projects UI]({{ page.baseurl }}/cloud/trouble/pro-env-management.html).
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Verify the code for your site and stores is in the {{site.data.var.ece}} branch. If you point, or include hooks, to code in other branches, such as a private branch, you may encounter problems with the build and deploy process. For example, if you include a theme from a private repo in your branch, the theme will not build with the Magento code.
+Verify the code for your site and stores is in the {{site.data.var.ece}} branch. If you point, or include hooks, to code in other branches, such as a private branch, you may encounter problems with the build and deploy process. 例如， if you include a theme from a private repo in your branch, the theme will not build with the Magento code.
 </div>
 
 {% include cloud/wings-management.md %}
@@ -36,7 +36,7 @@ For all Starter environments and Pro Integration environments, pushing your Git 
 -  [`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html)—defines how to build and deploy Magento, including services, hooks, cron jobs, and more.
 - [`.magento.env.yaml`]({{ page.baseurl }}/cloud/project/magento-env-yaml.html)—centralizes the management of build and deploy actions across all of your environments, including Pro Staging and Production, using environment variables.
 -  [`.magento/routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html)—defines how Magento processes an incoming URL.
--  [`.magento/services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html)—defines the services Magento uses by name and version. For example, this file may include versions of MySQL, PHP extensions, and Elasticsearch. These are referred to as *services*.
+-  [`.magento/services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html)—defines the services Magento uses by name and version. 例如， this file may include versions of MySQL, PHP extensions, and Elasticsearch. These are referred to as *services*.
 -  [`app/etc/config.php`](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html)—defines the [system-specific settings](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html#cloud-clp-settings) Magento uses to configure your store. Magento auto-generates this file if it does not detect it during the build phase and includes a list of modules and extensions. If the file exists, the build phase continues as normal, compresses static files using `gzip`, and deploys the files. If you follow [Configuration Management](http://devdocs.magento.com/guides/v2.2/cloud/live/sens-data-over.html) at a later time, the commands update the file without requiring additional steps.
 
    <div class="bs-callout bs-callout-info" id="info" markdown="1">
@@ -62,7 +62,7 @@ We highly recommend the following best practices and considerations for your dep
 -  **Test your build and deploy locally and in Staging before deploying to Production.** Extensions and custom code work great in development. Some users push to production only to have failures and issues. Staging gives you an opportunity to fully test your code and implementation in a production environment without extended downtime if something goes wrong in Production.
 
 ## Five phases of Integration build and deployment {#cloud-deploy-over-phases}
-The following phases occur in your local development environment and the Integration environment. For Pro plans, the code is not deployed to the Staging or Production environments in these initial phases. See [Deploy code to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
+The following phases occur in your 本地开发环境 and the Integration environment. For Pro plans, the code is not deployed to the Staging or Production environments in these initial phases. See [Deploy code to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html).
 
 Integration build and deployment consists of the following phases:
 
@@ -83,7 +83,7 @@ When you initially set up a project from a template, we retrieve the code from t
 
 You should create a branch from `master` for your custom code, extensions and modules, and third party integrations. We provide a full Integration environment for testing your code in the cloud.
 
-When you push your code from your local workspace to the remote repository, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. For example, you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.
+When you push your code from your local workspace to the remote repository, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. 例如， you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.
 
 If you have a syntax error in a configuration file, our Git server refuses the push. For details, see [Protective Block]({{ page.baseurl }}/cloud/live/live-prot.html).
 
@@ -161,7 +161,7 @@ There are two default deploy hooks. The `pre-deploy.php` hook completes necessar
 -  Uses scopes (`-s` flag in build scripts) with a default setting of `quick` for static content deployment strategy. You can customize the strategy using the environment variable [`SCD_STRATEGY`](http://devdocs.magento.com/guides/v2.2/cloud/env/environment-vars_magento.html). For details on these options and features, see [静态文件部署策略](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html) and the `-s` flag for [部署静态视图文件](http://devdocs.magento.com/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html).
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your local development environment is not affected.</p>
+  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your 本地开发环境 is not affected.</p>
 </div>
 
 ### Post-deployment: configure routing {#cloud-deploy-over-phases-route}

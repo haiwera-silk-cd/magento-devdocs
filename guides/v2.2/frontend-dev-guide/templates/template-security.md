@@ -90,7 +90,7 @@ If your text contains special characters, they must be encoded as HTML entities,
 
 In cases where the JavaScript code outputs content onto the page, use the `escapeUrl` or the `escapeHtml` function where appropriate.
 
-For example, when a URL output string is inside a JavaScript context, use both `escapeJs` and `escapeUrl`. If you insert the output string from inside a JavaScript context into the DOM, use both `escapeJs` and `escapeHtml`. 
+例如， when a URL output string is inside a JavaScript context, use both `escapeJs` and `escapeUrl`. If you insert the output string from inside a JavaScript context into the DOM, use both `escapeJs` and `escapeHtml`. 
 
 {% highlight javascript %}
   var field<?php echo $block->escapeJs($block->getFieldNamePostfix()) ?> = window.document.getElementById('my-element');

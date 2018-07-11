@@ -71,7 +71,7 @@ To remove writable permissions to files and directories from the web server user
 3.	Enter the following command to change to production mode:
 
 		php bin/magento deploy:mode:set production
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		find app/code pub/static app/etc var/generation var/di var/view_preprocessed vendor \( -type f -or -type d \) -exec chmod u-w {} \; && chmod o-rwx app/etc/env.php && chmod u+x bin/magento
 
@@ -167,7 +167,7 @@ To make files and directories writable so you can update 组件 and upgrade the 
 
 1.	Log in to your Magento server.
 2.	Change to your Magento installation directory.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		find app/code lib var pub/static pub/media vendor app/etc \( -type d -or -type f \) -exec chmod g+w {} \; && chmod o+rwx app/etc/env.php
 

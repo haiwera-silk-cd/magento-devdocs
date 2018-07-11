@@ -11,7 +11,7 @@ redirect_from: guides/v2.0/howdoi/webapi/search-criteria.html
 
 ---
 
-POST, PUT, and DELETE requests to the REST Web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} require the service method parameters to be in the body of the request. For example, to create a Customer, you would specify a JSON array (or {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} structure) in the body of the message.
+POST, PUT, and DELETE requests to the REST Web {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} require the service method parameters to be in the body of the request. 例如， to create a Customer, you would specify a JSON array (or {% glossarytooltip 8c0645c5-aa6b-4a52-8266-5659a8b9d079 %}XML{% endglossarytooltip %} structure) in the body of the message.
 
 For search APIs that invoke a `*Repository::getList(SearchCriteriaInterface *)` call, the searchCriteria must be specified in the {% glossarytooltip a05c59d3-77b9-47d0-92a1-2cbffe3f8622 %}URL{% endglossarytooltip %} of the GET request. The basic pattern for specifying the criteria is
 
@@ -199,7 +199,7 @@ The query returns 37 items.
 ## Other search criteria
 The following searchCriteria can be used to determine the sort order and the number of items to return.
 
-* `searchCriteria[sortOrders][<index>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
+* `searchCriteria[sortOrders][<index>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. 例如， to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
 
 * `searchCriteria[sortOrders][<index>][direction]=ASC | DESC` - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the `price` fields in descending order and the `name` fields in ascending order, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name&searchCriteria[sortOrders][1][direction]=ASC`.
 

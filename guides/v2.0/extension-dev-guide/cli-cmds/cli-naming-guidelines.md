@@ -22,7 +22,7 @@ This topic discusses our recommended naming conventions.
 
 <h2 id="cli-name">Command name</h2>
 A command *name* is a part of the command, which defines behavior of the command on the very high level. In the command it goes right after the command's name.
-For example, in `bin/magento setup:upgrade`, `bin/magento` is the command's name and `setup:upgrade` is the name of the command.
+例如， in `bin/magento setup:upgrade`, `bin/magento` is the command's name and `setup:upgrade` is the name of the command.
 
 If you have a Magento installation handy, enter the following to display the current list of commands:
 
@@ -60,7 +60,7 @@ If you have a Magento installation handy, enter the following to display the cur
 <h2 id="cli-args">Command options and arguments</h2>
 Options and arguments follow the command name and modify the command's behavior.
 
-For example, in `bin/magento module:disable --force Magento_Catalog`, the `--force` *option* and the `Magento_Catalog` *argument* bypass the restrictions and specify a particular {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} to be disabled; in this case, regardless of dependencies on other modules.
+例如， in `bin/magento module:disable --force Magento_Catalog`, the `--force` *option* and the `Magento_Catalog` *argument* bypass the restrictions and specify a particular {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} to be disabled; in this case, regardless of dependencies on other modules.
 
 Options and arguments create different user experiences. As a developer, you can choose which type of input is better for your particular case.
 
@@ -101,7 +101,7 @@ An option can also have a one-letter shortcut as an alternative to its full name
 
 #### Format: single word or a compound word separated with a dash or hyphen character.
 
-For example,
+例如，
 
 	magento dev:theme:create --parent=Magento/luma frontend arg1 arg2
 	magento dev:theme:create -p=Magento/luma frontend vendor themename
@@ -141,7 +141,7 @@ To avoid naming your command the same as another command, we recommend:
 
 *	Restricting command names to start with a unique name, such as a vendor name. The {% glossarytooltip f583cac1-8ed5-4305-8195-2d5630e72ba8 %}usability{% endglossarytooltip %} of the command depends on what you choose for a vendor name.
 
-	For example, `myname:dev:theme:create` is not obvious and is hard to remember.
+	例如， `myname:dev:theme:create` is not obvious and is hard to remember.
 
 	The vendor name doesn't have to start the command name; it could be in the middle. This way, related commands are grouped together.
 

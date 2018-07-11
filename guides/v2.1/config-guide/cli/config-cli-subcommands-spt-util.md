@@ -49,7 +49,7 @@ Where:
 -   **`-o|--output=<path>`** is the absolute file system path to store the backup (required).
 -   **`-l|--logs`** includes log files (optional).
 
-For example, to create a code backup named `/var/www/html/magento2/var/log/mycodebackup.tar.gz`:
+例如， to create a code backup named `/var/www/html/magento2/var/log/mycodebackup.tar.gz`:
 
 	bin/magento support:backup:code --name mycodebackup -o /var/www/html/magento2/var/log
 
@@ -84,7 +84,7 @@ Run the following commands in the order shown to display the paths to the applic
 
 1.  Change to your Magento installation directory.
 
-  For example, `cd /var/www/magento2`
+  例如， `cd /var/www/magento2`
 
 	<div class="bs-callout bs-callout-info" id="info" markdown="1">
   The commands run properly _only_ from your Magento installation directory.

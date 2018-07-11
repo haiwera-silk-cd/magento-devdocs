@@ -67,7 +67,7 @@ Service names use the following conventions:
 * The string `Service` is omitted.
 * The `Magento` prefix is omitted.
 * The `Interface` suffix is omitted.
-* If the service name is the same as the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} name, the module name is omitted. For example, if there is a customer service interface in the customer module, the word `customer` will be used in the service name only once.
+* If the service name is the same as the {% glossarytooltip c1e4242b-1f1a-44c3-9d72-1d5b1435e142 %}模块{% endglossarytooltip %} name, the module name is omitted. 例如， if there is a customer service interface in the customer module, the word `customer` will be used in the service name only once.
 
 <table>
 <thead>

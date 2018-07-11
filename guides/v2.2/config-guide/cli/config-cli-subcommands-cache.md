@@ -16,7 +16,7 @@ functional_areas:
 {% include config/cli-intro.md %}
 
 ## 概述 of cache types {#config-cli-subcommands-cache-clean-over}
-Magento 2 has the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} types:
+Magento 2 has the following {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} types:
 
 <table>
   <tbody>
@@ -144,7 +144,7 @@ To list cache types and their status:
 
 	bin/magento cache:status
 
-For example, to disable the full page cache and the DDL cache:
+例如， to disable the full page cache and the DDL cache:
 
 	bin/magento cache:disable db_ddl full_page
 
@@ -174,7 +174,7 @@ Flush cache types if you've already tried cleaning the cache and you're still ha
 	bin/magento cache:clean [type] ... [type]
 	bin/magento cache:flush [type] ... [type]
 
-Where `[type]` is a space-separated list of cache types. Omitting `[type]` cleans or flushes all cache types at the same time. For example, to flush all cache types, enter
+Where `[type]` is a space-separated list of cache types. Omitting `[type]` cleans or flushes all cache types at the same time. 例如， to flush all cache types, enter
 
 	bin/magento cache:flush
 

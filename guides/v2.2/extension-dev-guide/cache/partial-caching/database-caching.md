@@ -24,7 +24,7 @@ This topic discusses how to use the Magento 2 database for caching. After you co
 This topic discusses how to set up database caching and how to verify database caching is working. We discuss the following options:
 
 *	Using the `default` cache frontend, in which case you modify `di.xml` only.
-*	Using a custom {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} frontend, in which case you modify `env.php` only.
+*	Using a custom {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} frontend, in which case you modify `env.php` only.
 
 <div class="bs-callout bs-callout-warning">
     <p>Database caching&mdash;like file-based caching&mdash; works well in a development environment but we <em>strongly recommend</em> you use <a href="{{ page.baseurl }}/config-guide/varnish/config-varnish.html">Varnish</a> in production instead.</p>

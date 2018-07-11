@@ -41,7 +41,7 @@ Both `POST` and `PUT` requests support a batch model where multiple packages can
 |platform|string|GET, POST, PUT|technical|The Magento platform compatibility of this package. Valid values include  `M1` for Magento 1 or `M2` for Magento 2.|
 |version_compatibility|array|GET, POST, PUT|technical|List of Magento versions that this package supports.|
 |sku|string|GET|-|The SKU generated from metadata in the code artifact.|
-|version|string|GET|-|The package version in the format `major.minor.patch`. For example, `2.5.3`.|
+|version|string|GET|-|The package version in the format `major.minor.patch`. 例如， `2.5.3`.|
 |short_description|string|GET, POST, PUT|marketing|The short description for the package.|
 |long_description|string|GET, POST, PUT|marketing|The long description for the package.|
 |release_notes|string|GET, POST, PUT|technical|The release notes for the package submission.|
@@ -50,7 +50,7 @@ Both `POST` and `PUT` requests support a batch model where multiple packages can
 |artifact|object|GET, POST, PUT|technical|This is the package code artifact (TGZ file for Magento 1 or ZIP file for Magento 2) that can be referenced in a file upload ID obtained from the Files API.|
 |documentation_artifacts|object|GET, POST, PUT|marketing, technical|The user, installation, and reference PDF manuals referenced in a file upload ID obtained from the Files API.|
 |shared_packages|array|GET, POST, PUT|technical|The list of artifact objects, each a Magento 2 shared package being referenced in a file upload ID obtained from the Files API. Listing it here implies that the seller is enabling  the "access rights" to these shared packages when a buyer purchases it.|
-|categories|array|GET, POST, PUT|marketing|The list of categories expressed as a `path` for the package. For example, `//Extension//Marketing//SEO/SEM`. Note that the path separator is `//` which allows for a single slash like `SEO/SEM` in the path name. Refer to the [Marketplace Store](https://marketplace.magento.com) for a list of valid categories.|
+|categories|array|GET, POST, PUT|marketing|The list of categories expressed as a `path` for the package. 例如， `//Extension//Marketing//SEO/SEM`. Note that the path separator is `//` which allows for a single slash like `SEO/SEM` in the path name. Refer to the [Marketplace Store](https://marketplace.magento.com) for a list of valid categories.|
 |media_artifacts|object|GET, POST, PUT|marketing|The sub-object that holds the package icon, gallery images, and optional video URLs referenced in a file upload ID obtained from the Files API.|
 |prices|array|GET, POST, PUT|marketing|The list of prices in USD set for this package by edition, and its respective installation price (if any).|
 |support_tiers|array|GET, POST, PUT|marketing|List of support tiers, each specifying the edition, the monthly period, descriptions, and prices in USD.|

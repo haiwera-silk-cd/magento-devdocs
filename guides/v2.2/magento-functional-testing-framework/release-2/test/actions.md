@@ -349,7 +349,7 @@ Attribute|Type|Use|Description
 
 Conditionally click on an element if, and only if, another element is visible or not.
 
-For example, to click on `#foo` if `#bar` is visible:
+例如， to click on `#foo` if `#bar` is visible:
 
 ```xml
 <conditionalClick selector="#foo" dependentSelector="#bar" visible="true" stepKey="click1"/>
@@ -369,7 +369,7 @@ Attribute|Type|Use|Description
 Create an entity (for example, a category or product). In other words, make a `POST` request
 to the Magento API according to the data and metadata of the entity to be created.
 
-For example, you can create the entity with the name "SampleProduct":
+例如， you can create the entity with the name "SampleProduct":
 
 ```xml
 <createData entity="SampleProduct" stepKey="createSampleProduct"/>
@@ -387,10 +387,10 @@ This action can optionally contain one or more `requiredEntity` child elements.
 
 #### requiredEntity
 
-Specify relationships amongst data to be created. For example, a complex Product
+Specify relationships amongst data to be created. 例如， a complex Product
 object may contain within it a pointer (an ID) to a complex Category object.
 
-For example, first we create a category, then we create a product in that category
+例如， first we create a category, then we create a product in that category
 by indicating the relationship.
 
 ```xml
@@ -412,7 +412,7 @@ Attribute|Type|Use|Description
 
 Specify a custom field you'd like persisted to Magento (as a part of the entity) which will overwrite any other declaration in static data. This field will only replace at a top level (nested values such as custom attributes or extension attributes will not be replaceable via this annotation).
 
-For example, to overwrite the `name` field in a particular product specify a field element during its creation.
+例如， to overwrite the `name` field in a particular product specify a field element during its creation.
 
 ```xml
 <createData entity="SampleProduct" stepKey="createProduct">
@@ -722,7 +722,7 @@ Attribute|Type|Use|Description
 
 Gets an entity (for example, a category, the Magento API according to the data and metadata of the entity type that is requested.
 
-For example, using `getData` in a test looks like this:
+例如， using `getData` in a test looks like this:
 
 ```xml
 <getData entity="ProductAttributeOptionGetter" index="1" stepKey="getAttributeOption1Handle">
@@ -1054,7 +1054,7 @@ Attribute|Type|Use|Description
 ### searchAndMultiSelectOption
 
 Search for and select options from a Magento multi-select drop-down menu.
-For example, the drop-down menu you use to assign Products to Categories.
+例如， the drop-down menu you use to assign Products to Categories.
 
 Attribute|Type|Use|Description
 ---|---|---|---
@@ -1427,7 +1427,7 @@ Attribute|Type|Use|Description
 When you create a data entity using `createData`, you may need to update it later in the test.
 The `updateData` action allows this.
 
-For example, to change the price of a product:
+例如， to change the price of a product:
 
 ```xml
 <updateData entity="AdjustPriceProduct" createDataKey="productHandle" stepKey="updateProduct"/>

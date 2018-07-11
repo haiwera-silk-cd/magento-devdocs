@@ -45,7 +45,7 @@ Fileuploader-specific configuration:
         <code>allowedExtensions</code>
       </td>
       <td>
-        List of allowed file extensions. For example, <code>'jpg
+        List of allowed file extensions. 例如， <code>'jpg
         jpeg gif png svg'</code>. If set to "false" - then no
         extion is allowed, "true" - any extension is allowed.
       </td>

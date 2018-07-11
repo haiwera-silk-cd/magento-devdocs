@@ -55,7 +55,7 @@ Filters-specific configuration:
   </tr>
   <tr>
     <td><code>templates.filters</code></td>
-    <td>Describes basic filter types. This definitions are used to dynamically create filter elements based on the <code>filter</code> field specified in the corresponding column. For example, if a column's <code>filter</code> property contains the <code>text</code> value, then a <code>Filter</code> component instance with a definition for the <code>text</code> type will be created.</td>
+    <td>Describes basic filter types. This definitions are used to dynamically create filter elements based on the <code>filter</code> field specified in the corresponding column. 例如， if a column's <code>filter</code> property contains the <code>text</code> value, then a <code>Filter</code> component instance with a definition for the <code>text</code> type will be created.</td>
     <td>Object</td>
     <td>Contains definitions of the <code>text</code>, <code>select</code>,<code>dateRange</code>和<code>textRange</code> filter types.</td>
   </tr>

@@ -21,7 +21,7 @@ To get the {{site.data.var.ee}} metapackage:
 	If you don't remember it, contact Magento Support before you continue.
 1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.
 2.	Change to the web server docroot directory, or to a directory you've configured as a virtual host docroot.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <installation directory name>
 

@@ -19,7 +19,7 @@ The following links provide more information on crons for {{site.data.var.ee}}. 
 *   [设置自定义的定时任务和任务组(cron)]({{ page.baseurl }}/config-guide/cron/custom-cron.html)
 
 ## Build a cron job {#build}
-A cron job includes the specification for scheduling and timing and the command to run at that time. For example, the general format is: `* * * * * <command>`
+A cron job includes the specification for scheduling and timing and the command to run at that time. 例如， the general format is: `* * * * * <command>`
 
 You will add the cron job to `.magento.app.yaml` in the `crons` section. The general format is `spec` for scheduling and `cmd` for the script. 例如:
 
@@ -59,7 +59,7 @@ Magento uses a five value specification for a cron job. The numbers per each `* 
 *   `00 00 * * *` runs once a day at midnight
 *   `00 * * * 1` runs once a week on Monday at midnight
 
-When determining the scheduling of your cron jobs, consider the time it takes to complete the task. For example, if you run a job every three hours and the task takes 40 minutes to complete, you may want to change the scheduled timing.
+When determining the scheduling of your cron jobs, consider the time it takes to complete the task. 例如， if you run a job every three hours and the task takes 40 minutes to complete, you may want to change the scheduled timing.
 
 For the command script, the format includes:
 
@@ -99,7 +99,7 @@ crons:
 1.  Edit `.magento.app.yaml` in the root directory of the Magento code in the Git branch.
 2.  Locate the `crons` section in the file and add your custom cron code.
 
-    For example, you could add a reindexer cron job to run every three hours, 20 minutes after the hour (such as 12:20 am, 3:20 am, and so on):
+    例如， you could add a reindexer cron job to run every three hours, 20 minutes after the hour (such as 12:20 am, 3:20 am, and so on):
 
     ```yaml
     crons:

@@ -142,7 +142,7 @@ An empty array
 不适用
 
 **响应**
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
     "items": [
@@ -217,7 +217,7 @@ Admin (structure_id = 2)
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 [

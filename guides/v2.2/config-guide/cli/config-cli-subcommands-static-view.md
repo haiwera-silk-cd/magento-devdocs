@@ -111,7 +111,7 @@ The following table explains this command's parameters and values.
           specify the name of one language code at a time.
         </p>
         <p>
-          For example, <code>--language en_US --language
+          例如， <code>--language en_US --language
           es_ES</code>
         </p>
       </td>
@@ -148,7 +148,7 @@ The following table explains this command's parameters and values.
           Themes for which to deploy static content.
         </p>
         <p>
-          For example, <code>--theme Magento/blank --theme
+          例如， <code>--theme Magento/blank --theme
           Magento/luma</code>
         </p>
       </td>
@@ -167,7 +167,7 @@ The following table explains this command's parameters and values.
           Themes to exclude when deploying static content.
         </p>
         <p>
-          For example, <code>--exclude-theme Magento/blank</code>
+          例如， <code>--exclude-theme Magento/blank</code>
         </p>
       </td>
       <td>
@@ -188,7 +188,7 @@ The following table explains this command's parameters and values.
           <code>frontend</code>.
         </p>
         <p>
-          For example, <code>--area adminthml</code>
+          例如， <code>--area adminthml</code>
         </p>
       </td>
       <td>

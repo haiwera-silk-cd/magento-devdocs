@@ -30,7 +30,7 @@ To return attributes that are specific to a product type, append a structure sim
   }
   {% endhighlight %}
 
-For example, to return `GroupedProduct` attributes, construct your query like this:
+例如， to return `GroupedProduct` attributes, construct your query like this:
 
 {% highlight json %}
 {

@@ -52,7 +52,7 @@ This section discusses how to set the values of bootstrap parameters using envir
 <h3 id="config-bootparam-mode">Set the mode using an environment variable</h3>
 You can specify Magento bootstrap variables as system-wide environment variables, which enables all processes to use them.
 
-For example, you can use the `MAGE_PROFILER` system environment variable to specify a mode as follows:
+例如， you can use the `MAGE_PROFILER` system environment variable to specify a mode as follows:
 
 	MAGE_PROFILER={firebug|csv|<custom value>}
 
@@ -91,7 +91,7 @@ To set a variable:
 
 1.	Open any of the preceding files in a text editor and either add or uncomment the desired setting.
 
-	For example, to specify a <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html">mode</a>, uncomment the following:
+	例如， to specify a <a href="{{ page.baseurl }}/config-guide/bootstrap/magento-modes.html">mode</a>, uncomment the following:
 
 		#   SetEnv MAGE_PROFILER firebug
 
@@ -120,7 +120,7 @@ To set a Magento bootstrap variable using your web server's environment:
 
 1.	As a user with `root` privileges, open your virtual host configuration file in a text editor.
 
-	For example, if your virtual host is named `my.magento`,
+	例如， if your virtual host is named `my.magento`,
 
 	*	Apache 2.4: `vim /etc/apache2/sites-available/my.magento.conf`
 	*	Apache 2.2: `vim /etc/apache2/sites-available/my.magento`
@@ -129,7 +129,7 @@ To set a Magento bootstrap variable using your web server's environment:
 
 		SetEnv "<variable name>" "<variable value>"
 
-	For example,
+	例如，
 
 		SetEnv "MAGE_PROFILER" "firebug"
 
@@ -138,7 +138,7 @@ To set a Magento bootstrap variable using your web server's environment:
 
 		a2ensite <virtual host config file name>
 
-	For example,
+	例如，
 
 		a2ensite my.magento.conf
 
@@ -158,7 +158,7 @@ To set a Magento bootstrap variable using your web server's environment:
 
 		SetEnv "<variable name>" "<variable value>"
 
-	For example,
+	例如，
 
 		SetEnv "MAGE_PROFILER" "firebug"
 

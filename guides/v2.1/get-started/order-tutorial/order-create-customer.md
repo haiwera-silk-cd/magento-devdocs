@@ -47,7 +47,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 It is recommended that you substitute the value of the `email` parameter with a real email address so that you receive all notifications.
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
 	"customer": {
@@ -80,7 +80,7 @@ It is recommended that you substitute the value of the `email` parameter with a 
 
 Magento assigned this user `id` value of `2`.
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "id": 2,

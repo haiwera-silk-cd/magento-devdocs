@@ -155,7 +155,7 @@ The following table provides details about each `env.php` segment and its struct
       <td>Cache types</td>
       <td><code>cache_types</code></td>
       <td><pre>__/cache_types
- |-- &lt;enumerated {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} types></pre></td>
+ |-- &lt;enumerated {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} types></pre></td>
     </tr>
     <tr>
             <td>消息队列</td>

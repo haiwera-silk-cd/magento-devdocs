@@ -133,7 +133,7 @@ cp -r /Users/&lt;name>/Downloads/&lt;Magento folder name> &lt;path></pre>
 Don't use arguments like `/*` in the `cp` command because hidden files like `.htaccess` won't copy.
 </div>
 
-For example, to copy {{site.data.var.ce}} 2.1.3 code to a new folder named `/Users/me/Applications/Magento`, use the following commands:
+例如， to copy {{site.data.var.ce}} 2.1.3 code to a new folder named `/Users/me/Applications/Magento`, use the following commands:
 
     mkdir -p /Users/me/Applications/Magento
     cp -r /Users/me/Downloads/Magento-CE-2_1_3_zip-2016-12-16-06-04-03 /Users/me/Applications/Magento

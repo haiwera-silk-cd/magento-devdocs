@@ -37,7 +37,7 @@ Not including the Magento application itself, your local project has the followi
 {% endhighlight %}
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>When you push your local environment to the remote server, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your local development environment isn't affected.</p>
+  <p>When you push your local environment to the remote server, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your 本地开发环境 isn't affected.</p>
 </div>
 
 ### .gitignore file {gitignore}
@@ -88,14 +88,14 @@ You can review these logs via SSH into the environment. Change to the directorie
 Logs from the deploy hook are located on the server in the following locations:
 
 *	Integration: `/var/log/deploy.log`
-*	Staging: `/var/log/platform/<prodject ID>/post_deploy.log`
-*	Production: `/var/log/platform/{1|2|3}.<prodject ID>/post_deploy.log`
+*	准生产环境: `/var/log/platform/<prodject ID>/post_deploy.log`
+*	生产环境: `/var/log/platform/{1|2|3}.<prodject ID>/post_deploy.log`
 
-The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. For example, with a project ID of `yw1unoukjcawe`, the Staging environment user is `yw1unoukjcawe_stg` and the Production environment user is `yw1unoukjcawe`.
+The value of `<project ID>` depends on the project ID and whether the environment is Staging or Production. 例如， with a project ID of `yw1unoukjcawe`, the Staging environment user is `yw1unoukjcawe_stg` and the Production environment user is `yw1unoukjcawe`.
 
-For example, on the Staging environment for project `yw1unoukjcawe`, the deploy log is located at `/var/log/platform/yw1unoukjcawe_stg/post_deploy.log`.
+例如， on the Staging environment for project `yw1unoukjcawe`, the deploy log is located at `/var/log/platform/yw1unoukjcawe_stg/post_deploy.log`.
 
-For Production, you have a three node structure. Logs are available with specific information for that node. For example, on the Production environment for project `yw1unoukjcawe`, the deploy log is located at node 1 `/var/log/platform/1.yw1unoukjcawe/post_deploy.log`, node 2 `/var/log/platform/2.yw1unoukjcawe/post_deploy.log`, and node 3 `/var/log/platform/3.yw1unoukjcawe/post_deploy.log`.
+For Production, you have a three node structure. Logs are available with specific information for that node. 例如， on the Production environment for project `yw1unoukjcawe`, the deploy log is located at node 1 `/var/log/platform/1.yw1unoukjcawe/post_deploy.log`, node 2 `/var/log/platform/2.yw1unoukjcawe/post_deploy.log`, and node 3 `/var/log/platform/3.yw1unoukjcawe/post_deploy.log`.
 
 Logs for all deployments that have occurred on this environment are appended to this file. Check the timestamps on log entries to verify and locate the logs you want for a specific deployment.
 
@@ -120,6 +120,6 @@ The deploy log contains start and stop messages for each of the two hooks:
 ### Application logs {#app-log}
 To review other application logs in Staging or Production, you can access and review those logs in `/var/log/platform/ProjectID`.
 
-For Pro plan Staging, the project ID has `_stg` at the end. For example, if you receive 500 errors in Staging and want to review the nginx logs, you can SSH to the Staging environment and locate the logs in `/var/log/platform/ProjectID_stg`.
+For Pro plan Staging, the project ID has `_stg` at the end. 例如， if you receive 500 errors in Staging and want to review the nginx logs, you can SSH to the Staging environment and locate the logs in `/var/log/platform/ProjectID_stg`.
 
 For Pro plan Production, you have three nodes to check for logs.

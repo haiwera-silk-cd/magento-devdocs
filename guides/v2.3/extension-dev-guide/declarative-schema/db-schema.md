@@ -11,10 +11,10 @@ Before Magento 2.3, extension developers were required to write code (PHP script
 * UpgradeData and UpgradeSchema incremental scripts, which supplement an existing Magento database
 * Recurring scripts, which are executed each time you install or upgrade Magento
 
-Each script iteratively adds changes. During the installation process, Magento applies only those changes that have not been applied yet. For example, if you have Magento 2.1.8 installed and the latest version is 2.1.11, then the upgrade scripts for
+Each script iteratively adds changes. During the installation process, Magento applies only those changes that have not been applied yet. 例如， if you have Magento 2.1.8 installed and the latest version is 2.1.11, then the upgrade scripts for
 2.1.9, 2.1.10, and 2.1.11 will be applied, in order, when you upgrade to 2.1.11. That procedure is called _migration setup_ or _migration scripts_.
 
-The main disadvantage of this approach is that Magento applies changes blindly. For example, in one version a new database column might be introduced, only to be removed in the next. _Declarative setup_ eliminates this type of unnecessary work.
+The main disadvantage of this approach is that Magento applies changes blindly. 例如， in one version a new database column might be introduced, only to be removed in the next. _Declarative setup_ eliminates this type of unnecessary work.
 
 Declarative setup is based on database structure declarations, and is used in projects such as [Doctrine](http://www.doctrine-project.org/). Schema files declare what the database structure should be,
 and Magento determines the differences between the current table structure and what it should be. These differences can be represented with atomic SQL operations.

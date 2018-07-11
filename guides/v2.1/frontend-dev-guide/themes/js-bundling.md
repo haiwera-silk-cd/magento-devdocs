@@ -117,7 +117,7 @@ A single connection should be around 100kb.
 
 There are many ways to tune your theme's `etc/view.xml` file.  
 
-For example, Magento's Luma theme is configured to work well for all pages, but 
+例如， Magento's Luma theme is configured to work well for all pages, but 
 by adding or removing items inside `exclude`, you can maximize browser performance for home, catalog, or product pages.
 
 Follow these steps to help you identify which JavaScript files to bundle for your theme:

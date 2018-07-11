@@ -42,10 +42,10 @@ Review the following values for the code to determine if you need to make change
 * `name`: Name for the VCL snippet. For this example, we used the name `blocklist`.
 * `priority`: Determines the order VCL snippets call. You want the priority set to 100 to be the last run and overwrite the default `pass.vcl` timeout.
 * `type`: For this VCL, we use `pass`.
-* `content`: The code that runs. For this snippet, we change the `set bereq.first_byte_timeout` with a higher value. For example, 300s for five minutes or 600s for ten minutes. Ten minutes is the hard cap for Fastly timeouts.
+* `content`: The code that runs. For this snippet, we change the `set bereq.first_byte_timeout` with a higher value. 例如， 300s for five minutes or 600s for ten minutes. Ten minutes is the hard cap for Fastly timeouts.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-The default VCL snippets you uploaded included a prepended name of `magentomodule_` with a priority of 50. For your custom VCL snippets, **do not use the `magentomodule_` name**. Also consider the priority of your custom snippets if they should override the default snippets.
+The default VCL snippets you uploaded included a prepended name of `magentomodule_` with a priority of 50. For your 自定义VCL代码片段, **do not use the `magentomodule_` name**. Also consider the priority of your custom snippets if they should override the default snippets.
 </div>
 
 ## Finish adding the VCL {#complete}

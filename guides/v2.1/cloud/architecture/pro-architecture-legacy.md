@@ -73,7 +73,7 @@ Developers use the Integration environment to develop, deploy, and test:
 The Integration environment runs in a Linux container (LXC) on a grid of servers known as Platform-as-a-Service (PaaS). It provides up to six environments, each as an active Git branch with the same name as the environment. Each environment includes a web server, database, and configured services to fully test your site.
 
 <div class="bs-callout bs-callout-info" markdown="1">
-The Integration environment does not support all services. For example, Fastly is not accessible in Integration.
+The Integration environment does not support all services. 例如， Fastly is not accessible in Integration.
 </div>
 
 #### Branches

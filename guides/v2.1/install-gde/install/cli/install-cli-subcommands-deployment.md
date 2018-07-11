@@ -122,8 +122,8 @@ functional_areas:
 	</tr>
 	<tr>
 		<td><p>--http-cache-hosts</p></td>
-		<td><p>Comma-separated list of HTTP cache gateway hosts to which to send purge requests. (For example, Varnish servers.) Use this parameter to specify the host or hosts to purge in the same request. (It doesn't matter if you have only one host or many hosts.)</p>
-			<p>Format must be <code>&lt;hostname or ip>:&lt;listen port></code>, where you can omit <code>&lt;listen port></code> if it's port 80. For example, <code>--http-cache-hosts=192.0.2.100,192.0.2.155:6081</code>. Do not separate hosts with a space character.</p> </td>
+		<td><p>Comma-separated list of HTTP cache gateway hosts to which to send purge requests. (例如， Varnish servers.) Use this parameter to specify the host or hosts to purge in the same request. (It doesn't matter if you have only one host or many hosts.)</p>
+			<p>Format must be <code>&lt;hostname or ip>:&lt;listen port></code>, where you can omit <code>&lt;listen port></code> if it's port 80. 例如， <code>--http-cache-hosts=192.0.2.100,192.0.2.155:6081</code>. Do not separate hosts with a space character.</p> </td>
 		<td><p>否</p></td>
 	</tr>
 	</tbody>

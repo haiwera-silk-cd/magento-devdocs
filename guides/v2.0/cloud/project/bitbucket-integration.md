@@ -143,7 +143,7 @@ After configuring the Bitbucket集成, test it by pushing a simple change to you
 ## Branching
 The Bitbucket集成 cannot create new environments in your project, so you must use the `magento-cloud` CLI tool to [create branches]({{ page.baseurl }}/cloud/env/environments-start.html#getstarted).
 
-After creating a new environment, you can push the corresponding branch up to your remote Bitbucket repository using regular git commands. For example, `git push -u origin <your-branch>`. Subsequent changes to your branch in Bitbucket will automatically build and deploy the environment.
+After creating a new environment, you can push the corresponding branch up to your remote Bitbucket repository using regular git commands. 例如， `git push -u origin <your-branch>`. Subsequent changes to your branch in Bitbucket will automatically build and deploy the environment.
 
 ## Remove the integration
 You can safely remove the Bitbucket集成 from your project without affecting your code.

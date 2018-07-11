@@ -31,7 +31,7 @@ The following table provides details about the data generator profiles (small, m
 
 Profiles are located in `<your Magento install dir>/setup/performance-toolkit/profiles/<ce or ee>`
 
-For example, `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
+例如， `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
 <table>
 	<tbody>
@@ -180,7 +180,7 @@ Run the command as discussed in this section. After the command runs, you must [
 
 Where `<path to profile>` specifies the absolute file system path to, and name of, a profile.
 
-For example,
+例如，
 
 	bin/magento setup:perf:generate-fixtures /var/www/html/magento2/setup/performance-toolkit/profiles/ce/small.xml
 

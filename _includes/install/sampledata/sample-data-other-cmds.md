@@ -14,7 +14,7 @@ This topic discusses how to:
 {% include install/first-steps-cli.html %}
 
 ## Remove sample data modules {#inst-sample-remove}
-Enter the following command:
+输入下面的命令：
 
 	magento sampledata:remove 
 

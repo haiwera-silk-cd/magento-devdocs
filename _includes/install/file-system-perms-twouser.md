@@ -33,7 +33,7 @@ Follow the prompts on your screen to create a password for the user.
     <p>If you don't have <code>root</code> privileges on your Magento server, you can use another local user account. Make sure the user has a strong password and continue with <a href="#install-update-depend-user-add2group">Put the Magento文件系统所有者 in the web server group</a>.</p>
 </div>
 
-For example, to create a user named `magento_user` and give the user a password, enter:
+例如， to create a user named `magento_user` and give the user a password, enter:
 
 	sudo adduser magento_user
 	sudo passwd magento_user
@@ -62,7 +62,7 @@ To put the Magento文件系统所有者 in the web server's group (assuming the 
 The `-a -G` options are important because they add `apache`或`www-data` as a _secondary_ group to the user account, which preserves the user's _primary_ group. Adding a secondary group to a user account helps [restrict file ownership and permissions](#perms-set-two-users) to ensure members of a shared group only have access to certain files.
 </div>
 
-For example, to add `apache` as a secondary group to user `magento_user` on CentOS:
+例如， to add `apache` as a secondary group to user `magento_user` on CentOS:
 
 	sudo usermod -a -G apache magento_user
 

@@ -16,7 +16,7 @@ We recommend using Xdebug for your PHP debugging. The following sections detail 
 
 To set up Xdebug, you need to [configure](#configure) a file in your Git repo, configure your IDE PhpStorm, and set up port forwarding. You will configure settings in the `magento.app.yaml` file. After editing, you can push the Git changes across all Starter environments and Pro Integration environments to enable Xdebug. To push these settings to Pro plan Staging and Production environments, you must enter a ticket.
 
-Once configured, you can debug [CLI commands](#debugcli), [web requests](#webrequests), [code](#code). Remember, all {{site.data.var.ece}} environments are read-only. You will need to pull code to your local development environment to perform debugging. For Pro plan Staging and Production, we include [additional instructions](#pro-debug) for Xdebug on those environments.
+Once configured, you can debug [CLI commands](#debugcli), [web requests](#webrequests), [code](#code). Remember, all {{site.data.var.ece}} environments are read-only. You will need to pull code to your 本地开发环境 to perform debugging. For Pro plan Staging and Production, we include [additional instructions](#pro-debug) for Xdebug on those environments.
 
 ## Requirements {#usexdebug}
 To run and use Xdebug, you will need the environment's SSH URL. You can locate the information through the [Project Web Interface]({{ page.baseurl }}/cloud/project/projects.html) or your spreadsheet.
@@ -39,7 +39,7 @@ To add Xdebug, we recommend creating a branch to work in and add the files.
 ### Enable Xdebug in your environment {#enable}
 Enable Xdebug by adding it to the extensions section of magento.app.yaml. When you push this update to Git and deploy to environments, the debugger is available.
 
-You can enable Xdebug directly to all Starter environments and Pro Integration environments. For Pro Staging and Production, you need to update this file and enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) to have it enabled. We will get Xdebug enabled onto those environments for you.
+You can enable Xdebug directly to all Starter environments and Pro Integration environments. For Pro Staging and Production, you need to update this file and enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) to have it enabled. We will get Xdebug enabled onto those environments for you.
 
 <!-- You may need to run PHP with a separate config file to enable xdebug on the CLI, such as "php -c /etc/platform/<project_id>/php.ini ... " -->
 
@@ -91,8 +91,8 @@ You need to configure [PhpStorm](https://www.jetbrains.com/phpstorm/) to properl
     * For all Starter environments and Pro Integration environments, the remote path is `/app`.
     * For Pro Staging and Production environments:
 
-        * Production: `/app/<project_code>/`
-        * Staging:  `/app/<project_code>_stg/`
+        * 生产环境: `/app/<project_code>/`
+        * 准生产环境:  `/app/<project_code>_stg/`
 
 ### Set up port forwarding {#port}
 You need to set up port forwarding. This is necessary to map the XDEBUG connection from the server to your local system to PHPSTORM and xdebug locally can track along with it
@@ -106,7 +106,7 @@ To do any type of debugging, you must forward port 9000 from your {{site.data.va
 To set up port forwarding on a Mac or in a Unix environment, you will enter a command in a terminal.
 
 1. Open a terminal.
-2. Enter the following command:
+2. 输入下面的命令：
 
         ssh -R 9000:localhost:9000 <ssh url>
 
@@ -121,15 +121,15 @@ To troubleshoot the connection:
 3.	View existing SSH sessions by user. Be careful to not affect a user other than yourself!
 
     *	Integration: user names are similar to `dd2q5ct7mhgus`
-    *	Staging: user names are similar to `dd2q5ct7mhgus_stg`
-    *	Production: user names are similar to `dd2q5ct7mhgus`
-4.	For a user session that is older than yours, find the pseudo-terminal (PTS) value. For example, `pts/0`.
+    *	准生产环境: user names are similar to `dd2q5ct7mhgus_stg`
+    *	生产环境: user names are similar to `dd2q5ct7mhgus`
+4.	For a user session that is older than yours, find the pseudo-terminal (PTS) value. 例如， `pts/0`.
 5.	Kill the process ID (PID) corresponding to the PTS value using the following commands:
 
         ps aux | grep ssh
         kill <PID>
 
-      For example, suppose `ps aux | grep ssh` returned the following:
+      例如， suppose `ps aux | grep ssh` returned the following:
 
         dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 
@@ -173,7 +173,7 @@ If an "unable to connect" error displays, verify all of the following:
 *	You are running Putty on the machine on which your private {{site.data.var.ece}} SSH keys are located
 
 ### Configure Pro Staging and Production {#pro}
-To complete configuration for Pro plan Staging and Production environments, you must enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) to have Xdebug enabled and configured in Staging and Production environments.
+To complete configuration for Pro plan Staging and Production environments, you must enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) to have Xdebug enabled and configured in Staging and Production environments.
 
 We will enable Xdebug in the environment. Be aware, this will require a redeployment of Staging and Production.
 
@@ -188,7 +188,7 @@ To use Xdebug, SSH to the environment as follows:
 
 	ssh -R <xdebug listen port>:<host>:<xdebug listen port> <SSH URL>
 
-For example,
+例如，
 
 	ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
@@ -287,11 +287,11 @@ The method you choose is up to you. You have the following options:
 To compress files and copy them to your local machine:
 
 1.	SSH to the environment.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		tar -czf /tmp/<file name>.tgz <directory list>
 
-	For example, to compress the `vendor` directory only, enter
+	例如， to compress the `vendor` directory only, enter
 
 		tar -czf /tmp/vendor.tgz vendor
 4.	On your local environment with PhpStorm, enter the following commands:
@@ -310,15 +310,15 @@ Due to not having access to manually restart the nginx server, you need to locat
 3.	View existing SSH sessions by user. Be careful to not affect a user other than yourself!
 
     *	Integration: user names are similar to `dd2q5ct7mhgus`
-    *	Staging: user names are similar to `dd2q5ct7mhgus_stg`
-    *	Production: user names are similar to `dd2q5ct7mhgus`
-4.	For a user session that is older than yours, find the pseudo-terminal (PTS) value. For example, `pts/0`.
+    *	准生产环境: user names are similar to `dd2q5ct7mhgus_stg`
+    *	生产环境: user names are similar to `dd2q5ct7mhgus`
+4.	For a user session that is older than yours, find the pseudo-terminal (PTS) value. 例如， `pts/0`.
 5.	Kill the process ID (PID) corresponding to the PTS value using the following commands:
 
         ps aux | grep ssh
         kill <PID>
 
-      For example, suppose `ps aux | grep ssh` returned the following:
+      例如， suppose `ps aux | grep ssh` returned the following:
 
         dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 

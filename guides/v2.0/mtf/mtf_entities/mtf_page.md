@@ -121,7 +121,7 @@ To add blocks from different modules to the page, you can merge pages by followi
 
 **步骤4.** Run the page generator
 
-For example, we have `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` page and want to add three blocks from the Magento_Review模块.
+例如， we have `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` page and want to add three blocks from the Magento_Review模块.
 
 `dev/tests/functional/tests/app/Magento/Catalog/Test/Page/Product/CatalogProductView.xml` contains:
 

@@ -217,7 +217,7 @@ Both approaches are demonstrated in the following examples of changing the templ
 
 In both example, the template is specified according to the following:
 
- * `Namespace_Module:` defines the module the template belongs to. For example, `Magento_Catalog`.
+ * `Namespace_Module:` defines the module the template belongs to. 例如， `Magento_Catalog`.
  * `new_template.phtml`: the path to the template relatively to the `templates` directory. It might be `<module_dir>/view/<area>/templates`或`<theme_dir>/<Namespace_Module>/templates`.
 
 

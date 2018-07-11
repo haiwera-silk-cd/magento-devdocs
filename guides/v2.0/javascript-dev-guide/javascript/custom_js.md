@@ -71,7 +71,7 @@ var config = {
   </li>
 </ul>
 
-For example, if you want to use custom <code>navigation-menu.js</code> script instead of the default 菜单小工具s, your <code>requirejs-config.js</code> should contain the following: 
+例如， if you want to use custom <code>navigation-menu.js</code> script instead of the default 菜单小工具s, your <code>requirejs-config.js</code> should contain the following: 
 
 {% highlight JavaScript %}
 var config = {
@@ -171,7 +171,7 @@ Where the following notation is used:
   </li>
 </ul>
 
-For example, <code>Filters.js</code> script extends the default <code>filters.js</code>:
+例如， <code>Filters.js</code> script extends the default <code>filters.js</code>:
 
 {% highlight JavaScript %}
 define([

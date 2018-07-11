@@ -36,7 +36,7 @@ You should uninstall a module only if you're certain you won't use it. Instead o
 	magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|--remove-data] [-c|--clear-static-content] \
 	{ModuleName} ... {ModuleName}
 
-where `{ModuleName}` specifies the module name in `<VendorName>_<ModuleName>` format. For example, the Magento Customer module name is `Magento_Customer`. To get a list of module names, enter `magento module:status`
+where `{ModuleName}` specifies the module name in `<VendorName>_<ModuleName>` format. 例如， the Magento Customer module name is `Magento_Customer`. To get a list of module names, enter `magento module:status`
 
 The module uninstall command performs the following tasks:
 
@@ -92,12 +92,12 @@ The module uninstall command performs the following tasks:
 		<span class="glyphicon-class">
   		<p>Uninstalling a module <em>always</em> runs <code>composer remove</code>. The <code>--remove-data</code> option removes database data and schema defined by the module's <code>Uninstall</code> class.</p></span>
 	</div>
-5.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}.
+5.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}.
 6.	Updates generated classes.
 6.	If `--clear-static-content` is specified, cleans <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">生成的静态视图文件</a>.
 7.	离开维护模式。
 
-For example, if you attempt to uninstall a module that another module depends on, the following message displays:
+例如， if you attempt to uninstall a module that another module depends on, the following message displays:
 
 	magento module:uninstall Magento_SampleMinimal
 		Cannot uninstall module 'Magento_SampleMinimal' because the following module(s) depend on it:
@@ -153,7 +153,7 @@ To restore the Magento codebase to the state at which you backed it up, use the 
 where `<filename>` is the name of the backup file located in `<your Magento install dir>/var/backups`. To display a list of backup files, enter `magento info:backups:list`
 
 <div class="bs-callout bs-callout-warning">
-    <p>This command deletes the specified files or the database before restoring them. (For example, the <code>--media-file</code> option deletes media assets under <code>pub/media</code> before restoring from the specified rollback file.) Make sure you have made no changes to the file system or database that you want to keep before using this command.</p>
+    <p>This command deletes the specified files or the database before restoring them. (例如， the <code>--media-file</code> option deletes media assets under <code>pub/media</code> before restoring from the specified rollback file.) Make sure you have made no changes to the file system or database that you want to keep before using this command.</p>
 </div>
 
 
@@ -188,7 +188,7 @@ This command performs the following tasks:
 
 5.	离开维护模式。
 
-For example, to restore a code (that is, file system) backup, enter the following commands in the order shown:
+例如， to restore a code (that is, file system) backup, enter the following commands in the order shown:
 
 *	Display a list of backups:
 

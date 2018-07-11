@@ -41,11 +41,11 @@ After setting up a total of three master databases, use the Magento command line
 {% include install/first-steps-cli.html %}
 
 <h3 id="config-ee-multidb-master-cli-check">Configure the checkout database</h3>
-Command syntax:
+命令语法:
 
 	magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 
-For example,
+例如，
 
 	magento setup:db-schema:split-quote --host="localhost" --dbname="magento_quote" --username="magento_quote" --password="magento_quote"
 
@@ -54,11 +54,11 @@ The following message displays to confirm a successful setup:
 	Migration has been finished successfully!
 
 <h3 id="config-ee-multidb-master-cli-oms">Configure the OMS database</h3>
-Command syntax:
+命令语法:
 
 	magento setup:db-schema:split-sales --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 
-For example,
+例如，
 
 	magento setup:db-schema:split-sales --host="localhost" --dbname="magento_sales" --username="magento_sales" --password="magento_sales"
 

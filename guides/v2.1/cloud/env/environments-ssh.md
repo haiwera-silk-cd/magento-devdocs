@@ -84,8 +84,8 @@ With your SSH keys added to those servers, you can use a terminal application, t
 
 For the URLs, see the following:
 
-*	Staging: `http[s]://staging.<your domain>.c.<project ID>.ent.magento.cloud`
-*	Production:
+*	准生产环境: `http[s]://staging.<your domain>.c.<project ID>.ent.magento.cloud`
+*	生产环境:
 
 	*	Load balancer URL: `http[s]://<your domain>.c.<project ID>.ent.magento.cloud`
 	*	Direct access to one of the three redundant servers: `http[s]://<your domain>.{1|2|3}.<project ID>.ent.magento.cloud`
@@ -100,7 +100,7 @@ Typically, you want to use SSH for secure access to your environments and [migra
 You need the following requirements to sFTP into cloud environments:
 
 * You need to use a client that supports SSH key authentication for sFTP and use your SSH public key.
-* Your public SSH key must be added to the target environment. For Starter environments and Pro Integration environments, you can add it through the Project Web Interface. For Pro Staging and Production, you must enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) with your public key attached. **Never provide your private SSH key.**
+* Your public SSH key must be added to the target environment. For Starter environments and Pro Integration environments, you can add it through the Project Web Interface. For Pro Staging and Production, you must enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) with your public key attached. **Never provide your private SSH key.**
 
 
 When configuring sFTP, use your SSH public key and the following information for access:
@@ -122,4 +122,4 @@ Depending on the client, you may need to enter additional options and setup to c
 
 For **Starter environments and Pro Integration environments**, you may also want to consider [adding a `mount`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html#mounts) for access to a specific directory. You would add the mount to your `.magento.app.yaml` file. For a list of writable directories, see [项目结构]({{ page.baseurl }}/cloud/project/project-start.html). This mount point will only work in those environments.
 
-For **Pro Staging and Production environments**, you need to enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) to request sFTP access in those environments. We can then create a mount point and provide access to the specific `pub/media` folder.
+For **Pro Staging and Production environments**, you need to enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) to request sFTP access in those environments. We can then create a mount point and provide access to the specific `pub/media` folder.

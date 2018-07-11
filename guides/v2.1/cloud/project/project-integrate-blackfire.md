@@ -180,7 +180,7 @@ If you do not have a default route specified in the `routes.yaml` file, or want 
 #### To add route information on the Blackfire _Magento Cloud Integration_ page:
 
 1.  Locate step 5 and enter the default route. It should look like `https://example.com/`或`http://*.{default}/`. If you leave this field blank, we will try the following keys in this order: `https://{default}/`, `https://www.{default}/`, `http://{default}/`, `http://www.{default}/`.
-1.  If you use a wildcard `*` in step 5 for the default route, you need to enter a resolved value for the `*` value in step 6. Otherwise, leave step 6 empty. For example, if you specified the route key `https://*.{default}` in step 5, you need to specify a route placeholder in step 6.
+1.  If you use a wildcard `*` in step 5 for the default route, you need to enter a resolved value for the `*` value in step 6. Otherwise, leave step 6 empty. 例如， if you specified the route key `https://*.{default}` in step 5, you need to specify a route placeholder in step 6.
 
 #### To add the default route to `routes.yaml`:
 
@@ -247,7 +247,7 @@ With all integrations entered on the Blackfire Magento Cloud integration page, c
 ## Profile your store {#profile}
 You can verify that Blackfire works using a browser extension or the CLI. For extensive CLI profiling options and better understanding the profiles, see [Blackfire resources](#blackfire-resources).
 
-{% include note.html type="info" content="You can only use the CLI in your local development environment." %}
+{% include note.html type="info" content="You can only use the CLI in your 本地开发环境." %}
 
 #### To profile using the browser:
 

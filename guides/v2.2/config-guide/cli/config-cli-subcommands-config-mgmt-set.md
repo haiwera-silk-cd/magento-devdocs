@@ -162,7 +162,7 @@ If you use the `-l|--lock` option:
 
 *   Configuration values are saved in `<Magento base dir>/app/etc/env.php`
 
-    Transfer `env.php` to another system to use the same configuration values there. For example, if you have a testing system, using the same `env.php` means you don't have to set the same configuration values again.
+    Transfer `env.php` to another system to use the same configuration values there. 例如， if you have a testing system, using the same `env.php` means you don't have to set the same configuration values again.
 *   Configuration values _cannot_ be edited in the Admin.
 *   You can use `-l|-lock` to set configuration values if Magento is not installed. However, you can set values only for the default scope.
 

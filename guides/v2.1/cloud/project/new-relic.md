@@ -82,7 +82,7 @@ Using the New Relic dashboard, you can immediately track and find the following:
 
 We recommend reviewing tracked data:
 
--  **Most time consuming**—Determine time consumption by tracking requests in parallel. For example, you may have the highest transaction time spent in product and category views. If a customer account page suddenly ranks very high in time consumption, there may be a call or query dragging performance.
+-  **Most time consuming**—Determine time consumption by tracking requests in parallel. 例如， you may have the highest transaction time spent in product and category views. If a customer account page suddenly ranks very high in time consumption, there may be a call or query dragging performance.
 -  **Highest throughput**—Identify pages hit the most based on the size and frequency of bytes transmitted.
 
 All collected data details the time spent on an action transmitting data, queries, or _Redis_ data. If queries cause issues, New Relic provides information to track and respond to it.

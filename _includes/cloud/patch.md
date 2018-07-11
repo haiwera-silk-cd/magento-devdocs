@@ -58,7 +58,7 @@ Back up your Staging or Production environment database before deploying to thos
 Verify other changes you're going to submit to source control before you start the upgrade:
 
 1.  If you haven't done so already, change to your project root directory.
-2.  Enter the following command:
+2.  输入下面的命令：
 
         git status
 3.  If there are changes you do *not* want to submit to source control, branch or stash them now.
@@ -88,7 +88,7 @@ Verify other changes you're going to submit to source control before you start t
 
 The procedure you use is slightly different, depending on the type of environment, see [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-int).
 
-### Get started {#gen-getstarted}
+### 起步 {#gen-getstarted}
 We recommend you test a patch in the `master` branch.
 
 {% include cloud/cli-get-started.md %}
@@ -146,7 +146,7 @@ After you've successfully tested a patch locally and on your integration environ
 
 The procedure you use is slightly different, depending on the type of environment, see [Pro architecture]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-int).
 
-### Get started {#custom-getstarted}
+### 起步 {#custom-getstarted}
 We recommend you test a patch locally in the `master` branch.
 
 {% include cloud/cli-get-started.md %}

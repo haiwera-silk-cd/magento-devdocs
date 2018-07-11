@@ -58,7 +58,7 @@ The preceding diagram shows:
 	Running on separate hosts is secure, enables Elasticsearch to be scaled, and is necessary for proxying to work. (Clustering Elasticsearch is beyond the scope of this guide but you can find more information in the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html){:target="_blank"}.)
 *	Each host has its own web server; the web servers don't have to be the same.
 
-	For example, the Magento application can run Apache and Elasticsearch can run nginx.
+	例如， the Magento application can run Apache and Elasticsearch can run nginx.
 *	Both web servers use Transport Layer Security (TLS).
 
 	Setting up TLS is beyond the scope of our documentation.
@@ -168,7 +168,7 @@ To install Elasticsearch:
 
 	Install the latest 2.x version using [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/_installation.html){:target="_blank"}
 
-	For example, to install Elasticsearch version 2.4.4, enter the following commands in the order shown:
+	例如， to install Elasticsearch version 2.4.4, enter the following commands in the order shown:
 
 		curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.4/elasticsearch-2.4.4.tar.gz
 		tar -xvf elasticsearch-2.4.4.tar.gz
@@ -177,7 +177,7 @@ To install Elasticsearch:
 
 4.	Open the [Elasticsearch configuration file](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/setup-configuration.html#settings){:target="_blank"}, `elasticsearch.yml`, in a text editor.
 
-	For example, it might be located in `/etc/elasticsearch`或`<elasticsearch install dir>/config`.
+	例如， it might be located in `/etc/elasticsearch`或`<elasticsearch install dir>/config`.
 5.	Save your changes to `elasticsearch.yml` and exit the text editor.
 6.	Optionally configure the [Elasticsearch service](https://www.elastic.co/guide/en/elasticsearch/reference/2.0/setup-service.html){:target="_blank"}.
 7.	Start Elasticsearch:

@@ -68,7 +68,7 @@ Elasticsearch is supported by Magento Cloud Enterprise Edition 2.1.x only.
 
 If you installed Magento Enterprise Cloud Edition 2.1.3 for the first time, you don't need to do this because Elasticsearch is already the default search engine.
 
-To use Elasticsearch on a [staging]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-stage) or [production]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-prod) system, open a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) and request Elasticsearch.
+To use Elasticsearch on a [staging]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-stage) or [production]({{ page.baseurl }}/cloud/architecture/pro-architecture.html#cloud-arch-prod) system, open a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) and request Elasticsearch.
 
 <div class="bs-callout bs-callout-warning" markdown="1">
 After installing Elasticsearch, you must do a full index of your fulltext index.

@@ -102,7 +102,7 @@ userInput="We'll email you an order confirmation with details and tracking info.
 ## Principles
 
 * A data file may contain multiple data entities
-* File name is given camel case with first letter upper case name.  The name represents data type. For example, file with Customer data is _CustomerData.xml_, for Simple Product it should be `SimpleProductData.xml`.
+* File name is given camel case with first letter upper case name.  The name represents data type. 例如， file with Customer data is _CustomerData.xml_, for Simple Product it should be `SimpleProductData.xml`.
 * entity name is given camel case with first letter upper case name.
 
 ## 例如
@@ -162,7 +162,7 @@ An element that contains configuration array containing all Entity elements.
 Attributes|Type|Use|Description
 ---|---|---|---
 name|string|optional|Name of the Entity.
-type|string|optional|Node containing the exact name of Entity type. Used later to find specific Persistence Layer Model class. `type` in data can be whatever the user wants; there are no constraints. It becomes important when persisting data, as depending on the `type` given, it will try to match a metadata definition with the operation being done. For example, given an entity `myCustomer` with a `type="customer"`, if you call `<createData entity="myCustomer"/>`, it will try to find a metadata entry with the following attributes: `<operation dataType="customer" type="create">`
+type|string|optional|Node containing the exact name of Entity type. Used later to find specific Persistence Layer Model class. `type` in data can be whatever the user wants; there are no constraints. It becomes important when persisting data, as depending on the `type` given, it will try to match a metadata definition with the operation being done. 例如， given an entity `myCustomer` with a `type="customer"`, if you call `<createData entity="myCustomer"/>`, it will try to find a metadata entry with the following attributes: `<operation dataType="customer" type="create">`
 
 `<entity>` may contain one or more [`<data`], [`<var>`], [`<required-entities>`], [`<array>`] elements in any sequence.
 
@@ -177,7 +177,7 @@ unique|enum: `"prefix"`, `"suffix"`|optional|Add suite or test wide unique seque
 
 ### var
 
-Element that can be used to grab a key value from another entity. For example, when creating a customer with the
+Element that can be used to grab a key value from another entity. 例如， when creating a customer with the
 `<createData>` action, the server responds with the autoincremented ID of that customer. To access that ID and use it
 in another data entity, you can use this.
 
@@ -190,7 +190,7 @@ unique|--|--|*This attribute hasn't been implemented yet.*
 
 ### required-entity
 
-Element that specifies the parent/child relationship between complex types. For example, a customer may have an address.
+Element that specifies the parent/child relationship between complex types. 例如， a customer may have an address.
 Specifying that relationship looks like:
 
 ```xml

@@ -20,7 +20,7 @@ Be sure to install the JDK and *not* the JRE.
 	yum -y install java-1.7.0-openjdk
 
 <div class="bs-callout bs-callout-info" id="info">
-	<p>Java version 7 might not be available for all operating systems. For example, you can <a href="http://packages.ubuntu.com/" target="_blank">search the list of available packages for Ubuntu</a>.</p>
+	<p>Java version 7 might not be available for all operating systems. 例如， you can <a href="http://packages.ubuntu.com/" target="_blank">search the list of available packages for Ubuntu</a>.</p>
 </div>
 
 <h4 id="install-prereq-java-ubuntu">Install the JDK on Ubuntu</h4>

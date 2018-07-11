@@ -107,7 +107,7 @@ We merged `vendor/magento/ece-patches` with `vendor/magento/ece-tools` in this r
 #### New features
 -   <!-- MAGECLOUD-1253 -MAGECLOUD-1495-->**Improved logging**
     -   We improved log messaging to provide better explanations when the build or deploy process overrides an environment variable.
-    -   You can now view installation and upgrade progress in real time. Tail the `install_update.log` file to view progress. For example,
+    -   You can now view installation and upgrade progress in real time. Tail the `install_update.log` file to view progress. 例如，
 
             tail -f var/log/install_upgrade.log
 

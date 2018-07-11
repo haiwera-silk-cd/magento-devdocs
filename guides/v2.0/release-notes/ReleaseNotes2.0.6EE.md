@@ -24,7 +24,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 <h3>Fixed issues</h3>
 
 
-<!--- 51847 --> * Varnish no longer returns a 400 bad request error message when clearing its {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}. Previously, this issue occurred with Magento instances running on GoDaddy. 
+<!--- 51847 --> * Varnish no longer returns a 400 bad request error message when clearing its {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}. Previously, this issue occurred with Magento instances running on GoDaddy. 
 
 
 

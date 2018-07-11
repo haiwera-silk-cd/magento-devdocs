@@ -48,7 +48,7 @@ The following figure shows an example.
 Click either **CLI** or **Git** to display the appropriate clone command. Use the ![Copy to clipboard]({{ site.magentourl }}/common/images/cloud_copy-to-clipboard.png) (Copy to clipboard) button to copy the command to the clipboard.
 
 ## Configure environment settings {#project-conf-env-set}
-You can set environment settings for the following table of settings. These settings affect your Starter environments and Pro Integration environments. To modify settings for Pro plan Staging and Production environments, you need to enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html).
+You can set environment settings for the following table of settings. These settings affect your Starter environments and Pro Integration environments. To modify settings for Pro plan Staging and Production environments, you need to enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html).
 <table>
 	<tbody>
 		<tr>
@@ -78,7 +78,7 @@ One of these environment variables enables or disables outgoing emails for the e
 
 	![Set outgoing emails]({{ site.magentourl }}/common/images/cloud_project-conf-env.png)
 
-Configure your email notifications, services, and more as needed through the Magento Admin and test emails. If you need to enable this setting for Pro plan on Staging and Production, you will need to enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html).
+Configure your email notifications, services, and more as needed through the Magento Admin and test emails. If you need to enable this setting for Pro plan on Staging and Production, you will need to enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html).
 
 ## Set environment and project variables {#project-conf-env-var}
 You can set project wide and environment specific variables through the Project Web Interface. Variables can be either text or JSON format. For more information, see [环境变量]({{ page.baseurl }}/cloud/env/variables-intro.html).
@@ -97,8 +97,8 @@ To set environment specific variables in the Project Web Interface:
 1. [Access your project](#project-access) and select a specific environment.
 2. Select the Variables tab.
 3. Click **Add Variable**.
-4. In the **Name** field, enter a variable name. For example, to set the Magento Admin default account password, enter `ADMIN_PASSWORD`.
-5. In the **Value** field, enter the value for the variable. For example, enter a valid email address accessible for reset email notifications.
+4. In the **Name** field, enter a variable name. 例如， to set the Magento Admin default account password, enter `ADMIN_PASSWORD`.
+5. In the **Value** field, enter the value for the variable. 例如， enter a valid email address accessible for reset email notifications.
 
 	![Set environment variables]({{ site.magentourl }}/common/images/cloud_env-var.png)
 6. As needed, select options for **JSON value**, **Visible during build**, and **Visible during runtime**. If you do not have Super User access, you may only see the JSON value option.
@@ -115,8 +115,8 @@ To set project variables in the Project Web Interface:
 1. [Access your project](#project-access) and select a specific environment.
 2. Select the Variables tab.
 3. Click **Add Variable**.
-4. In the **Name** field, enter a variable name. For example, to set the Magento Admin email for the default account, enter `ADMIN_EMAIL`.
-5. In the **Value** field, enter the value for the variable. For example, enter a valid email address accessible for reset email notifications.
+4. In the **Name** field, enter a variable name. 例如， to set the Magento Admin email for the default account, enter `ADMIN_EMAIL`.
+5. In the **Value** field, enter the value for the variable. 例如， enter a valid email address accessible for reset email notifications.
 
 	![Set project variables]({{ site.magentourl }}/common/images/cloud_project_variable.png)
 6. As needed, select options for **JSON value**, **Visible during build**, and **Visible during runtime**. If you do not have Super User access, you may only see the JSON value option.

@@ -97,7 +97,7 @@ For detailed information on supported versions and extensions, see the following
 ## Requirements to get started {#requirements}
 To get started as a developer in a {{site.data.var.ece}} project, you need to set up the following:
 
-*	Set up a [local development environment]({{ page.baseurl }}/cloud/before/before-workspace.html). Your local workspace works best as a virtual system (VM or container) with all prerequisities installed and the project `master` Git branch cloned. You'll develop in branches to add modules, extensions, 3rd party integrations, and configurations. We recommend reading over develop and deploy process for your [Starter]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html) or [Pro]({{ page.baseurl }}/cloud/architecture/pro-develop-deploy-workflow.html) plan.
+*	Set up a [本地开发环境]({{ page.baseurl }}/cloud/before/before-workspace.html). Your local workspace works best as a virtual system (VM or container) with all prerequisities installed and the project `master` Git branch cloned. You'll develop in branches to add modules, extensions, 3rd party integrations, and configurations. We recommend reading over develop and deploy process for your [Starter]({{ page.baseurl }}/cloud/basic-information/starter-develop-deploy-workflow.html) or [Pro]({{ page.baseurl }}/cloud/architecture/pro-develop-deploy-workflow.html) plan.
 *	Get [`repo.magento.com` credentials]({{ page.baseurl }}/install-gde/prereq/connect-auth.html) in your account.
 *	Get a [project invitiation]({{ page.baseurl }}/cloud/onboarding/onboarding-tasks.html#users) from the Project Owner or a super user.
 
@@ -113,7 +113,7 @@ Before you test any custom code in your local {{site.data.var.ee}} environment, 
 *	Test with minification for HTML, JavaScript, and {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} enabled
 *	Test with [Redis enabled for page cache and session cache]({{ page.baseurl }}/config-guide/redis/config-redis.html)
 *	Install and configure [Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html)
-*	Test using [Varnish]({{ page.baseurl }}/config-guide/varnish/config-varnish.html) for the page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}
+*	Test using [Varnish]({{ page.baseurl }}/config-guide/varnish/config-varnish.html) for the page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}
 
 ## Development and testing {#cloud-req-devtest}
 For development and testing, we recommend the following:

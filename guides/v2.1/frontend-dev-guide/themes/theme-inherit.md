@@ -44,7 +44,7 @@ the Orange theme by OrangeCo inherits from the Magento Blank theme. The inherita
 {% endhighlight xml %}
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>A parent and a child theme can belong to different vendors. For example, your custom theme can inherit from the Magento Blank theme.</p>
+  <p>A parent and a child theme can belong to different vendors. 例如， your custom theme can inherit from the Magento Blank theme.</p>
 </div>
 
 ## Override view.xml file
@@ -109,7 +109,7 @@ The fallback scheme for templates is the following (module context is always kno
 
 So if you need to customize a certain template, you need to create an overriding one with the same name in the `../templates/<path_to_template>` directory in the theme module files. Where `<path_to_template>` is the path to the original template.
 
-For example, if you must override the `<Magento_Catalog_module_dir>/view/frontend/templates/category/widget/link/link_block.phtml` template, the `<path_to_template>` is `category/widget/link/`
+例如， if you must override the `<Magento_Catalog_module_dir>/view/frontend/templates/category/widget/link/link_block.phtml` template, the `<path_to_template>` is `category/widget/link/`
 
 <u>Example</u>
 By default, according to the module template, in the mini {% glossarytooltip c7ecb18d-cefe-452d-83e2-3c4d5e355db9 %}shopping cart{% endglossarytooltip %} products are listed under the Go to {% glossarytooltip 278c3ce0-cd4c-4ffc-a098-695d94d73bde %}Checkout{% endglossarytooltip %} button:

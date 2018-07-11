@@ -10,7 +10,7 @@ Two types of updates are available.
 -     <a href="#mtf_update_install">Install a new version of the Functional Testing Framework</a>
 
 <div class="bs-callout bs-callout-info" id="info">
-<p>Use this type of update if the version of the Functional Testing Framework in <code>&lt;magento2&gt;/dev/tests/functional/composer.json</code> and last version in <code>&lt;magento2&gt;/dev/tests/functional/vendor/magento/mtf/CHANGELOG.md</code> are different. For example, when you updated Magento.</p>
+<p>Use this type of update if the version of the Functional Testing Framework in <code>&lt;magento2&gt;/dev/tests/functional/composer.json</code> and last version in <code>&lt;magento2&gt;/dev/tests/functional/vendor/magento/mtf/CHANGELOG.md</code> are different. 例如， when you updated Magento.</p>
 </div>
 
 -    <a href="#mtf_update_depend">Update 组件 from dependencies in <code>&lt;magento2&gt;/dev/tests/functional/composer.json</code></a>

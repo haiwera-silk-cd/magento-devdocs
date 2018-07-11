@@ -20,7 +20,7 @@ With the Magento_Staging模块 you can:
     - Using APIs
 - Preview a future campaign in {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}
 
-Moreover, the Magento_Staging模块 is a framework for other [staging](#staging) modules. It declares basic scenarios over the content, while other staging modules perform them. (You can recognize a staging modules by name, each ends with "Staging" and starts with a name of a module, which it extends. For example, Magento_CatalogStaging模块 extends functionality of Magento_Catalog模块.)
+Moreover, the Magento_Staging模块 is a framework for other [staging](#staging) modules. It declares basic scenarios over the content, while other staging modules perform them. (You can recognize a staging modules by name, each ends with "Staging" and starts with a name of a module, which it extends. 例如， Magento_CatalogStaging模块 extends functionality of Magento_Catalog模块.)
 
 You can work with the following entities out of the box:
 
@@ -191,9 +191,9 @@ There are several rules validating updates intersection:
 
 1.  Update can be created only in the future. You cannot create an update in a past.
 
-2.  Temporary updates cannot intersect with each other. For example, if you have an update for the "New Brand Snowboard" product from December 23 till December 26, a period of another update for "New Brand Snowboard" cannot intersect the period from December 23 till December 26. In other words, one entity cannot have more than one [temporary update](#temporary-update) scheduled to the same time.
+2.  Temporary updates cannot intersect with each other. 例如， if you have an update for the "New Brand Snowboard" product from December 23 till December 26, a period of another update for "New Brand Snowboard" cannot intersect the period from December 23 till December 26. In other words, one entity cannot have more than one [temporary update](#temporary-update) scheduled to the same time.
 
-3.  Permanent update cannot start during temporary update. For example, if you have an update for the "New Brand Snowboard" product from December 23 till December 26, you cannot create [permanent update](#permanent-update) starting during this period of time.
+3.  Permanent update cannot start during temporary update. 例如， if you have an update for the "New Brand Snowboard" product from December 23 till December 26, you cannot create [permanent update](#permanent-update) starting during this period of time.
 
 #### View/Edit/Copy an update
 

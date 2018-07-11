@@ -10,7 +10,7 @@ github_link: get-started/gs-web-api-request.md
 redirect_from: /guides/v1.0/get-started/gs-web-api-request.html
 ---
 
-To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `magento`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). For example, the web API for the Customer service is defined in the `<your Magento install dir>/vendor/magento/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} calls.
+To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `magento`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). 例如， the web API for the Customer service is defined in the `<your Magento install dir>/vendor/magento/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the {% glossarytooltip 786086f2-622b-4007-97fe-2c19e5283035 %}API{% endglossarytooltip %} calls.
 
 ## 概述 {#request-overview}
 
@@ -93,7 +93,7 @@ The following table and the sections that follow the table describe these API ca
 ### Endpoint {#endpoints}
 An endpoint is a combination of the _server_ that fulfills a request, the web service, the <i>resource</i> against which the request is being made, and any template parameters.
 
-For example, in the <code>http://magento.ll/index.php/rest/V1/customerGroups/:id</code> endpoint, the server is `magento.ll/index.php/`, the web service is `rest`, the resource is `/V1/customerGroups`, and the template parameter is `id`.
+例如， in the <code>http://magento.ll/index.php/rest/V1/customerGroups/:id</code> endpoint, the server is `magento.ll/index.php/`, the web service is `rest`, the resource is `/V1/customerGroups`, and the template parameter is `id`.
 
 ### HTTP headers {#http-headers}
 
@@ -149,9 +149,9 @@ See <a href="{{ page.baseurl }}/get-started/authentication/gs-authentication.htm
 ### Call payload {#payload}
 The call payload is set of input <i>parameters</i>和<i>attributes</i> that you supply with the request. API operations have both _required_ and _optional_ inputs.
 
-You specify input parameters in the URI. For example, in the `GET/V1/customers/:customerId` URI, you must specify the `customerId` template parameter. This parameter filters the response by the specified customer ID.
+You specify input parameters in the URI. 例如， in the `GET/V1/customers/:customerId` URI, you must specify the `customerId` template parameter. This parameter filters the response by the specified customer ID.
 
-You specify input attributes in a JSON- or XML-formatted request body. For example, in the `POST /V1/customers` call, you must specify a request body like this:
+You specify input attributes in a JSON- or XML-formatted request body. 例如， in the `POST /V1/customers` call, you must specify a request body like this:
 
 {% highlight json %}
 {

@@ -76,7 +76,7 @@ The following table explains this command's parameters and values.
 	<tr>
         <td>--language (-l)</td>
         <td><p>Generate files only for the specified languages. The default, with no option specified, is to generate files for all <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="\_blank">ISO-636</a> language codes. You can specify the name of one language code at a time.</p>
-            <p>For example, <code>--language en_US --language es_ES</code></p></td>
+            <p>例如， <code>--language en_US --language es_ES</code></p></td>
         <td><p>否</p></td>
     </tr>
     <tr>
@@ -87,19 +87,19 @@ The following table explains this command's parameters and values.
     <tr>
         <td>--theme &lt;theme></td>
         <td><p>Themes for which to deploy static content.</p>
-            <p>For example, <code>--theme Magento/blank --theme Magento/luma</code></p></td>
+            <p>例如， <code>--theme Magento/blank --theme Magento/luma</code></p></td>
         <td><p>否</p></td>
     </tr>
     <tr>
         <td>--exclude-theme &lt;theme></td>
         <td><p>Themes to exclude when deploying static content.</p>
-            <p>For example, <code>--exclude-theme Magento/blank</code></p></td>
+            <p>例如， <code>--exclude-theme Magento/blank</code></p></td>
         <td><p>否</p></td>
     </tr>
     <tr>
         <td>--area (-a)</td>
         <td><p>Generate files only for the specified areas. The default, with no option specified, is to generate files for all areas. Valid values are <code>adminhtml</code>和<code>frontend</code>.</p>
-            <p>For example, <code>--area adminhtml</code></p></td>
+            <p>例如， <code>--area adminhtml</code></p></td>
         <td><p>否</p></td>
     </tr>
     <tr>

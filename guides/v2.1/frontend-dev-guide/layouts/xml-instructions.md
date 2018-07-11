@@ -303,7 +303,7 @@ To pass parameters, use the <a href="#argument"><code>&lt;argument&gt;&lt;/argum
 
 <h3 id="fedg_layout_xml-instruc_ex_ref">&lt;referenceBlock> and &lt;referenceContainer></h3>
 <p>Updates in <code>&lt;referenceBlock></code>和<code>&lt;referenceContainer></code> are applied to the corresponding <code>&lt;block></code>或<code>&lt;container></code>.</p>
-<p>For example, if you make a reference by <code>&lt;referenceBlock name="right"></code>, you're targeting the block <code>&lt;block name="right"></code>.</p>
+<p>例如， if you make a reference by <code>&lt;referenceBlock name="right"></code>, you're targeting the block <code>&lt;block name="right"></code>.</p>
 
 To pass parameters to a block use the <a href="#argument"><code>&lt;argument>&lt;/argument></code></a> instruction.
 

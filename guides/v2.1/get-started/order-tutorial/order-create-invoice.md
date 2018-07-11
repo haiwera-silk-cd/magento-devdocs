@@ -69,7 +69,7 @@ An invoice is structurally similar to an order, but an order contains more detai
 
 You will use the `order_item_id` values to create a {% glossarytooltip c8f00e9d-7f70-4561-9773-60da604ba5c9 %}shipment{% endglossarytooltip %} in the next step.
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {

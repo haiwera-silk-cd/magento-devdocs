@@ -28,7 +28,7 @@ Range-specific configuration:
   </tr>
   <tr>
     <td><code>rangeType</code></td>
-    <td>Defines what kind of input elements the range contains. For example, if the value is <code>date</code>, then range includes two date fields.</td>
+    <td>Defines what kind of input elements the range contains. 例如， if the value is <code>date</code>, then range includes two date fields.</td>
     <td>String</td>
     <td>-</td>
   </tr>

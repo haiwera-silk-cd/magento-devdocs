@@ -21,7 +21,7 @@ The build and deploy process is slightly different for each plan:
 -  **Pro plans**—For the Integration environment, every _active_ branch builds and deploys to a full environment for access and testing. You must merge your code to the `integration` branch before you can merge to the Staging environment and then the Production environment. You can only merge to Staging and Production using CLI commands with SSH or using the Project Web Interface. If you do not see the Staging or Production environments in your Project Web Interface, then you need to [Add Staging and Production to Pro projects UI]({{ page.baseurl }}/cloud/trouble/pro-env-management.html).
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-Make sure all code for your site and stores is in the active {{site.data.var.ee}} Git branch. If you point to or include hooks to code in other branches, especially a private branch, the build and deploy process will have issues. For example, add any new themes into the Git branch of code. If you include it from a private repo, the theme won't build with the Magento code.
+Make sure all code for your site and stores is in the active {{site.data.var.ee}} Git branch. If you point to or include hooks to code in other branches, especially a private branch, the build and deploy process will have issues. 例如， add any new themes into the Git branch of code. If you include it from a private repo, the theme won't build with the Magento code.
 </div>
 
 {% include cloud/wings-management.md %}
@@ -38,7 +38,7 @@ If you intend to make changes, modify the YAML files in your Git branch of code.
 
 *	[`.magento.app.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_magento-app.html) defines how Magento is built and deployed. Enter specific build and deploy options to the `hooks` section.
 *	[`routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html) defines how an incoming URL is processed by {{site.data.var.ee}}.
-*	[`services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html) defines the services Magento uses by name and version. For example, this file may include versions of MySQL, some PHP extensions, and Elasticsearch. These are referred to as *services*.
+*	[`services.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_services.html) defines the services Magento uses by name and version. 例如， this file may include versions of MySQL, some PHP extensions, and Elasticsearch. These are referred to as *services*.
 
 ## Required files for your Git branch {#requiredfiles}
 Your Git branch must have the following files for building and deploying for your local and to Integration, Staging, and Production environments:
@@ -58,7 +58,7 @@ We highly recommend the following best practices and considerations for your dep
 * **Test your build and deploy locally and in Staging before deploying to Production.** Many extensions work, custom code, and more work great in development. Some users then push to production only to have failures and issues. Staging gives you an opportunity to fully test your code and implementation in a production environment without extended downtime if something goes wrong in Production.
 
 ## Five phases of Integration build and deployment {#cloud-deploy-over-phases}
-The following phases occur on your local development environment and the Integration environment. The code is not deployed to Staging or Production for Pro plan in these initial phases.
+The following phases occur on your 本地开发环境 and the Integration environment. The code is not deployed to Staging or Production for Pro plan in these initial phases.
 
 Integration build and deployment consists of the following phases:
 
@@ -75,7 +75,7 @@ When you initially set up a project from a template, we retrieve the code from t
 * **For Starter**: `master` branch is used in your Production environment.
 * **For Pro**: `master` begins as origin branch for the Integration environment. You deploy this branch to Staging and Production.
 
-The remote server gets your code using Git. When you push your code from local to the remote Git, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. For example, you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.
+The remote server gets your code using Git. When you push your code from local to the remote Git, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. 例如， you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.
 
 If you have a syntax error in a configuration file, our Git server refuses the push. For details, see [Protective Block]({{ page.baseurl }}/cloud/live/live-prot.html).
 
@@ -144,7 +144,7 @@ There are two default deploy hooks. `pre-deploy.php` completes necessary cleanup
 *	The script optionally generates static web content using the command [`magento setup:static-content:deploy`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html).
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your local development environment isn't affected.</p>
+  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your 本地开发环境 isn't affected.</p>
 </div>
 
 <div class="bs-callout bs-callout-info" id="info">

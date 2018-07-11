@@ -285,18 +285,18 @@ Adding an argument to an event is allowed.
 
 1. The module data/schema version must not increase in a patch version release if the next minor version is already released.
 
-   For example, the module data/schema version for all patch releases of Magento 2.0 can change prior to the release of Magento 2.1.
+   例如， the module data/schema version for all patch releases of Magento 2.0 can change prior to the release of Magento 2.1.
    After 2.1 releases, the version cannot change for 2.0 patch releases, but it can change for 2.1 patch releases until Magento 2.2.
 
 2. Deliver fixes that bump the module setup/data version in the current, unpublished version before delivering it to previous minor versions.
    In cases where an urgent fix was delivered in a previous minor version, treat the fix for the current unpublished version as a high priority task.
 
-   For example, issue fixes that change the setup/upgrade version in the unreleased `develop` branch are delivered first before being ported into the released branches.
+   例如， issue fixes that change the setup/upgrade version in the unreleased `develop` branch are delivered first before being ported into the released branches.
    If the fix was made for a released branch, a pull request for porting it into the `develop` branch must be created with a high priority and delivered as soon as possible.
    
 3. The setup version of a module must be higher than previous releases of the same module.
 
-   For example, the setup version for a fix for the Magento_Catalog模块 is higher in the `develop` branch (2.1.3) than previous branch versions (2.0.2 and 2.1.2 for versions 2.0 and 2.1).
+   例如， the setup version for a fix for the Magento_Catalog模块 is higher in the `develop` branch (2.1.3) than previous branch versions (2.0.2 and 2.1.2 for versions 2.0 and 2.1).
 
 
 ## Backport fixes with breaking changes to patch branches
@@ -406,7 +406,7 @@ Example: [`https://github.com/magento/devdocs/blob/develop/guides/v2.2/release-n
 
 Update the page for the *next* MINOR product release when working in the `develop` branch of Magento.
 
-For example, when 2.2 is released, a new `backward-incompatible-changes.md` for 2.3 becomes available for editing.
+例如， when 2.2 is released, a new `backward-incompatible-changes.md` for 2.3 becomes available for editing.
 
 In order to update the page, create a PR to the DevDocs repository with your changes.
 

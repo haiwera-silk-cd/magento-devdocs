@@ -30,7 +30,7 @@ Attribute | 数据类型 | Description
 `id` | Int | An ID that uniquely identifies the category
 `description`| String | An optional description of the category
 `name`| String | The display name of the category
-`path`| String | The path to the category, as a string of category IDs, separated by slashes (/). For example, `1/2/20`
+`path`| String | The path to the category, as a string of category IDs, separated by slashes (/). 例如， `1/2/20`
 `path_in_store`| String | Category path in the store
 `url_key`| String | The url key assigned to the category
 `url_path`| String | The url path assigned to the category

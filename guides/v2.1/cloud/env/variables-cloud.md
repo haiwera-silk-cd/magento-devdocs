@@ -32,7 +32,7 @@ When attempting to [use environment variables to override configuration settings
 ![Environment variable example]({{ site.magentourl }}/common/images/cloud_env_var_example.png)
 </div>
 
-Since values can change over time, it is best to inspect the variable at runtime and use it to configure your application. For example, we use the `MAGENTO_CLOUD_RELATIONSHIPS` variable to retrieve environment-related relationships as follows:
+Since values can change over time, it is best to inspect the variable at runtime and use it to configure your application. 例如， we use the `MAGENTO_CLOUD_RELATIONSHIPS` variable to retrieve environment-related relationships as follows:
 
 ```php
 /**

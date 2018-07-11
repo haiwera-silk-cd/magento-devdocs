@@ -24,7 +24,7 @@ The following is a short list of Magento prices:
 6. Manufacturer price (MSRP)
 
 Magento represents these prices as price types (e.g. final price, minimum price, maximum price, regular price) and are separate from the actual price in the code.
-For example, Special Price is represented by the final price type in the code.
+例如， Special Price is represented by the final price type in the code.
 
 ### Magento taxes classification
 

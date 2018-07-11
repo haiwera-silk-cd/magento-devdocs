@@ -71,7 +71,7 @@ To upgrade to 2.0.7 using the command line:
 1.	Log in to your Magento server as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 2.	Change to the directory in which you installed the Magento software.
 
-	For example, `cd /var/www/html/magento2`
+	例如， `cd /var/www/html/magento2`
 2.	Enter the following command to disable the cache:
 
 		php bin/magento cache:disable

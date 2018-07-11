@@ -94,7 +94,7 @@ The format of the Magento Cloud CLI branch command is:
 ### Develop code {#dev-code}
 It's the time you have been waiting for...writing code. Using this base branch of {{site.data.var.ece}} code, you can start installing extensions, developing custom code, adding themes, and much more.
 
-We recommend using a branching strategy with your development work. Using one branch to do all of your work all at once might make testing difficult. For example, you could follow continuous integration and sprint methodologies to work:
+We recommend using a branching strategy with your development work. Using one branch to do all of your work all at once might make testing difficult. 例如， you could follow continuous integration and sprint methodologies to work:
 
 * Add a few extensions and configure them with your first branch
 * Push this code, test, and merge to Staging then Production
@@ -142,7 +142,7 @@ You will generate the file in the Integration environment where you configured M
 
 * Any configuration setting included in the file is locked from editing, or read-only, in the deployed environment. This is one reason we recommend using `scd-dump`.
 
-  For example, we will have you install a module for Fastly in your development environment. You will only configure this module in Staging and Production. Using `scd-dump` keeps those default fields editable.
+  例如， we will have you install a module for Fastly in your development environment. You will only configure this module in Staging and Production. Using `scd-dump` keeps those default fields editable.
 * This file can be long depending on the size of your deployment. The `scd-dump` command generates a far small file than `app:config:dump`.
 
 ![Generate configuration management file]({{ site.magentourl }}/common/images/cloud_workflow-config-mgmt.png)
@@ -156,7 +156,7 @@ For more information, see [Configuration Management]({{ page.baseurl }}/cloud/li
 ### Push code and test {#push-code}
 At this point, you should have a developed code branch with a configuration file (`config.local.php`或`config.php`) ready to test.
 
-Everytime you push code from your local environment, a series of build and deploy scripts run. These scripts generate new Magento code and deploy it to the remote environment. For example, if you are pushing a development branch from your local to the remote Git branch, a matching environment updates services, code, and static content.
+Everytime you push code from your local environment, a series of build and deploy scripts run. These scripts generate new Magento code and deploy it to the remote environment. 例如， if you are pushing a development branch from your local to the remote Git branch, a matching environment updates services, code, and static content.
 
 You can directly access this environment with a store URL, Magento Admin URL, and SSH. These environments include a web server, database, and configured services. When ready, you can start deploying and testing in Staging.
 

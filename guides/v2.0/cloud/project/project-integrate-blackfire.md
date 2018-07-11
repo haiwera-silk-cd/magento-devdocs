@@ -197,7 +197,7 @@ If you do not have a default route specified in `routes.yaml`, or want to define
 Add route information on the Blackfire Magento Cloud integration page:
 
 1. Locate step 5 and enter the default route. It should look like `https://example.com/`或`http://*.{default}/`. If you leave this field blank, we will try the following keys in this order: `https://{default}/`, `https://www.{default}/`, `http://{default}/`, `http://www.{default}/`.
-2. If you use a wildcard `*` in step 5 for the default rote, you need to enter a resolved value for the `*` value in step 6. Otherwise, leave step 6 empty. For example, if you specified the route key `https://*.{default}` in step 5, you would need you to specify a route placeholder in step 6.
+2. If you use a wildcard `*` in step 5 for the default rote, you need to enter a resolved value for the `*` value in step 6. Otherwise, leave step 6 empty. 例如， if you specified the route key `https://*.{default}` in step 5, you would need you to specify a route placeholder in step 6.
 
 If adding a route to Blackfire, make sure to add the default route to `routes.yaml`:
 
@@ -267,13 +267,13 @@ With all integrations entered on the Blackfire Magento Cloud integration page, c
 To verify Blackfire works, you have a couple options: a browser extension or using the CLI. For extensive CLI profiling options and better understanding the profiles, see [Blackfire's resources](#resources).
 
 <div class="bs-callout bs-callout-info" markdown="1">
-You can only use the CLI in your local development environment.
+You can only use the CLI in your 本地开发环境.
 </div>
 
 To profile using the browser:
 
 1. Install the Blackfire browser extension in [Chrome](https://blackfire.io/docs/integrations/chrome#installing-the-companion){:target="_blank"} or [Firefox](https://blackfire.io/docs/integrations/firefox#installing-the-companion){:target="_blank"}. A new Blackfire icon displays in your browser next to the address location. If you don't see it, you may need to display the bar.
-2. Visit the store or site URL for your specific environment. For example, access the URL for your Integration environment. If you need this URL, you can find it through the Project Web Site. Select the environment branch and copy the link from the Access section.
+2. Visit the store or site URL for your specific environment. 例如， access the URL for your Integration environment. If you need this URL, you can find it through the Project Web Site. Select the environment branch and copy the link from the Access section.
 3. Click the Blackfire icon to profile. For Compare with, select No Reference.
 
 	![Start profiling]({{ site.magentourl }}/common/images/cloud_blackfire.png)

@@ -45,7 +45,7 @@ If you use Redis for page caching, you'll see output similar to the following:
 	... more ...
 
 ### Redis ping command
-Enter the following command:
+输入下面的命令：
 
 	redis-cli ping
 

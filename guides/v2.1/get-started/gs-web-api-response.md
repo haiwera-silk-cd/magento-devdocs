@@ -22,10 +22,10 @@ HTTP code | Meaning | Description
 --- | --- | ---
 200 | Success | The framework returns HTTP 200 to the caller upon success.
 400 | Bad Request | If service implementation throws either `Magento_Service_Exception` or its derivative, the framework returns a HTTP 400 with a error response including the service-specific error code and message. This error code could indicate a problem such as a missing required parameter or the supplied data didn't pass validation.
-401 | Unauthorized | The caller was not authorized to perform the request. For example, the request included an invalid token or a user with customer permissions attempted to access an object that requires administrator permissions.
+401 | Unauthorized | The caller was not authorized to perform the request. 例如， the request included an invalid token or a user with customer permissions attempted to access an object that requires administrator permissions.
 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401.
 404 | 否t found | The specified REST endpoint does not exist. The caller can try again.
-405 | 否t allowed | A request was made of a resource using a method that is not supported by that resource. For example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
+405 | 否t allowed | A request was made of a resource using a method that is not supported by that resource. 例如， using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 406 | 否t acceptable | The requested resource is only capable of generating content that is not acceptable according to the Accept headers sent in the request.
 500 | System Errors | If service implementation throws any other {% glossarytooltip 53da11f1-d0b8-4a7e-b078-1e099462b409 %}exception{% endglossarytooltip %} like network errors, database communication, framework returns HTTP 500.
 
@@ -37,7 +37,7 @@ POST, PUT, and GET web API calls return a response payload. This payload is a JS
 A successful DELETE call returns `true`. An unsuccessful DELETE call returns a payload similar to the other calls.
 
 The response payload depends on the call.
-For example, a `GET /V1/customers/:customerId` call returns the following payload:
+例如， a `GET /V1/customers/:customerId` call returns the following payload:
 
 {% highlight json %}
 {

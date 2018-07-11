@@ -42,10 +42,10 @@ To include a custom font stored locally, use one of the following approaches:
 Where:
 <ul>
 	<li><code>{@baseDir}</code> stands for the <code>app/design/frontend/&lt;Vendor&gt;/&lt;theme&gt;/web</code> directory.</li>
-<li><code>&lt;path_to_font_file&gt;</code> includes the font file name, but without the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}. For example, <code>@font-path: '@{baseDir}fonts/Luma-Icons'</code> for the font stored in <code>web/fonts/Luma-Icons.woff</code></li>
+<li><code>&lt;path_to_font_file&gt;</code> includes the font file name, but without the {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %}. 例如， <code>@font-path: '@{baseDir}fonts/Luma-Icons'</code> for the font stored in <code>web/fonts/Luma-Icons.woff</code></li>
 </ul>
 
-The mixin generates the {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} including font. For example, here is how the generated CSS looks for the Open Sans font used in the Blank theme:
+The mixin generates the {% glossarytooltip 6c5cb4e9-9197-46f2-ba79-6147d9bfe66d %}CSS{% endglossarytooltip %} including font. 例如， here is how the generated CSS looks for the Open Sans font used in the Blank theme:
 <pre>
 @font-face {
     font-family: 'Open Sans';

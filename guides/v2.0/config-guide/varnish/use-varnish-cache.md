@@ -19,7 +19,7 @@ functional_areas:
 This topic discusses the basics of using Varnish as a web caching accelerator for Magento.
 
 <h2 id="use-varnish-magento-purge">Varnish purging</h2>
-According to <a href="https://www.varnish-cache.org/docs/trunk/users-guide/purging.html" target="_blank">Varnish documentation</a>, "A *purge* is what happens when you pick out an object from the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and discard it along with its variants." A Varnish purge is very similar to a Magento cache clean command (or clicking **Flush Magento Cache** in the Magento Admin).
+According to <a href="https://www.varnish-cache.org/docs/trunk/users-guide/purging.html" target="_blank">Varnish documentation</a>, "A *purge* is what happens when you pick out an object from the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} and discard it along with its variants." A Varnish purge is very similar to a Magento cache clean command (or clicking **Flush Magento Cache** in the Magento Admin).
 
 In fact, as discussed in this section, when you clean, flush, or refresh the Magento cache, Varnish purges as well.
 
@@ -27,7 +27,7 @@ After you've installed and configured Varnish to work with Magento, the followin
 
 *	Maintaining a {% glossarytooltip a3c8f20f-b067-414e-9781-06378c193155 %}website{% endglossarytooltip %}.
 
-	For example, anything you do in the Admin in:
+	例如， anything you do in the Admin in:
 
 	*	**STORES** > **Configuration** > GENERAL > **General**
 	*	**STORES** > **Configuration** > GENERAL > **Currency Setup**
@@ -50,7 +50,7 @@ You can use the optional parameter `--http-cache-hosts` parameter to specify a c
 
 The parameter format must be `<hostname or ip>:<listen port>`, where you can omit `<listen port>` if it's port 80.
 
-For example,
+例如，
 
 	magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 

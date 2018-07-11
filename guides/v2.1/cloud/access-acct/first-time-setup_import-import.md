@@ -166,7 +166,7 @@ To drop and re-create the Cloud database:
     zcat var/db.sql.tgz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h <db-host> -P <db-port> -p -u <db-user> <db-name>
     ```
 
-    For example,
+    例如，
 
     ```
     zcat var/db.sql.tgz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h database.internal -p -u user main
@@ -283,7 +283,7 @@ bin/magento magento setup:static-content:deploy
 bin/magento cache:clean
 ```
 
-After the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} flushes, enter `exit` to close the SSH tunnel.
+After the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} flushes, enter `exit` to close the SSH tunnel.
 
 ## Verify the import {#verify}
 To verify everything imported properly, perform the following tasks in your local Cloud development environment:

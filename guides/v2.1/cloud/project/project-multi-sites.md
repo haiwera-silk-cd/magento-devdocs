@@ -14,7 +14,7 @@ functional_areas:
   - Stores
 ---
 
-This topic discusses how to set up {{site.data.var.ee}} to have multiple websites or stores. For example, you might have an English store, a French store, and a German store. For more information on websites, stores, and store views, see [Understanding websites, stores, and store views]({{ page.baseurl }}/cloud/configure/configure-best-practices.html#sites).
+This topic discusses how to set up {{site.data.var.ee}} to have multiple websites or stores. 例如， you might have an English store, a French store, and a German store. For more information on websites, stores, and store views, see [Understanding websites, stores, and store views]({{ page.baseurl }}/cloud/configure/configure-best-practices.html#sites).
 
 To set up multiple stores, you must:
 
@@ -172,12 +172,12 @@ To deploy and test:
 
 	The URL must be in the format: `http://<magento run_code>---<rest of URL>`
 
-	For example, `http://french---master-benrmky-dyrozemqbw72k.us.magentosite.cloud/`
+	例如， `http://french---master-benrmky-dyrozemqbw72k.us.magentosite.cloud/`
 4.	Make sure you test your site thoroughly.
 
 When complete, merge the code to the `master` Git branch for further deployment.
 
-### Deploy to Staging and Production {#deploy-staging-prod}
+### 部署到准生产和生产环境 {#deploy-staging-prod}
 Follow the deployment process for [deploying to Staging and Production]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html). For Starter and Pro environments, you use the Project Web Interface to push code across environments. For Pro accounts created before October 23, 2017 and not updated, you can use [SSH and CLI commands]({{ page.baseurl }}/cloud/live/stage-prod-migrate.html#classic).
 
 We recommend fully testing in Staging prior to pushing to Production. If you need to make changes, you should complete those in Integration and beging the process to deploy across environments again.

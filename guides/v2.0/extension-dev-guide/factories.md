@@ -96,7 +96,7 @@ $resultItem = $this->itemFactory->create([
 
 Factories are smart enough to resolve dependencies and allow you to get the correct instance of an interface as defined in your module's `di.xml`.
 
-For example, in the [`CatalogInventory`]({{ site.mage2000url }}app/code/Magento/CatalogInventory){:target="_blank"} module, the `di.xml` file contains the following entry:
+例如， in the [`CatalogInventory`]({{ site.mage2000url }}app/code/Magento/CatalogInventory){:target="_blank"} module, the `di.xml` file contains the following entry:
 
 {% highlight xml %}
 <preference for="Magento\CatalogInventory\Api\Data\StockItemInterface" type="Magento\CatalogInventory\Model\Stock\Item" />

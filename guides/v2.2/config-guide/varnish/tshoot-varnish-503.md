@@ -15,7 +15,7 @@ functional_areas:
 
 ## Backend Fetch Failed errors
 
-If the length of {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} tags used by Magento exceed Varnish's default of 8192 bytes, you can see HTTP 503 (Backend Fetch Failed) errors in the browser. The errors might display similar to the following:
+If the length of {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} tags used by Magento exceed Varnish's default of 8192 bytes, you can see HTTP 503 (Backend Fetch Failed) errors in the browser. The errors might display similar to the following:
 
 	Error 503 Backend fetch failed
 	Backend fetch failed
@@ -37,7 +37,7 @@ To resolve this issue, increase the default value of the `http_resp_hdr_len` par
 3.	If the parameter doesn't exist, add it after `thread_pool_max`.
 4.	Set `http_resp_hdr_len` to a value equal to the product count of your largest {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} multiplied by 21. (Each product tag is about 21 characters in length.)
 
-	For example, setting the value to 65536 bytes should work if your largest category has 3,000 products.
+	例如， setting the value to 65536 bytes should work if your largest category has 3,000 products.
 
 	例如:
 
@@ -45,7 +45,7 @@ To resolve this issue, increase the default value of the `http_resp_hdr_len` par
 
 5.  Set the `http_resp_size` to a value that accommodates the increased response header length.
 
-	For example, using the sum of the increased header length and default response size is a good starting point (e.g., 65536 + 32768 = 98304):
+	例如， using the sum of the increased header length and default response size is a good starting point (e.g., 65536 + 32768 = 98304):
 
 		-p http_resp_size=98304 \
 

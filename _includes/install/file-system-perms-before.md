@@ -29,6 +29,6 @@ After you've performed the other tasks in this topic, enter one of the following
 *	Ubuntu: `su <username>`
 *	CentOS: `su - <username>`
 
-For example,
+例如，
 
 	su magento_user

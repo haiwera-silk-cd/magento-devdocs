@@ -20,14 +20,14 @@ functional_areas:
   - Configuration
 ---
 
-#### Previous step:
+#### 前提:
 [本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html)
 
 Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.
 
 To begin, install and set up a VM on your host computer (Windows, Mac OS, Linux-based system). A VM gives you an environment to install a different Operating System, tools, software, a database, and Magento without requiring a customized system. You only need to install the VM software on your host. All other software can be installed and configured on your VM.
 
-When you install and configure software on your local (or VM), you will first SSH into the VM and then complete installations. Follow the SSH instructions and commands for the VM software you install. For example, you would install PHP, Nginx, and database on the VM via SSH.
+When you install and configure software on your local (or VM), you will first SSH into the VM and then complete installations. Follow the SSH instructions and commands for the VM software you install. 例如， you would install PHP, Nginx, and database on the VM via SSH.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 Magento documentation provides installation instructions for installing software on CentOS or Ubuntu only. For installation information on Windows or MacOS, consult a community resource.
@@ -71,7 +71,7 @@ The following packages may also be helpful for your PHP installation:
 * [zip](http://php.net/manual/en/book.zip.php){:target="_blank"}
 
 ### Set up PHP memory limit {#cloud-first-php}
-When you're working with the Magento Cloud CLI, local environment settings come from the machine on which you're working, not from {{site.data.var.ee}}. For example, certain actions (like debugging) require a larger PHP `memory_limit` than most PHP distributions provide by default.
+When you're working with the Magento Cloud CLI, local environment settings come from the machine on which you're working, not from {{site.data.var.ee}}. 例如， certain actions (like debugging) require a larger PHP `memory_limit` than most PHP distributions provide by default.
 
 To set `memory_limit`:
 
@@ -165,13 +165,13 @@ To install the Magento Cloud CLI:
 
 2.	Change to a directory to which the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %} has write access, such as the home directory.
 
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		curl -sS https://accounts.magento.cloud/cli/installer | php
 
 4.	After the CLI downloads, an operating system-specific command displays.
 
-	For example, on Ubuntu and CentOS, the command is similar to:
+	例如， on Ubuntu and CentOS, the command is similar to:
 
 		source /home/magento_user/.bashrc
 

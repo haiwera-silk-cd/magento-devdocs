@@ -197,7 +197,7 @@ $.widget("mage.form," {
 
 * Make widgets abstract enough so that they can be used anywhere in Magento.
 
-  For example, the `mage.dropdown` widget is applicable in many other scenarios, unlike `mage.topShoppingCart`.
+  例如， the `mage.dropdown` widget is applicable in many other scenarios, unlike `mage.topShoppingCart`.
 
 * Place abstract, share-able widgets under the `<install dir>/pub/lib/<your company>` directory so non-Magento applications can access them.
 

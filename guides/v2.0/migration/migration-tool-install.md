@@ -14,7 +14,7 @@ functional_areas:
 
 ## Prerequisite: Versions of Magento and 数据迁移工具 must match {#data-migrate-prereq}
 
-Make sure you are using *the same released version* of both Magento 2 and the 数据迁移工具. For example, for Magento version 2.1.2, you must also use the 数据迁移工具 version 2.1.2.
+Make sure you are using *the same released version* of both Magento 2 and the 数据迁移工具. 例如， for Magento version 2.1.2, you must also use the 数据迁移工具 version 2.1.2.
 
 ### Check your Magento 2 version {#magento-version}
 
@@ -77,7 +77,7 @@ To install the 数据迁移工具, you must update `composer.json` in the Magent
 
 	where `<version>` must match the version of the Magento 2 codebase.
 
-	For example, for version 2.1.2, enter:
+	例如， for version 2.1.2, enter:
 
 		composer config repositories.magento composer https://repo.magento.com
 		composer require magento/data-migration-tool:2.1.2
@@ -97,7 +97,7 @@ If you've cloned Magento 2 from the GitHub repository, follow the steps below to
 
 	where `<version>` must match the version of the Magento 2 codebase.
 
-	For example, for version 2.1.2, enter:
+	例如， for version 2.1.2, enter:
 
 		composer config repositories.data-migration-tool git https://github.com/magento/data-migration-tool
 		composer require magento/data-migration-tool:2.1.2

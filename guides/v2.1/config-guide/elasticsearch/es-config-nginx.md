@@ -61,7 +61,7 @@ This section discusses how to specify who can access the {% glossarytooltip b14e
 
 		curl -i http://localhost:<proxy port>/_cluster/health
 
-	For example, if your proxy uses port 8080:
+	例如， if your proxy uses port 8080:
 
 		curl -i http://localhost:8080/_cluster/health
 

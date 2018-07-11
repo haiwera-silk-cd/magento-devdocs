@@ -60,7 +60,7 @@ This section discusses how to configure an Elasticsearch proxy using a virtual h
 
 		curl -i http://localhost:<proxy port>/_cluster/health
 
-	For example, if your proxy uses port 8080:
+	例如， if your proxy uses port 8080:
 
 		curl -i http://localhost:8080/_cluster/health
 
@@ -99,7 +99,7 @@ This section discusses how to configure an Elasticsearch proxy using a virtual h
 
 		curl -i http://localhost:<proxy port>/_cluster/health
 
-	For example, if your proxy uses port 8080:
+	例如， if your proxy uses port 8080:
 
 		curl -i http://localhost:8080/_cluster/health
 

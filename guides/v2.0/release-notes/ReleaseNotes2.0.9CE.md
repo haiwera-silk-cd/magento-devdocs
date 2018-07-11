@@ -47,7 +47,7 @@ Backward-incompatible changes are documented in <a href="{{ page.baseurl }}/rele
 <!--- 55461/54224 -->* We've renamed the Tier Price option on the Advanced Pricing tab to Customer Group Price option. 
 
 
-<!--- 55441/55055 -->* Tier pricing now works correctly with full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}. <a href="https://github.com/magento/magento2/issues/5364" target="_blank">(GITHUB-5364)</a>
+<!--- 55441/55055 -->* Tier pricing now works correctly with full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}. <a href="https://github.com/magento/magento2/issues/5364" target="_blank">(GITHUB-5364)</a>
 
 
  

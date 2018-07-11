@@ -19,7 +19,7 @@ functional_areas:
 <h2 id="instgde-install-uninst-theme-prereq">先决条件</h2>
 在使用这个命令之前，你必须知道你的主题的相对路径。 主题都放在子目录`<your Magento install dir>/app/design/<area name>`. You must specify the path to the theme starting with the area, which is either `frontend` (for storefront themes) or `adminhtml` (for {% glossarytooltip 18b930cf-09cc-47c9-a5e5-905f86c43f81 %}Magento管理面板{% endglossarytooltip %}主题).
 
-For example, the path to the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} provided with Magento 2 is `frontend/Magento/luma`.
+例如， the path to the Luma {% glossarytooltip d2093e4a-2b71-48a3-99b7-b32af7158019 %}主题{% endglossarytooltip %} provided with Magento 2 is `frontend/Magento/luma`.
 
 For more information about themes, see <a href="{{ page.baseurl }}/frontend-dev-guide/themes/theme-structure.html">Magento主题的结构</a>.
 
@@ -44,7 +44,7 @@ This command uninstalls *only* themes that are specified in `composer.json`; in 
 
 where
 
-*	`{theme path}` is the relative path to the theme, starting with the area name. For example, the path to the Blank theme supplied with Magento 2 is `frontend/Magento/blank`.
+*	`{theme path}` is the relative path to the theme, starting with the area name. 例如， the path to the Blank theme supplied with Magento 2 is `frontend/Magento/blank`.
 *	`--backup-code` backs up the Magento 2 codebase as discussed in the paragraphs that follow.
 *	`--clear-static-content` cleans generated <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">static view files</a>, which is necessary to cause static view files to display properly.
 
@@ -66,11 +66,11 @@ where
 
 8.	Removes themes from the `theme` database table.
 9.	Remove themes from code base using `composer remove`.
-10.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}.
+10.	Cleans the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}.
 11.	Cleans generated classes
 12.	If `--clear-static-content` is specified, cleans <a href="{{ page.baseurl }}/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">生成的静态视图文件</a>.
 
-For example, if you attempt to uninstall a theme that another theme depends on, the following message displays:
+例如， if you attempt to uninstall a theme that another theme depends on, the following message displays:
 
 	Cannot uninstall frontend/ExampleCorp/SampleModuleTheme because the following package(s) depend on it:
         ExampleCorp/sample-module-theme-depend

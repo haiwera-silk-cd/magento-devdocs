@@ -30,7 +30,7 @@ A Monolog _logger_ is a channel that has its own set of _handlers_. Monolog has 
 
 Each handler can either process the input message and stop propagation or pass the control to the next handler in a chain. 
 
-Log messages can be processed in many different ways. For example, you can store all debug information into a file on disk, put the messages with higher log levels into a database, and finally send messages with log level "critical" by e-mail.
+Log messages can be processed in many different ways. 例如， you can store all debug information into a file on disk, put the messages with higher log levels into a database, and finally send messages with log level "critical" by e-mail.
 
 Other channels can have a different set of handlers and logic.
 

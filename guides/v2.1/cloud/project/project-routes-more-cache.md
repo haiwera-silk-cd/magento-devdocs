@@ -72,7 +72,7 @@ And the following routes are **not** cached:
 The cache duration is determined by the `Cache-Control` response header value. If no `Cache-Control` header is in the response, we use the `default_ttl` key.
 
 ## Cache key {#cloud-cache-key}
-To decide how to {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} a response, {{site.data.var.ee}} builds a cache key depending on several factors and store the response associated with this key. When a request comes with the same cache key, the response is reused. Its purpose is similar to the HTTP [`Vary` header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44){:target="_blank"}.
+To decide how to {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} a response, {{site.data.var.ee}} builds a cache key depending on several factors and store the response associated with this key. When a request comes with the same cache key, the response is reused. Its purpose is similar to the HTTP [`Vary` header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44){:target="_blank"}.
 
 The parameters `headers` and
 `cookies` keys enable you to change this cache key.
@@ -100,7 +100,7 @@ When set to `true`, enable the cache for this route. When set to `false`, disabl
 ### `headers` {#cloud-cache-attrib-head}
 Defines on which values the cache key must depend.
 
-For example, if the `headers` key is the following:
+例如， if the `headers` key is the following:
 
 {% highlight yaml %}
 cache:

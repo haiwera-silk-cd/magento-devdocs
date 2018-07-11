@@ -85,11 +85,11 @@ To grant access to a database user:
 
 1.	Log in to the database server.
 2.	Connect to the MySQL database as the `root` user.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		GRANT ALL ON <local database name>.* TO <remote web node user name>@<remote web node server ip address> IDENTIFIED BY '<database user password>';
 
-	For example,
+	例如，
 
 		GRANT ALL ON magento_remote.* TO dbuser@192.0.2.50 IDENTIFIED BY 'dbuserpassword';
 

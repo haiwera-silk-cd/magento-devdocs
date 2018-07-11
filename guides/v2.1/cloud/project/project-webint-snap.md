@@ -129,7 +129,7 @@ You can create a copy of your database using [`magento/ece-tools`](http://devdoc
 
             magento-cloud environment:ssh
 
-2.  Enter the following command:
+2.  输入下面的命令：
 
     ```
     vendor/bin/ece-tools db-dump

@@ -123,7 +123,7 @@ The format of `<data>` is:
 The following conventions apply to MFTF `<data>`:
 
 * A `<data>` file may contain multiple data entities.
-* Camel case is used for `<data>` elements. The name represents the `<data>` type. For example, a file with customer data is `CustomerData.xml`. A file for simple product would be `SimpleProductData.xml`.
+* Camel case is used for `<data>` elements. The name represents the `<data>` type. 例如， a file with customer data is `CustomerData.xml`. A file for simple product would be `SimpleProductData.xml`.
 * Camel case is used for the entity name.
 
 ## 例如
@@ -202,7 +202,7 @@ Attributes|Type|Use|Description
 
 ### var {#var-tag}
 
-`<var>` is an element that can be used to grab a key value from another entity. For example, when creating a customer with the `<createData>` action, the server responds with the auto-incremented ID of that customer. Use `<var>` to access that ID and use it in another data entity.
+`<var>` is an element that can be used to grab a key value from another entity. 例如， when creating a customer with the `<createData>` action, the server responds with the auto-incremented ID of that customer. Use `<var>` to access that ID and use it in another data entity.
 
 Attributes|Type|Use|Description
 ---|---|---|---

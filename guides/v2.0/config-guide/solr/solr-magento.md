@@ -41,7 +41,7 @@ Magento comes packaged with a sample Solr configuration you can use and customiz
 		cd magento2
 		cp -R <your {{site.data.var.ee}} install dir>/vendor/magento/module-solr/conf/* ./conf/
 
-	For example, if Solr is installed in <code>/opt/solr/solr-4.10.4</code> and {{site.data.var.ee}} is installed in <code>/var/www/magento/html/magento2ee</code>, enter:
+	例如， if Solr is installed in <code>/opt/solr/solr-4.10.4</code> and {{site.data.var.ee}} is installed in <code>/var/www/magento/html/magento2ee</code>, enter:
 
 		cd /opt/solr/solr/solr-4.10.4/example/solr
 		cp -R collection1 magento2
@@ -164,7 +164,7 @@ The button changes as follows.
 	<li>Make sure that <a href="{{ page.baseurl }}/config-guide/solr/solr-overview.html#prereq-secy">UNIX firewall and SELinux</a> are both disabled, or set up rules to enable Solr and Magento to communicate with each other.</li>
 	<li>Verify the value of the <strong>Solr Server Hostname</strong> field. Make sure the server is available. You can try the server's IP address instead.</li>
 	<li>Use the command <code>netstat -an | grep <em>listen-port</em></code> command to verify that the port specified in the <strong>Solr Server Port</strong> field is not being used by another process.<br />
-	For example, to see if Solr is running on its default port, use the following command:
+	例如， to see if Solr is running on its default port, use the following command:
 	<pre>netstat -an | grep 8983</pre>
 	If Solr is running on port 8983, it displays similar to the following:
 	<pre>tcp        0      0 :::8983            :::*          LISTEN</pre></li>
@@ -179,7 +179,7 @@ Only after the test connection succeeds, click <strong>Save Config</strong> and 
 <h2 id="solr-reindex">Reindexing catalog search and refreshing the full page cache</h2>
 After you change Magento's Solr configuration, you must reindex the catalog search index and refresh the full page using the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %} or command line.
 
-To refresh the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} using the Admin:
+To refresh the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} using the Admin:
 
 1.  In the Admin, click <strong>System</strong> > <strong>Cache Management</strong>.
 2.  Select the check box next to <strong>Page Cache</strong>.

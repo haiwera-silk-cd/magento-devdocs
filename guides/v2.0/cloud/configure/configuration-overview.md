@@ -22,7 +22,7 @@ The following options, tools, and features can be set up and configured in your 
 * [Fastly]({{ page.baseurl }}/cloud/access-acct/fastly.html) for caching and CDN in Staging and Production environments
 * [cron jobs]({{ page.baseurl }}/cloud/configure/setup-cron-jobs.html) details how to create and configure Magento cron jobs in all environments
 * [多站和多店]({{ page.baseurl }}/cloud/project/project-multi-sites.html) details how to create and configure multi-sites for your store, for example multiple locales including English, French, and Spanish
-* [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html) mo
+* [安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html) mo
 * [安装一个主题]({{ page.baseurl }}/cloud/howtos/custom-theme.html) for your site and store
 
 ## Configure your deploy: build hooks, services, and routes {#deploy}

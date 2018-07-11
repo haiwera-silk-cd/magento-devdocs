@@ -33,7 +33,7 @@ The list displays as follows:
 	catalogsearch_fulltext                   Catalog Search
 
 ## View indexer status
-Use this command to view the status of all indexers or specific indexers. For example, find out if an indexer needs to be reindexed.
+Use this command to view the status of all indexers or specific indexers. 例如， find out if an indexer needs to be reindexed.
 
 命令参数：
 
@@ -99,7 +99,7 @@ Reindexing all indexers can take a long time for stores with large numbers of pr
 ## 配置indexers
 Use this command to set the following indexer options:
 
--   **Update on save (`realtime`):** Indexed data is updated as soon as a change is made in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. (For example, the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} products index is reindex after products are added to a category in the Admin.) This is the default.
+-   **Update on save (`realtime`):** Indexed data is updated as soon as a change is made in the {% glossarytooltip 29ddb393-ca22-4df9-a8d4-0024d75739b1 %}Admin{% endglossarytooltip %}. (例如， the {% glossarytooltip 50e49338-1e6c-4473-8527-9e401d67ea2b %}category{% endglossarytooltip %} products index is reindex after products are added to a category in the Admin.) This is the default.
 -   **Update by schedule (`schedule`):** Data is indexed according to the schedule set by your Magento cron job.
 
 [Learn more about indexing]({{ page.baseurl }}/extension-dev-guide/indexing.html)
@@ -109,7 +109,7 @@ To view the current indexer configuration:
 
 	bin/magento indexer:show-mode [indexer]
 
-Where `[indexer]` is a space-separated list of indexers. Omit `[indexer]` to show all indexers' modes. For example, to show the mode of all indexers:
+Where `[indexer]` is a space-separated list of indexers. Omit `[indexer]` to show all indexers' modes. 例如， to show the mode of all indexers:
 
 	bin/magento indexer:show-mode
 
@@ -139,7 +139,7 @@ To view the list of indexers:
 
 	bin/magento indexer:info
 
-For example, to change only the category products and product categories indexers to update on schedule, enter
+例如， to change only the category products and product categories indexers to update on schedule, enter
 
 	bin/magento indexer:set-mode schedule catalog_category_product catalog_product_category
 

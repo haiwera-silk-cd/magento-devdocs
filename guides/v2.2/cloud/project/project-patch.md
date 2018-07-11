@@ -55,7 +55,7 @@ The environment variable `ADMIN_EMAIL` is required for upgrading and patching. T
 Verify other changes you're going to submit to source control before you start the upgrade:
 
 1.  If you haven't done so already, change to your project root directory.
-2.  Enter the following command:
+2.  输入下面的命令：
 
         git status
 3.  If there are changes you do *not* want to submit to source control, branch or stash them now.
@@ -86,7 +86,7 @@ If multiple patches are installed, they are applied in order by name. The name o
 ## Test general patches {#cloud-patch-gen}
 *General patches* are provided for all Magento Commerce customers in a repository referenced in your `composer.json`. We apply patches automatically during the build phase when a patch is available. The procedure discussed in this section enables to you test a patch locally anytime you choose.
 
-### Get started {#gen-getstarted}
+### 起步 {#gen-getstarted}
 We recommend testing patches in an active branch, prior to deploying to Staging and Production environment.
 
 {% include cloud/cli-get-started.md %}
@@ -157,7 +157,7 @@ After you've successfully tested a patch locally and on your Integration environ
 ## Test custom patches {#cloud-patch-custom}
 *Custom patches* are provided to specific customers in a Support ticket. Before you continue, make sure the patch file we provided you is available.
 
-### Get started {#custom-getstarted}
+### 起步 {#custom-getstarted}
 We recommend you test a patch locally in an active branch. After completing testing, you can push the branch to Staging and Production.
 
 {% include cloud/cli-get-started.md %}

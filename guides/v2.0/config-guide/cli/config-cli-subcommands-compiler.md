@@ -25,7 +25,7 @@ This section discusses the basics of code compilation. Code compilation consists
 -   Application code generation (factories, proxies, and so on)
 -   Area configuration aggregation (that is, optimized {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configurations per area)
 -   Interceptor generation (that is, optimized code generation of interceptors)</li>
--   Interception {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} generation
+-   Interception {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} generation
 -   Repositories code generation (that is, generated code for APIs)
 -   Service data attributes generation (that is, generated {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} classes for data objects)
 
@@ -103,7 +103,7 @@ The following table discusses the meanings of this command's parameters and valu
 	</tbody>
 </table>
 
-For example, to run the compiler and specify the `igbinary` serializer:
+例如， to run the compiler and specify the `igbinary` serializer:
 
 	bin/magento setup:di:compile-multi-tenant --serializer=igbinary
 

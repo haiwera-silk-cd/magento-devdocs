@@ -36,7 +36,7 @@ We use [Markdown](http://daringfireball.net/projects/markdown/){:target="\_blank
     -   Define the goal of your topic. What exactly do you want to teach the reader?
     -   Make the title of your topic reflect the content.
     -   Keep your sentences concise and try to separate conceptual information from procedural steps.
-    -   Remember to use active voice (not passive), write in the present tense, and use a friendly tone in second person. For example, _"You can now view the output..."_.
+    -   Remember to use active voice (not passive), write in the present tense, and use a friendly tone in second person. 例如， _"You can now view the output..."_.
     -   Use notes to alert readers about important details.
     -   Use cross-references to other topics if appropriate. We can help you with the syntax if it is not clear. The template provides an example you can use.
 

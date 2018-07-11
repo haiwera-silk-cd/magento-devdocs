@@ -22,7 +22,7 @@ In Magento out of the box, when you navigate to **CONTENT** > **Design** > **Con
 <img src="{{ site.baseurl }}/common/images/design_conf1.png">
 
 When you click **Edit** in any of the scope records, the page with available design options is displayed.
-For example, the default set of design options for the {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}store view{% endglossarytooltip %} level is the following:
+例如， the default set of design options for the {% glossarytooltip ca5a9ff1-8182-4fc4-a34b-9b3f831dbf3f %}store view{% endglossarytooltip %} level is the following:
 
 <img src="{{ site.baseurl }}/common/images/design_conf2.png" alt="Design Configuration page">
 
@@ -42,7 +42,7 @@ To customize the grid view, take the following steps:
 
 1. In the `<your_module_dir>/view/adminhtml/ui_component` directory, add the empty `design_config_listing.xml`.
 
-3. In the `design_config_listing.xml` file, create a <listing></listing> element to in which to add your customizations. For example, if you want to rename the column displaying the selected theme, your grid configuration must contain the following:
+3. In the `design_config_listing.xml` file, create a <listing></listing> element to in which to add your customizations. 例如， if you want to rename the column displaying the selected theme, your grid configuration must contain the following:
 
 {%highlight xml%}
 
@@ -123,7 +123,7 @@ Your custom fields and field sets will be available for all configuration scopes
 
 Your `design_config_form.xml` is merged with the same files from the other modules. So there is no need to copy their content, you only need to add your customizations.
 
-To customize an existing entity, declare only those options, the values of which are customized, do not copy its entire configuration. For example, if you only want to rename the **Other Settings** field set, your form configuration must contain the following:
+To customize an existing entity, declare only those options, the values of which are customized, do not copy its entire configuration. 例如， if you only want to rename the **Other Settings** field set, your form configuration must contain the following:
 
 {%highlight xml%}
 <?xml version="1.0" encoding="UTF-8"?>

@@ -37,7 +37,7 @@ To install a theme manually:
 
 ## 安装一个主题 as composer package
 
-To install the theme as composer package, follow the instructions in the [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html) topic.
+To install the theme as composer package, follow the instructions in the [安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html) topic.
 
 ## 安装一个主题 as an extension
 

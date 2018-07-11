@@ -80,7 +80,7 @@ cataloginventory_stock (Stock)	| `Magento/CatalogInventory/etc/di.xml`	| `Magent
 catalog_category_product (Category Products)| `Magento/Catalog/etc/di.xml`	| `Magento\Catalog\Model\Indexer\Category\Product\Action\Full` |	batchRowsCount	| 100000
 catalog_product_attribute (Product Attribute)| `Magento/Catalog/etc/di.xml` | `Magento\Catalog\Model\ResourceModel\Product\Indexer\Eav\BatchSizeCalculator` | batchSizes['decimal'], batchSizes['source'] | 1000, 1000
 
-Changing the batch size can help you optimize indexer running time. For example, for a store with the following characteristcs:
+Changing the batch size can help you optimize indexer running time. 例如， for a store with the following characteristcs:
 
 * 10 websites
 * 10 store groups
@@ -116,7 +116,7 @@ The following examples illustrate how to define a custom batch size for configur
 
 ## Indexer Table Switching
 
-Magento optimizes certain indexer processes to prevent deadlocks and wait locks caused by read/write collisions on the same table. In these cases, Magento uses separate tables for performing read operations and reindexing. As a result of this table switching process, customers are not impacted when you run a full reindex. For example, when `catalog_product_price` is reindexing, customers won't be slowed down as they navigate on Categories pages, search products, or user layer navigation filters with price filters.
+Magento optimizes certain indexer processes to prevent deadlocks and wait locks caused by read/write collisions on the same table. In these cases, Magento uses separate tables for performing read operations and reindexing. As a result of this table switching process, customers are not impacted when you run a full reindex. 例如， when `catalog_product_price` is reindexing, customers won't be slowed down as they navigate on Categories pages, search products, or user layer navigation filters with price filters.
 
 Magento uses the following tables to support table switching.
 

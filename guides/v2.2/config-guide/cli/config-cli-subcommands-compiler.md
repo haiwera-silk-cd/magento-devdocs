@@ -16,7 +16,7 @@ Code compilation includes the following (in no particular order):
 -   Application code generation (factories, proxies)
 -   Area configuration aggregation (optimized {% glossarytooltip 2be50595-c5c7-4b9d-911c-3bf2cd3f7beb %}依赖注入{% endglossarytooltip %} configurations per area)
 -   Interceptor generation (optimized code generation of interceptors)
--   Interception {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} generation
+-   Interception {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} generation
 -   Repositories code generation (generated code for APIs)
 -   Service data attributes generation (generated {% glossarytooltip 55774db9-bf9d-40f3-83db-b10cc5ae3b68 %}扩展{% endglossarytooltip %} classes for data objects)
 

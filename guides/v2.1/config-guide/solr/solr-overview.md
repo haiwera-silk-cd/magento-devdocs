@@ -172,7 +172,7 @@ To install Java 7, enter the following command as a user with <code>root</code> 
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 Java version 7 might not be available for all operating systems.
-For example, you can search the list of available packages for Ubuntu [here](http://packages.ubuntu.com/){:target="_blank"}.
+例如， you can search the list of available packages for Ubuntu [here](http://packages.ubuntu.com/){:target="_blank"}.
 </div>
 
 To install JDK 1.8 on Ubuntu, see [Oracle documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html){:target="_blank"}.

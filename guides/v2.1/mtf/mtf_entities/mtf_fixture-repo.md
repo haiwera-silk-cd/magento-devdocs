@@ -427,7 +427,7 @@ The preceding is an example of repository merging. Using the approach from the e
 
 ### Data set replacement {#dataset-replacement}
 
-You can modify your data set without changing the name of the data set. Simply use a `replace` attribute. For example,
+You can modify your data set without changing the name of the data set. Simply use a `replace` attribute. 例如，
  
  {%highlight xml%}
  
@@ -558,7 +558,7 @@ During the test run these fields are filled with values from `credentials.xml`.
 
 ### 示例 with replacement by <code>replace</code> {#mtf_repo_credent_replace}
 
-For example, you have the following credentials in `credentials.xml`:
+例如， you have the following credentials in `credentials.xml`:
 
 {%highlight xml%}
 

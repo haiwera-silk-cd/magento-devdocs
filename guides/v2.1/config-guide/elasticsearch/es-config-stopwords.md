@@ -38,7 +38,7 @@ For more information about how Elasticsearch uses stopwords, see the following r
 ## Configure stopwords {#config-stopwords}
 Elasticsearch stopwords are located in the `<your Magento install dir>/vendor/magento/module-elasticsearch/etc/stopwords` directory. Magento ships with one `.csv` file containing stopwords for our default locales and an additional file, `stopwords.csv`, which has stopwords for any locale that is not represented by another `.csv` file.
 
-The default lifetime for stopwords file {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} is 15 minutes.
+The default lifetime for stopwords file {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} is 15 minutes.
 
 See one of the following topics for more information:
 
@@ -51,7 +51,7 @@ To edit stopwords:
 1.	Log in to your Magento server, or switch to the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
 2.	Use a text editor to open a stopword file in the `<your Magento install dir>/vendor/magento/module-elasticsearch/etc/stopwords` directory.
 
-	`.csv` files use the naming convention `stopwords_<locale_code>.csv`. For example, the German stopword file is named `stopwords_de_DE.csv`.
+	`.csv` files use the naming convention `stopwords_<locale_code>.csv`. 例如， the German stopword file is named `stopwords_de_DE.csv`.
 3.	Add words, remove words, or change words in the file.
 
 	(Each stopword in a file starts on a new line.)
@@ -71,7 +71,7 @@ To add stopwords for a locale:
 1.	Log in to your Magento server, or switch to, the [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner).
 2.	Use a text editor to create a stopword file named `stopwords_<locale_code>.csv` in the `<your Magento install dir>/vendor/magento/module-elasticsearch/etc/stopwords` directory.
 
-	For example, to create stopwords for the Italian locale, name the file `stopwords_it_IT.csv`.
+	例如， to create stopwords for the Italian locale, name the file `stopwords_it_IT.csv`.
 
 3.	In your stopword file, make sure each stopword is on a separate line.
 4.	Save your changes and exit the text editor.
@@ -80,7 +80,7 @@ To add stopwords for a locale:
 
 	    <LOCALE_CODE>stopwords_LOCALE_CODE.csv</LOCALE_CODE>
 
-    For example, to add an Italian stopword file, add the following line:
+    例如， to add an Italian stopword file, add the following line:
 
 	    <it_IT>stopwords_it_IT.csv</it_IT>
 7.	Save the changes to `esconfig.xml` and exit the text editor.

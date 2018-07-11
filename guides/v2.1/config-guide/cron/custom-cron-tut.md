@@ -36,7 +36,7 @@ If you already have a sample module, you can use it; skip this step and the next
 2.  Change to a directory that is not in your Magento application root (for example, your home directory).
 2.  Clone the [`magento2-samples` repository](https://github.com/magento/magento2-samples){:target="_blank"}.
 
-    For example,
+    例如，
 
         cd ~
         git clone git@github.com:magento/magento2-samples.git

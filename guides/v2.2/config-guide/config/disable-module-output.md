@@ -14,7 +14,7 @@ functional_areas:
 
 By default, all modules are configured so that a module's output can be written to a view. Turning off output offers a way to essentially disable a module that can't be disabled due to hard dependencies.
 
-For example, the `Customer` module depends on the `Review` module, so the `Review` module can't be disabled. However, if you don't want customers to be able to provide reviews, you could turn off output from the `Review` module.
+例如， the `Customer` module depends on the `Review` module, so the `Review` module can't be disabled. However, if you don't want customers to be able to provide reviews, you could turn off output from the `Review` module.
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
 If a merchant used the Admin to disable a module's output in a previous release, you must manually configure the system to migrate these settings.

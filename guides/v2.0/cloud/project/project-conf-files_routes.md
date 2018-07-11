@@ -37,7 +37,7 @@ magento-cloud environment:routes
 ```
 
 ## Route templates {#cloud-yaml-routes-temp}
-The `routes.yaml` file is a list of templated routes and their configurations. A route template looks similar to this: `http://www.{default}/`或`https://{default}/blog`, where `{default}` is the qualified domain name configured for the project. For example, the routes for `example.com` domain resolve to the following:
+The `routes.yaml` file is a list of templated routes and their configurations. A route template looks similar to this: `http://www.{default}/`或`https://{default}/blog`, where `{default}` is the qualified domain name configured for the project. 例如， the routes for `example.com` domain resolve to the following:
 
 -  `http://www.example.com/`
 -  `https://example.com/blog`
@@ -48,7 +48,7 @@ The `routes.yaml` file is a list of templated routes and their configurations. A
 [branch]-[project-id].[region].magentosite.cloud
 ```
 
-For example, if the project ID is `mswy7hzcuhcjw` on a branch called `refactorcss` hosted in the `us` cluster, the domains are: 
+例如， if the project ID is `mswy7hzcuhcjw` on a branch called `refactorcss` hosted in the `us` cluster, the domains are: 
 
 -  `http://www-refactorcss-mswy7hzcuhcjw.us.magentosite.cloud/`
 -  `https://refactorcss-mswy7hzcuhcjw.us.magentosite.cloud/blog`
@@ -92,7 +92,7 @@ The following sample route does not redirect from the `www` to the naked domain;
 In the first sample, the server responds directly to a request of the form `http://example.com/hello`, but it issues a _301 redirect_ for `http://www.example.com/mypath` (to `http://example.com/mypath`).
 
 ## Wildcard routes {#cloud-yaml-routes-sample-wild}
-{{site.data.var.ece}} supports wildcard routes, so you can map multiple subdomains to the same application. This works for {% glossarytooltip 510de766-1ebd-4546-bf38-c618c9c945d2 %}redirect{% endglossarytooltip %} and upstream routes. You prefix the route with an asterisk (\*). For example, the following routes to the same application:
+{{site.data.var.ece}} supports wildcard routes, so you can map multiple subdomains to the same application. This works for {% glossarytooltip 510de766-1ebd-4546-bf38-c618c9c945d2 %}redirect{% endglossarytooltip %} and upstream routes. You prefix the route with an asterisk (\*). 例如， the following routes to the same application:
 
 -  `*.example.com`
 -  `www.example.com`
@@ -106,7 +106,7 @@ You can route to a system that is not mapped to a domain using the dot (\.) to s
 
 {% include note.html type="info" content="Projects provisioned before December 8, 2017, use the triple dash (\-\-\-) as a separator for the subdomain." %}
 
-For example, a project with the `vmwklxcpbi6zq` ID and an `add-theme` branch routes to `http://add-theme-vmwklxcpbi6zq.us.magento.com/`.
+例如， a project with the `vmwklxcpbi6zq` ID and an `add-theme` branch routes to `http://add-theme-vmwklxcpbi6zq.us.magento.com/`.
 
 If you define a `http://www.{default}/` route, the route becomes `http://www.add-theme-vmwklxcpbi6zq.us.magento.com/`.
 

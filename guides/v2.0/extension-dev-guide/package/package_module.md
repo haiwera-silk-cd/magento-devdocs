@@ -169,7 +169,7 @@ A private repository can be used for development or private code but installatio
 
 1. Set up your own Composer packaging repository using a system such as [Satis](https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md) or [Private Packagist](https://packagist.com/).
 2. Create the package in a way similar to the described above.
-3. Submit/register the package on your own repository. For example, it can be hosted as a reference to a code repository or submitted as a zip-archive.
+3. Submit/register the package on your own repository. 例如， it can be hosted as a reference to a code repository or submitted as a zip-archive.
 4. To use the private packaging repository in a project, add the following to your `composer.json`file:
 
 {% highlight JSON %}

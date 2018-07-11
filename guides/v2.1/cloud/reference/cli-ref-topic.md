@@ -50,7 +50,7 @@ magento-cloud environment:list
 The `magento-cloud environment:list` command displays environment hierarchies, whereas `git branch` does not. If you have any nested environments, use the `magento-cloud environment:list` command.
 
 ## Git commands
-You may notice that some of these commands are similar to Git commands. The `magento-cloud` Git commands directly connect to the Magento Git-based Cloud project with additional features. For example, when you push a Git branch, it is not activated until you access GitHub. The Magento CLI command includes activation.
+You may notice that some of these commands are similar to Git commands. The `magento-cloud` Git commands directly connect to the Magento Git-based Cloud project with additional features. 例如， when you push a Git branch, it is not activated until you access GitHub. The Magento CLI command includes activation.
 
 #### To push an empty commit and force a redeployment:
 

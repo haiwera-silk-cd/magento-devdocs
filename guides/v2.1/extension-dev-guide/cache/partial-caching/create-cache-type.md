@@ -43,7 +43,7 @@ You must specify the following parameters:
 You can get more information about caching by looking at the code.
 We suggest you locate classes that extend [Magento\Framework\Cache\Frontend\Decorator\TagScope][tagscope].
 
-For example, look at [Magento\Eav\Model\Cache\Type][type] to understand more about the EAV cache type.
+例如， look at [Magento\Eav\Model\Cache\Type][type] to understand more about the EAV cache type.
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Please help us improve this topic by suggesting details using the <strong>Edit this page in GitHub</strong> link at the top of the page. </p>

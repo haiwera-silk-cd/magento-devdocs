@@ -67,7 +67,7 @@ To install a theme manually:
 	The theme displays in the right pane.
 
 ## 安装一个主题 using Composer {#composer}
-Installing a theme using Composer is the same as installing any other extension using Composer. See [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html) for details.
+Installing a theme using Composer is the same as installing any other extension using Composer. See [安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html) for details.
 
 To summarize the procedure:
 
@@ -77,7 +77,7 @@ To summarize the procedure:
 
         composer require <vendor>/<name>:<version>
 
-    For example,
+    例如，
 
         composer require zero1/theme-fashionista-theme:1.0.0
 4.  Wait for dependencies to update.
@@ -91,4 +91,4 @@ To summarize the procedure:
     The theme displays in the right pane.
 
 #### 相关主题
-*	[Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
+*	[安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html)

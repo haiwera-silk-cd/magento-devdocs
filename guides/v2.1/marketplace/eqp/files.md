@@ -15,7 +15,7 @@ Use `files` resources to manage all code artifacts and assets associated with an
 
 Each file upload receives a unique ID. You must associate these IDs with your submission later using the [packages API]({{ page.baseurl }}/marketpalce/eqp/packages.html).
 
-You can associate a file with multiple products. This allows for asset sharing across different packages. For example, you can share an image file for a gallery with different packages by associating it with the same file upload ID.
+You can associate a file with multiple products. This allows for asset sharing across different packages. 例如， you can share an image file for a gallery with different packages by associating it with the same file upload ID.
 
 All files that you upload are inspected for malware. We only accept packages if all of its associated files have passed the malware inspection.
 
@@ -123,7 +123,7 @@ Content-Type: application/pdf
 * The body of each part is the full contents of the raw file.
 </div>
 
-For example, if you save the previous request body is saved to a temporary file at `/tmp/files-payload`, you can use it in your POST request to upload the file:
+例如， if you save the previous request body is saved to a temporary file at `/tmp/files-payload`, you can use it in your POST request to upload the file:
 
 **Request**
 

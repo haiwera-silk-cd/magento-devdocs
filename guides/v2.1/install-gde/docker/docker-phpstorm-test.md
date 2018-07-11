@@ -41,14 +41,14 @@ To run PHPUnit unit tests from the command line:
 		docker-compose exec --user=magento2 web /bin/bash
 2.	In the Bash shell, change to the directory containing the objects to test.
 
-	For example, to run tests for the Admin notification module, change to the following directory:
+	例如， to run tests for the Admin notification module, change to the following directory:
 
 		cd /var/www/magento2/vendor/magento/module-admin-notification/Test/Unit
 3.	Run PHPUnit as follows:
 
 		<path to phpunit> -c <path to phpunit.xml> .
 
-	For example,
+	例如，
 
 		/var/www/magento2/vendor/bin/phpunit -c /var/www/magento2/dev/tests/unit/phpunit.xml .
 
@@ -85,7 +85,7 @@ To run PHPUnit tests from PhpStorm:
 3.	Right-click the name of the test.
 4.	From the pop-up menu, click **Run &lt;test name>**.
 
-	For example, the following figure shows how to run the SearchDataTest.
+	例如， the following figure shows how to run the SearchDataTest.
 
 	![Run a sample unit test]({{ site.magentourl }}/common/images/install_docker_php-storm_unit-searchdata.png)
 

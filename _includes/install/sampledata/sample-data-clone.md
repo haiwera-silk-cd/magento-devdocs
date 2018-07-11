@@ -12,7 +12,7 @@ Contributing developers can use this method of installing sample data *only* if 
 
 <div class="bs-callout bs-callout-warning">
     <p>You can use sample data with either the <code>develop</code> branch (more current) or a released branch (such as <code>2.0</code>或<code>2.0.1</code> (more stable)). We recommend you use a released branch because it's more stable. If you're contributing code to the Magento 2 repository and you need the most recent code, use the <code>develop</code> branch.</p>
-    <p>Regardless of the branch you choose, you must <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html">clone</a> the corresponding branch of the Magento 2 GitHub repository. For example, sample data for the <code>develop</code> branch can be used <em>only</em> with the Magento 2 <code>develop</code> branch.</p>
+    <p>Regardless of the branch you choose, you must <a href="{{ page.baseurl }}/install-gde/prereq/dev_install.html">clone</a> the corresponding branch of the Magento 2 GitHub repository. 例如， sample data for the <code>develop</code> branch can be used <em>only</em> with the Magento 2 <code>develop</code> branch.</p>
 </div>
 
 See the following sections:
@@ -86,7 +86,7 @@ To clone the Magento sample data GitHub repository using the HTTPS protocol:
 
         php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
 
-    For example,
+    例如，
 
         php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="/var/www/magento2"
 

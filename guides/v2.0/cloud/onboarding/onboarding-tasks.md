@@ -58,7 +58,7 @@ We provide an {{site.data.var.ece}} environment and service status site. Anyone 
 
 The site location is [https://status.magento.cloud/](https://status.magento.cloud/){:target="\_blank"}. Scroll to the bottom and click [Subscribe](http://status.magento.cloud/subscribe){:target="\_blank"} at the bottom of the page. Complete the prompts with your email address and types of notifications you want to receive.
 
-The page lists all component and service status. Any issues, updates, and notices are displayed below these status tables by date. For example, any slow issues, outages, or upgraded services are listed with important information and any updates as available.
+The page lists all component and service status. Any issues, updates, and notices are displayed below these status tables by date. 例如， any slow issues, outages, or upgraded services are listed with important information and any updates as available.
 
 ![All status on the page]({{ site.magentourl }}/common/images/cloud_status.png)
 

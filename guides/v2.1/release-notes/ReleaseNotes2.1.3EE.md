@@ -570,7 +570,7 @@ This release introduces the `Magento\Vault\Block\TokenRendererInterface::getToke
 
 <!---60680-->* **Issue**: You cannot successfully change and save your settings for gift cards. (<i>Settings</i> include "allow open amount" or "open amount minimum".) 
 
-<!---60781-->* **Issue**: Installing with Varnish results in products not appearing on the frontend even after purging the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}. 
+<!---60781-->* **Issue**: Installing with Varnish results in products not appearing on the frontend even after purging the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}. 
 
 <!---60680-->* **Issue**: You cannot successfully edit and save a gift card product. 
 

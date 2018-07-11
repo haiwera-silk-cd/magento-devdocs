@@ -250,7 +250,7 @@ Feel free to use custom exceptions when appropriate.
 
 For maximum portability and compatibility, use standard features whenever possible.
 
-For example, `string.charAt(3)` instead of `string[3]`, and element access with DOM functions instead of using an application-specific shorthand.
+例如， `string.charAt(3)` instead of `string[3]`, and element access with DOM functions instead of using an application-specific shorthand.
 
 ### Method definitions
 

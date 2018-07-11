@@ -42,5 +42,5 @@ To install sample data:
 You can start testing your development with live data!
 
 #### 相关主题
-*	[Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
+*	[安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html)
 *	[Merge and delete an environment]({{ page.baseurl }}/cloud/howtos/environment-tutorial-env-merge.html)

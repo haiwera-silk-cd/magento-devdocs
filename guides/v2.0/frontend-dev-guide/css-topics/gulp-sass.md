@@ -8,7 +8,7 @@ functional_areas:
   - Tools
 ---
 
-By default, Magento uses [Less](http://lesscss.org/) for themes styling. But you can use other stylesheet languages that can be compiled (processed) to CSS. For example, Sass is a popular alternative.
+By default, Magento uses [Less](http://lesscss.org/) for themes styling. But you can use other stylesheet languages that can be compiled (processed) to CSS. 例如， Sass is a popular alternative.
 
 If you decide not to use Less and the default [Magento UI库]({{ page.baseurl }}/frontend-dev-guide/css-topics/theme-ui-lib.html), you need to create your own theme from scratch and use an alternative preprocessor. This topic describes how to configure and use the [Gulp](http://gulpjs.com/) task runner and the gulp-sass package for the Sass preprocessor.
 
@@ -106,6 +106,6 @@ For details about adding a custom preprocessor, see [添加定制css预处理器
 
 ## Using the @import directive in Sass
 
-In the source .`scss` files you can use the `@import` directive, to import other `.scss` files. You can put the module-related stylesheets in the module directories in the theme, and then include them in the main `.scss` file. For example, if you create a `_catalogstls.scss` file for styles of the `Magento_Catalog` module and put it in `app/design/frontend/<Vendor>/<theme>/Magento_Catalog/styles `, you can import it using the following notation:
+In the source .`scss` files you can use the `@import` directive, to import other `.scss` files. You can put the module-related stylesheets in the module directories in the theme, and then include them in the main `.scss` file. 例如， if you create a `_catalogstls.scss` file for styles of the `Magento_Catalog` module and put it in `app/design/frontend/<Vendor>/<theme>/Magento_Catalog/styles `, you can import it using the following notation:
 
     @import '../Magento_Theme/styles/module

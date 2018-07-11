@@ -42,7 +42,7 @@ If you're attempting to [override Magento configuration settings](http://devdocs
 
 Since values can change over time, you should inspect the variable at runtime and use it to configure your application.
 
-For example, we use the **MAGENTO_CLOUD_RELATIONSHIPS** variable to retrieve environment-related relationships as follows:
+例如， we use the **MAGENTO_CLOUD_RELATIONSHIPS** variable to retrieve environment-related relationships as follows:
 
 ```php?start_inline=1
  /**

@@ -54,7 +54,7 @@ Add the extension's name and version to your `composer.json` file:
 
 		composer require <component-name>:<version>
 
-	For example,
+	例如，
 
 		composer require j2t/module-payplug:2.0.2
 

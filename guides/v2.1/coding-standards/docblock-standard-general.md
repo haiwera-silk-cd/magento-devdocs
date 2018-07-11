@@ -509,7 +509,7 @@ If the method returns itself, `return $this` should be used.
 
 Constants must have short description.
 
-For example, a global constant:
+例如， a global constant:
 
 
 {% highlight php startinline=true %}
@@ -743,7 +743,7 @@ If there are two or more tags together in one DocBlock, their values may be padd
 
 In a given DocBlock, style of formatting must be consistent.
 
-For example, padding for visual alignment can be done in two ways consistently:
+例如， padding for visual alignment can be done in two ways consistently:
 
 **Correct – align everything:**
 

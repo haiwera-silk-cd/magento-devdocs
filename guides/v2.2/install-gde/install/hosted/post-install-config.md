@@ -39,7 +39,7 @@ If you use the Apache web server, you must enable server rewrites for pages to d
 ## Caching in a multi-webnode environment {#config-redis}
 If you have multiple webnodes, you *cannot* use Magento's default file caching because there is no synchronization between webnodes. In other words, activity on one webnode is written to that webnode's file system only. Subsequent activity, if performed on another webnode, can result in unnecessary files being written or can result in errors.
 
-Instead, use [Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html) for both the default {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} and the page cache.
+Instead, use [Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html) for both the default {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} and the page cache.
 
 <h2 id="post-install-server">Server settings</h2>
 This section briefly discusses settings we recommend you consider for the server on which Magento runs. Some of these settings are not directly related to Magento; these are provided as suggestions only.
@@ -56,7 +56,7 @@ For more information, see one of the following:
 
 #### Set up iptables rules to enable various Magento services to communicate.
 
-Whether you have one server or many, you must open ports in the firewall to enable Magento services to communicate. For example, if you use the Solr search engine with {{site.data.var.ee}}, you must enable it to communicate with the web server. If you have multiple web nodes, you must enable them to communicate with each other.
+Whether you have one server or many, you must open ports in the firewall to enable Magento services to communicate. 例如， if you use the Solr search engine with {{site.data.var.ee}}, you must enable it to communicate with the web server. If you have multiple web nodes, you must enable them to communicate with each other.
 
 更多请参考:
 

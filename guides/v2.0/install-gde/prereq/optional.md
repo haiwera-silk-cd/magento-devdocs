@@ -45,7 +45,7 @@ To install and configure NTP:
 
 	<pre>yum search ntp</pre>
 
-2.	Select a package to install. For example, <code>ntp.x86_64</code>.
+2.	Select a package to install. 例如， <code>ntp.x86_64</code>.
 
 2.	Install the package.
 
@@ -169,7 +169,7 @@ To install phpmyadmin on CentOS:
 
 		Require ip localhost
 
-	For example,
+	例如，
 
 		Require ip 192.51.100.101
 
@@ -177,7 +177,7 @@ To install phpmyadmin on CentOS:
 
 		Allow from localhost
 
-	For example,
+	例如，
 
 		Allow from 192.51.100.101
 

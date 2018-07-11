@@ -34,7 +34,7 @@ Description
 <td>
 <p>The <code>.less</code> files from which the <code>.css</code> files <a href="{{ page.baseurl }}/frontend-dev-guide/css-topics/css-themes.html" target="_blank">included in layout</a> are compiled.
 
-For example, in one of the <a href="https://github.com/magento/magento2/blob/2.2/app/design/frontend/Magento/blank/Magento_Theme/layout/default_head_blocks.xml" target="_blank">layout files of the Magento Blank theme</a>, the following <code>.css</code> files are included:
+例如， in one of the <a href="https://github.com/magento/magento2/blob/2.2/app/design/frontend/Magento/blank/Magento_Theme/layout/default_head_blocks.xml" target="_blank">layout files of the Magento Blank theme</a>, the following <code>.css</code> files are included:
 
 <pre>
     &lt;head&gt;
@@ -177,7 +177,7 @@ To clear the <code>pub/static/frontend/&lt;Vendor&gt;/&lt;theme&gt;/&lt;locale&g
 
 ## The `@import` directive rules of usage {#fedg_css-import}
 You can import local and remote `.less` and `.css` files in your `.less` Magento stylesheets by using the standard LESS [`@import` directive](http://lesscss.org/features/#import-directives-feature).
-According to the `@import` syntax, specifying the file extension for the imported file is not mandatory. For example, the following notation is allowed:
+According to the `@import` syntax, specifying the file extension for the imported file is not mandatory. 例如， the following notation is allowed:
 
 {%highlight css%}
 @import 'source/lib/_lib';
@@ -195,7 +195,7 @@ As a result, the processed files are different from the source files. So in the 
 
 ### Importing remote CSS files
 
-If you need to import a remote CSS file in your `.less` source, use `url()` notation. For example, to import a Google font, use the following notation:
+If you need to import a remote CSS file in your `.less` source, use `url()` notation. 例如， to import a Google font, use the following notation:
 
 {%highlight css%}
 @import url('//fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600.css');

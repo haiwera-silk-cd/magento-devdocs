@@ -78,7 +78,7 @@ The following variables are available during the deploy process of build and dep
 </tr>
 <tr>
 <td><code>STATIC_CONTENT_EXCLUDE_THEMES</code></td>
-<td>Themes can include numerous files. If you want to skip copying over theme files during deployment, you can set this environment variable. For example, the Luma theme is included with {{site.data.var.ece}}. You may not need to constantly deploy this theme with your code updates and deployments. To exclude, you would add the theme, for example: <code>Magento/luma</code>. This is available in all versions.</td>
+<td>Themes can include numerous files. If you want to skip copying over theme files during deployment, you can set this environment variable. 例如， the Luma theme is included with {{site.data.var.ece}}. You may not need to constantly deploy this theme with your code updates and deployments. To exclude, you would add the theme, for example: <code>Magento/luma</code>. This is available in all versions.</td>
 <td>not set</td>
 </tr>
 <tr>
@@ -102,7 +102,7 @@ The following variables are available during the deploy process of build and dep
 </tr>
 <tr>
 <td><code>MAGENTO_CLOUD_MODE</code></td>
-<td>We manage the values and setting of this variable. It identifies the type of environment as part of Integration, Staging, or Production. For example, for Pro, this value may be <code>enterprise</code> indicating Staging and Production. For <code>enterprise</code>, it sets the <code>STATIC_CONTENT_THREADS</code> to 3, otherwise sets it to 1 for Integration. This is highly important for Pro plans Production, which has a three node high availability architecture with a very different technology stack. This is available in all versions.</td>
+<td>We manage the values and setting of this variable. It identifies the type of environment as part of Integration, Staging, or Production. 例如， for Pro, this value may be <code>enterprise</code> indicating Staging and Production. For <code>enterprise</code>, it sets the <code>STATIC_CONTENT_THREADS</code> to 3, otherwise sets it to 1 for Integration. This is highly important for Pro plans Production, which has a three node high availability architecture with a very different technology stack. This is available in all versions.</td>
 <td>enterprise</td>
 </tr>
 <tr>
@@ -154,9 +154,9 @@ Every time you add or modify a variable using the web interface or the CLI, the 
 To create a variable using the command line:
 
 1. Login to the Magento Cloud CLI. Enter the command `magento-cloud login` and provide your credentials.
-2. To set a variable for the project, use the command `magento-cloud project:variable:set <name> <value>`. The alias for this command is also `pvset`. For example, `magento-cloud pvset example 123` creates a variable example with a string value of 123 for the project.
+2. To set a variable for the project, use the command `magento-cloud project:variable:set <name> <value>`. The alias for this command is also `pvset`. 例如， `magento-cloud pvset example 123` creates a variable example with a string value of 123 for the project.
 3. After creating these variables, you can list all project variables with the command `magento-cloud project:variable:get`或`magento-cloud pvget`.
-4. To set a variable for the branch, use the command `magento-cloud variable:set <name> <value>`. The alias for this command is also `vset`. For example, `magento-cloud vset example2 abc` creates a variable example2 with a string value of abc for the branch.
+4. To set a variable for the branch, use the command `magento-cloud variable:set <name> <value>`. The alias for this command is also `vset`. 例如， `magento-cloud vset example2 abc` creates a variable example2 with a string value of abc for the branch.
 5. After creating these variables, you can list all project variables with the command `magento-cloud variable:get`或`magento-cloud vget`.
 
 ## 故障排除 {#cloud-env-vars-tshoot}

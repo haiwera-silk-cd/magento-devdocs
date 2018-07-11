@@ -20,7 +20,7 @@ Use `curl` or another utility to view HTTP response headers when you visit any M
 
 First, make sure you are using Magento's [开发者模式]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-mode.html#config-mode-change); otherwise, you won't see the headers.
 
-For example,
+例如，
 
 	curl -I -v --location-trusted 'http://192.0.2.55/magento2'
 
@@ -39,7 +39,7 @@ If Varnish is working, any Magento page with cacheable blocks should load in les
 
 Use a browser inspector to measure page load times.
 
-For example, to use the Chrome inspector:
+例如， to use the Chrome inspector:
 
 1.	Access any cacheable Magento page in Chrome.
 2.	Right-click anywhere on the page.
@@ -61,7 +61,7 @@ For example, to use the Chrome inspector:
 Make sure the `<your Magento install dir>/var/page_cache` directory is empty:
 
 1.	Log in to your Magento server, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
-2.	Enter the following command:
+2.	输入下面的命令：
 
 		rm -rf <your Magento install dir>/var/page_cache/*
 

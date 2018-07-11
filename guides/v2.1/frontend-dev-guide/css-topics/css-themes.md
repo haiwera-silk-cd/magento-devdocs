@@ -84,7 +84,7 @@ Your custom <code>default_head_blocks.xml</code> should be located as follows:
 
 <p>To include a CSS file, add the <code>&lt;css src=&quot;&lt;path&gt;/&lt;file&gt;&quot; media=&quot;print|&lt;option&gt;&quot;/&gt;</code> block in <code>&lt;head&gt;</code> section in a layout file. <code>&lt;path&gt;</code> is specified relative to the theme web directory (<code>&lt;theme_dir&gt;/web</code>)
 
-For example, the following illustrates how stylesheets are included in the default Blank theme: </p>
+例如， the following illustrates how stylesheets are included in the default Blank theme: </p>
 
 <p><a href="{{ site.mage2000url }}app/design/frontend/Magento/blank/Magento_Theme/layout/default_head_blocks.xml" target="_blank"><code>&lt;Magento_Blank_theme_dir&gt;/Magento_Theme/layout/default_head_blocks.xml</code></a></p>
 

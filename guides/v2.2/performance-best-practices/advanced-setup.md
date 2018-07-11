@@ -30,7 +30,7 @@ To manage this setting, edit the `batchRowsCount` parameter in the `di.xml` file
 
 You can tune indexer performance by adjusting the index batching size variables. This controls how many entities are processed at a time by the indexer. In some situations, we have seen significant decreases in indexing time.
 
-For example, if you are running a profile similar to B2B Medium, you can override the configuration value `batchRowsCount` in `app/code/Magento/catalog/etc/di.xml` and override the default value of `5000` to `1000`. This reduces the full indexing time from 4 hours down to 2 hours with a default MySQL configuration.
+例如， if you are running a profile similar to B2B Medium, you can override the configuration value `batchRowsCount` in `app/code/Magento/catalog/etc/di.xml` and override the default value of `5000` to `1000`. This reduces the full indexing time from 4 hours down to 2 hours with a default MySQL configuration.
 
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">

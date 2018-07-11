@@ -68,7 +68,7 @@ The logo you add here is stored in the `/pub/media/logo/default/` directory.
 </div>
 
 ## Clear the cache {#theme-apply-clear}
-If caching is enabled in Magento Admin, you must clear the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} after you apply the theme, add a design exception, add a logo, and perform other tasks.
+If caching is enabled in Magento Admin, you must clear the {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} after you apply the theme, add a design exception, add a logo, and perform other tasks.
 
 A system message notifies you that invalidated cache types must be refreshed.
 

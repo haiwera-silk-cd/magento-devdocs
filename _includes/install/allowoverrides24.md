@@ -10,7 +10,7 @@
 <pre>a2enmod rewrite</pre></li>
 <li>To enable Magento to use the distributed configuration file <code>.htaccess</code>see the guidelines in the <a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">Apache 2.4 documentation</a>.<br/>
 	Note that in Apache 2.4, the server's default site configuration file is <code>/etc/apache2/sites-available/000-default.conf</code><br>
-	For example, you can add the following to the end of <code>000-default.conf</code>:<br/>
+	例如， you can add the following to the end of <code>000-default.conf</code>:<br/>
 	<pre>
 &lt;Directory "/var/www/html">
 	AllowOverride  &lt;value from Apache site>
@@ -26,5 +26,5 @@
 <div class="bs-callout bs-callout-info" id="info">
 	<span class="glyphicon-class">
 	<ul><li>If you upgraded from an earlier Apache version, first look for <code>&lt;Directory "/var/www/html"></code>或<code>&lt;Directory "/var/www"></code> in <code>000-default.conf</code>.</li>
-	<li>You must change the value of <code>AllowOverride</code> in the directive for the directory to which you expect to install the Magento software. For example, to install in the web server docroot, edit the directive in <code>&lt;Directory /var/www></code>.</li></ul></span>
+	<li>You must change the value of <code>AllowOverride</code> in the directive for the directory to which you expect to install the Magento software. 例如， to install in the web server docroot, edit the directive in <code>&lt;Directory /var/www></code>.</li></ul></span>
 </div>

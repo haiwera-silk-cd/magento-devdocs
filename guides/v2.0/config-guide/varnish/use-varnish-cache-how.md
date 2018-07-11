@@ -31,7 +31,7 @@ In addition, Varnish uses an {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5a
 More detail is provided in the sections that follow.
 
 <h2 id="config-varnish-cache-browser">Caching by browser request</h2>
-This section uses a browser inspector to show how assets are delivered to the browser in the first request and afterward loaded from the browser's local {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %}.
+This section uses a browser inspector to show how assets are delivered to the browser in the first request and afterward loaded from the browser's local {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %}.
 
 <h3 id="config-varnish-cache-browser-first">First browser request</h3>
 `nginx.conf.sample` and `.htaccess` provide options for client caching. When the first request is made from a browser for a cacheable object, Varnish delivers it to the client.

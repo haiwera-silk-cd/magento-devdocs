@@ -206,7 +206,7 @@ To see if you're currently running Jetty and to check the version, see <a href="
 <pre>apt-get install openjdk-6-jdk</pre>
 <p>To install Java 7, enter the following command as a user with <tt>root</tt> privileges:</p>
 <pre>apt-get install openjdk-7-jdk</pre>
-<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: Java version 7 might not be available for all operating systems. For example, you can search the list of available packages for Ubuntu <a href="http://packages.ubuntu.com/" target="_blank">here</a>.</div>
+<div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: Java version 7 might not be available for all operating systems. 例如， you can search the list of available packages for Ubuntu <a href="http://packages.ubuntu.com/" target="_blank">here</a>.</div>
 
 <h3><a name="install-prereq-solr"></a>Installing Solr 3.6.2 and Jetty</h3>
 <p>The Apache Solr package installs both Solr and Jetty. If Jetty is already installed, see the <a href="http://wiki.apache.org/solr/SolrJetty" target="_blank">Solr with Jetty Wiki</a> for more information.</p>
@@ -249,7 +249,7 @@ Saving to: `apache-solr-3.6.2.tgz'
 <ol><li>As a user with <tt>root</tt> privileges, enter the following commands in the order shown to copy over the Solr configuration with the one packaged with Magento EE:<br><br>
 <pre>cd [your Solr install dir]/example/solr/conf
 cp -R [your Magento install dir]/lib/Apache/Solr/conf/* .</pre><br />
-For example, if Solr is installed in <tt>/etc/solr/apache-solr-3.6.2</tt> and Magento is installed in <tt>/var/www/magento</tt>, enter:<br><br>
+例如， if Solr is installed in <tt>/etc/solr/apache-solr-3.6.2</tt> and Magento is installed in <tt>/var/www/magento</tt>, enter:<br><br>
 <pre>cd /etc/solr/apache-solr-3.6.2/example/solr/conf
 cp -R /var/www/magento/lib/Apache/Solr/conf/* .</pre><br />
 <div class="msg-box important"><img src="{{ site.baseurl }}/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: If you're prompted to overwrite files, try the command <tt>\cp -R [your Magento install dir]/lib/Apache/Solr/conf/* .</tt></div>
@@ -349,12 +349,12 @@ The button changes as follows.<br />
   If you are not sure where <tt>php.ini</tt> is located, you can <a href="http://kb.mediatemple.net/questions/764/How+can+I+create+a+phpinfo.php+page%3F#gs" target="_blank">create a <tt>phpinfo.php</tt> page</a> to locate it.</li>
   <li>Verify the value of the <strong>Solr Server Hostname</strong> field. Make sure the server is available. You can try the server's IP address instead.</li>
   <li>Use the command <tt>netstat -an | grep <em>listen-port</em></tt> command to verify that the port specified in the <strong>Solr Server Port</strong> field is not being used by another process.<br />
-  For example, to see if Solr is running on its default port, use the following command:
+  例如， to see if Solr is running on its default port, use the following command:
   <pre>netstat -an | grep 8983</pre>
   If Solr is running on port 8983, it displays similar to the following:<br />
   <tt>tcp        0      0 :::8983            :::*          LISTEN</tt></li>
   <li>If Solr is installed on a remote machine, use the <tt>ping</tt> command to verify that machine is reachable from your Magento instance.</li>
-  <li>If SELinux is enabled, make sure the Solr servlet container's listen port is available; otherwise, Magento cannot communicate with the servlet container. For example, you can consult the <a href="http://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux Centos wiki</a>.</ul>
+  <li>If SELinux is enabled, make sure the Solr servlet container's listen port is available; otherwise, Magento cannot communicate with the servlet container. 例如， you can consult the <a href="http://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux Centos wiki</a>.</ul>
   </td>
 </tr>
 </tbody>
@@ -450,9 +450,9 @@ The following figure shows an example.<br />
 <img src="{{ site.baseurl }}/common/images/m1x/ht_magento-solr_refresh-fpc.png" height="188px" width="600px"></li>
 <li>To update the catalog search index, open a command prompt window.</li>
 <li>Change to the <tt>shell</tt> subdirectory of your Magento installation directory.<br />
-For example, on CentOS:
+例如， on CentOS:
 <pre>cd /var/www/html/magento/shell</pre></li>
-<li>Enter the following command:
+<li>输入下面的命令：
 <pre>php indexer.php --reindex catalogsearch_fulltext</tt></li>
 </ol>
 
@@ -503,7 +503,7 @@ esac</pre>
 </tr>
 <tr>
   <td class="confluenceTd">[your Solr install dir]</td>
-  <td class="confluenceTd">The absolute file system path to your Solr installation. (For example, <tt>/etc/solr/apache-solr-3.6.2</tt></td>
+  <td class="confluenceTd">The absolute file system path to your Solr installation. (例如， <tt>/etc/solr/apache-solr-3.6.2</tt></td>
 </tr>
 <tr>
   <td class="confluenceTd"><em>jetty-stop-port</em><br />
@@ -515,11 +515,11 @@ esac</pre>
 </tr>
 <tr>
   <td class="confluenceTd"><em>path-to-solr-log-file</em></td>
-  <td class="confluenceTd">Absolute file system path to the Solr log file. (For example, <tt>/var/log/solr.log</tt>)</td>
+  <td class="confluenceTd">Absolute file system path to the Solr log file. (例如， <tt>/var/log/solr.log</tt>)</td>
 </tr>
 <tr>
   <td class="confluenceTd"><em>java_home</em></td>
-  <td class="confluenceTd">Absolute file system path to your Java executable. (For example, <tt>/usr/bin/java</tt>)</td>
+  <td class="confluenceTd">Absolute file system path to your Java executable. (例如， <tt>/usr/bin/java</tt>)</td>
 </tr>
 </tbody>
 </table>

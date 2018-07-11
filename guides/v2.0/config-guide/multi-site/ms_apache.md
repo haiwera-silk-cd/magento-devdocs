@@ -53,7 +53,7 @@ For more information about `SetEnvIf`, see:
 
 1.  As a user with `root` privileges, open the virtual host configuration file in a text editor.
 
-    For example, open `/etc/httpd/conf/httpd.conf`
+    例如， open `/etc/httpd/conf/httpd.conf`
 2. Locate the section starting with `<VirtualHost *:80>`.
 3. Create the following virtual hosts after any existing virtual hosts:
 

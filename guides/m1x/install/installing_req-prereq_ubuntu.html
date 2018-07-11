@@ -97,16 +97,16 @@ ln -s ../mods-available/rewrite.load</pre></li>
 
 <h4 id="apache-rewrites2.4">Enabling Apache Rewrites for Apache 2.4</h4>
 <p>Use this section to enable Apache rewrites and specify <code>.htaccess</code> if you use Apache 2.4, which is supported by the default Ubuntu 14 repository.</p>
-<ol><li>Enter the following command:<br>
+<ol><li>输入下面的命令：<br>
 <pre>a2enmod rewrite</pre></li>
 <li>Specify the type of directives that can be used in <code>.htaccess</code>.<br>
 For guidelines, see the <a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">Apache 2.4 documentation</a>.<br>
 Note that in Apache 2.4, the server's default site configuration file is <code>/etc/apache2/sites-available/000-default.conf</code><br>
-For example, you can add the following to the bottom of <code>000-default.conf</code>:<br>
+例如， you can add the following to the bottom of <code>000-default.conf</code>:<br>
 <pre>&lt;Directory "/var/www">
 AllowOverride [value from Apache site]
 &lt;/Directory></pre>
-<strong>注意</strong>: You must change the value of <code>AllowOverride</code> in the directive for the directory to which you expect to install the Magento software. For example, to install in the web server docroot, edit the directive in <code>&lt;Directory /var/www></code>.</li></ul>
+<strong>注意</strong>: You must change the value of <code>AllowOverride</code> in the directive for the directory to which you expect to install the Magento software. 例如， to install in the web server docroot, edit the directive in <code>&lt;Directory /var/www></code>.</li></ul>
 </li>
 <li>Restart Apache:<br>
 <code>service apache2 restart</code></li></ol>
@@ -116,7 +116,7 @@ AllowOverride [value from Apache site]
 <ul><li>Magento CE 1.6.0.0&ndash;1.8.1.0 and Magento EE 1.11.0.0&ndash;1.13.1.0 support PHP 5.3 natively. They can be used with PHP 5.4 if you apply the <a href="{{ site.m1xgdeurl }}other/php5.4_patch.html" target="_blank">PHP 5.4 patch</a>.</li>
 <li>Magento CE 1.9.0.x and EE 1.14.0.x support PHP 5.4 natively. They are backward-compatible with PHP 5.3</li>
 <li>Magento CE 1.9.1 and EE 1.14.1 support PHP 5.5 natively. They are backward-compatible with PHP 5.4</li></ul>
-<p>We recommend you use the most recent PHP version supported by your version of Magento. For example, you should use PHP 5.5 with CE 1.9.1 or EE 1.14.1.</p>
+<p>We recommend you use the most recent PHP version supported by your version of Magento. 例如， you should use PHP 5.5 with CE 1.9.1 or EE 1.14.1.</p>
 <p>For more information about PHP, see:</p>
 <ul><li><a href="http://php.net/ChangeLog-5.php#5.4.0" target="_blank">PHP 5.4 changelog</a></li>
 <li><a href="http://php.net/ChangeLog-5.php#5.5.0" target="_blank">PHP 5.5 changelog</a></li></ul>
@@ -158,7 +158,7 @@ apt-get upgrade
 apt-get install php5</pre>
 
 <h4 id="php55-installub14">Installing PHP 5.5 on Ubuntu 14</h4>
-<p>Enter the following command:</p>
+<p>输入下面的命令：</p>
 <pre>apt-get -y install php5</pre>
 
 <h3 id="php-extensions">Installing Required PHP Extensions</h3>

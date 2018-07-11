@@ -56,8 +56,8 @@ Magento GraphQL clause | SQL equivalent
 `finset: [1, 2, 3]`	| <code>FINSET(<i>field</i>, '1, 2, 3')</code>
 
 <div class="bs-callout bs-callout-info" id="info" markdown="1">
-* `to` and `from` must always be used together. These condition types can be used in the same search term. For example, `qty: {from: "10" to: "20"}`.
-* `gt` and `lt` can be used in the same search term. For example, `qty: {lt: "10" gt: "20"}`.
+* `to` and `from` must always be used together. These condition types can be used in the same search term. 例如， `qty: {from: "10" to: "20"}`.
+* `gt` and `lt` can be used in the same search term. 例如， `qty: {lt: "10" gt: "20"}`.
 </div>
 
 ## Specifying pagination

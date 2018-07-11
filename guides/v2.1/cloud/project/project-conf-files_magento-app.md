@@ -24,7 +24,7 @@ Use the following properties to build your application configuration file. The `
 ### `name`
 {{site.data.var.ee}} supports multiple applications in a project, so you need a unique name that identifies the application in the project.
 
-The `name` property can consist only of lower case alphanumeric characters, such as `a` to `z` and `0` to `9`. The name is used in the [`routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html) file to define the HTTP upstream (by default, `php:http`). For example, if the value of `name` is `app`, you must use `app:http` in the upstream field. You can also use this name in multi-application relationships.
+The `name` property can consist only of lower case alphanumeric characters, such as `a` to `z` and `0` to `9`. The name is used in the [`routes.yaml`]({{ page.baseurl }}/cloud/project/project-conf-files_routes.html) file to define the HTTP upstream (by default, `php:http`). 例如， if the value of `name` is `app`, you must use `app:http` in the upstream field. You can also use this name in multi-application relationships.
 
 {% include note.html type="info" content="Do not change the name of an application after it has been deployed." %}
 
@@ -81,7 +81,7 @@ Supports the following:
 
 * `document_root`: The path relative to the root of the application that is exposed on the web. Typical values include `/public` and `/web`.
 * `passthru`: The URL used in the event a static file or PHP file could not be found. This would typically be your applications front controller, often `/index.php`或`/app.php`.
-* `index_files`: To use a static file (for example, `index.html`) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. For example, to use a file named `index.html` as an index file, your whitelist should include an element that matches the filename, like `- \.html$`.
+* `index_files`: To use a static file (for example, `index.html`) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. 例如， to use a file named `index.html` as an index file, your whitelist should include an element that matches the filename, like `- \.html$`.
 * `blacklist`: A list of files that should never be executed. Has no effect on static files.
 * `whitelist`: A list of static files (as regular expressions) that can be served. Dynamic files (for example, PHP files) are treated as static files and have their source code served, but they are not executed.
 * `expires`: The number of seconds whitelisted (that is, static) content should be cached by the browser. This enables the cache-control and expires headers for static content. The `expires` directive and resulting headers are left out entirely if this isn't set.
@@ -339,7 +339,7 @@ In your repository, the `php.ini` file should be added to the root of the applic
 Configuring PHP settings improperly can cause issues. We recommend only advanced administrators set these options.
 </div>
 
-For example, if you need to increase the PHP memory limit:
+例如， if you need to increase the PHP memory limit:
 
 	memory_limit = 756M
 

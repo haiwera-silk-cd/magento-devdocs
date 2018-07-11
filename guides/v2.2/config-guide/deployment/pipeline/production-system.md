@@ -72,11 +72,11 @@ To set sensitive values:
 2.	Note the configuration path for the setting.
 3.	Log in to the production system as, or switch to, the {% glossarytooltip 5e7de323-626b-4d1b-a7e5-c8d13a92c5d3 %}Magento文件系统所有者{% endglossarytooltip %}.
 4.	Change to the Magento installation directory.
-5.	Enter the following command:
+5.	输入下面的命令：
 
 		php bin/magento config:sensitive:set {configuration path} {value}
 
-	For example, to set the value of the YouTube API key To to `1234`, enter
+	例如， to set the value of the YouTube API key To to `1234`, enter
 
 		php bin/magento config:sensitive:set catalog/product_video/youtube_api_key 1234
 
@@ -88,7 +88,7 @@ To set sensitive values:
 6.	To verify the value was set, log in to the Magento Admin.
 7.	Locate the setting in the Admin.
 
-	For example, the YouTube API key setting is located in **Stores** > Settings > **Configuration** > **Catalog** > **Catalog** > **Product Video**.
+	例如， the YouTube API key setting is located in **Stores** > Settings > **Configuration** > **Catalog** > **Catalog** > **Product Video**.
 
 	The setting is displayed in the Admin and cannot be edited. The following figure shows an example.
 

@@ -53,7 +53,7 @@ To prevent access to your store while it's being upgraded, put your store in mai
 {% collapsible To enable maintenance mode: %}
 
 1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
-2.	Enter the following command:
+2.	输入下面的命令：
 
 		php <your Magento install dir>/bin/magento maintenance:enable
 
@@ -68,13 +68,13 @@ To prevent access to your store while it's being upgraded, put your store in mai
 1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to the directory in which you installed the Magento software.
 
-	For example, `cd /var/www/html/magento2`
+	例如， `cd /var/www/html/magento2`
 2.	Enter the following commands in the order shown:
 
 		composer require <product> <version> --no-update
 		composer update
 
-	For example, to upgrade to {{site.data.var.ce}} version 2.0.11, enter:
+	例如， to upgrade to {{site.data.var.ce}} version 2.0.11, enter:
 
 		composer require magento/product-community-edition 2.0.11 --no-update
 		composer update

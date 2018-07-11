@@ -33,7 +33,7 @@ Specifically, this command creates the following PHPStorm configuration:
 ## Configure your IDE
 Currently, only PHPStorm is supported.
 
-Command syntax:
+命令语法:
 
 	bin/magento dev:urn-catalog:generate <path>
 

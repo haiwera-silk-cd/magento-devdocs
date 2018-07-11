@@ -76,7 +76,7 @@ Refer to the following for an explanation of the changes in the previous example
     - A new `great_blog_post.rating` field was created
 
 ### Extend mapping in other steps
-Other steps support mapping, such as the [EAV Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#eav) and Customer Attributes Step. These steps migrate a predefined list of Magento tables. For example, suppose that the "GreatBlog" extension has an additional field in the `eav_attribute` table and the name changed in Magento 2. Since the table is processed by the [EAV Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#eav), mapping rules should be written for the `map-eav.xml` file. The `map.xml` and `map-eav.xml` files use the same `map.xsd` schema, so mapping rules remain the same.
+Other steps support mapping, such as the [EAV Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#eav) and Customer Attributes Step. These steps migrate a predefined list of Magento tables. 例如， suppose that the "GreatBlog" extension has an additional field in the `eav_attribute` table and the name changed in Magento 2. Since the table is processed by the [EAV Step]({{ page.baseurl }}/migration/migration-tool-internal-spec.html#eav), mapping rules should be written for the `map-eav.xml` file. The `map.xml` and `map-eav.xml` files use the same `map.xsd` schema, so mapping rules remain the same.
 
 ## Major data format and structure changes
 In addition to the Map Step, there are other steps in the `config.xml` file which migrate data with major format and structure changes, including:

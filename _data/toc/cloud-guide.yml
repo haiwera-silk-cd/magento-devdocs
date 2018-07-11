@@ -121,7 +121,7 @@ pages:
         - label: Set up multiple Cloud websites or stores
           url: /cloud/project/project-multi-sites.html
 
-        - label: Install, manage, and upgrade modules
+        - label: 安装，管理及升级模块
           url: /cloud/howtos/install-components.html
 
         - label: 安装一个主题

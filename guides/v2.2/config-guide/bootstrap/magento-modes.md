@@ -93,7 +93,7 @@ This improves performance because static files don't go through the fallback mec
 
 In production mode:
 
--   Static view files are not materialized, and URLs for them are composed on the fly without going through the fallback mechanism. (Static view files are served from {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} only.)
+-   Static view files are not materialized, and URLs for them are composed on the fly without going through the fallback mechanism. (Static view files are served from {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} only.)
 -   Errors are logged to the file system and are never displayed to the user
 -   You can enable and disable cache types only using the [命令行]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-en)
 

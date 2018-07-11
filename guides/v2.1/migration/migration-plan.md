@@ -81,7 +81,7 @@ Sometimes you may want to have your Magento 2 store with different catalog struc
 
 It is is important to practice caution while working through manual data changes. Mistakes will create errors in the incremental data migration step that follows.
 
-For example, a product deleted from Magento 2: the one that has been bought on your live Magento 1 store and which is not available anymore in your Magento 2 store. Transferring data about such purchase might cause an error while running the 数据迁移工具 in Delta mode.
+例如， a product deleted from Magento 2: the one that has been bought on your live Magento 1 store and which is not available anymore in your Magento 2 store. Transferring data about such purchase might cause an error while running the 数据迁移工具 in Delta mode.
 
 ## 步骤6. Update incremental data
 

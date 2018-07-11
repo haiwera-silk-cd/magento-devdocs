@@ -36,7 +36,7 @@ We recommend working in a branch to add the B2B module and features to your impl
 You need to add the module to `composer.json`. All extensions and modules must be added to this file. These instructions are specific to {{site.data.var.ece}}. For more information, you can also review the [installation instructions](http://devdocs.magento.com/guides/v2.2/comp-mgr/install-extensions/b2b-installation.html) in the B2B guide.
 
 1. Open a terminal application.
-2. Change to your local development environment root directory.
+2. Change to your 本地开发环境 root directory.
 3. Use a text editor to edit `composer.json`.
 4. In the `require` section, add the following:
 

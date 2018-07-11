@@ -30,7 +30,7 @@ Before you run this command, all of the following must be true:
 
 -   Your system must be set up to run the desired tests.
 
-For example, to run integration tests, you should copy `dev/tests/integration/etc/install-config-mysql.php.dist` to `dev/tests/integration/etc/install-config-mysql.php` and modify it to suit your environment.
+例如， to run integration tests, you should copy `dev/tests/integration/etc/install-config-mysql.php.dist` to `dev/tests/integration/etc/install-config-mysql.php` and modify it to suit your environment.
 
 ## Running tests
 命令用法：
@@ -45,7 +45,7 @@ This gives you a list similar to the following:
 
     all, unit, integration, integration-all, static, static-all, integrity, legacy, default
 
-For example, to run integration tests:
+例如， to run integration tests:
 
 	bin/magento dev:tests:run integration
 

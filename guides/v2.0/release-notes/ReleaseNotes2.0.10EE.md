@@ -77,7 +77,7 @@ The following list provides an overview of the security issues fixed in this rel
 
 <!--- 57464 -->* The Guest order view protection code is no longer vulnerable to brute force attacks.
 
-<!--- 57303 -->* Fixed vulnerability to DoS attacks by full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}cache{% endglossarytooltip %} poisoning.
+<!--- 57303 -->* Fixed vulnerability to DoS attacks by full page {% glossarytooltip 0bc9c8bc-de1a-4a06-9c99-a89a29c30645 %}缓存{% endglossarytooltip %} poisoning.
 
 
 

@@ -88,7 +88,7 @@ To redirect traffic to a custom maintenance page:
 	*	CentOS: `service httpd restart`
 	*	Ubuntu: `service apache2 restart`
 
-4. Enter the following command:
+4. 输入下面的命令：
 
 		touch <web server docroot>/maintenance.enable
 5.	[Upgrade your system]({{ page.baseurl }}/comp-mgr/upgrader/upgrade-start.html).
@@ -134,7 +134,7 @@ To redirect traffic to a custom maintenance page:
 
 		include /var/www/html/magento2/nginx.conf;
 		}
-4. Enter the following command:
+4. 输入下面的命令：
 
 		touch <your Magento install dir>/maintenance.enable
 3. Reload the nginx configuration:

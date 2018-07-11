@@ -150,12 +150,12 @@ To resolve the error:
 2.  [Examine the logs]({{ page.baseurl }}/cloud/trouble/environments-logs.html) to determine the source of the issue.
 3.  After you fix the source of the issue, push the change to the server, which causes the upgrade to restart.
 
-    For example, on a local branch, enter the following commands:
+    例如， on a local branch, enter the following commands:
 
         git add -A && git commit -m "fixed deployment failure" && git push origin <branch name>
 
 #### 相关主题
 * [Composer]({{ page.baseurl }}/cloud/reference/cloud-composer.html)
-* [Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
+* [安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html)
 * [Install optional sample data]({{ page.baseurl }}/cloud/howtos/sample-data.html)
 * [Merge and delete an environment]({{ page.baseurl }}/cloud/howtos/environment-tutorial-env-merge.html)

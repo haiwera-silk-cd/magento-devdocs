@@ -68,7 +68,7 @@ As a result of specifying the `--dry-run=1` flag, Magento writes a log file at `
 
 ## Safe installation and rollback
 
-The advantage and the main problem of declarative schema is that it can blindly modify the database schema. For example, a developer can make a mistake and potentially remove a structural element from the database, causing data loss.
+The advantage and the main problem of declarative schema is that it can blindly modify the database schema. 例如， a developer can make a mistake and potentially remove a structural element from the database, causing data loss.
 
 To help prevent data loss, you can specify command line options that dump all the data that could be lost as a result of an installation. The dumped data can then be restored manually or automatically. These arguments are optional--you do not have to create a manual dump during a system upgrade. _(But please note, that this works only with schema)_
 
@@ -88,7 +88,7 @@ Several types of operations have an effect on data dumps and rollbacks.
   - Changing column precision
   - Changing the column type
 
-* *Opposite to destructive operations (ODO)* - In the case of a failed Magento installation, SQL DDL operations that are the opposite of  destructive operations can be used for rollback. For example, changing the column type from CHAR to INT is a destructive operation. The rollback operation changes the type from INT to CHAR.
+* *Opposite to destructive operations (ODO)* - In the case of a failed Magento installation, SQL DDL operations that are the opposite of  destructive operations can be used for rollback. 例如， changing the column type from CHAR to INT is a destructive operation. The rollback operation changes the type from INT to CHAR.
 
 When safe mode is enabled, Magento creates a CSV file each time a destructive operation for a table or column occurs. You can find these files at the following locations:
 

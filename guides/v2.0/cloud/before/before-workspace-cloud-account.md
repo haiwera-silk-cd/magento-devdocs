@@ -11,7 +11,7 @@ github_link: cloud/before/before-workspace-cloud-account.md
 
 <!-- This file isn't linked to the main TOC -->
 
-#### Previous step:
+#### 前提:
 [本地环境设置准备]({{ page.baseurl }}/cloud/before/before-workspace.html)
 
 To begin working with a project and develop your store, you should have received an e-mail invitation to [create a Mangento Enterprise Cloud Edition account](https://accounts.magento.cloud){:target="\_blank"}. The account provides access to your project for Magento development and deployment across all supported environments.

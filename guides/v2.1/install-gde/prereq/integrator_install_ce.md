@@ -19,7 +19,7 @@ To get the {{site.data.var.ce}} metapackage:
 1.	If you haven't done so already, <a href="{{ page.baseurl }}/install-gde/prereq/connect-auth.html">获取你的认证密钥</a>.
 1.	Log in to your Magento server as, or switch to, the <a href="{{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html">Magento文件系统所有者</a>.
 2.	Change to the web server docroot directory, or to a directory you've configured as a virtual host docroot.
-3.	Enter the following command:
+3.	输入下面的命令：
 
 		composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition <installation directory name>
 

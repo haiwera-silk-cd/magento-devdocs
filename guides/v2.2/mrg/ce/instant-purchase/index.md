@@ -205,7 +205,7 @@ However, adding `<supported>0</supported>` will disable integration regardless o
 ### Integration availability checker
 
 The integration availability checker allows you to specify if your payment integration is available based on the current Magento configuration specification or other data.
-For example, {{site.data.var.ce}} provides Braintree Stored Credit Cards which supports Instant Purchase unless 3D Secure is enabled.
+例如， {{site.data.var.ce}} provides Braintree Stored Credit Cards which supports Instant Purchase unless 3D Secure is enabled.
 
 The default implementation for the availability checker always returns `true`.
 

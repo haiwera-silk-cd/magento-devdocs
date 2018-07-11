@@ -138,7 +138,7 @@ GET /V1/company/role/
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "id": 6,
@@ -337,7 +337,7 @@ GET /V1/company/role/
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "id": 6,
@@ -514,7 +514,7 @@ GET /V1/company/role/
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 {
   "id": 6,
@@ -709,7 +709,7 @@ GET /V1/company/role/
 
 **响应**
 
-{% collapsible Show code sample %}
+{% collapsible 查看代码示例 %}
 {% highlight json %}
 
 {

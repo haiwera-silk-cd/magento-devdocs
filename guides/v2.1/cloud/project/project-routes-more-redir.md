@@ -23,7 +23,7 @@ changed or been removed over time. This topic discusses how you can manage redir
 If the redirection methods discussed in this topic don't work for you, you can use caching headers to do the same thing.
 
 ## Whole-route redirects {#cloud-route-whole}
-Using whole-route redirects, you can define very basic routes in `routes.yaml`. For example, you can redirect from a naked domain to a `www` subdomain as follows:
+Using whole-route redirects, you can define very basic routes in `routes.yaml`. 例如， you can redirect from a naked domain to a `www` subdomain as follows:
 
 	http://{default}/:
 	    type: redirect
@@ -93,7 +93,7 @@ Specifies whether or not to redirect both the path and all its children or just 
 
 {% collapsible Click to show/hide content %}
 
-For example,
+例如，
 
 {% highlight yaml %}
 http://{default}/:
@@ -116,7 +116,7 @@ Determines if the suffix is carried over with the redirect. Defaults to `true`, 
 
 {% collapsible Click to show/hide content %}
 
-For example,
+例如，
 
 {% highlight yaml %}
 http://{default}/:

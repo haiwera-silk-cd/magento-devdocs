@@ -13,7 +13,7 @@ The following table discusses the component types that Magento Marketplace suppo
 <td>Metapackage</td>
 <td>metapackage</td>
 <td><p>Technically, a <a href="https://getcomposer.org/doc/04-schema.md#type" target="_blank">Composer <em>package</em> type</a>, not a Magento component type. A metapackage consists of only a <code>composer.json</code> that specifies a list of 组件 and their dependencies. </p>
-<p>For example, both {{site.data.var.ce}} and {{site.data.var.ee}} are metapackages.</p></td>
+<p>例如， both {{site.data.var.ce}} and {{site.data.var.ee}} are metapackages.</p></td>
 </tr>
 <tr>
 <td>Module</td>

@@ -119,7 +119,7 @@ Sales database table names start with:
 ### Create sales database SQL scripts {#config-ee-multidb-sql-oms}
 
 {% collapsible Click to create and run sales database SQL scripts %}
-Create the following SQL scripts in a location that is accessible by the user as whom you log in to your Magento server. For example, if you log in or run commands as `root`, you can create the scripts in the `/root/sql-scripts` directory.
+Create the following SQL scripts in a location that is accessible by the user as whom you log in to your Magento server. 例如， if you log in or run commands as `root`, you can create the scripts in the `/root/sql-scripts` directory.
 
 #### Remove foreign keys
 This script removes foreign keys that refer to non-sales tables from the sales database. 
@@ -185,7 +185,7 @@ Run the preceding script:
 
         source <path>/<script>.sql
 
-    For example,
+    例如，
 
         source /root/sql-scripts/1_foreign-sales.sql
 3.  After the script run, enter `exit`.
@@ -289,7 +289,7 @@ Run the script as follows:
 2.  At the `mysql>` prompt, run the script as follows:
 it`.
         source <path>/<script>.sql
-    For example,
+    例如，
 
         source /root/sql-scripts/2_foreign-key-quote.sql
 3.  After the script runs, enter `exit`.
@@ -405,7 +405,7 @@ Run the script as follows:
 
         source <path>/<script>.sql
 
-    For example,
+    例如，
 
         source /root/sql-scripts/3_drop-tables.sql
 3.  After the script runs, enter `exit`.

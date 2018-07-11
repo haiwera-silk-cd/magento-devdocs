@@ -130,7 +130,7 @@ Instead of adding this set of actions, use the _LoginToAdminActionGroup_ `<actio
 
 By default, an [`argument`](#argument-tag) expects an entire `entity` when the `type` value is not defined. There are cases when you use a string instead of a whole entity.
 
-For example, the following defines the replacement argument `relevantString` using a primitive data type:
+例如， the following defines the replacement argument `relevantString` using a primitive data type:
 
 ```xml
 <actionGroup name="fillExample">

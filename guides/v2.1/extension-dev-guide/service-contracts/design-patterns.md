@@ -24,12 +24,12 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
    You must define the service interfaces for a service contract in the <b>Api</b> subdirectory for a module.<!--  You can substitute another implementation in this directory. -->
 </p>
 <!--
-   <p>For example, the interfaces in the <b>Magento\Customer\Api</b> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} define agreements, or a contract, between clients and implementations of services for the Magento Customer module.
+   <p>例如， the interfaces in the <b>Magento\Customer\Api</b> {% glossarytooltip 621ef86b-7314-4fbc-a80d-ab7fa45a27cb %}命名空间{% endglossarytooltip %} define agreements, or a contract, between clients and implementations of services for the Magento Customer module.
                   </p>
     -->
 <h2 id="data-interfaces">Data interfaces</h2>
 <p>Define data interfaces in the <b>Api/Data</b> subdirectory for a module.</p>
-<p>For example, the data interfaces for the Customer module are in the <b>/app/code/Magento/Customer/Api/Data</b> subdirectory.</p>
+<p>例如， the data interfaces for the Customer module are in the <b>/app/code/Magento/Customer/Api/Data</b> subdirectory.</p>
 
 <h3 id="search-results-interfaces">Data search results interfaces</h3>
 <p>When you pass search criteria to a <code>getList()</code> call, a search results interface is returned with the search results.</p>
@@ -49,7 +49,7 @@ redirect_from: /guides/v1.0/extension-dev-guide/service-contracts/design-pattern
 <p>Place service interfaces in the top-level <b>Api</b> directory for a module.</p>
 <h3 id="repository-interfaces">Repository interfaces</h3>
 <p>Repository interfaces provide access to persistent data entities.</p>
-<p>For example, persistent data entities for the Customer module include Customer, Address, and Group. Consequently, repository interfaces for the Customer module are:</p>
+<p>例如， persistent data entities for the Customer module include Customer, Address, and Group. Consequently, repository interfaces for the Customer module are:</p>
 <ul>
    <li><code>CustomerRepositoryInterface</code></li>
    <li><code>AddressRepositoryInterface</code></li>

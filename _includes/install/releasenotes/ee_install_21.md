@@ -17,7 +17,7 @@ Magento Commerce (formerly Enterprise Edition) is available from `repo.magento.c
 
 where `<version>` is `2.1.0`, `2.1.1`, and so on
 
-For example, to install 2.1.1 in the `magento2` directory:
+例如， to install 2.1.1 in the `magento2` directory:
 
 	composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.1.1 magento2
 

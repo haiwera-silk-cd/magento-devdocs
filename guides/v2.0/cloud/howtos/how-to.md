@@ -19,7 +19,7 @@ Current topics:
 
 *	Install 组件, upgrade, update
 
-	*	[Install, manage, and upgrade modules]({{ page.baseurl }}/cloud/howtos/install-components.html)
+	*	[安装，管理及升级模块]({{ page.baseurl }}/cloud/howtos/install-components.html)
 	*	[Test a Magento patch before deploying it]({{ page.baseurl }}/cloud/project/project-upgrade.html)
 
 *	Environments

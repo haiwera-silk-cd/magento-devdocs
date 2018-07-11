@@ -64,7 +64,7 @@ Available commands:
 * `magento-cloud user:list [users]` lists project users
 * `magento-cloud user:role` views or change a user's role
 
-For example, the following command adds the project administrator (`admin`) role to `alice@example.com` and gives her `contributor` privileges to the `development` environment:
+例如， the following command adds the project administrator (`admin`) role to `alice@example.com` and gives her `contributor` privileges to the `development` environment:
 
 The following prompts are displayed:
 

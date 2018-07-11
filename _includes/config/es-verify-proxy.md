@@ -7,11 +7,11 @@ This section discusses two ways to verify that HTTP Basic authentication is work
 *	Configuring HTTP Basic authentication in the Magento Admin
 
 ### Use a `curl` command to verify cluster status
-Enter the following command:
+输入下面的命令：
 
 	curl -i http://<host name, ip, or localhost>:<proxy port>/_cluster/health
 
-For example, if you enter the command on the Elasticsearch server and your proxy uses port 8080:
+例如， if you enter the command on the Elasticsearch server and your proxy uses port 8080:
 
 	curl -i http://localhost:8080/_cluster/health
 

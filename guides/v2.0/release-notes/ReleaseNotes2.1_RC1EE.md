@@ -153,7 +153,7 @@ Developers who contribute to the Open Source codebase can <a href="{{ page.baseu
 1.	Log in to your Magento server as, or switch to, the Magento文件系统所有者.
 2.	Change to the directory in which you installed the Magento software.
 
-	For example, `cd /var/www/html/magento2`
+	例如， `cd /var/www/html/magento2`
 2.	Enter the following commands in the order shown:
 
 		composer require <product> 2.1.0-rc1 --no-update

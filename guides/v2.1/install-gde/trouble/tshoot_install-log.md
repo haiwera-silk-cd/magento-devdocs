@@ -20,7 +20,7 @@ The Setup Wizard does not create `install.log` during the installation; as a res
 
 ### Details
 
-Running Magento processes at the same time might result in problems creating the installation log. (For example, two different installations in separate tab pages.)
+Running Magento processes at the same time might result in problems creating the installation log. (例如， two different installations in separate tab pages.)
 
 ### Solution
 

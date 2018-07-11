@@ -42,7 +42,7 @@ For branching strategies, review [Starter]({{ page.baseurl }}/cloud/basic-inform
 
 Your account supports a limited number of active Git branches and an unlimited number of inactive branches. Manage active and inactive branches by deleting a branch. When deleted, it is deactivated and still listed in the project branches list. You can either activate the branch later or you can [delete it entirely]({{ page.baseurl }}/cloud/env/environments-start.html#env-delete) using the CLI.
 
-If you need additional environments for development, enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html) for more information.
+If you need additional environments for development, enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html) for more information.
 
 ## Add a branch {#add}
 To add a branch:
@@ -65,7 +65,7 @@ To add a branch:
 
 	![Branch is deploying]({{ site.magentourl }}/common/images/cloud_branch-deploy.png)
 
-	After a successful deployment, the status changes to **Success**:
+	After a successful deployment, the status changes to **成功**:
 
 	![Branch is deploying]({{ site.magentourl }}/common/images/cloud_branch-success.png)
 7.	Continue with one of the following:
@@ -125,7 +125,7 @@ For **Pro** environments, you can review the following logs per environment:
 
 * Integration: 构建和部署 and deployment history
 * Staging: Build logs and deployment history. You need to SSH into the server to view deploy logs.
-* Production: Build logs and deployment history. You need to SSH into the server to view deploy logs.
+* 生产环境: Build logs and deployment history. You need to SSH into the server to view deploy logs.
 
 If you do not see your Pro plan Staging and Production environments in the Project Web Interface, you need to [enter a ticket for updating]({{ page.baseurl }}/cloud/trouble/pro-env-management.html) your project interface.
 
@@ -135,7 +135,7 @@ If you do not see your Pro plan Staging and Production environments in the Proje
 4.	To view the build log, select the Success or Failure link per deployment record on the account.
 
 ## Pull code from a private Git repository {#private}
-Your {{site.data.var.ece}} project can include code located in a private Git repository. For example, a you may have code for a custom module or theme in a private repo. To do so, you must add your project's public SSH key to your private Git repository and update your project's `composer.json`.
+Your {{site.data.var.ece}} project can include code located in a private Git repository. 例如， a you may have code for a custom module or theme in a private repo. To do so, you must add your project's public SSH key to your private Git repository and update your project's `composer.json`.
 
 To add a deployment key to your private GitHub repository, you must be the administrator of that repository. GitHub allows you to use a deploy key for one repository only.
 
@@ -219,6 +219,6 @@ To secure your Starter environments and Pro Integration environments:
 
 The branch redeploys to update the environment security and settings.
 
-To secure Pro plan Staging environment, enter a [Support ticket]({{ page.baseurl }}/cloud/trouble/trouble.html). Provide the user credentials and/or IP addresses to allow or deny. If you have security settings entered for an existing Integration environment, in the ticket ask to have the secure settings copied to Staging.
+To secure Pro plan Staging environment, enter a [支持工单]({{ page.baseurl }}/cloud/trouble/trouble.html). Provide the user credentials and/or IP addresses to allow or deny. If you have security settings entered for an existing Integration environment, in the ticket ask to have the secure settings copied to Staging.
 
 We recommend testing your environments after completing security settings.

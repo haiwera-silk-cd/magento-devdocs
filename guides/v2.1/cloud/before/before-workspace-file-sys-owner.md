@@ -11,7 +11,7 @@ functional_areas:
   - Cloud
   - Setup
 ---
-#### Previous step: {#mage-owner-about-group}
+#### 前提: {#mage-owner-about-group}
 [启用ssh密钥登录]({{ page.baseurl }}/cloud/before/before-workspace-ssh.html)
 
 **This step is optional if you installed nginx as your web server.** The [Magento文件系统所有者]({{ page.baseurl }}/install-gde/prereq/file-sys-perms-over.html#magento-file-system-owner) provides root access and permissions, for security reasons on a hosted system. Apache installations require
@@ -37,7 +37,7 @@ Follow the prompts on your screen to create a password for the user.
     <p>If you don't have <code>root</code> privileges on your Magento server, you can use another local user account. Make sure the user has a strong password and continue with <a href="#install-update-depend-user-add2group">Put the Magento文件系统所有者 in the web server group</a>.</p>
 </div>
 
-For example, to create a user named `magento_user` and give the user a password, enter:
+例如， to create a user named `magento_user` and give the user a password, enter:
 
 	sudo adduser magento_user
 	sudo passwd magento_user
@@ -66,7 +66,7 @@ Assuming the typical Apache group name for CentOS and Ubuntu, enter the followin
 *	CentOS: `usermod -g apache <username>`
 *	Ubuntu: `usermod -g www-data <username>`
 
-For example, to add the user `magento_user` to the `apache` primary group on CentOS:
+例如， to add the user `magento_user` to the `apache` primary group on CentOS:
 
 	usermod -g apache magento_user
 

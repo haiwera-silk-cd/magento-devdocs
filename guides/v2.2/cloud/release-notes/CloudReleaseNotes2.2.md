@@ -67,7 +67,7 @@ This release contains numerous fixes and enhancements. This section includes onl
 
 <!-- MAGECLOUD-1355 -->* You can now [manually reset stuck Magento cron jobs](http://devdocs.magento.com/guides/v2.2/cloud/configure/setup-cron-jobs.html#reset-cron-jobs) using a CLI command in all environments via SSH access. The deployment process automatically resets cron jobs. You must [patch magento/ece-tools](http://devdocs.magento.com/guides/v2.2/cloud/project/project-patch.html#patch-magentoece-tools) to get this update.
 
-<!-- 57167 -->* You can now generate sitemap.xml and robots.txt normally through the Magento Admin panel, without needing to move the file and have a redirect entered. If you are upgrading to 2.2, please enter a [Support ticket] to have any redirects removed for sitemap and robots.txt.
+<!-- 57167 -->* You can now generate sitemap.xml and robots.txt normally through the Magento Admin panel, without needing to move the file and have a redirect entered. If you are upgrading to 2.2, please enter a [支持工单] to have any redirects removed for sitemap and robots.txt.
 
 <!-- MAGECLOUD-894 -->* Newly provisioned {{site.data.var.ece}} receive an email to change the Magento Admin password. For enhanced security, we generate a random password for the username "admin" and send an email to the Project Owner to properly set up Admin access for Starter `master` Production environment and the Pro Integration `master` environment.
 
@@ -131,6 +131,6 @@ You can directly upgrade to {{site.data.var.ece}} 2.2 from the following version
 
 We have heavily tested and verified upgrades to 2.2 from the latest three versions of 2.0.X and 2.1.X.
 
-You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. For example, you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
+You can attempt to upgrade from any version directly to {{site.data.var.ece}} 2.2. We cannot guarantee the results. 例如， you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.
 
-If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. For example, you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.
+If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. 例如， you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.

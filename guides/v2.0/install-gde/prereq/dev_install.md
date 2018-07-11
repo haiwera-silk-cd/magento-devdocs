@@ -102,7 +102,7 @@ fatal: The remote end hung up unexpectedly</pre>
 
 		git checkout tags/<tag name> [-b <version>]
 
-	For example, to check out the 2.1.0 release tag in a new branch named `2.1.0`, enter
+	例如， to check out the 2.1.0 release tag in a new branch named `2.1.0`, enter
 
 		git checkout tags/2.1.0 -b 2.1.0
 
@@ -139,7 +139,7 @@ To clone the Magento GitHub repository using the HTTPS protocol:
 
 		git checkout tags/<tag name> [-b <version>]
 
-	For example, to check out the 2.1.0 release tag in a branch named `2.1.0`, enter
+	例如， to check out the 2.1.0 release tag in a branch named `2.1.0`, enter
 
 		git checkout tags/2.1.0 -b 2.1.0
 

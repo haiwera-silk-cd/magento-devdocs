@@ -187,7 +187,7 @@ Square.prototype.draw&nbsp;=&nbsp;function()&nbsp;{
 
 Indicates that the keys of an object literal should be treated as properties of some other object. This annotation should only appear on object literals.
 
-Please note that the name in braces is not a type name like in other annotations. It's an object name. It names the object on which the properties are "lent". For example, `@type {Foo}` means "an instance of Foo," but `@lends {Foo}` means "the constructor Foo".
+Please note that the name in braces is not a type name like in other annotations. It's an object name. It names the object on which the properties are "lent". 例如， `@type {Foo}` means "an instance of Foo," but `@lends {Foo}` means "the constructor Foo".
 
 Please refer to <a href ="https://code.google.com/p/jsdoc-toolkit/wiki/TagLends" target="_blank">JSDoc Toolkit</a> for more information about this annotation.
 
@@ -494,7 +494,7 @@ new&nbsp;project.MyClass()</pre></td>
 		<td><code>codemyNum: number, myObject}}</code><br>
 		An anonymous type with the given type members.</td>
 		<td>Indicates that the value has the specified members with the specified types. In this case, <code>myNum</code> with a type <code>number</code>和<code>myObject</code> with any type.
-		Note that the braces are part of the type syntax. For example, to denote an <code>Array</code> of objects that have a <code>length</code> property, you might write <code>Array.<{length}></code>.</td>
+		Note that the braces are part of the type syntax. 例如， to denote an <code>Array</code> of objects that have a <code>length</code> property, you might write <code>Array.<{length}></code>.</td>
 		<td></td>
 	</tr>
 	<tr>

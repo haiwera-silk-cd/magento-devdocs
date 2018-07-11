@@ -39,7 +39,7 @@ functional_areas:
 <h2 id="configure-webapi">Configure a web API</h2>
 <p>To configure a web API for a service, you define XML elements and attributes in the
    <code>app/code/Magento/&lt;MODULE&gt;/etc/webapi.xml</code> file, where <code>&lt;MODULE&gt;</code> is the module name.
-   For example, the web API for the Customer service is defined in the <code>app/code/Magento/Customer/etc/webapi.xml</code> configuration file.
+   例如， the web API for the Customer service is defined in the <code>app/code/Magento/Customer/etc/webapi.xml</code> configuration file.
 </p>
 <h2 id="service-interface-requirements">Service Interface Requirements</h2>
 

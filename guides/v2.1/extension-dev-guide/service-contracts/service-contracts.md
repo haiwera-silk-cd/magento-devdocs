@@ -30,9 +30,9 @@ functional_areas:
 </p>
 <p>Data entities are a side benefit of service contracts.
    The database tables that normally support these entities can be complicated.
-   For example, some attributes might be stored in an EAV table, so a set of MySQL database tables might define a single data {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}.
+   例如， some attributes might be stored in an EAV table, so a set of MySQL database tables might define a single data {% glossarytooltip a9027f5d-efab-4662-96aa-c2999b5ab259 %}entity{% endglossarytooltip %}.
    Data entities in a service contract reveal a simpler data model than the data model in an underlying relational {% glossarytooltip 66b924b4-8097-4aea-93d9-05a81e6cc00c %}数据库表结构{% endglossarytooltip %}.
-   Eventually, you will be able to use different storage technologies for different data collections. For example, you could use a NoSQL database to replace product tables.
+   Eventually, you will be able to use different storage technologies for different data collections. 例如， you could use a NoSQL database to replace product tables.
 </p>
 
 ## Using the @api tag

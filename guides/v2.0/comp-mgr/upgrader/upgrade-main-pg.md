@@ -63,7 +63,7 @@ To upgrade 组件:
 
 1.	From the **Magento Core 组件** list, click the core component version to which to upgrade.
 
-	For example, to upgrade to the latest version, click the one with **(latest)** in the name as the following figure shows.
+	例如， to upgrade to the latest version, click the one with **(latest)** in the name as the following figure shows.
 
 	<img src="{{ site.baseurl }}/common/images/upgr_step1_core-ver.png" alt="Select the version of Magento core 组件 to which to upgrade">
 

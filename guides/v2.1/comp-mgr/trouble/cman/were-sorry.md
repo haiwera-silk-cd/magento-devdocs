@@ -62,7 +62,7 @@ Modify Magento's `composer.json` to reference the `https://repo.magento.com` rep
 
 6.	Save your changes to `composer.json` and exit the text editor.
 7.	Change to the `update` subdirectory, where the updater is located.
-8.	Enter the following command:
+8.	输入下面的命令：
 
 		composer install
 9.	After the command completes, try the upgrade again.

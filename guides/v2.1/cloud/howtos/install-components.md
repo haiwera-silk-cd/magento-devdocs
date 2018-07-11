@@ -99,7 +99,7 @@ To manage your extensions, you can enable and disable or change settings per env
 ### Enable and disable extensions {#enable-disable}
 You can use CLI commands or directly edit `app/etc/config.php` to 启用或禁用模块. After updating this file, push your changes from your local to the remote Git and deploy across all environments.
 
-1.  In a terminal, access your local development environment.
+1.  In a terminal, access your 本地开发环境.
 1.  List all modules:
 
     ```bash

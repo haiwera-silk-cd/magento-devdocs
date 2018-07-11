@@ -32,15 +32,15 @@ If the logs do not include errors related to Fastly, check the PHP access log: `
 When a 503 error occurs, Fastly returns the reason on the error and maintenance page. If you added code for a custom Error/Maintenance page, you can remove the custom code through the Magento Admin.
 
 1.	Log into the Magento Admin for the Production or Staging Admin.
-2.	Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System**.
-3.	In the right pane, expand **Full Page Cache**.
-4.	In the **Fastly Configuration** section, expand **Error/Maintenance Page** as the following figure shows.
+2.	点击 **Stores** > **Settings** > **Configuration** > **Advanced** > **System**.
+3.	在右侧栏，展开**Full Page Cache**.
+4.	在 **Fastly Configuration** 节点展开 **Error/Maintenance Page** ，如下图所示。
 
-	![Custom Fastly error page]({{ site.magentourl }}/common/images/cloud_fastly-503-page.png)
-5.	Click **Set HTML**.
+	![自定义Fastly错误页面]({{ site.magentourl }}/common/images/cloud_fastly-503-page.png)
+5.	点击 **Set HTML**。
 3.	Remove the custom code. You can save it in a text program to add back later.
-4.	When you're done, click **Upload** to send your updates to Fastly.
-5.	Click **Save Config** at the top of the page.
+4.	当你完成之后，点击 **Upload** 来更新Fastly
+5.	点击页面上方的 **Save Config** 。
 6.	Reopen the URL that caused the 503 error. Fastly returns an error page with the reason. The following image is an example.
 
 	![Fastly error]({{ site.magentourl }}/common/images/cloud_fastly-503-example.png)
@@ -51,14 +51,14 @@ If your apex domain and subdomains are already managed by a Fastly account with 
 * Remove the apex domain and subdomains from an existing Fastly account, may include removing or changing the CNAME record
 * Complete configurations and CNAME for the Fastly account and Service ID we provide
 
-Fastly only allows one apex domain and all subdomains assigned to a single Fastly service and account. For example, if you have the apex domain of mystore.com with subdomains of shoes.mystore.com and socks.mystore.com managed by an existing Fastly account, you need to remove them from that account before going live with Fastly and {{site.data.var.ece}}.
+Fastly仅允许一个顶级域名和所有子域名分配到一个简单的Fastly服务及账号上，例如，如果你有一个顶级域名mystore.com及其子域名shoes.mystore.com和socks.mystore.com，它们被一个现存的Fastly账号管理，在上线Fastly和{{site.data.var.ece}}之前，你须要从帐号中将它们移除
 
-For details, review your Fastly accounts and [documentation](https://docs.fastly.com/) to remove the domains. This may include removing and updating CNAME records and more.
+更多细节，请参考你的Fastly帐号和[文档](https://docs.fastly.com/)来移除这些域名，文档中也包含移除移除及更新CNAME记录等说明。
 
 ## Locate Service ID {#service-id}
 You can contact us for your Service ID for Staging and Production. For developers and advanced VCL users, you can also make a call using the Fastly variable `req.service_id`. This variable will return the Fastly `service_id`.
 
-For example, you can add this to custom logging to capture the value. If you are using a custom logging format in your VCL, you can set the call to your format:
+例如， you can add this to custom logging to capture the value. If you are using a custom logging format in your VCL, you can set the call to your format:
 
     log {"syslog "}req.service_id{" my_logging_endpoint_name :: "}
 
@@ -77,7 +77,7 @@ Check response headers with **curl command**:
 
 	Use `--resolve` only if your live URL isn't set up with DNS and you don't have a static route set.
 	例如: `curl http://www.mymagento.biz -vo /dev/null -HFastly-Debug:1`
-2. Verify the [response headers](#response-headers) to ensure Fastly is working. The output for this command is similar to curl Staging and Production. For example, you should see the returned unique headers by this command:
+2. Verify the [response headers](#response-headers) to ensure Fastly is working. The output for this command is similar to curl Staging and Production. 例如， you should see the returned unique headers by this command:
 
 		< Fastly-Magento-VCL-Uploaded: yes
 		< X-Cache: HIT, MISS
@@ -104,7 +104,7 @@ A direct Origin node:
 
 	curl http[s]://<your domain>.{1|2|3}.<project ID>.ent.magento.cloud -H "host: <url>" -k -vo /dev/null -HFastly-Debug:1
 
-For example, if you have a public URL `www.mymagento.biz`, enter a command similar to the following to test the production site:
+例如， if you have a public URL `www.mymagento.biz`, enter a command similar to the following to test the production site:
 
 	curl -k https://www.mymagento.biz.c.sv7gVom4qrpek.ent.magento.cloud -H 'Host: www.mymagento.biz' -vo /dev/null -HFastly-Debug:1
 
@@ -163,9 +163,9 @@ The output for cURL commands can be lengthy. The following is a summary only:
 ## Determine if VCL is not uploaded {#vcl-uploaded}
 To determine if the default VCL snippets are not uploaded, check the following:
 
-* **Top level navigation does not work**: The top level navigation relies on Edge Side Includes (ESI) processing which is not enabled by default. When you upload the Magento VCL snippets during configuration, ESIs are enabled. See [Upload Fastly VCL snippets]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
+* **Top level navigation does not work**: The top level navigation relies on Edge Side Includes (ESI) processing which is not enabled by default. When you upload the Magento VCL snippets during configuration, ESIs are enabled. See [上传Fastly VCL代码片段]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
 * **Pages are not caching**: By default Fastly doesn’t cache pages with Set-Cookies. Magento sets Cookies even on cacheable pages (TTL > 0). Magento Fastly VCL strips those cookies on cacheable pages. This may also happen if page block in a template is marked uncacheable. If this occurs, it's due to a 3rd party module or Magento extension blocking or removing the Magento headers. See [X-Cache missed section](#xcache-miss) for details.
-* **Geo-location/GeoIP does not work**: The uploaded Magento Fastly VCL snippets append the country code to the URL. See [Upload Fastly VCL snippets]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
+* **Geo-location/GeoIP does not work**: The uploaded Magento Fastly VCL snippets append the country code to the URL. See [上传Fastly VCL代码片段]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
 
 ## Resolve errors found by cURL {#curl}
 This section provides suggestions for resolving errors you might find using the `curl` command.
@@ -181,8 +181,8 @@ To verify Fastly is enabled in Staging and Production, check the configuration i
 4. Click on **Fastly Configuration**. Ensure the Fastly Service ID and Fastly API token are entered (your Fastly credentials). Verify you have the correct credentials entered for the Staging and Production environment. Click **Test credentials** to help.
 5. Edit your `composer.json` and ensure the Fasty module is included with version. This file has all modules listed with versions.
 
-	* In the "require" section, you should have `"fastly/magento2": <version number>`
-	* In the "repositories" section, you should have:
+	* 在"require"节点中，要包含`"fastly/magento2": <version number>`
+	* 在"repositories"节点中，要包含:
 
 			"fastly-magento2": {
 						"type": "vcs",
@@ -195,7 +195,7 @@ To verify Fastly is enabled in Staging and Production, check the configuration i
 If the module is not installed, you need to install in an Integration environment branch and deployed to Staging and Production. See [快速设置]({{ page.baseurl }}/cloud/access-acct/fastly.html) for instructions.
 
 ### Fastly-Magento-VCL-Uploaded is not present {#no-VCL}
-During installation and configuration, you should have uploaded the Fastly VCL. These are the base VCL snippets provided by the Fastly module, not custom VCL snippets you create. For instructions, see [Upload Fastly VCL snippets]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
+During installation and configuration, you should have uploaded the Fastly VCL. These are the base VCL snippets provided by the Fastly module, not 自定义VCL代码片段 you create. For instructions, see [上传Fastly VCL代码片段]({{ page.baseurl }}/cloud/access-acct/fastly.html#upload-vcl-snippets).
 
 ### X-Cache includes MISS {#xcache-miss}
 If `X-Cache` is either `HIT, MISS`或`MISS, MISS`, enter the same `curl` command again to make sure the page wasn't recently evicted from the cache.
@@ -226,7 +226,7 @@ If you attempt to use a Fastly purge option, and it does not process, you may ha
 ### Check Fasty credentials {#creds}
 Verify if you have the correct Fastly Service ID and API token in your environment. If you have Staging credentials in Production, the purges may not process or process incorrectly.
 
-1. Log in to your local Magento Admin as an administrator.
+1. 以管理员身份登录你的Magento管理面板。
 2. Click **Stores** > **Settings** > **Configuration** > **Advanced** > **System** and expand **Full Page Cache**.
 3. Expand **Fastly Configuration** and verify the Fastly Service ID and API token for your environment.
 4. If you modify the values, click **Test Credentials**.
