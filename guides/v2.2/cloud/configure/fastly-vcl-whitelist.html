@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/configure/fastly-vcl-whitelist.html">
+	<link rel="canonical" href="/guides/v2.2/cloud/configure/fastly-vcl-whitelist.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2042,14 +2042,14 @@
 
     <ul>
       <li>If the IP is in the Edge ACL, it is allowed access. If not, they receive a 403 Forbidden error.</li>
-      <li>If your URL for your Magento Admin was changed, make sure to edit <code class="highlighter-rouge">/admin</code> with the new URL. For example, <code class="highlighter-rouge">/company-admin</code>.</li>
+      <li>If your URL for your Magento Admin was changed, make sure to edit <code class="highlighter-rouge">/admin</code> with the new URL. 例如， <code class="highlighter-rouge">/company-admin</code>.</li>
       <li>In the code sample, the condition <code class="highlighter-rouge">!req.http.Fastly-FF</code> is important when using Origin Shielding. Do not remove or edit this code.</li>
     </ul>
   </li>
 </ul>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>The default VCL snippets you uploaded included a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of 50. For your custom VCL snippets, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also consider the priority of your custom snippets if they should override the default snippets.</p>
+  <p>The default VCL snippets you uploaded included a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of 50. For your 自定义VCL代码片段, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also consider the priority of your custom snippets if they should override the default snippets.</p>
 </div>
 
 <h2 id="complete">Finish adding the VCL</h2>

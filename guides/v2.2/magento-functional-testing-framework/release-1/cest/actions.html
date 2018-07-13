@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/magento-functional-testing-framework/release-1/cest/actions.html">
+	<link rel="canonical" href="/guides/v2.2/magento-functional-testing-framework/release-1/cest/actions.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1703,7 +1703,7 @@ Equivalent to using <a href="#fillfield">fillField</a> with an empty string.</p>
 
 <p>Conditionally click on an element if and only if another element is visible or not.</p>
 
-<p>For example, to click on <code class="highlighter-rouge">#foo</code> if <code class="highlighter-rouge">#bar</code> is visible:</p>
+<p>例如， to click on <code class="highlighter-rouge">#foo</code> if <code class="highlighter-rouge">#bar</code> is visible:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;conditionalClick</span> <span class="na">selector=</span><span class="s">"#foo"</span> <span class="na">dependentSelector=</span><span class="s">"#bar"</span> <span class="na">visible=</span><span class="s">"true"</span> <span class="na">stepKey=</span><span class="s">"click1"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
@@ -1762,7 +1762,7 @@ Equivalent to using <a href="#fillfield">fillField</a> with an empty string.</p>
 <p>Create an entity (e.g. a category or product). In other words, make a POST request
 to the Magento API according to the data and metadata of the entity to be created.</p>
 
-<p>For example, you can create the entity with the name “SampleProduct”:</p>
+<p>例如， you can create the entity with the name “SampleProduct”:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"SampleProduct"</span> <span class="na">stepKey=</span><span class="s">"createSampleProduct"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
@@ -1814,10 +1814,10 @@ to the Magento API according to the data and metadata of the entity to be create
 
 <h4 id="required-entity">required-entity</h4>
 
-<p>Specify relationships amongst data to be created. For example, a complex Product
+<p>Specify relationships amongst data to be created. 例如， a complex Product
 object may contain within it a pointer (an ID) to a complex Category object.</p>
 
-<p>For example, first we create a category, then we create a product in that category
+<p>例如， first we create a category, then we create a product in that category
 by indicating the relationship.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;createData</span> <span class="na">entity=</span><span class="s">"SampleCategory"</span> <span class="na">stepKey=</span><span class="s">"createCategory"</span><span class="nt">/&gt;</span>
@@ -2913,7 +2913,7 @@ previously created using <a href="#createdata">createData</a> in the scope of th
 <p>Gets an entity (e.g. a category or product).
 In other words, makes a GET request to the Magento API according to the data and metadata of the entity type that is requested.</p>
 
-<p>For example, using <code class="highlighter-rouge">getData</code> in a test looks like this:</p>
+<p>例如， using <code class="highlighter-rouge">getData</code> in a test looks like this:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;getData</span> <span class="na">entity=</span><span class="s">"ProductAttributeOptionGetter"</span> <span class="na">index=</span><span class="s">"1"</span> <span class="na">stepKey=</span><span class="s">"getAttributeOption1Handle"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;required-entity</span> <span class="na">createDataKey=</span><span class="s">"productAttributeHandle"</span><span class="nt">/&gt;</span>
@@ -4151,7 +4151,7 @@ calls <a href="#closeAdminNotification">closeAdminNotification</a></p>
 <h3 id="searchandmultiselectoption">searchAndMultiSelectOption</h3>
 
 <p>Search for and select options from a Magento multi-select drop down menu.
-For example, the drop down menu you use to assign Products to Categories.</p>
+例如， the drop down menu you use to assign Products to Categories.</p>
 
 <table>
   <thead>
@@ -5452,7 +5452,7 @@ For example, the drop down menu you use to assign Products to Categories.</p>
 <p>When you create a data entity using <code class="highlighter-rouge">createData</code>, you may need to update it later in the test.
 The <code class="highlighter-rouge">updateData</code> action allows this.</p>
 
-<p>For example, to change the price of a product:</p>
+<p>例如， to change the price of a product:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;updateData</span> <span class="na">entity=</span><span class="s">"AdjustPriceProduct"</span> <span class="na">createDataKey=</span><span class="s">"productHandle"</span> <span class="na">stepKey=</span><span class="s">"updateProduct"</span><span class="nt">/&gt;</span>
 </code></pre></div></div>

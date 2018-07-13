@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/frontend-dev-guide/css-topics/css-preprocess.html">
+	<link rel="canonical" href="/guides/v2.1/frontend-dev-guide/css-topics/css-preprocess.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1174,7 +1174,7 @@ Description
 <td>
 <p>The <code>.less</code> files from which the <code>.css</code> files <a href="/guides/v2.1/frontend-dev-guide/css-topics/css-themes.html" target="_blank">included in layout</a> are compiled.
 
-For example, in one of the <a href="https://github.com/magento/magento2/blob/2.0/app/design/frontend/Magento/blank/Magento_Theme/layout/default_head_blocks.xml" target="_blank">layout files of the Magento Blank theme</a>, the following <code>.css</code> files are included:
+例如， in one of the <a href="https://github.com/magento/magento2/blob/2.0/app/design/frontend/Magento/blank/Magento_Theme/layout/default_head_blocks.xml" target="_blank">layout files of the Magento Blank theme</a>, the following <code>.css</code> files are included:
 
 <pre>
     &lt;head&gt;
@@ -1284,7 +1284,7 @@ For each CSS file included in the layouts, LESS preprocessor does the following:
 
 <h2 id="fedg_css-import">The <code class="highlighter-rouge">@import</code> directive rules of usage</h2>
 <p>You can import local and remote <code class="highlighter-rouge">.less</code> and <code class="highlighter-rouge">.css</code> files in your <code class="highlighter-rouge">.less</code> Magento stylesheets by using the standard LESS <a href="http://lesscss.org/features/#import-directives-feature"><code class="highlighter-rouge">@import</code> directive</a>.
-According to the <code class="highlighter-rouge">@import</code> syntax, specifying the file extension for the imported file is not mandatory. For example, the following notation is allowed:</p>
+According to the <code class="highlighter-rouge">@import</code> syntax, specifying the file extension for the imported file is not mandatory. 例如， the following notation is allowed:</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@import</span> <span class="s2">'source/lib/_lib'</span><span class="p">;</span>
 <span class="k">@import</span> <span class="p">(</span><span class="n">css</span><span class="p">)</span> <span class="s2">'styles'</span><span class="p">;</span></code></pre></figure>
@@ -1298,7 +1298,7 @@ According to the <code class="highlighter-rouge">@import</code> syntax, specifyi
 
 <h3 id="importing-remote-css-files">Importing remote CSS files</h3>
 
-<p>If you need to import a remote CSS file in your <code class="highlighter-rouge">.less</code> source, use <code class="highlighter-rouge">url()</code> notation. For example, to import a Google font, use the following notation:</p>
+<p>If you need to import a remote CSS file in your <code class="highlighter-rouge">.less</code> source, use <code class="highlighter-rouge">url()</code> notation. 例如， to import a Google font, use the following notation:</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@import</span> <span class="sx">url('//fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600.css')</span><span class="p">;</span></code></pre></figure>
 

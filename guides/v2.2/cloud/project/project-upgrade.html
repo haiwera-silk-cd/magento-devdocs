@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/project/project-upgrade.html">
+	<link rel="canonical" href="/guides/v2.2/cloud/project/project-upgrade.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2010,9 +2010,9 @@
 
 <p>We have heavily tested and verified upgrades to 2.2 from the latest three versions of 2.0.X and 2.1.X.</p>
 
-<p>You can attempt to upgrade from any version directly to Magento企业版(云支持版) 2.2. We cannot guarantee the results. For example, you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.</p>
+<p>You can attempt to upgrade from any version directly to Magento企业版(云支持版) 2.2. We cannot guarantee the results. 例如， you should be able to upgrade from 2.0.10 or 2.1.4 directly to 2.2.</p>
 
-<p>If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. For example, you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.</p>
+<p>If you prefer a secured and verified upgrade path, you can upgrade to one of the verified and tested versions, then directly upgrade to 2.2. 例如， you could upgrade from 2.0.10 to 2.0.14, then upgrade to 2.2.</p>
 
 <p>When upgrading from any version to 2.2, please review the following sections to update your settings, make changes, and upgrade required software prior to upgrading Magento.</p>
 
@@ -2109,16 +2109,16 @@
   </li>
 </ol>
 
-<p><strong>For Pro plan merchants:</strong> When you are ready to deploy to Pro Staging and Production environments, you must enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">Support ticket</a> advising you need your hooks updated for Magento企业版(云支持版) 2.2.</p>
+<p><strong>For Pro plan merchants:</strong> When you are ready to deploy to Pro Staging and Production environments, you must enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">支持工单</a> advising you need your hooks updated for Magento企业版(云支持版) 2.2.</p>
 
 <div class="bs-callout bs-callout-warning">
-  <p><strong>For Pro:</strong> You may encounter deployment errors for Pro to your Staging and Production environments if the hooks are not updated. Please enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">Support ticket</a> advising you need your hooks updated in Staging and Production for Magento企业版(云支持版) 2.2.</p>
+  <p><strong>For Pro:</strong> You may encounter deployment errors for Pro to your Staging and Production environments if the hooks are not updated. Please enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">支持工单</a> advising you need your hooks updated in Staging and Production for Magento企业版(云支持版) 2.2.</p>
 </div>
 
 <h3 id="variable">Verify or set the ADMIN_EMAIL variable</h3>
 <p>The environment variable <code class="highlighter-rouge">ADMIN_EMAIL</code> is required for upgrading and patching. This email is used for sending password reset requests and verified during when updating Magento企业版(云支持版). See <a href="/guides/v2.2/cloud/project/project-webint-basic.html#project-conf-env-var">Set environment and project variables</a>.</p>
 
-<h3 id="fastly">Upgrade Fastly</h3>
+<h3 id="fastly">升级Fastly</h3>
 <p>If you have not upgraded to the latest supported version of Fastly, you should do so. Check <a href="/guides/v2.2/cloud/requirements/cloud-requirements.html#cloud-arch-software">Supported software versions</a> for the latest version of Fastly we recommend. For instructions, see <a href="/guides/v2.2/cloud/access-acct/fastly.html#upgrade">Upgrade Fastly</a>.</p>
 
 <p>If you do not upgrade your Fastly module, you will be missing vitual updates for Fastly and Magento services. You may also need to update the JSON format. This is already included in Fastly module v1.2.33 and later. For full details, see <a href="https://github.com/fastly/fastly-magento2/blob/00f2bf042e5f708a1c3e7f49ae4f0fe71a658a76/Documentation/Guides/MAGENTO-UPGRADES.md" target="\_blank">Fastly upgrade documentation</a>.</p>
@@ -2181,7 +2181,7 @@
   <ol>
     <li>If you haven’t done so already, change to your project root directory.</li>
     <li>
-      <p>Enter the following command:</p>
+      <p>输入下面的命令：</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
 </code></pre></div>      </div>
@@ -2199,7 +2199,7 @@
 composer update
 </code></pre></div>      </div>
 
-      <p>For example, to upgrade to version 2.2:</p>
+      <p>例如， to upgrade to version 2.2:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer require magento/magento-cloud-metapackage 2.2.0 --no-update
 composer update
@@ -2321,7 +2321,7 @@ Magento_Sales schema: current version - 2.0.2, required version - 2.0.3
     <li>
       <p>After you fix the source of the issue, push the change to the server, which causes the upgrade to restart.</p>
 
-      <p>For example, on a local branch, enter the following commands:</p>
+      <p>例如， on a local branch, enter the following commands:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add -A &amp;&amp; git commit -m "fixed deployment failure" &amp;&amp; git push origin &lt;branch name&gt;
 </code></pre></div>      </div>
@@ -2329,7 +2329,7 @@ Magento_Sales schema: current version - 2.0.2, required version - 2.0.3
   </ol>
 
   <h3 id="deploy-error">Deployment error</h3>
-  <p>If you encounter a deployment error to Pro Staging and Production environments, you need to have us update your <code class="highlighter-rouge">.magento.app.yaml</code> hooks. Please enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">Support ticket</a> advising you need your hooks updated in Staging and Production for Magento企业版(云支持版) 2.2.</p>
+  <p>If you encounter a deployment error to Pro Staging and Production environments, you need to have us update your <code class="highlighter-rouge">.magento.app.yaml</code> hooks. Please enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">支持工单</a> advising you need your hooks updated in Staging and Production for Magento企业版(云支持版) 2.2.</p>
 </div>
 
 			

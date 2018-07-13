@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html">
+	<link rel="canonical" href="/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1580,7 +1580,7 @@ setup:upgrade <span class="nt">--dry-run</span><span class="o">=</span>1
 
 <h2 id="safe-installation-and-rollback">Safe installation and rollback</h2>
 
-<p>The advantage and the main problem of declarative schema is that it can blindly modify the database schema. For example, a developer can make a mistake and potentially remove a structural element from the database, causing data loss.</p>
+<p>The advantage and the main problem of declarative schema is that it can blindly modify the database schema. 例如， a developer can make a mistake and potentially remove a structural element from the database, causing data loss.</p>
 
 <p>To help prevent data loss, you can specify command line options that dump all the data that could be lost as a result of an installation. The dumped data can then be restored manually or automatically. These arguments are optional–you do not have to create a manual dump during a system upgrade. <em>(But please note, that this works only with schema)</em></p>
 
@@ -1605,7 +1605,7 @@ setup:upgrade <span class="nt">--dry-run</span><span class="o">=</span>1
     </ul>
   </li>
   <li>
-    <p><em>Opposite to destructive operations (ODO)</em> - In the case of a failed Magento installation, SQL DDL operations that are the opposite of  destructive operations can be used for rollback. For example, changing the column type from CHAR to INT is a destructive operation. The rollback operation changes the type from INT to CHAR.</p>
+    <p><em>Opposite to destructive operations (ODO)</em> - In the case of a failed Magento installation, SQL DDL operations that are the opposite of  destructive operations can be used for rollback. 例如， changing the column type from CHAR to INT is a destructive operation. The rollback operation changes the type from INT to CHAR.</p>
   </li>
 </ul>
 

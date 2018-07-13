@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">
+	<link rel="canonical" href="/guides/v2.1/cloud/basic-information/starter-develop-deploy-workflow.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -799,12 +799,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.1/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2051,7 +2051,7 @@ git pull origin &lt;environment ID&gt;
 <h3 id="dev-code">Develop code</h3>
 <p>It’s the time you have been waiting for…writing code. Using this base branch of Magento企业版(云支持版) code, you can start installing extensions, developing custom code, adding themes, and much more.</p>
 
-<p>We recommend using a branching strategy with your development work. Using one branch to do all of your work all at once might make testing difficult. For example, you could follow continuous integration and sprint methodologies to work:</p>
+<p>We recommend using a branching strategy with your development work. Using one branch to do all of your work all at once might make testing difficult. 例如， you could follow continuous integration and sprint methodologies to work:</p>
 
 <ul>
   <li>Add a few extensions and configure them with your first branch</li>
@@ -2112,7 +2112,7 @@ git pull origin &lt;environment ID&gt;
   <li>
     <p>Any configuration setting included in the file is locked from editing, or read-only, in the deployed environment. This is one reason we recommend using <code class="highlighter-rouge">scd-dump</code>.</p>
 
-    <p>For example, we will have you install a module for Fastly in your development environment. You will only configure this module in Staging and Production. Using <code class="highlighter-rouge">scd-dump</code> keeps those default fields editable.</p>
+    <p>例如， we will have you install a module for Fastly in your development environment. You will only configure this module in Staging and Production. Using <code class="highlighter-rouge">scd-dump</code> keeps those default fields editable.</p>
   </li>
   <li>
     <p>This file can be long depending on the size of your deployment. The <code class="highlighter-rouge">scd-dump</code> command generates a far small file than <code class="highlighter-rouge">app:config:dump</code>.</p>
@@ -2130,7 +2130,7 @@ git pull origin &lt;environment ID&gt;
 <h3 id="push-code">Push code and test</h3>
 <p>At this point, you should have a developed code branch with a configuration file (<code class="highlighter-rouge">config.local.php</code>或<code class="highlighter-rouge">config.php</code>) ready to test.</p>
 
-<p>Everytime you push code from your local environment, a series of build and deploy scripts run. These scripts generate new Magento code and deploy it to the remote environment. For example, if you are pushing a development branch from your local to the remote Git branch, a matching environment updates services, code, and static content.</p>
+<p>Everytime you push code from your local environment, a series of build and deploy scripts run. These scripts generate new Magento code and deploy it to the remote environment. 例如， if you are pushing a development branch from your local to the remote Git branch, a matching environment updates services, code, and static content.</p>
 
 <p>You can directly access this environment with a store URL, Magento Admin URL, and SSH. These environments include a web server, database, and configured services. When ready, you can start deploying and testing in Staging.</p>
 

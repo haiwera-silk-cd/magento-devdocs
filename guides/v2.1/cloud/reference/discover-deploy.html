@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/cloud/reference/discover-deploy.html">
+	<link rel="canonical" href="/guides/v2.1/cloud/reference/discover-deploy.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -799,12 +799,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.1/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1966,7 +1966,7 @@
 </ul>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Verify the code for your site and stores is in the Magento企业版(云支持版) branch. If you point, or include hooks, to code in other branches, such as a private branch, you may encounter problems with the build and deploy process. For example, if you include a theme from a private repo in your branch, the theme will not build with the Magento code.</p>
+  <p>Verify the code for your site and stores is in the Magento企业版(云支持版) branch. If you point, or include hooks, to code in other branches, such as a private branch, you may encounter problems with the build and deploy process. 例如， if you include a theme from a private repo in your branch, the theme will not build with the Magento code.</p>
 </div>
 
 <div>
@@ -1987,13 +1987,13 @@
   <h2 id="cloud-deploy-conf">Project configuration</h2>
   <p>A set of YAML configuration files located in the project root directory define your Magento installation and describe its dependencies. If you intend to make changes, modify the YAML files in your local branch. The build and deploy scripts access those files for specific settings.</p>
 
-  <p>For all Starter environments and Pro Integration environments, pushing your Git branch updates all settings and configurations dependent on these files. For Pro Staging and Production environments, you will need to enter a <a href="/guides/v2.1/cloud/trouble/trouble.html">Support ticket</a>. We will configure those environments using configurations from the Git files.</p>
+  <p>For all Starter environments and Pro Integration environments, pushing your Git branch updates all settings and configurations dependent on these files. For Pro Staging and Production environments, you will need to enter a <a href="/guides/v2.1/cloud/trouble/trouble.html">支持工单</a>. We will configure those environments using configurations from the Git files.</p>
 
   <ul>
     <li><a href="/guides/v2.1/cloud/project/project-conf-files_magento-app.html"><code class="highlighter-rouge">.magento.app.yaml</code></a>—defines how to build and deploy Magento. Enter specific build and deploy options to the <code class="highlighter-rouge">hooks</code> section.</li>
     <li><a href="/guides/v2.1/cloud/project/magento-env-yaml.html"><code class="highlighter-rouge">.magento.env.yaml</code></a>—centralizes the management of build and deploy actions across all of your environments, including Pro Staging and Production, using environment variables.</li>
     <li><a href="/guides/v2.1/cloud/project/project-conf-files_routes.html"><code class="highlighter-rouge">.magento/routes.yaml</code></a>—defines how Magento Commerce processes an incoming URL.</li>
-    <li><a href="/guides/v2.1/cloud/project/project-conf-files_services.html"><code class="highlighter-rouge">.magento/services.yaml</code></a>—defines the services Magento uses by name and version. For example, this file may include versions of MySQL, PHP extensions, and Elasticsearch. These are referred to as <em>services</em>.</li>
+    <li><a href="/guides/v2.1/cloud/project/project-conf-files_services.html"><code class="highlighter-rouge">.magento/services.yaml</code></a>—defines the services Magento uses by name and version. 例如， this file may include versions of MySQL, PHP extensions, and Elasticsearch. These are referred to as <em>services</em>.</li>
     <li>
       <p><a href="http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html"><code class="highlighter-rouge">app/etc/config.php</code></a>—defines the <a href="http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html#cloud-clp-settings">system-specific settings</a> Magento uses to configure your store. Magento auto-generates this file if it does not detect it during the build phase and includes a list of modules and extensions. If the file exists, the build phase continues as normal, compresses static files using <code class="highlighter-rouge">gzip</code>, and deploys the files. If you follow <a href="http://devdocs.magento.com/guides/v2.1/cloud/live/sens-data-over.html">Configuration Management</a> at a later time, the commands update the file without requiring additional steps.</p>
 
@@ -2026,7 +2026,7 @@
   </ul>
 
   <h2 id="cloud-deploy-over-phases">Five phases of Integration build and deployment</h2>
-  <p>The following phases occur in your local development environment and the Integration environment. For Pro plans, the code is not deployed to the Staging or Production environments in these initial phases. See <a href="/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code to Staging and Production</a>.</p>
+  <p>The following phases occur in your 本地开发环境 and the Integration environment. For Pro plans, the code is not deployed to the Staging or Production environments in these initial phases. See <a href="/guides/v2.1/cloud/live/stage-prod-migrate.html">Deploy code to Staging and Production</a>.</p>
 
   <p>Integration build and deployment consists of the following phases:</p>
 
@@ -2049,7 +2049,7 @@
 
   <p>You should create a branch from <code class="highlighter-rouge">master</code> for your custom code, extensions and modules, and third party integrations. We provide a full Integration environment for testing your code in the cloud.</p>
 
-  <p>When you push your code from your local workspace to the remote repository, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. For example, you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.</p>
+  <p>When you push your code from your local workspace to the remote repository, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. 例如， you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.</p>
 
   <p>If you have a syntax error in a configuration file, our Git server refuses the push. For details, see <a href="/guides/v2.1/cloud/live/live-prot.html">Protective Block</a>.</p>
 
@@ -2141,7 +2141,7 @@
   </ul>
 
   <div class="bs-callout bs-callout-info" id="info">
-  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your local development environment is not affected.</p>
+  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your 本地开发环境 is not affected.</p>
 </div>
 
   <h3 id="cloud-deploy-over-phases-route">Post-deployment: configure routing</h3>

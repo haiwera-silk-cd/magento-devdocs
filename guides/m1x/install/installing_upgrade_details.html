@@ -146,7 +146,7 @@ The following figure shows an example.<br />
 
 <h4 id="prereq-tasks-prod-archive">Archiving Customizations and Extensions</h4>
 <p>To archive your custom themes and extensions:</p>
-<ol><li>Archive the Magento <code>media</code> directory and all subdirectories. For example,<br />
+<ol><li>Archive the Magento <code>media</code> directory and all subdirectories. 例如，<br />
 <pre>cd [your Magento install dir]
 tar -czf media.tgz media</pre></li>
 <li>Archive any custom themes in the following directories:<br />
@@ -170,7 +170,7 @@ tar -czf media.tgz media</pre></li>
 The Magento installation archive creates a <code>magento</code> subdirectory so if you want your Magento installation directory to be <code>/var/www/magento</code>, you don't need to do anything.<br />
 <div class="msg-box important"><img src="/common/images/m1x/icon-tip.png" alt="tip" align="left" width="40"><span><strong>Tip</strong>: The name and path to the Magento installation directory in your development system does not have to be the same as on your production system, although it might make some tasks simpler.</span></div>
 
-<li>Create a new database instance. For example, you can create a new MySQL database instance named <code>magento</code> using the following commands:<br />
+<li>Create a new database instance. 例如， you can create a new MySQL database instance named <code>magento</code> using the following commands:<br />
 <pre>mysql -u root -p</pre>
 Enter the remaining commands at the <code>mysql></code> prompt
 <pre>create database magento;
@@ -231,12 +231,12 @@ yum --enablerepo=remi install httpd php php-common</pre>
 <div class="msg-box important"><img src="/common/images/m1x/icon-important.png" alt="important" align="left" width="40"><span><strong>Important</strong>: To avoid errors after upgrading, you <em>must</em> set up a parallel system. <em>Do not</em> upgrade your existing system or post-upgrade errors are likely to occur.</span></div>
 
 <ol><li>Make sure the CE or EE installation archive is located in the directory above where you want Magento to be installed.<br />
-For example, to install Magento to <code>/var/www/magento</code>, copy the archive to <code>/var/www</code>.</li>
-<li>Extract the archive. For example,
+例如， to install Magento to <code>/var/www/magento</code>, copy the archive to <code>/var/www</code>.</li>
+<li>Extract the archive. 例如，
 <code>tar -zxf <em>archive-name</em></code><br />
 This installs Magento CE or EE on the file system on your development system. Next, you'll overwrite some of these assets with customizations from your production system.</li>
 <li>Extract the production system's <code>media</code> archive, overwriting the installation archive. You created the <code>media</code> archive as discussed in <a href="#prereq-tasks">Getting Ready For Your Upgrade</a>.<br />
-<div class="msg-box important"><img src="/common/images/m1x/icon-tip.png" alt="tip" align="left" width="40"><span><strong>Tip</strong>: Copy the media archive to the same level in the directory structure to simplify the process. For example, if you created the media archive on your production system in your Magento install directory, the archive when extracted creates the <code>media</code> directory and all subdirectories. If you copy the media archive to the Magento installation directory on your development system, extracting it automatically replaces existing <code>media</code> subdirectory contents.</span></div></li>
+<div class="msg-box important"><img src="/common/images/m1x/icon-tip.png" alt="tip" align="left" width="40"><span><strong>Tip</strong>: Copy the media archive to the same level in the directory structure to simplify the process. 例如， if you created the media archive on your production system in your Magento install directory, the archive when extracted creates the <code>media</code> directory and all subdirectories. If you copy the media archive to the Magento installation directory on your development system, extracting it automatically replaces existing <code>media</code> subdirectory contents.</span></div></li>
 <li>If necessary, move the <code>media</code> directory and subdirectories to <code>media</code> directory in your new Magento installation, overwriting the existing contents.</li>
 <li>Extract the custom theme package archive you created as discussed in <a href="#prereq-tasks">Getting Ready For Your Upgrade</a>.</li>
 <li>If necessary, move the theme packages to the <code>[your Magento install dir]/app/design/frontend</code>和<code>[your Magento install dir]/skin/frontend</code> directories, as appropriate, overwriting the existing contents.</li>
@@ -252,7 +252,7 @@ This installs Magento CE or EE on the file system on your development system. Ne
 
 <p><code>mysql</code> syntax follows:</p>
 <pre>mysql -u root -p <em>database-name</em> &lt; <em>database-export-filename</em>.sql</pre>
-For example, if the database name is <code>magento</code> and the database export file name is <code>mangento-db-export.sql</code>, enter
+例如， if the database name is <code>magento</code> and the database export file name is <code>mangento-db-export.sql</code>, enter
 <pre>mysql -u root -p magento &lt; mangento-db-export.sql</pre></li>
 <p>The following sections discuss how to change the base URL paths from <code>http://prod.example.com</code> to <code>http://dev.example.com</code> using SQL commands and phpmyadmin:</p>
 <ul><li><a href="#upgrade-manual-db-sql">Updating the Base URL the Database Using SQL Commands</a></li>
@@ -281,7 +281,7 @@ UPDATE core_config_data SET value='https://dev.example.com/' WHERE config_id=355
 <li>Verify the values are set correctly.
 <pre>SELECT * FROM core_config_data WHERE path LIKE '%base_url%';</pre></li>
 <li>For other URLs, be careful to perform the replacement correctly.<br />
-For example, store view base link URLs resemble the following:<br />
+例如， store view base link URLs resemble the following:<br />
 <pre>http://prod.example.com/view1/</pre>
 Make sure to update the URL like the following:
 <pre>UPDATE core_config_data SET value='http://dev.example.com/view1/' WHERE config_id=377;</pre></li>
@@ -294,7 +294,7 @@ If not, repeat the tasks discussed in this section. <em>Do not continue</em> unt
 <h4 id="upgrade-manual-db-phpmyadmin">Updating the Base URL the Database Using phpmyadmin</h4>
 <p>This section discusses how to use phpmyadmin to change the values of the paths <code>web/unsecure/base_url</code>和<code>web/secure/base_url</code> in the <code>core_config_data</code> table to the development server's IP address or host name.</p>
 <ol><li>In a web browser's location or address field, enter <code><em>dev-web-server-host-or-ip</em>/phpmyadmin</code>
-For example, if your web server address is <code>http://dev.example.com</code>, enter
+例如， if your web server address is <code>http://dev.example.com</code>, enter
 <code>http://dev.example.com/phpmyadmin</code></li>
 <li>Log in as the MySQL <code>root</code> user.</li>
 <li>In the left navigation bar, click the name of your Magento database.</li>
@@ -324,15 +324,15 @@ The following figure shows an example.<br />
 <li>Copy the following files from the Magento 1.14.0.0 installation to the equivalent directory on your Solr installation:
 <pre>[your Magento install dir]/lib/Apache/Solr/conf/schema.xml
 [your Magento install dir]/lib/Apache/Solr/conf/solrconfig.xml</pre>
-<p>For example, if Magento is installed in <code>/var/www/html/magento</code> and the example Solr configuration is installed in the <code>/etc/solr/apache-solr-3.6.2/example/solr/conf</code> directory on the same host, enter:</p>
+<p>例如， if Magento is installed in <code>/var/www/html/magento</code> and the example Solr configuration is installed in the <code>/etc/solr/apache-solr-3.6.2/example/solr/conf</code> directory on the same host, enter:</p>
 <pre>cp /var/www/html/magento/lib/Apache/Solr/conf/solrconfig.xml /etc/solr/apache-solr-3.6.2/example/solr/conf
 cp /var/www/html/magento/lib/Apache/Solr/conf/schema.xml /etc/solr/apache-solr-3.6.2/example/solr/conf</pre></li>
 <li>Restart Solr.</li>
 <li>After you copy the files, you must update the catalog search index. To update the catalog search index, open a command prompt window.</li>
 <li>Change to the <code>shell</code> subdirectory of your Magento installation directory.<br />
-For example, on CentOS:
+例如， on CentOS:
 <pre>cd /var/www/html/magento/shell</pre></li>
-<li>Enter the following command:
+<li>输入下面的命令：
 <pre>php indexer.php --reindex catalogsearch_fulltext</code></li></ol>
 <div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: The preceding example showed paths used by the Solr example configuration. Solr ships with a sample configuration that Magento suggests you use for development only. Do not use the Solr example configuration in production.</div>
 
@@ -379,7 +379,7 @@ cd /var/www/magento
 cd /var/www/html/magento</pre></li>
 <li><em>Dedicated Magento server only</em>. Enter the following command to set ownership of the Magento installation directory and all its subdirectories:
 <pre>chown -R <em>web-server-user-name</em> .</pre>
-For example, on Ubuntu where Apache usually runs as <code>www-data</code>, enter
+例如， on Ubuntu where Apache usually runs as <code>www-data</code>, enter
 <pre>chown -R www-data .</pre></li>
 <li>Enter the following commands to set directory permissions to 700 and file permissions to 600:
 <pre>find . -type d -exec chmod 700 {} \;
@@ -472,7 +472,7 @@ You can find errors in the web server's error log or in <code>[your Magento inst
 <!-- <h3 id="upgrade-manual-post-upgrade-ee112">Running a Full Reindex <em>(EE 1.13.0.0 or 1.13.0.1 only)</em></h3>
 <p>If you're upgrading from EE 1.13.0.0 or 1.13.0.1, enter the following commands as a user with <codE>root</code> privileges to fully reindex:</p>
 <ol><li>Change to the Magento installation directory.</li>
-<li>Enter the following command:<br />
+<li>输入下面的命令：<br />
 <code>php -f shell/indexer.php -- --reindexall</code></li>
 <li>Wait while Magento reindexes; if you have a large database, reindexing can take a long time.</li>
 <li>Clear the Magento <code>var/</code> subdirectories as discussed in the next section.</li></ol> -->
@@ -505,7 +505,7 @@ Verify that all indexers have a status of Ready, as the following figure shows.<
 </tr>
 <tr>
   <td>Processing</td>
-  <td><p>Wait for cron to finish or run <code>cron.php</code> from a web browser. (For example, <code>http://www.example.com/magento/cron.php</code>)</p>
+  <td><p>Wait for cron to finish or run <code>cron.php</code> from a web browser. (例如， <code>http://www.example.com/magento/cron.php</code>)</p>
   <p>If indexers are Processing for an extended period of time, run the command discussed in <a href="#upgrade-manual-var">Clearing Magento var/ Subdirectories</a> and refresh the Index Management page.</p></td>
 </tbody>
 </table></li></ol>

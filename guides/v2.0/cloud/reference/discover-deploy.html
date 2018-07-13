@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/reference/discover-deploy.html">
+	<link rel="canonical" href="/guides/v2.0/cloud/reference/discover-deploy.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -757,12 +757,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1758,7 +1758,7 @@
 </ul>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>Make sure all code for your site and stores is in the active Magento Commerce Git branch. If you point to or include hooks to code in other branches, especially a private branch, the build and deploy process will have issues. For example, add any new themes into the Git branch of code. If you include it from a private repo, the theme won’t build with the Magento code.</p>
+  <p>Make sure all code for your site and stores is in the active Magento Commerce Git branch. If you point to or include hooks to code in other branches, especially a private branch, the build and deploy process will have issues. 例如， add any new themes into the Git branch of code. If you include it from a private repo, the theme won’t build with the Magento code.</p>
 </div>
 
 <div>
@@ -1784,7 +1784,7 @@
   <ul>
     <li><a href="/guides/v2.0/cloud/project/project-conf-files_magento-app.html"><code class="highlighter-rouge">.magento.app.yaml</code></a> defines how Magento is built and deployed. Enter specific build and deploy options to the <code class="highlighter-rouge">hooks</code> section.</li>
     <li><a href="/guides/v2.0/cloud/project/project-conf-files_routes.html"><code class="highlighter-rouge">routes.yaml</code></a> defines how an incoming URL is processed by Magento Commerce.</li>
-    <li><a href="/guides/v2.0/cloud/project/project-conf-files_services.html"><code class="highlighter-rouge">services.yaml</code></a> defines the services Magento uses by name and version. For example, this file may include versions of MySQL, some PHP extensions, and Elasticsearch. These are referred to as <em>services</em>.</li>
+    <li><a href="/guides/v2.0/cloud/project/project-conf-files_services.html"><code class="highlighter-rouge">services.yaml</code></a> defines the services Magento uses by name and version. 例如， this file may include versions of MySQL, some PHP extensions, and Elasticsearch. These are referred to as <em>services</em>.</li>
   </ul>
 
   <h2 id="requiredfiles">Required files for your Git branch</h2>
@@ -1809,7 +1809,7 @@
   </ul>
 
   <h2 id="cloud-deploy-over-phases">Five phases of Integration build and deployment</h2>
-  <p>The following phases occur on your local development environment and the Integration environment. The code is not deployed to Staging or Production for Pro plan in these initial phases.</p>
+  <p>The following phases occur on your 本地开发环境 and the Integration environment. The code is not deployed to Staging or Production for Pro plan in these initial phases.</p>
 
   <p>Integration build and deployment consists of the following phases:</p>
 
@@ -1830,7 +1830,7 @@
     <li><strong>For Pro</strong>: <code class="highlighter-rouge">master</code> begins as origin branch for the Integration environment. You deploy this branch to Staging and Production.</li>
   </ul>
 
-  <p>The remote server gets your code using Git. When you push your code from local to the remote Git, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. For example, you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.</p>
+  <p>The remote server gets your code using Git. When you push your code from local to the remote Git, a series of checks and code validation completes prior to build and deploy scripts. The built-in Git server checks what you are pushing and makes changes. 例如， you may want to add an Elasticsearch instance. The built-in Git server detects this and verifies that the topology of your cluster is modified to your new needs.</p>
 
   <p>If you have a syntax error in a configuration file, our Git server refuses the push. For details, see <a href="/guides/v2.0/cloud/live/live-prot.html">Protective Block</a>.</p>
 
@@ -1913,7 +1913,7 @@
   </ul>
 
   <div class="bs-callout bs-callout-info" id="info">
-  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your local development environment isn't affected.</p>
+  <p>Our deploy script uses the values defined by configuration files in the <code>.magento</code> directory, then the script deletes the directory and its contents. Your 本地开发环境 isn't affected.</p>
 </div>
 
   <div class="bs-callout bs-callout-info" id="info">

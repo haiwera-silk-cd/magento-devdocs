@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/bootstrap/magento-how-to-set.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/bootstrap/magento-how-to-set.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1922,7 +1922,7 @@
 <h3 id="config-bootparam-mode">Set the mode using an environment variable</h3>
 <p>You can specify Magento bootstrap variables as system-wide environment variables, which enables all processes to use them.</p>
 
-<p>For example, you can use the <code class="highlighter-rouge">MAGE_PROFILER</code> system environment variable to specify a mode as follows:</p>
+<p>例如， you can use the <code class="highlighter-rouge">MAGE_PROFILER</code> system environment variable to specify a mode as follows:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MAGE_PROFILER={firebug|csv|&lt;custom value&gt;}
 </code></pre></div></div>
@@ -1969,7 +1969,7 @@
   <li>
     <p>Open any of the preceding files in a text editor and either add or uncomment the desired setting.</p>
 
-    <p>For example, to specify a <a href="/guides/v2.2/config-guide/bootstrap/magento-modes.html">mode</a>, uncomment the following:</p>
+    <p>例如， to specify a <a href="/guides/v2.2/config-guide/bootstrap/magento-modes.html">mode</a>, uncomment the following:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#   SetEnv MAGE_PROFILER firebug
 </code></pre></div>    </div>
@@ -2008,7 +2008,7 @@ csvfile
   <li>
     <p>As a user with <code class="highlighter-rouge">root</code> privileges, open your virtual host configuration file in a text editor.</p>
 
-    <p>For example, if your virtual host is named <code class="highlighter-rouge">my.magento</code>,</p>
+    <p>例如， if your virtual host is named <code class="highlighter-rouge">my.magento</code>,</p>
 
     <ul>
       <li>Apache 2.4: <code class="highlighter-rouge">vim /etc/apache2/sites-available/my.magento.conf</code></li>
@@ -2021,7 +2021,7 @@ csvfile
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SetEnv "&lt;variable name&gt;" "&lt;variable value&gt;"
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SetEnv "MAGE_PROFILER" "firebug"
 </code></pre></div>    </div>
@@ -2033,7 +2033,7 @@ csvfile
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a2ensite &lt;virtual host config file name&gt;
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a2ensite my.magento.conf
 </code></pre></div>    </div>
@@ -2063,7 +2063,7 @@ csvfile
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SetEnv "&lt;variable name&gt;" "&lt;variable value&gt;"
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SetEnv "MAGE_PROFILER" "firebug"
 </code></pre></div>    </div>

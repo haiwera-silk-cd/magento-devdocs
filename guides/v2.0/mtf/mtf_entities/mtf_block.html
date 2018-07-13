@@ -1088,7 +1088,7 @@
 <p>You can use mapping for the forms on tabs (a form tab) that enables you to automate switching between tabs and entering the data.
 To get the block class with form tab mapping, extend your class from <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Backend/Test/Block/Widget/FormTabs.php"><code>Magento\Backend\Test\Block\Widget\FormTabs</code> </a>. If you want to use custom tab logic you can extend your class from <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Backend/Test/Block/Widget/Tab.php"><code>Magento\Backend\Test\Block\Widget\Tab</code></a> class.</p>
 
-<p>For example, let’s see tabs for the Magento Widget: <strong>Settings</strong>, <strong>Storefront properties</strong>, <strong>Frontend App Options</strong>, <strong>Layout Updates</strong> .</p>
+<p>例如， let’s see tabs for the Magento Widget: <strong>Settings</strong>, <strong>Storefront properties</strong>, <strong>Frontend App Options</strong>, <strong>Layout Updates</strong> .</p>
 
 <p><img src="/common/images/ftf/mtf_block_tabs_ui.png" /></p>
 
@@ -1210,7 +1210,7 @@ To get the block class with form tab mapping, extend your class from <a href="ht
 <h4 id="mtf_block_path">How to determine a block name and a path</h4>
 
 <p>The block name and path in the Magento functional tests (<code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/tests/app</code>) should reflect a corresponding block in the Magento code base for your convenience.
-For example, you develop a functional test for the <span term-uuid="fbcfce51-68e2-482f-84d5-f28d84404cff" class="glossary-term" data-toggle="popover">bundle product</span> creation, that uses the Bundle Items section. In the Magento code base, the block, which is responsible for the bundle option, is the <code class="highlighter-rouge">.../Magento/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php</code>, so in the Magento functional tests you can create a new file <code class="highlighter-rouge">.../Magento/Bundle/Block/Test/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php</code>.</p>
+例如， you develop a functional test for the <span term-uuid="fbcfce51-68e2-482f-84d5-f28d84404cff" class="glossary-term" data-toggle="popover">bundle product</span> creation, that uses the Bundle Items section. In the Magento code base, the block, which is responsible for the bundle option, is the <code class="highlighter-rouge">.../Magento/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php</code>, so in the Magento functional tests you can create a new file <code class="highlighter-rouge">.../Magento/Bundle/Block/Test/Adminhtml/Catalog/Product/Edit/Tab/Bundle/Option.php</code>.</p>
 
 <p>Magento can show you a full class name of the block and path to the <span term-uuid="ae0f1f68-c466-4189-88fd-6cd8b23c804f" class="glossary-term" data-toggle="popover">PHTML</span> template on the Magento page (changes web page design) or implicitly in the HTML code of the page.</p>
 
@@ -1291,7 +1291,7 @@ For example, you develop a functional test for the <span term-uuid="fbcfce51-68e
 
 <p>Blocks are tested as part of the <a href="/guides/v2.0/mtf/mtf_entities/mtf_page.html">page</a> object. To add the block to the page you must add a corresponding node to the XML file of the page object.</p>
 
-<p>For example, the <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/Block/Adminhtml/Widget/WidgetGrid.php">WidgetGrid.php</a> is a part of the page that is defined in <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/Page/Adminhtml/WidgetInstanceIndex.xml"><code>WidgetInstanceIndex.xml</code></a>.</p>
+<p>例如， the <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/Block/Adminhtml/Widget/WidgetGrid.php">WidgetGrid.php</a> is a part of the page that is defined in <a href="https://github.com/magento/magento2/blob/2.0/dev/tests/functional/tests/app/Magento/Widget/Test/Page/Adminhtml/WidgetInstanceIndex.xml"><code>WidgetInstanceIndex.xml</code></a>.</p>
 
 <p><code class="highlighter-rouge">block</code> is the node that adds the block to the page:</p>
 

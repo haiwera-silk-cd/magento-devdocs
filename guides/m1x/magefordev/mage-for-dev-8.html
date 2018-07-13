@@ -171,7 +171,7 @@ public function testAction()
 
 <p><strong>A Quick Note:</strong>  Magento's Data Collections contain a lot of complicated logic that handles when to use an index or cache, as well as the logic for the EAV entity system.  Successive method calls to the same Collection over its life can often result in unexpected behavior.  Because of that, all the of the following examples are wrapped in a single method action.  I'd recommend doing the same while you're experimenting.  Also, <a href="http://xdebug.org/">XDebug's</a> <tt>var_dump</tt> is a godsend when working with Magento Objects and Collections, as it will (usually) intelligently short circuit showing hugely recursive Objects, but still display a useful representation of the Object structure to you.</p>
 
-<p>The products Collection, as well as many other Magento Collections, also have the <tt>Varien_Data_Collection_Db</tt> class in their ancestor chain. This gives us a lot of useful methods.  For example, if you want to see the select statement your Collection is using</p>
+<p>The products Collection, as well as many other Magento Collections, also have the <tt>Varien_Data_Collection_Db</tt> class in their ancestor chain. This gives us a lot of useful methods.  例如， if you want to see the select statement your Collection is using</p>
 
 <pre>
 public function testAction()

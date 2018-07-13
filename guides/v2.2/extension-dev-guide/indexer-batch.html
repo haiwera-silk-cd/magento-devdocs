@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/extension-dev-guide/indexer-batch.html">
+	<link rel="canonical" href="/guides/v2.2/extension-dev-guide/indexer-batch.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1539,7 +1539,7 @@
   </tbody>
 </table>
 
-<p>Changing the batch size can help you optimize indexer running time. For example, for a store with the following characteristcs:</p>
+<p>Changing the batch size can help you optimize indexer running time. 例如， for a store with the following characteristcs:</p>
 
 <ul>
   <li>10 websites</li>
@@ -1573,7 +1573,7 @@
 
 <h2 id="indexer-table-switching">Indexer Table Switching</h2>
 
-<p>Magento optimizes certain indexer processes to prevent deadlocks and wait locks caused by read/write collisions on the same table. In these cases, Magento uses separate tables for performing read operations and reindexing. As a result of this table switching process, customers are not impacted when you run a full reindex. For example, when <code class="highlighter-rouge">catalog_product_price</code> is reindexing, customers won’t be slowed down as they navigate on Categories pages, search products, or user layer navigation filters with price filters.</p>
+<p>Magento optimizes certain indexer processes to prevent deadlocks and wait locks caused by read/write collisions on the same table. In these cases, Magento uses separate tables for performing read operations and reindexing. As a result of this table switching process, customers are not impacted when you run a full reindex. 例如， when <code class="highlighter-rouge">catalog_product_price</code> is reindexing, customers won’t be slowed down as they navigate on Categories pages, search products, or user layer navigation filters with price filters.</p>
 
 <p>Magento uses the following tables to support table switching.</p>
 

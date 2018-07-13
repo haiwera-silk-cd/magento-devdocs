@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/howdoi/checkout/checkout_form.html">
+	<link rel="canonical" href="/guides/v2.3/howdoi/checkout/checkout_form.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -914,7 +914,7 @@
 <p>Certain default checkout templates declare regions where additional content can be inserted. You can add your custom form in any of these regions. These regions are provided with corresponding comments in the default Checkout page layout file <code class="highlighter-rouge">&lt;Checkout_module_dir&gt;/view/frontend/layout/checkout_index_index.xml</code>.</p>
 
 <p>Also you locate the regions in the <code class="highlighter-rouge">.html</code> templates of the blocks used in this <span term-uuid="73ab5daa-5857-4039-97df-11269b626134" class="glossary-term" data-toggle="popover">布局</span> file.
-For example, the shipping JS component (see <code class="highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;/view/frontend/web/template/shipping.html</code>) provides the <code class="highlighter-rouge">before-form</code> region and corresponding UI container.</p>
+例如， the shipping JS component (see <code class="highlighter-rouge">&lt;Magento_Checkout_module_dir&gt;/view/frontend/web/template/shipping.html</code>) provides the <code class="highlighter-rouge">before-form</code> region and corresponding UI container.</p>
 
 <p>Any content added here is rendered before the Shipping Address form on the Shipping Information step. To add content to this region, create a <code class="highlighter-rouge">checkout_index_index.xml</code> layout update in the <code class="highlighter-rouge">&lt;your_module_dir&gt;/view/frontend/layout/</code>. It should be similar to the following:</p>
 
@@ -1054,7 +1054,7 @@ For example, the shipping JS component (see <code class="highlighter-rouge">&lt;
 
 <h3 id="dynamic_form">Dynamically defined forms</h3>
 
-<p>Dynamically defined, or dynamic, forms are the forms where the set or type of fields can change. For example, the fields displayed on the checkout form depend on the Admin settings: depending on the Admin &gt; Stores &gt; Configuration &gt; Customers &gt; Customer Configuration &gt; Name and Address Options
+<p>Dynamically defined, or dynamic, forms are the forms where the set or type of fields can change. 例如， the fields displayed on the checkout form depend on the Admin settings: depending on the Admin &gt; Stores &gt; Configuration &gt; Customers &gt; Customer Configuration &gt; Name and Address Options
 For such forms, you must implement a <a href="/guides/v2.3/extension-dev-guide/plugins.html">plugin</a> for the <code class="highlighter-rouge">\Magento\Checkout\Block\Checkout\LayoutProcessor::process</code> method.
 A plugin can add custom fields definitions to layout at run-time. The format of the field definition is the same as for fields defined in layout.</p>
 

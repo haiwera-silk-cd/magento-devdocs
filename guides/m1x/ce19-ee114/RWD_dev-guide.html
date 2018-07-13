@@ -238,11 +238,11 @@ cp -R skin/frontend/rwd/default/scss skin/frontend/custompackage/customtheme
 <h3 id="theme-compass">步骤3. Configuring a Compass Watcher</h3>
 <p>You can configure Compass to watch your skin directories for changes to CSS and JavaScript and to compile them when something changes.</p>
 <p>You can do this in either of the following ways:</p>
-<ul><li><em>(Recommended)</em> Using your PHP IDE. For example, if you use PHP Storm, see <a href="http://www.jetbrains.com/phpstorm/webhelp/working-with-sass-and-scss-in-compass-projects.html" target="_blank">Working with SASS and SCSS in Compass Projects</a>和<a href="http://www.jetbrains.com/phpstorm/webhelp/using-file-watchers.html" target="_blank">Using File Watchers</a>.</li>
+<ul><li><em>(Recommended)</em> Using your PHP IDE. 例如， if you use PHP Storm, see <a href="http://www.jetbrains.com/phpstorm/webhelp/working-with-sass-and-scss-in-compass-projects.html" target="_blank">Working with SASS and SCSS in Compass Projects</a>和<a href="http://www.jetbrains.com/phpstorm/webhelp/using-file-watchers.html" target="_blank">Using File Watchers</a>.</li>
 <li>Using following commands:
 <pre>cd <a href="#intro-convention">[your Magento install dir]</a><em>/custom-theme-dir</em>/scss 
 compass watch .</pre>
-    For example, if Magento is installed in <tt>/var/www/html/magento</tt>, enter:
+    例如， if Magento is installed in <tt>/var/www/html/magento</tt>, enter:
     <pre>cd /var/www/html/magento/skin/frontend/custompackage/customtheme/scss
 compass watch .</pre></li></ul>
 <p>For more information, see <a href="http://compass-style.org/help/documentation/command-line/" target="_blank">Compass Command Line Documentation</a>.</p>
@@ -307,7 +307,7 @@ If an error displays when you attempt to save the configuration, see <a href="#t
 <h5>No formatting on the web store</h5>
 <p><em>描述</em>: Most likely an issue with <tt>theme.xml</tt>. You can confirm this by viewing the page source and searching for <tt>styles.css</tt>. If <tt>styles.css</tt> is loading from a path similar to the following, <tt>theme.xml</tt> is most likely not loading.</p>
 <pre>http://www.example.com/magento/skin/frontend/base/default/css/styles.css</pre>
-<p><em>Solution</em>: Enter the following command:</p>
+<p><em>Solution</em>: 输入下面的命令：</p>
 <pre>cat <a href="#intro-convention">[your Magento install dir]</a>/app/design/frontend/custompackage/customtheme/etc/theme.xml</pre>
 <p>If the error <tt>No such file or directory</tt> displays, check your directory paths and create <tt>theme.xml</tt> as discussed in <a href="#theme-copyfiles">步骤2. Copying Files For Your Theme</a>.</p>
 <p>If you have a <tt>theme.xml</tt>, check to make sure it's configured <em>exactly</em> as shown <a href="#themexml">here</a>.</p>
@@ -446,7 +446,7 @@ For more information about this setting, see <a href="http://compass-style.org/h
    <li><tt>scss/styles-ie8.scss</tt>: Identical to <tt>styles.css</tt> file, except it does not include any media queries because IE8 and earlier don't support media queries. For more information, see <a href="#breakpoint-ie8">Using the bp() mixin for older IEBrowser Versions</a>.</li>
 
    <li><tt>scss/_framework.scss</tt>: Imports all of the libraries, variables, functions, and mixins used by the other stylesheets. The files imported by <tt>framework.scss</tt> do not output any CSS on their own. Because of that, this file can be imported by other Sass files that are intended to compile directly to CSS files.<br />
-   For example, in Magento EE, the <tt>skin/frontend/rwd/enterprise/scss/enterprise.scss</tt> file imports <tt>skin/frontend/rwd/default/scss/_framework.scss</tt> so the Magento EE partials can use the common variables, mixins, and so on imported by <tt>framework.scss</tt>.</p>
+   例如， in Magento EE, the <tt>skin/frontend/rwd/enterprise/scss/enterprise.scss</tt> file imports <tt>skin/frontend/rwd/default/scss/_framework.scss</tt> so the Magento EE partials can use the common variables, mixins, and so on imported by <tt>framework.scss</tt>.</p>
         <ul>
            <li><tt>scss/_var.scss</tt>: Contains variables like breakpoints, spacing, colors, and font styles that are used by the other Sass partials. You should expect to modify this file heavily as you customize your responsive theme.</li>
            <li><tt>scss/mixins/</tt>: This directory contains all of the mixins used by the responsive theme. You should familiarize yourself with these mixins because they are useful for writing your custom styles.</li>
@@ -457,7 +457,7 @@ For more information about this setting, see <a href="http://compass-style.org/h
         <ul>
            <li><tt>scss/core/</tt>: Partials that contain all of the global styles. Expect to heavily customize the partials in this directory.</li>
            <li><tt>scss/layout/</tt>: Partials that define the structural layout of the responsive theme (header, content, and footer). The <tt>scss/core/_common.scss</tt> partial also contains some layout styles&mdash;specifically the one, two, or three column layouts.</li>
-           <li><tt>scss/module/</tt>: Partials that contain styles grouped by module. While the correlation between these module files and Magento core modules is close, it is not a 1:1 relationship. For example, the <tt>_product-list.scss</tt> file contains styles for both the <tt>Mage_Catalog</tt>和<tt>Mage_CatalogSearch</tt> modules.</li>
+           <li><tt>scss/module/</tt>: Partials that contain styles grouped by module. While the correlation between these module files and Magento core modules is close, it is not a 1:1 relationship. 例如， the <tt>_product-list.scss</tt> file contains styles for both the <tt>Mage_Catalog</tt>和<tt>Mage_CatalogSearch</tt> modules.</li>
            <li><tt>scss/vendor/</tt>: This directory is intended for third-party CSS libraries like the <tt>_normalize.scss</tt> partial that normalizes how browsers render elements.</li>
         </ul>
     </li>
@@ -483,7 +483,7 @@ $bp-medium: 770px;
 $bp-large: 979px;
 $bp-xlarge: 1199px;</pre>
 <p>A custom <tt>bp()</tt> mixin includes media query breakpoints. </p>
-<p>For example, this Sass:</p>
+<p>例如， this Sass:</p>
 <script src="https://gist.github.com/xcomSteveJohnson/11231041.js"></script>
 <p>generates this CSS:</p>
 <script src="https://gist.github.com/xcomSteveJohnson/11231104.js"></script>
@@ -495,7 +495,7 @@ It is important to use the <tt>bp()</tt> mixin for your media query breakpoints 
 <pre>$mq-support: false;
 $mq-fixed-value: 1024px;</pre>
 <p>With those variables defined, the <tt>bp()</tt> mixin outputs only the styles that would be visible on a 1024px+ viewport <em>and</em> it does not wrap those styles in a media query so that the IE browsers always render those styles. Refer to <a href="#customizing-theme-sass-struct"><tt>_breakpoint.scss</tt></a> to see exactly how this is done.</p>
-<p>While it is acceptable to use the breakpoint variables defined by the responsive theme, when building your own responsive theme, your breakpoints should be specifically tailored to the content of your site. For example, let's say your main navigation only has four links and it fits nicely in a horizontal layout on viewports larger than 400px.</p>
+<p>While it is acceptable to use the breakpoint variables defined by the responsive theme, when building your own responsive theme, your breakpoints should be specifically tailored to the content of your site. 例如， let's say your main navigation only has four links and it fits nicely in a horizontal layout on viewports larger than 400px.</p>
 <p>The responsive theme changes the horizontal layout to a collapsed drop-down on viewports smaller than 771px. Rather than defaulting to how the theme collapses the navigation, you should change the navigation to break at about 400px so users on screens between 400px and 771px get to experience the benefit of viewing the horizontal navigation.</p>
 
 <h3 id="customize-theme-images">Working With Images</h3>

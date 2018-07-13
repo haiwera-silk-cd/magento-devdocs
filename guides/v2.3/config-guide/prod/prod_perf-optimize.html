@@ -2027,7 +2027,7 @@ opcache.max_accelerated_files=60000
 This controls how many entities are processed at a time by the indexer.
 In some situations we’ve seen significant decreases in indexing time.</p>
 
-<p>For example, if you are running a profile similar to B2B Medium, you can override the configuration value <code class="highlighter-rouge">batchRowsCount</code> in <code class="highlighter-rouge">app/code/Magento/catalog/etc/di.xml</code> and override the default value of 5000 to 1000.
+<p>例如， if you are running a profile similar to B2B Medium, you can override the configuration value <code class="highlighter-rouge">batchRowsCount</code> in <code class="highlighter-rouge">app/code/Magento/catalog/etc/di.xml</code> and override the default value of 5000 to 1000.
 This reduces the full indexing time from 4 hours down to 2 hours with a default MySQL configuration!</p>
 
 <p>Please note that we have not enabled batching for the catalog rules indexer.

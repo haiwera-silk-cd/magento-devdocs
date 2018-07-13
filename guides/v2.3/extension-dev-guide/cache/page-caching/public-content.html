@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/cache/page-caching/public-content.html">
+	<link rel="canonical" href="/guides/v2.3/extension-dev-guide/cache/page-caching/public-content.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1617,7 +1617,7 @@
 <p>Magento generates a hash based on all context variables (<code class="highlighter-rouge">\Magento\Framework\App\Http\Context::getVaryString</code>). The hash and current URL are used as keys for cache storage.</p>
 
 <div class="bs-callout bs-callout-tip">
-  <p>Use the <code class="highlighter-rouge">X-Magento-Vary</code> cookie to transfer context on the HTTP layer. HTTP proxies can be configured to calculate a unique identifier for cache based on the cookie and URL. For example, <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/PageCache/etc/varnish4.vcl#L63-L68" target="&#95;blank">our sample Varnish 4 configuration</a> uses the following:</p>
+  <p>Use the <code class="highlighter-rouge">X-Magento-Vary</code> cookie to transfer context on the HTTP layer. HTTP proxies can be configured to calculate a unique identifier for cache based on the cookie and URL. 例如， <a href="https://github.com/magento/magento2/blob/2.0/app/code/Magento/PageCache/etc/varnish4.vcl#L63-L68" target="&#95;blank">our sample Varnish 4 configuration</a> uses the following:</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sub vcl_hash {
 if (req.http.cookie ~ "X-Magento-Vary=") {
@@ -1628,7 +1628,7 @@ hash_data(regsub(req.http.cookie, "^.?X-Magento-Vary=([^;]+);.*$", "\1"));
 </code></pre></div>  </div>
 </div>
 
-<p>For example, let’s declare a context variable that shows a drinks catalog and advertisement to adult customers only. The following code snippet will create a copy of every page in Magento for users under the age of 18.</p>
+<p>例如， let’s declare a context variable that shows a drinks catalog and advertisement to adult customers only. The following code snippet will create a copy of every page in Magento for users under the age of 18.</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sd">/**
  * Plugin on \Magento\Framework\App\Http\Context

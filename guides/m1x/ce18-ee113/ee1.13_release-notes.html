@@ -161,8 +161,8 @@ If you're still encountering errors, see <a href="/guides/m1x/install/installing
 For more information, see <a href="http://www.magentocommerce.com/blog/comments/magento-secure-payment-bridge-for-magento-enterprise-edition-113-available" target="_blank">this Magento blog post</a>.</li>
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1822" target="_blank">MPERF-1822</a>)  -->A tax configuration option for Fixed Product Tax (FPT) has changed. This option is in the Admin Panel at <strong>System</strong> > <strong>Configuration</strong> > SALES > <strong>Tax</strong> > Fixed Product Taxes, option <strong>FPT Tax Configuration</strong>. This option replaces the <strong>Apply Tax to FPT</strong> option in earlier EE releases.<br />
 This option specifies how FPT is calculated as follows:<br />
-  <ul><li><strong>Not Taxed</strong>: Click this option if your taxing jurisdiction does not tax FPT. (For example, the state of California does not tax FPT.)</li>
-  <li><strong>Taxed</strong>: Click this option if your taxing jurisdiction does tax FPT. (For example, Canada taxes FPT.)</li>
+  <ul><li><strong>Not Taxed</strong>: Click this option if your taxing jurisdiction does not tax FPT. (例如， the state of California does not tax FPT.)</li>
+  <li><strong>Taxed</strong>: Click this option if your taxing jurisdiction does tax FPT. (例如， Canada taxes FPT.)</li>
   <li><strong>Loaded and Displayed with Tax</strong>: Click this option if FPT is added to the order total before applying tax (for example, in EU countries).</li></ul>
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1902" target="_blank">MPERF-1902</a>)  -->You can now specify a 0% tax rate. (In the Admin Panel, click <strong>Sales</strong> > <strong>Tax</strong> > <strong>Manage Tax Zones & Rates.</strong>).<br />
 For more information, see the <a href="http://www.magentocommerce.com/resources/magento-user-guide" target="_blank">Magento User Guide</a>.</li>
@@ -225,7 +225,7 @@ Magento thanks Fabrizio Branca for contributing to this fix. For more informatio
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1868" target="_blank">MPERF-1868</a>)  -->Resolved an issue reported on <a href="http://stackoverflow.com/questions/13529580/magento-tax-rounding-issue" target="_blank">stackoverflow</a> where a calculation error resulted from the following configuration:<br />
 <strong>System</strong> > <strong>Configuration</strong> > SALES > <strong>Tax</strong> > <strong>Calculation Settings</strong>, option <strong>Tax Calculation Method Based On</strong> set to <strong>Total</strong><br />
 <strong>System</strong> > <strong>Configuration</strong> > SALES > <strong>Tax</strong> > <strong>Calculation Settings</strong>, option <strong>Catalog Prices</strong> set to <strong>Including Tax</strong></li>
-<li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1866" target="_blank">MPERF-1866</a>)  -->As a result of allowing a 0% tax rate, rounding errors related to different VAT jurisdictions have been resolved. For example, if a product originates in a country with VAT but is shipped to another country that has no VAT, correct prices display in the shopping cart.</li>
+<li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1866" target="_blank">MPERF-1866</a>)  -->As a result of allowing a 0% tax rate, rounding errors related to different VAT jurisdictions have been resolved. 例如， if a product originates in a country with VAT but is shipped to another country that has no VAT, correct prices display in the shopping cart.</li>
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1600" target="_blank">MPERF-1600</a>)  -->Row totals display correctly in the shopping cart when:
 <ul><li>A shopping cart discount is applied</li>
 <li>The following configuration options are set in <strong>System</strong> > <strong>Configuration</strong> > SALES > <strong>Tax</strong> > <strong>Calculation Settings</strong>:
@@ -359,7 +359,7 @@ Magento thanks Rouven Alexander Rieker for contributing to this fix. Link to <a 
 Magento thanks Fabrizio Branca for contrinbuting to this fix.</li> -->
 <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2360" target="_blank">MPERF-2360</a>) Fixed the definition of the store ID in <code>sendPasswortResetConfirmationEmail()</code> to specify the current store's ID.<br />
 Magento thanks Dominik Weber for contributing to this fix.</li> -->
-<!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2361" target="_blank">MPERF-2361</a>) <code>Mage_Page_Block_Html_Header->getIsHomePage</code> returns <code>true</code> when the URL has GET parameters. For example, the following now returns <code>true</code>:<br />
+<!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2361" target="_blank">MPERF-2361</a>) <code>Mage_Page_Block_Html_Header->getIsHomePage</code> returns <code>true</code> when the URL has GET parameters. 例如， the following now returns <code>true</code>:<br />
 <code>http://domain.com/?hoge=hoge //Mage_Page_Block_Html_Header->getIsHomePage</code><br />
 Magento thanks Johnathan David Froeming for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/pull/259" target="_blank">github pull request</a>.</li> -->
 <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2339" target="_blank">MPERF-2339</a>) Products sort correctly using a custom attribute.<br />
@@ -367,7 +367,7 @@ Magento thanks Vinai Kopp for contributing to this fix. Link to the <a href="htt
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-2336" target="_blank">MPERF-2336</a>)  -->You can now manage product ratings and reviews from the Admin Panel as well as from the web store.<br />
 Magento thanks Fabian Blechschmidt Schrank for contributing to this fix. </li>
 <!-- <li>(<a href="https://jira.corp.x.com/browse/MPERF-2342" target="_blank">MPERF-2342</a>) When you create an order using the Admin Panel, the values for the default shipping address and default billing address display properly.<br />
-For example, if you clear the <strong>Same as Billing Address</strong> check box, the default shipping address displays.<br />
+例如， if you clear the <strong>Same as Billing Address</strong> check box, the default shipping address displays.<br />
 Magento thanks TBD for contributing to this fix. Link to the <a href="https://github.com/magento/bugathon_march_2013/issues/115" target="_blank">github issue</a>.</li> -->
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-2354" target="_blank">MPERF-2354</a>)  -->Resolved an issue with <code>Mage_Page_Block_Template_Links::addLinkBlock</code> to enable you to sort an array of results by position.<br />
 Magento thanks Benjamin Marks for contributing to this fix. </li>
@@ -448,7 +448,7 @@ Magento thanks Benjamin Marks for contributing to this fix. </li>
 <dt><em>Discussion:</em></dt> 
 <dd><p>In EE 1.13.0.2, if you enable canonical link meta tags for both categories and products, a category or product will be correctly displayed even if the suffix does not match the setting for product and category URL suffix.</p>
 <p>(In the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong> > <strong>Search Engine Optimizations</strong>. The options are named <strong>Product URL Suffix</strong>和<strong>Product URL Suffix</strong>.)</p>
-<p>For example, this URL correctly displays a product or category, regardless of the suffix setting:
+<p>例如， this URL correctly displays a product or category, regardless of the suffix setting:
 <code>http://www.example.com/product.zzz</code>
 <p>Canonical meta tags are disabled by default in EE 1.13.0.2 and are required for this to work. (To enable these features in the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong> > <strong>Search Engine Optimizations</strong>. Enable both of the following options: <strong>Use Canonical Link Meta Tag For Categories</strong>和<strong>Use Canonical Link Meta Tag For Products</strong>.)</p></dd>
 </dl> -->
@@ -586,7 +586,7 @@ Magento thanks Benjamin Marks for contributing to this fix. </li>
 
 <h3 id="ee113-11302-known">Known Issue in EE 1.13.0.2</h3>
 <p><!-- (<a href="https://jira.corp.x.com/browse/MPERF-2495" target="_blank">MPERF-2495</a>)  -->After changing the value for product or category suffix, previous suffixes do not work.</p>
-<p>For example, if a category URL suffix was set to <strong>.html</strong> and you change it to <strong>.php</strong>, categories that had been using the .html suffix display an HTTP 404 (Not Found) error in your web store.</p>
+<p>例如， if a category URL suffix was set to <strong>.html</strong> and you change it to <strong>.php</strong>, categories that had been using the .html suffix display an HTTP 404 (Not Found) error in your web store.</p>
 <p>(In the Admin Panel, click <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Catalog</strong> > <strong>Search Engine Optimizations</strong>. In the right pane, the options are named <strong>Product URL Suffix</strong>和<strong>Category URL Suffix</strong>.)</p>
 
 <h3 id="ee113-11302-patches">Patch Available for EE 1.13.0.2</h3>
@@ -607,13 +607,13 @@ This column specifies the store view for which the URL redirect is defined.</li>
 <li>URL key uniqueness rules apply to inactive categories as well. You cannot use the same URL key for both an active and inactive category at the same level in the category hierarchy.</li>
 <li>The Google sitemap for products and categories is updated with new or updated URL keys at the interval you specify in the Admin Panel: <strong>System</strong> > <strong>Configuration</strong> > CATALOG > <strong>Google Sitemap</strong>. In the right pane, expand <strong>Generation Settings</strong>.</li>
 <li>The following apply to new products when you do not explicitly set a value for the <strong>URL key</strong> field:
-<ul><li>Duplicating a results in a URL key with an appended index number. For example, if you duplicate a product with a URL key of <code>testurlkey</code>, the new product's URL key might is <code>testurlkey-1</code>.</li>
-<li>If you create a new product with a name that matches an existing URL key, the new product's URL key has the product ID appended to it. For example, if there is currently a product with a URL of <code>product1</code> and you create a new product with the name <code>Product1</code> and the product has an ID of 500, the new product's URL key is <code>product1-500</code>.<br />
+<ul><li>Duplicating a results in a URL key with an appended index number. 例如， if you duplicate a product with a URL key of <code>testurlkey</code>, the new product's URL key might is <code>testurlkey-1</code>.</li>
+<li>If you create a new product with a name that matches an existing URL key, the new product's URL key has the product ID appended to it. 例如， if there is currently a product with a URL of <code>product1</code> and you create a new product with the name <code>Product1</code> and the product has an ID of 500, the new product's URL key is <code>product1-500</code>.<br />
 	<div class="msg-box important"><img src="/common/images/m1x/icon-note.png" alt="note" align="left" width="40"><span><strong>注意</strong>: To avoid having Magento specify a URL key for you, you can enter one yourself. Make sure the URL key you specify is unique among all products, including products across store views.</div>
 </li></ul>
 </li>
 <li>The following apply to enabling the canonical meta tag options for categories and products:
-<ul><li>If <strong>Use Canonical Meta Tag for Categories</strong> is enabled, the category page on your web store includes a canonical URL to the full category URL. For example, <code>http://www.example.com/mens/shoes</code></li>
+<ul><li>If <strong>Use Canonical Meta Tag for Categories</strong> is enabled, the category page on your web store includes a canonical URL to the full category URL. 例如， <code>http://www.example.com/mens/shoes</code></li>
 <li>If <strong>Use Canonical Meta Tag for Products</strong> is enabled, the product page includes a canonical URL to <code><em>domain-name</em>/<em>product-url-key</em></code> because product URL keys must be globally unique.<br />
 If you also enable the option <strong>Use Categories Path for Product URLs</strong>, the canonical URL is still <code><em>domain-name</em>/<em>product-url-key</em></code> but the product can also be accessed using its full URL (including the category hierarchy). 例如:<br />
 If the product URL key is <code>producturlkey</code> and it's assigned to the <strong>Apparel > Womens > Purses</strong> category, the product can be accessed using both of the following URLs:<br />
@@ -640,7 +640,7 @@ The <em>canonical URL</em> for the product is <code>http://www.example.com/produ
 <li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-1778" target="_blank">MPERF-1778</a>)  -->Resolved an issue that prevented web store users from viewing products that had duplicate URL keys before upgrading. <!-- https://jira.corp.x.com/browse/MPERF-1778 --></li>
 <!-- <li>{<a href="https://jira.corp.x.com/browse/MPERF-1744" target="_blank">MPERF-1744</a>) One issue affected a custom URL key assigned to a product that was associated with different store views. After upgrading, the product is viewable on the web store on all store views and, in addition, a new URL key is created for the product. https://jira.corp.x.com/browse/MPERF-1744 <br />
 In EE 1.13.0.1 and later, URL keys are globally unique among all stores&mdash;not just unique in a particular store. You can create products and categories with the same name; Magento assigns duplicates a unique URL key.<br />
-For example, if you already have a category named <strong>Apparel</strong> > <strong>Women's</strong> > <strong>Shoes</strong> and you add another category named <strong>Apparel</strong> > <strong>Men's</strong> > <strong>Shoes</strong>, Magento creates a unique URL key for the second category. The URL key is the category name separated from its ID by a dash character (for example, <code>shoes-42</code>). https://jira.corp.x.com/browse/MPERF-1744 </li>--></ul>
+例如， if you already have a category named <strong>Apparel</strong> > <strong>Women's</strong> > <strong>Shoes</strong> and you add another category named <strong>Apparel</strong> > <strong>Men's</strong> > <strong>Shoes</strong>, Magento creates a unique URL key for the second category. The URL key is the category name separated from its ID by a dash character (for example, <code>shoes-42</code>). https://jira.corp.x.com/browse/MPERF-1744 </li>--></ul>
 </li>
 <li>Resolved the following issues with URL keys in store views:
 <ul><li><!-- (<a href="https://jira.corp.x.com/browse/MPERF-2215" target="_blank">MPERF-2215</a>, <a href="https://jira.corp.x.com/browse/MPERF-2252" target="_blank">MPERF-2252</a>, <a href="https://jira.corp.x.com/browse/MPERF-2491" target="_blank">MPERF-2491</a>, <a href="https://jira.corp.x.com/browse/MPERF-2505" target="_blank">MPERF-2505</a>).  -->Changing the store view no longer results in product or category 404 (Not Found) errors.</li>
@@ -834,7 +834,7 @@ Starting with this release those additional digits will have no impact on custom
 <code>$result = $client->call($sessionId, 'catalog_product.info', '8888', null, null, 'sku');</code> <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-5017" target="_blank">Bug link</a>) --></li>
 <li>Order status is changed correctly using <a href="http://www.magentocommerce.com/api/soap/sales/salesOrder/sales_order.addComment.html" target="_blank"><code>salesOrderAddComment</code></a>. <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6895" target="_blank">Bug link</a>)--></li>
 <li>The <a href="http://www.magentocommerce.com/api/soap/checkout/cartProduct/cart_product.moveToCustomerQuote.html" target="_blank"><code>shoppingCartProductMoveToCustomerQuote</code></a> method works properly. <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-7068" target="_blank">Bug link</a>) --></li>
-<li>You can now use <code>from</code>-<code>to</code> complex filters to perform "window" filtration on a single field. For example, you can use <code>from</code>和<code>to</code> on the <code>created_at</code> return a list of sales orders using the <a href="http://www.magentocommerce.com/api/soap/sales/salesOrder/sales_order.list.html" target="_blank"><code>salesOrderList</code></a>.<!--(<a href="https://jira.corp.x.com/browse/MSSUP-3843" target="_blank">Bug link</a>) --></li>
+<li>You can now use <code>from</code>-<code>to</code> complex filters to perform "window" filtration on a single field. 例如， you can use <code>from</code>和<code>to</code> on the <code>created_at</code> return a list of sales orders using the <a href="http://www.magentocommerce.com/api/soap/sales/salesOrder/sales_order.list.html" target="_blank"><code>salesOrderList</code></a>.<!--(<a href="https://jira.corp.x.com/browse/MSSUP-3843" target="_blank">Bug link</a>) --></li>
 <li>When you use the SOAP API v.2.0 with <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> enabled to retrieve sales orders information, the server responds with the correct <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13" target="_blank">Content-Length</a> header. <!--(<a href="https://jira.corp.x.com/browse/SUP-4766" target="_blank">Bug link</a>) --></li>
 <li>The <code>productGetSpecialPrice</code> method returns special price information for a product, whether or not <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> is enabled. <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6360" target="_blank">Bug link</a>) --></li>
 <li>The <a href="http://www.magentocommerce.com/api/soap/checkout/cartPayment/cart_payment.list.html" target="_blank"><code>shoppingCartPaymentList</code></a> method returns the list of the available payment methods for the shopping cart appropriately. The following error is no longer returned:
@@ -844,7 +844,7 @@ Starting with this release those additional digits will have no impact on custom
 <ul><li>The <code>productAttributeAddOption</code>和<a href="http://www.magentocommerce.com/api/soap/catalog/catalogProductAttribute/product_attribute.update.html" target="_blank"><code>catalogProductAttributeUpdate</code></a> methods are now supported when WS-I Compliance is enabled. <!--(<a href="https://jira.corp.x.com/browse/MAGETWO-6362" target="_blank">Bug link</a>, <a href="https://jira.corp.x.com/browse/MAGETWO-6490" target="_blank">Bug link</a>) --></li>
 <li>The WSDL declaration for <a href="http://www.magentocommerce.com/api/soap/sales/salesOrderCreditMemo/sales_order_creditmemo.create.html" target="_blank"><code>salesOrderCreditmemoCreate</code></a> is now correct; that is, it matches the code. <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6681" target="_blank">Bug link</a>) --></li>
 <li>You can now add a C# web reference in Microsoft Visual Studio 2010 using the Magento WSDL. <br />
-For example, this command no longer fails:<br />
+例如， this command no longer fails:<br />
 <code>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin> wsdl /out:Magento.cs /v http://magentohost/api/v2_soap/?wsdl</code><!-- <br />
  (<a href="https://jira.corp.x.com/browse/MAGETWO-6354" target="_blank">Bug link</a>) --></li>
 <li>The <a href="http://www.magentocommerce.com/api/soap/wsi_compliance.html" target="_blank">WS-I Compliance</a> mode WSDL now includes <a href="http://www.magentocommerce.com/api/soap/catalog/catalogProduct/catalogProduct.html" target="_blank"><code>catalogProductAttributeInfo</code></a>. <!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-6362" target="_blank">Bug link</a>) --></li></ul>

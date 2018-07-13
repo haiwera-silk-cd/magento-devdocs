@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/howtos/debug.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/howtos/debug.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1992,7 +1992,7 @@
 
 <p>To set up Xdebug, you need to <a href="#configure">configure</a> a file in your Git repo, configure your IDE PhpStorm, and set up port forwarding. You will configure settings in the <code class="highlighter-rouge">magento.app.yaml</code> file. After editing, you can push the Git changes across all Starter environments and Pro Integration environments to enable Xdebug. To push these settings to Pro plan Staging and Production environments, you must enter a ticket.</p>
 
-<p>Once configured, you can debug <a href="#debugcli">CLI commands</a>, <a href="#webrequests">web requests</a>, <a href="#code">code</a>. Remember, all Magento企业版(云支持版) environments are read-only. You will need to pull code to your local development environment to perform debugging. For Pro plan Staging and Production, we include <a href="#pro-debug">additional instructions</a> for Xdebug on those environments.</p>
+<p>Once configured, you can debug <a href="#debugcli">CLI commands</a>, <a href="#webrequests">web requests</a>, <a href="#code">code</a>. Remember, all Magento企业版(云支持版) environments are read-only. You will need to pull code to your 本地开发环境 to perform debugging. For Pro plan Staging and Production, we include <a href="#pro-debug">additional instructions</a> for Xdebug on those environments.</p>
 
 <h2 id="usexdebug">Requirements</h2>
 <p>To run and use Xdebug, you will need the environment’s SSH URL. You can locate the information through the <a href="/guides/v2.3/cloud/project/projects.html">Project Web Interface</a> or your spreadsheet.</p>
@@ -2035,7 +2035,7 @@
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud project:get &lt;project ID&gt;
 </code></pre></div>      </div>
     </li>
-    <li>Change to a project directory. For example, <code class="highlighter-rouge">cd /var/www/html/magento2</code></li>
+    <li>Change to a project directory. 例如， <code class="highlighter-rouge">cd /var/www/html/magento2</code></li>
     <li>
       <p>List environments in the project. Every environment includes an active Git branch of your code, database, environment variables, configurations, and services.</p>
 
@@ -2077,7 +2077,7 @@
   <h3 id="enable">Enable Xdebug in your environment</h3>
   <p>Enable Xdebug by adding it to the extensions section of magento.app.yaml. When you push this update to Git and deploy to environments, the debugger is available.</p>
 
-  <p>You can enable Xdebug directly to all Starter environments and Pro Integration environments. For Pro Staging and Production, you need to update this file and enter a <a href="/guides/v2.3/cloud/trouble/trouble.html">Support ticket</a> to have it enabled. We will get Xdebug enabled onto those environments for you.</p>
+  <p>You can enable Xdebug directly to all Starter environments and Pro Integration environments. For Pro Staging and Production, you need to update this file and enter a <a href="/guides/v2.3/cloud/trouble/trouble.html">支持工单</a> to have it enabled. We will get Xdebug enabled onto those environments for you.</p>
 
   <!-- You may need to run PHP with a separate config file to enable xdebug on the CLI, such as "php -c /etc/platform/<project_id>/php.ini ... " -->
 
@@ -2153,8 +2153,8 @@
           <p>For Pro Staging and Production environments:</p>
 
           <ul>
-            <li>Production: <code class="highlighter-rouge">/app/&lt;project_code&gt;/</code></li>
-            <li>Staging:  <code class="highlighter-rouge">/app/&lt;project_code&gt;_stg/</code></li>
+            <li>生产环境: <code class="highlighter-rouge">/app/&lt;project_code&gt;/</code></li>
+            <li>准生产环境:  <code class="highlighter-rouge">/app/&lt;project_code&gt;_stg/</code></li>
           </ul>
         </li>
       </ul>
@@ -2177,7 +2177,7 @@
   <ol>
     <li>Open a terminal.</li>
     <li>
-      <p>Enter the following command:</p>
+      <p>输入下面的命令：</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ssh -R 9000:localhost:9000 &lt;ssh url&gt;
 </code></pre></div>      </div>
@@ -2198,11 +2198,11 @@
 
       <ul>
         <li>Integration: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
-        <li>Staging: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus_stg</code></li>
-        <li>Production: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
+        <li>准生产环境: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus_stg</code></li>
+        <li>生产环境: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
       </ul>
     </li>
-    <li>For a user session that is older than yours, find the pseudo-terminal (PTS) value. For example, <code class="highlighter-rouge">pts/0</code>.</li>
+    <li>For a user session that is older than yours, find the pseudo-terminal (PTS) value. 例如， <code class="highlighter-rouge">pts/0</code>.</li>
     <li>
       <p>Kill the process ID (PID) corresponding to the PTS value using the following commands:</p>
 
@@ -2210,7 +2210,7 @@
 kill &lt;PID&gt;
 </code></pre></div>      </div>
 
-      <p>For example, suppose <code class="highlighter-rouge">ps aux | grep ssh</code> returned the following:</p>
+      <p>例如， suppose <code class="highlighter-rouge">ps aux | grep ssh</code> returned the following:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 </code></pre></div>      </div>
@@ -2274,7 +2274,7 @@ kill &lt;PID&gt;
   </ul>
 
   <h3 id="pro">Configure Pro Staging and Production</h3>
-  <p>To complete configuration for Pro plan Staging and Production environments, you must enter a <a href="/guides/v2.3/cloud/trouble/trouble.html">Support ticket</a> to have Xdebug enabled and configured in Staging and Production environments.</p>
+  <p>To complete configuration for Pro plan Staging and Production environments, you must enter a <a href="/guides/v2.3/cloud/trouble/trouble.html">支持工单</a> to have Xdebug enabled and configured in Staging and Production environments.</p>
 
   <p>We will enable Xdebug in the environment. Be aware, this will require a redeployment of Staging and Production.</p>
 
@@ -2291,7 +2291,7 @@ kill &lt;PID&gt;
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -R &lt;xdebug listen port&gt;:&lt;host&gt;:&lt;xdebug listen port&gt; &lt;SSH URL&gt;
 </code></pre></div>  </div>
 
-  <p>For example,</p>
+  <p>例如，</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 </code></pre></div>  </div>
@@ -2434,12 +2434,12 @@ kill &lt;PID&gt;
   <ol>
     <li>SSH to the environment.</li>
     <li>
-      <p>Enter the following command:</p>
+      <p>输入下面的命令：</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czf /tmp/&lt;file name&gt;.tgz &lt;directory list&gt;
 </code></pre></div>      </div>
 
-      <p>For example, to compress the <code class="highlighter-rouge">vendor</code> directory only, enter</p>
+      <p>例如， to compress the <code class="highlighter-rouge">vendor</code> directory only, enter</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czf /tmp/vendor.tgz vendor
 </code></pre></div>      </div>
@@ -2467,11 +2467,11 @@ tar xzf &lt;file name&gt;.tgz
 
       <ul>
         <li>Integration: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
-        <li>Staging: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus_stg</code></li>
-        <li>Production: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
+        <li>准生产环境: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus_stg</code></li>
+        <li>生产环境: user names are similar to <code class="highlighter-rouge">dd2q5ct7mhgus</code></li>
       </ul>
     </li>
-    <li>For a user session that is older than yours, find the pseudo-terminal (PTS) value. For example, <code class="highlighter-rouge">pts/0</code>.</li>
+    <li>For a user session that is older than yours, find the pseudo-terminal (PTS) value. 例如， <code class="highlighter-rouge">pts/0</code>.</li>
     <li>
       <p>Kill the process ID (PID) corresponding to the PTS value using the following commands:</p>
 
@@ -2479,7 +2479,7 @@ tar xzf &lt;file name&gt;.tgz
 kill &lt;PID&gt;
 </code></pre></div>      </div>
 
-      <p>For example, suppose <code class="highlighter-rouge">ps aux | grep ssh</code> returned the following:</p>
+      <p>例如， suppose <code class="highlighter-rouge">ps aux | grep ssh</code> returned the following:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd2q5ct7mhgus        5504  0.0  0.0  82612  3664 ?      S    18:45   0:00 sshd: dd2q5ct7mhgus@pts/0
 </code></pre></div>      </div>

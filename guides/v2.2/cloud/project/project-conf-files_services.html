@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/project/project-conf-files_services.html">
+	<link rel="canonical" href="/guides/v2.2/cloud/project/project-conf-files_services.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1993,7 +1993,7 @@
 <p>This file is located at <code class="highlighter-rouge">.magento/services.yaml</code> in your project.</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>When you push your Git branch, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory. After deployment, the script deletes the directory and its contents. Your local development environment isn't affected.</p>
+  <p>When you push your Git branch, our deploy script uses the values defined by configuration files in the <code>.magento</code> directory. After deployment, the script deletes the directory and its contents. Your 本地开发环境 isn't affected.</p>
 </div>
 
 <p>To see an example, see this <a href="https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml" target="_blank">sample <code class="highlighter-rouge">services.yaml</code> file</a>.</p>
@@ -2016,7 +2016,7 @@
   <li>Pro Integration environments</li>
 </ul>
 
-<p>To install and update services in Pro Staging and Production environments (IaaS), you must enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">Support ticket</a>. Indicate the service changes needed and your updated <code class="highlighter-rouge">.magento.app.yaml</code> and <code class="highlighter-rouge">services.yaml</code> files in the ticket.</p>
+<p>To install and update services in Pro Staging and Production environments (IaaS), you must enter a <a href="/guides/v2.2/cloud/trouble/trouble.html">支持工单</a>. Indicate the service changes needed and your updated <code class="highlighter-rouge">.magento.app.yaml</code> and <code class="highlighter-rouge">services.yaml</code> files in the ticket.</p>
 
 <h2 id="cloud-yaml-services-default">Default and supported services</h2>
 <p>Your Git branch includes the following default <code class="highlighter-rouge">services.yaml</code> file:</p>
@@ -2045,9 +2045,9 @@ redis:
      disk: 2048</p>
 
 <h3 id="cloud-yaml-services-name"><code class="highlighter-rouge">name</code></h3>
-<p><code class="highlighter-rouge">name</code> identifies the service in the project. The <code class="highlighter-rouge">name</code> can consist only of lower case alphanumeric characters: <code class="highlighter-rouge">a</code>–<code class="highlighter-rouge">z</code> and <code class="highlighter-rouge">0</code>–<code class="highlighter-rouge">9</code>. For example, Redis is entered as redis.</p>
+<p><code class="highlighter-rouge">name</code> identifies the service in the project. The <code class="highlighter-rouge">name</code> can consist only of lower case alphanumeric characters: <code class="highlighter-rouge">a</code>–<code class="highlighter-rouge">z</code> and <code class="highlighter-rouge">0</code>–<code class="highlighter-rouge">9</code>. 例如， Redis is entered as redis.</p>
 
-<p>You can have multiple instances of each service type. For example, you could have multiple Redis instances. For example, we use multiple Redis instances, one for session and one for cache.</p>
+<p>You can have multiple instances of each service type. 例如， you could have multiple Redis instances. 例如， we use multiple Redis instances, one for session and one for cache.</p>
 
 <p>redis:
      type: redis:3.0</p>
@@ -2078,7 +2078,7 @@ redis:
 
 <p><code class="highlighter-rouge">disk</code> specifies the size of the persistent disk storage (in MB) allocated to the service.</p>
 
-<p>For example, the current default storage amount per project is 5GB, or 5120MB. You can distribute this amount between your application and each of its services.</p>
+<p>例如， the current default storage amount per project is 5GB, or 5120MB. You can distribute this amount between your application and each of its services.</p>
 
 <h2 id="using-the-services">Using the services</h2>
 <p>For services to be available to an application in your project, you must specify <a href="/guides/v2.2/cloud/project/project-conf-files_magento-app.html#relationships"><em>relationships</em></a> between applications and services in <code class="highlighter-rouge">.magento.app.yaml</code>.</p>

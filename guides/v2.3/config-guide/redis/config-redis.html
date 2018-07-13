@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/config-guide/redis/config-redis.html">
+	<link rel="canonical" href="/guides/v2.3/config-guide/redis/config-redis.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1893,7 +1893,7 @@
   <li>
     <p>The <code class="highlighter-rouge">core_cache_tag</code> table constantly grows. If a Magento instance has multiple web sites and web stores with large catalogs, the table can grow to 15 million records in less than a day. Insertion into <code class="highlighter-rouge">core_cache_tag</code> leads to issues with MySQL server, including performance degradation.</p>
 
-    <p>(A <em>tag</em> is an identifier that classifies different types of Magento <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> objects.)</p>
+    <p>(A <em>tag</em> is an identifier that classifies different types of Magento <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span> objects.)</p>
   </li>
   <li>
     <p>The TwoLevels <span term-uuid="74d6d228-34bd-4475-a6f8-0c0f4d6d0d61" class="glossary-term" data-toggle="popover">后端</span> is more difficult to maintain because two services are required to make it work which makes it difficult to analyze cache content when necessary.

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">
+	<link rel="canonical" href="/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1521,10 +1521,10 @@
   <li>Recurring scripts, which are executed each time you install or upgrade Magento</li>
 </ul>
 
-<p>Each script iteratively adds changes. During the installation process, Magento applies only those changes that have not been applied yet. For example, if you have Magento 2.1.8 installed and the latest version is 2.1.11, then the upgrade scripts for
+<p>Each script iteratively adds changes. During the installation process, Magento applies only those changes that have not been applied yet. 例如， if you have Magento 2.1.8 installed and the latest version is 2.1.11, then the upgrade scripts for
 2.1.9, 2.1.10, and 2.1.11 will be applied, in order, when you upgrade to 2.1.11. That procedure is called <em>migration setup</em> or <em>migration scripts</em>.</p>
 
-<p>The main disadvantage of this approach is that Magento applies changes blindly. For example, in one version a new database column might be introduced, only to be removed in the next. <em>Declarative setup</em> eliminates this type of unnecessary work.</p>
+<p>The main disadvantage of this approach is that Magento applies changes blindly. 例如， in one version a new database column might be introduced, only to be removed in the next. <em>Declarative setup</em> eliminates this type of unnecessary work.</p>
 
 <p>Declarative setup is based on database structure declarations, and is used in projects such as <a href="http://www.doctrine-project.org/">Doctrine</a>. Schema files declare what the database structure should be,
 and Magento determines the differences between the current table structure and what it should be. These differences can be represented with atomic SQL operations.</p>

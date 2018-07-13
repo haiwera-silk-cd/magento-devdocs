@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/install-gde/install/cli/install-cli-uninstall-mods.html">
+	<link rel="canonical" href="/guides/v2.2/install-gde/install/cli/install-cli-uninstall-mods.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1074,11 +1074,11 @@
 
                 
                 
-                <li class="nav-level3  " id="步骤-5.创建管理员帐户">
+                <li class="nav-level3  " id="步骤-5.创建管理员账户">
                     
 
                     
-                    <a  href="/guides/v2.2/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员帐户</a>
+                    <a  href="/guides/v2.2/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员账户</a>
                     
 
                     
@@ -1254,11 +1254,11 @@
 
                 
                 
-                <li class="nav-level3  " id="display-or-change-the-admin-uri">
+                <li class="nav-level3  " id="显示和修改管理面板uri">
                     
 
                     
-                    <a  href="/guides/v2.2/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a>
+                    <a  href="/guides/v2.2/install-gde/install/cli/install-cli-adminurl.html">显示和修改管理面板URI</a>
                     
 
                     
@@ -1380,11 +1380,11 @@
 
                 
                 
-                <li class="nav-level3  " id="创建、编辑或解锁-magento管理员帐号">
+                <li class="nav-level3  " id="创建、编辑或解锁-magento管理员账号">
                     
 
                     
-                    <a  href="/guides/v2.2/install-gde/install/cli/install-cli-subcommands-admin.html">创建、编辑或解锁 Magento管理员帐号</a>
+                    <a  href="/guides/v2.2/install-gde/install/cli/install-cli-subcommands-admin.html">创建、编辑或解锁 Magento管理员账号</a>
                     
 
                     
@@ -2386,7 +2386,7 @@
 {ModuleName} ... {ModuleName}
 </code></pre></div>  </div>
 
-  <p>where <code class="highlighter-rouge">{ModuleName}</code> specifies the module name in <code class="highlighter-rouge">&lt;VendorName&gt;_&lt;ModuleName&gt;</code> format. For example, the Magento Customer module name is <code class="highlighter-rouge">Magento_Customer</code>. To get a list of module names, enter <code class="highlighter-rouge">magento module:status</code></p>
+  <p>where <code class="highlighter-rouge">{ModuleName}</code> specifies the module name in <code class="highlighter-rouge">&lt;VendorName&gt;_&lt;ModuleName&gt;</code> format. 例如， the Magento Customer module name is <code class="highlighter-rouge">Magento_Customer</code>. To get a list of module names, enter <code class="highlighter-rouge">magento module:status</code></p>
 
   <p>The module uninstall command performs the following tasks:</p>
 
@@ -2450,13 +2450,13 @@
   		<p>Uninstalling a module <em>always</em> runs <code>composer remove</code>. The <code>--remove-data</code> option removes database data and schema defined by the module's <code>Uninstall</code> class.</p></span>
 </div>
     </li>
-    <li>Cleans the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span>.</li>
+    <li>Cleans the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span>.</li>
     <li>Updates generated classes.</li>
     <li>If <code class="highlighter-rouge">--clear-static-content</code> is specified, cleans <a href="/guides/v2.2/config-guide/cli/config-cli-subcommands-static-view.html#config-cli-static-overview">生成的静态视图文件</a>.</li>
     <li>离开维护模式。</li>
   </ol>
 
-  <p>For example, if you attempt to uninstall a module that another module depends on, the following message displays:</p>
+  <p>例如， if you attempt to uninstall a module that another module depends on, the following message displays:</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento module:uninstall Magento_SampleMinimal
 	Cannot uninstall module 'Magento_SampleMinimal' because the following module(s) depend on it:
@@ -2516,7 +2516,7 @@ Disabling maintenance mode
   <p>where <code class="highlighter-rouge">&lt;filename&gt;</code> is the name of the backup file located in <code class="highlighter-rouge">&lt;your Magento install dir&gt;/var/backups</code>. To display a list of backup files, enter <code class="highlighter-rouge">magento info:backups:list</code></p>
 
   <div class="bs-callout bs-callout-warning">
-    <p>This command deletes the specified files or the database before restoring them. (For example, the <code>--media-file</code> option deletes media assets under <code>pub/media</code> before restoring from the specified rollback file.) Make sure you have made no changes to the file system or database that you want to keep before using this command.</p>
+    <p>This command deletes the specified files or the database before restoring them. (例如， the <code>--media-file</code> option deletes media assets under <code>pub/media</code> before restoring from the specified rollback file.) Make sure you have made no changes to the file system or database that you want to keep before using this command.</p>
 </div>
 
   <div class="bs-callout bs-callout-info" id="info">
@@ -2557,7 +2557,7 @@ Disabling maintenance mode
     <li>离开维护模式。</li>
   </ol>
 
-  <p>For example, to restore a code (that is, file system) backup, enter the following commands in the order shown:</p>
+  <p>例如， to restore a code (that is, file system) backup, enter the following commands in the order shown:</p>
 
   <ul>
     <li>

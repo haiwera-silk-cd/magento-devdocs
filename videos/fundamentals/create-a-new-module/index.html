@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/videos/fundamentals/create-a-new-module/">
+	<link rel="canonical" href="/videos/fundamentals/create-a-new-module/">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -410,7 +410,7 @@
 
 <p>Module name is defined by the folders we just created, because in Magento 2, class names must follow the folder structure. Because we created the folders <code class="highlighter-rouge">Learning/FirstUnit</code>, our module name will be <code class="highlighter-rouge">Learning_FirstUnit</code> and all classes that belong to this module will begin with <code class="highlighter-rouge">Learning\FirstUnit</code> – for example: <code class="highlighter-rouge">Learning\FirstUnit\Observer\Test</code>.</p>
 
-<p>Module version indicates the current version of the database schema and data, and is used in upgrading. For example, assume you decide to modify a table’s schema in your module. How can you be sure that this change will happen on all instances where the code is deployed? Altering the database by direct SQL queries won’t work. Instead, Magento 2 has install and upgrade scripts in every module (optionally). These scripts contain commands to modify the database schema or data. To track whether to execute a script or not, Magento 2 uses module versions. Every time you implement a new database change, you implement a new version of a module and change the corresponding <code class="highlighter-rouge">module.xml</code>. Magento saves the current module’s version in a database, and if the database value and the one in the <code class="highlighter-rouge">module.xml</code> do not match, it will execute the upgrade code.</p>
+<p>Module version indicates the current version of the database schema and data, and is used in upgrading. 例如， assume you decide to modify a table’s schema in your module. How can you be sure that this change will happen on all instances where the code is deployed? Altering the database by direct SQL queries won’t work. Instead, Magento 2 has install and upgrade scripts in every module (optionally). These scripts contain commands to modify the database schema or data. To track whether to execute a script or not, Magento 2 uses module versions. Every time you implement a new database change, you implement a new version of a module and change the corresponding <code class="highlighter-rouge">module.xml</code>. Magento saves the current module’s version in a database, and if the database value and the one in the <code class="highlighter-rouge">module.xml</code> do not match, it will execute the upgrade code.</p>
 
 <p>Dependencies. If one module depends on another, the <code class="highlighter-rouge">module.xml</code> file will have a special declaration that defines a list of modules that the current module depends on. For this example, we will make our module dependent on Magento_Catalog.</p>
 

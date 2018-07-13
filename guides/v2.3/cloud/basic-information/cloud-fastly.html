@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/basic-information/cloud-fastly.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/basic-information/cloud-fastly.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2025,9 +2025,9 @@
 <p>We provide <a href="/guides/v2.3/cloud/configure/fastly-vcl-extend-timeout.html">VCL snippet instructions</a> for extending the timeout for the Magento Admin.</p>
 
 <h2 id="backend">Backends and Origin shields</h2>
-<p>Backend settings provide fine tuning for Fastly performance with Origin shielding and timeouts. A <em>backend</em> is a specific location (IP or domain) with configured Origin shield and timeout settings for checking and providing cached content.</p>
+<p>后台设置为Fastly的Origin shielding执行和超时提供微调。_后台_是一个有为检查和提供缓存内容配置了Origin shield和超时设置的是一个指定的位置(IP或域名)</p>
 
-<p><em>Origin shielding</em> routes all requests for your store to a specific Point of Presence (POP). When a request is received, the POP checks for cached content and provides it. If it is not cached, it continues to the Shield POP, then to the Origin server which caches the content. The shields reduces traffic directly to the origin.</p>
+<p>_Origin shielding_为你的网店路由所有的请求到一个指定点(POP)。当接收到一个请求，POP检查缓存的内容并提供它，如果它没有被缓存，会被继续路由到Shied POP,然后到缓存了内容的原始服务器上。shields减少了直接到原始站的流量。</p>
 
 <p>We provide detailed instructions for configuring backends when you <a href="/guides/v2.3/cloud/access-acct/fastly.html">configure Fastly</a>.</p>
 
@@ -2037,19 +2037,19 @@
 <p>If you add user access and enable basic authentication on Staging, you can still access the Magento Admin without requiring additional credentials to enter.</p>
 
 <h2 id="custom-vcl">Custom VCLs and actions</h2>
-<p>Fastly provides an extremely custom code friendly method for creating lists of items like IPs and domains to complete actions via Fastly and Varnish code blocks. For example, with edge and ACL dictionaries and VCL code, you could allow, block, or redirect access for specific users or IPs.</p>
+<p>Fastly provides an extremely custom code friendly method for creating lists of items like IPs and domains to complete actions via Fastly and Varnish code blocks. 例如， with edge and ACL dictionaries and VCL code, you could allow, block, or redirect access for specific users or IPs.</p>
 
-<p>After you have <a href="/guides/v2.3/cloud/access-acct/fastly.html">set up Fastly</a>, you can create <a href="/guides/v2.3/cloud/configure/cloud-vcl-custom-snippets.html">custom VCL snippets</a> using these edge dictionaries and ACLs.</p>
+<p>After you have <a href="/guides/v2.3/cloud/access-acct/fastly.html">set up Fastly</a>, you can create <a href="/guides/v2.3/cloud/configure/cloud-vcl-custom-snippets.html">自定义VCL代码片段</a> using these edge dictionaries and ACLs.</p>
 
 <h3 id="dictionary">Edge dictionaries</h3>
 <p>Save key-value pairs on Fastly Edge nodes of dictionary containers and items to invoke with VCL snippets in your site. You have up to 1,000 entries per dictionary.</p>
 
-<p>You create an edge dictionary then add items to it of a key and its value. For example, you could create an edge dictionary of banned bad refer sites from accessing your site. The key-value pairs would be the refer site URLs (www.example.com) and a value of 1. Then create a custom VCL snippet to return a 403 Forbidden to those sites when they access your site.</p>
+<p>You create an edge dictionary then add items to it of a key and its value. 例如， you could create an edge dictionary of banned bad refer sites from accessing your site. The key-value pairs would be the refer site URLs (www.example.com) and a value of 1. Then create a custom VCL snippet to return a 403 Forbidden to those sites when they access your site.</p>
 
 <p>Another example routes to a different WordPress backend for an edge dictionary of WordPress URLs.</p>
 
 <h3 id="acl">Edge ACLs</h3>
-<p>ACLs are access control lists that allow you to manage IP addresses to allow or block access to resources. You could use edge ACLs with VCL snippets to block IP addresses or provide access. For example, use edge ACLs and a custom VCL snippet to white list IPs to access your site.</p>
+<p>ACLs are access control lists that allow you to manage IP addresses to allow or block access to resources. You could use edge ACLs with VCL snippets to block IP addresses or provide access. 例如， use edge ACLs and a custom VCL snippet to white list IPs to access your site.</p>
 
 <h3 id="vcl">VCL snippets</h3>
 <p>With edge dictionaries and edge ACLs, you can create custom Varnish Configuration Language (VCL) snippets to Fastly and your site. VCL snippets are small chunks of logic and code that can be included directly into your service configuration. They are generated, compiled, and transmitted to all Fastly caches, loaded, and activated without waiting for maintenance windows without server downtime.</p>
@@ -2081,7 +2081,7 @@
   <li>Test Fastly for caching</li>
 </ul>
 
-<p>For instructions, see <a href="/guides/v2.3/cloud/access-acct/fastly.html">快速设置</a>. After you have configured it, you can continue with advanced options including custom VCL snippets.</p>
+<p>For instructions, see <a href="/guides/v2.3/cloud/access-acct/fastly.html">快速设置</a>. After you have configured it, you can continue with advanced options including 自定义VCL代码片段.</p>
 
 			
 		</div>

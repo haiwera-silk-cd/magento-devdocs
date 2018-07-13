@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/get-started/gs-web-api-request.html">
+	<link rel="canonical" href="/guides/v2.0/get-started/gs-web-api-request.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -521,7 +521,7 @@
 
 </section>
 
-			<p>To configure a web API, developers define some of the elements of each API call in the <code class="highlighter-rouge">&lt;module root dir&gt;/vendor/&lt;vendor-name&gt;/&lt;module-name&gt;/etc/webapi.xml</code> file, where <code class="highlighter-rouge">&lt;vendor-name&gt;</code> is your vendor name (for example, <code class="highlighter-rouge">magento</code>) and <code class="highlighter-rouge">&lt;module-name&gt;</code> is your module name (which exactly matches its definition in <code class="highlighter-rouge">composer.json</code>). For example, the web API for the Customer service is defined in the <code class="highlighter-rouge">&lt;your Magento install dir&gt;/vendor/magento/module-customer/etc/webapi.xml</code> configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> calls.</p>
+			<p>To configure a web API, developers define some of the elements of each API call in the <code class="highlighter-rouge">&lt;module root dir&gt;/vendor/&lt;vendor-name&gt;/&lt;module-name&gt;/etc/webapi.xml</code> file, where <code class="highlighter-rouge">&lt;vendor-name&gt;</code> is your vendor name (for example, <code class="highlighter-rouge">magento</code>) and <code class="highlighter-rouge">&lt;module-name&gt;</code> is your module name (which exactly matches its definition in <code class="highlighter-rouge">composer.json</code>). 例如， the web API for the Customer service is defined in the <code class="highlighter-rouge">&lt;your Magento install dir&gt;/vendor/magento/module-customer/etc/webapi.xml</code> configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> calls.</p>
 
 <h2 id="request-overview">概述</h2>
 
@@ -604,7 +604,7 @@
 <h3 id="endpoints">Endpoint</h3>
 <p>An endpoint is a combination of the <em>server</em> that fulfills a request, the web service, the <i>resource</i> against which the request is being made, and any template parameters.</p>
 
-<p>For example, in the <code>http://magento.ll/index.php/rest/V1/customerGroups/:id</code> endpoint, the server is <code class="highlighter-rouge">magento.ll/index.php/</code>, the web service is <code class="highlighter-rouge">rest</code>, the resource is <code class="highlighter-rouge">/V1/customerGroups</code>, and the template parameter is <code class="highlighter-rouge">id</code>.</p>
+<p>例如， in the <code>http://magento.ll/index.php/rest/V1/customerGroups/:id</code> endpoint, the server is <code class="highlighter-rouge">magento.ll/index.php/</code>, the web service is <code class="highlighter-rouge">rest</code>, the resource is <code class="highlighter-rouge">/V1/customerGroups</code>, and the template parameter is <code class="highlighter-rouge">id</code>.</p>
 
 <h3 id="http-headers">HTTP headers</h3>
 
@@ -660,9 +660,9 @@ See <a href="/guides/v2.0/get-started/authentication/gs-authentication.html">Aut
 <h3 id="payload">Call payload</h3>
 <p>The call payload is set of input <i>parameters</i>和<i>attributes</i> that you supply with the request. API operations have both <em>required</em> and <em>optional</em> inputs.</p>
 
-<p>You specify input parameters in the URI. For example, in the <code class="highlighter-rouge">GET/V1/customers/:customerId</code> URI, you must specify the <code class="highlighter-rouge">customerId</code> template parameter. This parameter filters the response by the specified customer ID.</p>
+<p>You specify input parameters in the URI. 例如， in the <code class="highlighter-rouge">GET/V1/customers/:customerId</code> URI, you must specify the <code class="highlighter-rouge">customerId</code> template parameter. This parameter filters the response by the specified customer ID.</p>
 
-<p>You specify input attributes in a JSON- or XML-formatted request body. For example, in the <code class="highlighter-rouge">POST /V1/customers</code> call, you must specify a request body like this:</p>
+<p>You specify input attributes in a JSON- or XML-formatted request body. 例如， in the <code class="highlighter-rouge">POST /V1/customers</code> call, you must specify a request body like this:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="s2">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

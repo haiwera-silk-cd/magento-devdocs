@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/cloud/configure/fastly-vcl-wordpress.html">
+	<link rel="canonical" href="/guides/v2.1/cloud/configure/fastly-vcl-wordpress.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -799,12 +799,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.1/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1970,7 +1970,7 @@
 </div>
 
 <h2 id="edge-dictionary">Create Wordpress Edge Dictionary</h2>
-<p>Edge Dictionaries create key-value pairs for running against your VCL snippet. For example, you may want to build a dictionary of URLs to redirect to a Wordpress backend. You may only want to create the edge dictionary in your Production environment. You can also create it in Staging for testing if needed.</p>
+<p>Edge Dictionaries create key-value pairs for running against your VCL snippet. 例如， you may want to build a dictionary of URLs to redirect to a Wordpress backend. You may only want to create the edge dictionary in your Production environment. You can also create it in Staging for testing if needed.</p>
 
 <ol>
   <li>Log in to the Magento Admin.</li>
@@ -1982,7 +1982,7 @@
   <li>Add key-value pairs in the new dictionary. For this example, enter the URLs for your blog that should be redirected to your Wordpress backend. Enter a value of 1.</li>
 </ol>
 
-<p>For more information on using Edge Dictionaries with your VCL snippets, see Fastly’s <a href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-using-dictionaries" target="_blank">Creating and using Edge Dictionaries</a> and their example <a href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-using-dictionaries#custom-vcl-examples" target="_blank">custom VCL snippets</a>.</p>
+<p>For more information on using Edge Dictionaries with your VCL snippets, see Fastly’s <a href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-using-dictionaries" target="_blank">Creating and using Edge Dictionaries</a> and their example <a href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-using-dictionaries#custom-vcl-examples" target="_blank">自定义VCL代码片段</a>.</p>
 
 <h2 id="vcl">Create wordpress.json</h2>
 <p>For this example, you may only want to run it against the Production server. You can also add it to Staging for testing.</p>
@@ -2007,7 +2007,7 @@
 </ul>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>The default VCL snippets you uploaded included a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of 50. For your custom VCL snippets, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also consider the priority of your custom snippets if they should override the default snippets.</p>
+  <p>The default VCL snippets you uploaded included a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of 50. For your 自定义VCL代码片段, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also consider the priority of your custom snippets if they should override the default snippets.</p>
 </div>
 
 <h2 id="wordpress">Configure Wordpress</h2>

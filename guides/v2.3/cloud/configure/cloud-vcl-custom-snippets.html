@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/configure/cloud-vcl-custom-snippets.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/configure/cloud-vcl-custom-snippets.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2003,7 +2003,7 @@
 
 <ul>
   <li><a href="#vcl-curl">Understand VCL snippet values</a>—Provides an overview of values for Fastly VCL JSON.</li>
-  <li><a href="#process">The custom VCL snippet process</a>—Walks you through the entire process, including links to custom VCL snippets you can create with ease.</li>
+  <li><a href="#process">The custom VCL snippet process</a>—Walks you through the entire process, including links to 自定义VCL代码片段 you can create with ease.</li>
 </ul>
 
 <h2 id="vcl-curl">Understand VCL snippet values</h2>
@@ -2016,7 +2016,7 @@
   </tr>
   <tr>
     <td>service_id</td>
-    <td>The ID of a specific Staging or Production environment. We provide this value. Add the <code>SERVICE_ID</code> key to set up your bash script for custom VCL snippets.</td>
+    <td>The ID of a specific Staging or Production environment. We provide this value. Add the <code>SERVICE_ID</code> key to set up your bash script for 自定义VCL代码片段.</td>
   </tr>
   <tr>
     <td>API_KEY</td>
@@ -2073,7 +2073,7 @@
 </span></code></pre></div></div>
 
 <h2 id="process">The custom VCL snippet process</h2>
-<p>To create custom VCL snippets, prepare the VCL configurations, save them to files, and continue with the following:</p>
+<p>To create 自定义VCL代码片段, prepare the VCL configurations, save them to files, and continue with the following:</p>
 
 <ol>
   <li><a href="#list">Locate the active VCL version</a>. Use this version to clone.</li>
@@ -2086,7 +2086,7 @@
 <p>The following are <strong>best practices and recommendations</strong>:</p>
 
 <ul>
-  <li>The default VCL snippets you uploaded include a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of <code class="highlighter-rouge">50</code>. For your custom VCL snippets, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also, consider the priority of your custom snippets and whether they should override the default snippets.</li>
+  <li>The default VCL snippets you uploaded include a prepended name of <code class="highlighter-rouge">magentomodule_</code> with a priority of <code class="highlighter-rouge">50</code>. For your 自定义VCL代码片段, <strong>do not use the <code class="highlighter-rouge">magentomodule_</code> name</strong>. Also, consider the priority of your custom snippets and whether they should override the default snippets.</li>
   <li>Do not forget to <em>always</em> locate and clone the active version, and edit the bash script with the new version! <em>Version</em> is not part of your VCL snippet files.</li>
   <li>If you want to override values and settings from the <a href="https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets" target="\_blank">default Fastly VCL snippets</a>, we recommend creating a new snippet with updated values and code with a higher priority value of <code class="highlighter-rouge">100</code>. You should not try to override default VCLs. We provide an example for <a href="/guides/v2.3/cloud/configure/fastly-vcl-extend-timeout.html">VCL自定义延长管理员超时</a>.</li>
 </ul>
@@ -2126,7 +2126,7 @@ export FASTLY_API_TOKEN=&lt;API Token&gt;
 
 <p>For more information on this Fastly API, see this <a href="https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709" target="\_blank">clone command</a>.</p>
 
-<h3 id="create-snippet">Create custom VCL snippets</h3>
+<h3 id="create-snippet">创建自定义VCL代码片段</h3>
 <p>Create a JSON file with the following content and format:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">

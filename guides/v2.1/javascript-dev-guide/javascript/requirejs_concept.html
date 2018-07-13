@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/javascript-dev-guide/javascript/requirejs_concept.html">
+	<link rel="canonical" href="/guides/v2.1/javascript-dev-guide/javascript/requirejs_concept.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -764,7 +764,7 @@
     <span class="p">]</span>
 <span class="p">};</span></code></pre></figure>
 
-<p>The <code class="highlighter-rouge">config</code> variable contains properties with the <code class="highlighter-rouge">map</code> and <code class="highlighter-rouge">deps</code> keys. These properties are equivalent to the native RequireJS properties. For example, in this case  the <code class="highlighter-rouge">map</code> property contains an object with the keys that are aliases to files and values that are real paths to files.</p>
+<p>The <code class="highlighter-rouge">config</code> variable contains properties with the <code class="highlighter-rouge">map</code> and <code class="highlighter-rouge">deps</code> keys. These properties are equivalent to the native RequireJS properties. 例如， in this case  the <code class="highlighter-rouge">map</code> property contains an object with the keys that are aliases to files and values that are real paths to files.</p>
 
 <p>For a particular area, all modules and themes <code class="highlighter-rouge">requirejs-config.js</code> files are merged into a single file. This file is written to the <code class="highlighter-rouge">pub/static/requirejs</code> directory. This occurs during the first launch of Magento in <a href="/guides/v2.1/config-guide/bootstrap/magento-modes.html">develop or default mode</a> or during static files generation using the <a href="/guides/v2.1/config-guide/cli/config-cli-subcommands-static-view.html">bin/magento setup:static-content:deploy</a> console command.</p>
 

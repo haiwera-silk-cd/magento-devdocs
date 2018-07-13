@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/env/environment-vars_magento.html">
+	<link rel="canonical" href="/guides/v2.0/cloud/env/environment-vars_magento.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -757,12 +757,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1818,7 +1818,7 @@
 </tr>
 <tr>
 <td><code>STATIC_CONTENT_EXCLUDE_THEMES</code></td>
-<td>Themes can include numerous files. If you want to skip copying over theme files during deployment, you can set this environment variable. For example, the Luma theme is included with Magento企业版(云支持版). You may not need to constantly deploy this theme with your code updates and deployments. To exclude, you would add the theme, for example: <code>Magento/luma</code>. This is available in all versions.</td>
+<td>Themes can include numerous files. If you want to skip copying over theme files during deployment, you can set this environment variable. 例如， the Luma theme is included with Magento企业版(云支持版). You may not need to constantly deploy this theme with your code updates and deployments. To exclude, you would add the theme, for example: <code>Magento/luma</code>. This is available in all versions.</td>
 <td>not set</td>
 </tr>
 <tr>
@@ -1842,7 +1842,7 @@
 </tr>
 <tr>
 <td><code>MAGENTO_CLOUD_MODE</code></td>
-<td>We manage the values and setting of this variable. It identifies the type of environment as part of Integration, Staging, or Production. For example, for Pro, this value may be <code>enterprise</code> indicating Staging and Production. For <code>enterprise</code>, it sets the <code>STATIC_CONTENT_THREADS</code> to 3, otherwise sets it to 1 for Integration. This is highly important for Pro plans Production, which has a three node high availability architecture with a very different technology stack. This is available in all versions.</td>
+<td>We manage the values and setting of this variable. It identifies the type of environment as part of Integration, Staging, or Production. 例如， for Pro, this value may be <code>enterprise</code> indicating Staging and Production. For <code>enterprise</code>, it sets the <code>STATIC_CONTENT_THREADS</code> to 3, otherwise sets it to 1 for Integration. This is highly important for Pro plans Production, which has a three node high availability architecture with a very different technology stack. This is available in all versions.</td>
 <td>enterprise</td>
 </tr>
 <tr>
@@ -1895,9 +1895,9 @@
 
 <ol>
   <li>Login to the Magento Cloud CLI. Enter the command <code class="highlighter-rouge">magento-cloud login</code> and provide your credentials.</li>
-  <li>To set a variable for the project, use the command <code class="highlighter-rouge">magento-cloud project:variable:set &lt;name&gt; &lt;value&gt;</code>. The alias for this command is also <code class="highlighter-rouge">pvset</code>. For example, <code class="highlighter-rouge">magento-cloud pvset example 123</code> creates a variable example with a string value of 123 for the project.</li>
+  <li>To set a variable for the project, use the command <code class="highlighter-rouge">magento-cloud project:variable:set &lt;name&gt; &lt;value&gt;</code>. The alias for this command is also <code class="highlighter-rouge">pvset</code>. 例如， <code class="highlighter-rouge">magento-cloud pvset example 123</code> creates a variable example with a string value of 123 for the project.</li>
   <li>After creating these variables, you can list all project variables with the command <code class="highlighter-rouge">magento-cloud project:variable:get</code>或<code class="highlighter-rouge">magento-cloud pvget</code>.</li>
-  <li>To set a variable for the branch, use the command <code class="highlighter-rouge">magento-cloud variable:set &lt;name&gt; &lt;value&gt;</code>. The alias for this command is also <code class="highlighter-rouge">vset</code>. For example, <code class="highlighter-rouge">magento-cloud vset example2 abc</code> creates a variable example2 with a string value of abc for the branch.</li>
+  <li>To set a variable for the branch, use the command <code class="highlighter-rouge">magento-cloud variable:set &lt;name&gt; &lt;value&gt;</code>. The alias for this command is also <code class="highlighter-rouge">vset</code>. 例如， <code class="highlighter-rouge">magento-cloud vset example2 abc</code> creates a variable example2 with a string value of abc for the branch.</li>
   <li>After creating these variables, you can list all project variables with the command <code class="highlighter-rouge">magento-cloud variable:get</code>或<code class="highlighter-rouge">magento-cloud vget</code>.</li>
 </ol>
 

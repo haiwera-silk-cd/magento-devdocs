@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/access-acct/first-time-setup_import-first-steps.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/access-acct/first-time-setup_import-first-steps.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1988,51 +1988,51 @@
 
 </section>
 
-			<p>You can create a Magento企业版(云支持版) project from a blank template or by importing existing code. We recommend starting with a blank template first, and then importing existing Magento code on top of it.</p>
+			<p>你可以从一个空模板创建一个Magento企业版(云支持版)的项目，或导入现有代码来创建。我们推荐使用一个空模板来开始，然后这之基础上导入现有的Magento代码</p>
 
 <div class="bs-callout bs-callout-info">
-  <p>You cannot create trial projects by importing existing code.</p>
+  <p>你不能以导入现存代码的方式创建试验项目。</p>
 </div>
 
-<h2 id="prereqs">先决条件 for importing code</h2>
-<p>开始之前, do the following:</p>
+<h2 id="prereqs">导入代码的先决条件</h2>
+<p>开始之前, 请完成以下操作:</p>
 
 <ul>
-  <li>Add the existing Magento Commerce code to a Git repository. We recommend using <a href="/guides/v2.3/cloud/project/project-integrate-github.html">GitHub</a>.</li>
-  <li>Set up your <a href="/guides/v2.3/cloud/access-acct/first-time-setup.html">local development environment</a>.</li>
+  <li>添加现存Magento Commerce的代码到git仓库。我们推荐使用<a href="/guides/v2.3/cloud/project/project-integrate-github.html">GitHub</a>.</li>
+  <li>设置你的 <a href="/guides/v2.3/cloud/access-acct/first-time-setup.html">本地开发环境</a>.</li>
   <li>
-    <p>Gather required information:</p>
+    <p>收集必要的信息：</p>
 
     <ul>
-      <li><a href="#ssh">SSH access link</a> to the target environment</li>
-      <li><a href="#db-creds">Database credentials</a></li>
+      <li>目标环境的<a href="#ssh">SSH访问链接</a></li>
+      <li><a href="#db-creds">数据库认证信息</a></li>
     </ul>
   </li>
 </ul>
 
-<h3 id="ssh">SSH access to cloud environments</h3>
-<p>To transfer the database dump and files to Magento企业版(云支持版), you must know the SSH access link. You can locate the SSH access link using the [<code class="highlighter-rouge">magento-cloud</code>] CLI tool(/guides/v2.3/cloud/reference/cli-ref-topic.html):</p>
+<h3 id="ssh">SSH访问云环境</h3>
+<p>要传输数据库备份和文件到Magento企业版(云支持版),你必须知道SSH访问链接。你可以使用<a href="/guides/v2.3/cloud/reference/cli-ref-topic.html"><code class="highlighter-rouge">magento-cloud</code>命令行工具</a>找到SSH的访问链接</p>
 
 <p>magento-cloud environment:ssh –pipe</p>
 
 <div class="bs-callout bs-callout-info" id="info">
-  <p>You must enter all Magento企业版(云支持版) commands on the machine on which your Cloud SSH keys are stored. For more information, see <a href="/guides/v2.3/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a> and <a href="/guides/v2.3/cloud/env/environments-ssh.html">SSH和sFTP</a>.</p>
+  <p>你必须在你的存有Cloud SSH密钥的机器上输入所有Magento企业版(云支持版)的命令，更多信息请参考<a href="/guides/v2.3/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a>和<a href="/guides/v2.3/cloud/env/environments-ssh.html">SSH和sFTP</a>.</p>
 </div>
 
-<h3 id="db-creds">Database credentials</h3>
-<p>You need your Magento企业版(云支持版) database name and credentials so that you can import your Magento Commerce data. You can find the name and credentials for your Magento企业版(云支持版) database in the <code class="highlighter-rouge">$MAGENTO_CLOUD_RELATIONSHIPS</code> environment variable.</p>
+<h3 id="db-creds">数据库认证信息</h3>
+<p>你须要你的Magento企业版(云支持版)数据库名和认证信息，如些你便导入Magento Commerce的数据。你可以在<code class="highlighter-rouge">$MAGENTO_CLOUD_RELATIONSHIPS</code>环境变量中找到数据库名和认证信息。</p>
 
-<p>To find Magento企业版(云支持版) database access information:</p>
+<p>要找到Magento企业版(云支持版)的数据库访问信息：</p>
 
 <ol>
   <li>
-    <p>Log in to your remote repository using  <a href="/guides/v2.3/cloud/env/environments-ssh.html#ssh">SSH</a>.</p>
+    <p>使用<a href="/guides/v2.3/cloud/env/environments-ssh.html#ssh">SSH</a>登录到你的远程仓库。</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud ssh -p &lt;project ID&gt; -e &lt;environment ID&gt;
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> magento-cloud ssh -p &lt;project ID&gt; -e &lt;environment ID&gt;
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>List all database information:</p>
+    <p>列出所有数据库信息：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 
@@ -2054,63 +2054,63 @@
   </li>
 </ol>
 
-<p>In the previous example, the database name is <code class="highlighter-rouge">main</code>, the listen port is <code class="highlighter-rouge">3306</code>, the hostname is <code class="highlighter-rouge">database.internal</code>, the root user name is <code class="highlighter-rouge">user</code>, and the user has no password.</p>
+<p>上例中，数据库名是<code class="highlighter-rouge">main</code>，端口是<code class="highlighter-rouge">3306</code>，主机名是<code class="highlighter-rouge">database.internal</code>，root用户名是<code class="highlighter-rouge">user</code>，并且此用户没有密码。</p>
 
-<h3 id="cloud-unsecure-base-url">Cloud unsecure base URL</h3>
-<p>After you import the Magento Commerce database into Magento企业版(云支持版), you must change the base URL so you can access the Magento Admin and storefront.</p>
+<h3 id="云非安全基础url">云非安全基础URL</h3>
+<p>在你导入 Magento Commerce数据库信息到Magento企业版(云支持版)之后，你必须修改基础URL，这样你就可以访问Magento管理面板和网店前台了。</p>
 
-<p>Use the magento-cloud CLI tool to locate the base URL:</p>
+<p>使用magento-cloud命令行工具查看基础URL:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento-cloud url
 </code></pre></div></div>
 
-<h2 id="import">Import workflow for existing code</h2>
-<p>The complete workflow for importing existing code includes the following steps:</p>
+<h2 id="import">导入现存代码的工作流</h2>
+<p>导入现存代码的完整的工作流程包括以下的步骤：</p>
 
 <ol>
-  <li>If you do not have a project, create a new <a href="#cloud-import-proj">project from a template</a>. This new project has files and directories specific to Magento企业版(云支持版).</li>
-  <li><a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html">Replace the contents</a> of this project with your code using Git.</li>
-  <li><a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#cloud-import-db">Import your Magento database</a> into your Magento企业版(云支持版) project.</li>
-  <li><a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#media">Import your static files</a> into your Magento企业版(云支持版) project.</li>
-  <li>Copy your Magento Commerce <a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#encryption-key">encryption key</a> to your Magento企业版(云支持版) project. This key is required for data migration and access.</li>
-  <li>Clear the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> and verify the project imported successfully.</li>
+  <li>如果你没有项目，<a href="#cloud-import-proj">从模板创建一个新的项目</a>.新的项目有针对Magento企业版(云支持版)的文件和目录。</li>
+  <li>例用Git用自己的代码<a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html">替换内容</a> of this project with your code using Git.</li>
+  <li><a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#cloud-import-db">导入你的Magento数据库</a>到Magento企业版(云支持版)工程。</li>
+  <li><a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#media">导入静态文件</a>到你的Magento企业版(云支持版)工程。</li>
+  <li>拷贝你的Magento Commerce的<a href="/guides/v2.3/cloud/access-acct/first-time-setup_import-import.html#encryption-key">密钥</a>到你的Magento企业版(云支持版)工程，这个密钥在数据迁移和访问时是必需的。</li>
+  <li>清除<span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span>并验证项目是否导入成功.</li>
 </ol>
 
-<h2 id="cloud-import-proj">Create a new Magento企业版(云支持版) project</h2>
+<h2 id="cloud-import-proj">创建一个新的Magento企业版(云支持版)项目</h2>
 
 <ol>
   <li>
-    <p>Access your account. Open the email you received from Magento Cloud (accounts@magento.cloud) and click the <em>Access your project now</em> link. Or you can log in to <a href="https://accounts.magento.cloud" target="\_blank">your Magento Commerce account</a>.</p>
+    <p>访问你的账号，打开你从Magento Cloud(accounts@magento.cloud)收到的邮件并点击 <em>立即访问你的项目</em> ，或你也可以登录到<a href="https://accounts.magento.cloud" target="\_blank">你的Magento账号</a>.</p>
   </li>
   <li>
-    <p>Click the <em>This project has no code yet</em> link next to the project name.</p>
+    <p>点击 <em>此项目暂时还没有代码</em> 下一步到填写项目名称</p>
 
-    <p><img src="http://devdocs.magento.com/common/images/cloud_project_empty.png" alt="Project without code" /></p>
+    <p><img src="http://devdocs.magento.com/common/images/cloud_project_empty.png" alt="没有代码的项目" /></p>
   </li>
   <li>
-    <p>Enter a name for the project.</p>
+    <p>填写项目名称。</p>
 
-    <p><img src="http://devdocs.magento.com/common/images/cloud_project_name.png" alt="Project name" /></p>
+    <p><img src="http://devdocs.magento.com/common/images/cloud_project_name.png" alt="项目名称" /></p>
   </li>
   <li>
-    <p>Click <strong>Create a blank site from a template</strong> and click <strong>Continue</strong>. We recommend starting with the Magento template as your initial project option. If you have an existing Magento deployment, you can import existing code later.</p>
+    <p>点击 <strong>从模板创建一个空站点</strong> 然后点击 <strong>继续</strong>。我们推荐你以Magento模板作为你的初始项目选项开始，如果你有一个已经存在的Magento部署，你可以在之后导入现存代码。</p>
 
-    <p><img src="http://devdocs.magento.com/common/images/cloud_project_template.png" alt="Create a site using the sample Magento project" width="650px" /></p>
+    <p><img src="http://devdocs.magento.com/common/images/cloud_project_template.png" alt="使用样本Magento项目创建一个站点" width="650px" /></p>
   </li>
   <li>
-    <p>When prompted, enter your Magento Commerce <a href="/guides/v2.3/install-gde/prereq/connect-auth.html">Magento authentication keys</a> in the provided fields. You created these keys earlier in the Magento Marketplace. Enter the private and public keys and click <strong>Finish</strong>.</p>
+    <p>当弹出提示时，在弹出的输入框输入你的Magento Commerce的<a href="/guides/v2.3/install-gde/prereq/connect-auth.html">Magento authentication keys</a>。你之前在Magento市场创建了这些密钥。输入私钥和公钥然后点击 <strong>完成</strong></p>
 
-    <p><img src="http://devdocs.magento.com/common/images/cloud-project-magento-auth-creds.png" alt="Enter your authentication keys" width="650px" /></p>
+    <p><img src="http://devdocs.magento.com/common/images/cloud-project-magento-auth-creds.png" alt="输入认证密钥" width="650px" /></p>
 
-    <p>The keys are added to the <code class="highlighter-rouge">auth.json</code> file and the file is required for all branches and deployments.</p>
+    <p>密钥会被添加到<code class="highlighter-rouge">auth.json</code>文件中，并且此文件所有分支和部署环境都要有。</p>
   </li>
   <li>
-    <p>Wait a few minutes while the project deploys. A status of <em>Pending</em> displays until completed, similar to the following:</p>
+    <p>你的项目部署要等几分钟，完成这前会显示 <em>Pending</em>  的状态，如下图所示：</p>
 
-    <p><img src="http://devdocs.magento.com/common/images/cloud_project_template2.png" alt="Your sample Magento project" width="650px" /></p>
+    <p><img src="http://devdocs.magento.com/common/images/cloud_project_template2.png" alt="你的样本Magento项目" width="650px" /></p>
   </li>
   <li>
-    <p>After the project deploys, <strong>Success</strong> displays next to the name of your project.</p>
+    <p>项目部署完后，<strong>成功</strong> 会显示在你的项目名称旁边</p>
   </li>
 </ol>
 

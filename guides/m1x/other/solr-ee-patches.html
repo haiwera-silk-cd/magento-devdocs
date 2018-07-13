@@ -43,7 +43,7 @@
 <p>This fix affects Magento EE 1.12.0.0, 1.12.0.1, and 1.12.0.1</p>
 
 <h3 id="fixed_solr_ee11200"><!-- (ID: SUPEE-111)-->Issues Fixed in the Magento EE 1.12.0.x Patch</h3>
-<ul><li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4880" target="_blank">SUP-4880</a>)  -->Using layered navigation filtering returns the wrong results. (For example, filtering by brand has no effect.)</li>
+<ul><li><!-- (<a href="https://jira.corp.x.com/browse/SUP-4880" target="_blank">SUP-4880</a>)  -->Using layered navigation filtering returns the wrong results. (例如， filtering by brand has no effect.)</li>
 <li><!--( <a href="https://jira.corp.x.com/browse/SUP-4901" target="_blank">SUP-4901</a>)  -->Resolved an issue where search results don't display correctly after a Magento upgrade.</li>
 <li><!-- (<a href="https://jira.corp.x.com/browse/SUP-5164" target="_blank">SUP-5164</a>)  -->Catalog navigation works properly.</li>
 <li><!-- (<a href="https://jira.corp.x.com/browse/MAGETWO-1417" target="_blank">MAGETWO-1417</a>)  -->Products display as expected in categories if the products have a Date attribute with the option <strong>Used for Sorting in Product Listing></strong> set to <strong>Yes</strong>. There are no exceptions in Magento logs after reindexing.</li>
@@ -58,7 +58,7 @@
 <p>To install this fix:</p>
 <ol><li>Stop Solr if it's currently running.</li>
 <li>Download the patch <tt>.sh</tt> and transfer it to your Magento installation root directory.<br />
-For example, <tt>/var/www/html/magento</tt>.</li>
+例如， <tt>/var/www/html/magento</tt>.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Magento files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-111_EE_1.12.0.0_v6.sh</pre><br />
 <strong>注意</strong>: The patch version&mdash;indicated by <tt>_v6</tt> in this example&mdash;is subject to change. The version you get might be different.<br />
@@ -70,14 +70,14 @@ The value in the USER column is the web server user name.<br />
 Typically, the Apache web server user on CentOS is <tt>apache</tt> and the Apache web server user on Ubuntu is <tt>www-data</tt>.</li>
 <li>As the owner of the files in the Magento installation directory or as a user with <tt>root</tt> privileges, enter the following command from the Magento installation directory:<br />
 <tt>chown -R <em>web-server-user-name</em> .</tt>
-For example, on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
+例如， on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
 <tt>chown -R www-data .</tt></li></ol> 
  </li>
 <li>Copy the updated configuration files from Magento to your Solr configuration directory.
 <ol><li>Back up the files in your current Solr configuration directory.</li>
-<li>Enter the following command:<br />
+<li>输入下面的命令：<br />
 <tt>cp <em>magento-install-root</em>/lib/Apache/Solr/conf/* <em>solr-config-dir</em></tt><br />
-For example, if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
+例如， if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
 <tt>cp /var/www/magento/lib/Apache/Solr/conf/* /etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt></li></ol>
 </li>
 <li>Start Solr.</li>
@@ -149,7 +149,7 @@ If problems persist, <a href="http://support.magentocommerce.com/" target="_blan
 <p>To install this fix:</p>
 <ol><li>Stop Solr if it's currently running.</li>
 <li>Download the patch <tt>.sh</tt> and transfer it to your Magento installation root directory.<br />
-For example, <tt>/var/www/html/magento</tt>.</li>
+例如， <tt>/var/www/html/magento</tt>.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Magento files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-107_EE_1.11.1.0_v1.sh</pre><br />
 <strong>注意</strong>: The patch version&mdash;indicated by <tt>_v6</tt> in this example&mdash;is subject to change. The version you get might be different.<br />
@@ -161,14 +161,14 @@ The value in the USER column is the web server user name.<br />
 Typically, the Apache web server user on CentOS is <tt>apache</tt> and the Apache web server user on Ubuntu is <tt>www-data</tt>.</li>
 <li>As the owner of the files in the Magento installation directory or as a user with <tt>root</tt> privileges, enter the following command from the Magento installation directory:<br />
 <tt>chown -R <em>web-server-user-name</em> .</tt>
-For example, on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
+例如， on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
 <tt>chown -R www-data .</tt></li></ol> 
  </li>
 <li>Copy the updated configuration files from Magento to your Solr configuration directory.
 <ol><li>Back up the files in your current Solr configuration directory.</li>
-<li>Enter the following command:<br />
+<li>输入下面的命令：<br />
 <tt>cp <em>magento-install-root</em>/lib/Apache/Solr/conf/* <em>solr-config-dir</em></tt><br />
-For example, if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
+例如， if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
 <tt>cp /var/www/magento/lib/Apache/Solr/conf/* /etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt></li></ol>
 </li>
 <li>Start Solr.</li>
@@ -248,7 +248,7 @@ If problems persist, <a href="http://support.magentocommerce.com/" target="_blan
 <p>To install this fix:</p>
 <ol><li>Stop Solr if it's currently running.</li>
 <li>Download the patch <tt>.sh</tt> and transfer it to your Magento installation root directory.<br />
-For example, <tt>/var/www/html/magento</tt>.</li>
+例如， <tt>/var/www/html/magento</tt>.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Magento files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-108_EE_1.11.0.2_v1.sh</pre><br />
 <strong>注意</strong>: The patch version&mdash;indicated by <tt>_v1</tt> in this example&mdash;is subject to change. The version you get might be different.<br />
@@ -260,14 +260,14 @@ The value in the USER column is the web server user name.<br />
 Typically, the Apache web server user on CentOS is <tt>apache</tt> and the Apache web server user on Ubuntu is <tt>www-data</tt>.</li>
 <li>As the owner of the files in the Magento installation directory or as a user with <tt>root</tt> privileges, enter the following command from the Magento installation directory:<br />
 <tt>chown -R <em>web-server-user-name</em> .</tt><br />
-For example, on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter<br />
+例如， on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter<br />
 <tt>chown -R www-data .</tt></li></ol> 
  </li>
 <li>Copy the updated configuration files from Magento to your Solr configuration directory.
 <ol><li>Back up the files in your current Solr configuration directory.</li>
-<li>Enter the following command:<br />
+<li>输入下面的命令：<br />
 <tt>cp <em>magento-install-root</em>/lib/Apache/Solr/conf/* <em>solr-config-dir</em></tt><br />
-For example, if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
+例如， if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
 <tt>cp /var/www/magento/lib/Apache/Solr/conf/* /etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt></li></ol>
 </li>
 <li>Start Solr.</li>
@@ -321,7 +321,7 @@ In other words, if some products are assigned to a category that do <em>not</em>
 <h3 id="install_11010">Installation Instructions</h2>
 <p>To install this fix:</p>
 <ol><li>Download the patch <tt>.sh</tt> and transfer it to your Magento installation root directory.<br />
-For example, <tt>/var/www/html/magento</tt>.</li>
+例如， <tt>/var/www/html/magento</tt>.</li>
 <li>Enter the following command as a user with sufficient privileges to write to Magento files (typically, the web server user or <tt>root</tt>):<br />
 <pre>sh PATCH_SUPEE-110_EE_1.10.1.1_v2.sh</pre><br />
 <strong>注意</strong>: The patch version&mdash;indicated by <tt>_v2</tt> in this example&mdash;is subject to change. The version you get might be different.<br />
@@ -333,15 +333,15 @@ The value in the USER column is the web server user name.<br />
 Typically, the Apache web server user on CentOS is <tt>apache</tt> and the Apache web server user on Ubuntu is <tt>www-data</tt>.</li>
 <li>As a user with <tt>root</tt> privileges, enter the following command from the Magento installation directory:<br />
 <tt>chown -R <em>web-server-user-name</em> .</tt><br />
-For example, on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter<br />
+例如， on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter<br />
 <tt>chown -R www-data .</tt></li></ol> 
  </li>
 <li>If Solr is running, stop it.</li>
 <li>Copy the updated configuration files from Magento to your Solr configuration directory.
 <ol><li>Back up the files in your current Solr configuration directory.</li>
-<li>Enter the following command:<br />
+<li>输入下面的命令：<br />
 <tt>cp <em>magento-install-root</em>/lib/Apache/Solr/conf/* <em>solr-config-dir</em></tt><br />
-For example, if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
+例如， if Magento is installed in <tt>/var/www/magento</tt> and Solr configuration files are located in <tt>/etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt>, enter<br />
 <tt>cp /var/www/magento/lib/Apache/Solr/conf/* /etc/apache-solr-3.5.0/mysolrapp/solr/conf</tt></li></ol>
 </li>
 <li>Start Solr.</li>

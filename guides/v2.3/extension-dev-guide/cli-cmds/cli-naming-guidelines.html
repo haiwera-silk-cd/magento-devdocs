@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">
+	<link rel="canonical" href="/guides/v2.3/extension-dev-guide/cli-cmds/cli-naming-guidelines.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1525,7 +1525,7 @@
 
 <h2 id="cli-name">Command name</h2>
 <p>A command <em>name</em> is a part of the command, which defines behavior of the command on the very high level. In the command it goes right after the command’s name.
-For example, in <code class="highlighter-rouge">bin/magento setup:upgrade</code>, <code class="highlighter-rouge">bin/magento</code> is the command’s name and <code class="highlighter-rouge">setup:upgrade</code> is the name of the command.</p>
+例如， in <code class="highlighter-rouge">bin/magento setup:upgrade</code>, <code class="highlighter-rouge">bin/magento</code> is the command’s name and <code class="highlighter-rouge">setup:upgrade</code> is the name of the command.</p>
 
 <p>If you have a Magento installation handy, enter the following to display the current list of commands:</p>
 
@@ -1567,7 +1567,7 @@ magento setup:db-data:upgrade
 <h2 id="cli-args">Command options and arguments</h2>
 <p>Options and arguments follow the command name and modify the command’s behavior.</p>
 
-<p>For example, in <code class="highlighter-rouge">bin/magento module:disable --force Magento_Catalog</code>, the <code class="highlighter-rouge">--force</code> <em>option</em> and the <code class="highlighter-rouge">Magento_Catalog</code> <em>argument</em> bypass the restrictions and specify a particular <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> to be disabled; in this case, regardless of dependencies on other modules.</p>
+<p>例如， in <code class="highlighter-rouge">bin/magento module:disable --force Magento_Catalog</code>, the <code class="highlighter-rouge">--force</code> <em>option</em> and the <code class="highlighter-rouge">Magento_Catalog</code> <em>argument</em> bypass the restrictions and specify a particular <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> to be disabled; in this case, regardless of dependencies on other modules.</p>
 
 <p>Options and arguments create different user experiences. As a developer, you can choose which type of input is better for your particular case.</p>
 
@@ -1612,7 +1612,7 @@ magento setup:db-data:upgrade
 
 <h4 id="format-single-word-or-a-compound-word-separated-with-a-dash-or-hyphen-character-1">Format: single word or a compound word separated with a dash or hyphen character.</h4>
 
-<p>For example,</p>
+<p>例如，</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento dev:theme:create --parent=Magento/luma frontend arg1 arg2
 magento dev:theme:create -p=Magento/luma frontend vendor themename
@@ -1659,7 +1659,7 @@ magento module:disable -f=yes Magento_Catalog
   <li>
     <p>Restricting command names to start with a unique name, such as a vendor name. The <span term-uuid="f583cac1-8ed5-4305-8195-2d5630e72ba8" class="glossary-term" data-toggle="popover">usability</span> of the command depends on what you choose for a vendor name.</p>
 
-    <p>For example, <code class="highlighter-rouge">myname:dev:theme:create</code> is not obvious and is hard to remember.</p>
+    <p>例如， <code class="highlighter-rouge">myname:dev:theme:create</code> is not obvious and is hard to remember.</p>
 
     <p>The vendor name doesn’t have to start the command name; it could be in the middle. This way, related commands are grouped together.</p>
 

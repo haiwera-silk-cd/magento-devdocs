@@ -273,12 +273,12 @@
         
         
         
-        <li class="nav-level2  " id="list-of-rest-endpoints-by-module">
+        <li class="nav-level2  " id="模块rest接口列表">
 
             
 
             
-            <a href="/guides/v2.0/rest/list.html">List of REST endpoints by module</a>
+            <a href="/guides/v2.0/rest/list.html">模块REST接口列表</a>
             
 
             
@@ -521,7 +521,7 @@
 
 </section>
 
-			<p>POST, PUT, and DELETE requests to the REST Web <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> require the service method parameters to be in the body of the request. For example, to create a Customer, you would specify a JSON array (or <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> structure) in the body of the message.</p>
+			<p>POST, PUT, and DELETE requests to the REST Web <span term-uuid="786086f2-622b-4007-97fe-2c19e5283035" class="glossary-term" data-toggle="popover">API</span> require the service method parameters to be in the body of the request. 例如， to create a Customer, you would specify a JSON array (or <span term-uuid="8c0645c5-aa6b-4a52-8266-5659a8b9d079" class="glossary-term" data-toggle="popover">XML</span> structure) in the body of the message.</p>
 
 <p>For search APIs that invoke a <code class="highlighter-rouge">*Repository::getList(SearchCriteriaInterface *)</code> call, the searchCriteria must be specified in the <span term-uuid="a05c59d3-77b9-47d0-92a1-2cbffe3f8622" class="glossary-term" data-toggle="popover">URL</span> of the GET request. The basic pattern for specifying the criteria is</p>
 
@@ -756,7 +756,7 @@ searchCriteria[filter_groups][2][filters][0][condition_type]=to</code></pre></fi
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">searchCriteria[sortOrders][&lt;index&gt;][field]=&lt;field-name&gt;</code> - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on <code class="highlighter-rouge">price</code> first and then by <code class="highlighter-rouge">name</code>, call <code class="highlighter-rouge">searchCriteria[sortOrders][0][field]=price&amp;searchCriteria[sortOrders][1][field]=name</code>.</p>
+    <p><code class="highlighter-rouge">searchCriteria[sortOrders][&lt;index&gt;][field]=&lt;field-name&gt;</code> - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. 例如， to sort on <code class="highlighter-rouge">price</code> first and then by <code class="highlighter-rouge">name</code>, call <code class="highlighter-rouge">searchCriteria[sortOrders][0][field]=price&amp;searchCriteria[sortOrders][1][field]=name</code>.</p>
   </li>
   <li>
     <p><code class="highlighter-rouge">searchCriteria[sortOrders][&lt;index&gt;][direction]=ASC | DESC</code> - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the <code class="highlighter-rouge">price</code> fields in descending order and the <code class="highlighter-rouge">name</code> fields in ascending order, call <code class="highlighter-rouge">searchCriteria[sortOrders][0][field]=price&amp;searchCriteria[sortOrders][1][field]=name&amp;searchCriteria[sortOrders][1][direction]=ASC</code>.</p>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/comp-mgr/cli/cli-upgrade.html">
+	<link rel="canonical" href="/guides/v2.2/comp-mgr/cli/cli-upgrade.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1137,7 +1137,7 @@
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export DATA_CONVERTER_BATCH_SIZE &lt;value&gt;
 </code></pre></div>  </div>
 
-  <p>For example,</p>
+  <p>例如，</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export DATA_CONVERTER_BATCH_SIZE 100000
 </code></pre></div>  </div>
@@ -1186,7 +1186,7 @@
 
   <p>To verify your file system permissions are set properly, either log in to the Magento server or use your hosting provider’s file manager application.</p>
 
-  <p>For example, enter the following commands on a Linux system if the Magento application is installed in <code class="highlighter-rouge">/var/www/html/magento2</code>:</p>
+  <p>例如， enter the following commands on a Linux system if the Magento application is installed in <code class="highlighter-rouge">/var/www/html/magento2</code>:</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -al /var/www/html/magento2
 </code></pre></div>  </div>
@@ -1262,7 +1262,7 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor</code></pre></figu
   <div class="collapsible"><b class="collapsible-title">To enable maintenance mode: </b><div class="collapsible-content"><ol>
   <li>Log in to your Magento server as, or switch to, the Magento文件系统所有者.</li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php &lt;your Magento install dir&gt;/bin/magento maintenance:enable
 </code></pre></div>    </div>
@@ -1279,7 +1279,7 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor</code></pre></figu
   <li>
     <p>Change to the directory in which you installed the Magento software.</p>
 
-    <p>For example, <code class="highlighter-rouge">cd /var/www/html/magento2</code></p>
+    <p>例如， <code class="highlighter-rouge">cd /var/www/html/magento2</code></p>
   </li>
   <li>
     <p>Enter the following commands in the order shown:</p>
@@ -1288,7 +1288,7 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor</code></pre></figu
 composer update
 </code></pre></div>    </div>
 
-    <p>For example, to upgrade to Magento Open Source version 2.0.11, enter:</p>
+    <p>例如， to upgrade to Magento Open Source version 2.0.11, enter:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer require magento/product-community-edition 2.0.11 --no-update
 composer update

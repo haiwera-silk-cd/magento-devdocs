@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/config-guide/mq/manage-mysql.html">
+	<link rel="canonical" href="/guides/v2.1/config-guide/mq/manage-mysql.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1492,12 +1492,12 @@
         
         
         
-        <li class="nav-level2  " id="magento-ownership-and-permissions-in-development-and-production">
+        <li class="nav-level2  " id="magento开发环境和生产环境的所有者和权限">
 
             
 
             
-            <a href="/guides/v2.1/config-guide/prod/prod_file-sys-perms.html">Magento ownership and permissions in development and production</a>
+            <a href="/guides/v2.1/config-guide/prod/prod_file-sys-perms.html">Magento开发环境和生产环境的所有者和权限</a>
             
 
             
@@ -1711,7 +1711,7 @@
   <p>If the number of queued messages is less than the specified max, the consumer terminates when the last message has been processed. If you don’t specify <code class="highlighter-rouge">--max-messages</code>, the process runs continuously.</p>
 </div>
 
-<p>After consuming all available messages, the command terminates. You can run the command again manually or with a cron job. You can also run multiple instances of the <code class="highlighter-rouge">magento queue:consumers:start</code> command to process large message queues. For example, you can append <code class="highlighter-rouge">&amp;</code> to the command to run it in the background, return to a prompt, and continue running commands (e.g., <code class="highlighter-rouge">bin/magento queue:consumers:start &lt;consumer_name&gt; &amp;</code>).</p>
+<p>After consuming all available messages, the command terminates. You can run the command again manually or with a cron job. You can also run multiple instances of the <code class="highlighter-rouge">magento queue:consumers:start</code> command to process large message queues. 例如， you can append <code class="highlighter-rouge">&amp;</code> to the command to run it in the background, return to a prompt, and continue running commands (e.g., <code class="highlighter-rouge">bin/magento queue:consumers:start &lt;consumer_name&gt; &amp;</code>).</p>
 
 <h3 id="list-consumers">List consumers</h3>
 <p>Use the following command to return a list of message queue consumers:</p>

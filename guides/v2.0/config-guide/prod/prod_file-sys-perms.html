@@ -1578,7 +1578,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find app/code pub/static app/etc var/generation var/di var/view_preprocessed vendor \( -type f -or -type d \) -exec chmod u-w {} \; &amp;&amp; chmod o-rwx app/etc/env.php &amp;&amp; chmod u+x bin/magento
 </code></pre></div>    </div>
@@ -1641,7 +1641,7 @@
         <li>
           <p>Set <code class="highlighter-rouge">magento_umask</code> to the desired value.</p>
 
-          <p>For example, <code class="highlighter-rouge">022</code></p>
+          <p>例如， <code class="highlighter-rouge">022</code></p>
         </li>
       </ol>
     </li>
@@ -1754,7 +1754,7 @@ find var pub/static pub/media app/etc -type d -exec chmod g+ws {} \;
   <li>Log in to your Magento server.</li>
   <li>Change to your Magento installation directory.</li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find app/code lib var pub/static pub/media vendor app/etc \( -type d -or -type f \) -exec chmod g+w {} \; &amp;&amp; chmod o+rwx app/etc/env.php
 </code></pre></div>    </div>

@@ -78,7 +78,7 @@ Typically, the Apache web server user on CentOS is <tt>apache</tt> and the Apach
 <li>Change to the Magento installation directory.</li>
 <li><em>Dedicated Magento server only</em>. Enter the following command to set ownership of the Magento installation directory and all its subdirectories:
 <pre>chown -R <em>web-server-user-name</em> .</pre>
-For example, on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
+例如， on Ubuntu where Apache usually runs as <tt>www-data</tt>, enter
 <pre>chown -R www-data .</pre></li>
 <li>Enter the following commands to set directory permissions to 700 and file permissions to 600:
 <pre>find . -type d -exec chmod 700 {} \;

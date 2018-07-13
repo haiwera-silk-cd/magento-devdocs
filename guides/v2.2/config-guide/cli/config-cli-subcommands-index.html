@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/cli/config-cli-subcommands-index.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/cli/config-cli-subcommands-index.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1911,7 +1911,7 @@ catalogsearch_fulltext                   Catalog Search
 </code></pre></div>  </div>
 
   <h2 id="view-indexer-status">View indexer status</h2>
-  <p>Use this command to view the status of all indexers or specific indexers. For example, find out if an indexer needs to be reindexed.</p>
+  <p>Use this command to view the status of all indexers or specific indexers. 例如， find out if an indexer needs to be reindexed.</p>
 
   <p>命令参数：</p>
 
@@ -1986,7 +1986,7 @@ Catalog Search index has been rebuilt successfully in &lt;time&gt;
   <p>Use this command to set the following indexer options:</p>
 
   <ul>
-    <li><strong>Update on save (<code class="highlighter-rouge">realtime</code>):</strong> Indexed data is updated as soon as a change is made in the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span>. (For example, the <span term-uuid="50e49338-1e6c-4473-8527-9e401d67ea2b" class="glossary-term" data-toggle="popover">category</span> products index is reindex after products are added to a category in the Admin.) This is the default.</li>
+    <li><strong>Update on save (<code class="highlighter-rouge">realtime</code>):</strong> Indexed data is updated as soon as a change is made in the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">Admin</span>. (例如， the <span term-uuid="50e49338-1e6c-4473-8527-9e401d67ea2b" class="glossary-term" data-toggle="popover">category</span> products index is reindex after products are added to a category in the Admin.) This is the default.</li>
     <li><strong>Update by schedule (<code class="highlighter-rouge">schedule</code>):</strong> Data is indexed according to the schedule set by your Magento cron job.</li>
   </ul>
 
@@ -1998,7 +1998,7 @@ Catalog Search index has been rebuilt successfully in &lt;time&gt;
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento indexer:show-mode [indexer]
 </code></pre></div>  </div>
 
-  <p>Where <code class="highlighter-rouge">[indexer]</code> is a space-separated list of indexers. Omit <code class="highlighter-rouge">[indexer]</code> to show all indexers’ modes. For example, to show the mode of all indexers:</p>
+  <p>Where <code class="highlighter-rouge">[indexer]</code> is a space-separated list of indexers. Omit <code class="highlighter-rouge">[indexer]</code> to show all indexers’ modes. 例如， to show the mode of all indexers:</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento indexer:show-mode
 </code></pre></div>  </div>
@@ -2034,7 +2034,7 @@ Catalog Search:                                    Update on Save
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento indexer:info
 </code></pre></div>  </div>
 
-  <p>For example, to change only the category products and product categories indexers to update on schedule, enter</p>
+  <p>例如， to change only the category products and product categories indexers to update on schedule, enter</p>
 
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/magento indexer:set-mode schedule catalog_category_product catalog_product_category
 </code></pre></div>  </div>

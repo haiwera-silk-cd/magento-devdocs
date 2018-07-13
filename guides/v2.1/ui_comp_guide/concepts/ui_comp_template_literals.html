@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/ui_comp_guide/concepts/ui_comp_template_literals.html">
+	<link rel="canonical" href="/guides/v2.1/ui_comp_guide/concepts/ui_comp_template_literals.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -339,7 +339,7 @@
 
 <p>Magento provides for the use of template literals in UI 组件. Template literals are strings that can contain embedded expressions. They were introduced into Javascript with ES2015 and were called “template strings” in early editions of the ES2015 / ES6 specification. Since it is a relatively new part of Javascript, some browsers, such as IE11, do not support the specification. Per the specification standard, back-ticks (<code class="highlighter-rouge">`</code>) are used instead of a single quote (<code class="highlighter-rouge">'</code>) or double quote (<code class="highlighter-rouge">"</code>) to delineate a template string. Due to the lack of browser support, Magento has a Javascript class that will parse certain strings with a single quote (<code class="highlighter-rouge">'</code>) in the same way a browser that supports the specification would parse one with back-ticks.</p>
 
-<p>Template literals can contain expressions which will be evaluated in the current KnockoutJS context. These expressions can contain nearly any valid <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">Javascript</span>. They must start with a dollar sign and be surrounded with curly braces. <strong>Anything inside the following will be evaluated as an expression</strong>: <code class="highlighter-rouge">${  }</code>. For example, they can be used—and often are—to access properties of the KnockoutJS context like this: <code class="highlighter-rouge">'${ $.submitUrl }'</code>. They can be used to call functions (<code class="highlighter-rouge">'${ $.loadForm($.formUrl) }'</code>), or whatever: <code class="highlighter-rouge">'${ 20 + 13 }'</code>. These expressions are parsed in <code class="highlighter-rouge">/lib/web/mage/utils/template.js</code>.</p>
+<p>Template literals can contain expressions which will be evaluated in the current KnockoutJS context. These expressions can contain nearly any valid <span term-uuid="312b4baf-15f7-4968-944e-c814d53de218" class="glossary-term" data-toggle="popover">Javascript</span>. They must start with a dollar sign and be surrounded with curly braces. <strong>Anything inside the following will be evaluated as an expression</strong>: <code class="highlighter-rouge">${  }</code>. 例如， they can be used—and often are—to access properties of the KnockoutJS context like this: <code class="highlighter-rouge">'${ $.submitUrl }'</code>. They can be used to call functions (<code class="highlighter-rouge">'${ $.loadForm($.formUrl) }'</code>), or whatever: <code class="highlighter-rouge">'${ 20 + 13 }'</code>. These expressions are parsed in <code class="highlighter-rouge">/lib/web/mage/utils/template.js</code>.</p>
 
 <p>Template literals allow UI 组件 to easily assign dynamic values to class properties. More specifically, they provide an integration layer between a particular KnockoutJS context and a Javascript class.</p>
 

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/varnish/use-varnish-cache.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/varnish/use-varnish-cache.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1887,7 +1887,7 @@
 			<p>This topic discusses the basics of using Varnish as a web caching accelerator for Magento.</p>
 
 <h2 id="use-varnish-magento-purge">Varnish purging</h2>
-<p>According to <a href="https://www.varnish-cache.org/docs/trunk/users-guide/purging.html" target="_blank">Varnish documentation</a>, “A <em>purge</em> is what happens when you pick out an object from the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> and discard it along with its variants.” A Varnish purge is very similar to a Magento cache clean command (or clicking <strong>Flush Magento Cache</strong> in the Magento Admin).</p>
+<p>According to <a href="https://www.varnish-cache.org/docs/trunk/users-guide/purging.html" target="_blank">Varnish documentation</a>, “A <em>purge</em> is what happens when you pick out an object from the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span> and discard it along with its variants.” A Varnish purge is very similar to a Magento cache clean command (or clicking <strong>Flush Magento Cache</strong> in the Magento Admin).</p>
 
 <p>In fact, as discussed in this section, when you clean, flush, or refresh the Magento cache, Varnish purges as well.</p>
 
@@ -1897,7 +1897,7 @@
   <li>
     <p>Maintaining a <span term-uuid="a3c8f20f-b067-414e-9781-06378c193155" class="glossary-term" data-toggle="popover">website</span>.</p>
 
-    <p>For example, anything you do in the Admin in:</p>
+    <p>例如， anything you do in the Admin in:</p>
 
     <ul>
       <li><strong>STORES</strong> &gt; <strong>Configuration</strong> &gt; GENERAL &gt; <strong>General</strong></li>
@@ -1926,7 +1926,7 @@
 
 <p>The parameter format must be <code class="highlighter-rouge">&lt;hostname or ip&gt;:&lt;listen port&gt;</code>, where you can omit <code class="highlighter-rouge">&lt;listen port&gt;</code> if it’s port 80.</p>
 
-<p>For example,</p>
+<p>例如，</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 </code></pre></div></div>

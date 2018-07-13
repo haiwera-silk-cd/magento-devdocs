@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">
+	<link rel="canonical" href="/guides/v2.3/mtf/mtf_entities/mtf_dataset.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1019,7 +1019,7 @@ The following data types are available:
 
 <h2 id="merge">Data set merging</h2>
 
-<p>The <abbr title="Functional Testing Framework">FTF</abbr> enables you to merge data sets from different modules. For example, if you create a new <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> that adds a menu option to an existing module, the <abbr title="Functional Testing Framework">FTF</abbr> allows you to merge the new data with the existing data sets. As a result, you don’t have to edit the existing module to include the new information, and your tests continue to work. If you decide to later remove the same new module, you don’t need to clean the data sets in other modules.</p>
+<p>The <abbr title="Functional Testing Framework">FTF</abbr> enables you to merge data sets from different modules. 例如， if you create a new <span term-uuid="c1e4242b-1f1a-44c3-9d72-1d5b1435e142" class="glossary-term" data-toggle="popover">模块</span> that adds a menu option to an existing module, the <abbr title="Functional Testing Framework">FTF</abbr> allows you to merge the new data with the existing data sets. As a result, you don’t have to edit the existing module to include the new information, and your tests continue to work. If you decide to later remove the same new module, you don’t need to clean the data sets in other modules.</p>
 
 <p>There are two options to merge data sets in the <abbr title="Functional Testing Framework">FTF</abbr>:</p>
 
@@ -1082,7 +1082,7 @@ The following data types are available:
 
 <h3 id="simple_var">Set a simple variable</h3>
 
-<p>For example, if a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a> or constraint has an argument <code class="highlighter-rouge">$price</code>, then the test case takes from the data set all the <code class="highlighter-rouge">&lt;data&gt;</code> nodes with a name <code class="highlighter-rouge">price</code>. Assume a method with the <code class="highlighter-rouge">$price</code> argument.</p>
+<p>例如， if a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a> or constraint has an argument <code class="highlighter-rouge">$price</code>, then the test case takes from the data set all the <code class="highlighter-rouge">&lt;data&gt;</code> nodes with a name <code class="highlighter-rouge">price</code>. Assume a method with the <code class="highlighter-rouge">$price</code> argument.</p>
 
 <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">testCreate</span><span class="p">(</span><span class="nv">$price</span><span class="p">)</span>
@@ -1106,13 +1106,13 @@ The following data types are available:
 </span><span class="p">}</span>
 <span class="cp">?&gt;</span></code></pre></figure>
 
-<p>In this case, the ObjectManager sends data to the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Fixture/InjectableFixture.php">InjectableFixture</a> constructor. It declares that your data can be passed to the fixture in <code class="highlighter-rouge">$data</code> variable as an array. For example, to assign the existing fixture field <code class="highlighter-rouge">weight</code> with <code class="highlighter-rouge">50</code> you can use the following notation:</p>
+<p>In this case, the ObjectManager sends data to the <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Fixture/InjectableFixture.php">InjectableFixture</a> constructor. It declares that your data can be passed to the fixture in <code class="highlighter-rouge">$data</code> variable as an array. 例如， to assign the existing fixture field <code class="highlighter-rouge">weight</code> with <code class="highlighter-rouge">50</code> you can use the following notation:</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"product/data/weight"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>50<span class="nt">&lt;/data&gt;</span></code></pre></figure>
 
 <h3 id="fixture_repository">Set data to a fixture from a repository</h3>
 
-<p>The <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Fixture/InjectableFixture.php">InjectableFixture</a> class enables you to use a <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture-repo.html">fixture repository</a>. It can be injected in a <code class="highlighter-rouge">$dataset</code> variable. For example, to use <code class="highlighter-rouge">dataset = product_with_special_symbols_in_name</code> from the repository assigned in the <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture.html">fixture</a>, you can use:</p>
+<p>The <a href="https://github.com/magento/mtf/blob/develop/Magento/Mtf/Fixture/InjectableFixture.php">InjectableFixture</a> class enables you to use a <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture-repo.html">fixture repository</a>. It can be injected in a <code class="highlighter-rouge">$dataset</code> variable. 例如， to use <code class="highlighter-rouge">dataset = product_with_special_symbols_in_name</code> from the repository assigned in the <a href="/guides/v2.3/mtf/mtf_entities/mtf_fixture.html">fixture</a>, you can use:</p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;data</span> <span class="na">name=</span><span class="s">"product/dataset"</span> <span class="na">xsi:type=</span><span class="s">"string"</span><span class="nt">&gt;</span>product_with_special_symbols_in_name<span class="nt">&lt;/data&gt;</span></code></pre></figure>
 
@@ -1136,7 +1136,7 @@ The following data types are available:
 
 <h3 id="add_variation">Add a new variation</h3>
 
-<p>To add a new variation using <a href="#merge">merging</a>, you should simply use the name of a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a> that you want to merge with. For example, you want to add a new variations from the Magento_ProductVideo模块 to the <code class="highlighter-rouge">Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest</code> that is placed in the Magento_Catalog模块. You can create data set in the Magento_ProductVideo模块, containing variations you need, and paste the test case name that you want to merge with:</p>
+<p>To add a new variation using <a href="#merge">merging</a>, you should simply use the name of a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a> that you want to merge with. 例如， you want to add a new variations from the Magento_ProductVideo模块 to the <code class="highlighter-rouge">Magento\Catalog\Test\TestCase\Product\UpdateSimpleProductEntityTest</code> that is placed in the Magento_Catalog模块. You can create data set in the Magento_ProductVideo模块, containing variations you need, and paste the test case name that you want to merge with:</p>
 
 <ul>
   <li>Create <code class="highlighter-rouge">&lt;magento2_root_dir&gt;/dev/tests/functional/tests/app/Magento/ProductVideo/Test/TestCase/Product/UpdateSimpleProductEntityTest.xml</code> with the following code:</li>
@@ -1178,7 +1178,7 @@ The following data types are available:
 
 <p>If you want to extend variation in another module using <a href="#merge">merging</a>, you should use a <a href="/guides/v2.3/mtf/mtf_entities/mtf_testcase.html">test case</a> name that you want to merge with and a variation name that you want to extend.</p>
 
-<p>For example, see how in <code class="highlighter-rouge">Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml</code></p>
+<p>例如， see how in <code class="highlighter-rouge">Magento/Catalog/Test/TestCase/Product/ValidateOrderOfProductTypeTest.xml</code></p>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="c">&lt;!--

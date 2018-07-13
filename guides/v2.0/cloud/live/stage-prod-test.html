@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/live/stage-prod-test.html">
+	<link rel="canonical" href="/guides/v2.0/cloud/live/stage-prod-test.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -757,12 +757,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1748,7 +1748,7 @@
 
 </section>
 
-			<h4 id="previous-step">Previous step:</h4>
+			<h4 id="前提">前提:</h4>
 <p><a href="/guides/v2.0/cloud/live/stage-prod-migrate.html">迁移数据和静态文件</a></p>
 
 <p>When your code, files, and data is successfully migrated to Staging or Production, use the environment URLs to test your site(s) and store(s). For a list of your URLs, see <a href="/guides/v2.0/cloud/live/stage-prod-migrate-prereq.html#starter-urls">Starter</a> and <a href="/guides/v2.0/cloud/live/stage-prod-migrate-prereq.html#pro-urls">Pro</a> access information.</p>
@@ -1758,7 +1758,7 @@
 <h2 id="logs">Log files</h2>
 <p>If you encounter errors on deployment or 其它问题 when testing, check the log files. Log files are located under the <code class="highlighter-rouge">var/log</code> directory.</p>
 
-<p>The deployment log is located in <code class="highlighter-rouge">/var/log/platform/&lt;prodject ID&gt;/post_deploy.log</code>. The value of <code class="highlighter-rouge">&lt;project ID&gt;</code> depends on the project ID and whether the environment is Staging or Production. For example, with a project ID of <code class="highlighter-rouge">yw1unoukjcawe</code>, the Staging user is <code class="highlighter-rouge">yw1unoukjcawe_stg</code> and the Production user is <code class="highlighter-rouge">yw1unoukjcawe</code>.</p>
+<p>The deployment log is located in <code class="highlighter-rouge">/var/log/platform/&lt;prodject ID&gt;/post_deploy.log</code>. The value of <code class="highlighter-rouge">&lt;project ID&gt;</code> depends on the project ID and whether the environment is Staging or Production. 例如， with a project ID of <code class="highlighter-rouge">yw1unoukjcawe</code>, the Staging user is <code class="highlighter-rouge">yw1unoukjcawe_stg</code> and the Production user is <code class="highlighter-rouge">yw1unoukjcawe</code>.</p>
 
 <p>When accessing logs in Production, you may need to SSH into each of the three nodes to locate the logs.</p>
 
@@ -1779,7 +1779,7 @@
 
 <ul>
   <li>Staging: <code class="highlighter-rouge">dig http[s]://staging.&lt;your domain&gt;.c.&lt;instanceid&gt;.ent.magento.cloud</code></li>
-  <li>Production: <code class="highlighter-rouge">dig http[s]://&lt;your domain&gt;.{1|2|3}.&lt;project ID&gt;.ent.magento.cloud</code></li>
+  <li>生产环境: <code class="highlighter-rouge">dig http[s]://&lt;your domain&gt;.{1|2|3}.&lt;project ID&gt;.ent.magento.cloud</code></li>
 </ul>
 
 <p>Next, use a <code class="highlighter-rouge">curl</code> command to verify X-Magento-Tags exist and additional header information. The format for the command is:</p>
@@ -1794,7 +1794,7 @@
 <ul>
   <li>Staging: <code class="highlighter-rouge">curl http[s]://staging.&lt;your domain&gt;.c.&lt;instanceid&gt;.ent.magento.cloud -H "host: &lt;url&gt;" -k -vo /dev/null -HFastly-Debug:1</code></li>
   <li>
-    <p>Production:</p>
+    <p>生产环境:</p>
 
     <ul>
       <li>The load balancer: <code class="highlighter-rouge">curl http[s]://&lt;your domain&gt;.c.&lt;project ID&gt;.ent.magento.cloud -H "host: &lt;url&gt;" -k -vo /dev/null -HFastly-Debug:1</code></li>

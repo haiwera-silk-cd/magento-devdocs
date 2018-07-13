@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/frontend-dev-guide/css-topics/gulp-sass.html">
+	<link rel="canonical" href="/guides/v2.0/frontend-dev-guide/css-topics/gulp-sass.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1148,7 +1148,7 @@
 
 </section>
 
-			<p>By default, Magento uses <a href="http://lesscss.org/">Less</a> for themes styling. But you can use other stylesheet languages that can be compiled (processed) to CSS. For example, Sass is a popular alternative.</p>
+			<p>By default, Magento uses <a href="http://lesscss.org/">Less</a> for themes styling. But you can use other stylesheet languages that can be compiled (processed) to CSS. 例如， Sass is a popular alternative.</p>
 
 <p>If you decide not to use Less and the default <a href="/guides/v2.0/frontend-dev-guide/css-topics/theme-ui-lib.html">Magento UI库</a>, you need to create your own theme from scratch and use an alternative preprocessor. This topic describes how to configure and use the <a href="http://gulpjs.com/">Gulp</a> task runner and the gulp-sass package for the Sass preprocessor.</p>
 
@@ -1258,7 +1258,7 @@
 
 <h2 id="using-the-import-directive-in-sass">Using the @import directive in Sass</h2>
 
-<p>In the source .<code class="highlighter-rouge">scss</code> files you can use the <code class="highlighter-rouge">@import</code> directive, to import other <code class="highlighter-rouge">.scss</code> files. You can put the module-related stylesheets in the module directories in the theme, and then include them in the main <code class="highlighter-rouge">.scss</code> file. For example, if you create a <code class="highlighter-rouge">_catalogstls.scss</code> file for styles of the <code class="highlighter-rouge">Magento_Catalog</code> module and put it in <code class="highlighter-rouge">app/design/frontend/&lt;Vendor&gt;/&lt;theme&gt;/Magento_Catalog/styles </code>, you can import it using the following notation:</p>
+<p>In the source .<code class="highlighter-rouge">scss</code> files you can use the <code class="highlighter-rouge">@import</code> directive, to import other <code class="highlighter-rouge">.scss</code> files. You can put the module-related stylesheets in the module directories in the theme, and then include them in the main <code class="highlighter-rouge">.scss</code> file. 例如， if you create a <code class="highlighter-rouge">_catalogstls.scss</code> file for styles of the <code class="highlighter-rouge">Magento_Catalog</code> module and put it in <code class="highlighter-rouge">app/design/frontend/&lt;Vendor&gt;/&lt;theme&gt;/Magento_Catalog/styles </code>, you can import it using the following notation:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import '../Magento_Theme/styles/module
 </code></pre></div></div>

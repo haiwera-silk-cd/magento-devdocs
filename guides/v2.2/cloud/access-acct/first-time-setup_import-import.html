@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/access-acct/first-time-setup_import-import.html">
+	<link rel="canonical" href="/guides/v2.2/cloud/access-acct/first-time-setup_import-import.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1988,7 +1988,7 @@
 
 </section>
 
-			<p>QUESTION: Do we really want to support a full overwrite?</p>
+			<p>问题: 我们真的想支持完全覆盖吗？</p>
 
 <p>The following instructions walk-through importing your Magento Commerce code into your current project code. When importing, you are force pushing your existing code in a Git repository over the Magento企业版(云支持版)’s Git <code class="highlighter-rouge">master</code> branch.</p>
 
@@ -2148,7 +2148,7 @@ Environment routes:
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zcat var/db.sql.tgz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h &lt;db-host&gt; -P &lt;db-port&gt; -p -u &lt;db-user&gt; &lt;db-name&gt;
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zcat var/db.sql.tgz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h database.internal -p -u user main
 </code></pre></div>    </div>
@@ -2274,7 +2274,7 @@ bin/magento magento setup:static-content:deploy
 bin/magento cache:clean
 </code></pre></div></div>
 
-<p>After the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> flushes, enter <code class="highlighter-rouge">exit</code> to close the SSH tunnel.</p>
+<p>After the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span> flushes, enter <code class="highlighter-rouge">exit</code> to close the SSH tunnel.</p>
 
 <h2 id="verify">Verify the import</h2>
 <p>To verify everything imported properly, perform the following tasks in your local Cloud development environment:</p>

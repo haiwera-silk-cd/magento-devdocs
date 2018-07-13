@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/project/project-conf-files_magento-app.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/project/project-conf-files_magento-app.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2002,7 +2002,7 @@
 <h3 id="name"><code class="highlighter-rouge">name</code></h3>
 <p>Magento Commerce supports multiple applications in a project, so you need a unique name that identifies the application in the project.</p>
 
-<p>The <code class="highlighter-rouge">name</code> property can consist only of lower case alphanumeric characters, such as <code class="highlighter-rouge">a</code> to <code class="highlighter-rouge">z</code> and <code class="highlighter-rouge">0</code> to <code class="highlighter-rouge">9</code>. The name is used in the <a href="/guides/v2.3/cloud/project/project-conf-files_routes.html"><code class="highlighter-rouge">routes.yaml</code></a> file to define the HTTP upstream (by default, <code class="highlighter-rouge">php:http</code>). For example, if the value of <code class="highlighter-rouge">name</code> is <code class="highlighter-rouge">app</code>, you must use <code class="highlighter-rouge">app:http</code> in the upstream field. You can also use this name in multi-application relationships.</p>
+<p>The <code class="highlighter-rouge">name</code> property can consist only of lower case alphanumeric characters, such as <code class="highlighter-rouge">a</code> to <code class="highlighter-rouge">z</code> and <code class="highlighter-rouge">0</code> to <code class="highlighter-rouge">9</code>. The name is used in the <a href="/guides/v2.3/cloud/project/project-conf-files_routes.html"><code class="highlighter-rouge">routes.yaml</code></a> file to define the HTTP upstream (by default, <code class="highlighter-rouge">php:http</code>). 例如， if the value of <code class="highlighter-rouge">name</code> is <code class="highlighter-rouge">app</code>, you must use <code class="highlighter-rouge">app:http</code> in the upstream field. You can also use this name in multi-application relationships.</p>
 
 <!-- Available note types: "info", "warning", "tip" -->
 
@@ -2056,7 +2056,7 @@ search: "searchengine:solr"
 <ul>
   <li><code class="highlighter-rouge">document_root</code>: The path relative to the root of the application that is exposed on the web. Typical values include <code class="highlighter-rouge">/public</code> and <code class="highlighter-rouge">/web</code>.</li>
   <li><code class="highlighter-rouge">passthru</code>: The URL used in the event a static file or PHP file could not be found. This would typically be your applications front controller, often <code class="highlighter-rouge">/index.php</code>或<code class="highlighter-rouge">/app.php</code>.</li>
-  <li><code class="highlighter-rouge">index_files</code>: To use a static file (for example, <code class="highlighter-rouge">index.html</code>) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. For example, to use a file named <code class="highlighter-rouge">index.html</code> as an index file, your whitelist should include an element that matches the filename, like <code class="highlighter-rouge">- \.html$</code>.</li>
+  <li><code class="highlighter-rouge">index_files</code>: To use a static file (for example, <code class="highlighter-rouge">index.html</code>) to serve your application. This key expects a collection. For this to work, the static file(s) should be included in your whitelist. 例如， to use a file named <code class="highlighter-rouge">index.html</code> as an index file, your whitelist should include an element that matches the filename, like <code class="highlighter-rouge">- \.html$</code>.</li>
   <li><code class="highlighter-rouge">blacklist</code>: A list of files that should never be executed. Has no effect on static files.</li>
   <li><code class="highlighter-rouge">whitelist</code>: A list of static files (as regular expressions) that can be served. Dynamic files (for example, PHP files) are treated as static files and have their source code served, but they are not executed.</li>
   <li><code class="highlighter-rouge">expires</code>: The number of seconds whitelisted (that is, static) content should be cached by the browser. This enables the cache-control and expires headers for static content. The <code class="highlighter-rouge">expires</code> directive and resulting headers are left out entirely if this is not set.</li>
@@ -2364,7 +2364,7 @@ type: php:7.0
   <p>Configuring PHP settings improperly can cause issues. We recommend only advanced administrators set these options.</p>
 </div>
 
-<p>For example, if you need to increase the PHP memory limit:</p>
+<p>例如， if you need to increase the PHP memory limit:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>memory_limit = 756M
 </code></pre></div></div>

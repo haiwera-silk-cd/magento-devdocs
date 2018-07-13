@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/extension-dev-guide/persistent-entities.html">
+	<link rel="canonical" href="/guides/v2.1/extension-dev-guide/persistent-entities.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -300,7 +300,7 @@
 <p>In Magento, data interfaces, data models, and models all represent entities.</p>
 
 <h4 id="data-interfaces">Data Interfaces</h4>
-<p>A data interface is the interface for an <span term-uuid="a9027f5d-efab-4662-96aa-c2999b5ab259" class="glossary-term" data-toggle="popover">entity</span> that reveals the data it contains to clients. For example, the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Api/Data/CustomerInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Customer\Api\Data\CustomerInterface</code></a> class contains get and set functions for customer entity-related data such as names and email.</p>
+<p>A data interface is the interface for an <span term-uuid="a9027f5d-efab-4662-96aa-c2999b5ab259" class="glossary-term" data-toggle="popover">entity</span> that reveals the data it contains to clients. 例如， the <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/Api/Data/CustomerInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Customer\Api\Data\CustomerInterface</code></a> class contains get and set functions for customer entity-related data such as names and email.</p>
 
 <p>To allow the addition of <a href="/guides/v2.1/extension-dev-guide/attributes.html">custom EAV attributes</a> on your entity, your data interface must extend the <a href="https://github.com/magento/magento2/blob/2.1/lib/internal/Magento/Framework/Api/CustomAttributesDataInterface.php" target="_blank"><code class="highlighter-rouge">\Magento\Framework\Api\CustomAttributesDataInterface</code></a> class.</p>
 

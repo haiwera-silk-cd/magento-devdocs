@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/test/integration/integration_test_execution.html">
+	<link rel="canonical" href="/guides/v2.0/test/integration/integration_test_execution.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -593,7 +593,7 @@ Please refer to the <a href="https://phpunit.de/manual/4.1/en/appendixes.configu
 
 <p>If this constant is set to <code class="highlighter-rouge">enabled</code>, the integration test framework will clean the test database and re-install Magento on every test run.
 That way any new modules will be automatically picked up, and any cruft that might have been left over from previous test runs will be removed.
-It also causes the test framework to flush the test Magento configuration, the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> and the code generation before executing any tests.</p>
+It also causes the test framework to flush the test Magento configuration, the <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span> and the code generation before executing any tests.</p>
 
 <p>The downside of setting <code class="highlighter-rouge">TEST_CLEANUP</code> to <code class="highlighter-rouge">enabled</code> is that the re-installation of Magento takes time (the exact time depends on the host you are using to run the integration tests and the Magento version.)</p>
 
@@ -681,7 +681,7 @@ Configuration read from /var/www/magento2/dev/tests/integration/phpunit.xml
 <h3 id="running-only-a-custom-testsuite">Running only a custom testsuite</h3>
 
 <p>PHPUnit offers several ways to only execute a subset of tests.
-For example, it is common to only execute a single testsuite from the <code class="highlighter-rouge">phpunit.xml</code> configuration.</p>
+例如， it is common to only execute a single testsuite from the <code class="highlighter-rouge">phpunit.xml</code> configuration.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>dev/tests/integration
 </code></pre></div></div>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/extension-dev-guide/attributes.html">
+	<link rel="canonical" href="/guides/v2.0/extension-dev-guide/attributes.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1268,7 +1268,7 @@
 
 <ul>
   <li>
-    <p>Custom and EAV (Entity-Attribute-Value) attributes. Custom attributes are those added on behalf of a merchant. For example, a merchant might need to add attributes to describe products, such as shape or volume. A merchant can add these attributes on the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">admin</span> panel, and these attributes can be displayed. See the merchant documentation for information about managing custom attributes.</p>
+    <p>Custom and EAV (Entity-Attribute-Value) attributes. Custom attributes are those added on behalf of a merchant. 例如， a merchant might need to add attributes to describe products, such as shape or volume. A merchant can add these attributes on the <span term-uuid="29ddb393-ca22-4df9-a8d4-0024d75739b1" class="glossary-term" data-toggle="popover">admin</span> panel, and these attributes can be displayed. See the merchant documentation for information about managing custom attributes.</p>
 
     <p>Custom attributes are a subset of EAV attributes. Objects that use EAV attributes typically store values in several MySQL tables. The <code class="highlighter-rouge">Customer</code> and <code class="highlighter-rouge">Catalog</code> modules have the primary models that use EAV attributes. Other modules, such as <code class="highlighter-rouge">ConfigurableProduct</code>, <code class="highlighter-rouge">GiftMessage</code>, and <code class="highlighter-rouge">Tax</code>, use the EAV functionality for <code class="highlighter-rouge">Catalog</code>.</p>
   </li>
@@ -1452,7 +1452,7 @@
 }
 </code></pre></div></div>
 
-<p>This only works for extension attributes (those attributes defined in an <code class="highlighter-rouge">extension_attributes.xml</code> file). There are no permission restrictions on the rest of the returned data. For example, there is no way to restrict <code class="highlighter-rouge">custom_attributes</code>.</p>
+<p>This only works for extension attributes (those attributes defined in an <code class="highlighter-rouge">extension_attributes.xml</code> file). There are no permission restrictions on the rest of the returned data. 例如， there is no way to restrict <code class="highlighter-rouge">custom_attributes</code>.</p>
 
 <h3>ExtensionInterfaces</h3>
 

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/coding-standards/technical-vision/webapi.html">
+	<link rel="canonical" href="/guides/v2.2/coding-standards/technical-vision/webapi.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -632,10 +632,10 @@
 <p><strong>GraphQL</strong></p>
 
 <ol>
-  <li>Unlimited nesting should be supported during requests for related entities. (For example, get Order =&gt; Order Items =&gt; Products =&gt; Related Products)</li>
+  <li>Unlimited nesting should be supported during requests for related entities. (例如， get Order =&gt; Order Items =&gt; Products =&gt; Related Products)</li>
   <li>Field filtration must be performed with SQL queries. Do not filter on the application layer after you’ve fetched all possible fields.</li>
   <li>Third-party customizations must be done separately for Service Contracts and for GraphQL</li>
-  <li>For modularity purposes, GraphQL configuration must be declared in a separate module. For example, to expose GraphQL for the module <code class="highlighter-rouge">MyModule</code>, you must create the <code class="highlighter-rouge">schema.graphqls</code> file in the <code class="highlighter-rouge">MyModuleGraphQl</code> module.</li>
+  <li>For modularity purposes, GraphQL configuration must be declared in a separate module. 例如， to expose GraphQL for the module <code class="highlighter-rouge">MyModule</code>, you must create the <code class="highlighter-rouge">schema.graphqls</code> file in the <code class="highlighter-rouge">MyModuleGraphQl</code> module.</li>
   <li>GraphQL is primarily designed for store-front one-page apps and mobile applications. It supports token and cookie authentication, as well as guest access to public queries</li>
   <li>All queries must return the 200 HTTP status code. If an error occurs, return the error in the response body. A 500 status code is allowed when an exception occurs when generating a schema, but not during requests.</li>
   <li>The Store code should be passed via headers.</li>

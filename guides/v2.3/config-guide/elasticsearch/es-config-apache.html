@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/config-guide/elasticsearch/es-config-apache.html">
+	<link rel="canonical" href="/guides/v2.3/config-guide/elasticsearch/es-config-apache.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -2000,7 +2000,7 @@
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://localhost:&lt;proxy port&gt;/_cluster/health
 </code></pre></div>      </div>
 
-      <p>For example, if your proxy uses port 8080:</p>
+      <p>例如， if your proxy uses port 8080:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://localhost:8080/_cluster/health
 </code></pre></div>      </div>
@@ -2055,7 +2055,7 @@ Connection: keep-alive
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://localhost:&lt;proxy port&gt;/_cluster/health
 </code></pre></div>      </div>
 
-      <p>For example, if your proxy uses port 8080:</p>
+      <p>例如， if your proxy uses port 8080:</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://localhost:8080/_cluster/health
 </code></pre></div>      </div>
@@ -2145,7 +2145,7 @@ Connection: keep-alive
 <li>Make sure that <a href="/guides/v2.1/config-guide/elasticsearch/es-overview.html#firewall-selinux">UNIX firewall and SELinux</a> are both disabled, or set up rules to enable Elasticsearch and Magento to communicate with each other.</li>
 	<li>Verify the value of the <strong>Elasticsearch Server Hostname</strong> field. Make sure the server is available. You can try the server's IP address instead.</li>
 	<li>Use the command <code>netstat -an | grep <em>listen-port</em></code> command to verify that the port specified in the <strong>Elasticsearch Server Port</strong> field is not being used by another process.<br />
-	For example, to see if Elasticsearch is running on its default port, use the following command:
+	例如， to see if Elasticsearch is running on its default port, use the following command:
 	<pre>netstat -an | grep 9200</pre>
 	If Elasticsearch is running on port 9200, it displays similar to the following:
 	<pre>tcp        0      0 :::9200            :::*          LISTEN</pre></li></ul></td>
@@ -2344,12 +2344,12 @@ htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticse
         </ul>
 
         <h3 id="use-a-curl-command-to-verify-cluster-status">Use a <code class="highlighter-rouge">curl</code> command to verify cluster status</h3>
-        <p>Enter the following command:</p>
+        <p>输入下面的命令：</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://&lt;host name, ip, or localhost&gt;:&lt;proxy port&gt;/_cluster/health
 </code></pre></div>        </div>
 
-        <p>For example, if you enter the command on the Elasticsearch server and your proxy uses port 8080:</p>
+        <p>例如， if you enter the command on the Elasticsearch server and your proxy uses port 8080:</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -i http://localhost:8080/_cluster/health
 </code></pre></div>        </div>

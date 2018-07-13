@@ -644,7 +644,7 @@
       <td>Endpoint</td>
       <td>
          <p>A combination of the <i>server</i> that fulfills the request, the web service, and the <i>resource</i> against which the request is being made.</p>
-         <p>For example, in the <code>POST https://magento.host/index.php/rest/V1/integration/customer/token</code> endpoint:</p>
+         <p>例如， in the <code>POST https://magento.host/index.php/rest/V1/integration/customer/token</code> endpoint:</p>
          <p>The server is <code>magento.host/index.php/</code></p>
          <p>the web service is <code>rest</code></p>
           the resource is <code>/V1/integration/customer/token</code>.&lt;/p&gt;
@@ -703,14 +703,14 @@
 <h3 id="admin-access">Admin access</h3>
 <p>Admins can access any resources for which they are authorized.</p>
 
-<p>For example, to make a web API call with an admin token:</p>
+<p>例如， to make a web API call with an admin token:</p>
 
 <p><code class="highlighter-rouge">curl -X GET "http://magento.ll/index.php/rest/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"</code></p>
 
 <h3 id="customer-access">Customer access</h3>
 <p>Customers can access only resources with <code class="highlighter-rouge">self</code> permissions.</p>
 
-<p>For example, to make a web API call with a customer token:
+<p>例如， to make a web API call with a customer token:
 <code class="highlighter-rouge">curl -X GET "http://magento.ll/index.php/rest/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"</code></p>
 
 <h2>相关主题</h2>

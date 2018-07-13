@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/prod/prod_file-sys-perms.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/prod/prod_file-sys-perms.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1960,7 +1960,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find app/code var vendor pub/static app/etc generated/code generated/metadata var/view_preprocessed \( -type f -or -type d \) -exec chmod u-w {} \; &amp;&amp; chmod o-rwx app/etc/env.php &amp;&amp; chmod u+x bin/magento
 </code></pre></div>    </div>
@@ -2023,7 +2023,7 @@
         <li>
           <p>Set <code class="highlighter-rouge">magento_umask</code> to the desired value.</p>
 
-          <p>For example, <code class="highlighter-rouge">022</code></p>
+          <p>例如， <code class="highlighter-rouge">022</code></p>
         </li>
       </ol>
     </li>
@@ -2136,7 +2136,7 @@ find var generated pub/static pub/media app/etc -type f -exec chmod g+w {} \; &a
   <li>Log in to your Magento server.</li>
   <li>Change to your Magento installation directory.</li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find app/code lib var generated vendor pub/static pub/media app/etc \( -type d -or -type f \) -exec chmod g+w {} \; &amp;&amp; chmod o+rwx app/etc/env.php
 </code></pre></div>    </div>

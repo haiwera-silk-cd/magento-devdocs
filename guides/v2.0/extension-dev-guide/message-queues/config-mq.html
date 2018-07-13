@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/extension-dev-guide/message-queues/config-mq.html">
+	<link rel="canonical" href="/guides/v2.0/extension-dev-guide/message-queues/config-mq.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1328,7 +1328,7 @@
 </tr>
 <tr>
 <td>schema</td>
-<td><p>The interface that describes the structure of the message. It should be in the format of a Data Interface from the Service Contracts. For example, <code>Magento\Customer\Api\Data\CustomerInterface</code>.
+<td><p>The interface that describes the structure of the message. It should be in the format of a Data Interface from the Service Contracts. 例如， <code>Magento\Customer\Api\Data\CustomerInterface</code>.
 </p>
 <p>You can also specify a service method signature, such as <code>Magento\Customer\Api\CustomerRepositoryInterface::save</code>. In this case, format the message as an array of all service method parameters, like for a <code>call_user_func_array</code> call. The consumer's callback should expect each message part to be passed as a separate parameter.
 </p></td>

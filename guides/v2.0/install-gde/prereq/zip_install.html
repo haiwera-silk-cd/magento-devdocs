@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/install-gde/prereq/zip_install.html">
+	<link rel="canonical" href="/guides/v2.0/install-gde/prereq/zip_install.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1060,11 +1060,11 @@
 
                 
                 
-                <li class="nav-level3  " id="步骤-5.创建管理员帐户">
+                <li class="nav-level3  " id="步骤-5.创建管理员账户">
                     
 
                     
-                    <a  href="/guides/v2.0/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员帐户</a>
+                    <a  href="/guides/v2.0/install-gde/install/web/install-web_5-create-admin.html">步骤 5.创建管理员账户</a>
                     
 
                     
@@ -1240,11 +1240,11 @@
 
                 
                 
-                <li class="nav-level3  " id="display-or-change-the-admin-uri">
+                <li class="nav-level3  " id="显示和修改管理面板uri">
                     
 
                     
-                    <a  href="/guides/v2.0/install-gde/install/cli/install-cli-adminurl.html">Display or change the Admin URI</a>
+                    <a  href="/guides/v2.0/install-gde/install/cli/install-cli-adminurl.html">显示和修改管理面板URI</a>
                     
 
                     
@@ -1366,11 +1366,11 @@
 
                 
                 
-                <li class="nav-level3  " id="创建、编辑或解锁-magento管理员帐号">
+                <li class="nav-level3  " id="创建、编辑或解锁-magento管理员账号">
                     
 
                     
-                    <a  href="/guides/v2.0/install-gde/install/cli/install-cli-subcommands-admin.html">创建、编辑或解锁 Magento管理员帐号</a>
+                    <a  href="/guides/v2.0/install-gde/install/cli/install-cli-subcommands-admin.html">创建、编辑或解锁 Magento管理员账号</a>
                     
 
                     
@@ -2422,7 +2422,7 @@
 
         <p>If you set up a virtual host, the subdirectory name must match the name in your virtual host.</p>
 
-        <p>For example,</p>
+        <p>例如，</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir magento2ce
 mkdir magento2ee
@@ -2436,7 +2436,7 @@ mkdir magento2ee
       <li>
         <p>Copy the Magento archive to that directory.</p>
 
-        <p>For example,</p>
+        <p>例如，</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp /var/www/Magento-CE-2.0.0+Samples.tar.bz2 magento2
 </code></pre></div>        </div>
@@ -2580,7 +2580,7 @@ chmod u+x bin/magento
     <p>If you don't have <code>root</code> privileges on your Magento server, you can use another local user account. Make sure the user has a strong password and continue with <a href="#install-update-depend-user-add2group">Put the Magento文件系统所有者 in the web server group</a>.</p>
 </div>
 
-<p>For example, to create a user named <code class="highlighter-rouge">magento_user</code> and give the user a password, enter:</p>
+<p>例如， to create a user named <code class="highlighter-rouge">magento_user</code> and give the user a password, enter:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo adduser magento_user
 sudo passwd magento_user
@@ -2618,7 +2618,7 @@ sudo passwd magento_user
   <p>The <code class="highlighter-rouge">-a -G</code> options are important because they add <code class="highlighter-rouge">apache</code>或<code class="highlighter-rouge">www-data</code> as a <em>secondary</em> group to the user account, which preserves the user’s <em>primary</em> group. Adding a secondary group to a user account helps <a href="#perms-set-two-users">restrict file ownership and permissions</a> to ensure members of a shared group only have access to certain files.</p>
 </div>
 
-<p>For example, to add <code class="highlighter-rouge">apache</code> as a secondary group to user <code class="highlighter-rouge">magento_user</code> on CentOS:</p>
+<p>例如， to add <code class="highlighter-rouge">apache</code> as a secondary group to user <code class="highlighter-rouge">magento_user</code> on CentOS:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -a -G apache magento_user
 </code></pre></div></div>
@@ -2700,7 +2700,7 @@ chmod u+x bin/magento
         <li>CentOS: <code class="highlighter-rouge">su - &lt;username&gt;</code></li>
       </ul>
 
-      <p>For example,</p>
+      <p>例如，</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su magento_user
 </code></pre></div>      </div>

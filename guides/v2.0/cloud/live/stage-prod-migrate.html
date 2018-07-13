@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/live/stage-prod-migrate.html">
+	<link rel="canonical" href="/guides/v2.0/cloud/live/stage-prod-migrate.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -757,12 +757,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1748,7 +1748,7 @@
 
 </section>
 
-			<h4 id="previous-step">Previous step:</h4>
+			<h4 id="前提">前提:</h4>
 <p><a href="/guides/v2.0/cloud/live/stage-prod-migrate-prereq.html">准备部署准生产和生产环境</a></p>
 
 <p>To migrate your database and static files to Staging and Production:</p>
@@ -1770,11 +1770,11 @@
 <p>For Pro projects created <strong>after October 23, 2017</strong> or <a href="/guides/v2.0/cloud/trouble/pro-env-management.html">updated</a>, deploy the Integration <code class="highlighter-rouge">master</code> branch you created to Staging and Production:</p>
 
 <ol>
-  <li><a href="https://accounts.magento.cloud">Log in</a> to your project.</li>
+  <li><a href="https://accounts.magento.cloud">登录</a>到你的项目.</li>
   <li>Select the Integration branch.</li>
-  <li>Select the <strong>Merge</strong> option to deploy to Staging. Complete all testing.</li>
-  <li>Select the Staging branch.</li>
-  <li>Select the <strong>Merge</strong> option to deploy to Production.</li>
+  <li>选择 <strong>合并</strong> 选项部署到准生产环境。 Complete all testing.</li>
+  <li>选项准生产环境的分支。</li>
+  <li>选择 <strong>合并</strong> 选项部署到生产环境。</li>
 </ol>
 
 <div>
@@ -1790,17 +1790,17 @@
   <p>For Starter, deploy your development branch you created to Staging and Production:</p>
 
   <ol>
-    <li><a href="https://accounts.magento.cloud">Log in</a> to your project.</li>
+    <li><a href="https://accounts.magento.cloud">登录</a>到你的项目.</li>
     <li>Select the prepared code branch.</li>
-    <li>Select the <strong>Merge</strong> option to deploy to Staging. Complete all testing.</li>
-    <li>Select the Staging branch.</li>
-    <li>Select the <strong>Merge</strong> option to deploy to Production.</li>
+    <li>选择 <strong>合并</strong> 选项部署到准生产环境。 Complete all testing.</li>
+    <li>选项准生产环境的分支。</li>
+    <li>选择 <strong>合并</strong> 选项部署到生产环境。</li>
   </ol>
 
-  <p><img src="http://devdocs.magento.com/common/images/cloud_project-merge.png" alt="Use the merge option to deploy" /></p>
+  <p><img src="http://devdocs.magento.com/common/images/cloud_project-merge.png" alt="使用合并选项部署" /></p>
 
   <h3 id="ssh">Deploy code with SSH and CLI</h3>
-  <p>If you prefer to use CLI for deploying, you will need to configure additional SSH settings and Git remotes to use commands. You can SSH into the Staging and Production environments to push the <code class="highlighter-rouge">master</code> branch.</p>
+  <p>如果你更喜欢使用命令行来部署，你将必须配置附加的SSH设置和Git仓库来使用命令。你可以SSH登录到准生产环境和生产环境来推送<code class="highlighter-rouge">master</code>分支。</p>
 
   <p>You’ll need the SSH and Git access information for your project.</p>
 
@@ -1812,19 +1812,19 @@
 
       <ul>
         <li>
-          <p>Git URL format:</p>
+          <p>Git URL格式:</p>
 
           <ul>
-            <li>Staging: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;_stg.git</code></li>
-            <li>Production: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;.git</code></li>
+            <li>准生产环境: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;_stg.git</code></li>
+            <li>生产环境: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;.git</code></li>
           </ul>
         </li>
         <li>
-          <p>SSH URL format:</p>
+          <p>SSH URL格式:</p>
 
           <ul>
-            <li>Staging: <code class="highlighter-rouge">&lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
-            <li>Production: <code class="highlighter-rouge">&lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
+            <li>准生产环境: <code class="highlighter-rouge">&lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
+            <li>生产环境: <code class="highlighter-rouge">&lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
           </ul>
         </li>
       </ul>
@@ -1840,8 +1840,8 @@
   </ol>
 
   <ul>
-    <li>Staging: <code class="highlighter-rouge">git checkout staging</code></li>
-    <li>Production: <code class="highlighter-rouge">git checkout production</code>
+    <li>准生产环境: <code class="highlighter-rouge">git checkout staging</code></li>
+    <li>生产环境: <code class="highlighter-rouge">git checkout production</code>
       <ol>
         <li>
           <p>Pull the <code class="highlighter-rouge">master</code> branch from Integration. Remember, a pull performs a fetch and a merge in one step.</p>
@@ -1868,7 +1868,7 @@
   <ol>
     <li>Open an SSH connection to your Staging or Production environment using the SSH command.</li>
     <li>
-      <p>Pull the <code class="highlighter-rouge">master</code> branch to the server.</p>
+      <p>拉取<code class="highlighter-rouge">master</code>分支到服务器。</p>
 
       <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git pull origin master
 </code></pre></div>      </div>
@@ -1877,8 +1877,8 @@
   </ol>
 
   <ul>
-    <li>Staging: <code class="highlighter-rouge">git push staging master:master</code></li>
-    <li>Production: <code class="highlighter-rouge">git push production master:master</code></li>
+    <li>准生产环境: <code class="highlighter-rouge">git push staging master:master</code></li>
+    <li>生产环境: <code class="highlighter-rouge">git push production master:master</code></li>
   </ul>
 
   <p>You must force push for these branches as they are separate repositories with a master branch.</p>
@@ -1909,8 +1909,8 @@ P partial progress
     <li>
       <p>Open an SSH connection to your Staging or Production environment:</p>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    *	Staging: ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud
-    *	Production: ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    *	准生产环境: ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud
+    *	生产环境: ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud
 </code></pre></div>      </div>
     </li>
     <li>
@@ -1940,8 +1940,8 @@ P partial progress
       <p>SSH into the environment you want to create a database dump from:</p>
 
       <ul>
-        <li>Staging: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
-        <li>Production: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
+        <li>准生产环境: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
+        <li>生产环境: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
         <li>
           <p>To SSH into the <code class="highlighter-rouge">master</code> branch of your Integration environment:</p>
 
@@ -1973,8 +1973,8 @@ P partial progress
       <p>Transfer the database dump to Staging or Production with an <code class="highlighter-rouge">rsync</code> command:</p>
 
       <ul>
-        <li>Staging: <code class="highlighter-rouge">rsync -azvP /tmp/database.sql.gz &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud:/tmp</code></li>
-        <li>Production: <code class="highlighter-rouge">rsync -azvP /tmp/database.sql.gz &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud:/tmp</code></li>
+        <li>准生产环境: <code class="highlighter-rouge">rsync -azvP /tmp/database.sql.gz &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud:/tmp</code></li>
+        <li>生产环境: <code class="highlighter-rouge">rsync -azvP /tmp/database.sql.gz &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud:/tmp</code></li>
       </ul>
     </li>
     <li>Enter <code class="highlighter-rouge">exit</code> to terminate the SSH connection.</li>
@@ -1982,8 +1982,8 @@ P partial progress
       <p>Open an SSH connection to the environment you want to migrate the database into:</p>
 
       <ul>
-        <li>Staging: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
-        <li>Production: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
+        <li>准生产环境: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
+        <li>生产环境: <code class="highlighter-rouge">ssh -A &lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
         <li>
           <p>To SSH into the <code class="highlighter-rouge">master</code> branch of your Integration environment:</p>
 

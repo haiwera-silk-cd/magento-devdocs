@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/cloud/reference/cloud-composer.html">
+	<link rel="canonical" href="/guides/v2.0/cloud/reference/cloud-composer.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -757,12 +757,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.0/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.0/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1759,7 +1759,7 @@
 <h2 id="your-projects-composer-files">Your project’s Composer files</h2>
 <p>Your project root directory contains <code class="highlighter-rouge">composer.json</code> and <code class="highlighter-rouge">composer.lock</code>.</p>
 
-<p>You edit <code class="highlighter-rouge">composer.json</code> to specify dependencies for your Magento企业版(云支持版) project. For example, when you <a href="/guides/v2.0/cloud/howtos/install-components.html">install an extension or module</a>, you update <code class="highlighter-rouge">composer.json</code> to add the extension to the list. You can either edit it manually or the <a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">Component Manager</a> can do it for you.</p>
+<p>You edit <code class="highlighter-rouge">composer.json</code> to specify dependencies for your Magento企业版(云支持版) project. 例如， when you <a href="/guides/v2.0/cloud/howtos/install-components.html">install an extension or module</a>, you update <code class="highlighter-rouge">composer.json</code> to add the extension to the list. You can either edit it manually or the <a href="/guides/v2.0/comp-mgr/bk-compman-upgrade-guide.html">Component Manager</a> can do it for you.</p>
 
 <p>The file <code class="highlighter-rouge">composer.lock</code> stores a set of exact version dependencies that satisfy all of the version constraints of every requirement for every package in the dependency tree of the project.</p>
 
@@ -1773,7 +1773,7 @@
 <p>The workflow is as follows:</p>
 
 <ol>
-  <li>Make a change to <code class="highlighter-rouge">composer.json</code>. For example, edit this file when installing an extension or module.</li>
+  <li>Make a change to <code class="highlighter-rouge">composer.json</code>. 例如， edit this file when installing an extension or module.</li>
   <li>Run <code class="highlighter-rouge">composer update</code>.</li>
   <li>Add <code class="highlighter-rouge">composer.lock</code> to or update it in your Cloud Git repository.</li>
   <li>Push the changes to the Cloud environment, which causes Cloud to build and deploy the environment.</li>
@@ -1820,7 +1820,7 @@
 
 <p>For Magento Commerce, versions are specified as <code class="highlighter-rouge">2.&lt;x&gt;.&lt;y&gt;</code>.</p>
 
-<p>MCC versions are specified as: <code class="highlighter-rouge">&lt;100 + x&gt;.&lt;y&gt;.*</code>. For example, Magento Commerce 2.1.4 is associated with MCC 101.4.0. Subsequently, a new version of MCC could be released that corresponds to the same Magento Commerce version, and it would be 101.4.1.</p>
+<p>MCC versions are specified as: <code class="highlighter-rouge">&lt;100 + x&gt;.&lt;y&gt;.*</code>. 例如， Magento Commerce 2.1.4 is associated with MCC 101.4.0. Subsequently, a new version of MCC could be released that corresponds to the same Magento Commerce version, and it would be 101.4.1.</p>
 
 <p>We release updated MCC code to add a new patch or to improve the build and deploy hooks.</p>
 

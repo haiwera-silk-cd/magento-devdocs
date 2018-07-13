@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/frontend-dev-guide/templates/template-email.html">
+	<link rel="canonical" href="/guides/v2.3/frontend-dev-guide/templates/template-email.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1194,14 +1194,14 @@
 			<h4 id="contents">Contents</h4>
 
 <h2 id="customize-email-templates">自定义邮件模板</h2>
-<p>Email templates are stored in the <code class="highlighter-rouge">&lt;module_dir&gt;/view/&lt;area&gt;/email</code> directory of their respective modules. For example, the template for the new order transactional email for the Sales module is located in <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Sales/view/frontend/email/order_new.html"><code>&lt;Magento_Sales_module_dir&gt;/view/frontend/email/order_new.html</code></a>.</p>
+<p>Email templates are stored in the <code class="highlighter-rouge">&lt;module_dir&gt;/view/&lt;area&gt;/email</code> directory of their respective modules. 例如， the template for the new order transactional email for the Sales module is located in <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Sales/view/frontend/email/order_new.html"><code>&lt;Magento_Sales_module_dir&gt;/view/frontend/email/order_new.html</code></a>.</p>
 
 <p>We strongly recommend you not change the default Magento files. If you want to customize the default templates, you should create your custom templates and configure Magento to use them instead of the default templates.</p>
 
 <p>You can add custom templates as physical files in your custom <span term-uuid="d2093e4a-2b71-48a3-99b7-b32af7158019" class="glossary-term" data-toggle="popover">主题</span> or create them using the <span term-uuid="18b930cf-09cc-47c9-a5e5-905f86c43f81" class="glossary-term" data-toggle="popover">Magento管理面板</span>. Both approaches are described in the following sections.</p>
 
 <h3 id="customize-email-theme">自定义邮件模板 using a theme</h3>
-<p>Override email templates by creating templates in a new directory in your custom theme, using this pattern: <code class="highlighter-rouge">&lt;theme_dir&gt;/&lt;ModuleVendorName&gt;_&lt;ModuleName&gt;/email</code>. For example, to override the New Order email template, create a template named <code class="highlighter-rouge">order_new.html</code> in the <code class="highlighter-rouge">&lt;theme_dir&gt;/Magento_Sales/email</code> directory.</p>
+<p>Override email templates by creating templates in a new directory in your custom theme, using this pattern: <code class="highlighter-rouge">&lt;theme_dir&gt;/&lt;ModuleVendorName&gt;_&lt;ModuleName&gt;/email</code>. 例如， to override the New Order email template, create a template named <code class="highlighter-rouge">order_new.html</code> in the <code class="highlighter-rouge">&lt;theme_dir&gt;/Magento_Sales/email</code> directory.</p>
 
 <p><a href="/guides/v2.3/frontend-dev-guide/themes/theme-inherit.html#theme-inherit-templates" target="_blank">Template fallback</a> is supported for email templates, so parent themes of your current theme are searched for templates.</p>
 
@@ -1229,7 +1229,7 @@ Make note of this path because you will need it later when you configure this ne
       <li>If you haven’t done so already, log in to the Magento Admin as an administrator.</li>
       <li>Click <strong>STORES</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; SALES &gt; <strong>Sales Emails</strong>.</li>
       <li>In the left pane, locate the section that contains the template you want to override. This is the section referenced by <strong>Currently Used For</strong> in your new template. (See 步骤3 earlier in this section.)
- <br />For example, if you created a “New Order” template, the configuration section is <strong>Order</strong> as the following figure shows.
+ <br />例如， if you created a “New Order” template, the configuration section is <strong>Order</strong> as the following figure shows.
  <br /><img src="/common/images/email_choose-template.png" alt="Choosing a custom template" width="70%" height="70%" /></li>
       <li>Select your newly created template from the list.</li>
       <li>Click <strong>Save Config</strong>.</li>
@@ -1250,7 +1250,7 @@ Make note of this path because you will need it later when you configure this ne
 <h3 id="customize-content">Customize email content</h3>
 <p>To add the store and sales related information to a template, use system variables.</p>
 
-<p>System variables are placeholders which are replaced by particular values when the actual email is generated. For example, the <code class="highlighter-rouge">{{var store_hours}}</code> variable is replaced by the value set in the <strong>STORES</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; GENERAL &gt; <strong>General</strong> &gt; <strong>Store Information</strong> section.</p>
+<p>System variables are placeholders which are replaced by particular values when the actual email is generated. 例如， the <code class="highlighter-rouge">{{var store_hours}}</code> variable is replaced by the value set in the <strong>STORES</strong> &gt; Settings &gt; <strong>Configuration</strong> &gt; GENERAL &gt; <strong>General</strong> &gt; <strong>Store Information</strong> section.</p>
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
@@ -1271,7 +1271,7 @@ Make note of this path because you will need it later when you configure this ne
 
 <div class="bs-callout bs-callout-info" id="info">
 <span class="glyphicon-class">
- <p>The selection of available variables depends on which template you use as a basis. The template-specific variables are contained in a <code>&lt;!--@vars @--&gt;</code> comment at the top of each template on the file system. (For example, look at <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/view/frontend/email/account_new.html#L8">app/code/Magento/Customer/view/frontend/email/account_new.html</a>.</p></span>
+ <p>The selection of available variables depends on which template you use as a basis. The template-specific variables are contained in a <code>&lt;!--@vars @--&gt;</code> comment at the top of each template on the file system. (例如， look at <a href="https://github.com/magento/magento2/blob/2.1/app/code/Magento/Customer/view/frontend/email/account_new.html#L8">app/code/Magento/Customer/view/frontend/email/account_new.html</a>.</p></span>
 </div>
 
 <h2 id="email-styles">Styles for email templates</h2>
@@ -1287,7 +1287,7 @@ Make note of this path because you will need it later when you configure this ne
 
 <p>The <code class="highlighter-rouge">inlinecss</code> directive tells Magento which files to apply as inline styles on the email template.</p>
 
-<p>For example, let’s say an email is being sent from a store configured with the Magento Luma theme. The <code class="highlighter-rouge">inlinecss</code> directive first looks for a <code class="highlighter-rouge">email-inline.less</code> file in <code class="highlighter-rouge">&lt;Magento_Luma_theme_dir&gt;/web/css/email-inline.less</code>. However because that file doesn’t exist, it will fall back to the <code class="highlighter-rouge">&lt;Magento_Blank_theme_dir&gt;/web/css/email-inline.less</code> file. The contents of that file will then be compiled and its contents are applied as inline styles to the email template.</p>
+<p>例如， let’s say an email is being sent from a store configured with the Magento Luma theme. The <code class="highlighter-rouge">inlinecss</code> directive first looks for a <code class="highlighter-rouge">email-inline.less</code> file in <code class="highlighter-rouge">&lt;Magento_Luma_theme_dir&gt;/web/css/email-inline.less</code>. However because that file doesn’t exist, it will fall back to the <code class="highlighter-rouge">&lt;Magento_Blank_theme_dir&gt;/web/css/email-inline.less</code> file. The contents of that file will then be compiled and its contents are applied as inline styles to the email template.</p>
 
 <p>Refer to the <a href="https://github.com/jjriv/emogrifier#supported-css-selectors" target="_blank">Emogrifier README</a> to see what CSS selectors are supported.</p>
 
@@ -1310,7 +1310,7 @@ Make note of this path because you will need it later when you configure this ne
 
 <p>The <code class="highlighter-rouge">css</code> directive compiles the contents of the provided file and outputs it.</p>
 
-<p>For example, let’s say an email is being sent from a store configured with the Magento Luma theme. The <code class="highlighter-rouge">css</code> directive first looks for an <code class="highlighter-rouge">email.less</code> file in <code class="highlighter-rouge">&lt;Magento_Luma_theme_dir&gt;/web/css</code>. However, because the file doesn’t exist there, it falls back to <code class="highlighter-rouge">&lt;Magento_Blank_theme_dir&gt;/web/css/email.less</code>. The contents of that file are compiled and its contents output in the <code class="highlighter-rouge">&lt;style&gt;</code> tag.</p>
+<p>例如， let’s say an email is being sent from a store configured with the Magento Luma theme. The <code class="highlighter-rouge">css</code> directive first looks for an <code class="highlighter-rouge">email.less</code> file in <code class="highlighter-rouge">&lt;Magento_Luma_theme_dir&gt;/web/css</code>. However, because the file doesn’t exist there, it falls back to <code class="highlighter-rouge">&lt;Magento_Blank_theme_dir&gt;/web/css/email.less</code>. The contents of that file are compiled and its contents output in the <code class="highlighter-rouge">&lt;style&gt;</code> tag.</p>
 
 <h4 id="template-specific-non-inline-styles">Template-specific non-inline styles</h4>
 <p>As mentioned in the preceding section, the <code class="highlighter-rouge">header.html</code> file outputs the <code class="highlighter-rouge">{{var template_styles|raw}}</code> variable.</p>
@@ -1449,9 +1449,9 @@ Make note of this path because you will need it later when you configure this ne
 
 <p>You can add a logo to emails by adding it to your theme or by uploading it in the Magento Admin.</p>
 
-<p>Because email clients don’t support vector-based formats such as Scalable Vector Graphics (SVG), you must prepare a Portable Network Graphics (PNG) logo. Because emails are viewed on devices with a broad range of pixel densities, you should use a logo that is 3× the size that you actually want it to display. For example, let’s say your email has a 200px × 100px area for the logo. The logo image should be 600px × 300px.</p>
+<p>Because email clients don’t support vector-based formats such as Scalable Vector Graphics (SVG), you must prepare a Portable Network Graphics (PNG) logo. Because emails are viewed on devices with a broad range of pixel densities, you should use a logo that is 3× the size that you actually want it to display. 例如， let’s say your email has a 200px × 100px area for the logo. The logo image should be 600px × 300px.</p>
 
-<p>If you don’t have access to a high-resolution version of your logo, you can upload a normal-resolution image. For example, if your logo image is 200px × 100px, specify <code class="highlighter-rouge">200</code> for the width and <code class="highlighter-rouge">100</code> for the height.</p>
+<p>If you don’t have access to a high-resolution version of your logo, you can upload a normal-resolution image. 例如， if your logo image is 200px × 100px, specify <code class="highlighter-rouge">200</code> for the width and <code class="highlighter-rouge">100</code> for the height.</p>
 
 <h3 id="customize-logo-theme">Customize the email logo using a theme</h3>
 <p>To customize your logo using a theme:</p>
@@ -1460,12 +1460,12 @@ Make note of this path because you will need it later when you configure this ne
   <li>
     <p>Add a file named <code class="highlighter-rouge">logo_email.png</code> to a <code class="highlighter-rouge">Magento_Email/web</code> directory in your custom theme.</p>
 
-    <p>For example, if the OrangeCo vendor wants to add a logo for their custom Orange, they must add a file in the <code class="highlighter-rouge">app/design/frontend/OrangeCo/orange/Magento_Email/web</code> directory.</p>
+    <p>例如， if the OrangeCo vendor wants to add a logo for their custom Orange, they must add a file in the <code class="highlighter-rouge">app/design/frontend/OrangeCo/orange/Magento_Email/web</code> directory.</p>
   </li>
   <li>
     <p>Copy the <code class="highlighter-rouge">&lt;Magento_Email_module_dir&gt;/view/frontend/email/header.html</code> file into a <code class="highlighter-rouge">Magento_Email/email</code> directory in your theme.</p>
 
-    <p>For example, the OrangeCo vendor would copy the file to this location: <code class="highlighter-rouge">app/design/frontend/OrangeCo/orange/Magento_Email/email/header.html</code></p>
+    <p>例如， the OrangeCo vendor would copy the file to this location: <code class="highlighter-rouge">app/design/frontend/OrangeCo/orange/Magento_Email/email/header.html</code></p>
 
     <p>Edit the <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> attributes of the <code class="highlighter-rouge">&lt;img&gt;</code> tag to reflect the area in which you want your logo to display (for example, 200 × 100).</p>
 
@@ -1543,7 +1543,7 @@ Make note of this path because you will need it later when you configure this ne
 {{trans "Once your package ships we will send you a tracking number."}}
 </code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">trans</code> directive will translate strings into whatever locale is configured for the store from which the email is being sent. For example, if an email is being sent from a store view that is configured to use the <code class="highlighter-rouge">fr_FR</code> locale, the emails are translated to French.</p>
+<p>The <code class="highlighter-rouge">trans</code> directive will translate strings into whatever locale is configured for the store from which the email is being sent. 例如， if an email is being sent from a store view that is configured to use the <code class="highlighter-rouge">fr_FR</code> locale, the emails are translated to French.</p>
 
 <p>Please note, that variable assignment must not contain spaces.</p>
 

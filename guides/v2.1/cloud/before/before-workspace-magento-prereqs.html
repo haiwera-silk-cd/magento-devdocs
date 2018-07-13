@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">
+	<link rel="canonical" href="/guides/v2.1/cloud/before/before-workspace-magento-prereqs.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -799,12 +799,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.1/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1956,14 +1956,14 @@
 
 </section>
 
-			<h4 id="previous-step">Previous step:</h4>
+			<h4 id="前提">前提:</h4>
 <p><a href="/guides/v2.1/cloud/before/before-workspace.html">本地环境设置准备</a></p>
 
 <p>Install the following software packages and tools on your local to prepare for Magento code development. If you already have these packages installed, check for any recommendations or notes and continue to the next step.</p>
 
 <p>To begin, install and set up a VM on your host computer (Windows, Mac OS, Linux-based system). A VM gives you an environment to install a different Operating System, tools, software, a database, and Magento without requiring a customized system. You only need to install the VM software on your host. All other software can be installed and configured on your VM.</p>
 
-<p>When you install and configure software on your local (or VM), you will first SSH into the VM and then complete installations. Follow the SSH instructions and commands for the VM software you install. For example, you would install PHP, Nginx, and database on the VM via SSH.</p>
+<p>When you install and configure software on your local (or VM), you will first SSH into the VM and then complete installations. Follow the SSH instructions and commands for the VM software you install. 例如， you would install PHP, Nginx, and database on the VM via SSH.</p>
 
 <div class="bs-callout bs-callout-info" id="info">
   <p>Magento documentation provides installation instructions for installing software on CentOS or Ubuntu only. For installation information on Windows or MacOS, consult a community resource.</p>
@@ -2013,7 +2013,7 @@
 </ul>
 
 <h3 id="cloud-first-php">Set up PHP memory limit</h3>
-<p>When you’re working with the Magento Cloud CLI, local environment settings come from the machine on which you’re working, not from Magento Commerce. For example, certain actions (like debugging) require a larger PHP <code class="highlighter-rouge">memory_limit</code> than most PHP distributions provide by default.</p>
+<p>When you’re working with the Magento Cloud CLI, local environment settings come from the machine on which you’re working, not from Magento Commerce. 例如， certain actions (like debugging) require a larger PHP <code class="highlighter-rouge">memory_limit</code> than most PHP distributions provide by default.</p>
 
 <p>To set <code class="highlighter-rouge">memory_limit</code>:</p>
 
@@ -2148,7 +2148,7 @@
     <p>Change to a directory to which the <span term-uuid="5e7de323-626b-4d1b-a7e5-c8d13a92c5d3" class="glossary-term" data-toggle="popover">Magento文件系统所有者</span> has write access, such as the home directory.</p>
   </li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sS https://accounts.magento.cloud/cli/installer | php
 </code></pre></div>    </div>
@@ -2156,7 +2156,7 @@
   <li>
     <p>After the CLI downloads, an operating system-specific command displays.</p>
 
-    <p>For example, on Ubuntu and CentOS, the command is similar to:</p>
+    <p>例如， on Ubuntu and CentOS, the command is similar to:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/magento_user/.bashrc
 </code></pre></div>    </div>

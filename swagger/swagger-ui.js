@@ -21119,7 +21119,7 @@ module.exports = new Type('tag:yaml.org,2002:timestamp', {
             // expressions that are only valid in combination with the `/u`
             // flag.
             // Note: replacing with the ASCII symbol `x` might cause false
-            // negatives in unlikely scenarios. For example, `[\u{61}-b]` is a
+            // negatives in unlikely scenarios. 例如， `[\u{61}-b]` is a
             // perfectly valid pattern that is equivalent to `[a-b]`, but it
             // would be replaced by `[x-b]` which throws an error.
             tmp = tmp

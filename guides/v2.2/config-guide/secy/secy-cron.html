@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/secy/secy-cron.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/secy/secy-cron.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -2056,7 +2056,7 @@ location ~ cron<span class="se">\.</span>php<span class="nv">$ </span><span clas
   <li>
     <p>Log in to your Magento database as either the Magento database user or as <code class="highlighter-rouge">root</code>.</p>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u magento -p
 </code></pre></div>    </div>
@@ -2067,7 +2067,7 @@ location ~ cron<span class="se">\.</span>php<span class="nv">$ </span><span clas
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use &lt;magento database name&gt;;
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use magento;
 </code></pre></div>    </div>
@@ -2084,7 +2084,7 @@ location ~ cron<span class="se">\.</span>php<span class="nv">$ </span><span clas
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http[s]://&lt;magento host name or ip&gt;/cron.php?group=default
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://magento.example.com/cron.php?group=default
 </code></pre></div>    </div>
@@ -2151,7 +2151,7 @@ mysql&gt; SELECT <span class="k">*</span> from cron_schedule<span class="p">;</s
 &lt;/Files&gt;
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Deny access  to cron.php
 #&lt;Files cron.php&gt;
@@ -2180,7 +2180,7 @@ mysql&gt; SELECT <span class="k">*</span> from cron_schedule<span class="p">;</s
   <li><code class="highlighter-rouge">&lt;group name&gt;</code> is any valid cron group name (optional)</li>
 </ul>
 
-<p>For example,</p>
+<p>例如，</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://magento.example.com/magento2/pub/cron.php?group=index
 </code></pre></div></div>

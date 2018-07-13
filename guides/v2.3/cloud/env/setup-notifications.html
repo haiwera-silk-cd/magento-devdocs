@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.3/cloud/env/setup-notifications.html">
+	<link rel="canonical" href="/guides/v2.3/cloud/env/setup-notifications.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.3/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.3/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1990,7 +1990,7 @@
 
 			<p>By default, Magento企业版(云支持版) writes build and deploy actions to the <code class="highlighter-rouge">app/var/log/cloud.log</code> file inside the Magento root application directory. Optionally, you can send logs to a messaging system, such as Slack and email, to receive real-time notifications.</p>
 
-<p>For example, you could send a Slack message to alert a group of people when a deployment fails, and prompt an investigation into what went wrong.</p>
+<p>例如， you could send a Slack message to alert a group of people when a deployment fails, and prompt an investigation into what went wrong.</p>
 
 <h2 id="plan-your-notifications">Plan your notifications</h2>
 <p>Before you configure notifications, consider the following:</p>
@@ -2001,7 +2001,7 @@
   <li>Where do you want to set up notifications (Integration, Staging, Production)?</li>
 </ul>
 
-<p>For example, during initial development you may prefer email notifications that show detailed logs about your Integration environment to help you debug issues before deploying to the Staging environment. When you are ready to deploy to the Staging or Production environment, you may prefer a Slack message that contains less detailed information.</p>
+<p>例如， during initial development you may prefer email notifications that show detailed logs about your Integration environment to help you debug issues before deploying to the Staging environment. When you are ready to deploy to the Staging or Production environment, you may prefer a Slack message that contains less detailed information.</p>
 
 <!-- Available note types: "info", "warning", "tip" -->
 
@@ -2018,7 +2018,7 @@
   <li>
     <p>Remove the code comments and add your messaging system settings, including preferred notification <a href="#log-levels">log level</a>.</p>
 
-    <p>For example, to configure both Slack <em>and</em> email configurations, use the following:</p>
+    <p>例如， to configure both Slack <em>and</em> email configurations, use the following:</p>
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">log</span><span class="pi">:</span>
   <span class="na">slack</span><span class="pi">:</span>
@@ -2091,12 +2091,12 @@
 
 <ul>
   <li><strong>debug</strong>—Detailed debug information.</li>
-  <li><strong>info</strong>—Interesting events. For example, a user logs in, SQL logs, 等.</li>
+  <li><strong>info</strong>—Interesting events. 例如， a user logs in, SQL logs, 等.</li>
   <li><strong>notice</strong>—Normal but significant events.</li>
-  <li><strong>warning</strong>—Exceptional occurrences that are not errors. For example, use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.</li>
+  <li><strong>warning</strong>—Exceptional occurrences that are not errors. 例如， use of deprecated APIs, poor use of an API, undesirable things that are not necessarily wrong.</li>
   <li><strong>error</strong>—Runtime errors that don’t require immediate action but should be logged and monitored.</li>
-  <li><strong>critical</strong>—Critical conditions. For example, an unavailable application component, unexpected exceptions.</li>
-  <li><strong>alert</strong>—Action must be taken immediately. For example, your website is down, the database is unavailable, 等. This should trigger SMS alerts and wake you up.</li>
+  <li><strong>critical</strong>—Critical conditions. 例如， an unavailable application component, unexpected exceptions.</li>
+  <li><strong>alert</strong>—Action must be taken immediately. 例如， your website is down, the database is unavailable, 等. This should trigger SMS alerts and wake you up.</li>
   <li><strong>emergency</strong>—The system is unusable.</li>
 </ul>
 

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/cloud/live/stage-prod-migrate-prereq.html">
+	<link rel="canonical" href="/guides/v2.2/cloud/live/stage-prod-migrate-prereq.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -819,12 +819,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.2/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.2/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -1988,7 +1988,7 @@
 
 </section>
 
-			<h4 id="previous-step">Previous step:</h4>
+			<h4 id="前提">前提:</h4>
 <p><a href="/guides/v2.2/cloud/live/live-sanity-check.html">在本地构建和部署</a></p>
 
 <p>When you are ready to deploy your store, you need to complete deployment and testing in Staging first, then deploy to Production. The Staging environment provides a near-production environment with full services (including Fastly, New Relic, and Blackfire), database, web server, and more.</p>
@@ -2069,27 +2069,27 @@
 
     <ul>
       <li>
-        <p>Git URL format:</p>
+        <p>Git URL格式:</p>
 
         <ul>
-          <li>Staging: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;_stg.git</code></li>
-          <li>Production: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;.git</code></li>
+          <li>准生产环境: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;_stg.git</code></li>
+          <li>生产环境: <code class="highlighter-rouge">git@git.ent.magento.cloud:&lt;project ID&gt;.git</code></li>
         </ul>
       </li>
       <li>
-        <p>SSH URL format:</p>
+        <p>SSH URL格式:</p>
 
         <ul>
-          <li>Staging: <code class="highlighter-rouge">&lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
-          <li>Production: <code class="highlighter-rouge">&lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
+          <li>准生产环境: <code class="highlighter-rouge">&lt;project ID&gt;_stg@&lt;project ID&gt;.ent.magento.cloud</code></li>
+          <li>生产环境: <code class="highlighter-rouge">&lt;project ID&gt;@&lt;project ID&gt;.ent.magento.cloud</code></li>
         </ul>
       </li>
       <li>
         <p>Web URL format:</p>
 
         <ul>
-          <li>Staging: <code class="highlighter-rouge">http[s]://staging.&lt;your domain&gt;.c.&lt;project ID&gt;.ent.magento.cloud</code></li>
-          <li>Production: <code class="highlighter-rouge">http[s]://&lt;your domain&gt;.c.&lt;project ID&gt;.ent.magento.cloud</code></li>
+          <li>准生产环境: <code class="highlighter-rouge">http[s]://staging.&lt;your domain&gt;.c.&lt;project ID&gt;.ent.magento.cloud</code></li>
+          <li>生产环境: <code class="highlighter-rouge">http[s]://&lt;your domain&gt;.c.&lt;project ID&gt;.ent.magento.cloud</code></li>
         </ul>
       </li>
     </ul>
@@ -2114,14 +2114,14 @@
 git remote add prod git@git.ent.magento.cloud:dr5q6no7mhqip.git
 </code></pre></div>    </div>
 
-    <h2 id="ssh-agent">Set up your SSH agent and add the SSH key</h2>
+    <h2 id="ssh-agent">设置你的SSH代理 and add the SSH key</h2>
     <p>You only need to set up your SSH agent on these servers once. SSH agent helps contain is a background program that handles passwords for your SSH private keys.</p>
 
     <p><strong>How it works!</strong> After you configure the agent and settings, you can migrate files easier using SSH or <code class="highlighter-rouge">scp</code> between servers. The SSH agent forwards authentication requests from Staging or Production environments to your local with a working Magento system, helping you connect using your local private SSH key. After you push your Git code, you can SSH into Staging and Production and update code, data, and files with this set up.</p>
 
     <p>You can use any terminal client you prefer for SSH access, or see our <a href="/guides/v2.2/cloud/before/before-workspace.html#recommended-tools">Recommendeds tools</a>. For these examples, we use the OpenSSH client.</p>
 
-    <p>To set up an SSH agent:</p>
+    <p>设置SSH代理：</p>
 
     <ol>
       <li>In a terminal client, log in to your local system.</li>
@@ -2131,7 +2131,7 @@ git remote add prod git@git.ent.magento.cloud:dr5q6no7mhqip.git
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-add -l
 </code></pre></div>        </div>
 
-        <p>One of the following messages displays:</p>
+        <p>会显示下面的信息之一：</p>
 
         <ul>
           <li>
@@ -2147,7 +2147,7 @@ git remote add prod git@git.ent.magento.cloud:dr5q6no7mhqip.git
         </ul>
       </li>
       <li>
-        <p>To start the SSH agent, enter the following command:</p>
+        <p>要开启动SSH代理，输入下面的命令：</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval $(ssh-agent -s)
 </code></pre></div>        </div>
@@ -2160,14 +2160,14 @@ git remote add prod git@git.ent.magento.cloud:dr5q6no7mhqip.git
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-add ~/.ssh/id_rsa
 </code></pre></div>        </div>
 
-        <p>A message similar to the following displays:</p>
+        <p>类似下面的消息会显示：</p>
 
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Identity added: /home/magento_user/.ssh/id_rsa (/home/magento_user/.ssh/id_rsa)
 </code></pre></div>        </div>
       </li>
     </ol>
 
-    <p>For more information on setting up SSH, see <a href="/guides/v2.2/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a> as part of your local setup. For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.</p>
+    <p>更多关于设置SSH的信息，请参考<a href="/guides/v2.2/cloud/before/before-workspace-ssh.html">启用ssh密钥登录</a>作为本地设置的一部分。 For Starter and Pro projects, you can add your SSH public key to all Integration, Staging and Production environments.</p>
 
     <p>If you have a Pro project created <strong>before October 23, 2017</strong>, you need to enter a ticket with your public key to have it added to Staging and Production.</p>
 

@@ -1884,7 +1884,7 @@
 
 </section>
 
-			<p>This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. For example, you can override the value of a payment processor’s live URL on your production system.</p>
+			<p>This topic discusses how to derive an environment variable name knowing a configuration path. You can override Magento configuration settings using environment variables. 例如， you can override the value of a payment processor’s live URL on your production system.</p>
 
 <p>You can override the value of <em>any</em> configuration setting using environment variables; however, we recommend you maintain consistent settings using the shared configuration file, <code class="highlighter-rouge">config.php</code>, and the system-specific configuration file, <code class="highlighter-rouge">env.php</code>, as discussed in <a href="/guides/v2.2/config-guide/deployment/pipeline/">Deployment general overview</a>.</p>
 
@@ -2023,7 +2023,7 @@
   </tbody>
 </table>
 
-<p>For example, to find a website or store view scope value in the Admin:</p>
+<p>例如， to find a website or store view scope value in the Admin:</p>
 
 <ol>
   <li>Log in to the Magento Admin as a user authorized to view websites.</li>
@@ -2045,7 +2045,7 @@
 <ol>
   <li>If you haven’t done so already, log in to your development system as the <span term-uuid="5e7de323-626b-4d1b-a7e5-c8d13a92c5d3" class="glossary-term" data-toggle="popover">Magento文件系统所有者</span>.</li>
   <li>
-    <p>Enter the following command:</p>
+    <p>输入下面的命令：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u &lt;magento database user name&gt; -p
 </code></pre></div>    </div>
@@ -2078,7 +2078,7 @@ SELECT * FROM STORE_WEBSITE;
   <li>
     <p>Use the value from the <code class="highlighter-rouge">code</code> column as the scope name, not the <code class="highlighter-rouge">name</code> value.</p>
 
-    <p>For example, to set a configuration variable for Test Website, use the following format:</p>
+    <p>例如， to set a configuration variable for Test Website, use the following format:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CONFIG__WEBSITES__TEST1__&lt;SYSTEM__VARIABLE__NAME&gt;
 </code></pre></div>    </div>
@@ -2177,7 +2177,7 @@ SELECT * FROM STORE_WEBSITE;
 
     <p>Find the scope in the <a href="#deploy-system-vars-scopes">database</a> as discussed in 步骤1. Find the website or store view scope value. (You can also find the value in the Admin as shown in the the <a href="#cloud-system-vars-sys">table in 步骤2. Set global, website, or store view variables</a>.</p>
 
-    <p>For example, the scope might be <code class="highlighter-rouge">CONFIG__WEBSITE__DEFAULT</code>.</p>
+    <p>例如， the scope might be <code class="highlighter-rouge">CONFIG__WEBSITE__DEFAULT</code>.</p>
   </li>
   <li>
     <p>The rest of the variable name is <code class="highlighter-rouge">SHIPPING__ORIGIN__COUNTRY_ID</code>.</p>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/payments-integrations/payment-gateway/error-code-mapper.html">
+	<link rel="canonical" href="/guides/v2.2/payments-integrations/payment-gateway/error-code-mapper.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -762,7 +762,7 @@
   </tbody>
 </table>
 
-<p>The files placed in the <code class="highlighter-rouge">adminhtml</code> and <code class="highlighter-rouge">frontend</code> directories ensure that customers and store administrators see only audience-specific messages. For example, a customer should see error messages when a credit card fails verfication due to mis-entered data and similar reasons. The store’s administrator should have more detailed descriptions of why an attempt to create an invoice or refund failed.</p>
+<p>The files placed in the <code class="highlighter-rouge">adminhtml</code> and <code class="highlighter-rouge">frontend</code> directories ensure that customers and store administrators see only audience-specific messages. 例如， a customer should see error messages when a credit card fails verfication due to mis-entered data and similar reasons. The store’s administrator should have more detailed descriptions of why an attempt to create an invoice or refund failed.</p>
 
 <p>The  <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Braintree/etc/braintree_error_mapping.xml">braintree_error_mapping.xml</a> file provides an example  collection:</p>
 
@@ -841,7 +841,7 @@ A response validator verifies response codes from the payment gateway.
 It has different responsibilities and should not map messages, because it works on the lower layer of communication between Magento and the payment gateway.
 It is the responsibility of a gateway command to call an appropriate service.</p>
 
-<p>For example, Magento provides a response validator for Braintree: <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Braintree/Gateway/Validator/GeneralResponseValidator.php"><code class="highlighter-rouge">\Magento\Braintree\Gateway\Validator\GeneralResponseValidator</code></a>.
+<p>例如， Magento provides a response validator for Braintree: <a href="https://github.com/magento/magento2/blob/2.2/app/code/Magento/Braintree/Gateway/Validator/GeneralResponseValidator.php"><code class="highlighter-rouge">\Magento\Braintree\Gateway\Validator\GeneralResponseValidator</code></a>.
 Its implementation allows to add additional validators.</p>
 
 <p>First, create a new validator. It can be a simple class with the <code class="highlighter-rouge">__invoke</code> method, because <code class="highlighter-rouge">GeneralResponseValidator</code> calls the validator as a function:</p>

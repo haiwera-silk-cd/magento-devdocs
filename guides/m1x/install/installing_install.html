@@ -129,7 +129,7 @@
 <ol><li><em>CentOS only.</em>
 <ol><li>Enter the following command to find the appropriate NTP software:
 <code>yum search ntp</code></li>
-<li>Select a package to install. For example, <code>ntp.x86_64</code>.</li>
+<li>Select a package to install. 例如， <code>ntp.x86_64</code>.</li>
 <li>Install the package.
 <code>yum -y install ntp.x86_64</code></li></ol>
 </li>
@@ -191,11 +191,11 @@ rpm -ivh epel-release-6-8.noarch.rpm</pre></li>
 <pre>vim /etc/httpd/conf.d/phpMyAdmin.conf</pre></li>
 <li>Replace the following IP address with your IP address
 <pre>#Require ip 127.0.0.1</pre>
-For example,
+例如，
 <pre>Require ip 192.51.100.101</pre></li>
 <li>Replace the following IP with your IP address
 <pre>#Allow from 127.0.0.1</pre>
-For example,
+例如，
 <pre>Allow from 192.51.100.101</pre></li>
 </ol></li>
 <li>Save your changes to <code>/etc/httpd/conf.d/phpMyAdmin.conf</code> and exit the text editor.</li>
@@ -276,10 +276,10 @@ cd /var/www/magento/media
 #CentOS example
 cd /var/www/html/magento/media</pre></li>
 <li>As a user with privileges to write to the Magento installation directories (typically the web server user), copy the sample data's <code>media</code> directory and subdirectories to your Magento installation directory.<br />
-For example, to copy Magento sample data from <code>/home/username</code> to <code>/var/www/magento</code>, enter
+例如， to copy Magento sample data from <code>/home/username</code> to <code>/var/www/magento</code>, enter
 <pre>cp -R /home/username/media/* .</pre></li>
 <li><em>Magento CE 1.9 and Magento EE 1.14 only</em>. You must also copy the sample data's <code>skin</code> directory to <code>[your Magento install dir]/skin</code> as follows:<br />
-For example, to copy Magento skin files from <code>/home/username/skin</code> to <code>/var/www/magento/skin</code>, enter
+例如， to copy Magento skin files from <code>/home/username/skin</code> to <code>/var/www/magento/skin</code>, enter
 <pre>cd [your Magento install dir]/skin
 cp -R /home/username/skin/* .</pre></li>
 <li>Import the CE or EE sample data into your MySQL database as follows:
@@ -308,7 +308,7 @@ cd /var/www/magento
 cd /var/www/html/magento</pre></li>
 <li><em>Dedicated Magento server only</em>. Enter the following command to set ownership of the Magento installation directory and all its subdirectories:
 <pre>chown -R <em>web-server-user-name</em> .</pre>
-For example, on Ubuntu where Apache usually runs as <code>www-data</code>, enter
+例如， on Ubuntu where Apache usually runs as <code>www-data</code>, enter
 <pre>chown -R www-data .</pre></li>
 <li>Enter the following commands to set directory permissions to 700 and file permissions to 600:
 <pre>find . -type d -exec chmod 700 {} \;
@@ -344,7 +344,7 @@ chown -R myuser:www-data magento</code></li>
 <ol><li>Complete all of the tasks discussed earlier in this article.</li>
 <li>Enter the following URL in your web browser's address or location field:
 <pre><em>web-server-ip-or-host</em>:<em>port</em>/<em>magento-path</em>/magento</pre>
-For example, if your web server is <code>http://www.example.com</code>, listens on port 80, and Magento is installed in the web server docroot's <code>magento</code> subdirectory, enter
+例如， if your web server is <code>http://www.example.com</code>, listens on port 80, and Magento is installed in the web server docroot's <code>magento</code> subdirectory, enter
 <pre>http://www.example.com/magento</pre>
 The following page displays.<br >
 <img src="/common/images/m1x/install_first-page.png" height="353px" width="600px"></li>
@@ -426,7 +426,7 @@ A sample follows.<br />
 <tr>
   <td>Admin Path</td>
   <td>Enter the path to access the Admin Panel. This path is appended to <strong>Base URL</strong>.<br />
-  For example, if <strong>Base URL</strong> is <code>http://www.example.com</code>和<strong>Admin Path</strong> is <code>admin</code>, the Admin Panel's URL is <code>http://www.example.com/admin</code>&mdash;provided you configured your web server for server rewrites.</td>
+  例如， if <strong>Base URL</strong> is <code>http://www.example.com</code>和<strong>Admin Path</strong> is <code>admin</code>, the Admin Panel's URL is <code>http://www.example.com/admin</code>&mdash;provided you configured your web server for server rewrites.</td>
 </tr>
 <tr>
   <td>Enable Charts</td>
@@ -584,7 +584,7 @@ The following figure shows an example.<br />
 <pre>* * * * * /path/to/magento/cron.sh cron.php -mdefault
 * * * * * /path/to/magento/cron.sh cron.php -malways</pre>
 
-<p>Determine which of your cronjobs may be long-running and move them into separate crontabs. For example, imports, exports, and indexes can run long, blocking other cronjobs scheduled in that crontab.</p>
+<p>Determine which of your cronjobs may be long-running and move them into separate crontabs. 例如， imports, exports, and indexes can run long, blocking other cronjobs scheduled in that crontab.</p>
 
 <p>Magento recommends running cron every minute for EE and every five minutes for CE.</p>
 
@@ -602,12 +602,12 @@ The following figure shows an example.<br />
 <li>To split cronjobs for better performance, enter the following:
 <pre>* * * * * /bin/sh /path/to/magento/cron.sh cron.php -mdefault
 * * * * * /bin/sh /path/to/magento/cron.sh cron.php -malways</pre><br>
-For example, for CentOS,<br />
+例如， for CentOS,<br />
 <pre>* * * * * /bin/sh /var/www/html/magento/cron.sh cron.php -mdefault
 * * * * * /bin/sh /var/www/html/magento/cron.sh cron.php -malways</pre></li>
 <li>If you do not want to split the cronjob, enter the following:
 <pre>* * * * * /bin/sh /path/to/magento/cron.sh</pre><br>
-For example, for CentOS,<br />
+例如， for CentOS,<br />
 <pre>* * * * * /bin/sh /var/www/html/magento/cron.sh</pre></li>
 <li>Save your changes to the crontab and exit the editor. For vim, press <code>:wp</code>.</li></ol>
 

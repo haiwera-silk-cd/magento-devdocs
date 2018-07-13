@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/cloud/access-acct/first-time-setup_import-prepare.html">
+	<link rel="canonical" href="/guides/v2.1/cloud/access-acct/first-time-setup_import-prepare.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -799,12 +799,12 @@
         
         
         
-        <li class="nav-level2  " id="install,-manage,-and-upgrade-modules">
+        <li class="nav-level2  " id="安装，管理及升级模块">
 
             
 
             
-            <a href="/guides/v2.1/cloud/howtos/install-components.html">Install, manage, and upgrade modules</a>
+            <a href="/guides/v2.1/cloud/howtos/install-components.html">安装，管理及升级模块</a>
             
 
             
@@ -2013,7 +2013,7 @@ mkdir .magento
       <li><code class="highlighter-rouge">&lt;Magento Commerce install dir&gt;/.magento/routes.yaml</code></li>
     </ul>
 
-    <p>For example, to create <code class="highlighter-rouge">&lt;Magento Commerce install dir&gt;/.magento.app.yaml</code> from the 2.1.4 branch:</p>
+    <p>例如， to create <code class="highlighter-rouge">&lt;Magento Commerce install dir&gt;/.magento.app.yaml</code> from the 2.1.4 branch:</p>
 
     <ol>
       <li>In the  Magento企业版(云支持版) GitHub, click <a href="https://github.com/magento/magento-cloud/blob/2.1.4/.magento.app.yaml" target="\_blank"><strong>.magento.app.yaml</strong></a>.</li>
@@ -2094,7 +2094,7 @@ mkdir .magento
 </code></pre></div>    </div>
 
     <div class="bs-callout bs-callout-info" id="info">
-      <p>Both <code class="highlighter-rouge">&lt;version&gt;</code> values <em>must be the same</em>. For example, if your current Magento Commerce version is 2.1.9, your <code class="highlighter-rouge">magento-cloud-metapackage</code> version must also be 2.1.9.</p>
+      <p>Both <code class="highlighter-rouge">&lt;version&gt;</code> values <em>must be the same</em>. 例如， if your current Magento Commerce version is 2.1.9, your <code class="highlighter-rouge">magento-cloud-metapackage</code> version must also be 2.1.9.</p>
     </div>
   </li>
   <li>
@@ -2144,7 +2144,7 @@ mkdir .magento
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rsync &lt;Magento Commerce install dir&gt;/var/backups/&lt;backup file name&gt; &lt;cloud ssh url&gt;:var/media.tgz
 </code></pre></div>    </div>
 
-    <p>For example,</p>
+    <p>例如，</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rsync /var/www/html/magento2/var/backups/1487962699_filesystem_media.tgz 43bkopvkhelhy-master-l8uv4kp@ssh.us.magentosite.cloud:var/media.tgz
 </code></pre></div>    </div>
@@ -2176,7 +2176,7 @@ mkdir .magento
   </li>
 </ol>
 
-<p>For example, if your database is on localhost with the default port (3306), database user name is <code class="highlighter-rouge">magento</code>, and database name is also <code class="highlighter-rouge">magento</code>:</p>
+<p>例如， if your database is on localhost with the default port (3306), database user name is <code class="highlighter-rouge">magento</code>, and database name is also <code class="highlighter-rouge">magento</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    mysqldump -p -u magento magento --single-transaction --no-autocommit --quick | gzip &gt; ~/db.sql.tgz
 </code></pre></div></div>

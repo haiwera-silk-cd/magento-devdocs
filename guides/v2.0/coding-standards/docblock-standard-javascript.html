@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.0/coding-standards/docblock-standard-javascript.html">
+	<link rel="canonical" href="/guides/v2.0/coding-standards/docblock-standard-javascript.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -695,7 +695,7 @@ Square.prototype.draw&nbsp;=&nbsp;function()&nbsp;{
 
 <p>Indicates that the keys of an object literal should be treated as properties of some other object. This annotation should only appear on object literals.</p>
 
-<p>Please note that the name in braces is not a type name like in other annotations. It’s an object name. It names the object on which the properties are “lent”. For example, <code class="highlighter-rouge">@type {Foo}</code> means “an instance of Foo,” but <code class="highlighter-rouge">@lends {Foo}</code> means “the constructor Foo”.</p>
+<p>Please note that the name in braces is not a type name like in other annotations. It’s an object name. It names the object on which the properties are “lent”. 例如， <code class="highlighter-rouge">@type {Foo}</code> means “an instance of Foo,” but <code class="highlighter-rouge">@lends {Foo}</code> means “the constructor Foo”.</p>
 
 <p>Please refer to <a href="https://code.google.com/p/jsdoc-toolkit/wiki/TagLends" target="_blank">JSDoc Toolkit</a> for more information about this annotation.</p>
 
@@ -1000,7 +1000,7 @@ new&nbsp;project.MyClass()</pre></td>
 		<td><code>codemyNum: number, myObject}}</code><br />
 		An anonymous type with the given type members.</td>
 		<td>Indicates that the value has the specified members with the specified types. In this case, <code>myNum</code> with a type <code>number</code>和<code>myObject</code> with any type.
-		Note that the braces are part of the type syntax. For example, to denote an <code>Array</code> of objects that have a <code>length</code> property, you might write <code>Array.&lt;{length}&gt;</code>.</td>
+		Note that the braces are part of the type syntax. 例如， to denote an <code>Array</code> of objects that have a <code>length</code> property, you might write <code>Array.&lt;{length}&gt;</code>.</td>
 		<td></td>
 	</tr>
 	<tr>

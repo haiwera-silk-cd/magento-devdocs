@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.1/migration/extend-the-tool.html">
+	<link rel="canonical" href="/guides/v2.1/migration/extend-the-tool.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -683,7 +683,7 @@
 </ul>
 
 <h3 id="extend-mapping-in-other-steps">Extend mapping in other steps</h3>
-<p>Other steps support mapping, such as the <a href="/guides/v2.1/migration/migration-tool-internal-spec.html#eav">EAV Step</a> and Customer Attributes Step. These steps migrate a predefined list of Magento tables. For example, suppose that the “GreatBlog” extension has an additional field in the <code class="highlighter-rouge">eav_attribute</code> table and the name changed in Magento 2. Since the table is processed by the <a href="/guides/v2.1/migration/migration-tool-internal-spec.html#eav">EAV Step</a>, mapping rules should be written for the <code class="highlighter-rouge">map-eav.xml</code> file. The <code class="highlighter-rouge">map.xml</code> and <code class="highlighter-rouge">map-eav.xml</code> files use the same <code class="highlighter-rouge">map.xsd</code> schema, so mapping rules remain the same.</p>
+<p>Other steps support mapping, such as the <a href="/guides/v2.1/migration/migration-tool-internal-spec.html#eav">EAV Step</a> and Customer Attributes Step. These steps migrate a predefined list of Magento tables. 例如， suppose that the “GreatBlog” extension has an additional field in the <code class="highlighter-rouge">eav_attribute</code> table and the name changed in Magento 2. Since the table is processed by the <a href="/guides/v2.1/migration/migration-tool-internal-spec.html#eav">EAV Step</a>, mapping rules should be written for the <code class="highlighter-rouge">map-eav.xml</code> file. The <code class="highlighter-rouge">map.xml</code> and <code class="highlighter-rouge">map-eav.xml</code> files use the same <code class="highlighter-rouge">map.xsd</code> schema, so mapping rules remain the same.</p>
 
 <h2 id="major-data-format-and-structure-changes">Major data format and structure changes</h2>
 <p>In addition to the Map Step, there are other steps in the <code class="highlighter-rouge">config.xml</code> file which migrate data with major format and structure changes, including:</p>

@@ -26,7 +26,7 @@
 
 
 
-	<link rel="canonical" href="http://localhost:4000/guides/v2.2/config-guide/varnish/tshoot-varnish-503.html">
+	<link rel="canonical" href="/guides/v2.2/config-guide/varnish/tshoot-varnish-503.html">
 
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://magento.com/favicon.ico">
 	<link rel="apple-touch-icon" type="image/png" href="https://magento.com/apple-touch-icon.png">
@@ -1886,7 +1886,7 @@
 
 			<h2 id="backend-fetch-failed-errors">Backend Fetch Failed errors</h2>
 
-<p>If the length of <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">cache</span> tags used by Magento exceed Varnish’s default of 8192 bytes, you can see HTTP 503 (Backend Fetch Failed) errors in the browser. The errors might display similar to the following:</p>
+<p>If the length of <span term-uuid="0bc9c8bc-de1a-4a06-9c99-a89a29c30645" class="glossary-term" data-toggle="popover">缓存</span> tags used by Magento exceed Varnish’s default of 8192 bytes, you can see HTTP 503 (Backend Fetch Failed) errors in the browser. The errors might display similar to the following:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error 503 Backend fetch failed
 Backend fetch failed
@@ -1914,7 +1914,7 @@ Backend fetch failed
   <li>
     <p>Set <code class="highlighter-rouge">http_resp_hdr_len</code> to a value equal to the product count of your largest <span term-uuid="50e49338-1e6c-4473-8527-9e401d67ea2b" class="glossary-term" data-toggle="popover">category</span> multiplied by 21. (Each product tag is about 21 characters in length.)</p>
 
-    <p>For example, setting the value to 65536 bytes should work if your largest category has 3,000 products.</p>
+    <p>例如， setting the value to 65536 bytes should work if your largest category has 3,000 products.</p>
 
     <p>例如:</p>
 
@@ -1924,7 +1924,7 @@ Backend fetch failed
   <li>
     <p>Set the <code class="highlighter-rouge">http_resp_size</code> to a value that accommodates the increased response header length.</p>
 
-    <p>For example, using the sum of the increased header length and default response size is a good starting point (e.g., 65536 + 32768 = 98304):</p>
+    <p>例如， using the sum of the increased header length and default response size is a good starting point (e.g., 65536 + 32768 = 98304):</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-p http_resp_size=98304 \
 </code></pre></div>    </div>
